@@ -4,7 +4,7 @@ a{color:#059669}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}.narrow{max-
 .nav{position:sticky;top:0;background:rgba(11,18,32,.92);backdrop-filter:blur(8px);z-index:9}
 .nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
 .brand{color:#fff;font-weight:700;text-decoration:none;display:flex;gap:10px;align-items:center}
-.logo{width:22px;height:22px;border-radius:6px;background:#10b981;display:inline-block}
+.logo{width:22px;height:22px;display:inline-block;vertical-align:middle}
 .nav nav a{color:#cbd5e1;text-decoration:none;margin-left:20px;font-size:15px}.nav nav a:hover{color:#fff}
 .hero{background:linear-gradient(160deg,#0b1220,#0f2a3a);color:#fff;padding:96px 0 80px}
 .eyebrow{color:#34d399;font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:13px}
