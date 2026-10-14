@@ -1,11 +1,11 @@
 // BioCatalystFeed API proxy: /trials, /papers, /grants?q=...
 // Edge caching (Cache API) + per-IP daily rate limit (KV).
-const UA = "BioCatalystFeed/1.0 (+https://biocatalystfeed.com; contact@biocatalystfeed.com)";
+const UA = "BioCatalystFeed/1.0 (+https://biocat.ai; contact@biocat.ai)";
 
 function cors(origin, env) {
   const allowed = (env.ALLOWED_ORIGINS || "").split(",").map((s) => s.trim());
   return {
-    "Access-Control-Allow-Origin": allowed.includes(origin) ? origin : allowed[0] || "https://biocatalystfeed.com",
+    "Access-Control-Allow-Origin": allowed.includes(origin) ? origin : allowed[0] || "https://biocat.ai",
     "Access-Control-Allow-Methods": "GET, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Vary": "Origin",

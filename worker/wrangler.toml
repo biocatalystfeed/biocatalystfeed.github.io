@@ -20,7 +20,7 @@ namespace_id = "1001"
 KV_DAILY = "0"   # set "1" only on a paid plan (each uncached request = 1 KV write)
 DAILY_LIMIT = "200"
 CACHE_TTL = "900"
-ALLOWED_ORIGINS = "https://biocatalystfeed.com,https://www.biocatalystfeed.com,https://biocatalystfeed.github.io"
+ALLOWED_ORIGINS = "https://biocat.ai,https://www.biocat.ai,https://biocatalystfeed.com,https://www.biocatalystfeed.com,https://biocatalystfeed.github.io"
 
 # Optional custom domain once the zone is on Cloudflare:
 # routes = [{ pattern = "api.biocatalystfeed.com", custom_domain = true }]
