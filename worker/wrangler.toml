@@ -1,0 +1,17 @@
+name = "biocatalystfeed-api"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Per-IP daily counters. Create with: npx wrangler kv namespace create RATE_LIMIT
+# then paste the returned id below.
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[vars]
+DAILY_LIMIT = "200"
+CACHE_TTL = "900"
+ALLOWED_ORIGINS = "https://biocatalystfeed.com,https://www.biocatalystfeed.com,https://biocatalystfeed.github.io"
+
+# Optional custom domain once the zone is on Cloudflare:
+# routes = [{ pattern = "api.biocatalystfeed.com", custom_domain = true }]

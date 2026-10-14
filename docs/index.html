@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BioCatalystFeed: open-source biotech catalyst and research tracker</title>
+<meta name="description" content="Track clinical trials, openFDA, NIH grants, PubMed, Europe PMC, bioRxiv and SEC EDGAR PDUFA candidates from one CLI and MCP server. Free and open source.">
+<meta name="keywords" content="biotech, clinical trials, PDUFA, openFDA, NIH RePORTER, PubMed, Europe PMC, bioRxiv, MCP server, CLI, biotech investing">
+<link rel="canonical" href="https://biocatalystfeed.com/">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BioCatalystFeed">
+<meta property="og:title" content="BioCatalystFeed: biotech catalysts and research in one feed">
+<meta property="og:description" content="Clinical trials, FDA, NIH grants, PubMed, preprints and PDUFA candidates. Open-source CLI and MCP server.">
+<meta property="og:url" content="https://biocatalystfeed.com/">
+<meta property="og:image" content="https://biocatalystfeed.github.io/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BioCatalystFeed">
+<meta name="twitter:description" content="Open-source biotech catalyst and research tracker: CLI + MCP server.">
+<meta name="twitter:image" content="https://biocatalystfeed.github.io/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"BioCatalystFeed","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://biocatalystfeed.com/","codeRepository":"https://github.com/biocatalystfeed/biocatalystfeed"}</script>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#"><span class="logo"></span>BioCatalystFeed</a>
+  <nav><a href="#demo">Demo</a><a href="#tracks">Sources</a><a href="#quickstart">Quickstart</a><a href="#pricing">Pricing</a><a href="https://github.com/biocatalystfeed/biocatalystfeed">GitHub</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">Open source · CLI · MCP server</p>
+  <h1>Every biotech catalyst and research signal, in one feed.</h1>
+  <p class="lead">BioCatalystFeed pulls clinical trials, FDA data, NIH grants, papers, preprints and PDUFA candidates into one terminal command, and into your AI agent.</p>
+  <div class="cta">
+    <code class="install" id="install">pip install biocatalystfeed</code>
+    <a class="btn" href="#quickstart">Get started</a>
+    <a class="btn ghost" href="mailto:contact@biocatalystfeed.com?subject=BioCatalystFeed%20waitlist&body=Please%20add%20me%20to%20the%20hosted%2FBusiness%20waitlist.">Join the waitlist</a>
+  </div>
+</div></section>
+
+<section id="demo" class="demo"><div class="wrap">
+  <h2>Try it live</h2>
+  <p class="sub">Searches public APIs straight from your browser. Nothing is stored.</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" class="tab active" data-tab="trials">Trials</button>
+    <button role="tab" class="tab" data-tab="papers">Papers</button>
+    <button role="tab" class="tab" data-tab="grants">Grants</button>
+  </div>
+  <input id="q" type="search" placeholder="Try: GLP-1, CAR-T lupus, KRAS G12C" autocomplete="off" aria-label="Search">
+  <div id="status" class="status" aria-live="polite"></div>
+  <ol id="results" class="results"></ol>
+</div></section>
+
+<section id="tracks"><div class="wrap">
+  <h2>What it tracks</h2>
+  <div class="grid">
+    <div class="card"><h3>ClinicalTrials.gov</h3><p>New and updated studies, phases, status changes and completion dates.</p></div>
+    <div class="card"><h3>openFDA</h3><p>Drug approvals, labels, adverse events and recalls.</p></div>
+    <div class="card"><h3>NIH RePORTER</h3><p>Funded grants by topic, institution and investigator.</p></div>
+    <div class="card"><h3>PubMed</h3><p>Peer-reviewed literature as soon as it's indexed.</p></div>
+    <div class="card"><h3>Europe PMC</h3><p>Full-text open access papers and citations.</p></div>
+    <div class="card"><h3>bioRxiv</h3><p>Preprints before they hit journals.</p></div>
+    <div class="card"><h3>SEC EDGAR</h3><p>PDUFA date candidates pulled from company filings.</p></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <h2>Who it's for</h2>
+  <div class="grid four">
+    <div class="card"><h3>Biotech BD</h3><p>Spot partnering targets as trials read out and grants land.</p></div>
+    <div class="card"><h3>Investors</h3><p>Follow PDUFA dates, trial milestones and FDA actions.</p></div>
+    <div class="card"><h3>Researchers</h3><p>Monitor your field across papers, preprints and funding.</p></div>
+    <div class="card"><h3>AI-agent builders</h3><p>Plug biomedical data into agents through MCP.</p></div>
+  </div>
+</div></section>
+
+<section id="quickstart"><div class="wrap">
+  <h2>Quickstart</h2>
+  <div class="grid two">
+    <div><h3>CLI</h3>
+<pre><code>pip install biocatalystfeed
+bcf --help
+bcf trials "KRAS G12C"
+bcf papers "GLP-1 obesity"</code></pre>
+    <p class="note">Run <code>bcf --help</code> for every command and source.</p></div>
+    <div><h3>MCP server</h3>
+<pre><code>pip install biocatalystfeed
+biocatalystfeed-mcp</code></pre>
+    <p class="note">Speaks the Model Context Protocol, so any MCP client can call it.</p></div>
+  </div>
+  <h3 class="mt">Use inside Claude or Cursor</h3>
+  <p>Add the server to your MCP config (<code>claude_desktop_config.json</code> for Claude Desktop, <code>.cursor/mcp.json</code> for Cursor):</p>
+<pre><code>{
+  "mcpServers": {
+    "biocatalystfeed": { "command": "biocatalystfeed-mcp" }
+  }
+}</code></pre>
+  <p class="note">Then ask: "What phase 3 oncology trials changed status this week?"</p>
+</div></section>
+
+<section class="alt"><div class="wrap narrow">
+  <h2>Open source</h2>
+  <p>BioCatalystFeed is open source. Read the code, file issues and send pull requests on <a href="https://github.com/biocatalystfeed/biocatalystfeed">GitHub</a>. It's published on <a href="https://pypi.org/project/biocatalystfeed/">PyPI</a>.</p>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <h2>Pricing</h2>
+  <div class="grid three">
+    <div class="card price hot"><h3>Open source</h3><p class="amt">Free</p><p>The full CLI and MCP server. Run it anywhere.</p><a class="btn" href="#quickstart">Install</a></div>
+    <div class="card price"><h3>Hosted</h3><p class="amt">Coming soon</p><p>A managed feed with alerts. No setup.</p><a class="btn ghost" href="mailto:contact@biocatalystfeed.com?subject=Hosted%20waitlist">Join waitlist</a></div>
+    <div class="card price"><h3>Business</h3><p class="amt">Coming soon</p><p>Team seats, higher limits and support.</p><a class="btn ghost" href="mailto:contact@biocatalystfeed.com?subject=Business%20waitlist">Join waitlist</a></div>
+  </div>
+  <p class="note center">Free and open source; hosted and Business plans coming.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© BioCatalystFeed</span>
+  <nav><a href="mailto:contact@biocatalystfeed.com">contact@biocatalystfeed.com</a><a href="https://github.com/biocatalystfeed/biocatalystfeed/blob/main/TERMS.md">Terms</a><a href="https://github.com/biocatalystfeed/biocatalystfeed/blob/main/PRIVACY.md">Privacy</a><a href="https://github.com/biocatalystfeed/biocatalystfeed">GitHub</a></nav>
+  <p class="disc">Data comes from public sources and is for information only. Not medical or investment advice.</p>
+</div></footer>
+<script src="app.js" defer></script>
+</body>
+</html>
