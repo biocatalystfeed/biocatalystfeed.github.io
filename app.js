@@ -6,6 +6,8 @@
   const $ = (s) => document.querySelector(s);
   const q = $("#q"), out = $("#results"), status = $("#status");
   let tab = "trials", timer, ctrl, seq = 0;
+  const cache = new Map(); // per-page-load cache: re-typing / tab switching never re-hits upstream APIs
+  let cooldownUntil = 0;   // after a 429, pause live queries instead of hammering the source
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const item = (title, url, meta, pills = []) =>
@@ -13,7 +15,11 @@
 
   async function getJSON(url, opts = {}) {
     const r = await fetch(url, { ...opts, signal: ctrl.signal });
-    if (r.status === 429) throw new Error("Rate limit reached. Try again shortly.");
+    if (r.status === 429) {
+      const ra = parseInt(r.headers.get("Retry-After") || "30", 10);
+      cooldownUntil = Date.now() + Math.min(Number.isFinite(ra) ? ra : 30, 3600) * 1000;
+      throw new Error("the source is busy right now (rate limited). Try again in a minute");
+    }
     if (!r.ok) throw new Error(`Source returned HTTP ${r.status}`);
     return r.json();
   }
@@ -56,9 +62,14 @@
     if (term.length < 2) { out.innerHTML = ""; status.textContent = ""; return; }
     ctrl = new AbortController();
     const my = ++seq;
+    const key = `${tab}:${term.toLowerCase()}`;
+    if (cache.has(key)) { const rows = cache.get(key); out.innerHTML = rows.join(""); status.textContent = rows.length ? `${rows.length} most recent results` : "No results. Try a broader term."; return; }
+    if (Date.now() < cooldownUntil) { status.textContent = "Live search is paused briefly because the data source is rate-limiting. Please try again in a minute."; return; }
     status.textContent = "Searching…";
     try {
       const rows = await sources[tab](term);
+      if (cache.size > 100) cache.clear();
+      cache.set(key, rows);
       if (my !== seq) return;
       out.innerHTML = rows.join("");
       status.textContent = rows.length ? `${rows.length} most recent results` : "No results. Try a broader term.";
@@ -69,7 +80,7 @@
     }
   }
 
-  q.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(run, 400); });
+  q.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(run, 600); });
   document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => {
     document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("active", x === b));
     tab = b.dataset.tab; run();

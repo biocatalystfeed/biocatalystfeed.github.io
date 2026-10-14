@@ -8,7 +8,16 @@ compatibility_date = "2026-10-01"
 binding = "RATE_LIMIT"
 id = "REPLACE_WITH_KV_NAMESPACE_ID"
 
+# Per-IP burst limit (Workers Rate Limiting, free, needs wrangler >= 4.36). Required: the Worker fails closed without it.
+[[ratelimits]]
+name = "BURST"
+namespace_id = "1001"
+  [ratelimits.simple]
+  limit = 20
+  period = 60
+
 [vars]
+KV_DAILY = "0"   # set "1" only on a paid plan (each uncached request = 1 KV write)
 DAILY_LIMIT = "200"
 CACHE_TTL = "900"
 ALLOWED_ORIGINS = "https://biocatalystfeed.com,https://www.biocatalystfeed.com,https://biocatalystfeed.github.io"

@@ -5,14 +5,14 @@ const UA = "BioCatalystFeed/1.0 (+https://biocatalystfeed.com; contact@biocataly
 function cors(origin, env) {
   const allowed = (env.ALLOWED_ORIGINS || "").split(",").map((s) => s.trim());
   return {
-    "Access-Control-Allow-Origin": allowed.includes(origin) ? origin : allowed[0] || "*",
+    "Access-Control-Allow-Origin": allowed.includes(origin) ? origin : allowed[0] || "https://biocatalystfeed.com",
     "Access-Control-Allow-Methods": "GET, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Vary": "Origin",
   };
 }
 const json = (body, status, headers) =>
-  new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json", ...headers } });
+  new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json", "X-Content-Type-Options": "nosniff", ...headers } });
 
 async function upstream(route, q) {
   const t = encodeURIComponent(q);
@@ -33,13 +33,21 @@ async function upstream(route, q) {
   return null;
 }
 
+// Burst limit: Workers Rate Limiting binding (per IP, per colo, no KV writes). Daily cap: KV counter.
+// NOTE: KV free plan allows ~1,000 writes/day, so the KV daily counter only runs when KV_DAILY="1".
 async function rateLimit(ip, env) {
-  if (!env.RATE_LIMIT) return { ok: true, remaining: -1 };
+  if (env.BURST) {
+    const { success } = await env.BURST.limit({ key: ip });
+    if (!success) return { ok: false, remaining: 0, limit: "burst", retry: 60 };
+  } else if (env.REQUIRE_RATE_LIMIT !== "0") {
+    return { ok: false, remaining: 0, limit: "unconfigured", retry: 3600 }; // fail closed: never run as an open proxy
+  }
+  if (!env.RATE_LIMIT || env.KV_DAILY !== "1") return { ok: true, remaining: -1 };
   const day = new Date().toISOString().slice(0, 10);
   const key = `rl:${day}:${ip}`;
   const n = parseInt((await env.RATE_LIMIT.get(key)) || "0", 10);
   const limit = parseInt(env.DAILY_LIMIT || "200", 10);
-  if (n >= limit) return { ok: false, remaining: 0, limit };
+  if (n >= limit) return { ok: false, remaining: 0, limit, retry: 3600 };
   await env.RATE_LIMIT.put(key, String(n + 1), { expirationTtl: 60 * 60 * 26 });
   return { ok: true, remaining: limit - n - 1, limit };
 }
@@ -71,10 +79,11 @@ export default {
 
     const ip = request.headers.get("CF-Connecting-IP") || "unknown";
     const rl = await rateLimit(ip, env);
-    if (!rl.ok) return json({ error: "daily rate limit reached", limit: rl.limit }, 429, { ...h, "Retry-After": "3600" });
+    if (!rl.ok) return json({ error: "rate limit reached", limit: rl.limit }, 429, { ...h, "Retry-After": String(rl.retry || 60) });
 
     let res;
     try { res = await upstream(route, q); } catch (e) { return json({ error: "upstream unreachable" }, 502, h); }
+    if (res.status === 429) return json({ error: "upstream rate limited" }, 429, { ...h, "Retry-After": "60" });
     if (!res.ok) return json({ error: `upstream HTTP ${res.status}` }, 502, h);
 
     const body = await res.text();

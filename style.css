@@ -36,3 +36,4 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}p code{background:#
 footer{background:#0b1220;color:#94a3b8;padding:32px 0;font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}footer a{color:#cbd5e1;margin-left:16px}.disc{width:100%;margin:8px 0 0;font-size:12px}
 @media(max-width:700px){.nav nav a:not(:last-child){display:none}footer a{margin:0 16px 0 0}}
+.back{color:#34d399}
