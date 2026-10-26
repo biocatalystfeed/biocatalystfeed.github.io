@@ -37,3 +37,17 @@ footer{background:#0b1220;color:#94a3b8;padding:32px 0;font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}footer a{color:#cbd5e1;margin-left:16px}.disc{width:100%;margin:8px 0 0;font-size:12px}
 @media(max-width:700px){.nav nav a:not(:last-child){display:none}footer a{margin:0 16px 0 0}}
 .back{color:#34d399}
+
+.global{position:relative;margin:10px 0 0;font-size:14px;color:#475569}
+.global-row{display:flex;align-items:center;gap:12px}
+.gtoggle{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:#0f172a;cursor:pointer}
+.ginfo{background:none;border:0;padding:2px 4px;font:inherit;font-size:13px;color:#64748b;cursor:pointer;text-decoration:underline dotted}
+.ginfo:focus-visible{outline:2px solid #10b981;border-radius:4px}.ginfo.small{font-size:13px;text-decoration:none}
+.global-line{margin:4px 0 0;color:#64748b}
+.global-detail{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;margin-top:8px;max-width:560px;font-size:14px}
+.global-detail h4{margin:8px 0 2px;font-size:14px;color:#0f172a}.global-detail p{margin:0 0 6px}
+@media(hover:hover) and (pointer:fine){.global-detail{position:absolute;z-index:5;top:28px;left:80px;box-shadow:0 10px 30px #0f172a22}}
+.global-on{font-size:13px;color:#64748b;margin-top:8px}
+.gtag{display:inline-block;background:#e2e8f0;color:#334155;border-radius:4px;padding:0 6px;margin-right:6px;font-size:12px}
+.glinks{margin-top:6px;font-size:13px}.glinks a{font-weight:400;color:#059669}
+.gdisc{font-size:12px;color:#64748b;margin:10px 0 0}

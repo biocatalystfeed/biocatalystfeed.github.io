@@ -52,6 +52,23 @@
     <button role="tab" class="tab" data-tab="grants">Grants</button>
   </div>
   <input id="q" type="search" placeholder="Try: GLP-1, CAR-T lupus, KRAS G12C" autocomplete="off" aria-label="Search">
+  <div class="global" id="global-box">
+    <div class="global-row">
+      <label class="gtoggle"><input type="checkbox" id="global" role="switch" aria-describedby="global-line"> Global</label>
+      <button type="button" class="ginfo" id="ginfo" aria-expanded="false" aria-controls="global-detail">ⓘ (not advice)</button>
+    </div>
+    <p class="global-line" id="global-line">Want to see everything being researched in this area, including studies run under lighter oversight outside the US and EU? Turn on Global.</p>
+    <div class="global-detail" id="global-detail" role="region" aria-label="About Global" hidden>
+      <h4>What Global adds</h4>
+      <p>Global also searches trial registries outside the US and EU — China's ChiCTR and NMPA drug trial platform, and other WHO-listed national registries — and flags papers from studies run in other jurisdictions.</p>
+      <h4>Why it's labelled</h4>
+      <p>These studies may be run under regulatory, ethics and data standards that are different from, and sometimes lighter than, those of the US FDA or the EU's EMA. Registry records can be less complete or less often updated. Each result is tagged "non-FDA/EMA registry" with its source and country.</p>
+      <h4>Not advice</h4>
+      <p>Showing a study is not an endorsement or a recommendation of any study, drug, sponsor or country, and is not medical, legal or investment advice.</p>
+      <p><a href="https://github.com/biocatalystfeed/biocatalystfeed/blob/main/docs/GLOBAL.md" target="_blank" rel="noopener">Learn more about Global →</a></p>
+    </div>
+  </div>
+  <div id="global-on" class="global-on" hidden>Global on · <button type="button" class="ginfo small" aria-controls="global-detail" aria-label="About Global (not advice)">ⓘ</button></div>
   <div id="status" class="status" aria-live="polite"></div>
   <ol id="results" class="results"></ol>
 </div></section>
