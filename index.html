@@ -6,7 +6,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BioCatalystFeed: open-source biotech catalyst and research tracker</title>
-<meta name="description" content="Track clinical trials, openFDA, NIH grants, PubMed, Europe PMC, bioRxiv, EMA, FDA advisory committees, FDA complete response letters and an FDA decision calendar (PDUFA dates from SEC filings, AdComs, approvals) from one CLI and MCP server. Free and open source.">
+<meta name="description" content="Track clinical trials, openFDA, NIH grants, PubMed, Europe PMC, bioRxiv, EMA, FDA advisory committees, FDA complete response letters an FDA decision calendar (PDUFA dates from SEC filings, AdComs, approvals), a trial readout calendar and Trials at Risk from one CLI and MCP server. Free and open source.">
 <meta name="keywords" content="biotech, clinical trials, PDUFA, openFDA, NIH RePORTER, PubMed, Europe PMC, bioRxiv, MCP server, CLI, biotech investing">
 <link rel="canonical" href="https://biocat.ai/">
 <meta name="theme-color" content="#0b1220">
@@ -28,7 +28,7 @@
 <body>
 <header class="nav"><div class="wrap">
   <a class="brand" href="#"><img class="logo" src="/assets/brand/logo-mark.svg" alt="" width="22" height="22">BioCatalystFeed</a>
-  <nav><a href="#demo">Demo</a><a href="#tracks">Sources</a><a href="#quickstart">Quickstart</a><a href="#pricing">Pricing</a><a href="https://github.com/biocatalystfeed/biocatalystfeed">GitHub</a></nav>
+  <nav><a href="#demo">Demo</a><a href="/calendar/">Readout calendar</a><a href="#tracks">Sources</a><a href="#quickstart">Quickstart</a><a href="#pricing">Pricing</a><a href="https://github.com/biocatalystfeed/biocatalystfeed">GitHub</a></nav>
 </div></header>
 
 <main>
@@ -87,6 +87,8 @@
     <div class="card"><h3>FDA advisory committees</h3><p>Upcoming AdCom meetings, the drugs on the agenda, postponements and cancellations. Source: Federal Register.</p></div>
     <div class="card"><h3>FDA complete response letters</h3><p>Why FDA declined an NDA or BLA: facility, manufacturing, clinical or safety issues, with a link to the letter. Source: FDA / openFDA.</p></div>
     <div class="card"><h3>FDA decision calendar</h3><p>Upcoming PDUFA dates disclosed in company 8-Ks, AdCom meetings, approvals and CRLs in one list, filterable by drug, company or ticker and condition. Watches flag new events and moved dates. Each event shows its source and confidence. Sources: SEC EDGAR, Federal Register, FDA / openFDA.</p></div>
+    <div class="card"><h3>Trial readout calendar</h3><p>Upcoming primary completion dates across the market, filterable by sponsor or ticker, condition, phase and date window. Watches flag slipped dates. <a href="/calendar/">Browse the calendar</a>. Source: ClinicalTrials.gov.</p></div>
+    <div class="card"><h3>Trials at Risk</h3><p>Trials that were suspended, terminated or withdrawn, are past their primary completion date, slipped, or fell short of target enrollment. Each trial is scored by risk, with Markdown, HTML, RSS and JSON digests. Source: ClinicalTrials.gov.</p></div>
   </div>
 </div></section>
 
