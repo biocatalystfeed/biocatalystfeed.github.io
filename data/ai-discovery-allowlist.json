@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "name": "Scout v1 allowlist",
+  "owner": "Gavin",
+  "approved": "2026-11-06",
+  "_comment": "Curated source policy for the AI discovery lane. v1 does not crawl the web and does not read an X firehose. bioRxiv, chemRxiv, and X are listed so later curation stays inside this list. fetch_in_v1 is false for every source except the optional arXiv API query.",
+  "arxiv": {
+    "fetch_in_v1": true,
+    "fetch_note": "Worker /ai-discovery may query export.arxiv.org only with the categories below, and only when a search string is present. All arXiv items are preprints and keep the lane disclaimer.",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML",
+      "q-bio.BM",
+      "q-bio.QM",
+      "physics.chem-ph",
+      "cond-mat.mtrl-sci",
+      "physics.comp-ph"
+    ],
+    "conditional": [
+      {
+        "category": "cs.CL",
+        "when": "science-relevant"
+      }
+    ]
+  },
+  "preprint_servers": [
+    {
+      "id": "biorxiv",
+      "filter": "AI/ML methods",
+      "fetch_in_v1": false
+    },
+    {
+      "id": "chemrxiv",
+      "filter": "AI/ML methods",
+      "fetch_in_v1": false
+    }
+  ],
+  "labs": [
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "focus": "science",
+      "homepage": "https://deepmind.google/",
+      "x_handle": "GoogleDeepMind"
+    },
+    {
+      "id": "msr-ai-for-science",
+      "name": "Microsoft Research AI for Science",
+      "homepage": "https://www.microsoft.com/en-us/research/lab/microsoft-research-ai-for-science/",
+      "fetch_in_v1": false,
+      "x_handle": "MSFTResearch",
+      "x_note": "Verified org account is MSFTResearch (Microsoft Research), not a separate AI-for-Science handle."
+    },
+    {
+      "id": "meta-fair-chemistry",
+      "name": "Meta FAIR chemistry",
+      "focus": "open materials/catalysis",
+      "homepage": "https://opencatalystproject.org/",
+      "code": "https://github.com/facebookresearch/fairchem",
+      "org_home": "https://ai.meta.com/",
+      "x_handle": "AIatMeta",
+      "x_note": "Official X account is AIatMeta. MetaAI is a redirect stub and is not allowlisted."
+    },
+    {
+      "id": "isomorphic",
+      "name": "Isomorphic Labs",
+      "homepage": "https://www.isomorphiclabs.com/",
+      "x_handle": "IsomorphicLabs"
+    },
+    {
+      "id": "arc",
+      "name": "Arc Institute",
+      "focus": "Evo",
+      "homepage": "https://arcinstitute.org/",
+      "x_handle": "arcinstitute"
+    },
+    {
+      "id": "evolutionaryscale",
+      "name": "EvolutionaryScale",
+      "focus": "ESM",
+      "homepage": "https://www.evolutionaryscale.ai/",
+      "x_handle": "EvoscaleAI"
+    },
+    {
+      "id": "baker-ipd",
+      "name": "Baker Lab / Institute for Protein Design",
+      "homepage": "https://www.ipd.uw.edu/",
+      "x_handle": "UWproteindesign",
+      "_comment": "No clear personal X handle for David Baker. UWproteindesign is the official IPD account and covers the Baker lab."
+    },
+    {
+      "id": "futurehouse",
+      "name": "FutureHouse",
+      "homepage": "https://www.futurehouse.org/",
+      "x_handle": "FutureHouseSF"
+    },
+    {
+      "id": "recursion",
+      "name": "Recursion",
+      "homepage": "https://www.recursion.com/",
+      "x_handle": "RecursionPharma"
+    },
+    {
+      "id": "insilico",
+      "name": "Insilico",
+      "homepage": "https://insilico.com/",
+      "x_handle": "InSilicoMeds",
+      "x_note": "Official X account is InSilicoMeds. InsilicoMed is a dormant lookalike and is not allowlisted."
+    },
+    {
+      "id": "genesis",
+      "name": "Genesis Molecular AI",
+      "homepage": "https://genesis.ml/",
+      "_comment": "Gavin 2026-11-06: Genesis Therapeutics is now Genesis Molecular AI. Public site title matches. X handle genesismolai. Not fetched in v1.",
+      "x_handle": "genesismolai",
+      "former_name": "Genesis Therapeutics"
+    },
+    {
+      "id": "orbital",
+      "name": "Orbital Industries",
+      "homepage": "https://www.orbitalindustries.com/",
+      "_comment": "Gavin 2026-11-06: Orbital Materials is now Orbital Industries. orbitalmaterials.com redirects to orbitalindustries.com. X handle Orbital_Ind. Not fetched in v1.",
+      "x_handle": "Orbital_Ind",
+      "former_name": "Orbital Materials"
+    },
+    {
+      "id": "ai2",
+      "name": "Allen Institute (AI2)",
+      "homepage": "https://allenai.org/",
+      "x_handle": "allen_ai"
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA research",
+      "focus": "biology/materials",
+      "homepage": "https://www.nvidia.com/en-us/research/",
+      "x_handle": "NVIDIAAI"
+    },
+    {
+      "id": "deep-principle",
+      "name": "Deep Principle",
+      "homepage": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/",
+      "seed_scope": "Hydrogen-1.0 only",
+      "x_handle": "DeepPrinciple"
+    }
+  ],
+  "huggingface": {
+    "rule": "Verified organization accounts only, with a model card plus an eval or paper link.",
+    "_comment": "v1 lists orgs that already have a curated card. Do not ingest other orgs until the rule is checked by hand.",
+    "orgs": [
+      {
+        "id": "deep-principle",
+        "example": "deep-principle/Hydrogen-1.0",
+        "scope": "Hydrogen-1.0 seed only"
+      },
+      {
+        "id": "arcinstitute",
+        "example": "arcinstitute/evo2_40b"
+      },
+      {
+        "id": "EvolutionaryScale",
+        "example": "collections/EvolutionaryScale/esm3-model-family"
+      }
+    ]
+  },
+  "x": {
+    "_comment": "Verified by Gavin on 2026-11-06 with a live lookup of 28 handles (data/x_allowlist_v1.csv). Config only. v1 does not call the X API, does not crawl X, and does not auto-publish from hashtags. #AIforScience is a lead-finder label only.",
+    "fetch_in_v1": false,
+    "verified_on": "2026-11-06",
+    "source": "data/x_allowlist_v1.csv",
+    "auto_publish_hashtags": false,
+    "hashtag_lead_finder_only": [
+      "#AIforScience"
+    ],
+    "rejected_lookalikes": [
+      {
+        "handle": "MetaAI",
+        "use_instead": "AIatMeta",
+        "reason": "Redirect stub pointing at AIatMeta. Do not allowlist."
+      },
+      {
+        "handle": "InsilicoMed",
+        "use_instead": "InSilicoMeds",
+        "reason": "Dormant lookalike. Do not allowlist."
+      }
+    ],
+    "handles_not_found": [
+      {
+        "person": "David Baker",
+        "note": "No clear personal handle. UWproteindesign covers the Baker lab / Institute for Protein Design."
+      },
+      {
+        "person": "John Jumper",
+        "note": "No clear personal handle verified in the 2026-11-06 lookup."
+      },
+      {
+        "person": "Regina Barzilay",
+        "note": "No clear personal handle verified in the 2026-11-06 lookup."
+      }
+    ],
+    "org_accounts": [
+      {
+        "handle": "GoogleDeepMind",
+        "display_name": "Google DeepMind",
+        "affiliation": "Google DeepMind",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/GoogleDeepMind",
+        "notes": "Live-fetched; verified business; bio: Building AI safely and responsibly",
+        "lab_id": "deepmind"
+      },
+      {
+        "handle": "MSFTResearch",
+        "display_name": "Microsoft Research",
+        "affiliation": "Microsoft Research",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/MSFTResearch",
+        "notes": "Live-fetched; verified business; bio: We advance science and technology to benefit humanity",
+        "lab_id": "msr-ai-for-science"
+      },
+      {
+        "handle": "AIatMeta",
+        "display_name": "AI at Meta",
+        "affiliation": "Meta AI / FAIR",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/AIatMeta",
+        "notes": "Live-fetched; verified business; MetaAI handle is a redirect stub pointing here",
+        "lab_id": "meta-fair-chemistry"
+      },
+      {
+        "handle": "IsomorphicLabs",
+        "display_name": "Isomorphic Labs",
+        "affiliation": "Isomorphic Labs (Alphabet)",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/IsomorphicLabs",
+        "notes": "Live-fetched; verified blue; frontier AI for medicines",
+        "lab_id": "isomorphic"
+      },
+      {
+        "handle": "arcinstitute",
+        "display_name": "Arc Institute",
+        "affiliation": "Arc Institute",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/arcinstitute",
+        "notes": "Live-fetched; verified blue; full-stack institute for AI and biology",
+        "lab_id": "arc"
+      },
+      {
+        "handle": "EvoscaleAI",
+        "display_name": "EvolutionaryScale",
+        "affiliation": "EvolutionaryScale (now joining Biohub/CZI)",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/EvoscaleAI",
+        "notes": "Live-fetched; display name EvolutionaryScale; posts confirm ESM3/ESMC and Biohub merger; empty profile bio",
+        "lab_id": "evolutionaryscale"
+      },
+      {
+        "handle": "UWproteindesign",
+        "display_name": "Institute for Protein Design",
+        "affiliation": "UW Medicine Institute for Protein Design",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/UWproteindesign",
+        "notes": "Live-fetched; official IPD account; Nobel 2024 Chemistry; David Baker's institute (no clear personal Baker handle found)",
+        "lab_id": "baker-ipd"
+      },
+      {
+        "handle": "FutureHouseSF",
+        "display_name": "FutureHouse",
+        "affiliation": "FutureHouse",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/FutureHouseSF",
+        "notes": "Live-fetched; verified blue; philanthropically-funded AI for scientific discovery",
+        "lab_id": "futurehouse"
+      },
+      {
+        "handle": "RecursionPharma",
+        "display_name": "Recursion",
+        "affiliation": "Recursion Pharmaceuticals",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/RecursionPharma",
+        "notes": "Live-fetched; verified blue; decoding biology / AI drug discovery",
+        "lab_id": "recursion"
+      },
+      {
+        "handle": "InSilicoMeds",
+        "display_name": "Insilico Medicine",
+        "affiliation": "Insilico Medicine",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/InSilicoMeds",
+        "notes": "Live-fetched; verified blue; clinical-stage AI biotech (InsilicoMed is a dormant lookalike — skipped)",
+        "lab_id": "insilico"
+      },
+      {
+        "handle": "genesismolai",
+        "display_name": "Genesis Molecular AI",
+        "affiliation": "Genesis Therapeutics (now Genesis Molecular AI)",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/genesismolai",
+        "notes": "Live-fetched; verified blue; formerly Genesis Therapeutics; molecular AI for drug design",
+        "lab_id": "genesis"
+      },
+      {
+        "handle": "Orbital_Ind",
+        "display_name": "Orbital Industries",
+        "affiliation": "Orbital Materials / Orbital Industries",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/Orbital_Ind",
+        "notes": "Live-fetched; verified blue; AI industrial / advanced materials (renamed from Orbital Materials)",
+        "lab_id": "orbital"
+      },
+      {
+        "handle": "allen_ai",
+        "display_name": "Ai2",
+        "affiliation": "Allen Institute for AI (AI2)",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/allen_ai",
+        "notes": "Live-fetched; verified business; Breakthrough AI to solve the world's biggest problems",
+        "lab_id": "ai2"
+      },
+      {
+        "handle": "NVIDIAAI",
+        "display_name": "NVIDIA AI",
+        "affiliation": "NVIDIA AI / Research",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/NVIDIAAI",
+        "notes": "Live-fetched; verified business; Teaching your AI new tricks (NVIDIAResearch handle is unrelated)",
+        "lab_id": "nvidia"
+      },
+      {
+        "handle": "DeepPrinciple",
+        "display_name": "Deep Principle",
+        "affiliation": "Deep Principle",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/DeepPrinciple",
+        "notes": "Live-fetched; verified blue; Unlocking new chemical reactions and materials with AI",
+        "lab_id": "deep-principle"
+      },
+      {
+        "handle": "arxiv",
+        "display_name": "arXiv.org",
+        "affiliation": "arXiv (Cornell)",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/arxiv",
+        "notes": "Live-fetched; official preprint archive news account"
+      },
+      {
+        "handle": "biorxivpreprint",
+        "display_name": "bioRxiv",
+        "affiliation": "bioRxiv (Cold Spring Harbor Laboratory)",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/biorxivpreprint",
+        "notes": "Live-fetched; official bioRxiv subject-area preprint alerts"
+      },
+      {
+        "handle": "huggingface",
+        "display_name": "Hugging Face",
+        "affiliation": "Hugging Face",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/huggingface",
+        "notes": "Live-fetched; verified blue; The AI community building the future"
+      }
+    ],
+    "researcher_handles": [
+      {
+        "handle": "demishassabis",
+        "display_name": "Demis Hassabis",
+        "affiliation": "Google DeepMind / Isomorphic Labs",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/demishassabis",
+        "notes": "Live-fetched; verified blue; Nobel Laureate; Co-Founder & Chair DeepMind; CEO Isomorphic Labs"
+      },
+      {
+        "handle": "pushmeet",
+        "display_name": "Pushmeet Kohli",
+        "affiliation": "Google DeepMind / Google Cloud",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/pushmeet",
+        "notes": "Live-fetched; verified blue; Chief Scientist Google Cloud; VP DeepMind; AlphaFold/Co-Scientist"
+      },
+      {
+        "handle": "pdhsu",
+        "display_name": "Patrick Hsu",
+        "affiliation": "Arc Institute / Stanford",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/pdhsu",
+        "notes": "Live-fetched; verified blue; Arc co-founder; Stanford professor; biology and ML"
+      },
+      {
+        "handle": "BrianHie",
+        "display_name": "Brian Hie",
+        "affiliation": "Stanford / Arc Institute",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/BrianHie",
+        "notes": "Live-fetched; verified blue; AI for biology"
+      },
+      {
+        "handle": "alexrives",
+        "display_name": "Alex Rives",
+        "affiliation": "Biohub / ESM project (ex-EvolutionaryScale)",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/alexrives",
+        "notes": "Live-fetched; verified blue; Head of Science Biohub; founder ESM project"
+      },
+      {
+        "handle": "andrewwhite01",
+        "display_name": "Andrew White",
+        "affiliation": "FutureHouse / Edison Scientific",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/andrewwhite01",
+        "notes": "Live-fetched; verified blue; Cofounder FutureHouseSF; automating science"
+      },
+      {
+        "handle": "wellingmax",
+        "display_name": "Max Welling",
+        "affiliation": "AMLab / University of Amsterdam (materials AI)",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/wellingmax",
+        "notes": "Live-fetched; empty bio but posts confirm ML force fields / materials AI / AMLab UvA; display name Max Welling"
+      },
+      {
+        "handle": "SGRodriques",
+        "display_name": "Sam Rodriques",
+        "affiliation": "FutureHouse / Edison Scientific",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/SGRodriques",
+        "notes": "Live-fetched; verified blue; CEO/cofounder FutureHouse; bringing superintelligence to medicine"
+      },
+      {
+        "handle": "jure",
+        "display_name": "Jure Leskovec",
+        "affiliation": "Stanford / graph ML",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/jure",
+        "notes": "Live-fetched; verified blue; Stanford CS professor; machine learning on graphs"
+      },
+      {
+        "handle": "tesssmidt",
+        "display_name": "Prof. Tess Smidt",
+        "affiliation": "MIT EECS",
+        "verified_on": "2026-11-06",
+        "profile_url": "https://x.com/tesssmidt",
+        "notes": "Live-fetched; Atomic architect at MIT EECS; geometric deep learning for molecules"
+      }
+    ]
+  },
+  "hard_nos": [
+    "Aggregator or hype accounts",
+    "Paid newsletter repacks",
+    "Crypto or DeSci token launches",
+    "Press releases with no paper, code, or weights",
+    "Clinical cure, diagnosis, or beats-doctors claims",
+    "Paper mills and predatory journals",
+    "Self-reported benchmarks labelled self-reported"
+  ]
+}

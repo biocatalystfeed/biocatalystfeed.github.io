@@ -45,13 +45,21 @@
 
 <section id="demo" class="demo"><div class="wrap">
   <h2>Try it live</h2>
-  <p class="sub">Searches public APIs straight from your browser. Nothing is stored.</p>
+  <p class="sub">Searches public APIs straight from your browser. Nothing is stored. AI discovery is a curated list, not a live crawl.</p>
   <div class="tabs" role="tablist">
     <button role="tab" class="tab active" data-tab="trials">Trials</button>
     <button role="tab" class="tab" data-tab="papers">Papers</button>
     <button role="tab" class="tab" data-tab="grants">Grants</button>
   </div>
   <input id="q" type="search" placeholder="Try: GLP-1, CAR-T lupus, KRAS G12C" autocomplete="off" aria-label="Search">
+  <div class="aid" id="aid-box">
+    <label class="gtoggle" for="ai-discovery"><input type="checkbox" id="ai-discovery" role="switch" aria-describedby="aid-line"> AI discovery</label>
+    <p class="global-line" id="aid-line">Curated AI-for-science model releases and allowlisted lab sources. Not a crawl of the web or X.</p>
+    <div id="aid-disclaimer" class="aid-disclaimer" role="note">
+      <strong>Not peer-reviewed findings.</strong>
+      <p>AI discovery items are not peer-reviewed findings. They may include AI-generated or non-traditional claims. Informational only. Not medical or investment advice. Scores are evidence-style labels and do not predict replication.</p>
+    </div>
+  </div>
   <div class="global" id="global-box">
     <div class="global-row">
       <label class="gtoggle"><input type="checkbox" id="global" role="switch" aria-describedby="global-line"> Global</label>
@@ -90,6 +98,7 @@
     <div class="card"><h3>Trial readout calendar</h3><p>Upcoming primary completion dates across the market, filterable by sponsor or ticker, condition, phase and date window. Watches flag slipped dates. <a href="/calendar/">Browse the calendar</a>. Source: ClinicalTrials.gov.</p></div>
     <div class="card"><h3>Retraction warning</h3><p>Check up to 50 papers (PMIDs or DOIs) for retractions, expressions of concern and corrections, with links to each notice and how many sources agree. Free on the hosted MCP endpoint (tool <code>paper_retraction_check</code>). Informational only, not medical or investment advice. Sources: PubMed, Crossref (including Retraction Watch data), OpenAlex.</p></div>
     <div class="card"><h3>Trials at Risk</h3><p>Trials that were suspended, terminated or withdrawn, are past their primary completion date, slipped, or fell short of target enrollment. Each trial is scored by risk, with Markdown, HTML, RSS and JSON digests. Source: ClinicalTrials.gov.</p></div>
+    <div class="card"><h3>AI discovery</h3><p>Curated AI-for-science model releases and allowlisted lab sources, launched with Hydrogen-1.0. Items are not peer-reviewed findings and may include AI-generated or non-traditional claims. Informational only. Not medical or investment advice. Turn on the AI discovery checkbox in the demo to read the list.</p></div>
   </div>
 </div></section>
 
@@ -148,6 +157,6 @@ biocatalystfeed-mcp</code></pre>
   <nav><a href="mailto:contact@biocat.ai">contact@biocat.ai</a><a href="https://github.com/biocatalystfeed/biocatalystfeed/blob/main/TERMS.md">Terms</a><a href="https://github.com/biocatalystfeed/biocatalystfeed/blob/main/PRIVACY.md">Privacy</a><a href="https://github.com/biocatalystfeed/biocatalystfeed">GitHub</a></nav>
   <p class="disc">Data comes from public sources and is for information only. Not medical or investment advice.</p>
 </div></footer>
-<script src="app.js" defer></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

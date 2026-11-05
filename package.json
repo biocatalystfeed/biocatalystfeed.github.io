@@ -1,0 +1,8 @@
+{
+  "name": "biocatalystfeed-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test worker/test/ai-discovery.test.js"
+  }
+}

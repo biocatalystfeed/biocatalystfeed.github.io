@@ -1,0 +1,93 @@
+{
+  "lane": "ai-discovery",
+  "schema_version": 1,
+  "crawl": false,
+  "disclaimer": "AI discovery items are not peer-reviewed findings. They may include AI-generated or non-traditional claims. Informational only. Not medical or investment advice.",
+  "items": [
+    {
+      "id": "hydrogen-1.0",
+      "name": "Hydrogen-1.0",
+      "title": "Hydrogen-1.0",
+      "org": "Deep Principle",
+      "base_model": "GLM-5.3",
+      "base_org": "Z.AI",
+      "license": "MIT",
+      "params": "~753B",
+      "context_length": "1M tokens",
+      "summary": "Open-weight scientific problem-solving and research-assistance model from Deep Principle, post-trained from GLM-5.3 (Z.AI), for chemistry, materials, and life sciences. Research-assistant framing: outputs need scientific review and are not verified experimental findings. This card points at the MIT-licensed BF16 weights; quantized variants are published separately.",
+      "urls": {
+        "weights": "https://huggingface.co/deep-principle/Hydrogen-1.0",
+        "blog": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/"
+      },
+      "source_tier": "model_release",
+      "confidence": 0.35,
+      "disclaimer_required": true,
+      "disclaimer_class": "AI model release. Not a peer-reviewed experimental finding.",
+      "launch": true,
+      "sort_rank": 0,
+      "verified_as_of": "2026-11-06",
+      "provenance": "curated-seed",
+      "tags": ["chemistry", "materials", "life sciences", "model release", "Hydrogen", "Deep Principle", "GLM-5.3"]
+    },
+    {
+      "id": "evo-2",
+      "name": "Evo 2",
+      "title": "Evo 2",
+      "org": "Arc Institute",
+      "summary": "DNA foundation model released by Arc Institute. Pointer to the official model page, source code, and weights. This card is a model release on the curated allowlist, not a clinical or diagnostic claim.",
+      "urls": {
+        "weights": "https://huggingface.co/arcinstitute/evo2_40b",
+        "code": "https://github.com/ArcInstitute/evo2",
+        "blog": "https://arcinstitute.org/tools/evo"
+      },
+      "source_tier": "model_release",
+      "confidence": 0.35,
+      "disclaimer_required": true,
+      "disclaimer_class": "AI model release. Not presented here as a verified experimental finding.",
+      "launch": false,
+      "sort_rank": 10,
+      "published": "2025-02-19",
+      "provenance": "curated-seed",
+      "tags": ["DNA", "genomics", "model release", "Arc Institute", "Evo"]
+    },
+    {
+      "id": "esm3",
+      "name": "ESM3",
+      "title": "ESM3",
+      "org": "EvolutionaryScale",
+      "summary": "Protein language model family from EvolutionaryScale (ESM). Pointer to the official release post and the Hugging Face model-family collection. Marketing and benchmark claims from the post are not reproduced here.",
+      "urls": {
+        "blog": "https://www.evolutionaryscale.ai/blog/esm3-release",
+        "weights": "https://huggingface.co/collections/EvolutionaryScale/esm3-model-family"
+      },
+      "source_tier": "model_release",
+      "confidence": 0.35,
+      "disclaimer_required": true,
+      "disclaimer_class": "AI model release. Not presented here as a verified experimental finding.",
+      "launch": false,
+      "sort_rank": 20,
+      "published": "2024-06-25",
+      "provenance": "curated-seed",
+      "tags": ["protein", "language model", "EvolutionaryScale", "ESM"]
+    },
+    {
+      "id": "open-catalyst",
+      "name": "Open Catalyst Project",
+      "title": "Open Catalyst Project",
+      "org": "Meta FAIR",
+      "summary": "Official project page for open catalysis datasets and models from Meta FAIR chemistry (Open Catalyst / fairchem), with a link to the code. Pointer only. Not a new experimental result.",
+      "urls": {
+        "page": "https://opencatalystproject.org/",
+        "code": "https://github.com/facebookresearch/fairchem"
+      },
+      "source_tier": "blog",
+      "confidence": 0.22,
+      "disclaimer_required": true,
+      "disclaimer_class": "Official project page. Not a peer-reviewed finding in this lane.",
+      "launch": false,
+      "sort_rank": 30,
+      "provenance": "curated-seed",
+      "tags": ["catalysis", "materials", "Meta FAIR", "Open Catalyst"]
+    }
+  ]
+}

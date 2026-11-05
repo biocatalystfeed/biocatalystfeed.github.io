@@ -1,6 +1,10 @@
 // BioCatalystFeed live demo. Trials and papers hit public CORS-enabled APIs directly.
 // NIH RePORTER has no CORS, so grants go through the Cloudflare Worker once deployed:
 // set API_BASE to the Worker URL (e.g. "https://api.biocatalystfeed.com").
+// AI discovery reads the curated seed at /data/ai-discovery.json (same origin).
+// When API_BASE is set, a search also calls the worker's allowlisted /ai-discovery route.
+import { esc, filterItems, renderItem } from "./data/ai-discovery-score.js";
+
 (() => {
   const API_BASE = "";
   const $ = (s) => document.querySelector(s);
@@ -36,7 +40,6 @@
   const cache = new Map(); // per-page-load cache: re-typing / tab switching never re-hits upstream APIs
   let cooldownUntil = 0;   // after a 429, pause live queries instead of hammering the source
 
-  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const item = (title, url, meta, pills = []) =>
     `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(title)}</a><div class="meta">${pills.filter(Boolean).map((p) => `<span class="pill">${esc(p)}</span>`).join("")}${esc(meta)}</div></li>`;
 
@@ -92,7 +95,65 @@
 
   const discFor = (rows) => (rows.globalHit ? `<li class="gdisc" style="border:0;background:none;padding:0">${esc(GLOBAL_DISCLAIMER)}</li>` : "");
 
+  const aidBox = $("#ai-discovery");
+  const isAid = () => !!aidBox?.checked;
+  const DEFAULT_PLACEHOLDER = q?.getAttribute("placeholder") || "";
+  let aidCatalogPromise;
+  function loadCatalog() {
+    if (!aidCatalogPromise) {
+      aidCatalogPromise = fetch("/data/ai-discovery.json")
+        .then(async (r) => {
+          if (!r.ok) throw new Error(`catalog HTTP ${r.status}`);
+          return r.json();
+        })
+        .catch((e) => {
+          aidCatalogPromise = null;
+          throw e;
+        });
+    }
+    return aidCatalogPromise;
+  }
+
+  async function runAid() {
+    ctrl?.abort();
+    ctrl = new AbortController();
+    const my = ++seq;
+    const term = q.value.trim();
+    status.textContent = "Loading AI discovery…";
+    try {
+      let payload = null;
+      if (API_BASE && term.length >= 2) {
+        try {
+          payload = await getJSON(`${API_BASE}/ai-discovery?q=${encodeURIComponent(term)}`);
+        } catch (e) {
+          if (e.name === "AbortError") throw e;
+        }
+      }
+      if (my !== seq) return;
+      if (!payload) {
+        const cat = await loadCatalog();
+        if (my !== seq) return;
+        const items = filterItems(cat.items, term);
+        payload = { items, count: items.length, sources: { curated: items.length, arxiv: 0 } };
+      }
+      const items = payload.items || [];
+      out.innerHTML = items.map(renderItem).join("");
+      if (!items.length) {
+        status.textContent = "No curated AI discovery items match. This lane does not crawl the web or X.";
+        return;
+      }
+      const arxivCount = payload.sources?.arxiv || 0;
+      const extra = arxivCount ? ` · ${arxivCount} allowlisted arXiv preprint${arxivCount === 1 ? "" : "s"}` : "";
+      status.textContent = `${items.length} AI discovery item${items.length === 1 ? "" : "s"}${extra}. Curated sources only.`;
+    } catch (e) {
+      if (e.name === "AbortError" || my !== seq) return;
+      out.innerHTML = "";
+      status.textContent = `Couldn't load AI discovery (${e.message}).`;
+    }
+  }
+
   async function run() {
+    if (isAid()) return runAid();
     const term = q.value.trim();
     ctrl?.abort();
     if (term.length < 2) { out.innerHTML = ""; status.textContent = ""; return; }
@@ -134,12 +195,23 @@
   }
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && detail && !detail.hidden) { pinned = false; setOpen(false); } });
   document.addEventListener("click", (e) => { if (pinned && !gbox.contains(e.target) && !e.target.closest?.(".global-on")) { pinned = false; setOpen(false); } });
-  gBox?.addEventListener("change", () => { if (gOn) gOn.hidden = !gBox.checked; run(); });
+  gBox?.addEventListener("change", () => { if (gOn) gOn.hidden = !gBox.checked || isAid(); run(); });
+
+  const setAidMode = (on) => {
+    document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("active", !on && x.dataset.tab === tab));
+    if (q) q.placeholder = on ? "Filter AI discovery: Hydrogen, protein, catalyst" : DEFAULT_PLACEHOLDER;
+    if (gOn) gOn.hidden = !gBox?.checked || on;
+  };
+  aidBox?.addEventListener("change", () => { setAidMode(aidBox.checked); run(); });
 
   q.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(run, 600); });
   document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => {
+    if (aidBox?.checked) aidBox.checked = false;
     document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("active", x === b));
-    tab = b.dataset.tab; run();
+    tab = b.dataset.tab;
+    if (q) q.placeholder = DEFAULT_PLACEHOLDER;
+    if (gOn) gOn.hidden = !gBox?.checked;
+    run();
   }));
   $("#install")?.addEventListener("click", (e) => navigator.clipboard?.writeText(e.target.textContent).then(() => {
     const t = e.target.textContent; e.target.textContent = "Copied!"; setTimeout(() => (e.target.textContent = t), 1200);
