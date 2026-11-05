@@ -1,5 +1,9 @@
-// BioCatalystFeed API proxy: /trials, /papers, /grants?q=...
+// BioCatalystFeed API proxy: /trials, /papers, /grants, /ai-discovery?q=...
 // Edge caching (Cache API) + per-IP daily rate limit (KV).
+// /ai-discovery serves a curated seed. A search may also hit the arXiv API
+// inside the Scout allowlist. It does not crawl the web or X.
+import { buildLane } from "./ai-discovery.js";
+
 const UA = "BioCatalystFeed/1.0 (+https://biocat.ai; contact@biocat.ai)";
 
 function cors(origin, env) {
@@ -61,7 +65,8 @@ export default {
 
     const url = new URL(request.url);
     const route = url.pathname.replace(/^\/+|\/+$/g, "");
-    if (route === "" || route === "health") return json({ ok: true, routes: ["/trials", "/papers", "/grants"] }, 200, h);
+    if (route === "" || route === "health") return json({ ok: true, routes: ["/trials", "/papers", "/grants", "/ai-discovery"] }, 200, h);
+    if (route === "ai-discovery") return handleAiDiscovery(request, url, env, ctx, h);
     if (!["trials", "papers", "grants"].includes(route)) return json({ error: "not found" }, 404, h);
     const q = (url.searchParams.get("q") || "").trim().slice(0, 200);
     if (q.length < 2) return json({ error: "query 'q' must be at least 2 characters" }, 400, h);
@@ -100,3 +105,44 @@ export default {
     return r;
   },
 };
+
+// Curated catalog is our own data, so an empty query is allowed and is not
+// rate limited. Allowlisted arXiv lookups use the same limiter as other routes.
+async function handleAiDiscovery(request, url, env, ctx, h) {
+  const q = (url.searchParams.get("q") || "").trim().slice(0, 200);
+  const wantArxiv = q.length >= 2;
+  const cache = caches.default;
+  const cacheKey = new Request(`https://cache.bcf/ai-discovery?q=${encodeURIComponent(q.toLowerCase())}&arxiv=${wantArxiv ? "1" : "0"}`);
+  const hit = await cache.match(cacheKey);
+  if (hit) {
+    const r = new Response(hit.body, hit);
+    Object.entries(h).forEach(([k, v]) => r.headers.set(k, v));
+    r.headers.set("X-Cache", "HIT");
+    return r;
+  }
+
+  let remaining = "";
+  if (wantArxiv) {
+    const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+    const rl = await rateLimit(ip, env);
+    if (!rl.ok) return json({ error: "rate limit reached", limit: rl.limit, lane: "ai-discovery" }, 429, { ...h, "Retry-After": String(rl.retry || 60) });
+    remaining = String(rl.remaining);
+  }
+
+  let payload;
+  try {
+    payload = await buildLane({ q, fetchImpl: fetch, wantArxiv });
+  } catch {
+    return json({ error: "ai discovery failed" }, 500, h);
+  }
+  const body = JSON.stringify(payload);
+  const ttl = parseInt(env.CACHE_TTL || "900", 10);
+  ctx.waitUntil(cache.put(cacheKey, new Response(body, {
+    status: 200,
+    headers: { "Content-Type": "application/json", "Cache-Control": `public, max-age=${ttl}` },
+  })));
+  const r = json(payload, 200, h);
+  r.headers.set("X-Cache", "MISS");
+  if (remaining) r.headers.set("X-RateLimit-Remaining", remaining);
+  return r;
+}

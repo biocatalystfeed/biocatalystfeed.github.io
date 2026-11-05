@@ -1,0 +1,29 @@
+handle,display_name,type,affiliation,followers,verified_on,notes
+GoogleDeepMind,Google DeepMind,org,Google DeepMind,1599140,2026-11-06,Live-fetched; verified business; bio: Building AI safely and responsibly
+MSFTResearch,Microsoft Research,org,Microsoft Research,556359,2026-11-06,Live-fetched; verified business; bio: We advance science and technology to benefit humanity
+AIatMeta,AI at Meta,org,Meta AI / FAIR,879640,2026-11-06,Live-fetched; verified business; MetaAI handle is a redirect stub pointing here
+IsomorphicLabs,Isomorphic Labs,org,Isomorphic Labs (Alphabet),65876,2026-11-06,Live-fetched; verified blue; frontier AI for medicines
+arcinstitute,Arc Institute,org,Arc Institute,48427,2026-11-06,Live-fetched; verified blue; full-stack institute for AI and biology
+EvoscaleAI,EvolutionaryScale,org,EvolutionaryScale (now joining Biohub/CZI),3059,2026-11-06,Live-fetched; display name EvolutionaryScale; posts confirm ESM3/ESMC and Biohub merger; empty profile bio
+UWproteindesign,Institute for Protein Design,org,UW Medicine Institute for Protein Design,17591,2026-11-06,Live-fetched; official IPD account; Nobel 2024 Chemistry; David Baker's institute (no clear personal Baker handle found)
+FutureHouseSF,FutureHouse,org,FutureHouse,8732,2026-11-06,Live-fetched; verified blue; philanthropically-funded AI for scientific discovery
+RecursionPharma,Recursion,org,Recursion Pharmaceuticals,17679,2026-11-06,Live-fetched; verified blue; decoding biology / AI drug discovery
+InSilicoMeds,Insilico Medicine,org,Insilico Medicine,15898,2026-11-06,Live-fetched; verified blue; clinical-stage AI biotech (InsilicoMed is a dormant lookalike — skipped)
+genesismolai,Genesis Molecular AI,org,Genesis Therapeutics (now Genesis Molecular AI),520,2026-11-06,Live-fetched; verified blue; formerly Genesis Therapeutics; molecular AI for drug design
+Orbital_Ind,Orbital Industries,org,Orbital Materials / Orbital Industries,1560,2026-11-06,Live-fetched; verified blue; AI industrial / advanced materials (renamed from Orbital Materials)
+allen_ai,Ai2,org,Allen Institute for AI (AI2),87272,2026-11-06,Live-fetched; verified business; Breakthrough AI to solve the world's biggest problems
+NVIDIAAI,NVIDIA AI,org,NVIDIA AI / Research,360552,2026-11-06,Live-fetched; verified business; Teaching your AI new tricks (NVIDIAResearch handle is unrelated)
+DeepPrinciple,Deep Principle,org,Deep Principle,641,2026-11-06,Live-fetched; verified blue; Unlocking new chemical reactions and materials with AI
+arxiv,arXiv.org,org,arXiv (Cornell),56594,2026-11-06,Live-fetched; official preprint archive news account
+biorxivpreprint,bioRxiv,org,bioRxiv (Cold Spring Harbor Laboratory),139852,2026-11-06,Live-fetched; official bioRxiv subject-area preprint alerts
+huggingface,Hugging Face,org,Hugging Face,837198,2026-11-06,Live-fetched; verified blue; The AI community building the future
+demishassabis,Demis Hassabis,researcher,Google DeepMind / Isomorphic Labs,1956873,2026-11-06,Live-fetched; verified blue; Nobel Laureate; Co-Founder & Chair DeepMind; CEO Isomorphic Labs
+pushmeet,Pushmeet Kohli,researcher,Google DeepMind / Google Cloud,30072,2026-11-06,Live-fetched; verified blue; Chief Scientist Google Cloud; VP DeepMind; AlphaFold/Co-Scientist
+pdhsu,Patrick Hsu,researcher,Arc Institute / Stanford,88384,2026-11-06,Live-fetched; verified blue; Arc co-founder; Stanford professor; biology and ML
+BrianHie,Brian Hie,researcher,Stanford / Arc Institute,12063,2026-11-06,Live-fetched; verified blue; AI for biology
+alexrives,Alex Rives,researcher,Biohub / ESM project (ex-EvolutionaryScale),16397,2026-11-06,Live-fetched; verified blue; Head of Science Biohub; founder ESM project
+andrewwhite01,Andrew White,researcher,FutureHouse / Edison Scientific,34272,2026-11-06,Live-fetched; verified blue; Cofounder FutureHouseSF; automating science
+wellingmax,Max Welling,researcher,AMLab / University of Amsterdam (materials AI),42917,2026-11-06,Live-fetched; empty bio but posts confirm ML force fields / materials AI / AMLab UvA; display name Max Welling
+SGRodriques,Sam Rodriques,researcher,FutureHouse / Edison Scientific,22582,2026-11-06,Live-fetched; verified blue; CEO/cofounder FutureHouse; bringing superintelligence to medicine
+jure,Jure Leskovec,researcher,Stanford / graph ML,45719,2026-11-06,Live-fetched; verified blue; Stanford CS professor; machine learning on graphs
+tesssmidt,Prof. Tess Smidt,researcher,MIT EECS,1501,2026-11-06,Live-fetched; Atomic architect at MIT EECS; geometric deep learning for molecules
