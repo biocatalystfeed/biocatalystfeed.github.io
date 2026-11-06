@@ -1,12 +1,12 @@
 // BioCatalystFeed live demo. Trials and papers hit public CORS-enabled APIs directly.
-// NIH RePORTER has no CORS, so grants go through the Cloudflare Worker once deployed:
-// set API_BASE to the Worker URL (e.g. "https://api.biocatalystfeed.com").
+// NIH RePORTER has no CORS, so grants go through the Cloudflare Worker.
+// API_BASE is the Worker origin with no trailing slash (paths are `${API_BASE}/grants` and so on).
 // AI discovery reads the curated seed at /data/ai-discovery.json (same origin).
 // When API_BASE is set, a search also calls the worker's allowlisted /ai-discovery route.
 import { esc, filterItems, renderItem } from "./data/ai-discovery-score.js";
 
 (() => {
-  const API_BASE = "";
+  const API_BASE = "https://biocatalystfeed-api.biocatalystfeed.workers.dev";
   const $ = (s) => document.querySelector(s);
   const q = $("#q"), out = $("#results"), status = $("#status");
   let tab = "trials", timer, ctrl, seq = 0;
