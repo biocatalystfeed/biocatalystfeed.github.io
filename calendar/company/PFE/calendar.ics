@@ -1,0 +1,210 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed PFE trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:7608c632a421a418dd48@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:PFE P2 readout (est.): A Study To Learn About Two Study Medicines (
+ PF-07275315 And PF-07264660) In People Who Have Moderate To Severe Atopic 
+ Dermatitis
+DESCRIPTION:A Study To Learn About Two Study Medicines (PF-07275315 And PF-
+ 07264660) In People Who Have Moderate To Severe Atopic Dermatitis\nNCT0599
+ 5964 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary completio
+ n date (ESTIMATED)\; top-line results usually follow later.\nTicker PFE (c
+ onfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05995964\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05995964
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:1f05eaca8d24f7c0e56a@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:PFE P3 readout (est.): A Study to Learn About the Study Medicine Ca
+ lled Rimegepant in Women When Used for Intermittent Prevention of Menstrua
+ l Migraine
+DESCRIPTION:A Study to Learn About the Study Medicine Called Rimegepant in 
+ Women When Used for Intermittent Prevention of Menstrual Migraine\nNCT0664
+ 1466 | PHASE3 | RECRUITING | sponsor: Pfizer\nPrimary completion date (EST
+ IMATED)\; top-line results usually follow later.\nTicker PFE (confidence 0
+ .9)\nSource: https://clinicaltrials.gov/study/NCT06641466\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06641466
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:14d9119d6a0d17232f6b@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:PFE P3 readout (est.): A Study to Learn About Medicine Called Ritle
+ citinib in Children Aged Between 6 to 12 Years With Severe Alopecia Areata
+DESCRIPTION:A Study to Learn About Medicine Called Ritlecitinib in Children
+  Aged Between 6 to 12 Years With Severe Alopecia Areata\nNCT07029711 | PHA
+ SE3 | ACTIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary completion date (ES
+ TIMATED)\; top-line results usually follow later.\nTicker PFE (confidence 
+ 0.9)\nSource: https://clinicaltrials.gov/study/NCT07029711\nScheduling/ref
+ erence data from public records\; dates can move. Not investment\, legal o
+ r medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07029711
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:53affb8147cf9815bbbe@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:PFE P3 readout (est.): A Study to Learn About the Safety\, Tolerabi
+ lity\, and Immunogenicity of a Fifth Dose of 6-Valent OspA-Based Lyme Dise
+ ase Vaccine
+DESCRIPTION:A Study to Learn About the Safety\, Tolerability\, and Immunoge
+ nicity of a Fifth Dose of 6-Valent OspA-Based Lyme Disease Vaccine\nNCT075
+ 00506 | PHASE3 | RECRUITING | sponsor: Pfizer\nPrimary completion date (ES
+ TIMATED)\; top-line results usually follow later.\nTicker PFE (confidence 
+ 0.9)\nSource: https://clinicaltrials.gov/study/NCT07500506\nScheduling/ref
+ erence data from public records\; dates can move. Not investment\, legal o
+ r medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07500506
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:5bbd0c9b289c068f9964@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:PFE P2 readout (est.): A 16-Week Study to Learn About the Study Med
+ icine Called Ritlecitinib in Adults With Long Lasting Painful Red Skin Lum
+ ps\, Known by the Medical Term\, Hidradenitis Suppurativa\, or HS.
+DESCRIPTION:A 16-Week Study to Learn About the Study Medicine Called Ritlec
+ itinib in Adults With Long Lasting Painful Red Skin Lumps\, Known by the M
+ edical Term\, Hidradenitis Suppurativa\, or HS.\nNCT07228390 | PHASE2 | AC
+ TIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary completion date (ESTIMATED)
+ \; top-line results usually follow later.\nTicker PFE (confidence 0.9)\nSo
+ urce: https://clinicaltrials.gov/study/NCT07228390\nScheduling/reference d
+ ata from public records\; dates can move. Not investment\, legal or medica
+ l advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07228390
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:0cef0edd81db37846729@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:PFE P2 readout (est.): A Study to Learn About Ritlecitinib for the 
+ Potential Treatment of Chronic Spontaneous Urticaria in Adults.
+DESCRIPTION:A Study to Learn About Ritlecitinib for the Potential Treatment
+  of Chronic Spontaneous Urticaria in Adults.\nNCT07219615 | PHASE2 | RECRU
+ ITING | sponsor: Pfizer\nPrimary completion date (ESTIMATED)\; top-line re
+ sults usually follow later.\nTicker PFE (confidence 0.9)\nSource: https://
+ clinicaltrials.gov/study/NCT07219615\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07219615
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:71a713a6be2b309794b1@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:PFE P3 readout (est.): Vepdegestrant (ARV-471/PF-07850327) + Palboc
+ iclib vs Letrozole + Palbociclib in ER(+)/HER2(-) Advanced Breast Cancer
+DESCRIPTION:Vepdegestrant (ARV-471/PF-07850327) + Palbociclib vs Letrozole 
+ + Palbociclib in ER(+)/HER2(-) Advanced Breast Cancer\nNCT05909397 | PHASE
+ 3 | ACTIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary completion date (ESTI
+ MATED)\; top-line results usually follow later.\nTicker PFE (confidence 0.
+ 9)\nSource: https://clinicaltrials.gov/study/NCT05909397\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05909397
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:363e39fb01c514f31639@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:PFE P2 readout (est.): PF-07104091 as a Single Agent and in Combina
+ tion Therapy
+DESCRIPTION:PF-07104091 as a Single Agent and in Combination Therapy\nNCT04
+ 553133 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary complet
+ ion date (ESTIMATED)\; top-line results usually follow later.\nTicker PFE 
+ (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT04553133\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04553133
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:5eecd9408bb09ba3a249@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:PFE P3 readout (est.): Continued Access Study for Participants Deri
+ ving Benefit in Pfizer-Sponsored Avelumab Parent Studies That Are Closing
+DESCRIPTION:Continued Access Study for Participants Deriving Benefit in Pfi
+ zer-Sponsored Avelumab Parent Studies That Are Closing\nNCT05059522 | PHAS
+ E3 | ACTIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary completion date (EST
+ IMATED)\; top-line results usually follow later.\nTicker PFE (confidence 0
+ .9)\nSource: https://clinicaltrials.gov/study/NCT05059522\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05059522
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:057cd0a85300da09bc96@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:PFE P3 readout (est.): Study to Evaluate the Efficacy\, Immunogenic
+ ity\, and Safety of RSVpreF in Adults.
+DESCRIPTION:Study to Evaluate the Efficacy\, Immunogenicity\, and Safety of
+  RSVpreF in Adults.\nNCT05035212 | PHASE3 | ACTIVE_NOT_RECRUITING | sponso
+ r: Pfizer\nPrimary completion date (ESTIMATED)\; top-line results usually 
+ follow later.\nTicker PFE (confidence 0.9)\nSource: https://clinicaltrials
+ .gov/study/NCT05035212\nScheduling/reference data from public records\; da
+ tes can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05035212
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:bd40476a40e899efe0fc@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+SUMMARY:PFE P3 readout (est.): A Phase 3 Study in India to Describe the Saf
+ ety and Immunogenicity of RSVpreF
+DESCRIPTION:A Phase 3 Study in India to Describe the Safety and Immunogenic
+ ity of RSVpreF\nNCT07653100 | PHASE3 | RECRUITING | sponsor: Pfizer\nPrima
+ ry completion date (ESTIMATED)\; top-line results usually follow later.\nT
+ icker PFE (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07
+ 653100\nScheduling/reference data from public records\; dates can move. No
+ t investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07653100
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

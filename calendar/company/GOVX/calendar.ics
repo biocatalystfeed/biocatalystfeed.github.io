@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed GOVX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:307cabbae711278ffbb4@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:GOVX P2 readout (est.): SARS-CoV-2 Vaccine (GEO-CM04S1) Versus mRNA
+  SARS-COV-2 Vaccine in Patients With Blood Cancer
+DESCRIPTION:SARS-CoV-2 Vaccine (GEO-CM04S1) Versus mRNA SARS-COV-2 Vaccine 
+ in Patients With Blood Cancer\nNCT04977024 | PHASE2 | ACTIVE_NOT_RECRUITIN
+ G | sponsor: GeoVax\, Inc.\nPrimary completion date (ESTIMATED)\; top-line
+  results usually follow later.\nTicker GOVX (confidence 0.6)\nSource: http
+ s://clinicaltrials.gov/study/NCT04977024\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04977024
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed IMCR trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:a61dfabd43dc404f0f1b@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:IMCR P1/P2 readout (est.): Phase 1/2 Study of IMC-R117C in Selected
+  Advanced Cancers
+DESCRIPTION:Phase 1/2 Study of IMC-R117C in Selected Advanced Cancers\nNCT0
+ 6840119 | PHASE1/PHASE2 | RECRUITING | sponsor: Immunocore Ltd\nPrimary co
+ mpletion date (ESTIMATED)\; top-line results usually follow later.\nTicker
+  IMCR (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT068401
+ 19\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06840119
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

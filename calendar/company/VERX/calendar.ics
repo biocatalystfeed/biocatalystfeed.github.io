@@ -1,0 +1,48 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed VERX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b29c45d5e1f8318d80ff@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+SUMMARY:VERX P3 readout (est.): Evaluation of the Long-term Safety and Effe
+ ctiveness of Suzetrigine (SUZ) in Participants With Painful Diabetic Perip
+ heral Neuropathy (DPN)
+DESCRIPTION:Evaluation of the Long-term Safety and Effectiveness of Suzetri
+ gine (SUZ) in Participants With Painful Diabetic Peripheral Neuropathy (DP
+ N)\nNCT06696443 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Vertex Pharmac
+ euticals Incorporated\nPrimary completion date (ESTIMATED)\; top-line resu
+ lts usually follow later.\nTicker VERX (confidence 0.9)\nSource: https://c
+ linicaltrials.gov/study/NCT06696443\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06696443
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:5b27c63e393227f097ad@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270202
+DTEND;VALUE=DATE:20270203
+SUMMARY:VERX P1/P2 readout (est.): A Phase 1/2 Study of VX-670 in Adult Par
+ ticipants With Myotonic Dystrophy 1 (DM1)
+DESCRIPTION:A Phase 1/2 Study of VX-670 in Adult Participants With Myotonic
+  Dystrophy 1 (DM1)\nNCT06185764 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | 
+ sponsor: Vertex Pharmaceuticals Incorporated\nPrimary completion date (EST
+ IMATED)\; top-line results usually follow later.\nTicker VERX (confidence 
+ 0.9)\nSource: https://clinicaltrials.gov/study/NCT06185764\nScheduling/ref
+ erence data from public records\; dates can move. Not investment\, legal o
+ r medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06185764
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

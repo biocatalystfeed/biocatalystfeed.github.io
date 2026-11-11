@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SUPN trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:65f9adac852fa4cf5650@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:SUPN P1/P2 readout (est.): BIS-001-ER for the Treatment of Adult Fo
+ cal Impaired Awareness Seizures
+DESCRIPTION:BIS-001-ER for the Treatment of Adult Focal Impaired Awareness 
+ Seizures\nNCT03474770 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: S
+ upernus Pharmaceuticals\, Inc.\nPrimary completion date (ESTIMATED)\; top-
+ line results usually follow later.\nTicker SUPN (confidence 0.9)\nSource: 
+ https://clinicaltrials.gov/study/NCT03474770\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT03474770
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:72dcb5954595f14ead53@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:SUPN P2 readout (est.): Double-blind\, Placebo-controlled Study in 
+ Adults With Major Depressive Disorder
+DESCRIPTION:Double-blind\, Placebo-controlled Study in Adults With Major De
+ pressive Disorder\nNCT07226661 | PHASE2 | RECRUITING | sponsor: Supernus P
+ harmaceuticals\, Inc.\nPrimary completion date (ESTIMATED)\; top-line resu
+ lts usually follow later.\nTicker SUPN (confidence 0.9)\nSource: https://c
+ linicaltrials.gov/study/NCT07226661\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07226661
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

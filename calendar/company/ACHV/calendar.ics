@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ACHV trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:639bd6c7886a5a0bfd9d@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:ACHV P3 readout (est.): Phase 3 Trial Evaluating the Efficacy and S
+ afety of Cytisinicline for Vaping Cessation in Adults Using Nicotine-Conta
+ ining E Cigarettes
+DESCRIPTION:Phase 3 Trial Evaluating the Efficacy and Safety of Cytisinicli
+ ne for Vaping Cessation in Adults Using Nicotine-Containing E Cigarettes\n
+ NCT07392125 | PHASE3 | NOT_YET_RECRUITING | sponsor: Achieve Life Sciences
+ \nPrimary completion date (ESTIMATED)\; top-line results usually follow la
+ ter.\nTicker ACHV (confidence 0.9)\nSource: https://clinicaltrials.gov/stu
+ dy/NCT07392125\nScheduling/reference data from public records\; dates can 
+ move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07392125
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

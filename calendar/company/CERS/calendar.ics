@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed CERS trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:099814bf4bc9c96a8ec5@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:CERS P2 readout (est.): A Recovery and Lifespan Study Using INTERCE
+ PT Red Blood Cells Prepared Using the INTERCEPT Blood System for RBCs With
+  AS-1
+DESCRIPTION:A Recovery and Lifespan Study Using INTERCEPT Red Blood Cells P
+ repared Using the INTERCEPT Blood System for RBCs With AS-1\nNCT07015437 |
+  PHASE2 | RECRUITING | sponsor: Cerus Corporation\nPrimary completion date
+  (ESTIMATED)\; top-line results usually follow later.\nTicker CERS (confid
+ ence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07015437\nSchedulin
+ g/reference data from public records\; dates can move. Not investment\, le
+ gal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07015437
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

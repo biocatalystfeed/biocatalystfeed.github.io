@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed EXEL trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:6eec47828d79708d062e@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:EXEL P3 readout (est.): Study of XL092 + Nivolumab vs Sunitinib in 
+ Subjects With Advanced or Metastatic Non-Clear Cell Renal Cell Carcinoma
+DESCRIPTION:Study of XL092 + Nivolumab vs Sunitinib in Subjects With Advanc
+ ed or Metastatic Non-Clear Cell Renal Cell Carcinoma\nNCT05678673 | PHASE3
+  | ACTIVE_NOT_RECRUITING | sponsor: Exelixis\nPrimary completion date (EST
+ IMATED)\; top-line results usually follow later.\nTicker EXEL (confidence 
+ 0.9)\nSource: https://clinicaltrials.gov/study/NCT05678673\nScheduling/ref
+ erence data from public records\; dates can move. Not investment\, legal o
+ r medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05678673
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

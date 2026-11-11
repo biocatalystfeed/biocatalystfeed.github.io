@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ELDN trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8c048104266f9a863596@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:ELDN P1/P2 readout (est.): Safety\, Pharmacokinetics\, and Efficacy
+  of AT 1501 in Patients Undergoing Kidney Transplant
+DESCRIPTION:Safety\, Pharmacokinetics\, and Efficacy of AT 1501 in Patients
+  Undergoing Kidney Transplant\nNCT05027906 | PHASE1/PHASE2 | RECRUITING | 
+ sponsor: Eledon Pharmaceuticals\nPrimary completion date (ESTIMATED)\; top
+ -line results usually follow later.\nTicker ELDN (confidence 0.9)\nSource:
+  https://clinicaltrials.gov/study/NCT05027906\nScheduling/reference data f
+ rom public records\; dates can move. Not investment\, legal or medical adv
+ ice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05027906
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

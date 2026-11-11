@@ -1,0 +1,64 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed PRAX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8bd348543bd54bd04984@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:PRAX P3 readout (est.): A Clinical Trial for Participants With DEE 
+ to Assess Efficacy\, Safety\, Tolerability\, and PK of Relutrigine
+DESCRIPTION:A Clinical Trial for Participants With DEE to Assess Efficacy\,
+  Safety\, Tolerability\, and PK of Relutrigine\nNCT07010471 | PHASE3 | ACT
+ IVE_NOT_RECRUITING | sponsor: Praxis Precision Medicines\nPrimary completi
+ on date (ESTIMATED)\; top-line results usually follow later.\nTicker PRAX 
+ (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07010471\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07010471
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:043ad6c41ad2ad5de772@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:PRAX P3 readout (est.): A Clinical Trial of Elsunersen in Pediatric
+  SCN2A-DEE to Assess Efficacy and Safety
+DESCRIPTION:A Clinical Trial of Elsunersen in Pediatric SCN2A-DEE to Assess
+  Efficacy and Safety\nNCT07019922 | PHASE3 | RECRUITING | sponsor: Praxis 
+ Precision Medicines\nPrimary completion date (ESTIMATED)\; top-line result
+ s usually follow later.\nTicker PRAX (confidence 0.9)\nSource: https://cli
+ nicaltrials.gov/study/NCT07019922\nScheduling/reference data from public r
+ ecords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07019922
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:aec5c9a9cca87e97b36a@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:PRAX P3 readout (est.): Randomized Clinical Trial Evaluating the Ef
+ ficacy and Safety of Vormatrigine in Adults With Focal Seizures
+DESCRIPTION:Randomized Clinical Trial Evaluating the Efficacy and Safety of
+  Vormatrigine in Adults With Focal Seizures\nNCT07505004 | PHASE3 | ACTIVE
+ _NOT_RECRUITING | sponsor: Praxis Precision Medicines\nPrimary completion 
+ date (ESTIMATED)\; top-line results usually follow later.\nTicker PRAX (co
+ nfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07505004\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07505004
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

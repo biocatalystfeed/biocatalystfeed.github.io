@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed LXEO trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:e07d522f7c258efb3ab6@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:LXEO P1/P2 readout (est.): Gene Therapy for ACM Due to a PKP2 Patho
+ genic Variant
+DESCRIPTION:Gene Therapy for ACM Due to a PKP2 Pathogenic Variant\nNCT06109
+ 181 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Lexeo Therapeutics\
+ nPrimary completion date (ESTIMATED)\; top-line results usually follow lat
+ er.\nTicker LXEO (confidence 0.9)\nSource: https://clinicaltrials.gov/stud
+ y/NCT06109181\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06109181
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

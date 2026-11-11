@@ -1,0 +1,87 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed NVO trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:c5cc70739396aa0d4124@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+SUMMARY:NVO P2 readout (est.): A Research Study on How Well Different Doses
+  of the Medicine NNC0662-0419 Help People Living With Overweight or Obesit
+ y
+DESCRIPTION:A Research Study on How Well Different Doses of the Medicine NN
+ C0662-0419 Help People Living With Overweight or Obesity\nNCT07184632 | PH
+ ASE2 | ACTIVE_NOT_RECRUITING | sponsor: Novo Nordisk A/S\nPrimary completi
+ on date (ESTIMATED)\; top-line results usually follow later.\nTicker NVO (
+ confidence 0.95)\nSource: https://clinicaltrials.gov/study/NCT07184632\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07184632
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:5b295723a409e5a33f90@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:NVO P2 readout (est.): A Research Study on How Well Different Doses
+  of the Medicine UBT251 Help People Living With Overweight or Obesity
+DESCRIPTION:A Research Study on How Well Different Doses of the Medicine UB
+ T251 Help People Living With Overweight or Obesity\nNCT07395687 | PHASE2 |
+  RECRUITING | sponsor: Novo Nordisk A/S\nPrimary completion date (ESTIMATE
+ D)\; top-line results usually follow later.\nTicker NVO (confidence 0.95)\
+ nSource: https://clinicaltrials.gov/study/NCT07395687\nScheduling/referenc
+ e data from public records\; dates can move. Not investment\, legal or med
+ ical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07395687
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:f9597f6c8e4068775512@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+SUMMARY:NVO P3 readout (est.): A Research Study to See How a Weekly Insulin
+ \, Insulin Icodec\, Helps in Reducing the Blood Sugar Compared to Daily In
+ sulin Glargine\, Both in Combination With Insulin Aspart\, in Adults With 
+ Type 1 Diabetes
+DESCRIPTION:A Research Study to See How a Weekly Insulin\, Insulin Icodec\,
+  Helps in Reducing the Blood Sugar Compared to Daily Insulin Glargine\, Bo
+ th in Combination With Insulin Aspart\, in Adults With Type 1 Diabetes\nNC
+ T07076199 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Novo Nordisk A/S\nPr
+ imary completion date (ESTIMATED)\; top-line results usually follow later.
+ \nTicker NVO (confidence 0.95)\nSource: https://clinicaltrials.gov/study/N
+ CT07076199\nScheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07076199
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:d7a94dcf08bf8b6c11ff@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270130
+SUMMARY:NVO P3 readout (est.): ARTEMIS - A Research Study to Look at How Zi
+ ltivekimab Works Compared to Placebo in People With a Heart Attack
+DESCRIPTION:ARTEMIS - A Research Study to Look at How Ziltivekimab Works Co
+ mpared to Placebo in People With a Heart Attack\nNCT06118281 | PHASE3 | AC
+ TIVE_NOT_RECRUITING | sponsor: Novo Nordisk A/S\nPrimary completion date (
+ ESTIMATED)\; top-line results usually follow later.\nTicker NVO (confidenc
+ e 0.95)\nSource: https://clinicaltrials.gov/study/NCT06118281\nScheduling/
+ reference data from public records\; dates can move. Not investment\, lega
+ l or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06118281
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed BLCO trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b9bc4aa392f637aeb5e1@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:BLCO P2 readout (est.): BL1107 Response and Intensity Guided Dosing
+  for Hyperemia Resolution Trial
+DESCRIPTION:BL1107 Response and Intensity Guided Dosing for Hyperemia Resol
+ ution Trial\nNCT07778888 | PHASE2 | RECRUITING | sponsor: Bausch & Lomb In
+ corporated\nPrimary completion date (ESTIMATED)\; top-line results usually
+  follow later.\nTicker BLCO (confidence 0.9)\nSource: https://clinicaltria
+ ls.gov/study/NCT07778888\nScheduling/reference data from public records\; 
+ dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07778888
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

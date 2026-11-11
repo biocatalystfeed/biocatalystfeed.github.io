@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MDWD trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:0816748bf6f94904bb89@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:MDWD P3 readout (est.): A Double Blind Study Performed to Evaluate 
+ the Efficacy and the Safety of EscharEx in Debridement of VLU (VALUE)
+DESCRIPTION:A Double Blind Study Performed to Evaluate the Efficacy and the
+  Safety of EscharEx in Debridement of VLU (VALUE)\nNCT06568627 | PHASE3 | 
+ RECRUITING | sponsor: MediWound Ltd\nPrimary completion date (ESTIMATED)\;
+  top-line results usually follow later.\nTicker MDWD (confidence 0.9)\nSou
+ rce: https://clinicaltrials.gov/study/NCT06568627\nScheduling/reference da
+ ta from public records\; dates can move. Not investment\, legal or medical
+  advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06568627
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed OCUL trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b9d4f24a18b176906c25@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:OCUL P3 readout (est.): Study to Evaluate the Efficacy and Safety o
+ f Intravitreal OTX-TKI (Axitinib Implant) in Subjects With Neovascular Age
+ - Related Macular Degeneration
+DESCRIPTION:Study to Evaluate the Efficacy and Safety of Intravitreal OTX-T
+ KI (Axitinib Implant) in Subjects With Neovascular Age- Related Macular De
+ generation\nNCT06495918 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Ocular
+  Therapeutix\, Inc.\nPrimary completion date (ESTIMATED)\; top-line result
+ s usually follow later.\nTicker OCUL (confidence 0.9)\nSource: https://cli
+ nicaltrials.gov/study/NCT06495918\nScheduling/reference data from public r
+ ecords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06495918
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

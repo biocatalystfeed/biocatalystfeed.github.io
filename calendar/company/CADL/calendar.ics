@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed CADL trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:674c888c425148e0a227@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:CADL P2 readout (est.): A Biomarker Study in Men With Localized Pro
+ state Cancer Treated With Aglatimagene Besadenovec
+DESCRIPTION:A Biomarker Study in Men With Localized Prostate Cancer Treated
+  With Aglatimagene Besadenovec\nNCT07332000 | PHASE2 | RECRUITING | sponso
+ r: Candel Therapeutics\, Inc.\nPrimary completion date (ESTIMATED)\; top-l
+ ine results usually follow later.\nTicker CADL (confidence 0.9)\nSource: h
+ ttps://clinicaltrials.gov/study/NCT07332000\nScheduling/reference data fro
+ m public records\; dates can move. Not investment\, legal or medical advic
+ e.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07332000
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

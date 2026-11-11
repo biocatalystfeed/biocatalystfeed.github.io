@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SIGA trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:329194bd8d9aa081367d@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:SIGA P2 readout (est.): Study to Assess the Safety and Immunogenici
+ ty of TPOXX® When Administered Orally for 28 Days With JYNNEOS
+DESCRIPTION:Study to Assess the Safety and Immunogenicity of TPOXX® When A
+ dministered Orally for 28 Days With JYNNEOS\nNCT04957485 | PHASE2 | ACTIVE
+ _NOT_RECRUITING | sponsor: SIGA Technologies\nPrimary completion date (EST
+ IMATED)\; top-line results usually follow later.\nTicker SIGA (confidence 
+ 0.9)\nSource: https://clinicaltrials.gov/study/NCT04957485\nScheduling/ref
+ erence data from public records\; dates can move. Not investment\, legal o
+ r medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04957485
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

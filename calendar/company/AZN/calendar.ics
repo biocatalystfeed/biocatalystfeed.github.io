@@ -1,0 +1,292 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AZN trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:ce75604d0a58a5e96129@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:AZN P2 readout (est.): AZD0901 in Participants With Advanced Solid 
+ Tumours Expressing Claudin18.2
+DESCRIPTION:AZD0901 in Participants With Advanced Solid Tumours Expressing 
+ Claudin18.2\nNCT06219941 | PHASE2 | RECRUITING | sponsor: AstraZeneca\nPri
+ mary completion date (ESTIMATED)\; top-line results usually follow later.\
+ nTicker AZN (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT
+ 06219941\nScheduling/reference data from public records\; dates can move. 
+ Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06219941
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:81321d9298b62e98fac2@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:AZN P1/P2 readout (est.): Study of AZD0754 in Participants With Met
+ astatic Prostate Cancer
+DESCRIPTION:Study of AZD0754 in Participants With Metastatic Prostate Cance
+ r\nNCT06267729 | PHASE1/PHASE2 | RECRUITING | sponsor: AstraZeneca\nPrimar
+ y completion date (ESTIMATED)\; top-line results usually follow later.\nTi
+ cker AZN (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT062
+ 67729\nScheduling/reference data from public records\; dates can move. Not
+  investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06267729
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:29a2a92df3e58b8e3c4c@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:AZN P2 readout (est.): Durvalumab and Tremelimumab With Lenvatinib 
+ as First-line Treatment in Patients With Unresectable Hepatocellular Carci
+ noma
+DESCRIPTION:Durvalumab and Tremelimumab With Lenvatinib as First-line Treat
+ ment in Patients With Unresectable Hepatocellular Carcinoma\nNCT07081633 |
+  PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: AstraZeneca\nPrimary completion
+  date (ESTIMATED)\; top-line results usually follow later.\nTicker AZN (co
+ nfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07081633\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07081633
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:1ca08ba9f47f5ea0364f@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:AZN P2 readout (est.): A Phase IIb Study to Evaluate the Effect of 
+ Dapagliflozin in Combination With Baxdrostat Compared With Baxdrostat on A
+ lbuminuria in Participants With Chronic Kidney Disease and High Blood Pres
+ sure.
+DESCRIPTION:A Phase IIb Study to Evaluate the Effect of Dapagliflozin in Co
+ mbination With Baxdrostat Compared With Baxdrostat on Albuminuria in Parti
+ cipants With Chronic Kidney Disease and High Blood Pressure.\nNCT07222917 
+ | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: AstraZeneca\nPrimary completio
+ n date (ESTIMATED)\; top-line results usually follow later.\nTicker AZN (c
+ onfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07222917\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07222917
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:8c148779fcd3268295c8@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:AZN P3 readout (est.): A Multicentre\, Randomised\, Double-blind\, 
+ Parallel Group\, Placebo-controlled\, Time-to-first Asthma Exacerbation Ph
+ ase III Efficacy and Safety Study of Benralizumab in Paediatric Patients W
+ ith Severe Eosinophilic Asthma
+DESCRIPTION:A Multicentre\, Randomised\, Double-blind\, Parallel Group\, Pl
+ acebo-controlled\, Time-to-first Asthma Exacerbation Phase III Efficacy an
+ d Safety Study of Benralizumab in Paediatric Patients With Severe Eosinoph
+ ilic Asthma\nNCT05692180 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Astra
+ Zeneca\nPrimary completion date (ESTIMATED)\; top-line results usually fol
+ low later.\nTicker AZN (confidence 0.9)\nSource: https://clinicaltrials.go
+ v/study/NCT05692180\nScheduling/reference data from public records\; dates
+  can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05692180
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:6a3821e25be0812686d0@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:AZN P3 readout (est.): Roll Over StudY for Patients Who Have Comple
+ ted a Previous Oncology Study With Durvalumab
+DESCRIPTION:Roll Over StudY for Patients Who Have Completed a Previous Onco
+ logy Study With Durvalumab\nNCT05303532 | PHASE3 | ENROLLING_BY_INVITATION
+  | sponsor: AstraZeneca\nPrimary completion date (ESTIMATED)\; top-line re
+ sults usually follow later.\nTicker AZN (confidence 0.9)\nSource: https://
+ clinicaltrials.gov/study/NCT05303532\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05303532
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:3aca1a554870686fd3c2@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY:AZN P3 readout (est.): A Phase III Study to Assess the Effect of AZ
+ D0780 on LDL-C in Patients With HeFH
+DESCRIPTION:A Phase III Study to Assess the Effect of AZD0780 on LDL-C in P
+ atients With HeFH\nNCT07000136 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor:
+  AstraZeneca\nPrimary completion date (ESTIMATED)\; top-line results usual
+ ly follow later.\nTicker AZN (confidence 0.9)\nSource: https://clinicaltri
+ als.gov/study/NCT07000136\nScheduling/reference data from public records\;
+  dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07000136
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:ca4654aed89b95254f34@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:AZN P3 readout (est.): Determine Effectiveness of Anifrolumab In SY
+ stemic Sclerosis (DAISY)
+DESCRIPTION:Determine Effectiveness of Anifrolumab In SYstemic Sclerosis (D
+ AISY)\nNCT05925803 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: AstraZeneca
+ \nPrimary completion date (ESTIMATED)\; top-line results usually follow la
+ ter.\nTicker AZN (confidence 0.9)\nSource: https://clinicaltrials.gov/stud
+ y/NCT05925803\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05925803
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:61fef357734af6109354@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:AZN P3 readout (est.): A Global Study to Assess the Effects of Durv
+ alumab With Oleclumab or Durvalumab With Monalizumab Following Concurrent 
+ Chemoradiation in Patients With Stage III Unresectable Non-Small Cell Lung
+  Cancer
+DESCRIPTION:A Global Study to Assess the Effects of Durvalumab With Oleclum
+ ab or Durvalumab With Monalizumab Following Concurrent Chemoradiation in P
+ atients With Stage III Unresectable Non-Small Cell Lung Cancer\nNCT0522184
+ 0 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: AstraZeneca\nPrimary complet
+ ion date (ESTIMATED)\; top-line results usually follow later.\nTicker AZN 
+ (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05221840\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05221840
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:63b24607dc51d8151f58@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20270112
+SUMMARY:AZN P3 readout (est.): A Study to Investigate the Efficacy and Safe
+ ty of Dato-DXd With or Without Osimertinib Compared With Platinum Based Do
+ ublet Chemotherapy in Participants With EGFR-Mutated Locally Advanced or M
+ etastatic Non-Small Cell Lung Cancer
+DESCRIPTION:A Study to Investigate the Efficacy and Safety of Dato-DXd With
+  or Without Osimertinib Compared With Platinum Based Doublet Chemotherapy 
+ in Participants With EGFR-Mutated Locally Advanced or Metastatic Non-Small
+  Cell Lung Cancer\nNCT06417814 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor:
+  AstraZeneca\nPrimary completion date (ESTIMATED)\; top-line results usual
+ ly follow later.\nTicker AZN (confidence 0.9)\nSource: https://clinicaltri
+ als.gov/study/NCT06417814\nScheduling/reference data from public records\;
+  dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06417814
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:48da11bbf7e79d796305@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20270112
+SUMMARY:AZN P3 readout (est.): A Phase III Study to Assess the Effect of AZ
+ D0780 on LDL-C in Patients With Clinical ASCVD or at Risk for a First ASCV
+ D Event
+DESCRIPTION:A Phase III Study to Assess the Effect of AZD0780 on LDL-C in P
+ atients With Clinical ASCVD or at Risk for a First ASCVD Event\nNCT0700012
+ 3 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: AstraZeneca\nPrimary complet
+ ion date (ESTIMATED)\; top-line results usually follow later.\nTicker AZN 
+ (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07000123\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07000123
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:8138e403b4c628f0d3cd@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270114
+SUMMARY:AZN P3 readout (est.): A Study to Investigate Changes in Symptoms i
+ n Adult Participants With Chronic Rhinosinusitis With Nasal Polyposis Init
+ iating Treatment With Tezepelumab
+DESCRIPTION:A Study to Investigate Changes in Symptoms in Adult Participant
+ s With Chronic Rhinosinusitis With Nasal Polyposis Initiating Treatment Wi
+ th Tezepelumab\nNCT06706817 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: As
+ traZeneca\nPrimary completion date (ESTIMATED)\; top-line results usually 
+ follow later.\nTicker AZN (confidence 0.9)\nSource: https://clinicaltrials
+ .gov/study/NCT06706817\nScheduling/reference data from public records\; da
+ tes can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06706817
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:d042d5f62b2eddcc1cb2@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:AZN P2 readout (est.): Savolitinib Combine With Durvalumab in EGFR 
+ Wild-type Locally Advanced or Metastatic NSCLC
+DESCRIPTION:Savolitinib Combine With Durvalumab in EGFR Wild-type Locally A
+ dvanced or Metastatic NSCLC\nNCT05374603 | PHASE2 | ACTIVE_NOT_RECRUITING 
+ | sponsor: AstraZeneca\nPrimary completion date (ESTIMATED)\; top-line res
+ ults usually follow later.\nTicker AZN (confidence 0.9)\nSource: https://c
+ linicaltrials.gov/study/NCT05374603\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05374603
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:743ad32cebb7c2c762b6@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270130
+SUMMARY:AZN P1/P2 readout (est.): A Trial to Learn How Safe AZD9550 Monothe
+ rapy and Combined With AZD6234 is in People With or Without Type 2 Diabete
+ s Who Are Living With Obesity and Overweight
+DESCRIPTION:A Trial to Learn How Safe AZD9550 Monotherapy and Combined With
+  AZD6234 is in People With or Without Type 2 Diabetes Who Are Living With 
+ Obesity and Overweight\nNCT06151964 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITIN
+ G | sponsor: AstraZeneca\nPrimary completion date (ESTIMATED)\; top-line r
+ esults usually follow later.\nTicker AZN (confidence 0.9)\nSource: https:/
+ /clinicaltrials.gov/study/NCT06151964\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06151964
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:e9863d91f7487aa6ad85@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270211
+SUMMARY:AZN P2 readout (est.): A Study of T-DXd as Monotherapy or in Combin
+ ation With Anti-cancer Agents in Patients With Selected HER2-expressing Tu
+ mors
+DESCRIPTION:A Study of T-DXd as Monotherapy or in Combination With Anti-can
+ cer Agents in Patients With Selected HER2-expressing Tumors\nNCT06271837 |
+  PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: AstraZeneca\nPrimary completion
+  date (ESTIMATED)\; top-line results usually follow later.\nTicker AZN (co
+ nfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06271837\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06271837
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

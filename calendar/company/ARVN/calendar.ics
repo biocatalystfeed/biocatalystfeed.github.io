@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ARVN trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:934691a97a1e6a18c3a7@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:ARVN P1/P2 readout (est.): A Study to Evaluate ARV-806 in Adults Wi
+ th Advanced Cancer That Has the KRAS G12D Mutation
+DESCRIPTION:A Study to Evaluate ARV-806 in Adults With Advanced Cancer That
+  Has the KRAS G12D Mutation\nNCT07023731 | PHASE1/PHASE2 | ACTIVE_NOT_RECR
+ UITING | sponsor: Arvinas Inc.\nPrimary completion date (ESTIMATED)\; top-
+ line results usually follow later.\nTicker ARVN (confidence 0.9)\nSource: 
+ https://clinicaltrials.gov/study/NCT07023731\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07023731
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

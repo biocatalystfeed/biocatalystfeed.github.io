@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed XBIT trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:cec8c3b40a031a5b4a32@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:XBIT P2 readout (est.): Natrunix in Combination With Methotrexate f
+ or Rheumatoid Arthritis Treatment
+DESCRIPTION:Natrunix in Combination With Methotrexate for Rheumatoid Arthri
+ tis Treatment\nNCT06590090 | PHASE2 | NOT_YET_RECRUITING | sponsor: XBiote
+ ch\, Inc.\nPrimary completion date (ESTIMATED)\; top-line results usually 
+ follow later.\nTicker XBIT (confidence 0.9)\nSource: https://clinicaltrial
+ s.gov/study/NCT06590090\nScheduling/reference data from public records\; d
+ ates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06590090
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

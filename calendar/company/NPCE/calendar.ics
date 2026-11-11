@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed NPCE trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:06c00e04ff2de2dd8587@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:NPCE P2 readout (est.): RNS System LGS Feasibility Study
+DESCRIPTION:RNS System LGS Feasibility Study\nNCT05339126 | PHASE2 | ACTIVE
+ _NOT_RECRUITING | sponsor: NeuroPace\nPrimary completion date (ESTIMATED)\
+ ; top-line results usually follow later.\nTicker NPCE (confidence 0.9)\nSo
+ urce: https://clinicaltrials.gov/study/NCT05339126\nScheduling/reference d
+ ata from public records\; dates can move. Not investment\, legal or medica
+ l advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05339126
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

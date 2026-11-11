@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AVIR trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:e0cc5dca25916ae22f78@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:AVIR P3 readout (est.): C-Forward: Efficacy and Safety of BEM/RZR v
+ s SOF/VEL in Subjects With Chronic HCV
+DESCRIPTION:C-Forward: Efficacy and Safety of BEM/RZR vs SOF/VEL in Subject
+ s With Chronic HCV\nNCT07037277 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor
+ : Atea Pharmaceuticals\, Inc.\nPrimary completion date (ESTIMATED)\; top-l
+ ine results usually follow later.\nTicker AVIR (confidence 0.9)\nSource: h
+ ttps://clinicaltrials.gov/study/NCT07037277\nScheduling/reference data fro
+ m public records\; dates can move. Not investment\, legal or medical advic
+ e.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07037277
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

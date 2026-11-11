@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SLS trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:d6511fcbc444a8362ab8@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:SLS P1/P2 readout (est.): Study of SLS009 (Formerly GFH009) a Poten
+ t Highly Selective CDK9 Inhibitor in Patients With Hematologic Malignancie
+ s and High-Risk Newly Diagnosed AML
+DESCRIPTION:Study of SLS009 (Formerly GFH009) a Potent Highly Selective CDK
+ 9 Inhibitor in Patients With Hematologic Malignancies and High-Risk Newly 
+ Diagnosed AML\nNCT04588922 | PHASE1/PHASE2 | RECRUITING | sponsor: Sellas 
+ Life Sciences Group\nPrimary completion date (ESTIMATED)\; top-line result
+ s usually follow later.\nTicker SLS (confidence 0.9)\nSource: https://clin
+ icaltrials.gov/study/NCT04588922\nScheduling/reference data from public re
+ cords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04588922
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

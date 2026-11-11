@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed GOSS trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:9c78f2828ec6104d9833@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:GOSS P3 readout (est.): Open-label Extension Study of Seralutinib i
+ n Adult Subjects With PAH (PROSERA-EXT)
+DESCRIPTION:Open-label Extension Study of Seralutinib in Adult Subjects Wit
+ h PAH (PROSERA-EXT)\nNCT06274801 | PHASE3 | RECRUITING | sponsor: Gossamer
+  Bio USA\, Inc.\nPrimary completion date (ESTIMATED)\; top-line results us
+ ually follow later.\nTicker GOSS (confidence 0.6)\nSource: https://clinica
+ ltrials.gov/study/NCT06274801\nScheduling/reference data from public recor
+ ds\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06274801
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed HROW trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:729c7b963228f0989daf@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:HROW P3 readout (est.): A Phase 3 Study Evaluating the Safety and E
+ fficacy of TRIESENCE® (Injectable Suspension) for the Treatment of Ocular
+  Inflammation and Pain After Ophthalmic Surgery
+DESCRIPTION:A Phase 3 Study Evaluating the Safety and Efficacy of TRIESENCE
+ ® (Injectable Suspension) for the Treatment of Ocular Inflammation and Pa
+ in After Ophthalmic Surgery\nNCT07832552 | PHASE3 | ENROLLING_BY_INVITATIO
+ N | sponsor: Harrow Inc\nPrimary completion date (ESTIMATED)\; top-line re
+ sults usually follow later.\nTicker HROW (confidence 0.9)\nSource: https:/
+ /clinicaltrials.gov/study/NCT07832552\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07832552
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

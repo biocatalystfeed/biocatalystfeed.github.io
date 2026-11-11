@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed HTOO trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:2e2fadc50f2a1d595b23@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:HTOO P2 readout (est.): FPI-2265 (225Ac-PSMA-I&T) for Patients With
+  PSMA-Positive Metastatic Castration-Resistant Prostate Cancer (mCRPC)
+DESCRIPTION:FPI-2265 (225Ac-PSMA-I&T) for Patients With PSMA-Positive Metas
+ tatic Castration-Resistant Prostate Cancer (mCRPC)\nNCT06402331 | PHASE2 |
+  ACTIVE_NOT_RECRUITING | sponsor: Fusion Pharmaceuticals Inc.\nPrimary com
+ pletion date (ESTIMATED)\; top-line results usually follow later.\nTicker 
+ HTOO (confidence 0.6)\nSource: https://clinicaltrials.gov/study/NCT0640233
+ 1\nScheduling/reference data from public records\; dates can move. Not inv
+ estment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06402331
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

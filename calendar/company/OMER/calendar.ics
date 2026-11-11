@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed OMER trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:21806ea9534a9847c5a7@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:OMER P2 readout (est.): Long-Term Safety\, Tolerability and Efficac
+ y of OMS906 in Paroxysmal Nocturnal Hemoglobinuria
+DESCRIPTION:Long-Term Safety\, Tolerability and Efficacy of OMS906 in Parox
+ ysmal Nocturnal Hemoglobinuria\nNCT06298955 | PHASE2 | ACTIVE_NOT_RECRUITI
+ NG | sponsor: Omeros Corporation\nPrimary completion date (ESTIMATED)\; to
+ p-line results usually follow later.\nTicker OMER (confidence 0.9)\nSource
+ : https://clinicaltrials.gov/study/NCT06298955\nScheduling/reference data 
+ from public records\; dates can move. Not investment\, legal or medical ad
+ vice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06298955
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

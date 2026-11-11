@@ -1,0 +1,64 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed KRYS trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:4e8da2198d0bedefc1e0@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:KRYS P1/P2 readout (est.): A Study Comparing KB801 Verse Placebo in
+  Patients With Stage 2 or 3 Neurotrophic Keratitis
+DESCRIPTION:A Study Comparing KB801 Verse Placebo in Patients With Stage 2 
+ or 3 Neurotrophic Keratitis\nNCT06999733 | PHASE1/PHASE2 | RECRUITING | sp
+ onsor: Krystal Biotech\, Inc.\nPrimary completion date (ESTIMATED)\; top-l
+ ine results usually follow later.\nTicker KRYS (confidence 0.9)\nSource: h
+ ttps://clinicaltrials.gov/study/NCT06999733\nScheduling/reference data fro
+ m public records\; dates can move. Not investment\, legal or medical advic
+ e.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06999733
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:14268e003b831c0ece5e@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:KRYS P3 readout (est.): A Study Comparing KB803 and Matched Placebo
+  in Patients With Dystrophic Epidermolysis Bullosa
+DESCRIPTION:A Study Comparing KB803 and Matched Placebo in Patients With Dy
+ strophic Epidermolysis Bullosa\nNCT07016750 | PHASE3 | RECRUITING | sponso
+ r: Krystal Biotech\, Inc.\nPrimary completion date (ESTIMATED)\; top-line 
+ results usually follow later.\nTicker KRYS (confidence 0.9)\nSource: https
+ ://clinicaltrials.gov/study/NCT07016750\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07016750
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:9dba4451d3457761ed7c@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:KRYS P1/P2 readout (est.): A Study Assessing KB707 for the Treatmen
+ t of Advanced Solid Tumor Malignancies Affecting the Lungs
+DESCRIPTION:A Study Assessing KB707 for the Treatment of Advanced Solid Tum
+ or Malignancies Affecting the Lungs\nNCT06228326 | PHASE1/PHASE2 | RECRUIT
+ ING | sponsor: Krystal Biotech\, Inc.\nPrimary completion date (ESTIMATED)
+ \; top-line results usually follow later.\nTicker KRYS (confidence 0.9)\nS
+ ource: https://clinicaltrials.gov/study/NCT06228326\nScheduling/reference 
+ data from public records\; dates can move. Not investment\, legal or medic
+ al advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06228326
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,67 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed INCY trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:dc0ecb382f9da282c83a@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:INCY P2 readout (est.): A Study to Evaluate the Efficacy and Safety
+  Study of Povorcitinib in Participants With Inadequately Controlled Modera
+ te to Severe Asthma
+DESCRIPTION:A Study to Evaluate the Efficacy and Safety Study of Povorcitin
+ ib in Participants With Inadequately Controlled Moderate to Severe Asthma\
+ nNCT05851443 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Incyte Corporatio
+ n\nPrimary completion date (ESTIMATED)\; top-line results usually follow l
+ ater.\nTicker INCY (confidence 0.9)\nSource: https://clinicaltrials.gov/st
+ udy/NCT05851443\nScheduling/reference data from public records\; dates can
+  move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05851443
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:dd2176bdf718ea9e657e@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+SUMMARY:INCY P3 readout (est.): A Study to Evaluate the Long-Term Safety an
+ d Efficacy of Povorcitinib in Participants With Moderate to Severe Hidrade
+ nitis Suppurativa
+DESCRIPTION:A Study to Evaluate the Long-Term Safety and Efficacy of Povorc
+ itinib in Participants With Moderate to Severe Hidradenitis Suppurativa\nN
+ CT06212999 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Incyte Corporation\
+ nPrimary completion date (ESTIMATED)\; top-line results usually follow lat
+ er.\nTicker INCY (confidence 0.9)\nSource: https://clinicaltrials.gov/stud
+ y/NCT06212999\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06212999
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:0f61d833899d1d3db6fc@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:INCY P1/P2 readout (est.): A Ph1b/2 Study of Axatilimab Monotherapy
+  in Chinese Participants With Recurrent or Refractory cGVHD
+DESCRIPTION:A Ph1b/2 Study of Axatilimab Monotherapy in Chinese Participant
+ s With Recurrent or Refractory cGVHD\nNCT06843408 | PHASE1/PHASE2 | ACTIVE
+ _NOT_RECRUITING | sponsor: Incyte Corporation\nPrimary completion date (ES
+ TIMATED)\; top-line results usually follow later.\nTicker INCY (confidence
+  0.9)\nSource: https://clinicaltrials.gov/study/NCT06843408\nScheduling/re
+ ference data from public records\; dates can move. Not investment\, legal 
+ or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06843408
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

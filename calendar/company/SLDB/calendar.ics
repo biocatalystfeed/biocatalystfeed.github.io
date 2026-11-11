@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SLDB trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:e076709fa455ffb7f563@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:SLDB P1/P2 readout (est.): Microdystrophin Gene Transfer Study in A
+ dolescents and Children With DMD
+DESCRIPTION:Microdystrophin Gene Transfer Study in Adolescents and Children
+  With DMD\nNCT03368742 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: 
+ Solid Biosciences Inc.\nPrimary completion date (ESTIMATED)\; top-line res
+ ults usually follow later.\nTicker SLDB (confidence 0.9)\nSource: https://
+ clinicaltrials.gov/study/NCT03368742\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT03368742
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

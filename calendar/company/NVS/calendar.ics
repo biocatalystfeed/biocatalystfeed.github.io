@@ -1,0 +1,218 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed NVS trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:708f5f6b1614fd2f390c@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:NVS P2 readout (est.): An Open-label Study of JSB462 (Luxdegalutami
+ de) in Combination With Abiraterone in Adult Male Patients With Metastatic
+  Hormone-sensitive Prostate Cancer (mHSPC)
+DESCRIPTION:An Open-label Study of JSB462 (Luxdegalutamide) in Combination 
+ With Abiraterone in Adult Male Patients With Metastatic Hormone-sensitive 
+ Prostate Cancer (mHSPC)\nNCT06991556 | PHASE2 | ACTIVE_NOT_RECRUITING | sp
+ onsor: Novartis Pharmaceuticals\nPrimary completion date (ESTIMATED)\; top
+ -line results usually follow later.\nTicker NVS (confidence 0.9)\nSource: 
+ https://clinicaltrials.gov/study/NCT06991556\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06991556
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:d749230e06af75cb7117@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:NVS P2 readout (est.): A Phase II Study of AAA617 Alone and AAA617 
+ in Combination With ARPI in Patients With PSMA PET Scan Positive CRPC
+DESCRIPTION:A Phase II Study of AAA617 Alone and AAA617 in Combination With
+  ARPI in Patients With PSMA PET Scan Positive CRPC\nNCT05849298 | PHASE2 |
+  ACTIVE_NOT_RECRUITING | sponsor: Novartis Pharmaceuticals\nPrimary comple
+ tion date (ESTIMATED)\; top-line results usually follow later.\nTicker NVS
+  (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05849298\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05849298
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:8a5d2aca27adedc636b7@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:NVS P3 readout (est.): Roll-over Study to Collect and Assess Long-t
+ erm Safety of Everolimus in Patients With TSC and Refractory Seizures Who 
+ Have Completed the EXIST-3 Study [CRAD001M2304] and Who Are Benefitting Fr
+ om Continued Treatment
+DESCRIPTION:Roll-over Study to Collect and Assess Long-term Safety of Evero
+ limus in Patients With TSC and Refractory Seizures Who Have Completed the 
+ EXIST-3 Study [CRAD001M2304] and Who Are Benefitting From Continued Treatm
+ ent\nNCT02962414 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Novartis Phar
+ maceuticals\nPrimary completion date (ESTIMATED)\; top-line results usuall
+ y follow later.\nTicker NVS (confidence 0.9)\nSource: https://clinicaltria
+ ls.gov/study/NCT02962414\nScheduling/reference data from public records\; 
+ dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT02962414
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:e0909461036355a479a4@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:NVS P2 readout (est.): Iptacopan in Patients With ANCA Associated V
+ asculitis
+DESCRIPTION:Iptacopan in Patients With ANCA Associated Vasculitis\nNCT06388
+ 941 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Novartis Pharmaceuticals\n
+ Primary completion date (ESTIMATED)\; top-line results usually follow late
+ r.\nTicker NVS (confidence 0.9)\nSource: https://clinicaltrials.gov/study/
+ NCT06388941\nScheduling/reference data from public records\; dates can mov
+ e. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06388941
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:ee96d1777c95ca236ecf@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+SUMMARY:NVS P1/P2 readout (est.): Study of JDQ443 in Patients With Advanced
+  Solid Tumors Harboring the KRAS G12C Mutation
+DESCRIPTION:Study of JDQ443 in Patients With Advanced Solid Tumors Harborin
+ g the KRAS G12C Mutation\nNCT04699188 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUIT
+ ING | sponsor: Novartis Pharmaceuticals\nPrimary completion date (ESTIMATE
+ D)\; top-line results usually follow later.\nTicker NVS (confidence 0.9)\n
+ Source: https://clinicaltrials.gov/study/NCT04699188\nScheduling/reference
+  data from public records\; dates can move. Not investment\, legal or medi
+ cal advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04699188
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:5826b3ebfd2af6803728@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270129
+SUMMARY:NVS P3 readout (est.): Study to Assess the Efficacy and Safety of A
+ lpelisib Plus Fulvestrant in Participants With HR-positive (HR+)\, HER2-ne
+ gative\, Advanced Breast Cancer After Treatment With a CDK4/6 Inhibitor an
+ d an Aromatase Inhibitor.
+DESCRIPTION:Study to Assess the Efficacy and Safety of Alpelisib Plus Fulve
+ strant in Participants With HR-positive (HR+)\, HER2-negative\, Advanced B
+ reast Cancer After Treatment With a CDK4/6 Inhibitor and an Aromatase Inhi
+ bitor.\nNCT05038735 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Novartis P
+ harmaceuticals\nPrimary completion date (ESTIMATED)\; top-line results usu
+ ally follow later.\nTicker NVS (confidence 0.9)\nSource: https://clinicalt
+ rials.gov/study/NCT05038735\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05038735
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:7dc4ecc9597216983f3d@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270130
+SUMMARY:NVS P2 readout (est.): Study Assessing the Efficacy and Safety of T
+ reatment With Alpelisib Plus Fulvestrant Versus Placebo Plus Fulvestrant i
+ n Chinese Men and Postmenopausal Women With Advanced Breast Cancer
+DESCRIPTION:Study Assessing the Efficacy and Safety of Treatment With Alpel
+ isib Plus Fulvestrant Versus Placebo Plus Fulvestrant in Chinese Men and P
+ ostmenopausal Women With Advanced Breast Cancer\nNCT04544189 | PHASE2 | AC
+ TIVE_NOT_RECRUITING | sponsor: Novartis Pharmaceuticals\nPrimary completio
+ n date (ESTIMATED)\; top-line results usually follow later.\nTicker NVS (c
+ onfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT04544189\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04544189
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:d83ec3e228ec95b3313a@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270130
+SUMMARY:NVS P3 readout (est.): Study of Efficacy and Safety of Iptacopan in
+  Patients With C3 Glomerulopathy.
+DESCRIPTION:Study of Efficacy and Safety of Iptacopan in Patients With C3 G
+ lomerulopathy.\nNCT04817618 | PHASE3 | RECRUITING | sponsor: Novartis Phar
+ maceuticals\nPrimary completion date (ESTIMATED)\; top-line results usuall
+ y follow later.\nTicker NVS (confidence 0.9)\nSource: https://clinicaltria
+ ls.gov/study/NCT04817618\nScheduling/reference data from public records\; 
+ dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04817618
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:fa37381732f3d2be9a63@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:NVS P2 readout (est.): Ribociclib (LEE011) Rollover Study for Conti
+ nued Access
+DESCRIPTION:Ribociclib (LEE011) Rollover Study for Continued Access\nNCT029
+ 34568 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Novartis Pharmaceuticals
+ \nPrimary completion date (ESTIMATED)\; top-line results usually follow la
+ ter.\nTicker NVS (confidence 0.9)\nSource: https://clinicaltrials.gov/stud
+ y/NCT02934568\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT02934568
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:544c0be289426f006c49@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270202
+DTEND;VALUE=DATE:20270203
+SUMMARY:NVS P2 readout (est.): Study of Efficacy and Safety of LXH254 Combi
+ nations in Patients With Previously Treated Unresectable or Metastatic Mel
+ anoma
+DESCRIPTION:Study of Efficacy and Safety of LXH254 Combinations in Patients
+  With Previously Treated Unresectable or Metastatic Melanoma\nNCT04417621 
+ | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Novartis Pharmaceuticals\nPrim
+ ary completion date (ESTIMATED)\; top-line results usually follow later.\n
+ Ticker NVS (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT0
+ 4417621\nScheduling/reference data from public records\; dates can move. N
+ ot investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04417621
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:f2939e30a26c8ddb7e35@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:NVS P2 readout (est.): Platform Study to Evaluate the Efficacy and 
+ Safety of Anti-malarial Agents in Participants With Uncomplicated Plasmodi
+ um Falciparum Malaria (Cohort C2)
+DESCRIPTION:Platform Study to Evaluate the Efficacy and Safety of Anti-mala
+ rial Agents in Participants With Uncomplicated Plasmodium Falciparum Malar
+ ia (Cohort C2)\nNCT07811908 | PHASE2 | RECRUITING | sponsor: Novartis Phar
+ maceuticals\nPrimary completion date (ESTIMATED)\; top-line results usuall
+ y follow later.\nTicker NVS (confidence 0.9)\nSource: https://clinicaltria
+ ls.gov/study/NCT07811908\nScheduling/reference data from public records\; 
+ dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07811908
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

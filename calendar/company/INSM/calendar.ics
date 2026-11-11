@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed INSM trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:84ebe1d058d1d01759e8@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:INSM P2/P3 readout (est.): An Extension Study of Treprostinil Palmi
+ til Inhalation Powder (TPIP) for Pulmonary Arterial Hypertension (PAH)
+DESCRIPTION:An Extension Study of Treprostinil Palmitil Inhalation Powder (
+ TPIP) for Pulmonary Arterial Hypertension (PAH)\nNCT05649748 | PHASE2/PHAS
+ E3 | ACTIVE_NOT_RECRUITING | sponsor: Insmed Incorporated\nPrimary complet
+ ion date (ESTIMATED)\; top-line results usually follow later.\nTicker INSM
+  (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05649748\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05649748
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

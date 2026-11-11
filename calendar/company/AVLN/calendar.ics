@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AVLN trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:d31419117e31a2b59c92@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:AVLN P2 readout (est.): AURA-IPF: A Randomized Phase 2 Study to Eva
+ luate the Safety and Efficacy of AP02 (Nintedanib Solution) in IPF
+DESCRIPTION:AURA-IPF: A Randomized Phase 2 Study to Evaluate the Safety and
+  Efficacy of AP02 (Nintedanib Solution) in IPF\nNCT07194382 | PHASE2 | REC
+ RUITING | sponsor: Avalyn Pharma Inc.\nPrimary completion date (ESTIMATED)
+ \; top-line results usually follow later.\nTicker AVLN (confidence 0.9)\nS
+ ource: https://clinicaltrials.gov/study/NCT07194382\nScheduling/reference 
+ data from public records\; dates can move. Not investment\, legal or medic
+ al advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07194382
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

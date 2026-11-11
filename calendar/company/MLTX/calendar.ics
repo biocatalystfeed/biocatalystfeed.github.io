@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MLTX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:c39b01e952a9e0c37e46@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY:MLTX P3 readout (est.): Evaluation of Sonelokimab in Patients With 
+ Active Psoriatic Arthritis and Anti-TNFα Inadequate Response
+DESCRIPTION:Evaluation of Sonelokimab in Patients With Active Psoriatic Art
+ hritis and Anti-TNFα Inadequate Response\nNCT06641089 | PHASE3 | ACTIVE_N
+ OT_RECRUITING | sponsor: MoonLake Immunotherapeutics AG\nPrimary completio
+ n date (ESTIMATED)\; top-line results usually follow later.\nTicker MLTX (
+ confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06641089\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06641089
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

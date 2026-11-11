@@ -1,0 +1,217 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SNY trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8f98e65906340104b2a9@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:SNY P3 readout (est.): Rilzabrutinib for the Adult Participants Wit
+ h Chronic ITP Who Have Completed Phase 3 Study in Japan
+DESCRIPTION:Rilzabrutinib for the Adult Participants With Chronic ITP Who H
+ ave Completed Phase 3 Study in Japan\nNCT07216079 | PHASE3 | ACTIVE_NOT_RE
+ CRUITING | sponsor: Sanofi\nPrimary completion date (ESTIMATED)\; top-line
+  results usually follow later.\nTicker SNY (confidence 0.9)\nSource: https
+ ://clinicaltrials.gov/study/NCT07216079\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07216079
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:ec9ab1d9627a92261191@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:SNY P3 readout (est.): A Phase III Control Study of the Safety and 
+ Immunogenicity of vYF in Pediatric Population
+DESCRIPTION:A Phase III Control Study of the Safety and Immunogenicity of v
+ YF in Pediatric Population\nNCT07103148 | PHASE3 | ACTIVE_NOT_RECRUITING |
+  sponsor: Sanofi\nPrimary completion date (ESTIMATED)\; top-line results u
+ sually follow later.\nTicker SNY (confidence 0.9)\nSource: https://clinica
+ ltrials.gov/study/NCT07103148\nScheduling/reference data from public recor
+ ds\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07103148
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:66f2990d007e641d5457@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:SNY P3 readout (est.): Study of the Safety and Immunogenicity of Ca
+ tch-up Vaccination With a 21-valent Pneumococcal Conjugate Vaccine (PCV21)
+  in Healthy Infants\, Toddlers\, Children\, and Adolescents
+DESCRIPTION:Study of the Safety and Immunogenicity of Catch-up Vaccination 
+ With a 21-valent Pneumococcal Conjugate Vaccine (PCV21) in Healthy Infants
+ \, Toddlers\, Children\, and Adolescents\nNCT06838000 | PHASE3 | ACTIVE_NO
+ T_RECRUITING | sponsor: Sanofi Pasteur\, a Sanofi Company\nPrimary complet
+ ion date (ESTIMATED)\; top-line results usually follow later.\nTicker SNY 
+ (confidence 0.6)\nSource: https://clinicaltrials.gov/study/NCT06838000\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06838000
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:7325fb8bf4ce0a8da95e@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:SNY P1/P2 readout (est.): Study to Evaluate the Safety and the Immu
+ nogenicity of a Second Generation Structurally Designed mRNA Vaccine Candi
+ date Against Pandemic Influenza H5 HA Strain in Healthy Adult Participants
+  Aged 18 Years and Older
+DESCRIPTION:Study to Evaluate the Safety and the Immunogenicity of a Second
+  Generation Structurally Designed mRNA Vaccine Candidate Against Pandemic 
+ Influenza H5 HA Strain in Healthy Adult Participants Aged 18 Years and Old
+ er\nNCT06907511 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Sanofi\
+ nPrimary completion date (ESTIMATED)\; top-line results usually follow lat
+ er.\nTicker SNY (confidence 0.9)\nSource: https://clinicaltrials.gov/study
+ /NCT06907511\nScheduling/reference data from public records\; dates can mo
+ ve. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06907511
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:eef95d70519587d9da1d@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:SNY P2 readout (est.): A Study to Investigate Efficacy and Safety o
+ f Brivekimig in Participants With Crohn's Disease
+DESCRIPTION:A Study to Investigate Efficacy and Safety of Brivekimig in Par
+ ticipants With Crohn's Disease\nNCT06958536 | PHASE2 | RECRUITING | sponso
+ r: Sanofi\nPrimary completion date (ESTIMATED)\; top-line results usually 
+ follow later.\nTicker SNY (confidence 0.9)\nSource: https://clinicaltrials
+ .gov/study/NCT06958536\nScheduling/reference data from public records\; da
+ tes can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06958536
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:75500ad8c85d6fb217cc@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:SNY P2 readout (est.): A Study to Investigate the Efficacy and Safe
+ ty of Brivekimig in Adult Participants With Ulcerative Colitis
+DESCRIPTION:A Study to Investigate the Efficacy and Safety of Brivekimig in
+  Adult Participants With Ulcerative Colitis\nNCT06975722 | PHASE2 | ACTIVE
+ _NOT_RECRUITING | sponsor: Sanofi\nPrimary completion date (ESTIMATED)\; t
+ op-line results usually follow later.\nTicker SNY (confidence 0.9)\nSource
+ : https://clinicaltrials.gov/study/NCT06975722\nScheduling/reference data 
+ from public records\; dates can move. Not investment\, legal or medical ad
+ vice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06975722
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:4d2801f1606c93a7dcf5@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:SNY P2 readout (est.): A Study to Evaluate the Efficacy and Safety 
+ of Frexalimab\, Brivekimig\, or Rilzabrutinib in Participants Aged 16 to 7
+ 5 Years With Primary Focal Segmental Glomerulosclerosis or Minimal Change 
+ Disease
+DESCRIPTION:A Study to Evaluate the Efficacy and Safety of Frexalimab\, Bri
+ vekimig\, or Rilzabrutinib in Participants Aged 16 to 75 Years With Primar
+ y Focal Segmental Glomerulosclerosis or Minimal Change Disease\nNCT0650070
+ 2 | PHASE2 | RECRUITING | sponsor: Sanofi\nPrimary completion date (ESTIMA
+ TED)\; top-line results usually follow later.\nTicker SNY (confidence 0.9)
+ \nSource: https://clinicaltrials.gov/study/NCT06500702\nScheduling/referen
+ ce data from public records\; dates can move. Not investment\, legal or me
+ dical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06500702
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:db553f3b174aa5849981@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:SNY P3 readout (est.): Study of a Single Dose of a 21-valent Pneumo
+ coccal Conjugate Vaccine in Children and Adolescents With Sickle Cell Dise
+ ase
+DESCRIPTION:Study of a Single Dose of a 21-valent Pneumococcal Conjugate Va
+ ccine in Children and Adolescents With Sickle Cell Disease\nNCT07247188 | 
+ PHASE3 | RECRUITING | sponsor: Sanofi\nPrimary completion date (ESTIMATED)
+ \; top-line results usually follow later.\nTicker SNY (confidence 0.9)\nSo
+ urce: https://clinicaltrials.gov/study/NCT07247188\nScheduling/reference d
+ ata from public records\; dates can move. Not investment\, legal or medica
+ l advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07247188
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:9f824ba49d69f699b1b5@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:SNY P1/P2 readout (est.): Study of a Human Metapneumovirus/Respirat
+ ory Syncytial Virus mRNA Vaccine Candidate Encapsulated in a Lipid Nanopar
+ ticle-based Formulation in Adults Aged 60 Years and Older
+DESCRIPTION:Study of a Human Metapneumovirus/Respiratory Syncytial Virus mR
+ NA Vaccine Candidate Encapsulated in a Lipid Nanoparticle-based Formulatio
+ n in Adults Aged 60 Years and Older\nNCT06686654 | PHASE1/PHASE2 | ACTIVE_
+ NOT_RECRUITING | sponsor: Sanofi Pasteur\, a Sanofi Company\nPrimary compl
+ etion date (ESTIMATED)\; top-line results usually follow later.\nTicker SN
+ Y (confidence 0.6)\nSource: https://clinicaltrials.gov/study/NCT06686654\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06686654
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:fff144c7e250fc5d1aa1@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270119
+DTEND;VALUE=DATE:20270120
+SUMMARY:SNY P1/P2 readout (est.): A First-in-human\, Dose Escalation and Do
+ se Expansion Study of SAR445877 in Adult Participants With Advanced Solid 
+ Tumors
+DESCRIPTION:A First-in-human\, Dose Escalation and Dose Expansion Study of 
+ SAR445877 in Adult Participants With Advanced Solid Tumors\nNCT05584670 | 
+ PHASE1/PHASE2 | RECRUITING | sponsor: Sanofi\nPrimary completion date (EST
+ IMATED)\; top-line results usually follow later.\nTicker SNY (confidence 0
+ .9)\nSource: https://clinicaltrials.gov/study/NCT05584670\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05584670
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:df2ac2ae640d5f9337ac@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270209
+DTEND;VALUE=DATE:20270210
+SUMMARY:SNY P2 readout (est.): Brivekimig for the Treatment of Moderate to 
+ Severe Hidradenitis Suppurativa
+DESCRIPTION:Brivekimig for the Treatment of Moderate to Severe Hidradenitis
+  Suppurativa\nNCT07170917 | PHASE2 | RECRUITING | sponsor: Sanofi\nPrimary
+  completion date (ESTIMATED)\; top-line results usually follow later.\nTic
+ ker SNY (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT0717
+ 0917\nScheduling/reference data from public records\; dates can move. Not 
+ investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07170917
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AXSM trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:ff89cc59495ca644e3d2@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:AXSM P3 readout (est.): Elucidating TAAR-1\, Dopamine\, and Norepin
+ ephrine in Binge Eating Disorder Using Solriamfetol
+DESCRIPTION:Elucidating TAAR-1\, Dopamine\, and Norepinephrine in Binge Eat
+ ing Disorder Using Solriamfetol\nNCT06413433 | PHASE3 | RECRUITING | spons
+ or: Axsome Therapeutics\, Inc.\nPrimary completion date (ESTIMATED)\; top-
+ line results usually follow later.\nTicker AXSM (confidence 0.9)\nSource: 
+ https://clinicaltrials.gov/study/NCT06413433\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06413433
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:6ff746fde69539a7b313@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:AXSM P3 readout (est.): Studying Solriamfetol Modulation of TAAR-1\
+ , Dopamine\, and Norepinephrine in Shift Work Disorder (SUSTAIN)
+DESCRIPTION:Studying Solriamfetol Modulation of TAAR-1\, Dopamine\, and Nor
+ epinephrine in Shift Work Disorder (SUSTAIN)\nNCT06568367 | PHASE3 | RECRU
+ ITING | sponsor: Axsome Therapeutics\, Inc.\nPrimary completion date (ESTI
+ MATED)\; top-line results usually follow later.\nTicker AXSM (confidence 0
+ .9)\nSource: https://clinicaltrials.gov/study/NCT06568367\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06568367
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

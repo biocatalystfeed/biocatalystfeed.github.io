@@ -1,0 +1,48 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed CELZ trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:d58ccd51b99e04253ecc@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270121
+SUMMARY:CELZ P1/P2 readout (est.): Safety\, Tolerability\, and Effectivenes
+ s of Intramuscular Injection of CELZ-201-DDT for the Treatment of Chronic 
+ Lower Back Pain
+DESCRIPTION:Safety\, Tolerability\, and Effectiveness of Intramuscular Inje
+ ction of CELZ-201-DDT for the Treatment of Chronic Lower Back Pain\nNCT060
+ 53242 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Creative Medical 
+ Technology Holdings Inc\nPrimary completion date (ESTIMATED)\; top-line re
+ sults usually follow later.\nTicker CELZ (confidence 0.9)\nSource: https:/
+ /clinicaltrials.gov/study/NCT06053242\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06053242
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:be7b74934d082beda7fe@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:CELZ P1/P2 readout (est.): Safety and Efficacy of CELZ-201 in Patie
+ nts With Recent Onset Type 1 Diabetes
+DESCRIPTION:Safety and Efficacy of CELZ-201 in Patients With Recent Onset T
+ ype 1 Diabetes\nNCT05626712 | PHASE1/PHASE2 | RECRUITING | sponsor: Creati
+ ve Medical Technology Holdings Inc\nPrimary completion date (ESTIMATED)\; 
+ top-line results usually follow later.\nTicker CELZ (confidence 0.9)\nSour
+ ce: https://clinicaltrials.gov/study/NCT05626712\nScheduling/reference dat
+ a from public records\; dates can move. Not investment\, legal or medical 
+ advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05626712
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

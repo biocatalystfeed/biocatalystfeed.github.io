@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed TLX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b6a5bd0776ebca582ab9@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:TLX P3 readout (est.): PSMA PET Combined With MRI for the Detection
+  of PCa
+DESCRIPTION:PSMA PET Combined With MRI for the Detection of PCa\nNCT0705221
+ 4 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Telix Pharmaceuticals (Innov
+ ations) Pty Limited\nPrimary completion date (ESTIMATED)\; top-line result
+ s usually follow later.\nTicker TLX (confidence 0.6)\nSource: https://clin
+ icaltrials.gov/study/NCT07052214\nScheduling/reference data from public re
+ cords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07052214
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

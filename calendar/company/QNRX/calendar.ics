@@ -1,0 +1,63 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed QNRX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:46670aa980dd47e14fb3@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:QNRX P2/P3 readout (est.): Open Label\, Safety and Efficacy Study o
+ f QRX003 Lotion in Subjects With Netherton Syndrome
+DESCRIPTION:Open Label\, Safety and Efficacy Study of QRX003 Lotion in Subj
+ ects With Netherton Syndrome\nNCT05789056 | PHASE2/PHASE3 | RECRUITING | s
+ ponsor: Quoin Pharmaceuticals\nPrimary completion date (ESTIMATED)\; top-l
+ ine results usually follow later.\nTicker QNRX (confidence 0.9)\nSource: h
+ ttps://clinicaltrials.gov/study/NCT05789056\nScheduling/reference data fro
+ m public records\; dates can move. Not investment\, legal or medical advic
+ e.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05789056
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:cc87c95246f77ec6d091@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:QNRX P2/P3 readout (est.): Clinical Study of QRX003 Lotion in Subje
+ cts With Netherton Syndrome
+DESCRIPTION:Clinical Study of QRX003 Lotion in Subjects With Netherton Synd
+ rome\nNCT06953466 | PHASE2/PHASE3 | RECRUITING | sponsor: Quoin Pharmaceut
+ icals\nPrimary completion date (ESTIMATED)\; top-line results usually foll
+ ow later.\nTicker QNRX (confidence 0.9)\nSource: https://clinicaltrials.go
+ v/study/NCT06953466\nScheduling/reference data from public records\; dates
+  can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06953466
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:db2db1e81ae98ca07793@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:QNRX P2/P3 readout (est.): Phase 2/3 Clinical Study of QRX003 Lotio
+ n in Subjects With Netherton Syndrome
+DESCRIPTION:Phase 2/3 Clinical Study of QRX003 Lotion in Subjects With Neth
+ erton Syndrome\nNCT07538583 | PHASE2/PHASE3 | RECRUITING | sponsor: Quoin 
+ Pharmaceuticals\nPrimary completion date (ESTIMATED)\; top-line results us
+ ually follow later.\nTicker QNRX (confidence 0.9)\nSource: https://clinica
+ ltrials.gov/study/NCT07538583\nScheduling/reference data from public recor
+ ds\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07538583
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

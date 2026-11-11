@@ -1,0 +1,208 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ABBV trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:506a0aa1c9984d5a104b@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:ABBV P2/P3 readout (est.): Pivotal 1 Study of ABBV-RGX-314 (Also Kn
+ own as RGX-314) Gene Therapy Administered Via Subretinal Delivery One Time
+  in Participants With nAMD
+DESCRIPTION:Pivotal 1 Study of ABBV-RGX-314 (Also Known as RGX-314) Gene Th
+ erapy Administered Via Subretinal Delivery One Time in Participants With n
+ AMD\nNCT04704921 | PHASE2/PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: AbbVie
+ \nPrimary completion date (ESTIMATED)\; top-line results usually follow la
+ ter.\nTicker ABBV (confidence 0.9)\nSource: https://clinicaltrials.gov/stu
+ dy/NCT04704921\nScheduling/reference data from public records\; dates can 
+ move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04704921
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:1f8d3ea6d16e2574e483@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:ABBV P2 readout (est.): Study to Assess Adverse Events and Change i
+ n Disease Activity in Previously Treated Adult Participants Receiving Intr
+ avenous (IV) ABBV-400 With Unresectable Metastatic Colorectal Cancer in Co
+ mbination With IV Fluorouracil\, Folinic Acid\, and Bevacizumab
+DESCRIPTION:Study to Assess Adverse Events and Change in Disease Activity i
+ n Previously Treated Adult Participants Receiving Intravenous (IV) ABBV-40
+ 0 With Unresectable Metastatic Colorectal Cancer in Combination With IV Fl
+ uorouracil\, Folinic Acid\, and Bevacizumab\nNCT06107413 | PHASE2 | ACTIVE
+ _NOT_RECRUITING | sponsor: AbbVie\nPrimary completion date (ESTIMATED)\; t
+ op-line results usually follow later.\nTicker ABBV (confidence 0.9)\nSourc
+ e: https://clinicaltrials.gov/study/NCT06107413\nScheduling/reference data
+  from public records\; dates can move. Not investment\, legal or medical a
+ dvice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06107413
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:60bff803ae6efda69b66@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:ABBV P3 readout (est.): A Study to Assess Disease Activity and Safe
+ ty of Lutikizumab in Adult and Adolescent Participants With Moderate to Se
+ vere Hidradenitis Suppurativa
+DESCRIPTION:A Study to Assess Disease Activity and Safety of Lutikizumab in
+  Adult and Adolescent Participants With Moderate to Severe Hidradenitis Su
+ ppurativa\nNCT06468228 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: AbbVie\
+ nPrimary completion date (ESTIMATED)\; top-line results usually follow lat
+ er.\nTicker ABBV (confidence 0.9)\nSource: https://clinicaltrials.gov/stud
+ y/NCT06468228\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06468228
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:df76125eea77e16cd654@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:ABBV P2/P3 readout (est.): A Study to Assess the Dose\, Adverse Eve
+ nts\, and Change in Disease Activity of Livmoniplimab as an Intravenous (I
+ V) Solution in Combination With Budigalimab as an IV Solution in Adult Par
+ ticipants With Hepatocellular Carcinoma (HCC)
+DESCRIPTION:A Study to Assess the Dose\, Adverse Events\, and Change in Dis
+ ease Activity of Livmoniplimab as an Intravenous (IV) Solution in Combinat
+ ion With Budigalimab as an IV Solution in Adult Participants With Hepatoce
+ llular Carcinoma (HCC)\nNCT06109272 | PHASE2/PHASE3 | ACTIVE_NOT_RECRUITIN
+ G | sponsor: AbbVie\nPrimary completion date (ESTIMATED)\; top-line result
+ s usually follow later.\nTicker ABBV (confidence 0.9)\nSource: https://cli
+ nicaltrials.gov/study/NCT06109272\nScheduling/reference data from public r
+ ecords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06109272
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:fba6f994931f67dc58ed@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:ABBV P3 readout (est.): Safety and Efficacy of Upadacitinib in Comb
+ ination With Topical Corticosteroids in Children From 2 to Less Than 12 Ye
+ ars of Age in Japan With Moderate to Severe Atopic Dermatitis
+DESCRIPTION:Safety and Efficacy of Upadacitinib in Combination With Topical
+  Corticosteroids in Children From 2 to Less Than 12 Years of Age in Japan 
+ With Moderate to Severe Atopic Dermatitis\nNCT06701331 | PHASE3 | ACTIVE_N
+ OT_RECRUITING | sponsor: AbbVie\nPrimary completion date (ESTIMATED)\; top
+ -line results usually follow later.\nTicker ABBV (confidence 0.9)\nSource:
+  https://clinicaltrials.gov/study/NCT06701331\nScheduling/reference data f
+ rom public records\; dates can move. Not investment\, legal or medical adv
+ ice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06701331
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:2889e9b61f0478e48afd@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ABBV P1/P2 readout (est.): IMGN632 as Monotherapy or With Venetocla
+ x and/or Azacitidine for Participants With CD123-Positive Acute Myeloid Le
+ ukemia
+DESCRIPTION:IMGN632 as Monotherapy or With Venetoclax and/or Azacitidine fo
+ r Participants With CD123-Positive Acute Myeloid Leukemia\nNCT04086264 | P
+ HASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: AbbVie\nPrimary completion
+  date (ESTIMATED)\; top-line results usually follow later.\nTicker ABBV (c
+ onfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT04086264\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04086264
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:67f3bfa227154eebd21a@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ABBV P2 readout (est.): A Study of Ocular Toxicity Evaluation and M
+ itigation During Treatment With Mirvetuximab Soravtansine in Participants 
+ With Recurrent Ovarian Cancer With High Folate Receptor-Alpha Expression
+DESCRIPTION:A Study of Ocular Toxicity Evaluation and Mitigation During Tre
+ atment With Mirvetuximab Soravtansine in Participants With Recurrent Ovari
+ an Cancer With High Folate Receptor-Alpha Expression\nNCT06365853 | PHASE2
+  | ACTIVE_NOT_RECRUITING | sponsor: AbbVie\nPrimary completion date (ESTIM
+ ATED)\; top-line results usually follow later.\nTicker ABBV (confidence 0.
+ 9)\nSource: https://clinicaltrials.gov/study/NCT06365853\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06365853
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:bee8478974d68f62f67f@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ABBV P2 readout (est.): A Study to Assess Molecular Changes in Adul
+ t Participants With Moderate to Severe Hidradenitis Suppurativa or With Mo
+ derate to Severe Atopic Dermatitis Receiving Subcutaneous Injections of Lu
+ tikizumab
+DESCRIPTION:A Study to Assess Molecular Changes in Adult Participants With 
+ Moderate to Severe Hidradenitis Suppurativa or With Moderate to Severe Ato
+ pic Dermatitis Receiving Subcutaneous Injections of Lutikizumab\nNCT065246
+ 35 | PHASE2 | RECRUITING | sponsor: AbbVie\nPrimary completion date (ESTIM
+ ATED)\; top-line results usually follow later.\nTicker ABBV (confidence 0.
+ 9)\nSource: https://clinicaltrials.gov/study/NCT06524635\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06524635
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:c5002f62834ac36b6ae5@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ABBV P2 readout (est.): A Study to Investigate the Safety and Effic
+ acy of MEDI0618 Compared to Placebo in Adult Participants With Episodic Mi
+ graine
+DESCRIPTION:A Study to Investigate the Safety and Efficacy of MEDI0618 Comp
+ ared to Placebo in Adult Participants With Episodic Migraine\nNCT06602479 
+ | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: AbbVie\nPrimary completion dat
+ e (ESTIMATED)\; top-line results usually follow later.\nTicker ABBV (confi
+ dence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06602479\nScheduli
+ ng/reference data from public records\; dates can move. Not investment\, l
+ egal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06602479
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:61a1b907cf077cb4e1b7@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ABBV P2 readout (est.): A Study to Evaluate Different Targeted Ther
+ apies for Patients With Rheumatoid Arthritis
+DESCRIPTION:A Study to Evaluate Different Targeted Therapies for Patients W
+ ith Rheumatoid Arthritis\nNCT06972446 | PHASE2 | RECRUITING | sponsor: Abb
+ Vie\nPrimary completion date (ESTIMATED)\; top-line results usually follow
+  later.\nTicker ABBV (confidence 0.9)\nSource: https://clinicaltrials.gov/
+ study/NCT06972446\nScheduling/reference data from public records\; dates c
+ an move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06972446
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

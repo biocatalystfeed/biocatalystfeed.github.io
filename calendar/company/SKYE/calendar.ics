@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SKYE trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:d9a82881c8e44bcd470b@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:SKYE P2 readout (est.): Study to Evaluate the Effect on Obesity of 
+ QW Nimacimab and QW Nimacimab Co-administered With Semaglutide vs Placebo
+DESCRIPTION:Study to Evaluate the Effect on Obesity of QW Nimacimab and QW 
+ Nimacimab Co-administered With Semaglutide vs Placebo\nNCT06577090 | PHASE
+ 2 | ACTIVE_NOT_RECRUITING | sponsor: Skye Bioscience\, Inc.\nPrimary compl
+ etion date (ESTIMATED)\; top-line results usually follow later.\nTicker SK
+ YE (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06577090\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06577090
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

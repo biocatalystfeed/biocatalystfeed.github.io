@@ -1,0 +1,67 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed GILD trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:a0262ac77ea745aa09ae@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:GILD P3 readout (est.): Asian Study of Sacituzumab Govitecan (IMMU-
+ 132) in HR+/HER2- Metastatic Breast Cancer (MBC)
+DESCRIPTION:Asian Study of Sacituzumab Govitecan (IMMU-132) in HR+/HER2- Me
+ tastatic Breast Cancer (MBC)\nNCT04639986 | PHASE3 | ACTIVE_NOT_RECRUITING
+  | sponsor: Gilead Sciences\nPrimary completion date (ESTIMATED)\; top-lin
+ e results usually follow later.\nTicker GILD (confidence 0.9)\nSource: htt
+ ps://clinicaltrials.gov/study/NCT04639986\nScheduling/reference data from 
+ public records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04639986
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:caf8135d524be7446c5b@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:GILD P2 readout (est.): Study of Tilpisertib Fosmecarbil in Partici
+ pants With Moderately to Severely Active Ulcerative Colitis
+DESCRIPTION:Study of Tilpisertib Fosmecarbil in Participants With Moderatel
+ y to Severely Active Ulcerative Colitis\nNCT06029972 | PHASE2 | ACTIVE_NOT
+ _RECRUITING | sponsor: Gilead Sciences\nPrimary completion date (ESTIMATED
+ )\; top-line results usually follow later.\nTicker GILD (confidence 0.9)\n
+ Source: https://clinicaltrials.gov/study/NCT06029972\nScheduling/reference
+  data from public records\; dates can move. Not investment\, legal or medi
+ cal advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06029972
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:57f13c8ff0dffa164700@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:GILD P3 readout (est.): Study of Sacituzumab Govitecan-hziy and Pem
+ brolizumab Versus Treatment of Physician's Choice and Pembrolizumab in Pat
+ ients With Previously Untreated\, Locally Advanced Inoperable or Metastati
+ c Triple-Negative Breast Cancer
+DESCRIPTION:Study of Sacituzumab Govitecan-hziy and Pembrolizumab Versus Tr
+ eatment of Physician's Choice and Pembrolizumab in Patients With Previousl
+ y Untreated\, Locally Advanced Inoperable or Metastatic Triple-Negative Br
+ east Cancer\nNCT05382286 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Gilea
+ d Sciences\nPrimary completion date (ESTIMATED)\; top-line results usually
+  follow later.\nTicker GILD (confidence 0.9)\nSource: https://clinicaltria
+ ls.gov/study/NCT05382286\nScheduling/reference data from public records\; 
+ dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05382286
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

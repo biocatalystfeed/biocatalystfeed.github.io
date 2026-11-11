@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed DWTX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:86d10def36d5e20110c2@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:DWTX P2 readout (est.): Efficacy and Safety Study of Halneuron in t
+ he Treatment of Chemotherapy-Induced Neuropathic Pain
+DESCRIPTION:Efficacy and Safety Study of Halneuron in the Treatment of Chem
+ otherapy-Induced Neuropathic Pain\nNCT06848348 | PHASE2 | ACTIVE_NOT_RECRU
+ ITING | sponsor: Dogwood Therapeutics Inc.\nPrimary completion date (ESTIM
+ ATED)\; top-line results usually follow later.\nTicker DWTX (confidence 0.
+ 9)\nSource: https://clinicaltrials.gov/study/NCT06848348\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06848348
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed BCDA trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:d22f5f6b81b41ef6e108@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:BCDA P1/P2 readout (est.): Clinical Trial of Human Allogenic Cultur
+ e-expanded Bone Marrow-derived Mesenchymal Stem Cells
+DESCRIPTION:Clinical Trial of Human Allogenic Culture-expanded Bone Marrow-
+ derived Mesenchymal Stem Cells\nNCT05925608 | PHASE1/PHASE2 | ACTIVE_NOT_R
+ ECRUITING | sponsor: BioCardia\, Inc.\nPrimary completion date (ESTIMATED)
+ \; top-line results usually follow later.\nTicker BCDA (confidence 0.9)\nS
+ ource: https://clinicaltrials.gov/study/NCT05925608\nScheduling/reference 
+ data from public records\; dates can move. Not investment\, legal or medic
+ al advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05925608
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed TLTFF trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:831377b7e409c4e410fc@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:TLTFF P2 readout (est.): Intravesical Photodynamic Therapy ("PDT") 
+ in BCG-Unresponsive/Intolerant Non-Muscle Invasive Bladder Cancer ("NMIBC"
+ ) Patients
+DESCRIPTION:Intravesical Photodynamic Therapy ("PDT") in BCG-Unresponsive/I
+ ntolerant Non-Muscle Invasive Bladder Cancer ("NMIBC") Patients\nNCT039451
+ 62 | PHASE2 | RECRUITING | sponsor: Theralase® Technologies Inc.\nPrimary
+  completion date (ESTIMATED)\; top-line results usually follow later.\nTic
+ ker TLTFF (confidence 0.6)\nSource: https://clinicaltrials.gov/study/NCT03
+ 945162\nScheduling/reference data from public records\; dates can move. No
+ t investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT03945162
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

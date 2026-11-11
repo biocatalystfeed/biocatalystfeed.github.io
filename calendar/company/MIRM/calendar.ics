@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MIRM trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:336deaca7ab0a0d52db2@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:MIRM P2 readout (est.): A Study to Evaluate Efficacy and Safety of 
+ an Investigational Drug Named Volixibat in Patients With Itching Caused by
+  Primary Biliary Cholangitis
+DESCRIPTION:A Study to Evaluate Efficacy and Safety of an Investigational D
+ rug Named Volixibat in Patients With Itching Caused by Primary Biliary Cho
+ langitis\nNCT05050136 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Mirum Ph
+ armaceuticals\, Inc.\nPrimary completion date (ESTIMATED)\; top-line resul
+ ts usually follow later.\nTicker MIRM (confidence 0.9)\nSource: https://cl
+ inicaltrials.gov/study/NCT05050136\nScheduling/reference data from public 
+ records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05050136
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed EPRX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:84adfe0a3d52e1b115e5@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:EPRX P1/P2 readout (est.): A Trial to Evaluate EP-104GI in Adults W
+ ith Eosinophilic Esophagitis (EoE).
+DESCRIPTION:A Trial to Evaluate EP-104GI in Adults With Eosinophilic Esopha
+ gitis (EoE).\nNCT05608681 | PHASE1/PHASE2 | RECRUITING | sponsor: Eupraxia
+  Pharmaceuticals Inc.\nPrimary completion date (ESTIMATED)\; top-line resu
+ lts usually follow later.\nTicker EPRX (confidence 0.9)\nSource: https://c
+ linicaltrials.gov/study/NCT05608681\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05608681
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

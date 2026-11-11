@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ABCL trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:91fbcd406296de6d71ec@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ABCL P1/P2 readout (est.): Study Evaluating ABCL635 for Vasomotor S
+ ymptoms of Menopause
+DESCRIPTION:Study Evaluating ABCL635 for Vasomotor Symptoms of Menopause\nN
+ CT07118891 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: AbCellera Bi
+ ologics Inc.\nPrimary completion date (ESTIMATED)\; top-line results usual
+ ly follow later.\nTicker ABCL (confidence 0.9)\nSource: https://clinicaltr
+ ials.gov/study/NCT07118891\nScheduling/reference data from public records\
+ ; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07118891
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed TGTX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:0cca3139fe76bb432330@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270122
+SUMMARY:TGTX P3 readout (est.): Study to Evaluate Safety\, Efficacy and Pha
+ rmacokinetics (PK) of a Modified Regimen of Ublituximab
+DESCRIPTION:Study to Evaluate Safety\, Efficacy and Pharmacokinetics (PK) o
+ f a Modified Regimen of Ublituximab\nNCT05877963 | PHASE3 | RECRUITING | s
+ ponsor: TG Therapeutics\, Inc.\nPrimary completion date (ESTIMATED)\; top-
+ line results usually follow later.\nTicker TGTX (confidence 0.9)\nSource: 
+ https://clinicaltrials.gov/study/NCT05877963\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05877963
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

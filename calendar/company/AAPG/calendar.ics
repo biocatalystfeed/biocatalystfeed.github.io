@@ -1,0 +1,45 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AAPG trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:390181664523ee9d7327@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:AAPG P2 readout (est.): Study of APG-2575 in Patients With Relapsed
+ /Refractory CLL/SLL
+DESCRIPTION:Study of APG-2575 in Patients With Relapsed/Refractory CLL/SLL\
+ nNCT05147467 | PHASE2 | RECRUITING | sponsor: Ascentage Pharma Group Inc.\
+ nPrimary completion date (ESTIMATED)\; top-line results usually follow lat
+ er.\nTicker AAPG (confidence 0.9)\nSource: https://clinicaltrials.gov/stud
+ y/NCT05147467\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05147467
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:e2a79c9667e53d9eb3bf@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:AAPG P3 readout (est.): Global Trial in APG2575 for Patients With C
+ LL/SLL
+DESCRIPTION:Global Trial in APG2575 for Patients With CLL/SLL\nNCT06104566 
+ | PHASE3 | RECRUITING | sponsor: Ascentage Pharma Group Inc.\nPrimary comp
+ letion date (ESTIMATED)\; top-line results usually follow later.\nTicker A
+ APG (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06104566
+ \nScheduling/reference data from public records\; dates can move. Not inve
+ stment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06104566
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,115 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MRK trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:dac774e03470467e9b94@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:MRK P3 readout (est.): Study of Pembrolizumab (MK-3475) in Combinat
+ ion With Adjuvant Chemotherapy With or Without Radiotherapy in Participant
+ s With Newly Diagnosed Endometrial Cancer After Surgery With Curative Inte
+ nt (MK-3475-B21 / KEYNOTE-B21 / ENGOT-en11 / GOG-3053)
+DESCRIPTION:Study of Pembrolizumab (MK-3475) in Combination With Adjuvant C
+ hemotherapy With or Without Radiotherapy in Participants With Newly Diagno
+ sed Endometrial Cancer After Surgery With Curative Intent (MK-3475-B21 / K
+ EYNOTE-B21 / ENGOT-en11 / GOG-3053)\nNCT04634877 | PHASE3 | ACTIVE_NOT_REC
+ RUITING | sponsor: Merck Sharp & Dohme LLC\nPrimary completion date (ESTIM
+ ATED)\; top-line results usually follow later.\nTicker MRK (confidence 0.6
+ )\nSource: https://clinicaltrials.gov/study/NCT04634877\nScheduling/refere
+ nce data from public records\; dates can move. Not investment\, legal or m
+ edical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04634877
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:bb92ff014b8498c17f7c@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY:MRK P1/P2 readout (est.): A Study of Belzutifan (MK-6482) in Combin
+ ation With Palbociclib Versus Belzutifan Monotherapy in Participants With 
+ Advanced Renal Cell Carcinoma (MK-6482-024/LITESPARK-024)
+DESCRIPTION:A Study of Belzutifan (MK-6482) in Combination With Palbociclib
+  Versus Belzutifan Monotherapy in Participants With Advanced Renal Cell Ca
+ rcinoma (MK-6482-024/LITESPARK-024)\nNCT05468697 | PHASE1/PHASE2 | ACTIVE_
+ NOT_RECRUITING | sponsor: Merck Sharp & Dohme LLC\nPrimary completion date
+  (ESTIMATED)\; top-line results usually follow later.\nTicker MRK (confide
+ nce 0.6)\nSource: https://clinicaltrials.gov/study/NCT05468697\nScheduling
+ /reference data from public records\; dates can move. Not investment\, leg
+ al or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05468697
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:fcc959ee452186d0b91f@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270112
+DTEND;VALUE=DATE:20270113
+SUMMARY:MRK P3 readout (est.): Study of Pembrolizumab (MK-3475) Monotherapy
+  Versus Sacituzumab Govitecan in Combination With Pembrolizumab for Partic
+ ipants With Metastatic Non-small Cell Lung Cancer (NSCLC) With Programmed 
+ Cell Death Ligand 1 (PD-L1) Tumor Proportion Score (TPS) ≥50% (MK-3475-D
+ 46)
+DESCRIPTION:Study of Pembrolizumab (MK-3475) Monotherapy Versus Sacituzumab
+  Govitecan in Combination With Pembrolizumab for Participants With Metasta
+ tic Non-small Cell Lung Cancer (NSCLC) With Programmed Cell Death Ligand 1
+  (PD-L1) Tumor Proportion Score (TPS) ≥50% (MK-3475-D46)\nNCT05609968 | 
+ PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Merck Sharp & Dohme LLC\nPrimary
+  completion date (ESTIMATED)\; top-line results usually follow later.\nTic
+ ker MRK (confidence 0.6)\nSource: https://clinicaltrials.gov/study/NCT0560
+ 9968\nScheduling/reference data from public records\; dates can move. Not 
+ investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05609968
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:c25f2c8acd2896ef5f67@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:MRK P3 readout (est.): Efficacy Against Oral Persistent Infection\,
+  Immunogenicity and Safety of the 9-valent Human Papillomavirus Vaccine (9
+ vHPV) in Men Aged 20-45 Years (V503-049)
+DESCRIPTION:Efficacy Against Oral Persistent Infection\, Immunogenicity and
+  Safety of the 9-valent Human Papillomavirus Vaccine (9vHPV) in Men Aged 2
+ 0-45 Years (V503-049)\nNCT04199689 | PHASE3 | ACTIVE_NOT_RECRUITING | spon
+ sor: Merck Sharp & Dohme LLC\nPrimary completion date (ESTIMATED)\; top-li
+ ne results usually follow later.\nTicker MRK (confidence 0.6)\nSource: htt
+ ps://clinicaltrials.gov/study/NCT04199689\nScheduling/reference data from 
+ public records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04199689
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:19e1a5ed2ef8cdeb26c8@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:MRK P3 readout (est.): Efficacy and Safety of Pembrolizumab (MK-347
+ 5) in Combination With Chemoradiotherapy (CRT) Versus CRT Alone in Muscle-
+ invasive Bladder Cancer (MIBC) (MK-3475-992/KEYNOTE-992)
+DESCRIPTION:Efficacy and Safety of Pembrolizumab (MK-3475) in Combination W
+ ith Chemoradiotherapy (CRT) Versus CRT Alone in Muscle-invasive Bladder Ca
+ ncer (MIBC) (MK-3475-992/KEYNOTE-992)\nNCT04241185 | PHASE3 | ACTIVE_NOT_R
+ ECRUITING | sponsor: Merck Sharp & Dohme LLC\nPrimary completion date (EST
+ IMATED)\; top-line results usually follow later.\nTicker MRK (confidence 0
+ .6)\nSource: https://clinicaltrials.gov/study/NCT04241185\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04241185
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

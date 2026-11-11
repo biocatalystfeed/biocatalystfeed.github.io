@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed VIR trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8ef185c481191721d0c6@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:VIR P3 readout (est.): A Study to Evaluate Tobevibart+Elebsiran in 
+ Participants With Chronic HDV Infection Not Virologically Suppressed With 
+ Bulevirtide
+DESCRIPTION:A Study to Evaluate Tobevibart+Elebsiran in Participants With C
+ hronic HDV Infection Not Virologically Suppressed With Bulevirtide\nNCT071
+ 28550 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Vir Biotechnology\, Inc.
+ \nPrimary completion date (ESTIMATED)\; top-line results usually follow la
+ ter.\nTicker VIR (confidence 0.9)\nSource: https://clinicaltrials.gov/stud
+ y/NCT07128550\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07128550
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

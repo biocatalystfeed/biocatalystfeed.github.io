@@ -1,0 +1,84 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SBFM trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:3cfba4d720b6058bf6b9@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:SBFM P2 readout (est.): A Study to Explore the Therapeutic Effect o
+ f HEC585 on Delaying Forced Vital Capacity (FVC) Decline and Tolerance in 
+ Progressive Fibrosing Interstitial Lung Disease (PF-ILD) Patients
+DESCRIPTION:A Study to Explore the Therapeutic Effect of HEC585 on Delaying
+  Forced Vital Capacity (FVC) Decline and Tolerance in Progressive Fibrosin
+ g Interstitial Lung Disease (PF-ILD) Patients\nNCT05139719 | PHASE2 | RECR
+ UITING | sponsor: Sunshine Lake Pharma Co.\, Ltd.\nPrimary completion date
+  (ESTIMATED)\; top-line results usually follow later.\nTicker SBFM (confid
+ ence 0.6)\nSource: https://clinicaltrials.gov/study/NCT05139719\nSchedulin
+ g/reference data from public records\; dates can move. Not investment\, le
+ gal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05139719
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:b7125f38fab1c276d240@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:SBFM P3 readout (est.): A Study to Evaluate the Efficacy and Safety
+  of 608 in Adult Subjects With Active Ankylosing Spondylitis(AS)
+DESCRIPTION:A Study to Evaluate the Efficacy and Safety of 608 in Adult Sub
+ jects With Active Ankylosing Spondylitis(AS)\nNCT07261644 | PHASE3 | RECRU
+ ITING | sponsor: Sunshine Guojian Pharmaceutical (Shanghai) Co.\, Ltd.\nPr
+ imary completion date (ESTIMATED)\; top-line results usually follow later.
+ \nTicker SBFM (confidence 0.6)\nSource: https://clinicaltrials.gov/study/N
+ CT07261644\nScheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07261644
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:105328549c659367f6ab@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:SBFM P3 readout (est.): Efficacy and Safety Study of 610 in Patient
+ s With Severe Asthma
+DESCRIPTION:Efficacy and Safety Study of 610 in Patients With Severe Asthma
+ \nNCT06323213 | PHASE3 | RECRUITING | sponsor: Sunshine Guojian Pharmaceut
+ ical (Shanghai) Co.\, Ltd.\nPrimary completion date (ESTIMATED)\; top-line
+  results usually follow later.\nTicker SBFM (confidence 0.6)\nSource: http
+ s://clinicaltrials.gov/study/NCT06323213\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06323213
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:c20de68749c06a371864@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:SBFM P2 readout (est.): A Phase IIb Study of 610 in Participants Wi
+ th Severe Eosinophilic Asthma
+DESCRIPTION:A Phase IIb Study of 610 in Participants With Severe Eosinophil
+ ic Asthma\nNCT06680947 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Sunshin
+ e Guojian Pharmaceutical (Shanghai) Co.\, Ltd.\nPrimary completion date (E
+ STIMATED)\; top-line results usually follow later.\nTicker SBFM (confidenc
+ e 0.6)\nSource: https://clinicaltrials.gov/study/NCT06680947\nScheduling/r
+ eference data from public records\; dates can move. Not investment\, legal
+  or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06680947
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

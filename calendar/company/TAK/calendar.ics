@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed TAK trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:6cd0ff8d4705b23097d9@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:TAK P2 readout (est.): A Study of TAK-360 in Adults With Idiopathic
+  Hypersomnia
+DESCRIPTION:A Study of TAK-360 in Adults With Idiopathic Hypersomnia\nNCT06
+ 812078 | PHASE2 | RECRUITING | sponsor: Takeda\nPrimary completion date (E
+ STIMATED)\; top-line results usually follow later.\nTicker TAK (confidence
+  0.9)\nSource: https://clinicaltrials.gov/study/NCT06812078\nScheduling/re
+ ference data from public records\; dates can move. Not investment\, legal 
+ or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06812078
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:a7847d83dc00ec479f99@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:TAK P2 readout (est.): A Study of TAK-360 in Adults With Narcolepsy
+  Without Cataplexy (NT2)
+DESCRIPTION:A Study of TAK-360 in Adults With Narcolepsy Without Cataplexy 
+ (NT2)\nNCT06952699 | PHASE2 | RECRUITING | sponsor: Takeda\nPrimary comple
+ tion date (ESTIMATED)\; top-line results usually follow later.\nTicker TAK
+  (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06952699\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06952699
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:8052bfd058663f45fd90@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:TAK P3 readout (est.): A Trial of TAK-861 for the Treatment of Narc
+ olepsy With Cataplexy
+DESCRIPTION:A Trial of TAK-861 for the Treatment of Narcolepsy With Cataple
+ xy\nNCT07363720 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Takeda\nPrimar
+ y completion date (ESTIMATED)\; top-line results usually follow later.\nTi
+ cker TAK (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT073
+ 63720\nScheduling/reference data from public records\; dates can move. Not
+  investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07363720
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:cfe1f34e5d6d37702a5c@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:TAK P3 readout (est.): A Study to Evaluate the Safety and Tolerabil
+ ity\, Pharmacokinetics\, and Antiviral Activity of Maribavir for the Treat
+ ment of Cytomegalovirus (CMV) Infection in Children and Adolescents Who Ha
+ ve Received a Hematopoietic Stem Cell Transplant (HSCT) or a Solid Organ T
+ ransplant (SOT)
+DESCRIPTION:A Study to Evaluate the Safety and Tolerability\, Pharmacokinet
+ ics\, and Antiviral Activity of Maribavir for the Treatment of Cytomegalov
+ irus (CMV) Infection in Children and Adolescents Who Have Received a Hemat
+ opoietic Stem Cell Transplant (HSCT) or a Solid Organ Transplant (SOT)\nNC
+ T05319353 | PHASE3 | RECRUITING | sponsor: Takeda\nPrimary completion date
+  (ESTIMATED)\; top-line results usually follow later.\nTicker TAK (confide
+ nce 0.9)\nSource: https://clinicaltrials.gov/study/NCT05319353\nScheduling
+ /reference data from public records\; dates can move. Not investment\, leg
+ al or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05319353
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:e1e895e78cecd44b0c89@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270206
+SUMMARY:TAK P2 readout (est.): A Study of Zasocitinib in Adults With Hidrad
+ enitis Suppurativa
+DESCRIPTION:A Study of Zasocitinib in Adults With Hidradenitis Suppurativa\
+ nNCT07244263 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Takeda\nPrimary c
+ ompletion date (ESTIMATED)\; top-line results usually follow later.\nTicke
+ r TAK (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT072442
+ 63\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07244263
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:abd06bfb9256e1776928@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270211
+SUMMARY:TAK P3 readout (est.): A Study of Teduglutide in Chinese Adults Wit
+ h Short Bowel Syndrome
+DESCRIPTION:A Study of Teduglutide in Chinese Adults With Short Bowel Syndr
+ ome\nNCT06973304 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Takeda\nPrima
+ ry completion date (ESTIMATED)\; top-line results usually follow later.\nT
+ icker TAK (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06
+ 973304\nScheduling/reference data from public records\; dates can move. No
+ t investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06973304
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

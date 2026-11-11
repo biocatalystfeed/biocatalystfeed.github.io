@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed IDYA trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:6af006db3bdc0dd0b32b@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:IDYA P2/P3 readout (est.): IDE196 (Darovasertib) in Combination Wit
+ h Crizotinib as First-line Therapy in Metastatic Uveal Melanoma
+DESCRIPTION:IDE196 (Darovasertib) in Combination With Crizotinib as First-l
+ ine Therapy in Metastatic Uveal Melanoma\nNCT05987332 | PHASE2/PHASE3 | AC
+ TIVE_NOT_RECRUITING | sponsor: IDEAYA Biosciences\nPrimary completion date
+  (ESTIMATED)\; top-line results usually follow later.\nTicker IDYA (confid
+ ence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05987332\nSchedulin
+ g/reference data from public records\; dates can move. Not investment\, le
+ gal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05987332
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:1bda0f96dfe1dec5ac1e@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270130
+SUMMARY:IDYA P1/P2 readout (est.): Study of IDE196 in Patients With Solid T
+ umors Harboring GNAQ/11 Mutations or PRKC Fusions
+DESCRIPTION:Study of IDE196 in Patients With Solid Tumors Harboring GNAQ/11
+  Mutations or PRKC Fusions\nNCT03947385 | PHASE1/PHASE2 | RECRUITING | spo
+ nsor: IDEAYA Biosciences\nPrimary completion date (ESTIMATED)\; top-line r
+ esults usually follow later.\nTicker IDYA (confidence 0.9)\nSource: https:
+ //clinicaltrials.gov/study/NCT03947385\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT03947385
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

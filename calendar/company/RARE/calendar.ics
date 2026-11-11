@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed RARE trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:cad164a92ebf316330fd@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:RARE P3 readout (est.): Setrusumab in Pediatric Japanese Subjects W
+ ith Osteogenesis Imperfecta
+DESCRIPTION:Setrusumab in Pediatric Japanese Subjects With Osteogenesis Imp
+ erfecta\nNCT06636071 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Ultrageny
+ x Pharmaceutical Inc\nPrimary completion date (ESTIMATED)\; top-line resul
+ ts usually follow later.\nTicker RARE (confidence 0.9)\nSource: https://cl
+ inicaltrials.gov/study/NCT06636071\nScheduling/reference data from public 
+ records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06636071
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

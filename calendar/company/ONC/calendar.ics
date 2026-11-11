@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ONC trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:fbc1871ff2d10e64a9d7@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:ONC P3 readout (est.): A Study to Evaluate Long-term Safety of Zanu
+ brutinib Regimens in Participants With B-Cell Malignancies Who Participate
+ d in BeiGene Parent Studies of Zanubrutinib
+DESCRIPTION:A Study to Evaluate Long-term Safety of Zanubrutinib Regimens i
+ n Participants With B-Cell Malignancies Who Participated in BeiGene Parent
+  Studies of Zanubrutinib\nNCT04170283 | PHASE3 | ACTIVE_NOT_RECRUITING | s
+ ponsor: BeOne Medicines\nPrimary completion date (ESTIMATED)\; top-line re
+ sults usually follow later.\nTicker ONC (confidence 0.9)\nSource: https://
+ clinicaltrials.gov/study/NCT04170283\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04170283
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

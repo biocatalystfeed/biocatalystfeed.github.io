@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed INAB trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:4f655c3938b7a836fd20@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:INAB P1/P2 readout (est.): A Phase 1b / 2 Drug Resistant Immunother
+ apy With Activated\, Gene Modified Allogeneic or Autologous γδ T Cells (
+ DeltEx) in Combination With Maintenance Temozolomide in Subjects With Recu
+ rrent or Newly Diagnosed Glioblastoma
+DESCRIPTION:A Phase 1b / 2 Drug Resistant Immunotherapy With Activated\, Ge
+ ne Modified Allogeneic or Autologous γδ T Cells (DeltEx) in Combination 
+ With Maintenance Temozolomide in Subjects With Recurrent or Newly Diagnose
+ d Glioblastoma\nNCT05664243 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | spon
+ sor: In8bio Inc.\nPrimary completion date (ESTIMATED)\; top-line results u
+ sually follow later.\nTicker INAB (confidence 0.9)\nSource: https://clinic
+ altrials.gov/study/NCT05664243\nScheduling/reference data from public reco
+ rds\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05664243
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

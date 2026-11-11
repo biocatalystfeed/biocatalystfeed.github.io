@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ALC trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:c887a8d4ecc5a4bc082b@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:ALC P3 readout (est.): An Investigation of FID 123472 Ophthalmic So
+ lution to Vehicle for the Reduction of Ocular Redness in Adults
+DESCRIPTION:An Investigation of FID 123472 Ophthalmic Solution to Vehicle f
+ or the Reduction of Ocular Redness in Adults\nNCT07578363 | PHASE3 | RECRU
+ ITING | sponsor: Alcon Research\nPrimary completion date (ESTIMATED)\; top
+ -line results usually follow later.\nTicker ALC (confidence 0.6)\nSource: 
+ https://clinicaltrials.gov/study/NCT07578363\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07578363
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:7db663c3cc7fa8e91550@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ALC P3 readout (est.): Efficacy and Safety of FID 123472 Ophthalmic
+  Solution for Ocular Redness in Adults
+DESCRIPTION:Efficacy and Safety of FID 123472 Ophthalmic Solution for Ocula
+ r Redness in Adults\nNCT07531043 | PHASE3 | RECRUITING | sponsor: Alcon Re
+ search\nPrimary completion date (ESTIMATED)\; top-line results usually fol
+ low later.\nTicker ALC (confidence 0.6)\nSource: https://clinicaltrials.go
+ v/study/NCT07531043\nScheduling/reference data from public records\; dates
+  can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07531043
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

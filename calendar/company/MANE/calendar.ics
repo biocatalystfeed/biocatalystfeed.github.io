@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MANE trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8271d4cf7db711cb3f1a@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:MANE P3 readout (est.): Safety and Efficacy of VDPHL01 in Males Wit
+ h AGA
+DESCRIPTION:Safety and Efficacy of VDPHL01 in Males With AGA\nNCT06972264 |
+  PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Veradermics\, Inc.\nPrimary com
+ pletion date (ESTIMATED)\; top-line results usually follow later.\nTicker 
+ MANE (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT0697226
+ 4\nScheduling/reference data from public records\; dates can move. Not inv
+ estment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06972264
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

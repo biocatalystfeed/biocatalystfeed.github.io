@@ -1,0 +1,82 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed LLY trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:0e0c966309d713d8fac4@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:LLY P2 readout (est.): A Study to Evaluate LY3537021 for the Treatm
+ ent of Nausea and Vomiting Caused by Chemotherapy in Adults With Cancer
+DESCRIPTION:A Study to Evaluate LY3537021 for the Treatment of Nausea and V
+ omiting Caused by Chemotherapy in Adults With Cancer\nNCT07169851 | PHASE2
+  | RECRUITING | sponsor: Eli Lilly and Company\nPrimary completion date (E
+ STIMATED)\; top-line results usually follow later.\nTicker LLY (confidence
+  0.95)\nSource: https://clinicaltrials.gov/study/NCT07169851\nScheduling/r
+ eference data from public records\; dates can move. Not investment\, legal
+  or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07169851
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:92d0b7b90d8396b8d3e5@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:LLY P2 readout (est.): A Study Comparing Abemaciclib Plus Temozolom
+ ide to Temozolomide Monotherapy in Children and Young Adults With High-gra
+ de Glioma Following Radiotherapy
+DESCRIPTION:A Study Comparing Abemaciclib Plus Temozolomide to Temozolomide
+  Monotherapy in Children and Young Adults With High-grade Glioma Following
+  Radiotherapy\nNCT06413706 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Eli
+  Lilly and Company\nPrimary completion date (ESTIMATED)\; top-line results
+  usually follow later.\nTicker LLY (confidence 0.95)\nSource: https://clin
+ icaltrials.gov/study/NCT06413706\nScheduling/reference data from public re
+ cords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06413706
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:49df830241d407c56d86@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:LLY P3 readout (est.): A Platform Trial for Pediatric Participants 
+ With Obesity or Overweight (LY900040)
+DESCRIPTION:A Platform Trial for Pediatric Participants With Obesity or Ove
+ rweight (LY900040)\nNCT06672549 | PHASE3 | RECRUITING | sponsor: Eli Lilly
+  and Company\nPrimary completion date (ESTIMATED)\; top-line results usual
+ ly follow later.\nTicker LLY (confidence 0.95)\nSource: https://clinicaltr
+ ials.gov/study/NCT06672549\nScheduling/reference data from public records\
+ ; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06672549
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:7963783c4a92457933c2@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:LLY P2 readout (est.): A Study of Brenipatide in Adults Who Quit Sm
+ oking Cigarettes and Want to Avoid Relapse
+DESCRIPTION:A Study of Brenipatide in Adults Who Quit Smoking Cigarettes an
+ d Want to Avoid Relapse\nNCT07223840 | PHASE2 | RECRUITING | sponsor: Eli 
+ Lilly and Company\nPrimary completion date (ESTIMATED)\; top-line results 
+ usually follow later.\nTicker LLY (confidence 0.95)\nSource: https://clini
+ caltrials.gov/study/NCT07223840\nScheduling/reference data from public rec
+ ords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07223840
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

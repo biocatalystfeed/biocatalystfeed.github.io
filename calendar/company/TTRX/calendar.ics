@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed TTRX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:e82051f461679a4b2e25@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270121
+SUMMARY:TTRX P2/P3 readout (est.): A Double-Blind\, Randomized\, Vehicle-Co
+ ntrolled Phase 2 Study to Assess the Efficacy and Safety of GX-03 in Adult
+  Subjects With Moderate to Severe Atopic Dermatitis (Eczema)
+DESCRIPTION:A Double-Blind\, Randomized\, Vehicle-Controlled Phase 2 Study 
+ to Assess the Efficacy and Safety of GX-03 in Adult Subjects With Moderate
+  to Severe Atopic Dermatitis (Eczema)\nNCT07355075 | PHASE2/PHASE3 | RECRU
+ ITING | sponsor: Turn Therapeutics\nPrimary completion date (ESTIMATED)\; 
+ top-line results usually follow later.\nTicker TTRX (confidence 0.9)\nSour
+ ce: https://clinicaltrials.gov/study/NCT07355075\nScheduling/reference dat
+ a from public records\; dates can move. Not investment\, legal or medical 
+ advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07355075
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

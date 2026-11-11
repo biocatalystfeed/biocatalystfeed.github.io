@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed RNAC trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8d5a65f2716e1dfb5eb6@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:RNAC P2 readout (est.): Descartes-08 for Patients With Systemic Lup
+ us Erythematosus
+DESCRIPTION:Descartes-08 for Patients With Systemic Lupus Erythematosus\nNC
+ T06038474 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Cartesian Therapeuti
+ cs\nPrimary completion date (ESTIMATED)\; top-line results usually follow 
+ later.\nTicker RNAC (confidence 0.9)\nSource: https://clinicaltrials.gov/s
+ tudy/NCT06038474\nScheduling/reference data from public records\; dates ca
+ n move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06038474
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:04c296e58b0ad21e171e@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:RNAC P3 readout (est.): Investigating an mRNA CAR T-cell Therapy\, 
+ Known as Descartes-08\, as a Potential Approach to Treat Myasthenia Gravis
+DESCRIPTION:Investigating an mRNA CAR T-cell Therapy\, Known as Descartes-0
+ 8\, as a Potential Approach to Treat Myasthenia Gravis\nNCT06799247 | PHAS
+ E3 | ACTIVE_NOT_RECRUITING | sponsor: Cartesian Therapeutics\nPrimary comp
+ letion date (ESTIMATED)\; top-line results usually follow later.\nTicker R
+ NAC (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06799247
+ \nScheduling/reference data from public records\; dates can move. Not inve
+ stment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06799247
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

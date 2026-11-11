@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SXTP trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:7132ebaf87eddce37970@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:SXTP P2 readout (est.): B-FREE Chronic Babesiosis Study
+DESCRIPTION:B-FREE Chronic Babesiosis Study\nNCT06656351 | PHASE2 | RECRUIT
+ ING | sponsor: 60 Degrees Pharmaceuticals LLC\nPrimary completion date (ES
+ TIMATED)\; top-line results usually follow later.\nTicker SXTP (confidence
+  0.9)\nSource: https://clinicaltrials.gov/study/NCT06656351\nScheduling/re
+ ference data from public records\; dates can move. Not investment\, legal 
+ or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06656351
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

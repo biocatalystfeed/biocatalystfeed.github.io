@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed DMAC trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8e38f3c2dcbc73cc0ee8@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:DMAC P2/P3 readout (est.): Treatment of Acute Ischemic Stroke (ReME
+ Dy2 Trial)
+DESCRIPTION:Treatment of Acute Ischemic Stroke (ReMEDy2 Trial)\nNCT05065216
+  | PHASE2/PHASE3 | RECRUITING | sponsor: DiaMedica Therapeutics Inc\nPrima
+ ry completion date (ESTIMATED)\; top-line results usually follow later.\nT
+ icker DMAC (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT0
+ 5065216\nScheduling/reference data from public records\; dates can move. N
+ ot investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05065216
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

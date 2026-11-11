@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ALDX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:51bba88c91645d0bcd02@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:ALDX P3 readout (est.): A Clinical Trial Evaluating Patients With P
+ rimary Vitreoretinal Lymphoma
+DESCRIPTION:A Clinical Trial Evaluating Patients With Primary Vitreoretinal
+  Lymphoma\nNCT07402876 | PHASE3 | RECRUITING | sponsor: Aldeyra Therapeuti
+ cs\, Inc.\nPrimary completion date (ESTIMATED)\; top-line results usually 
+ follow later.\nTicker ALDX (confidence 0.9)\nSource: https://clinicaltrial
+ s.gov/study/NCT07402876\nScheduling/reference data from public records\; d
+ ates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07402876
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

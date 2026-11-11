@@ -1,0 +1,106 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed BMY trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:29af597b6391e405c3ee@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:BMY P3 readout (est.): A Study to Evaluate the Efficacy and Safety 
+ of Deucravacitinib in Adults With Active Sjögren's Syndrome
+DESCRIPTION:A Study to Evaluate the Efficacy and Safety of Deucravacitinib 
+ in Adults With Active Sjögren's Syndrome\nNCT05946941 | PHASE3 | ACTIVE_N
+ OT_RECRUITING | sponsor: Bristol-Myers Squibb\nPrimary completion date (ES
+ TIMATED)\; top-line results usually follow later.\nTicker BMY (confidence 
+ 0.9)\nSource: https://clinicaltrials.gov/study/NCT05946941\nScheduling/ref
+ erence data from public records\; dates can move. Not investment\, legal o
+ r medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05946941
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:f03ee29dd4235028772e@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+SUMMARY:BMY P2 readout (est.): Study to Evaluate Safety\, Tolerability and 
+ Drug Levels of BMS-986435/MYK-224 in Participants With Heart Failure With 
+ Preserved Ejection Fraction (HFpEF)
+DESCRIPTION:Study to Evaluate Safety\, Tolerability and Drug Levels of BMS-
+ 986435/MYK-224 in Participants With Heart Failure With Preserved Ejection 
+ Fraction (HFpEF)\nNCT06122779 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: 
+ Bristol-Myers Squibb\nPrimary completion date (ESTIMATED)\; top-line resul
+ ts usually follow later.\nTicker BMY (confidence 0.9)\nSource: https://cli
+ nicaltrials.gov/study/NCT06122779\nScheduling/reference data from public r
+ ecords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06122779
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:cceaaafd9be736745690@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:BMY P2 readout (est.): Study to Evaluate the Efficacy\, Safety\, an
+ d Tolerability of an Anti-MTBR Tau Monoclonal Antibody (BMS-986446) in Par
+ ticipants With Early Alzheimer's Disease
+DESCRIPTION:Study to Evaluate the Efficacy\, Safety\, and Tolerability of a
+ n Anti-MTBR Tau Monoclonal Antibody (BMS-986446) in Participants With Earl
+ y Alzheimer's Disease\nNCT06268886 | PHASE2 | ACTIVE_NOT_RECRUITING | spon
+ sor: Bristol-Myers Squibb\nPrimary completion date (ESTIMATED)\; top-line 
+ results usually follow later.\nTicker BMY (confidence 0.9)\nSource: https:
+ //clinicaltrials.gov/study/NCT06268886\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06268886
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:6320a52cd0049829b63d@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:BMY P1/P2 readout (est.): A Study to Evaluate BMS-986470 in Healthy
+  Volunteers and Participants With Sickle Cell Disease
+DESCRIPTION:A Study to Evaluate BMS-986470 in Healthy Volunteers and Partic
+ ipants With Sickle Cell Disease\nNCT06481306 | PHASE1/PHASE2 | RECRUITING 
+ | sponsor: Bristol-Myers Squibb\nPrimary completion date (ESTIMATED)\; top
+ -line results usually follow later.\nTicker BMY (confidence 0.9)\nSource: 
+ https://clinicaltrials.gov/study/NCT06481306\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06481306
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:b5f2ec11ad4f0412fa79@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270206
+SUMMARY:BMY P2 readout (est.): A Study to Evaluate Two Dosing Regimens of S
+ ubcutaneous Nivolumab in Combination With Intravenous Ipilimumab and Chemo
+ therapy in Participants With Previously Untreated Metastatic or Recurrent 
+ Non-Small Cell Lung Cancer (NSCLC)
+DESCRIPTION:A Study to Evaluate Two Dosing Regimens of Subcutaneous Nivolum
+ ab in Combination With Intravenous Ipilimumab and Chemotherapy in Particip
+ ants With Previously Untreated Metastatic or Recurrent Non-Small Cell Lung
+  Cancer (NSCLC)\nNCT06946797 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: B
+ ristol-Myers Squibb\nPrimary completion date (ESTIMATED)\; top-line result
+ s usually follow later.\nTicker BMY (confidence 0.9)\nSource: https://clin
+ icaltrials.gov/study/NCT06946797\nScheduling/reference data from public re
+ cords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06946797
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

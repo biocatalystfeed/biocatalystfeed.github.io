@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed LABT trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:d99dccec48d8e64bd1cf@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:LABT P2 readout (est.): Phase 2a Dose Finding Study of Nu-3 Gel in 
+ Subjects With Mild iDFU
+DESCRIPTION:Phase 2a Dose Finding Study of Nu-3 Gel in Subjects With Mild i
+ DFU\nNCT07565506 | PHASE2 | RECRUITING | sponsor: Lakewood-Amedex Inc\nPri
+ mary completion date (ESTIMATED)\; top-line results usually follow later.\
+ nTicker LABT (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NC
+ T07565506\nScheduling/reference data from public records\; dates can move.
+  Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07565506
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

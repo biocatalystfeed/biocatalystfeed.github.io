@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed PMVP trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:4ece1b2f32372d3acd9c@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:PMVP P1/P2 readout (est.): The Evaluation of PC14586 in Patients Wi
+ th Advanced Solid Tumors Harboring a TP53 Y220C Mutation (PYNNACLE)
+DESCRIPTION:The Evaluation of PC14586 in Patients With Advanced Solid Tumor
+ s Harboring a TP53 Y220C Mutation (PYNNACLE)\nNCT04585750 | PHASE1/PHASE2 
+ | RECRUITING | sponsor: PMV Pharmaceuticals\, Inc\nPrimary completion date
+  (ESTIMATED)\; top-line results usually follow later.\nTicker PMVP (confid
+ ence 0.9)\nSource: https://clinicaltrials.gov/study/NCT04585750\nSchedulin
+ g/reference data from public records\; dates can move. Not investment\, le
+ gal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04585750
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

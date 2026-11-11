@@ -1,0 +1,126 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed REGN trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:a404346e89450acdf4c9@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:REGN P1/P2 readout (est.): A Trial to Find Out How Safe REGN7075 is
+  and How Well it Works in Combination With Cemiplimab for Adult Participan
+ ts With Advanced Cancers
+DESCRIPTION:A Trial to Find Out How Safe REGN7075 is and How Well it Works 
+ in Combination With Cemiplimab for Adult Participants With Advanced Cancer
+ s\nNCT04626635 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Regenero
+ n Pharmaceuticals\nPrimary completion date (ESTIMATED)\; top-line results 
+ usually follow later.\nTicker REGN (confidence 0.9)\nSource: https://clini
+ caltrials.gov/study/NCT04626635\nScheduling/reference data from public rec
+ ords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04626635
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:c1385c5dfdf903f1413e@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:REGN P2 readout (est.): Study of Olatorepatide in Adult Participant
+ s Living With Overweight or Obesity in the US
+DESCRIPTION:Study of Olatorepatide in Adult Participants Living With Overwe
+ ight or Obesity in the US\nNCT07431086 | PHASE2 | ACTIVE_NOT_RECRUITING | 
+ sponsor: Regeneron Pharmaceuticals\nPrimary completion date (ESTIMATED)\; 
+ top-line results usually follow later.\nTicker REGN (confidence 0.9)\nSour
+ ce: https://clinicaltrials.gov/study/NCT07431086\nScheduling/reference dat
+ a from public records\; dates can move. Not investment\, legal or medical 
+ advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07431086
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:0c8295dc3a58c03d70c6@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:REGN P2 readout (est.): A Study to Test the Safety\, Tolerability\,
+  and Efficacy of an Antibody\, REGN7999\, Injected Under the Skin for the 
+ Treatment of Iron Overload in Adult Participants With Non-Transfusion Depe
+ ndent β-thalassemia\, Using MRI Scans to Measure Iron Levels in the Body
+DESCRIPTION:A Study to Test the Safety\, Tolerability\, and Efficacy of an 
+ Antibody\, REGN7999\, Injected Under the Skin for the Treatment of Iron Ov
+ erload in Adult Participants With Non-Transfusion Dependent β-thalassemia
+ \, Using MRI Scans to Measure Iron Levels in the Body\nNCT06421636 | PHASE
+ 2 | ACTIVE_NOT_RECRUITING | sponsor: Regeneron Pharmaceuticals\nPrimary co
+ mpletion date (ESTIMATED)\; top-line results usually follow later.\nTicker
+  REGN (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT064216
+ 36\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06421636
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:42a1daac76a5c7bc3eb3@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261229
+DTEND;VALUE=DATE:20261230
+SUMMARY:REGN P2 readout (est.): A Study to See How Safe and Effective Aliro
+ cumab is When Given Weekly to Adult Participants Who Have Hypercholesterol
+ emia
+DESCRIPTION:A Study to See How Safe and Effective Alirocumab is When Given 
+ Weekly to Adult Participants Who Have Hypercholesterolemia\nNCT07477704 | 
+ PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Regeneron Pharmaceuticals\nPrima
+ ry completion date (ESTIMATED)\; top-line results usually follow later.\nT
+ icker REGN (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT0
+ 7477704\nScheduling/reference data from public records\; dates can move. N
+ ot investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07477704
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:9c0c592f8366997642a7@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:REGN P3 readout (est.): A Trial to See if the Combination of Fianli
+ mab With Cemiplimab Works Better Than Pembrolizumab for Preventing or Dela
+ ying Melanoma From Coming Back After it Has Been Removed With Surgery
+DESCRIPTION:A Trial to See if the Combination of Fianlimab With Cemiplimab 
+ Works Better Than Pembrolizumab for Preventing or Delaying Melanoma From C
+ oming Back After it Has Been Removed With Surgery\nNCT05608291 | PHASE3 | 
+ ACTIVE_NOT_RECRUITING | sponsor: Regeneron Pharmaceuticals\nPrimary comple
+ tion date (ESTIMATED)\; top-line results usually follow later.\nTicker REG
+ N (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05608291\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05608291
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:0dae0dd41bf56ecc520a@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270209
+DTEND;VALUE=DATE:20270210
+SUMMARY:REGN P2 readout (est.): Safety in Adult Participants With Atrial Fi
+ brillation Who Are Treated With Anticoagulation
+DESCRIPTION:Safety in Adult Participants With Atrial Fibrillation Who Are T
+ reated With Anticoagulation\nNCT07175428 | PHASE2 | RECRUITING | sponsor: 
+ Regeneron Pharmaceuticals\nPrimary completion date (ESTIMATED)\; top-line 
+ results usually follow later.\nTicker REGN (confidence 0.9)\nSource: https
+ ://clinicaltrials.gov/study/NCT07175428\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07175428
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

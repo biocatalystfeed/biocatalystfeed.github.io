@@ -1,0 +1,49 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed KPTI trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b96ed130a52af19bf82d@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:KPTI P2 readout (est.): Selinexor (KPT-330) in Patients With Relaps
+ ed/Refractory Diffuse Large B-Cell Lymphoma (DLBCL)
+DESCRIPTION:Selinexor (KPT-330) in Patients With Relapsed/Refractory Diffus
+ e Large B-Cell Lymphoma (DLBCL)\nNCT02227251 | PHASE2 | ACTIVE_NOT_RECRUIT
+ ING | sponsor: Karyopharm Therapeutics Inc\nPrimary completion date (ESTIM
+ ATED)\; top-line results usually follow later.\nTicker KPTI (confidence 0.
+ 9)\nSource: https://clinicaltrials.gov/study/NCT02227251\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT02227251
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:17197d034d01039e136f@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:KPTI P2/P3 readout (est.): A Study of Rituximab-Gemcitabine-Dexamet
+ hasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapse
+ d/Refractory Diffuse Large B-cell Lymphoma
+DESCRIPTION:A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP)
+  With or Without Selinexor in Patients With Relapsed/Refractory Diffuse La
+ rge B-cell Lymphoma\nNCT04442022 | PHASE2/PHASE3 | ACTIVE_NOT_RECRUITING |
+  sponsor: Karyopharm Therapeutics Inc\nPrimary completion date (ESTIMATED)
+ \; top-line results usually follow later.\nTicker KPTI (confidence 0.9)\nS
+ ource: https://clinicaltrials.gov/study/NCT04442022\nScheduling/reference 
+ data from public records\; dates can move. Not investment\, legal or medic
+ al advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT04442022
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

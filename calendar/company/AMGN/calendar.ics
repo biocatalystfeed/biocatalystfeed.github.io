@@ -1,0 +1,100 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AMGN trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b473904069206d53d2a4@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:AMGN P1/P2 readout (est.): A Study of Anvumetostat in Participants 
+ With Advanced MTAP-null Solid Tumors (MTAPESTRY 101)
+DESCRIPTION:A Study of Anvumetostat in Participants With Advanced MTAP-null
+  Solid Tumors (MTAPESTRY 101)\nNCT05094336 | PHASE1/PHASE2 | ACTIVE_NOT_RE
+ CRUITING | sponsor: Amgen\nPrimary completion date (ESTIMATED)\; top-line 
+ results usually follow later.\nTicker AMGN (confidence 0.9)\nSource: https
+ ://clinicaltrials.gov/study/NCT05094336\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05094336
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:c84af83b3ad41d3f9147@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+SUMMARY:AMGN P3 readout (est.): Pharmacokinetic Similarity Between ABP 234 
+ and Keytruda® (Pembrolizumab)
+DESCRIPTION:Pharmacokinetic Similarity Between ABP 234 and Keytruda® (Pemb
+ rolizumab)\nNCT06430866 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Amgen\
+ nPrimary completion date (ESTIMATED)\; top-line results usually follow lat
+ er.\nTicker AMGN (confidence 0.9)\nSource: https://clinicaltrials.gov/stud
+ y/NCT06430866\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06430866
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:e584aa26848addf4a7ec@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:AMGN P1/P2 readout (est.): A Study of AMG 732 in Healthy Participan
+ ts and Participants With Thyroid Eye Disease
+DESCRIPTION:A Study of AMG 732 in Healthy Participants and Participants Wit
+ h Thyroid Eye Disease\nNCT06401044 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING
+  | sponsor: Amgen\nPrimary completion date (ESTIMATED)\; top-line results 
+ usually follow later.\nTicker AMGN (confidence 0.9)\nSource: https://clini
+ caltrials.gov/study/NCT06401044\nScheduling/reference data from public rec
+ ords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06401044
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:b58047322790d0dec117@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270122
+SUMMARY:AMGN P3 readout (est.): Evaluation of Maridebart Cafraglutide in Ad
+ ult Participants Without Type 2 Diabetes Mellitus Who Have Obesity or Are 
+ Overweight
+DESCRIPTION:Evaluation of Maridebart Cafraglutide in Adult Participants Wit
+ hout Type 2 Diabetes Mellitus Who Have Obesity or Are Overweight\nNCT06858
+ 839 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Amgen\nPrimary completion 
+ date (ESTIMATED)\; top-line results usually follow later.\nTicker AMGN (co
+ nfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06858839\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06858839
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:0848a29c35a32233fbbf@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270122
+SUMMARY:AMGN P3 readout (est.): Efficacy and Safety of Maridebart Cafraglut
+ ide in Adult Participants With Type 2 Diabetes Mellitus Who Have Obesity o
+ r Are Overweight
+DESCRIPTION:Efficacy and Safety of Maridebart Cafraglutide in Adult Partici
+ pants With Type 2 Diabetes Mellitus Who Have Obesity or Are Overweight\nNC
+ T06858878 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Amgen\nPrimary compl
+ etion date (ESTIMATED)\; top-line results usually follow later.\nTicker AM
+ GN (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06858878\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06858878
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

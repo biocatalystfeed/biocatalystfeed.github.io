@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed PHAR trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:9979454e5b709ac202e2@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:PHAR P3 readout (est.): Pediatric Patients Aged 4 to 11 Years With 
+ APDS
+DESCRIPTION:Pediatric Patients Aged 4 to 11 Years With APDS\nNCT05438407 | 
+ PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Pharming Technologies B.V.\nPrim
+ ary completion date (ESTIMATED)\; top-line results usually follow later.\n
+ Ticker PHAR (confidence 0.6)\nSource: https://clinicaltrials.gov/study/NCT
+ 05438407\nScheduling/reference data from public records\; dates can move. 
+ Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05438407
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

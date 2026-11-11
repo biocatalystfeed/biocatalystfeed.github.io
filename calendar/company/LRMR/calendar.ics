@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed LRMR trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:7dd15627d8a8f901be3a@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:LRMR P2 readout (est.): An Open-Label Study of CTI-1601 in Subjects
+  With Friedreich's Ataxia
+DESCRIPTION:An Open-Label Study of CTI-1601 in Subjects With Friedreich's A
+ taxia\nNCT06447025 | PHASE2 | RECRUITING | sponsor: Larimar Therapeutics\,
+  Inc.\nPrimary completion date (ESTIMATED)\; top-line results usually foll
+ ow later.\nTicker LRMR (confidence 0.9)\nSource: https://clinicaltrials.go
+ v/study/NCT06447025\nScheduling/reference data from public records\; dates
+  can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06447025
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

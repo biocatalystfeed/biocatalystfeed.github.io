@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed DCTH trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:53c908ba2a69a76025fe@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:DCTH P2 readout (est.): Evaluation of the Safety and Efficacy of Tr
+ eatment w/High Dose Melphalan Given Directly Into the Liver Followed by Tr
+ eatment w/Approved Cancer Treatment or Approved Cancer Treatment Alone in 
+ Patients w/ Metastatic Colorectal Cancer w/Liver Dominant Disease
+DESCRIPTION:Evaluation of the Safety and Efficacy of Treatment w/High Dose 
+ Melphalan Given Directly Into the Liver Followed by Treatment w/Approved C
+ ancer Treatment or Approved Cancer Treatment Alone in Patients w/ Metastat
+ ic Colorectal Cancer w/Liver Dominant Disease\nNCT06607458 | PHASE2 | RECR
+ UITING | sponsor: Delcath Systems Inc.\nPrimary completion date (ESTIMATED
+ )\; top-line results usually follow later.\nTicker DCTH (confidence 0.9)\n
+ Source: https://clinicaltrials.gov/study/NCT06607458\nScheduling/reference
+  data from public records\; dates can move. Not investment\, legal or medi
+ cal advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06607458
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

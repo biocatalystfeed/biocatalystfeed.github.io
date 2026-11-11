@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed NBIX trial readouts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:9e66ae12a4236a0c9af1@biocat.ai
+DTSTAMP:20261111T175519Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:NBIX P2 readout (est.): Efficacy\, Safety\, and Tolerability of NBI
+ -1065890 Versus Placebo in Adults With Tardive Dyskinesia
+DESCRIPTION:Efficacy\, Safety\, and Tolerability of NBI-1065890 Versus Plac
+ ebo in Adults With Tardive Dyskinesia\nNCT07365462 | PHASE2 | RECRUITING |
+  sponsor: Neurocrine Biosciences\nPrimary completion date (ESTIMATED)\; to
+ p-line results usually follow later.\nTicker NBIX (confidence 0.9)\nSource
+ : https://clinicaltrials.gov/study/NCT07365462\nScheduling/reference data 
+ from public records\; dates can move. Not investment\, legal or medical ad
+ vice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07365462
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR
