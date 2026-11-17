@@ -192,9 +192,130 @@ export function journalAllowed(name) {
   return JOURNAL_OK.has(String(name || "").trim().toLowerCase());
 }
 
+export const HEADLINE_WORD_TARGET = 12;
+export const HEADLINE_WORD_MAX = 14;
+
+export function wordCount(value) {
+  return String(value || "").trim().split(/\s+/).filter(Boolean).length;
+}
+
+const HEADLINE_TRAILS = [
+  /\s+in\s+(?:adult|adults|pediatric|paediatric|children|patients|people|women|men|healthy|certain|persons|individuals)\b[^:]*$/i,
+  /\s+without\b[^:]*$/i,
+  /\s+who\b[\s\S]*$/i,
+  /\s+when\b[\s\S]*$/i,
+  /\s+where\b[\s\S]*$/i,
+  /\s+which\b[\s\S]*$/i,
+  /\s+that\b[\s\S]*$/i,
+  /\s+associated\b[\s\S]*$/i,
+  /\s+related\b[\s\S]*$/i,
+  /\s+following\b[\s\S]*$/i,
+  /\s+using\b[\s\S]*$/i,
+  /\s+via\b[\s\S]*$/i,
+  /\s+among\b[\s\S]*$/i,
+  /\s+during\b[\s\S]*$/i,
+  /\s+after\b[\s\S]*$/i,
+  /\s+before\b[\s\S]*$/i,
+  /\s+across\b[\s\S]*$/i,
+  /\s+between\b[\s\S]*$/i,
+  /\s+through\b[\s\S]*$/i,
+  /\s+from\b[\s\S]*$/i,
+  /\s+of the\b[\s\S]*$/i,
+  /\s+with\s+(?:overweight|obesity)\b[\s\S]*$/i,
+];
+
+const HEADLINE_LATE_TRAILS = [
+  /\s+for\b[^:]*$/i,
+  /\s+to\b[^:]*$/i,
+];
+
+function headlineCuts(text, { late = false } = {}) {
+  const cuts = [];
+  const add = (index, skip, minRight) => {
+    const left = text.slice(0, index).replace(/[\s,:;—–-]+$/g, "").trim();
+    const right = text.slice(index + skip).replace(/^[\s,:;—–-]+/g, "").trim();
+    const n = wordCount(left);
+    if (left && right && wordCount(right) >= minRight && n >= 4 && n < wordCount(text)) cuts.push({ left, right, n });
+  };
+  for (const match of text.matchAll(/\s*[:;]\s+/g)) add(match.index, match[0].length, 5);
+  for (const match of text.matchAll(/\s+[–—]\s+/g)) add(match.index, match[0].length, 5);
+  for (const match of text.matchAll(/\s+-\s+/g)) add(match.index, match[0].length, 5);
+  for (const match of text.matchAll(/,\s+/g)) add(match.index, match[0].length, 1);
+  for (const pattern of HEADLINE_TRAILS) {
+    const match = pattern.exec(text);
+    if (match) add(match.index, 0, 1);
+  }
+  if (late) {
+    for (const pattern of HEADLINE_LATE_TRAILS) {
+      const match = pattern.exec(text);
+      if (match) add(match.index, 0, 1);
+    }
+  }
+  return cuts;
+}
+
+export function compactIndication(phrase, maxWords = 6) {
+  const original = String(phrase || "").replace(/\s+/g, " ").trim().replace(/\.+$/, "");
+  let text = original;
+  const lead = /^(?:the\s+)?treatment\s+of\s+(?:(?:adults|adult|patients|children|people)\s+with\s+)?/i.exec(text);
+  if (lead && lead[0].length < text.length) text = text.slice(lead[0].length).trim();
+  const cut = shortenHeadline(text, maxWords, maxWords);
+  const changed = cut.headline.toLowerCase() !== original.toLowerCase();
+  return { core: cut.headline, extra: changed ? original : "" };
+}
+
+export function shortenHeadline(value, target = HEADLINE_WORD_TARGET, hardMax = HEADLINE_WORD_MAX) {
+  let text = String(value || "").replace(/\s+/g, " ").trim();
+  const removed = [];
+  const peel = (limit, late) => {
+    const choices = headlineCuts(text, { late }).filter((cut) => cut.n <= limit);
+    if (!choices.length) return false;
+    choices.sort((a, b) => b.n - a.n);
+    text = choices[0].left;
+    removed.unshift(choices[0].right);
+    return true;
+  };
+  let guard = 0;
+  while (wordCount(text) > target && guard < 6) {
+    if (!peel(target, false)) break;
+    guard += 1;
+  }
+  while (wordCount(text) > hardMax && guard < 10) {
+    if (!peel(hardMax, true)) break;
+    guard += 1;
+  }
+  if (wordCount(text) > hardMax) {
+    const words = text.split(/\s+/);
+    const dangling = new Set(["a", "an", "the", "of", "and", "or", "for", "to", "in", "with", "on", "by", "from", "as"]);
+    let keep = hardMax;
+    while (keep > 4 && dangling.has(words[keep - 1].toLowerCase().replace(/[^a-z]/g, ""))) keep -= 1;
+    const left = words.slice(0, keep).join(" ");
+    const right = words.slice(keep).join(" ");
+    if (right) removed.unshift(right);
+    text = left;
+  }
+  return {
+    headline: text.replace(/[\s,:;—–-]+$/g, "").trim(),
+    extra: removed.join(" ").replace(/\s+/g, " ").trim(),
+  };
+}
+
+function firstSentence(value) {
+  const text = String(value || "").replace(/\s+/g, " ").trim();
+  const match = /^(.+?\.)(?:\s+|$)/.exec(text);
+  return match ? match[1] : text;
+}
+
 export function makeItem(fields) {
-  const headline = clip(fields.headline, 220).replace(/\.{2,}/g, ".");
-  const blurb = clip(fields.blurb || "", 420).replace(/\.{2,}/g, ".");
+  const shortened = shortenHeadline(fields.headline);
+  let blurbSource = fields.blurb || "";
+  if (shortened.extra) {
+    const extra = shortened.extra.replace(/\s+/g, " ").trim();
+    const probe = extra.toLowerCase().slice(0, 40);
+    if (extra && !blurbSource.toLowerCase().includes(probe)) blurbSource = sentences(extra, firstSentence(blurbSource));
+  }
+  const headline = clip(shortened.headline, 220).replace(/\.{2,}/g, ".");
+  const blurb = clip(blurbSource, 420).replace(/\.{2,}/g, ".");
   if (!headline.trim() || !blurb.trim()) return null;
   assertFactual(headline, fields.id);
   assertFactual(blurb, fields.id);
@@ -236,7 +357,9 @@ function kindOf(rule, id) {
 export function fdaApprovalCopy(id, facts) {
   const kind = kindOf(facts.rule, id);
   const who = joinName(facts.brand, facts.ingredient);
-  const focus = facts.indication || "";
+  const indication = facts.indication ? compactIndication(facts.indication, 6) : { core: "", extra: "" };
+  const focus = indication.core;
+  const indicationLine = indication.extra ? `Indication detail: ${indication.extra}` : "";
   const area = facts.indication ? "" : facts.area || "";
   const sponsorLine = facts.sponsor ? `Sponsor listed as ${facts.sponsor}` : "";
   const classLine = facts.desc ? `Submission class: ${facts.desc}` : "";
@@ -248,9 +371,9 @@ export function fdaApprovalCopy(id, facts) {
   const lead = focus ? `${who}: FDA ${kind}, indicated for ${focus}` : "";
   const templates = [];
   if (who && focus) {
-    templates.push(() => ({ headline: lead, blurb: sentences(sponsorLine, classLine || dateLine) }));
-    templates.push(() => ({ headline: `FDA ${kind} of ${who} for ${focus}`, blurb: sentences(dateLine, priorityLine || appLine) }));
-    templates.push(() => ({ headline: `${who} indicated for ${focus}`, blurb: sentences(`FDA ${kind} dated ${facts.published}`, sponsorLine || classLine) }));
+    templates.push(() => ({ headline: lead, blurb: sentences(indicationLine || sponsorLine, classLine || dateLine) }));
+    templates.push(() => ({ headline: `FDA ${kind} of ${who} for ${focus}`, blurb: sentences(indicationLine || dateLine, priorityLine || appLine) }));
+    templates.push(() => ({ headline: `${who} indicated for ${focus}`, blurb: sentences(indicationLine || `FDA ${kind} dated ${facts.published}`, sponsorLine || classLine) }));
   } else if (who && area) {
     templates.push(() => ({ headline: `${who}: FDA ${kind}, ${area}`, blurb: sentences(sponsorLine, dateLine) }));
     templates.push(() => ({ headline: `FDA ${kind} of ${who} (${area})`, blurb: sentences(classLine, appLine || priorityLine) }));
@@ -318,25 +441,33 @@ export function purpleCopy(id, facts) {
   return compose(id, templates);
 }
 
+function shortCommittee(name) {
+  const text = String(name || "").replace(/\s+/g, " ").trim();
+  const cut = text.replace(/\s+of the\b[\s\S]*$/i, "").trim();
+  return cut || text;
+}
+
 export function adcomCopy(id, facts) {
+  const committee = shortCommittee(facts.committee);
+  const full = facts.committee && facts.committee !== committee ? facts.committee : "";
   const when = facts.kind === "cancel" ? "" : facts.meeting;
   const lead = {
-    meeting: `FDA advisory committee meeting listed for ${facts.meeting}: ${facts.committee}`,
-    postpone: `FDA advisory committee meeting postponed to ${facts.meeting}: ${facts.committee}`,
-    cancel: `FDA advisory committee meeting cancelled: ${facts.committee}`,
-    amendment: `FDA advisory committee meeting notice amended for ${facts.meeting}: ${facts.committee}`,
+    meeting: `FDA advisory meeting ${facts.meeting}: ${committee}`,
+    postpone: `FDA advisory meeting postponed to ${facts.meeting}: ${committee}`,
+    cancel: `FDA advisory meeting cancelled: ${committee}`,
+    amendment: `FDA advisory meeting amended for ${facts.meeting}: ${committee}`,
   }[facts.kind];
   const alt = {
-    meeting: `${facts.committee} meeting listed for ${facts.meeting}`,
-    postpone: `${facts.committee} meeting postponed to ${facts.meeting}`,
-    cancel: `${facts.committee} meeting cancelled`,
-    amendment: `${facts.committee} notice amended for ${facts.meeting}`,
+    meeting: `${committee}: FDA advisory meeting ${facts.meeting}`,
+    postpone: `${committee} postponed to ${facts.meeting}`,
+    cancel: `${committee} meeting cancelled`,
+    amendment: `${committee} notice amended ${facts.meeting}`,
   }[facts.kind];
   const detail = facts.rest ? clip(facts.rest, 180).replace(/[.\s]+$/g, "") : "";
   const templates = [
-    () => ({ headline: lead, blurb: sentences(detail, `Federal Register publication date ${facts.published}`) }),
-    () => ({ headline: alt, blurb: sentences(`Federal Register publication date ${facts.published}`, detail || "Notice type is an FDA advisory committee meeting action") }),
-    () => ({ headline: when ? `${facts.meeting}: ${facts.committee}` : `${facts.committee} advisory committee notice`, blurb: sentences(detail || lead, `Federal Register publication date ${facts.published}`) }),
+    () => ({ headline: lead, blurb: sentences(full || detail, `Federal Register publication date ${facts.published}`) }),
+    () => ({ headline: alt, blurb: sentences(`Federal Register publication date ${facts.published}`, full || detail || "FDA advisory committee meeting notice") }),
+    () => ({ headline: when ? `${facts.meeting}: ${committee}` : `${committee} advisory committee notice`, blurb: sentences(full || detail, `Federal Register publication date ${facts.published}`) }),
   ];
   return compose(id, templates);
 }
@@ -344,7 +475,10 @@ export function adcomCopy(id, facts) {
 export function emaCopy(id, facts) {
   const name = facts.inn ? `${unescapeBasic(facts.name)} (${unescapeBasic(facts.inn)})` : unescapeBasic(facts.name);
   const event = facts.event;
-  const indication = facts.indication ? lowerFirst(unescapeBasic(facts.indication).replace(/\.+$/, "")) : "";
+  const fullIndication = facts.indication ? lowerFirst(unescapeBasic(facts.indication).replace(/\.+$/, "")) : "";
+  const packedIndication = fullIndication ? compactIndication(fullIndication, 5) : { core: "", extra: "" };
+  const indication = packedIndication.core;
+  const indicationDetail = packedIndication.extra ? `Indication detail: ${fullIndication}` : "";
   const mesh = unescapeBasic(facts.mesh || "");
   const holder = facts.holder ? `Applicant or holder listed as ${unescapeBasic(facts.holder)}` : "";
   const group = facts.group ? `Pharmacotherapeutic group: ${unescapeBasic(facts.group)}` : "";
@@ -357,9 +491,9 @@ export function emaCopy(id, facts) {
   ].filter(Boolean).join(". ");
   const templates = [];
   if (indication) {
-    templates.push(() => ({ headline: `${name}: ${event} for ${indication}`, blurb: sentences(holder || group, number || dateLine) }));
-    templates.push(() => ({ headline: `${event} on ${name} for ${indication}`, blurb: sentences(group || holder, flags || dateLine) }));
-    templates.push(() => ({ headline: `${name} for ${indication}: ${event}`, blurb: sentences(number || group, holder || dateLine) }));
+    templates.push(() => ({ headline: `${name}: ${event} for ${indication}`, blurb: sentences(indicationDetail || holder || group, number || dateLine) }));
+    templates.push(() => ({ headline: `${event} on ${name} for ${indication}`, blurb: sentences(indicationDetail || group || holder, flags || dateLine) }));
+    templates.push(() => ({ headline: `${name} for ${indication}: ${event}`, blurb: sentences(indicationDetail || number || group, holder || dateLine) }));
   } else if (mesh) {
     templates.push(() => ({ headline: `${name}, ${mesh}: ${event}`, blurb: sentences(holder || group, number || dateLine) }));
     templates.push(() => ({ headline: `${event}: ${name} (${mesh})`, blurb: sentences(group || holder, dateLine) }));
@@ -412,23 +546,23 @@ export function trialCopy(id, facts) {
   const phase = facts.phase3 ? "Phase 3" : "Phase 2";
   const title = facts.title;
   const condition = facts.condition || "";
-  const inTitle = condition && title.toLowerCase().includes(condition.toLowerCase());
   const sponsor = facts.sponsor ? `Sponsor listed as ${facts.sponsor}` : "Sponsor not named on the calendar extract";
   const status = `ClinicalTrials.gov status ${facts.status || "not stated"}`;
   const when = `The ${facts.when || "listed"} primary completion date is ${facts.date}`;
-  const generated = facts.generated ? `Taken from this site's readout calendar generated ${facts.generated}` : "Taken from this site's readout calendar extract";
+  const action = `${phase} primary completion ${facts.date}`;
+  const shortTitle = wordCount(title) <= 8 ? title : "";
   const templates = [
     () => ({
-      headline: !inTitle && condition ? `${condition}: ${phase} primary completion listed for ${facts.date}, ${title}` : `${phase} primary completion listed for ${facts.date}: ${title}`,
-      blurb: sentences(sponsor, status),
+      headline: condition ? `${condition}: ${action}` : (shortTitle ? `${action}: ${shortTitle}` : action),
+      blurb: sentences(shortTitle ? sponsor : title, shortTitle ? status : sponsor),
     }),
     () => ({
-      headline: title,
-      blurb: sentences(`${phase} primary completion date ${facts.date} (${facts.when || "listed"})`, !inTitle && condition ? `Condition listed as ${condition}` : sponsor),
+      headline: shortTitle || (condition ? `${condition} ${action}` : action),
+      blurb: sentences(title, status),
     }),
     () => ({
-      headline: !inTitle && condition ? `${condition} study, ${phase} primary completion ${facts.date}: ${title}` : `${phase} primary completion ${facts.date}: ${title}`,
-      blurb: sentences(when, generated),
+      headline: condition ? `${condition}: ${phase} primary completion` : action,
+      blurb: sentences(title, when),
     }),
   ];
   return compose(id, templates);

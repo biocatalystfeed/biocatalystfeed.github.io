@@ -7,7 +7,7 @@ import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
-import { fdaApprovalCopy, hashId, indicationPhrase, pressProduct } from "../copy.mjs";
+import { fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, pressProduct, shortenHeadline, wordCount } from "../copy.mjs";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
@@ -307,6 +307,27 @@ test("adjacent items change source and regulators stay at or under half", () => 
   for (let i = 1; i < selected.length; i++) {
     const alternativeLeft = selected.slice(i).some((item) => item.scout_source !== selected[i - 1].scout_source);
     if (alternativeLeft) assert.notEqual(selected[i].scout_source, selected[i - 1].scout_source);
+  }
+});
+
+test("headlines stay within 14 words by trimming clauses", () => {
+  const hibsago = "Hibsago (Bepirovirsen) indicated for treatment of chronic hepatitis B virus (HBV) infection in adult patients without cirrhosis";
+  const cut = shortenHeadline(hibsago);
+  assert.ok(wordCount(cut.headline) <= HEADLINE_WORD_MAX, cut.headline);
+  assert.ok(wordCount(cut.headline) <= 12, cut.headline);
+  assert.match(cut.headline, /Hibsago/);
+  assert.match(cut.headline, /hepatitis B/);
+  assert.match(cut.extra, /adult patients without cirrhosis/);
+  const press = shortenHeadline("FDA Approves First Factor Xla Inhibitor to Help Prevent Stroke in Certain Adults at High Risk");
+  assert.ok(wordCount(press.headline) <= HEADLINE_WORD_MAX);
+  assert.match(press.headline, /FDA Approves/);
+  assert.match(press.headline, /Stroke/);
+  assert.match(press.extra, /Certain Adults/);
+  const file = JSON.parse(fs.readFileSync(path.join(root, "data", "headlines.json"), "utf8"));
+  for (const item of file.items) {
+    assert.ok(wordCount(item.headline) <= HEADLINE_WORD_MAX, item.headline);
+    assert.ok(item.blurb.trim());
+    assert.match(item.source_url, /^https?:\/\//);
   }
 });
 
