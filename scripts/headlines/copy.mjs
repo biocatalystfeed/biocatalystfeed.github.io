@@ -1,4 +1,4 @@
-import { assertFactual, clip, httpUrl } from "./text.mjs";
+import { assertFactual, clip, factualViolation, httpUrl } from "./text.mjs";
 
 export const OUTCOME_CLAIM = /\b(effective|efficacy|superior|improved|benefit|success|safe and well)\b/i;
 
@@ -58,10 +58,110 @@ export function sentences(...parts) {
     const key = text.toLowerCase();
     if (seen.has(key)) continue;
     seen.add(key);
-    out.push(`${text}.`);
+    out.push(`${text.charAt(0).toUpperCase()}${text.slice(1)}.`);
     if (out.length === 2) break;
   }
   return out.join(" ");
+}
+
+export function wordTokens(value) {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9']+/g, " ").split(/\s+/).filter(Boolean);
+}
+
+export function echoesHeadline(headline, blurb) {
+  const left = wordTokens(headline);
+  const right = wordTokens(blurb).join(" ");
+  if (!left.length || !right) return false;
+  if (left.length >= 6) {
+    for (let i = 0; i <= left.length - 6; i++) {
+      if (right.includes(left.slice(i, i + 6).join(" "))) return true;
+    }
+  }
+  return left.length >= 4 && right.includes(left.join(" "));
+}
+
+const ECHO_START = /^(?:the .+ post reports|the paper reports|this preprint\b.*\breports|the fda press release feed reports|the grant supports)\b/i;
+const STOCK_OPENER = /^(?:in this (?:paper|study|work|article|preprint)|here,?|we (?:show|found|report|demonstrate|present|describe|introduce)|our (?:results|study|work|findings) (?:show|suggest|indicate|demonstrate)|this (?:study|paper|work|preprint) (?:shows|found|reports|demonstrates|presents)|researchers (?:report|found|showed)|the authors (?:report|found|showed))[:,]?\s+(?:that\s+)?/i;
+
+function clipWords(value, maxWords) {
+  const words = String(value || "").replace(/\s+/g, " ").trim().split(/\s+/).filter(Boolean);
+  if (words.length <= maxWords) return words.join(" ");
+  const clause = words.join(" ").split(/;|:\s+/)[0].trim();
+  if (wordCount(clause) >= 8 && wordCount(clause) <= maxWords) return clause;
+  let keep = maxWords;
+  while (keep > 8 && danglingEnd(words.slice(0, keep).join(" "))) keep -= 1;
+  return words.slice(0, keep).join(" ");
+}
+
+function joinPieces(pieces) {
+  let out = "";
+  for (const piece of pieces) {
+    if (/^s$/i.test(piece) && out && !/\s$/.test(out)) out += "'s";
+    else out += `${out ? " " : ""}${piece}`;
+  }
+  return out;
+}
+
+function afterOverlap(headline, sentence) {
+  const wanted = wordTokens(headline);
+  const pieces = String(sentence || "").split(/[^A-Za-z0-9']+/).filter(Boolean);
+  const joined = pieces.map((piece) => piece.toLowerCase()).join(" ");
+  for (let i = 0; i <= wanted.length - 6; i++) {
+    const gram = wanted.slice(i, i + 6).join(" ");
+    const at = joined.indexOf(gram);
+    if (at < 0) continue;
+    const beforeCount = joined.slice(0, at).trim().split(/\s+/).filter(Boolean).length;
+    const used = joined.slice(0, at + gram.length).trim().split(/\s+/).filter(Boolean).length;
+    const trimEdge = (value) => {
+      let text = value;
+      while (danglingEnd(text) && wordCount(text) > 6) text = text.replace(/\s+\S+$/, "");
+      return text;
+    };
+    const before = trimEdge(joinPieces(pieces.slice(0, beforeCount)));
+    const after = trimEdge(joinPieces(pieces.slice(used)));
+    const beforeStops = /\b(approved|has|have|given|said|including)\b[.]*$/i.test(before);
+    if (!beforeStops && wordCount(before) >= 6 && !danglingEnd(before)) return before;
+    if (wordCount(after) >= 6 && !danglingEnd(after)) return after;
+    if (wordCount(before) >= 6 && !danglingEnd(before)) return before;
+  }
+  return "";
+}
+
+function preferredPassage(plain) {
+  const parts = plain.split(/\b(Importance|Objective|Background|Methods|Results|Conclusions|Findings|Interpretation)\b/i);
+  const wanted = new Set(["results", "conclusions", "findings", "interpretation"]);
+  for (let i = 1; i < parts.length; i += 2) {
+    if (wanted.has(String(parts[i] || "").toLowerCase()) && wordCount(parts[i + 1] || "") >= 6) return parts[i + 1].trim();
+  }
+  return plain.replace(/^(?:Importance|Objective|Background|Methods|Results|Conclusions|Findings|Interpretation)\s+/i, "");
+}
+
+export function condenseFact(text, avoid, maxWords = 25) {
+  const plain = preferredPassage(decodeXml(String(text || "")).replace(/\s+/g, " ").trim());
+  if (!plain) return "";
+  const bits = plain.split(/(?<=[.!?])\s+/).map((bit) => bit.trim()).filter((bit) => wordCount(bit) >= 6);
+  const ranked = bits
+    .map((bit, index) => ({ bit, index, score: (/\b(conclud|result|found|showed|approved|compared|aims|means|testing|tested)\b/i.test(bit) ? 2 : 0) - index * 0.01 }))
+    .sort((a, b) => b.score - a.score);
+  for (const { bit } of ranked) {
+    let sentence = bit.replace(STOCK_OPENER, "").replace(/^that\s+/i, "").replace(/\s+/g, " ").trim();
+    if (avoid && echoesHeadline(avoid, sentence)) {
+      const rest = afterOverlap(avoid, sentence);
+      const clause = /\b(is|are|was|were|will|has|have|aims|supports|helps|includes|means)\b/i.test(rest);
+      sentence = rest ? (clause ? rest : `It covers ${rest.charAt(0).toLowerCase()}${rest.slice(1)}`) : "";
+    }
+    if (!sentence) continue;
+    sentence = clipWords(sentence, maxWords).replace(/[,:;]\s*$/g, "");
+    if ((sentence.match(/\(/g) || []).length > (sentence.match(/\)/g) || []).length) sentence = sentence.replace(/\s*\([^)]*$/g, "");
+    if (wordCount(sentence) < 6 || wordCount(sentence) > maxWords) continue;
+    if (!/[.!?]$/.test(sentence)) sentence += ".";
+    sentence = `${sentence.charAt(0).toUpperCase()}${sentence.slice(1)}`;
+    if (ECHO_START.test(sentence)) continue;
+    if (avoid && echoesHeadline(avoid, sentence)) continue;
+    if (factualViolation(sentence)) continue;
+    return sentence;
+  }
+  return "";
 }
 
 export function joinName(brand, ingredient) {
@@ -79,9 +179,8 @@ export function lowerFirst(value) {
 
 export function leadIn(value) {
   const text = sentenceCase(stripVenue(value));
-  const first = (text.split(/\s+/)[0] || "").replace(/[^A-Za-z]/g, "");
-  const caps = first.replace(/[^A-Z]/g, "").length;
-  if (first.length >= 2 && caps / first.length >= 0.6) return text;
+  const first = text.split(/\s+/)[0] || "";
+  if (/[A-Z]/.test(first.slice(1))) return text;
   return lowerFirst(text);
 }
 
@@ -365,12 +464,7 @@ export function makeItem(fields) {
     shortened.extra = "";
   }
   shortened.headline = sentenceCase(shortened.headline);
-  let blurbSource = fields.blurb || "";
-  if (shortened.extra && !/^(in|for|to|with|of|from|through|by|on|at|into|via)\b/i.test(shortened.extra)) {
-    const extra = shortened.extra.replace(/\s+/g, " ").trim();
-    const probe = extra.toLowerCase().slice(0, 40);
-    if (extra && !blurbSource.toLowerCase().includes(probe)) blurbSource = sentences(extra, firstSentence(blurbSource));
-  }
+  const blurbSource = fields.blurb || "";
   const headline = clip(shortened.headline, 220).replace(/\.{2,}/g, ".");
   const blurb = clip(blurbSource, 420).replace(/\.{2,}/g, ".");
   if (!headline.trim() || !blurb.trim()) return null;
@@ -464,7 +558,7 @@ export function sponsorShort(name) {
   let text = String(name || "").replace(/\s+/g, " ").trim();
   text = text.replace(/\b(l\.?l\.?c\.?|inc\.?|incorporated|ltd\.?|limited|gmbh|a\.?g\.?|a\.?b\.?|s\.?a\.?|n\.?v\.?|p\.?l\.?c\.?|b\.?v\.?|corp\.?|corporation|company|co\.?)\b/gi, " ");
   text = text.replace(/\b(healthcare|health care|pharmaceuticals|pharmaceutical|pharma|laboratories|labs|llc)\b/gi, " ");
-  text = text.replace(/[^A-Za-z0-9&.\- ]/g, " ").replace(/\s+/g, " ").trim();
+  text = text.replace(/[^A-Za-z0-9&.\- ]/g, " ").replace(/\.(?=\s|$)/g, " ").replace(/\s+/g, " ").trim();
   const words = text.split(" ").filter(Boolean).slice(0, 2);
   return words.join(" ");
 }
@@ -496,10 +590,13 @@ export function fdaApprovalCopy(id, facts) {
   const focus = facts.indication ? plainCondition(facts.indication) : "";
   const nme = /new molecular entity|\btype\s*1\b/i.test(facts.desc || "");
   const classBit = nme ? ", a new molecular entity" : "";
+  const when = facts.published ? humanDate(facts.published) : "";
   const why = focus
-    ? `The FDA approval covers ${facts.indication.replace(/\.$/, "")}.`
-    : (nme ? `${who || "The medicine"} is listed as a new molecular entity.` : "The FDA record does not list a condition.");
-  const tail = [facts.sponsor ? `${facts.sponsor} is the sponsor` : "", facts.app || "", facts.published ? `approved ${humanDate(facts.published)}` : ""].filter(Boolean).join(". ");
+    ? `The labeled use is ${facts.indication.replace(/\.$/, "")}${facts.sponsor ? `, from ${facts.sponsor}` : ""}${when ? `, approved ${when}` : ""}`
+    : (nme
+      ? `${facts.sponsor || "The sponsor"} received approval of a new molecular entity${when ? ` on ${when}` : ""}`
+      : `${facts.sponsor || "The sponsor"} received this FDA approval${when ? ` on ${when}` : ""}`);
+  const tail = facts.app ? `Application ${facts.app}` : "";
   const blurb = sentences(why, tail);
   const templates = [];
   const product = facts.brand || who;
@@ -529,10 +626,11 @@ export function crlCopy(id, facts) {
   const product = facts.product || "";
   const topics = facts.topics || [];
   const topicText = topics.length ? topics.join(" and ") : "";
-  const why = "A complete response letter means the application was not approved as submitted.";
-  const detail = topicText ? `The letter's headings name ${topicText}.` : "";
-  const tail = [facts.apps ? `Application ${facts.apps}` : "", facts.published ? `Letter date ${humanDate(facts.published)}` : ""].filter(Boolean).join(". ");
-  const blurb = sentences(why, detail, tail);
+  const why = topicText
+    ? `A complete response letter means the application was not approved as submitted, and the headings name ${topicText}`
+    : "A complete response letter means the application was not approved as submitted";
+  const tail = [facts.apps ? `Application ${facts.apps}` : "", facts.published ? `letter date ${humanDate(facts.published)}` : ""].filter(Boolean).join(", ");
+  const blurb = sentences(why, tail);
   const named = product ? `${owner || company} ${product}` : "";
   const templates = [
     () => ({ headline: fitLead([product ? `FDA rejects ${named} application${topicText ? `, citing ${topicText} issues` : ""}` : `FDA sends ${company} a complete response letter`, `FDA sends ${company} a complete response letter`]), blurb }),
@@ -622,14 +720,13 @@ export function emaCopy(id, facts) {
   const focus = fullIndication ? plainCondition(fullIndication) : "";
   const owner = possessive(unescapeBasic(facts.holder || ""));
   const named = owner && brand ? `${owner} ${brand}` : name;
+  const nsclc = /non-?small|nsclc/i.test(fullIndication) ? " NSCLC means non-small cell lung cancer" : "";
   const why = fullIndication
-    ? `The European record covers ${lowerFirst(fullIndication)}.`
-    : `This is an EMA ${event.toLowerCase()}.`;
-  const extra = focus && /lung cancer/i.test(focus) && /non-?small|nsclc/i.test(fullIndication) ? "NSCLC is a common form of lung cancer" : "";
-  const holder = facts.holder ? `${unescapeBasic(facts.holder)} is the applicant` : "";
-  const group = facts.group ? unescapeBasic(facts.group) : "";
-  const detail = [extra, holder, group, facts.productNumber ? `EMA product number ${facts.productNumber}` : ""].filter(Boolean).join(". ");
-  const blurb = sentences(why, detail);
+    ? `The European record covers ${lowerFirst(fullIndication)}.${nsclc}`
+    : `This is an EMA ${String(event || "update").toLowerCase()}`;
+  const holder = facts.holder ? `Applicant ${unescapeBasic(facts.holder)}` : "";
+  const tail = [holder, facts.productNumber ? `product number ${facts.productNumber}` : ""].filter(Boolean).join(", ");
+  const blurb = sentences(why, tail);
   const templates = [];
   const positive = facts.rule === "ema-opinion" || facts.rule === "ema-authorisation";
   if (positive && focus) {
@@ -668,9 +765,14 @@ export function healthCanadaCopy(id, facts) {
 export function paperCopy(id, facts) {
   const title = sentenceCase(stripVenue(facts.title));
   const journal = facts.journal || "";
-  const finding = `The paper reports ${leadIn(title)}`;
-  const where = [journal ? `published in ${journal}` : "", facts.date ? `first published ${facts.date}` : "", facts.recordId ? `record ${facts.recordId}` : ""].filter(Boolean).join(", ");
-  const blurb = sentences(finding, where);
+  const finding = condenseFact(facts.abstract, title);
+  const venue = journal || (facts.preprint ? "" : "Europe PMC");
+  const where = facts.preprint
+    ? `Posted on ${facts.venue || "the preprint server"}. Preprint, not peer-reviewed`
+    : `Published${facts.date ? ` ${facts.date}` : ""}${venue ? ` in ${venue}` : ""}${facts.recordId ? ` (${facts.recordId})` : ""}`;
+  const blurb = finding
+    ? sentences(finding, facts.preprint ? "Preprint, not peer-reviewed" : (journal ? `Published in ${journal}` : ""))
+    : sentences(where);
   const templates = [
     () => ({ headline: title, blurb }),
     () => ({ headline: title, blurb }),
@@ -686,6 +788,32 @@ function drugToken(title) {
   if (coded) return coded;
   const skip = new Set(["study", "phase", "evaluate", "safety", "efficacy", "program", "combined", "investigational", "healthy", "clinical", "adult", "patients", "treatment", "associated", "response", "immune", "compare", "learn", "about"]);
   return tokens.find((token) => token.length >= 3 && !skip.has(token.toLowerCase()) && token[0] === token[0].toUpperCase()) || "";
+}
+
+function testedClaim(title, drug, focus) {
+  const text = String(title || "").replace(/\s+/g, " ").trim();
+  const compare = /compar(?:e|ing)(?: the safety and efficacy of)? (.+?) and (.+?) in (.+?)(?:\.|$)/i.exec(text);
+  if (compare) return softenPhrase(`${compare[1].trim()} with ${compare[2].trim()} in ${compare[3].replace(/\(.*/, "").trim()}`);
+  const evaluate = /evaluat(?:e|ing) (.+?) as (?:a )?treatment for (.+?)(?:\(|$)/i.exec(text);
+  if (evaluate) return softenPhrase(`${evaluate[1].trim()} for ${evaluate[2].replace(/\(.*/, "").trim()}`);
+  const safety = /safety of (?:an? )?(.+?), when given to (.+?)(?:\.|$)/i.exec(text);
+  if (safety) return softenPhrase(`${safety[1].trim()} in ${safety[2].trim()}`);
+  if (drug && focus && drug.toLowerCase() !== focus.toLowerCase()) return softenPhrase(`${drug} in ${focus}`);
+  const stripped = text
+    .replace(/^(?:a |an )?(?:phase (?:[0-9iv]+|iii|ii) )?(?:clinical )?(?:study|trial) (?:to |on |of |for )?/i, "")
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return softenPhrase(clipWords(stripped || focus || drug || "the listed intervention", 14));
+}
+
+function softenPhrase(value) {
+  const small = new Set(["a", "an", "the", "of", "in", "on", "for", "and", "or", "with", "to", "from", "by", "as", "at"]);
+  return String(value || "").replace(/\b[A-Za-z][A-Za-z'-]*\b/g, (word) => {
+    if (word === "Alzheimer" || /[A-Z].*[A-Z]|\d/.test(word)) return word;
+    if (word.length <= 2 && !small.has(word.toLowerCase())) return word;
+    return word.toLowerCase();
+  });
 }
 
 function layCondition(value) {
@@ -708,13 +836,26 @@ export function trialCopy(id, facts) {
   const study = same
     ? (/vaccine/i.test(title) ? `${phase} ${focus} vaccine study` : `${phase} ${focus} study`)
     : drug && focus ? `${phase} ${drug} study in ${focus}` : focus ? `${phase} study in ${focus}` : drug ? `${phase} ${drug} study` : `${phase} study`;
-  const sponsor = facts.sponsor ? `${facts.sponsor} is the sponsor` : "";
-  const status = facts.status ? `ClinicalTrials.gov lists the status as ${facts.status}` : "";
-  const blurb = sentences(`The study reaches primary completion on ${when}.`, title, sponsor || status);
+  const sponsor = sponsorShort(facts.sponsor) || "The listed sponsor";
+  const what = testedClaim(title, drug, focus);
+  const blurbFor = (headline) => {
+    const line = `${sponsor} is testing ${what}`;
+    const safe = echoesHeadline(headline, line) ? `${sponsor} is the sponsor of this ${phase.toLowerCase()} study` : line;
+    return sentences(safe);
+  };
   const templates = [
-    () => ({ headline: fitLead([`${study} reaches primary completion ${when}`]), blurb }),
-    () => ({ headline: fitLead([`${study} reaches its primary completion ${when}`, `${study} reaches primary completion ${when}`]), blurb }),
-    () => ({ headline: fitLead([`${study} reaches primary completion ${when}`]), blurb }),
+    () => {
+      const headline = fitLead([`${study} reaches primary completion ${when}`]);
+      return { headline, blurb: blurbFor(headline) };
+    },
+    () => {
+      const headline = fitLead([`${study} reaches its primary completion ${when}`, `${study} reaches primary completion ${when}`]);
+      return { headline, blurb: blurbFor(headline) };
+    },
+    () => {
+      const headline = fitLead([`${study} reaches primary completion ${when}`]);
+      return { headline, blurb: blurbFor(headline) };
+    },
   ];
   return compose(id, templates);
 }
@@ -739,10 +880,10 @@ export function pressLead(title) {
 }
 
 export function pressCopy(id, facts) {
-  const product = facts.product || "";
   const headline = pressLead(facts.title);
-  const why = product ? `The release names ${product}.` : `The ${facts.feed} reports ${leadIn(facts.title)}.`;
-  const blurb = sentences(why, facts.published ? `Published ${humanDate(facts.published)}.` : "");
+  const fromFeed = condenseFact(facts.description, headline);
+  const why = fromFeed || (facts.product ? `The announcement names ${facts.product}` : "The agency posted this announcement");
+  const blurb = sentences(why);
   const templates = [
     () => ({ headline, blurb }),
     () => ({ headline, blurb }),
@@ -766,10 +907,8 @@ const ITEM_NAMES = {
 export function grantCopy(id, facts) {
   const title = sentenceCase(stripVenue(facts.title));
   const org = facts.org || "The listed organization";
-  const amount = facts.amount ? `The award is ${facts.amount}` : "";
-  const purpose = `The grant supports ${leadIn(title)}.`;
-  const tail = [org, facts.activity ? `activity ${facts.activity}` : "", facts.published ? `starting ${humanDate(facts.published)}` : ""].filter(Boolean).join(", ");
-  const blurb = sentences(purpose, amount, tail ? `${tail}.` : "");
+  const why = `${org} received${facts.amount ? ` ${facts.amount} in` : ""} NIH funding${facts.activity ? ` (${facts.activity})` : ""}`;
+  const blurb = sentences(why, facts.published ? `Project start ${humanDate(facts.published)}` : "");
   const templates = [
     () => ({ headline: title, blurb }),
     () => ({ headline: title, blurb }),
@@ -787,9 +926,9 @@ export function secCopy(id, facts) {
     ? `${facts.company} discloses ${leadItem} in ${form}`
     : `${facts.company} files ${form}`;
   const why = leadItem
-    ? `The filing index lists ${codes.map((code) => `Item ${code}${ITEM_NAMES[code] ? ` ${ITEM_NAMES[code]}` : ""}`).join(" and ")}.`
-    : (Array.isArray(facts.itemCodes) ? "The SEC submissions index did not list an item code for this filing." : "The filing is a current report on Form 8-K.");
-  const tail = facts.accession ? `Accession ${facts.accession}.` : "";
+    ? `${facts.company} disclosed ${described.join(" and ")}`
+    : (Array.isArray(facts.itemCodes) ? "The SEC submissions index did not list an item code for this filing" : "The filing is a current report on Form 8-K");
+  const tail = facts.accession ? `Accession ${facts.accession}` : "";
   const blurb = sentences(why, tail);
   const templates = [
     () => ({ headline: fitLead([what, `${facts.company} files ${form}`]), blurb }),
@@ -802,11 +941,10 @@ export function secCopy(id, facts) {
 export function preprintCopy(id, facts) {
   const where = facts.server === "medrxiv" ? "medRxiv" : "bioRxiv";
   const title = sentenceCase(stripVenue(facts.title));
-  const when = humanDate(facts.date);
-  const blurb = sentences(
-    `This preprint, not peer-reviewed, reports ${leadIn(title)}.`,
-    `Posted on ${where}${when ? ` on ${when}` : ""}.`,
-  );
+  const finding = condenseFact(facts.abstract, title);
+  const blurb = finding
+    ? sentences(finding, `Posted on ${where}. Preprint, not peer-reviewed`)
+    : sentences(`Posted on ${where}. Preprint, not peer-reviewed`);
   const templates = [
     () => ({ headline: title, blurb }),
     () => ({ headline: title, blurb }),
@@ -817,16 +955,11 @@ export function preprintCopy(id, facts) {
 
 export function modelCopy(id, facts) {
   const title = sentenceCase(stripVenue(facts.title));
-  const bits = [
-    facts.license ? `license ${facts.license}` : "",
-    facts.base ? `base model ${facts.base}` : "",
-    facts.params ? `parameters ${facts.params}` : "",
-  ].filter(Boolean);
-  const blurb = sentences(
-    `${facts.org} released ${title} as a model for biological work.`,
-    facts.disclaimer || "The card describes a model release, not an experimental finding.",
-    bits.length ? `Card lists ${bits.join(", ")}.` : "",
-  );
+  const headline = fitLead([`${facts.org} releases ${title}`, title]);
+  const fromCard = condenseFact(facts.summary, headline);
+  const bits = [facts.license ? `${facts.license} license` : "", facts.base ? `base ${facts.base}` : "", facts.params ? facts.params : ""].filter(Boolean);
+  const why = fromCard || `${facts.org} published a model card${bits.length ? ` listing ${bits.join(", ")}` : ""}`;
+  const blurb = sentences(why, facts.disclaimer || "This is a model release, not an experimental finding");
   const templates = [
     () => ({ headline: fitLead([`${facts.org} releases ${title}`, title]), blurb }),
     () => ({ headline: title, blurb }),
@@ -837,11 +970,10 @@ export function modelCopy(id, facts) {
 
 export function arxivCopy(id, facts) {
   const title = sentenceCase(stripVenue(facts.title));
-  const when = humanDate(facts.date);
-  const blurb = sentences(
-    `This preprint, not peer-reviewed, reports ${leadIn(title)}.`,
-    facts.tags ? `Posted on arXiv${when ? ` on ${when}` : ""} under ${facts.tags}.` : `Posted on arXiv${when ? ` on ${when}` : ""}.`,
-  );
+  const finding = condenseFact(facts.summary || facts.abstract, title);
+  const blurb = finding
+    ? sentences(finding, "Posted on arXiv. Preprint, not peer-reviewed")
+    : sentences("Posted on arXiv. Preprint, not peer-reviewed");
   const templates = [
     () => ({ headline: title, blurb }),
     () => ({ headline: title, blurb }),
@@ -893,6 +1025,7 @@ export function paperRecords(results, options = {}) {
       label: options.label || "Europe PMC",
       recordId: `${source} ${recordId}`.trim(),
       authors: String(record.authorString || "").replace(/\s+/g, " ").trim(),
+      abstract: String(record.abstractText || record.abstract || "").replace(/<[^>]+>/g, " "),
     });
     if (!copy || !/^\d{4}-\d{2}-\d{2}$/.test(published)) continue;
     rows.push({
