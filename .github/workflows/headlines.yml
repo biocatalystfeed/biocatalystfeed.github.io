@@ -2,15 +2,16 @@ name: Update headlines
 
 on:
   schedule:
-    # Daily, off the hour. The populator waits out source crawl-delays itself.
-    - cron: "20 13 * * *"
+    # Four times a day, off the hour. 13:20 UTC is 22:20 JST (10:20 PM).
+    # The populator waits out source crawl-delays itself.
+    - cron: "20 1,7,13,19 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: headlines
+  group: headlines-update
   cancel-in-progress: false
 
 jobs:
@@ -22,7 +23,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - uses: actions/cache@v4
+        with:
+          path: .cache/headlines
+          key: headlines-http-v1
       - name: Populate headlines
+        env:
+          HEADLINES_CACHE_DIR: ${{ github.workspace }}/.cache/headlines
         run: node scripts/headlines/populate.mjs
       - name: Commit data/headlines.json
         run: |

@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -161,14 +162,51 @@ export class Polite {
     this.nextAt.set(origin, Date.now() + delayMs);
   }
 
-  async getBuffer(url, { timeout = 120000, userAgent, minInterval, headers } = {}) {
+  #conditionalPath(url) {
+    if (!this.cacheDir) return "";
+    const key = createHash("sha256").update(String(url)).digest("hex").slice(0, 32);
+    return path.join(this.cacheDir, "conditional", key);
+  }
+
+  #readConditional(url) {
+    const file = this.#conditionalPath(url);
+    if (!file) return null;
+    const metaPath = `${file}.json`;
+    if (!fs.existsSync(metaPath) || !fs.existsSync(file)) return null;
+    try {
+      const meta = JSON.parse(fs.readFileSync(metaPath, "utf8"));
+      if (meta.url !== String(url)) return null;
+      return { ...meta, body: fs.readFileSync(file) };
+    } catch {
+      return null;
+    }
+  }
+
+  #writeConditional(url, response, body) {
+    const file = this.#conditionalPath(url);
+    if (!file || !body || body.length > 8_000_000) return;
+    const etag = response.headers.get("etag") || "";
+    const lastModified = response.headers.get("last-modified") || "";
+    if (!etag && !lastModified) return;
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    fs.writeFileSync(file, body);
+    fs.writeFileSync(`${file}.json`, JSON.stringify({ url: String(url), etag, lastModified }));
+  }
+
+  async getBuffer(url, { timeout = 120000, userAgent, minInterval, headers = {} } = {}) {
+    const saved = this.#readConditional(url);
+    const conditional = { ...headers };
+    if (saved?.etag) conditional["If-None-Match"] = saved.etag;
+    if (saved?.lastModified) conditional["If-Modified-Since"] = saved.lastModified;
     let lastError;
+    // Two retries after the first try. Backoff is capped so a 429 cannot stall the run.
     for (let attempt = 0; attempt < 3; attempt++) {
-      const response = await this.#request(url, { timeout, userAgent, minInterval, headers });
+      const response = await this.#request(url, { timeout, userAgent, minInterval, headers: conditional });
+      if (response.status === 304 && saved?.body) return saved.body;
       if (response.status === 404) return null;
       if (response.status === 429 || response.status >= 500) {
         const retry = Number(response.headers.get("retry-after"));
-        const wait = Number.isFinite(retry) ? Math.min(retry * 1000, 60000) : 1500 * (attempt + 1);
+        const wait = Number.isFinite(retry) ? Math.min(retry * 1000, 20000) : 1500 * (attempt + 1);
         lastError = new Error(`${response.status} from ${url}`);
         if (attempt < 2) {
           await sleep(wait);
@@ -177,7 +215,9 @@ export class Polite {
         throw lastError;
       }
       if (!response.ok) throw new Error(`${response.status} from ${url}`);
-      return Buffer.from(await response.arrayBuffer());
+      const body = Buffer.from(await response.arrayBuffer());
+      this.#writeConditional(url, response, body);
+      return body;
     }
     throw lastError || new Error(`failed ${url}`);
   }

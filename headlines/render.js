@@ -36,3 +36,19 @@ export function sourceLine(item) {
   const when = formatDay(item.published_at) || item.published_at;
   return el("p", { class: "meta", text: `${item.source_name} · ${when}` });
 }
+
+export function figureFor(item) {
+  const image = item?.image;
+  if (!image?.src || !image.alt) return null;
+  const img = el("img", {
+    src: image.src,
+    alt: image.alt,
+    width: String(image.width || 480),
+    height: String(image.height || 270),
+    loading: "lazy",
+  });
+  const caption = el("figcaption", { class: "credit" });
+  caption.append(`${image.credit || ""} `);
+  if (image.basisUrl) caption.append(el("a", { href: image.basisUrl, text: image.licence || "licence", rel: "noopener noreferrer" }));
+  return el("figure", { class: "shot" }, [img, caption]);
+}

@@ -1,10 +1,14 @@
-import { el, formatDay, itemLink, loadHeadlines, sourceLine } from "./render.js";
+import { el, figureFor, formatDay, itemLink, loadHeadlines, sourceLine } from "./render.js";
+import { mountSearch } from "./search.js";
 
 const main = document.querySelector("#main");
 const dateline = document.querySelector("#dateline");
 
 function article(item) {
-  const nodes = [itemLink(item, "hed")];
+  const nodes = [];
+  const shot = figureFor(item);
+  if (shot) nodes.push(shot);
+  nodes.push(itemLink(item, "hed"));
   if (item.blurb) nodes.push(el("p", { class: "blurb", text: item.blurb }));
   nodes.push(sourceLine(item));
   return el("article", { class: `item tier-${item.tier || 1}` }, nodes);
@@ -21,6 +25,8 @@ function footerNotes(data) {
   ].filter(Boolean);
   return bits.join(" ");
 }
+
+mountSearch(document);
 
 try {
   const data = await loadHeadlines();

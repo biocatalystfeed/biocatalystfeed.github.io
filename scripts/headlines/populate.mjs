@@ -3,10 +3,45 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadFeedback } from "./feedback.mjs";
 import { Polite, USER_AGENT } from "./http.mjs";
+import { attachImages } from "./images.mjs";
 import { scoreItem, selectHeadlines } from "./ranking.mjs";
 import { SOURCES } from "./sources.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+
+function readXPicks(dir) {
+  try {
+    const data = JSON.parse(fs.readFileSync(path.join(dir, "data", "x_picks.json"), "utf8"));
+    return data && typeof data === "object" ? data : { enabled: false, picks: [] };
+  } catch {
+    return { enabled: false, picks: [] };
+  }
+}
+
+function applyXPicks(payload, picks) {
+  if (!picks?.enabled) return;
+  for (const pick of picks.picks || []) {
+    const url = String(pick.url || "");
+    const handle = String(pick.handle || "").replace(/^@/, "");
+    const date = String(pick.date || "");
+    const headline = String(pick.headline || "").trim();
+    const blurb = String(pick.blurb || "").trim();
+    if (!/^https:\/\/(?:x|twitter)\.com\//.test(url) || !handle || !/^\d{4}-\d{2}-\d{2}$/.test(date) || !headline || !blurb) continue;
+    payload.items.push({
+      id: `x-pick:${url}`,
+      headline,
+      blurb,
+      source_url: url,
+      source_type: "news",
+      source_name: `@${handle} on X`,
+      published_at: date,
+      significance: 40,
+      significance_rationale: "Curated X pick. The post text is not copied. See docs/headlines-x.md.",
+      tier: 1,
+      scout_source: "x-picks",
+    });
+  }
+}
 
 export function buildHeadlines({ candidates, today, feedback, sources }) {
   const deduped = new Map();
@@ -75,6 +110,13 @@ async function main() {
     }
   }
   const payload = buildHeadlines({ candidates, today, feedback, sources });
+  try {
+    const placed = await attachImages(polite, payload.items);
+    console.log(`images: ${placed}`);
+  } catch (error) {
+    console.error(`images: ${error instanceof Error ? error.message : error}`);
+  }
+  applyXPicks(payload, readXPicks(root));
   const out = path.join(root, "data", "headlines.json");
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, `${JSON.stringify(payload, null, 2)}\n`);

@@ -5,13 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://upload.wikimedia.org; connect-src 'self' https://biocatalystfeed-api.biocatalystfeed.workers.dev; base-uri 'self'; form-action 'none'; object-src 'none'">
 <title>Headlines (test version) — BioCatalystFeed</title>
 <link rel="stylesheet" href="/headlines/headlines.css">
 </head>
 <body>
 <p class="test-flag">Test version</p>
 <header class="mast">
+  <form class="finder" id="finder" role="search">
+    <label class="finder-label" for="hl-q">Search</label>
+    <input id="hl-q" type="search" placeholder="Trials, papers, grants, AI" autocomplete="off" enterkeyhint="search" aria-controls="hl-hits" aria-label="Search biocat.ai">
+    <a class="finder-more" href="/#demo">Full search →</a>
+    <div id="hl-hits" class="finder-hits" hidden></div>
+  </form>
   <h1>BIOCAT HEADLINES</h1>
   <p class="dateline" id="dateline"></p>
   <p class="dek">Public regulator, trial, paper, preprint, grant, filing, and official press records. Ranked by script, with no human curation. Not medical or investment advice.</p>

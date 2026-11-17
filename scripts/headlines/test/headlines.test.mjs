@@ -8,6 +8,8 @@ import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
 import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, paperCopy, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
+import { licenceOk, pageImage } from "../images.mjs";
+import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
@@ -482,3 +484,49 @@ test("pubmed eutils and x stay disabled", () => {
   assert.equal(robotsDecision(robots, "BioCatalystFeed contact@biocat.ai", "/cgi-bin/browse-edgar").allowed, false);
   assert.equal(robotsDecision(robots, "BioCatalystFeed contact@biocat.ai", "/Archives/edgar/daily-index/2026/QTR4/master.idx").allowed, true);
 });
+
+test("headlines search hits every worker route and the page stays noindex", () => {
+  const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
+  const css = fs.readFileSync(path.join(root, "headlines", "headlines.css"), "utf8");
+  const workflow = fs.readFileSync(path.join(root, ".github", "workflows", "headlines.yml"), "utf8");
+  const picks = JSON.parse(fs.readFileSync(path.join(root, "data", "x_picks.json"), "utf8"));
+  assert.match(html, /name="robots" content="noindex"/);
+  assert.match(html, /id="hl-q"/);
+  assert.match(html, /href="\/#demo"/);
+  assert.match(html, /biocatalystfeed-api\.biocatalystfeed\.workers\.dev/);
+  assert.match(css, /\.finder/);
+  assert.equal(picks.enabled, false);
+  assert.deepEqual(picks.picks, []);
+  assert.match(workflow, /cron: "20 1,7,13,19 \* \* \*"/);
+  assert.match(workflow, /group: headlines-update/);
+  assert.match(workflow, /git diff --cached --quiet/);
+  const urls = searchUrls("GLP-1");
+  assert.equal(urls.length, SEARCH_ROUTES.length);
+  for (const route of SEARCH_ROUTES) assert.ok(urls.some((url) => url === `https://biocatalystfeed-api.biocatalystfeed.workers.dev/${route}?q=GLP-1`), route);
+  const stock = `<p>Open Government Licence</p><img src="https://assets.publishing.service.gov.uk/media/x/iStock-1.png" alt="pills">`;
+  assert.equal(pageImage(stock, "https://www.gov.uk/government/news/example", "ogl"), null);
+  const filler = `<p>Open Government Licence</p><img src="https://assets.publishing.service.gov.uk/media/x/placeholder.jpg" alt="placeholder">`;
+  assert.equal(pageImage(filler, "https://www.gov.uk/government/news/example", "ogl"), null);
+  const owned = `<p>Open Government Licence v3.0</p><img src="https://assets.publishing.service.gov.uk/media/x/lab-bench.jpg" alt="A laboratory bench at an MHRA site" width="640" height="360">`;
+  const image = pageImage(owned, "https://www.gov.uk/government/news/example", "ogl");
+  assert.equal(image.licence, "Open Government Licence v3.0");
+  assert.match(image.basisUrl, /open-government-licence/);
+  assert.equal(licenceOk("CC BY-SA 4.0"), true);
+  assert.equal(licenceOk("CC BY-NC 4.0"), false);
+  assert.equal(licenceOk("CC BY-ND 4.0"), false);
+});
+
+test("headline images stay within four and carry a reuse basis", () => {
+  const file = JSON.parse(fs.readFileSync(path.join(root, "data", "headlines.json"), "utf8"));
+  const images = file.items.flatMap((item) => item.image ? [item.image] : []);
+  assert.ok(images.length <= 4, String(images.length));
+  for (const image of images) {
+    for (const key of ["src", "sourcePage", "credit", "licence", "basisUrl", "alt"]) {
+      assert.ok(image[key], key);
+    }
+    assert.match(image.src, /^https:\/\//);
+    assert.match(image.basisUrl, /^https:\/\//);
+    assert.match(image.sourcePage, /^https:\/\//);
+  }
+});
+
