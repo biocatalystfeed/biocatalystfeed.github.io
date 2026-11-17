@@ -496,8 +496,12 @@ test("headlines search hits every worker route and the page stays noindex", () =
   assert.match(html, /href="\/#demo"/);
   assert.match(html, /biocatalystfeed-api\.biocatalystfeed\.workers\.dev/);
   assert.match(css, /\.finder/);
-  assert.equal(picks.enabled, false);
-  assert.deepEqual(picks.picks, []);
+  assert.equal(picks.schema, "biocat-x-picks/1");
+  assert.equal(typeof picks.enabled, "boolean");
+  assert.ok(Array.isArray(picks.picks));
+  for (const pick of picks.picks) {
+    assert.equal(xPickItems({ enabled: true, picks: [pick] }).length, 1);
+  }
   assert.match(workflow, /cron: "20 1,7,13,19 \* \* \*"/);
   assert.match(workflow, /group: headlines-update/);
   assert.match(workflow, /git diff --cached --quiet/);
