@@ -399,24 +399,25 @@ export function fdaApprovalCopy(id, facts) {
   const routeBits = [facts.dosage ? `dosage form ${String(facts.dosage).toLowerCase()}` : "", facts.route ? `route ${String(facts.route).toLowerCase()}` : ""].filter(Boolean);
   const routeLine = routeBits.length ? `Product record lists ${routeBits.join(", ")}` : "";
   const appLine = facts.app ? `Drugs@FDA application ${facts.app}` : "";
-  const lead = focus ? `${who}: FDA ${kind}, indicated for ${focus}` : "";
+  const why = sentences(indicationLine, sponsorLine || classLine, dateLine || appLine, priorityLine);
   const templates = [];
   if (who && focus) {
-    templates.push(() => ({ headline: lead, blurb: sentences(indicationLine || sponsorLine, classLine || dateLine) }));
-    templates.push(() => ({ headline: `FDA ${kind} of ${who} for ${focus}`, blurb: sentences(indicationLine || dateLine, priorityLine || appLine) }));
-    templates.push(() => ({ headline: `${who} indicated for ${focus}`, blurb: sentences(indicationLine || `FDA ${kind} dated ${facts.published}`, sponsorLine || classLine) }));
+    templates.push(() => ({ headline: `${who} approved for ${focus}`, blurb: sentences(`FDA approval covers ${focus}`, sponsorLine || dateLine) }));
+    templates.push(() => ({ headline: `FDA approves ${who} for ${focus}`, blurb: why }));
+    templates.push(() => ({ headline: `${focus}: ${who} clears FDA`, blurb: sentences(sponsorLine || classLine, dateLine || appLine) }));
+    templates.push(() => ({ headline: `${who} now FDA-approved for ${focus}`, blurb: sentences(sponsorLine, dateLine || classLine) }));
   } else if (who && area) {
-    templates.push(() => ({ headline: `${who}: FDA ${kind}, ${area}`, blurb: sentences(sponsorLine, dateLine) }));
-    templates.push(() => ({ headline: `FDA ${kind} of ${who} (${area})`, blurb: sentences(classLine, appLine || priorityLine) }));
-    templates.push(() => ({ headline: `${who}, ${area}`, blurb: sentences(`FDA ${kind} on ${facts.published}`, sponsorLine || routeLine) }));
+    templates.push(() => ({ headline: `FDA approves ${who}, a ${area}`, blurb: sentences(sponsorLine, dateLine || classLine) }));
+    templates.push(() => ({ headline: `${who} joins the US market`, blurb: sentences(`FDA class listed as ${area}`, sponsorLine || dateLine) }));
+    templates.push(() => ({ headline: `${area} drug ${who} approved`, blurb: sentences(sponsorLine, dateLine || appLine) }));
   } else if (who) {
-    templates.push(() => ({ headline: `${who}: FDA ${kind}`, blurb: sentences(sponsorLine, classLine || dateLine) }));
-    templates.push(() => ({ headline: `FDA ${kind} of ${who}`, blurb: sentences(dateLine, priorityLine || appLine) }));
-    templates.push(() => ({ headline: `${who} listed under ${facts.app}`, blurb: sentences(classLine || `FDA ${kind}`, routeLine || sponsorLine || dateLine) }));
-  } else if (facts.app) {
-    templates.push(() => ({ headline: `FDA records ${kind} of ${facts.app}`, blurb: sentences(sponsorLine, classLine || dateLine) }));
-    templates.push(() => ({ headline: `${facts.app}: FDA ${kind}`, blurb: sentences(dateLine, priorityLine || sponsorLine) }));
-    templates.push(() => ({ headline: `FDA ${kind} recorded for ${facts.app}`, blurb: sentences(sponsorLine || classLine, dateLine) }));
+    templates.push(() => ({ headline: `FDA approves ${who}`, blurb: sentences(classLine || sponsorLine, dateLine || appLine) }));
+    templates.push(() => ({ headline: `${who} clears FDA review`, blurb: sentences(sponsorLine, classLine || dateLine) }));
+    templates.push(() => ({ headline: `${who} wins US approval`, blurb: sentences(dateLine, sponsorLine || classLine || appLine) }));
+  } else {
+    templates.push(() => ({ headline: `FDA approves a new medicine, name unlisted`, blurb: sentences(appLine, sponsorLine || classLine) }));
+    templates.push(() => ({ headline: `New US drug approval, brand not posted`, blurb: sentences(appLine, dateLine || classLine) }));
+    templates.push(() => ({ headline: `US approval posted without a brand name`, blurb: sentences(sponsorLine || appLine, dateLine || classLine) }));
   }
   return compose(id, templates);
 }
@@ -428,10 +429,12 @@ export function crlCopy(id, facts) {
     : "";
   const statusLine = `openFDA lists the application status as ${facts.status || "not stated"}`;
   const dateLine = `Letter date ${facts.published}`;
+  const company = facts.company || "a sponsor";
+  const appLine = facts.apps ? `Application listed: ${facts.apps}` : "";
   const templates = [
-    () => ({ headline: `FDA complete response letter for ${who || "an application"}`, blurb: sentences(dateLine, topicLine || statusLine) }),
-    () => ({ headline: `Complete response letter posted for ${who || "an application"}`, blurb: sentences(statusLine, topicLine || dateLine) }),
-    () => ({ headline: facts.company ? `${facts.company}: FDA complete response letter` : `FDA complete response letter, ${facts.published}`, blurb: sentences(facts.apps ? `Applications listed: ${facts.apps}` : dateLine, topicLine || statusLine) }),
+    () => ({ headline: `${company} gets an FDA complete response`, blurb: sentences(dateLine, topicLine || appLine || statusLine) }),
+    () => ({ headline: `FDA complete response to ${company}`, blurb: sentences(topicLine || statusLine, appLine || dateLine) }),
+    () => ({ headline: `${company} application draws an FDA complete response`, blurb: sentences(statusLine, topicLine || dateLine) }),
   ];
   return compose(id, templates);
 }
@@ -521,10 +524,11 @@ export function emaCopy(id, facts) {
     facts.biosimilar ? "Biosimilar flag is yes" : "",
   ].filter(Boolean).join(". ");
   const templates = [];
-  if (indication) {
-    templates.push(() => ({ headline: `${name}: ${event} for ${indication}`, blurb: sentences(indicationDetail || holder || group, number || dateLine) }));
-    templates.push(() => ({ headline: `${event} on ${name} for ${indication}`, blurb: sentences(indicationDetail || group || holder, flags || dateLine) }));
-    templates.push(() => ({ headline: `${name} for ${indication}: ${event}`, blurb: sentences(indicationDetail || number || group, holder || dateLine) }));
+  const positive = facts.rule === "ema-opinion" || facts.rule === "ema-authorisation";
+  if (positive && indication) {
+    templates.push(() => ({ headline: `${name} recommended in Europe for ${indication}`, blurb: sentences(indicationDetail || holder, group || dateLine) }));
+    templates.push(() => ({ headline: `Europe backs ${name} for ${indication}`, blurb: sentences(event, holder || dateLine) }));
+    templates.push(() => ({ headline: `${indication}: ${name} moves ahead in Europe`, blurb: sentences(indicationDetail || group, holder || number || dateLine) }));
   } else if (mesh) {
     templates.push(() => ({ headline: `${name}, ${mesh}: ${event}`, blurb: sentences(holder || group, number || dateLine) }));
     templates.push(() => ({ headline: `${event}: ${name} (${mesh})`, blurb: sentences(group || holder, dateLine) }));

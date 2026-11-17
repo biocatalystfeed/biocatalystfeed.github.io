@@ -459,6 +459,8 @@ async function fetchAiDiscovery(ctx) {
   };
 }
 
+import { labFeedSources } from "./lab-feeds.mjs";
+
 export const MORE_SOURCES = [
   { id: "biorxiv", enabled: true, fetch: fetchBiorxiv },
   { id: "medrxiv", enabled: true, fetch: fetchMedrxiv },
@@ -468,4 +470,5 @@ export const MORE_SOURCES = [
   { id: "sec-edgar-8k", enabled: true, fetch: fetchSec },
   { id: "fda-press", enabled: true, fetch: fetchPress },
   { id: "nih-news", enabled: true, fetch: fetchNihNews },
+  ...labFeedSources(),
 ];

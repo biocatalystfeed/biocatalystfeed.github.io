@@ -113,7 +113,8 @@ test("drugsfda items keep the application page and skip labeling supplements", (
     sponsor_name: "BAYER HEALTHCARE",
     submissions: [{ submission_type: "ORIG", submission_number: "1", submission_status: "AP", submission_status_date: "20261109", submission_class_code: "TYPE 1", submission_class_code_description: "Type 1 - New Molecular Entity", review_priority: "PRIORITY" }],
   }], "2026-11-17");
-  assert.match(unnamed[0].headline, /NDA 221291/);
+  assert.doesNotMatch(unnamed[0].headline, /NDA|BLA|records original approval/i);
+  assert.match(unnamed[0].blurb, /NDA 221291/);
   assert.doesNotMatch(unnamed[0].headline, /Bayer/);
   assert.match(unnamed[0].blurb, /Bayer|Type 1|priority|2026-11-09/);
   assert.notEqual(unnamed[0].blurb, unnamed[0].headline);
@@ -348,6 +349,42 @@ test("headlines stay within 14 words by trimming clauses", () => {
     assert.match(item.source_url, /^https?:\/\//);
     if (item.source_type === "trial") assert.match(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
     if (item.source_type === "paper") assert.ok(wordCount(item.headline) >= 6, item.headline);
+    assert.doesNotMatch(item.headline, /records original approval/i);
+    assert.doesNotMatch(item.headline, /^(NDA|BLA)\b/);
+  }
+  const openings = {};
+  for (const item of file.items) {
+    const key = item.headline.toLowerCase().split(/\s+/).slice(0, 3).join(" ");
+    openings[key] = (openings[key] || 0) + 1;
+  }
+  for (const [key, count] of Object.entries(openings)) {
+    assert.ok(count / file.items.length <= 0.2, `${key} is ${count}/${file.items.length}`);
+  }
+});
+
+test("regulator share stays near a quarter and no source exceeds 15 percent of a full page", () => {
+  const items = [];
+  for (const source of REGULATOR_SOURCES) {
+    for (let i = 0; i < 6; i++) {
+      items.push({ id: `${source}-${i}`, scout_source: source, rule: "fda-nme", significance: 96 - i, drop: false, published_at: "2026-11-12" });
+    }
+  }
+  const nons = ["europepmc", "biorxiv", "medrxiv", "fda-press", "deepmind", "openai-news", "bcf-papers", "nih-reporter"];
+  for (const source of nons) {
+    for (let i = 0; i < 8; i++) {
+      items.push({ id: `${source}-${i}`, scout_source: source, rule: "paper-ai", significance: 70, drop: false, published_at: "2026-11-10" });
+    }
+  }
+  const selected = selectHeadlines(items);
+  const regs = selected.filter((item) => REGULATOR_SOURCES.has(item.scout_source)).length;
+  assert.ok(selected.length >= 8);
+  assert.ok(regs / selected.length <= RULES.regulatorShare + 0.02, `${regs}/${selected.length}`);
+  const counts = {};
+  for (const item of selected) counts[item.scout_source] = (counts[item.scout_source] || 0) + 1;
+  const maxSrc = Math.max(1, Math.floor(RULES.globalCap * RULES.sourceShare));
+  for (const [source, count] of Object.entries(counts)) {
+    assert.ok(count <= maxSrc, `${source} ${count}`);
+    assert.ok(count / selected.length <= RULES.sourceShare + 0.02, `${source} ${count}/${selected.length}`);
   }
 });
 

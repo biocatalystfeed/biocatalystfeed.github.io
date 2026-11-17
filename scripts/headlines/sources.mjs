@@ -127,6 +127,7 @@ export function drugsfdaItems(applications, today, labels = new Map()) {
       if (!copy) continue;
       const adjustments = [];
       if (priority && rule !== "fda-anda") adjustments.push("priority-review");
+      if (/\bfirst\b/i.test(`${named.indication} ${desc}`)) adjustments.push("source-first");
       rows.push({
         id,
         headline: copy.headline,
@@ -625,6 +626,7 @@ export function calendarItems(calendar, today) {
       published_at: event.readout_date,
       scout_source: "clinicaltrials-calendar",
       rule: phase3 ? "trial-phase3" : "trial-phase2",
+      adjustments: phase3 ? ["pivotal-readout"] : [],
       dedupe_key: `nct:${event.nct_id}`,
     });
   }
@@ -919,5 +921,110 @@ export const SOURCES = [
     id: "pmda",
     enabled: false,
     reason: `Disabled. Written consent was requested on ${CONSENT_DATE} and has not been granted. PMDA site policy says automated crawling or download applications are not permitted.`,
+  },
+  {
+    id: "arxiv-rss",
+    enabled: false,
+    reason: "Disabled. export.arxiv.org robots.txt is Disallow: / for User-agent *. arXiv items still arrive through the BioCatalystFeed Worker /ai-discovery endpoint, which is our own API.",
+  },
+  {
+    id: "anthropic",
+    enabled: false,
+    reason: "Disabled. No official public RSS was found at anthropic.com/rss.xml or /news/rss.xml (both 404). Not scraped.",
+  },
+  {
+    id: "meta-ai",
+    enabled: false,
+    reason: "Disabled. ai.meta.com/blog/rss/ returned 404. No official RSS confirmed. Not scraped.",
+  },
+  {
+    id: "arc-institute",
+    enabled: false,
+    reason: "Disabled. arcinstitute.org/feed returned 404. No official RSS confirmed. Not scraped.",
+  },
+  {
+    id: "isomorphic",
+    enabled: false,
+    reason: "Disabled. isomorphiclabs.com/feed and /rss.xml returned 404. No official RSS confirmed. Not scraped.",
+  },
+  {
+    id: "evolutionaryscale",
+    enabled: false,
+    reason: "Disabled. evolutionaryscale.ai/blog/rss.xml returned 404. No official RSS confirmed. Not scraped.",
+  },
+  {
+    id: "nature-news",
+    enabled: false,
+    reason: "Disabled. Nature publishes an RSS file and robots.txt allows /nature.rss, but Springer Nature terms do not clearly allow a third party to aggregate headlines into another product.",
+  },
+  {
+    id: "science-news",
+    enabled: false,
+    reason: "Disabled. Science/AAAS publishes a news RSS and robots.txt allows the path, but AAAS terms do not clearly allow headline aggregation.",
+  },
+  {
+    id: "mit-tech-review",
+    enabled: false,
+    reason: "Disabled. MIT Technology Review publishes an RSS feed, but its terms do not clearly allow reuse of headlines in another product. robots.txt also disallows a long list of automated agents.",
+  },
+  {
+    id: "new-scientist",
+    enabled: false,
+    reason: "Disabled. New Scientist publishes an RSS feed, but its terms do not clearly allow headline aggregation, and robots.txt blocks many automated clients.",
+  },
+  {
+    id: "bbc-news",
+    enabled: false,
+    reason: "Disabled. BBC health and science RSS feeds exist and robots.txt allows those paths, but BBC RSS use is limited to personal, non-commercial use.",
+  },
+  {
+    id: "reuters",
+    enabled: false,
+    reason: "Disabled. The Reuters outbound news RSS URL returned 404. No official public RSS was confirmed, and third-party Reuters feeds are not used.",
+  },
+  {
+    id: "ap-news",
+    enabled: false,
+    reason: "Disabled. apnews.com did not return an official RSS document (403). Third-party AP feeds are not used.",
+  },
+  {
+    id: "stat-news",
+    enabled: false,
+    reason: "Disabled. STAT terms reserve republication and do not clearly allow an aggregation product.",
+  },
+  {
+    id: "endpoints-news",
+    enabled: false,
+    reason: "Disabled. Endpoints News terms do not clearly allow headline aggregation.",
+  },
+  {
+    id: "fierce-biotech",
+    enabled: false,
+    reason: "Disabled. Fierce Biotech terms do not clearly allow headline aggregation.",
+  },
+  {
+    id: "nmpa",
+    enabled: false,
+    reason: "Disabled. No official English NMPA or CDE feed with clear automated-reuse terms was confirmed. The site is not scraped.",
+  },
+  {
+    id: "cdsco",
+    enabled: false,
+    reason: "Disabled. No official CDSCO RSS with clear reuse terms was confirmed. The site is not scraped.",
+  },
+  {
+    id: "mfds",
+    enabled: false,
+    reason: "Disabled. No official English MFDS RSS with clear reuse terms was confirmed. The site is not scraped.",
+  },
+  {
+    id: "japan-english-news",
+    enabled: false,
+    reason: "Disabled. PMDA automated retrieval stays off. No separate official English Japan regulator news feed with clear reuse terms was confirmed.",
+  },
+  {
+    id: "china-biotech-press",
+    enabled: false,
+    reason: "Disabled. No English-language Chinese biotech press RSS was found whose terms clearly allow headline-and-link aggregation.",
   },
 ];
