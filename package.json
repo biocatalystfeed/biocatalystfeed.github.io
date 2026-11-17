@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test worker/test/ai-discovery.test.js"
+    "test": "node --test worker/test/ai-discovery.test.js scripts/headlines/test/*.test.mjs"
   }
 }
