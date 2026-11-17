@@ -814,6 +814,7 @@ async function europeQuery(polite, query, pageSize) {
   const url = new URL(EPMC);
   url.searchParams.set("query", query);
   url.searchParams.set("format", "json");
+  url.searchParams.set("resultType", "core");
   url.searchParams.set("pageSize", String(pageSize));
   url.searchParams.set("sort", "P_PDATE_D desc");
   const payload = await polite.getJson(url.href);
@@ -833,7 +834,7 @@ async function fetchEuropePmc(ctx) {
   ];
   return {
     items,
-    note: "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped. Crawl-delay on ebi.ac.uk is respected.",
+    note: "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped. A blurb uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected.",
   };
 }
 

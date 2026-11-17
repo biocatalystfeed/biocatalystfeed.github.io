@@ -1,4 +1,4 @@
-import { rssEntries, isoFromRfc822, preferHttps, safeItems, offTopicText, leadIn } from "./copy.mjs";
+import { rssEntries, isoFromRfc822, preferHttps, safeItems, offTopicText, condenseFact, sentenceCase, stripVenue } from "./copy.mjs";
 import { addDays } from "./text.mjs";
 
 const BIO = /genom|protein|\bdrug|\bdna\b|\brna\b|\bcells?\b|disease|molecul|chemist|cheminform|antibod|vaccin|therap|clinical|pharma|\bcancer\b|virus|peptide|\bfold|alzheimer|diabet|obes|hepatitis|wet-lab|\bhealth(?:care)?\b|medical|\bpatients?\b|\bmedicin/i;
@@ -43,9 +43,9 @@ export const LAB_FEEDS = [
   },
 ];
 
-function ownBlurb(entry, name) {
-  const title = leadIn(entry.title || "");
-  return `The ${name} post reports ${title}.`;
+function ownBlurb(entry) {
+  const headline = sentenceCase(stripVenue(entry.title || ""));
+  return condenseFact(entry.description, headline) || "Details are in the linked post.";
 }
 
 export function feedItems(entries, today, feed) {
@@ -64,7 +64,7 @@ export function feedItems(entries, today, feed) {
     rows.push({
       id: `${feed.id}:${entry.link || title}`,
       headline: title,
-      blurb: ownBlurb(entry, feed.name),
+      blurb: ownBlurb(entry),
       source_url: preferHttps(entry.link),
       source_type: feed.source_type,
       source_name: feed.name,

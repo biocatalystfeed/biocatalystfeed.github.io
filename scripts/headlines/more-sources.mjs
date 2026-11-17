@@ -56,6 +56,7 @@ export function pressItems(entries, today, { scout, sourceName, rule, feed, sour
     const copy = pressCopy(id, {
       title,
       product: pressProduct(entry.description || ""),
+      description: entry.description || "",
       published,
       feed,
     });
@@ -171,6 +172,7 @@ export function preprintItems(records, server) {
       version: record.version,
       license: record.license || "",
       institution: record.author_corresponding_institution || "",
+      abstract: record.abstract || "",
     });
     if (!copy) continue;
     const host = med ? "www.medrxiv.org" : "www.biorxiv.org";
@@ -217,6 +219,7 @@ export function aiDiscoveryItems(records, today) {
         params: record.params || "",
         verified: String(record.verified_as_of || "").slice(0, 10),
         disclaimer: record.disclaimer_class || "",
+        summary: record.summary || "",
       })
       : arxivCopy(id, {
         title,
@@ -224,6 +227,7 @@ export function aiDiscoveryItems(records, today) {
         tags,
         date: published,
         disclaimer: record.disclaimer_class || "",
+        summary: record.summary || "",
       });
     if (!copy) continue;
     rows.push({
@@ -460,7 +464,7 @@ async function fetchPreprint(ctx, server) {
   }
   return {
     items: kept,
-    note: `${server} details API, ${from} to ${ctx.today}, ${scanned} metadata rows scanned. Titles are linked to the preprint page. Abstracts are not copied. Category filter is bioinformatics, genomics, synthetic biology, systems biology, pharmacology, or bioengineering for bioRxiv, and clinical categories with a therapy or trial word for medRxiv, plus AI-method titles. Not peer-reviewed.`,
+    note: `${server} details API, ${from} to ${ctx.today}, ${scanned} metadata rows scanned. Titles are linked to the preprint page. A blurb uses one results sentence of at most 25 words when the abstract is present, and otherwise says the server and that the item is a preprint, not peer-reviewed. The abstract is not copied. Category filter is bioinformatics, genomics, synthetic biology, systems biology, pharmacology, or bioengineering for bioRxiv, and clinical categories with a therapy or trial word for medRxiv, plus AI-method titles.`,
   };
 }
 

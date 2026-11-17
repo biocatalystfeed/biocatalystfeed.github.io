@@ -7,7 +7,7 @@ import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
-import { fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
+import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, paperCopy, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
@@ -341,6 +341,10 @@ test("headlines stay within 14 words by trimming clauses", () => {
   for (const item of trials) {
     assert.doesNotMatch(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
     assert.match(item.headline, /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b/, item.headline);
+    assert.match(item.blurb, /Example/);
+    assert.equal(echoesHeadline(item.headline, item.blurb), false, item.blurb);
+    const dated = item.headline.match(/\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b/);
+    if (dated) assert.equal(item.blurb.includes(dated[0]), false, item.blurb);
     assert.ok(wordCount(item.headline) <= HEADLINE_WORD_MAX, item.headline);
     assert.doesNotMatch(item.headline, /^[a-z]/);
     assert.doesNotMatch(item.headline, /\b(in|for|to|with|of|and|or|a|an|the)$/i);
@@ -359,6 +363,21 @@ test("headlines stay within 14 words by trimming clauses", () => {
     assert.doesNotMatch(item.headline, /\b(in|for|to|with|of|and|or|a|an|the|through|from|by|on|at|into|via)$/i, item.headline);
     assert.doesNotMatch(item.headline, /^(?:JAMA|Int J Oncol|bioRxiv|medRxiv|Cytotechnology)\s*:/i, item.headline);
     assert.doesNotMatch(item.blurb, /^(?:Accession|CIK\b|Authors listed|Card fields|Europe PMC|item dated|Section headings include)/i, item.blurb);
+    assert.doesNotMatch(item.blurb, /^(?:The .+ post reports|The paper reports|This preprint\b.*\breports|The FDA press release feed reports|The grant supports)\b/i, item.blurb);
+    assert.equal(echoesHeadline(item.headline, item.blurb), false, `${item.headline} :: ${item.blurb}`);
+    assert.doesNotMatch(item.blurb, /once-Weekly|alphaGenome|in Adolescents|mHRA|nVIDIA|fDA |cRISPR|aI Is/, item.blurb);
+    if (item.source_type === "trial") {
+      const dated = item.headline.match(/\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b/);
+      if (dated) assert.equal(item.blurb.includes(dated[0]), false, item.blurb);
+    }
+  }
+  const blurbOpenings = {};
+  for (const item of file.items) {
+    const key = item.blurb.toLowerCase().split(/\s+/).slice(0, 3).join(" ");
+    blurbOpenings[key] = (blurbOpenings[key] || 0) + 1;
+  }
+  for (const [key, count] of Object.entries(blurbOpenings)) {
+    assert.ok(count / file.items.length <= 0.2, `blurb ${key} is ${count}/${file.items.length}`);
   }
   const openings = {};
   for (const item of file.items) {
@@ -394,6 +413,37 @@ test("regulator share stays near a quarter and no source exceeds 15 percent of a
     assert.ok(count <= maxSrc, `${source} ${count}`);
     assert.ok(count / selected.length <= RULES.sourceShare + 0.02, `${source} ${count}/${selected.length}`);
   }
+});
+
+test("blurbs state the point without repeating the headline", () => {
+  assert.equal(echoesHeadline("Phase 3 KarXT study in Alzheimer's psychosis reaches primary completion Nov 24", "Phase 3 KarXT study in Alzheimer's psychosis reaches primary completion Nov 24."), true);
+  const press = pressCopy("press-1", {
+    title: "FDA Grants Accelerated Approval to a New Treatment for Head and Neck Squamous Cell Carcinoma",
+    description: "The agency granted accelerated approval to a treatment for adults with a form of head and neck cancer.",
+    feed: "FDA press release feed",
+    published: "2026-11-05",
+  });
+  assert.doesNotMatch(press.blurb, /^The FDA press release feed reports/i);
+  assert.equal(echoesHeadline(press.headline, press.blurb), false, press.blurb);
+  assert.ok(wordCount(press.blurb) <= 25, press.blurb);
+  const paper = paperCopy("paper-1", {
+    title: "Once-Weekly Ribupatide for Weight Loss in Adults",
+    journal: "JAMA",
+    date: "2026-11-15",
+    abstract: "We found that weekly ribupatide produced greater weight loss than placebo among adults with obesity.",
+  });
+  assert.doesNotMatch(paper.blurb, /^The paper reports/i);
+  assert.doesNotMatch(paper.blurb, /once-Weekly/);
+  assert.match(paper.blurb, /placebo/i);
+  assert.equal(echoesHeadline(paper.headline, paper.blurb), false, paper.blurb);
+  const bare = paperCopy("paper-2", {
+    title: "Azetukalner in adults: the X-TOLE2 phase 3 randomized clinical trial",
+    date: "2026-11-09",
+    recordId: "MED 1",
+  });
+  assert.match(bare.blurb, /2026-11-09/);
+  assert.match(bare.blurb, /Europe PMC|MED/);
+  assert.doesNotMatch(bare.blurb, /^The paper reports/i);
 });
 
 test("leads stay grammatical and off-topic posts stay out", () => {
