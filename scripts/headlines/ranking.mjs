@@ -20,6 +20,11 @@
  *   2  40-59   small
  *   1   0-39   brief
  *
+ * After per-source caps, regulator sources are kept to at most about half the
+ * selected items when any non-regulator item is available. The returned order
+ * is a score sort with a light swap so two adjacent items share a source only
+ * when every remaining item is that source.
+ *
  * Feedback deltas stack, except `dropped`, which removes the item.
  * The newest data/feedback JSON (by exported_at) wins per id. Files with
  * "sample": true are ignored. See data/feedback/README.md.
@@ -58,6 +63,16 @@ export const RULES = {
     "trial-phase3": 70,
     "trial-phase2": 52,
     "paper-phase3": 60,
+    "paper-journal": 66,
+    "paper-ai": 56,
+    "paper-preprint": 50,
+    "paper-medrxiv": 52,
+    "ai-model": 62,
+    "ai-preprint": 54,
+    "nih-grant": 60,
+    "sec-8k": 58,
+    "fda-press": 70,
+    "nih-news": 60,
   },
   labels: {
     "fda-nme": "Original FDA approval classed Type 1 (new molecular entity).",
@@ -91,6 +106,16 @@ export const RULES = {
     "trial-phase3": "Phase 3 primary completion date on the ClinicalTrials.gov study record.",
     "trial-phase2": "Phase 2 primary completion date on the ClinicalTrials.gov study record.",
     "paper-phase3": "Europe PMC record whose title names a phase 3 trial or study.",
+    "paper-journal": "Europe PMC record from a journal on the high-impact list in the populator.",
+    "paper-ai": "Paper whose title names a machine-learning or AI method in biology.",
+    "paper-preprint": "bioRxiv preprint in a configured biology category. Not peer-reviewed.",
+    "paper-medrxiv": "medRxiv preprint in a configured clinical category. Not peer-reviewed.",
+    "ai-model": "Curated AI model-release card from the BioCatalystFeed AI discovery endpoint.",
+    "ai-preprint": "arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+    "nih-grant": "NIH RePORTER project with a start date in the window.",
+    "sec-8k": "SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+    "fda-press": "FDA press release.",
+    "nih-news": "NIH news release.",
   },
   adjustments: {
     "priority-review": 8,
@@ -121,15 +146,23 @@ export const RULES = {
     smaller: -12,
   },
   caps: {
-    "openfda-drugsfda": 10,
-    "openfda-crl": 5,
-    "purple-book": 8,
-    "orange-book": 5,
-    "federal-register-adcom": 6,
-    ema: 8,
-    "health-canada-noc": 6,
-    "clinicaltrials-calendar": 6,
-    europepmc: 4,
+    "openfda-drugsfda": 5,
+    "openfda-crl": 3,
+    "purple-book": 4,
+    "orange-book": 3,
+    "federal-register-adcom": 2,
+    ema: 6,
+    "health-canada-noc": 5,
+    "clinicaltrials-calendar": 5,
+    europepmc: 6,
+    biorxiv: 4,
+    medrxiv: 4,
+    "bcf-papers": 4,
+    "bcf-ai-discovery": 4,
+    "nih-reporter": 5,
+    "sec-edgar-8k": 5,
+    "fda-press": 4,
+    "nih-news": 3,
   },
   ruleCaps: {
     "fda-anda": 3,
@@ -139,8 +172,12 @@ export const RULES = {
     "trial-phase2": 2,
     "ema-lapse": 2,
   },
-  defaultCap: 6,
+  defaultCap: 4,
   globalCap: 56,
+  // When at least one non-regulator item is selected, regulator items are
+  // trimmed so they are not more than half the list. Regulator source caps
+  // above already sum to half of globalCap.
+  regulatorShare: 0.5,
   minScore: 28,
   // Items under this score are the brief tier. Each source keeps up to two of
   // them even when higher scores would fill its cap, so the page is not all
@@ -239,6 +276,40 @@ function cmp(a, b) {
   return b.significance - a.significance || (a.published_at < b.published_at ? 1 : a.published_at > b.published_at ? -1 : 0) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }
 
+export const REGULATOR_SOURCES = new Set([
+  "openfda-drugsfda",
+  "openfda-crl",
+  "purple-book",
+  "orange-book",
+  "federal-register-adcom",
+  "ema",
+  "health-canada-noc",
+]);
+
+export function diversify(items) {
+  const rest = [...items];
+  const out = [];
+  while (rest.length) {
+    const prev = out.length ? out[out.length - 1].scout_source : "";
+    let index = 0;
+    if (prev) {
+      const alt = rest.findIndex((item) => item.scout_source !== prev);
+      if (alt !== -1) index = alt;
+    }
+    out.push(rest.splice(index, 1)[0]);
+  }
+  return out;
+}
+
+function balanceRegulators(items) {
+  const regs = items.filter((item) => REGULATOR_SOURCES.has(item.scout_source));
+  const nons = items.filter((item) => !REGULATOR_SOURCES.has(item.scout_source));
+  if (!nons.length || regs.length <= nons.length) return items;
+  const keep = Math.min(regs.length, nons.length, Math.floor(RULES.globalCap * RULES.regulatorShare));
+  const kept = new Set(regs.slice(0, keep).map((item) => item.id));
+  return items.filter((item) => !REGULATOR_SOURCES.has(item.scout_source) || kept.has(item.id));
+}
+
 export function selectHeadlines(items) {
   const groups = new Map();
   for (const item of items) {
@@ -275,13 +346,15 @@ export function selectHeadlines(items) {
     picked.push(item);
     byId.set(item.id, item);
     seenSource.add(item.scout_source);
-    if (picked.length >= RULES.globalCap) return picked.sort(cmp);
-  }
-  for (const item of ranked) {
-    if (byId.has(item.id)) continue;
-    picked.push(item);
-    byId.set(item.id, item);
     if (picked.length >= RULES.globalCap) break;
   }
-  return picked.sort(cmp);
+  if (picked.length < RULES.globalCap) {
+    for (const item of ranked) {
+      if (byId.has(item.id)) continue;
+      picked.push(item);
+      byId.set(item.id, item);
+      if (picked.length >= RULES.globalCap) break;
+    }
+  }
+  return diversify(balanceRegulators(picked.sort(cmp)));
 }

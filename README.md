@@ -13,9 +13,43 @@ Website for [BioCatalystFeed](https://github.com/biocatalystfeed/biocatalystfeed
 
 `/headlines/` is a noindex, Drudge-style test page. It is not linked from the homepage. `/headlines/review/` is the review view, also noindex. Both read `data/headlines.json`.
 
-`node scripts/headlines/populate.mjs` rebuilds that file from public feeds. `.github/workflows/headlines.yml` runs it daily and commits `data/headlines.json` when it changes. Ranking weights live only in `scripts/headlines/ranking.mjs`.
+`node scripts/headlines/populate.mjs` rebuilds that file from public feeds. `.github/workflows/headlines.yml` runs it daily and commits `data/headlines.json` when it changes. Ranking weights live only in `scripts/headlines/ranking.mjs`. Headline and blurb wording is chosen in `scripts/headlines/copy.mjs` from several factual templates. The template is a hash of the item id, so a rerun with the same record produces the same sentences. A blurb is one or two sentences and has to carry a fact that is not the headline. The script does not invent an indication: it uses one only when the source record has it (openFDA label `indications_and_usage` or an EPC class, EMA therapeutic indication or MeSH area, Health Canada therapeutic class, a trial condition on the calendar extract).
 
-Swissmedic and PMDA are disabled: written consent was requested on 2026-11-17 and has not been granted. The ClinicalTrials.gov API is not called, because its robots.txt disallows `/api/`; the populator reads the existing `calendar/calendar.json` extract and does not modify it.
+### Ranking
+
+Each fetcher picks a `rule` key. `ranking.mjs` adds the base score, optional adjustments (priority review, conditional approval, biosimilar), and a recency bump from the event date. Feedback files under `data/feedback/` then add the vote and size deltas. `dropped` removes the item. Notes are not parsed.
+
+Per-source caps keep any one feed from filling the page. The regulator caps (Drugs@FDA, complete response letters, Purple Book, Orange Book, advisory-committee notices, EMA, Health Canada) sum to half of the global cap. When the run also has non-regulator items, regulator rows are trimmed so they are at most half of the list. The displayed order starts from the score sort, then swaps so two adjacent items share a source only when nothing else is left.
+
+### Sources
+
+Live fetches, and why a headline plus a link is allowed:
+
+- **openFDA Drugs@FDA and complete response letters.** U.S. government work. Labels are read only for the indication or pharmacologic class.
+- **FDA Orange Book and Purple Book** monthly files, and **Federal Register** advisory-committee notices. U.S. government works. Orange Book patents stay described as applicant listings.
+- **EMA medicines export.** EMA publishes this JSON for reuse. The blurb names the Agency through the product number, holder, or pharmacotherapeutic group on that record.
+- **Health Canada Notice of Compliance.** Open Government Licence – Canada. The line says so.
+- **ClinicalTrials.gov study pages** already extracted in `calendar/calendar.json`. The file is read and not written. The ClinicalTrials.gov API is not called: `robots.txt` disallows `/api/`.
+- **Europe PMC.** The same public API the site demo uses. This is also how MEDLINE/PubMed records get in. Queries cover phase 3 titles, a fixed journal list (Nature, Science, Cell, NEJM, Lancet, JAMA, Nature Medicine, Nature Biotechnology, BMJ), and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped.
+- **bioRxiv and medRxiv details API** (`api.biorxiv.org`). The API is the public metadata service. Items link to the preprint page. Abstracts are not copied. bioRxiv keeps bioinformatics, genomics, synthetic biology, systems biology, pharmacology, bioengineering, and AI-method titles. medRxiv keeps clinical categories whose titles name a therapy, trial, or similar term.
+- **BioCatalystFeed Worker** `https://biocatalystfeed-api.biocatalystfeed.workers.dev/papers` and `/ai-discovery`. This is our API. `/papers` proxies Europe PMC. `/ai-discovery` returns the curated model cards and an allowlisted arXiv search. Model cards use the card's own license, base model, and parameter fields. arXiv rows are labeled as preprints. `/trials` is not called, because that path hits the disallowed ClinicalTrials.gov API.
+- **NIH RePORTER** `api.reporter.nih.gov`. Public API for award records, which are U.S. government works. The blurb uses organization, activity code, award amount, and start date. Abstracts are not copied.
+- **SEC EDGAR Form 8-K.** Public filings. Requests send `BioCatalystFeed contact@biocat.ai`, which is the contact form in the SEC fair-access policy, and stay under the published rate. The company set is the tickers already in `calendar/calendar.json`. Daily index files under `/Archives/edgar/daily-index/` and `company_tickers.json` are used. `/cgi-bin` is disallowed by `robots.txt` and is not requested. The blurb is the filing date, CIK, and accession number. The filing body is not summarized.
+- **FDA press releases** RSS. U.S. government work, published as a syndication feed. The headline is the agency's title. The blurb adds the date and, when the description names a product before an outcome clause, that product text.
+
+Disabled, with no fetch:
+
+- **PubMed E-utilities.** `eutils.ncbi.nlm.nih.gov` robots.txt is `Disallow: /`. MEDLINE records are read through Europe PMC instead.
+- **X.** `data/x_allowlist_v1.csv` lists handles, but the X API needs credentials and this repo does not store any. Scraping or an unofficial syndication feed would conflict with X's terms.
+- **Swissmedic and PMDA.** Written consent was requested on 2026-11-17 and has not been granted.
+- **ClinicalTrials.gov `/api/`.** robots.txt disallows it.
+
+Left out on purpose, with no fetch:
+
+- Commercial news RSS (STAT, Endpoints News, Fierce Biotech, Reuters, BioPharma Dive). Their terms reserve republication and do not clearly allow an aggregation product built from the feed. FDA and NIH releases are used instead because those texts are U.S. government works and the feeds are published for syndication. The NIH news-release host often answers this client with 403; the fetcher stays enabled and records the error when that happens.
+- chemRxiv. The AI-discovery allowlist marks it `fetch_in_v1: false`.
+
+The script sends `BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)`, reads `robots.txt` before a fetch, and waits out crawl-delay. SEC requests use the separate contact User-Agent above.
 
 ### How feedback gets back into ranking
 
