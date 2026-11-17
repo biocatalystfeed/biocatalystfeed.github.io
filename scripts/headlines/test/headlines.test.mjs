@@ -7,7 +7,7 @@ import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
-import { fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
+import { fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
@@ -113,7 +113,8 @@ test("drugsfda items keep the application page and skip labeling supplements", (
     sponsor_name: "BAYER HEALTHCARE",
     submissions: [{ submission_type: "ORIG", submission_number: "1", submission_status: "AP", submission_status_date: "20261109", submission_class_code: "TYPE 1", submission_class_code_description: "Type 1 - New Molecular Entity", review_priority: "PRIORITY" }],
   }], "2026-11-17");
-  assert.match(unnamed[0].headline, /NDA 221291/);
+  assert.doesNotMatch(unnamed[0].headline, /NDA|BLA|records original approval/i);
+  assert.match(unnamed[0].blurb, /NDA 221291/);
   assert.doesNotMatch(unnamed[0].headline, /Bayer/);
   assert.match(unnamed[0].blurb, /Bayer|Type 1|priority|2026-11-09/);
   assert.notEqual(unnamed[0].blurb, unnamed[0].headline);
@@ -233,7 +234,7 @@ test("adcom keeps meeting notices and drops nominations", () => {
     { title: "Request for Nominations for Voting Members on a Public Advisory Committee; Tobacco Products Scientific Advisory Committee", document_number: "2026-2", publication_date: "2026-10-15", dates: "Nominations received on or before December 14, 2026.", html_url: "https://www.federalregister.gov/documents/2026/10/15/2026-2/nominations" },
   ], "2026-11-17");
   assert.equal(items.length, 1);
-  assert.match(items[0].headline, /November 19, 2026|2026-11-19/);
+  assert.match(items[0].headline, /Nov 19|November 19, 2026|2026-11-19/);
   assert.match(items[0].headline, /Microbiology/);
 });
 
@@ -338,17 +339,79 @@ test("headlines stay within 14 words by trimming clauses", () => {
     trialCopy("t3", { phase3: false, title: "A very long study title that would crowd out the completion date if it were pasted in full here", condition: "Solid Tumors", sponsor: "Example", status: "recruiting", when: "listed", date: "2026-12-01" }),
   ];
   for (const item of trials) {
-    assert.match(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
+    assert.doesNotMatch(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
+    assert.match(item.headline, /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b/, item.headline);
     assert.ok(wordCount(item.headline) <= HEADLINE_WORD_MAX, item.headline);
+    assert.doesNotMatch(item.headline, /^[a-z]/);
+    assert.doesNotMatch(item.headline, /\b(in|for|to|with|of|and|or|a|an|the)$/i);
   }
   const file = JSON.parse(fs.readFileSync(path.join(root, "data", "headlines.json"), "utf8"));
   for (const item of file.items) {
     assert.ok(wordCount(item.headline) <= HEADLINE_WORD_MAX, item.headline);
     assert.ok(item.blurb.trim());
     assert.match(item.source_url, /^https?:\/\//);
-    if (item.source_type === "trial") assert.match(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
+    assert.doesNotMatch(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
+    if (item.source_type === "trial") assert.match(item.headline, /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b/, item.headline);
     if (item.source_type === "paper") assert.ok(wordCount(item.headline) >= 6, item.headline);
+    assert.doesNotMatch(item.headline, /records original approval/i);
+    assert.doesNotMatch(item.headline, /^(NDA|BLA)\b/);
+    assert.doesNotMatch(item.headline, /^[a-z]/, item.headline);
+    assert.doesNotMatch(item.headline, /\b(in|for|to|with|of|and|or|a|an|the|through|from|by|on|at|into|via)$/i, item.headline);
+    assert.doesNotMatch(item.headline, /^(?:JAMA|Int J Oncol|bioRxiv|medRxiv|Cytotechnology)\s*:/i, item.headline);
+    assert.doesNotMatch(item.blurb, /^(?:Accession|CIK\b|Authors listed|Card fields|Europe PMC|item dated|Section headings include)/i, item.blurb);
   }
+  const openings = {};
+  for (const item of file.items) {
+    const key = item.headline.toLowerCase().split(/\s+/).slice(0, 3).join(" ");
+    openings[key] = (openings[key] || 0) + 1;
+  }
+  for (const [key, count] of Object.entries(openings)) {
+    assert.ok(count / file.items.length <= 0.2, `${key} is ${count}/${file.items.length}`);
+  }
+});
+
+test("regulator share stays near a quarter and no source exceeds 15 percent of a full page", () => {
+  const items = [];
+  for (const source of REGULATOR_SOURCES) {
+    for (let i = 0; i < 6; i++) {
+      items.push({ id: `${source}-${i}`, scout_source: source, rule: "fda-nme", significance: 96 - i, drop: false, published_at: "2026-11-12" });
+    }
+  }
+  const nons = ["europepmc", "biorxiv", "medrxiv", "fda-press", "deepmind", "openai-news", "bcf-papers", "nih-reporter"];
+  for (const source of nons) {
+    for (let i = 0; i < 8; i++) {
+      items.push({ id: `${source}-${i}`, scout_source: source, rule: "paper-ai", significance: 70, drop: false, published_at: "2026-11-10" });
+    }
+  }
+  const selected = selectHeadlines(items);
+  const regs = selected.filter((item) => REGULATOR_SOURCES.has(item.scout_source)).length;
+  assert.ok(selected.length >= 8);
+  assert.ok(regs / selected.length <= RULES.regulatorShare + 0.02, `${regs}/${selected.length}`);
+  const counts = {};
+  for (const item of selected) counts[item.scout_source] = (counts[item.scout_source] || 0) + 1;
+  const maxSrc = Math.max(1, Math.floor(RULES.globalCap * RULES.sourceShare));
+  for (const [source, count] of Object.entries(counts)) {
+    assert.ok(count <= maxSrc, `${source} ${count}`);
+    assert.ok(count / selected.length <= RULES.sourceShare + 0.02, `${source} ${count}/${selected.length}`);
+  }
+});
+
+test("leads stay grammatical and off-topic posts stay out", () => {
+  const stroke = pressLead("FDA Approves First Factor Xla Inhibitor to Help Prevent Stroke in Certain Adults at High Risk");
+  assert.match(stroke, /stroke/i);
+  assert.ok(wordCount(stroke) <= HEADLINE_WORD_MAX, stroke);
+  assert.doesNotMatch(stroke, /^[a-z]/);
+  assert.doesNotMatch(stroke, /\b(in|for|to|with|of|and|or|a|an|the)$/i);
+  const neck = pressLead("FDA Grants Accelerated Approval to a New Treatment for Head and Neck Squamous Cell Carcinoma");
+  assert.match(neck, /head and neck cancer/i);
+  assert.doesNotMatch(neck, /\bfor$/i);
+  const file = JSON.parse(fs.readFileSync(path.join(root, "data", "headlines.json"), "utf8"));
+  const blob = file.items.map((item) => `${item.headline}\n${item.blurb}`).join("\n");
+  assert.doesNotMatch(blob, /Microsoft outage/i);
+  assert.doesNotMatch(blob, /Our new blog for science/i);
+  assert.doesNotMatch(blob, /CUDA at 20/i);
+  assert.doesNotMatch(blob, /Tale of Two Estimands/i);
+  assert.doesNotMatch(blob, /scientific computing/i);
 });
 
 test("pubmed eutils and x stay disabled", () => {

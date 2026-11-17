@@ -8,6 +8,7 @@ import {
   isoFromRfc822,
   modelCopy,
   OUTCOME_CLAIM,
+  offTopicText,
   paperRecords,
   personName,
   preferHttps,
@@ -116,12 +117,18 @@ export function grantItems(records) {
   return safeItems(rows);
 }
 
+const ROUTINE_ITEMS = new Set(["2.02", "5.02", "5.03", "5.07", "9.01"]);
+
 export function secItems(rows) {
   const built = [];
   for (const row of rows) {
     const id = `sec-edgar:${row.accession}`;
     const copy = secCopy(id, row);
     if (!copy) continue;
+    const codes = row.itemCodes || [];
+    const substantive = codes.filter((code) => code !== "9.01");
+    const routine = substantive.length > 0 && substantive.every((code) => ROUTINE_ITEMS.has(code) || (code === "7.01" && substantive.includes("2.02")));
+    const adjustments = routine ? ["routine-filing"] : [];
     built.push({
       id,
       headline: copy.headline,
@@ -132,6 +139,7 @@ export function secItems(rows) {
       published_at: row.date,
       scout_source: "sec-edgar-8k",
       rule: "sec-8k",
+      adjustments,
       dedupe_key: `sec:${row.accession}`,
     });
   }
@@ -146,6 +154,7 @@ export function preprintItems(records, server) {
     const date = String(record.date || "").slice(0, 10);
     if (!doi || !title || !/^\d{4}-\d{2}-\d{2}$/.test(date)) continue;
     if (/withdrawn|retract/i.test(`${title} ${record.type || ""}`)) continue;
+    if (offTopicText(title)) continue;
     if (OUTCOME_CLAIM.test(title)) continue;
     const category = String(record.category || "").replace(/\s+/g, " ").trim();
     const ai = AI_TITLE.test(title);
@@ -395,10 +404,42 @@ async function fetchSec(ctx) {
   }
   const from = addDays(ctx.today, -12);
   const recent = hits.filter((row) => row.date >= from && row.date <= ctx.today && row.url);
+  await attachSecItems(ctx.polite, recent);
   return {
     items: secItems(recent),
-    note: `SEC EDGAR daily index Form 8-K rows for ${wanted.size} tickers already listed in calendar/calendar.json. ${missingDays} index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). The blurb uses the filing date, CIK, and accession number. Item text inside the filing is not summarized.`,
+    note: `SEC EDGAR daily index Form 8-K rows for ${wanted.size} tickers already listed in calendar/calendar.json. ${missingDays} index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied.`,
   };
+}
+
+async function attachSecItems(polite, rows) {
+  const byCik = new Map();
+  for (const row of rows) {
+    const list = byCik.get(row.cik) || [];
+    list.push(row);
+    byCik.set(row.cik, list);
+  }
+  const ciks = [...byCik.keys()].slice(0, 20);
+  for (const cik of ciks) {
+    const padded = String(cik).padStart(10, "0");
+    try {
+      const buf = await secGet(polite, `https://data.sec.gov/submissions/CIK${padded}.json`);
+      if (!buf) continue;
+      const data = JSON.parse(buf.toString("utf8"));
+      const recent = data.filings?.recent || {};
+      const forms = recent.form || [];
+      const accessions = recent.accessionNumber || [];
+      const items = recent.items || [];
+      const index = new Map();
+      for (let i = 0; i < forms.length; i++) {
+        if (forms[i] === "8-K" || forms[i] === "8-K/A") index.set(accessions[i], String(items[i] || ""));
+      }
+      for (const row of byCik.get(cik) || []) {
+        row.itemCodes = (index.get(row.accession) || "").split(",").map((code) => code.trim()).filter(Boolean);
+      }
+    } catch {
+      /* One company's submissions file should not fail the SEC source. */
+    }
+  }
 }
 
 async function fetchPreprint(ctx, server) {
@@ -459,6 +500,8 @@ async function fetchAiDiscovery(ctx) {
   };
 }
 
+import { labFeedSources } from "./lab-feeds.mjs";
+
 export const MORE_SOURCES = [
   { id: "biorxiv", enabled: true, fetch: fetchBiorxiv },
   { id: "medrxiv", enabled: true, fetch: fetchMedrxiv },
@@ -468,4 +511,5 @@ export const MORE_SOURCES = [
   { id: "sec-edgar-8k", enabled: true, fetch: fetchSec },
   { id: "fda-press", enabled: true, fetch: fetchPress },
   { id: "nih-news", enabled: true, fetch: fetchNihNews },
+  ...labFeedSources(),
 ];

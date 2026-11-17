@@ -73,6 +73,9 @@ export const RULES = {
     "sec-8k": 58,
     "fda-press": 70,
     "nih-news": 60,
+    "ai-news": 68,
+    "mhra-news": 74,
+    "science-news": 64,
   },
   labels: {
     "fda-nme": "Original FDA approval classed Type 1 (new molecular entity).",
@@ -116,6 +119,9 @@ export const RULES = {
     "sec-8k": "SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
     "fda-press": "FDA press release.",
     "nih-news": "NIH news release.",
+    "ai-news": "Official lab blog post on an AI or biology topic.",
+    "mhra-news": "UK MHRA news item from the GOV.UK atom feed.",
+    "science-news": "Science or mainstream news item from an official public feed.",
   },
   adjustments: {
     "priority-review": 8,
@@ -123,6 +129,10 @@ export const RULES = {
     "orphan": 0,
     "biosimilar": -8,
     "with-conditions": 4,
+    "source-first": 12,
+    "pivotal-readout": 8,
+    "ai-biology-release": 10,
+    "routine-filing": -18,
   },
   past: [
     { maxDays: 7, delta: 6 },
@@ -146,23 +156,27 @@ export const RULES = {
     smaller: -12,
   },
   caps: {
-    "openfda-drugsfda": 5,
-    "openfda-crl": 3,
-    "purple-book": 4,
-    "orange-book": 3,
-    "federal-register-adcom": 2,
-    ema: 6,
-    "health-canada-noc": 5,
-    "clinicaltrials-calendar": 5,
-    europepmc: 6,
-    biorxiv: 4,
-    medrxiv: 4,
-    "bcf-papers": 4,
-    "bcf-ai-discovery": 4,
-    "nih-reporter": 5,
-    "sec-edgar-8k": 5,
-    "fda-press": 4,
-    "nih-news": 3,
+    "openfda-drugsfda": 3,
+    "openfda-crl": 2,
+    "purple-book": 2,
+    "orange-book": 1,
+    "federal-register-adcom": 1,
+    ema: 3,
+    "health-canada-noc": 2,
+    mhra: 3,
+    "clinicaltrials-calendar": 4,
+    europepmc: 4,
+    biorxiv: 3,
+    medrxiv: 3,
+    "bcf-papers": 3,
+    "bcf-ai-discovery": 3,
+    "nih-reporter": 3,
+    "sec-edgar-8k": 3,
+    "fda-press": 3,
+    "nih-news": 2,
+    deepmind: 3,
+    "openai-news": 3,
+    "nvidia-blog": 2,
   },
   ruleCaps: {
     "fda-anda": 3,
@@ -172,12 +186,11 @@ export const RULES = {
     "trial-phase2": 2,
     "ema-lapse": 2,
   },
-  defaultCap: 4,
+  defaultCap: 3,
   globalCap: 56,
-  // When at least one non-regulator item is selected, regulator items are
-  // trimmed so they are not more than half the list. Regulator source caps
-  // above already sum to half of globalCap.
-  regulatorShare: 0.5,
+  // Of a full page, regulators stay near a quarter and no source exceeds about 15%.
+  regulatorShare: 0.25,
+  sourceShare: 0.15,
   minScore: 28,
   // Items under this score are the brief tier. Each source keeps up to two of
   // them even when higher scores would fill its cap, so the page is not all
@@ -284,6 +297,7 @@ export const REGULATOR_SOURCES = new Set([
   "federal-register-adcom",
   "ema",
   "health-canada-noc",
+  "mhra",
 ]);
 
 export function diversify(items) {
@@ -304,10 +318,23 @@ export function diversify(items) {
 function balanceRegulators(items) {
   const regs = items.filter((item) => REGULATOR_SOURCES.has(item.scout_source));
   const nons = items.filter((item) => !REGULATOR_SOURCES.has(item.scout_source));
-  if (!nons.length || regs.length <= nons.length) return items;
-  const keep = Math.min(regs.length, nons.length, Math.floor(RULES.globalCap * RULES.regulatorShare));
-  const kept = new Set(regs.slice(0, keep).map((item) => item.id));
+  if (!nons.length) return items;
+  const maxReg = Math.floor(nons.length * RULES.regulatorShare / (1 - RULES.regulatorShare));
+  const kept = new Set(regs.slice(0, Math.max(0, maxReg)).map((item) => item.id));
   return items.filter((item) => !REGULATOR_SOURCES.has(item.scout_source) || kept.has(item.id));
+}
+
+function capSourceShare(items) {
+  const maxSrc = Math.max(1, Math.floor(RULES.globalCap * RULES.sourceShare));
+  const counts = {};
+  const out = [];
+  for (const item of items) {
+    const n = counts[item.scout_source] || 0;
+    if (n >= maxSrc) continue;
+    counts[item.scout_source] = n + 1;
+    out.push(item);
+  }
+  return out;
 }
 
 export function selectHeadlines(items) {
@@ -356,5 +383,5 @@ export function selectHeadlines(items) {
       if (picked.length >= RULES.globalCap) break;
     }
   }
-  return diversify(balanceRegulators(picked.sort(cmp)));
+  return diversify(capSourceShare(balanceRegulators(picked.sort(cmp))));
 }
