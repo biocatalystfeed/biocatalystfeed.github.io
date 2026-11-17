@@ -1,8 +1,40 @@
 import fs from "node:fs";
 import path from "node:path";
+import { createNasaClient } from "./image-sources/nasa.mjs";
+import { createOpenverseClient } from "./image-sources/openverse.mjs";
+import { IMAGE_SOURCES } from "./image-sources/terms.mjs";
+import {
+  MAX_PAGE_IMAGES,
+  TOP_IMAGE_ITEMS,
+  candidateProblem,
+  commonsUserAgent,
+  exactName,
+  imageEntities,
+  imageType,
+  licenceOk,
+  personRisk,
+  photoQuery,
+  placeImages,
+  relevanceScore,
+  stripTags,
+} from "./image-score.mjs";
 
-const MAX_IMAGES = 4;
-const MAX_OTHERS = 3;
+export {
+  MAX_PAGE_IMAGES,
+  TOP_IMAGE_ITEMS,
+  candidateProblem,
+  commonsUserAgent,
+  exactName,
+  imageEntities,
+  imageType,
+  licenceOk,
+  personRisk,
+  photoQuery,
+  placeImages,
+  relevanceScore,
+  stripTags,
+};
+
 const COMMONS = "https://commons.wikimedia.org/w/api.php";
 const OGL_URL = "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/";
 const STOCK = /istock|getty|shutterstock|reuters|\bap photo\b|associated press|adobe stock|dreamstime|alamy|depositphotos/i;
@@ -26,25 +58,6 @@ export const LAB_IMAGE_TERMS = {
     why: "NVIDIA's site terms prohibit public display of site materials unless a separate licence says otherwise. The blog posts do not carry one.",
   },
 };
-
-export function licenceOk(name) {
-  const text = stripTags(name);
-  if (!text || /non-?free|fair use|unknown/i.test(text)) return false;
-  if (/-NC\b|-ND\b|\bNC\b|\bND\b/i.test(text)) return false;
-  return /^(?:public domain|pd-[\w.]+|cc0|cc by-sa|cc by)\b/i.test(text);
-}
-
-export function stripTags(value) {
-  return String(value || "")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, "\"")
-    .replace(/&#39;|&apos;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/\s+/g, " ")
-    .trim();
-}
 
 export function imageTokens(headline) {
   const paren = [...String(headline || "").matchAll(/\(([A-Za-z][A-Za-z0-9-]{4,})\)/g)].map((match) => match[1]);
@@ -121,16 +134,6 @@ const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 const PORTRAIT = /\b(logos?|portraits?|people|persons?|flags?|icons?|wordmarks?|coat of arms)\b/i;
 const STRUCTURE = /\b(structure|structural|formula|skeletal|ball|molecule|chemical)\b/i;
 
-export function commonsUserAgent() {
-  return `BioCatHeadlinesBot/1.0 (https://biocat.ai/; contact@biocat.ai) node/${process.versions.node}`;
-}
-
-export function exactName(text, name) {
-  const escaped = String(name || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  if (!escaped) return false;
-  return new RegExp(`(?:^|[^A-Za-z0-9])${escaped}(?:[^A-Za-z0-9]|$)`, "i").test(String(text || ""));
-}
-
 export function uploadThumb(originalUrl, width = THUMB) {
   const clean = String(originalUrl || "").split("?")[0];
   const match = /^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/(.+\/)([^/]+)$/.exec(clean);
@@ -138,6 +141,11 @@ export function uploadThumb(originalUrl, width = THUMB) {
   const file = match[2];
   const suffix = /\.svg$/i.test(file) ? ".png" : "";
   return `https://upload.wikimedia.org/wikipedia/commons/thumb/${match[1]}${file}/${width}px-${file}${suffix}`;
+}
+
+function shortCredit(value) {
+  const text = stripTags(value).split(/\b(?:Author info|Consent note|Reusing images)\b/i)[0].trim().replace(/[,\s]+$/, "");
+  return text.slice(0, 120);
 }
 
 function licenceLink(licence, rawUrl) {
@@ -184,13 +192,16 @@ export function commonsImage(page, entityName) {
   return {
     src,
     sourcePage,
-    credit: artist,
+    credit: shortCredit(artist),
     licence,
     basisUrl,
     alt: `Chemical structure of ${entityName}`,
     width,
     height,
     hosting: "hotlink",
+    type: "diagram",
+    relevance: 2,
+    provider: "commons",
   };
 }
 
@@ -260,9 +271,80 @@ export function createCommonsClient() {
   };
 }
 
+export function commonsTopicImage(page, entities) {
+  const info = page?.imageinfo?.[0];
+  if (!info || !String(info.mime || "").startsWith("image/")) return null;
+  const title = String(page.title || "");
+  const categories = (page.categories || []).map((row) => row.title || "").join(" ");
+  const meta = info.extmetadata || {};
+  const description = stripTags(meta.ImageDescription?.value || "");
+  const hay = `${title} ${categories} ${description}`;
+  if (LOGO.test(hay) || STOCK.test(hay) || personRisk(hay)) return null;
+  const licence = stripTags(meta.LicenseShortName?.value || meta.License?.value || meta.UsageTerms?.value || "");
+  const basisUrl = licenceLink(licence, meta.LicenseUrl?.value || "");
+  const artist = stripTags(meta.Artist?.value || meta.Credit?.value || "");
+  if (!licenceOk(licence) || !/^https:\/\//.test(basisUrl)) return null;
+  if (!artist || /unknown|unspecified|anonymous/i.test(artist)) return null;
+  const fromApi = String(info.thumburl || "").split("?")[0].replace(/^https:\/\/thumb\.wikimedia\.org\//, "https://upload.wikimedia.org/");
+  const src = fromApi.startsWith("https://upload.wikimedia.org/wikipedia/commons/thumb/") ? fromApi : uploadThumb(info.url, 500);
+  if (!src.startsWith("https://upload.wikimedia.org/")) return null;
+  const fullW = Number(info.width || 0);
+  const fullH = Number(info.height || 0);
+  const namedWidth = Number(/\/(\d+)px-/.exec(src)?.[1] || 0);
+  const width = namedWidth || Number(info.thumbwidth || 0) || THUMB;
+  const height = info.thumbwidth && info.thumbheight
+    ? Math.max(1, Math.round(Number(info.thumbheight) * (width / Number(info.thumbwidth))))
+    : (fullW ? Math.max(1, Math.round(fullH * (width / fullW))) : 0);
+  if (width < 40 || height < 40) return null;
+  const alt = (description || title.replace(/^File:/, "").replace(/_/g, " ")).slice(0, 180);
+  if (!alt) return null;
+  const sourcePage = `https://commons.wikimedia.org/wiki/${encodeURIComponent(title.replace(/ /g, "_")).replace(/%3A/g, ":")}`;
+  return {
+    src,
+    sourcePage,
+    credit: shortCredit(artist),
+    licence,
+    basisUrl,
+    alt,
+    width,
+    height,
+    hosting: "hotlink",
+    type: imageType(hay),
+    relevance: relevanceScore(entities, hay),
+    provider: "commons",
+  };
+}
+
+async function cachedList(cache, key, load) {
+  if (cache[key] && Array.isArray(cache[key].images)) return cache[key].images;
+  const images = await load();
+  if (!images) return [];
+  cache[key] = { at: new Date().toISOString(), images };
+  return images;
+}
+
+async function commonsPhotoSearch(client, query, entities) {
+  const payload = await client.get({
+    generator: "search",
+    gsrnamespace: "6",
+    gsrlimit: "8",
+    gsrsearch: `${query} filetype:bitmap`,
+    prop: "imageinfo|categories",
+    iiprop: "url|size|mime|extmetadata",
+    iiurlwidth: "640",
+    cllimit: "20",
+  });
+  if (!payload) return null;
+  return Object.values(payload?.query?.pages || {}).map((page) => commonsTopicImage(page, entities)).filter(Boolean);
+}
+
 async function structureFor(client, cache, name) {
   const key = `inn:${name.toLowerCase()}`;
-  if (cache[key]) return cache[key].image || null;
+  if (cache[key]) {
+    const image = cache[key].image;
+    if (!image) return null;
+    return { ...image, type: image.type || "diagram", relevance: image.relevance || 2, provider: image.provider || "commons" };
+  }
   const payload = await client.get({
     generator: "search",
     gsrnamespace: "6",
@@ -280,46 +362,123 @@ async function structureFor(client, cache, name) {
   return image;
 }
 
-async function imageFor(polite, item, client, cache) {
-  const entity = item.image_entity;
-  if (entity?.kind === "inn" && entity.name) {
-    try {
-      return await structureFor(client, cache, entity.name);
-    } catch {
-      return null;
-    }
+async function pagePhoto(polite, item) {
+  if (!["mhra", "fda-press", "nih-news"].includes(item.scout_source)) return null;
+  try {
+    const buf = await polite.getBuffer(item.source_url, { timeout: 40000 });
+    if (!buf) return null;
+    const image = pageImage(buf.toString("utf8"), item.source_url, item.scout_source === "mhra" ? "ogl" : "federal");
+    if (!image) return null;
+    return { ...image, type: "photo", relevance: 2, provider: item.scout_source };
+  } catch {
+    return null;
   }
-  if (item.scout_source === "mhra" || item.scout_source === "fda-press" || item.scout_source === "nih-news") {
-    try {
-      const buf = await polite.getBuffer(item.source_url, { timeout: 40000 });
-      if (!buf) return null;
-      return pageImage(buf.toString("utf8"), item.source_url, item.scout_source === "mhra" ? "ogl" : "federal");
-    } catch {
-      return null;
-    }
-  }
-  return null;
 }
 
-export async function attachImages(polite, items, { cacheFile } = {}) {
+export async function attachImages(polite, items, { cacheFile, reportFile } = {}) {
   const list = Array.isArray(items) ? items : [];
   const cache = cacheFile ? readImageCache(cacheFile) : {};
   const client = createCommonsClient();
-  const used = new Set();
-  let others = 0;
-  let placed = 0;
-  for (let index = 0; index < list.length && placed < MAX_IMAGES; index++) {
-    if (index > 0 && others >= MAX_OTHERS) break;
-    if (index > 0 && Number(list[index].significance || 0) < 70) continue;
-    const image = await imageFor(polite, list[index], client, cache);
-    delete list[index].image_entity;
-    if (!image || used.has(image.src)) continue;
-    used.add(image.src);
-    list[index].image = image;
-    placed += 1;
-    if (index > 0) others += 1;
+  const openverse = createOpenverseClient();
+  const nasa = createNasaClient();
+  const slots = [];
+  const report = [];
+  for (let index = 0; index < Math.min(list.length, TOP_IMAGE_ITEMS); index += 1) {
+    const item = list[index];
+    const entities = imageEntities(item);
+    const query = photoQuery(entities);
+    const candidates = [];
+    if (query) {
+      candidates.push(...await cachedList(cache, `commons-photo:${query.toLowerCase()}`, () => commonsPhotoSearch(client, query, entities)));
+      candidates.push(...await cachedList(cache, `openverse:${query.toLowerCase()}`, () => openverse.search(query, entities)));
+      candidates.push(...await cachedList(cache, `nasa:${query.toLowerCase()}`, () => nasa.search(query, entities)));
+    }
+    if (item.image_entity?.kind === "inn" && item.image_entity.name) {
+      try {
+        const diagram = await structureFor(client, cache, item.image_entity.name);
+        if (diagram) candidates.push(diagram);
+      } catch {
+        // A failed structure lookup leaves the photo candidates in place.
+      }
+    }
+    const owned = polite ? await pagePhoto(polite, item) : null;
+    if (owned) candidates.push(owned);
+    for (const candidate of candidates) {
+      const fromAlt = String(candidate.alt || "").startsWith("Chemical structure") ? "diagram" : imageType(candidate.alt);
+      if (fromAlt !== "photo") candidate.type = fromAlt;
+      else if (!candidate.type) candidate.type = "photo";
+      const file = `${candidate.sourcePage || ""} ${candidate.src || ""}`;
+      if (/smart-servier|servier medical art/i.test(file)) candidate.type = "illustration";
+      if (/\b(?:chart|graph|plot|deaths)\b/i.test(file)) candidate.type = "diagram";
+      const blob = `${candidate.alt || ""} ${candidate.credit || ""} ${candidate.sourcePage || ""}`;
+      if (entities.some((entity) => /^bayer$/i.test(entity.term)) && /\bbayer\s+(?:filter|pattern|mosaic|matrix|sensor)\b/i.test(blob)) {
+        candidate.relevance = 0;
+      }
+      if (/\b(handball|football|soccer|basketball|stadium|bayarena|bundesliga|championship|goalkeeper|fifa|uefa)\b/i.test(blob)) {
+        candidate.relevance = 0;
+      }
+      if (candidate.provider === "nasa" && !entities.some((entity) => exactName(`${candidate.alt || ""} ${candidate.credit || ""}`, entity.term))) {
+        candidate.relevance = 0;
+      }
+    }
+    const rejected = candidates
+      .map((candidate) => ({ candidate, why: candidateProblem(candidate) }))
+      .filter((row) => row.why)
+      .slice(0, 8)
+      .map((row) => ({
+        provider: row.candidate.provider || "",
+        title: row.candidate.alt,
+        score: row.candidate.relevance || 0,
+        type: row.candidate.type || "",
+        why: row.why,
+      }));
+    slots.push({ index, candidates });
+    report.push({
+      index,
+      id: item.id,
+      headline: item.headline,
+      entities,
+      query,
+      rejected,
+    });
+    delete item.image_entity;
   }
   for (const item of list) delete item.image_entity;
+  const chosen = placeImages(slots);
+  for (const item of list) delete item.image;
+  let previousType = "";
+  for (const slot of slots) {
+    const entry = report.find((item) => item.index === slot.index);
+    const pick = chosen.find((row) => row.index === slot.index);
+    if (pick) {
+      previousType = pick.image.type || "";
+      continue;
+    }
+    const passed = slot.candidates.filter((candidate) => !candidateProblem(candidate));
+    if (previousType && passed.length && passed.every((candidate) => candidate.type === previousType)) {
+      entry.skipped = `${passed.length} matches cleared the threshold but they are all ${previousType}s, and the previous image is a ${previousType}.`;
+    }
+  }
+  for (const row of chosen) {
+    list[row.index].image = row.image;
+    const entry = report.find((item) => item.index === row.index);
+    if (!entry) continue;
+    entry.chosen = {
+      provider: row.image.provider,
+      type: row.image.type,
+      relevance: row.image.relevance,
+      licence: row.image.licence,
+      credit: row.image.credit,
+      sourcePage: row.image.sourcePage,
+      alt: row.image.alt,
+    };
+  }
   if (cacheFile) writeImageCache(cacheFile, cache);
-  return { placed, calls: client.calls };
+  const body = { schema: "biocat-image-dry-run/1", sources: IMAGE_SOURCES, items: report };
+  const reportPath = reportFile || (cacheFile ? path.join(path.dirname(cacheFile), "image-dry-run.json") : "");
+  if (reportPath) {
+    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+    fs.writeFileSync(reportPath, `${JSON.stringify(body, null, 2)}\n`);
+  }
+  return { placed: chosen.length, calls: client.calls, openverseCalls: openverse.calls, nasaCalls: nasa.calls };
 }

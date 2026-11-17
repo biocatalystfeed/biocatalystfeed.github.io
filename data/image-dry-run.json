@@ -1,0 +1,387 @@
+{
+  "schema": "biocat-image-dry-run/1",
+  "sources": {
+    "commons": {
+      "id": "commons",
+      "allowed": true,
+      "endpoint": "https://commons.wikimedia.org/w/api.php",
+      "robots": "commons.wikimedia.org/robots.txt disallows /w/ for a generic crawler. The Wikimedia Foundation API Usage Guidelines allow identified use of /w/api.php.",
+      "terms": "Calls use BioCatHeadlinesBot/1.0 (https://biocat.ai/; contact@biocat.ai), one at a time, maxlag=5, and at most 20 calls a run. Files are kept only for CC0, public domain, CC BY, or CC BY-SA, with an author credit."
+    },
+    "openverse": {
+      "id": "openverse",
+      "allowed": true,
+      "endpoint": "https://api.openverse.org/v1/images/",
+      "robots": "api.openverse.org/robots.txt has User-agent: * / Disallow: /v1/images/. That stops a crawler from treating the API as pages. The API itself answers anonymous clients and sends X-RateLimit-Limit-Anon-Burst (20/min) and X-RateLimit-Limit-Anon-Sustained (200/day).",
+      "terms": "This client is the documented API, not a site crawl. It requests license=cc0 and license=by only, stays under five calls a run, and stops if the remaining rate-limit header hits zero. CC BY-SA and any NC or ND result is dropped even if the API returns it."
+    },
+    "nasa": {
+      "id": "nasa",
+      "allowed": true,
+      "endpoint": "https://images-api.nasa.gov/search",
+      "robots": "images-api.nasa.gov/robots.txt returns 404, so there is no disallow rule. api.nasa.gov/robots.txt is also 404.",
+      "terms": "NASA images are U.S. government works unless the record says otherwise. Logos, insignia, and images of identifiable people are skipped, as is anything credited as a courtesy or under a third-party copyright."
+    },
+    "flickr-niaid": {
+      "id": "flickr-niaid",
+      "allowed": false,
+      "endpoint": "https://www.flickr.com/photos/niaid/",
+      "robots": "www.flickr.com/robots.txt and api.flickr.com/robots.txt both say User-agent: * / Disallow: /.",
+      "terms": "Automated access is disallowed, so NIAID Flickr is not queried and no photo licence field is read from it."
+    },
+    "nci-visuals": {
+      "id": "nci-visuals",
+      "allowed": false,
+      "endpoint": "https://visualsonline.cancer.gov/",
+      "robots": "visualsonline.cancer.gov did not resolve on 2026-11-17, so robots.txt and the terms page could not be read.",
+      "terms": "No replacement NCI Visuals API with a per-image rights field was found. The source is not queried. Copyrighted NCI items would have been skipped anyway."
+    },
+    "cdc-phil": {
+      "id": "cdc-phil",
+      "allowed": false,
+      "endpoint": "https://wwwn.cdc.gov/phil/",
+      "robots": "wwwn.cdc.gov/phil/robots.txt returns 404. www.cdc.gov/robots.txt does not disallow /phil/.",
+      "terms": "PHIL search is an ASP.NET postback, not a stable API. A detail page repeats a site-wide copyright notice and does not mark that individual image as public domain, so the required per-image rights check cannot pass. The source is not queried."
+    }
+  },
+  "items": [
+    {
+      "index": 0,
+      "id": "openfda-drugsfda:NDA221291:2026-11-09:ORIG:1",
+      "headline": "FDA approves Bayer's Sunharbo (asundexian), a new molecular entity",
+      "entities": [
+        {
+          "term": "Bayer",
+          "weight": 2,
+          "kind": "org"
+        },
+        {
+          "term": "asundexian",
+          "weight": 2,
+          "kind": "drug"
+        }
+      ],
+      "query": "Bayer",
+      "rejected": [
+        {
+          "provider": "commons",
+          "title": "The BayArena , home stadium of Bayer 04 Leverkusen , in 2009 just after completion of the new roof",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Handball, Bundesliga Frauen, Thüringer HC - TSV Bayer 04 Leverkusen: Jubel, celebration über den deutlichen Sieg, von links: Jennifer Rode (Thüringer HC, 43), Josefine Huber (Thüri",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "BayArena in Leverkusen, Germany before a Europa League match between Bayer 04 Leverkusen and BK Häcken, taken from the away stand",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "openverse",
+          "title": "Bayer Aspirin",
+          "score": 2,
+          "type": "photo",
+          "why": "alt is not descriptive"
+        },
+        {
+          "provider": "openverse",
+          "title": "Bayer Aspirin",
+          "score": 2,
+          "type": "photo",
+          "why": "alt is not descriptive"
+        },
+        {
+          "provider": "openverse",
+          "title": "Turning Bayer",
+          "score": 2,
+          "type": "photo",
+          "why": "alt is not descriptive"
+        },
+        {
+          "provider": "nasa",
+          "title": "The color cameras on NASA Mars rover Curiosity, including the pair that make up the rover Mastcam instrument, use the same type of Bayer pattern RGB filter as found in typical comm",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "nasa",
+          "title": "This pair of images from the Mast Camera (Mastcam) on NASA's Curiosity rover illustrates how special filters are used to scout terrain ahead for variations in the local bedrock. Th",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        }
+      ],
+      "chosen": {
+        "provider": "commons",
+        "type": "photo",
+        "relevance": 2,
+        "licence": "CC BY-SA 3.0",
+        "credit": "A.Savin",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Pano-bayer-leverkusen.jpg",
+        "alt": "A pano of the Bayer main factories in Leverkusen, Germany."
+      }
+    },
+    {
+      "index": 1,
+      "id": "ema:EMEA/H/C/006597:ema-opinion:2026-11-12",
+      "headline": "Europe recommends AstraZeneca's Baxfendy for high blood pressure in adults",
+      "entities": [
+        {
+          "term": "AstraZeneca",
+          "weight": 2,
+          "kind": "org"
+        },
+        {
+          "term": "blood pressure",
+          "weight": 2,
+          "kind": "topic"
+        }
+      ],
+      "query": "blood pressure",
+      "rejected": [
+        {
+          "provider": "openverse",
+          "title": "Blood Pressure",
+          "score": 2,
+          "type": "photo",
+          "why": "alt is not descriptive"
+        }
+      ],
+      "chosen": {
+        "provider": "openverse",
+        "type": "illustration",
+        "relevance": 2,
+        "licence": "CC BY 2.0",
+        "credit": "Mike Licht, NotionsCapital.com",
+        "sourcePage": "https://www.flickr.com/photos/9106303@N05/8749833424",
+        "alt": "Cell Phones & Blood Pressure, after Adriaen Brouwer"
+      }
+    },
+    {
+      "index": 2,
+      "id": "openfda-crl:CRL_BLA761524_20261113.pdf",
+      "headline": "FDA sends Summit Therapeutics Inc. a complete response letter",
+      "entities": [
+        {
+          "term": "Summit Therapeutics",
+          "weight": 2,
+          "kind": "org"
+        }
+      ],
+      "query": "Summit Therapeutics",
+      "rejected": [
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, at Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "id": "ema:EMEA/H/C/006743:ema-opinion:2026-11-12",
+      "headline": "Europe backs Fortvita Biologics' Zybrivo for a common form of lung cancer in adults",
+      "entities": [
+        {
+          "term": "lung cancer",
+          "weight": 2,
+          "kind": "topic"
+        }
+      ],
+      "query": "lung cancer",
+      "rejected": [
+        {
+          "provider": "commons",
+          "title": "Esquema en el que se muestran las principales estructuras del sistema respiratorio y un cancer de pulmón que afecta al lóbulo superior del pulmón derecho.",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Lung cancer",
+          "score": 2,
+          "type": "illustration",
+          "why": "alt is not descriptive"
+        },
+        {
+          "provider": "commons",
+          "title": "lung cancer",
+          "score": 2,
+          "type": "diagram",
+          "why": "alt is not descriptive"
+        },
+        {
+          "provider": "commons",
+          "title": "lung cancer",
+          "score": 2,
+          "type": "photo",
+          "why": "alt is not descriptive"
+        },
+        {
+          "provider": "openverse",
+          "title": "Lung cancer",
+          "score": 2,
+          "type": "photo",
+          "why": "alt is not descriptive"
+        },
+        {
+          "provider": "openverse",
+          "title": "Pie chart of lung cancers",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        }
+      ],
+      "chosen": {
+        "provider": "commons",
+        "type": "micrograph",
+        "relevance": 2,
+        "licence": "CC BY-SA 2.0",
+        "credit": "Yale Rosen and Jian-Hua Qiao",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
+        "alt": "Small cell variant of squamous cell carcinoma (SCC) mimicking small cell lung carcinoma (SCLC). p63 immunochemistry"
+      }
+    },
+    {
+      "index": 4,
+      "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
+      "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
+      "entities": [
+        {
+          "term": "solid tumors",
+          "weight": 2,
+          "kind": "topic"
+        }
+      ],
+      "query": "solid tumors",
+      "rejected": [
+        {
+          "provider": "commons",
+          "title": "Soft Fibroma (fibroma molle).",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Tumor of the thyroid with solid cell nest features disclosing small cells of the main cell type (a) that express p63 (b) and cytokeratin 5 (c), in the absence of TTF1, calcitonin, ",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Histopathology of solid pseudopapillary tumor, H&E stain.",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Histopathology of solid pseudopapillary tumor, H&E stain.",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Beta-catenin immunohistochemistry in solid pseudopapillary tumor, showing both nuclear and cytoplasmic staining.",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Histopathology of solid pseudopapillary tumor with intracytoplasmic hyaline globules. H&E stain",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Histopathology of solid pseudopapillary tumor with area of foamy macrophages. H&E stain",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "openverse",
+          "title": "Intravascular cells and solid tumor targets for immunoliposomes",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        }
+      ],
+      "chosen": {
+        "provider": "commons",
+        "type": "photo",
+        "relevance": 2,
+        "licence": "CC BY-SA 4.0",
+        "credit": "Bme2023boi",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Engineered_polymeric_microneedle_cellular_delivery.jpg",
+        "alt": "This image represents a basic overview on how scientists have created a porous microneedle matrix to load T-cells into for delivery to solid tumors"
+      }
+    }
+  ]
+}
