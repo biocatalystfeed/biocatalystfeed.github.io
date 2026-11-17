@@ -8,7 +8,11 @@ import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
 import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, paperCopy, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
-import { commonsImage, licenceOk, pageImage, uploadThumb } from "../images.mjs";
+import { commonsImage, imageResponseOk, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
+import { explainMatch, imageEntities, imageType, relevanceScore } from "../image-score.mjs";
+import { nasaImage } from "../image-sources/nasa.mjs";
+import { openverseImage } from "../image-sources/openverse.mjs";
+import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { hostAllowed, xPickItems } from "../x-picks.mjs";
 import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
@@ -367,7 +371,7 @@ test("headlines stay within 14 words by trimming clauses", () => {
     assert.doesNotMatch(item.headline, /^(?:JAMA|Int J Oncol|bioRxiv|medRxiv|Cytotechnology)\s*:/i, item.headline);
     assert.doesNotMatch(item.blurb, /^(?:Accession|CIK\b|Authors listed|Card fields|Europe PMC|item dated|Section headings include)/i, item.blurb);
     assert.doesNotMatch(item.blurb, /^(?:The .+ post reports|The paper reports|This preprint\b.*\breports|The FDA press release feed reports|The grant supports)\b/i, item.blurb);
-    assert.equal(echoesHeadline(item.headline, item.blurb), false, `${item.headline} :: ${item.blurb}`);
+    assert.equal(echoesHeadline(item.headline, item.blurb.replace(/https?:\/\/\S+/g, " ")), false, `${item.headline} :: ${item.blurb}`);
     assert.doesNotMatch(item.blurb, /once-Weekly|alphaGenome|in Adolescents|mHRA|nVIDIA|fDA |cRISPR|aI Is/, item.blurb);
     if (item.source_type === "trial") {
       const dated = item.headline.match(/\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b/);
@@ -523,18 +527,108 @@ test("headlines search hits every worker route and the page stays noindex", () =
 
 test("headline images stay within four and carry a reuse basis", () => {
   const file = JSON.parse(fs.readFileSync(path.join(root, "data", "headlines.json"), "utf8"));
-  const images = file.items.flatMap((item) => item.image ? [item.image] : []);
+  const images = file.items.flatMap((item, index) => item.image ? [{ image: item.image, index }] : []);
   assert.ok(images.length <= 4, String(images.length));
-  for (const image of images) {
-    for (const key of ["src", "sourcePage", "credit", "licence", "basisUrl", "alt"]) {
-      assert.ok(image[key], key);
-    }
-    assert.match(image.src, /^https:\/\/upload\.wikimedia\.org\//);
-    assert.match(image.basisUrl, /^https:\/\//);
-    assert.match(image.sourcePage, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
-    assert.equal(licenceOk(image.licence), true, image.licence);
-    assert.match(image.alt, /Chemical structure of /);
+  assert.ok(images.every((row) => row.index < 5));
+  assert.ok(images.filter((row) => row.image.type === "diagram").length <= 1);
+  for (let i = 1; i < images.length; i += 1) {
+    assert.notEqual(images[i].image.type, images[i - 1].image.type);
   }
+  for (const row of images) {
+    for (const key of ["src", "sourcePage", "credit", "licence", "basisUrl", "alt"]) {
+      assert.ok(row.image[key], key);
+    }
+    assert.match(row.image.basisUrl, /^https:\/\//);
+    assert.equal(licenceOk(row.image.licence) || row.image.licence === "Open Government Licence v3.0", true, row.image.licence);
+  }
+});
+
+test("image placement rejects a weak or non-allowlisted match and varies the type", () => {
+  assert.equal(licenceOk("CC BY-NC 4.0"), false);
+  assert.equal(licenceOk("CC BY-ND 4.0"), false);
+  assert.equal(licenceOk("All rights reserved"), false);
+  assert.equal(licenceOk("CC0"), true);
+  assert.equal(licenceOk("CC BY 4.0"), true);
+  assert.equal(licenceOk("CC BY-SA 4.0"), true);
+  assert.equal(licenceOk("Public domain"), true);
+  const base = {
+    src: "https://upload.wikimedia.org/example.jpg",
+    credit: "Ada Lovelace",
+    alt: "A laboratory bench",
+    licence: "CC BY 4.0",
+    basisUrl: "https://creativecommons.org/licenses/by/4.0/",
+    sourcePage: "https://commons.wikimedia.org/wiki/File:Example.jpg",
+    type: "photo",
+    relevance: 3,
+  };
+  const placed = placeImages([
+    { index: 0, candidates: [base, { ...base, src: "https://upload.wikimedia.org/diagram.png", type: "diagram", alt: "Chemical structure of asundexian", relevance: 3 }] },
+    { index: 1, candidates: [{ ...base, src: "https://upload.wikimedia.org/second.jpg", type: "photo", relevance: 3 }, { ...base, src: "https://upload.wikimedia.org/scope.jpg", type: "micrograph", alt: "Micrograph of lung tissue", relevance: 3 }] },
+    { index: 2, candidates: [{ ...base, src: "https://upload.wikimedia.org/weak.jpg", relevance: 1, alt: "A vague picture" }] },
+    { index: 3, candidates: [{ ...base, src: "https://upload.wikimedia.org/nc.jpg", licence: "CC BY-NC 4.0", relevance: 4 }] },
+    { index: 4, candidates: [{ ...base, src: "https://upload.wikimedia.org/child.jpg", alt: "A child in a hospital", relevance: 4, type: "illustration" }] },
+  ]);
+  assert.deepEqual(placed.map((row) => row.image.type), ["photo", "micrograph"]);
+  assert.equal(placed.filter((row) => row.image.type === "diagram").length, 0);
+  const onlyDiagrams = placeImages([
+    { index: 0, candidates: [{ ...base, src: "https://upload.wikimedia.org/a.svg", type: "diagram", relevance: 3 }] },
+    { index: 1, candidates: [{ ...base, src: "https://upload.wikimedia.org/b.svg", type: "diagram", relevance: 3 }] },
+  ]);
+  assert.equal(onlyDiagrams.length, 1);
+  const entities = imageEntities({ headline: "FDA approves Bayer's Sunharbo (asundexian), a new molecular entity", image_entity: { kind: "inn", name: "asundexian" } });
+  assert.equal(relevanceScore(entities, "Skeletal formula of asundexian"), 3);
+  assert.equal(relevanceScore(entities, "A random hospital corridor"), 0);
+  assert.equal(relevanceScore(entities, "The Bayer pattern on a Mars camera"), 0);
+  const pressure = imageEntities({ headline: "Europe recommends AstraZeneca's Baxfendy for high blood pressure in adults" });
+  const cuff = explainMatch(pressure, "A clinician measuring blood pressure with a cuff", "photo");
+  assert.equal(cuff.score, 3);
+  assert.match(cuff.reason, /blood pressure/);
+  assert.equal(explainMatch(pressure, "Cell Phones & Blood Pressure, after Adriaen Brouwer", "illustration").score, 0);
+  const tumor = imageEntities({ headline: "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24" });
+  assert.equal(imageType("Engineered polymeric microneedle cellular delivery. A basic overview of a porous microneedle matrix."), "diagram");
+  assert.equal(explainMatch(tumor, "porous microneedle matrix to load T-cells for delivery to solid tumors", "diagram").score, 0);
+  assert.equal(relevanceScore([{ term: "solid", kind: "topic" }], "a solid block"), 0);
+  assert.equal(imageResponseOk(200, "image/jpeg"), true);
+  assert.equal(imageResponseOk(200, "text/html"), false);
+  assert.equal(imageResponseOk(404, "image/jpeg"), false);
+  const open = openverseImage({
+    license: "by-sa",
+    license_version: "4.0",
+    title: "Aspirin crystals",
+    creator: "Someone",
+    url: "https://live.staticflickr.com/1/a.jpg",
+    foreign_landing_url: "https://www.flickr.com/photos/x/1",
+    width: 800,
+    height: 600,
+  }, entities);
+  assert.equal(open, null);
+  const kept = openverseImage({
+    license: "cc0",
+    license_version: "1.0",
+    license_url: "https://creativecommons.org/publicdomain/zero/1.0/",
+    title: "Bayer laboratory bench",
+    creator: "A chemist",
+    url: "https://live.staticflickr.com/1/bayer.jpg",
+    foreign_landing_url: "https://www.flickr.com/photos/x/2",
+    width: 800,
+    height: 600,
+    tags: [],
+  }, entities);
+  assert.equal(kept.licence.startsWith("CC0"), true);
+  assert.equal(kept.credit, "A chemist");
+  assert.ok(kept.alt);
+  const logo = nasaImage({
+    data: [{ media_type: "image", title: "NASA logo", description: "The NASA insignia", nasa_id: "logo1", photographer: "NASA" }],
+    links: [{ href: "https://images-assets.nasa.gov/image/logo1/logo1~small.jpg", width: 100, height: 100 }],
+  }, entities);
+  assert.equal(logo, null);
+  assert.equal(IMAGE_SOURCES["flickr-niaid"].allowed, false);
+  assert.match(IMAGE_SOURCES["flickr-niaid"].robots, /Disallow/);
+  assert.equal(IMAGE_SOURCES["nci-visuals"].allowed, false);
+  assert.equal(IMAGE_SOURCES["cdc-phil"].allowed, false);
+  assert.equal(IMAGE_SOURCES.openverse.allowed, false);
+  assert.match(IMAGE_SOURCES.openverse.robots, /Disallow: \/v1\/images\//);
+  assert.equal(IMAGE_SOURCES.nasa.allowed, true);
 });
 
 test("disabled x picks add nothing and a valid pick is capped", () => {

@@ -83,7 +83,7 @@ async function main() {
   const payload = buildHeadlines({ candidates, today, feedback, sources });
   try {
     const images = await attachImages(polite, payload.items, { cacheFile: path.join(root, "data", "image-cache.json") });
-    console.log(`images: ${images.placed} commons-calls: ${images.calls}`);
+    console.log(`images: ${images.placed} commons-calls: ${images.calls} openverse-calls: ${images.openverseCalls} nasa-calls: ${images.nasaCalls}`);
   } catch (error) {
     console.error(`images: ${error instanceof Error ? error.message : error}`);
   }

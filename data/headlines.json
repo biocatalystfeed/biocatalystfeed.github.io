@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-17T21:52:49.599Z",
+  "generated_at": "2026-11-17T23:14:33.053Z",
   "event_date": "2026-11-17",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -45,14 +45,14 @@
       "id": "ema",
       "enabled": true,
       "status": "ok",
-      "fetched": 21,
+      "fetched": 20,
       "note": "EMA daily medicines JSON. Variation decisions are not used; European Commission decision dates on already-authorised medicines are ignored. Source: European Medicines Agency."
     },
     {
       "id": "health-canada-noc",
       "enabled": true,
       "status": "ok",
-      "fetched": 137,
+      "fetched": 135,
       "note": "Health Canada Notice of Compliance Database. Contains information licensed under the Open Government Licence – Canada. Administrative and veterinary notices are dropped."
     },
     {
@@ -115,7 +115,7 @@
       "id": "fda-press",
       "enabled": true,
       "status": "ok",
-      "fetched": 11,
+      "fetched": 12,
       "note": "FDA press-release RSS. U.S. government work, published for syndication. Items are kept when the title or description names a drug, biologic, vaccine, trial, or related topic. The headline is the agency's title. The blurb adds the publication date and, when the description names a product before an outcome clause, that product text."
     },
     {
@@ -350,15 +350,19 @@
       "tier": 5,
       "scout_source": "openfda-drugsfda",
       "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Asundexian.svg/500px-Asundexian.svg.png",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Asundexian.svg",
-        "credit": "User:Innerstream",
-        "licence": "Public domain",
-        "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "alt": "Chemical structure of Asundexian",
-        "width": 500,
-        "height": 280,
-        "hosting": "hotlink"
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Pano-bayer-leverkusen.jpg/960px-Pano-bayer-leverkusen.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Pano-bayer-leverkusen.jpg",
+        "credit": "A.Savin",
+        "licence": "CC BY-SA 3.0",
+        "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "alt": "A pano of the Bayer main factories in Leverkusen, Germany.",
+        "width": 960,
+        "height": 173,
+        "hosting": "hotlink",
+        "type": "photo",
+        "relevance": 3,
+        "reason": "org \"Bayer\"",
+        "provider": "commons"
       }
     },
     {
@@ -372,18 +376,7 @@
       "significance": 90,
       "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
-      "scout_source": "ema",
-      "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Baxdrostat.svg/500px-Baxdrostat.svg.png",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Baxdrostat.svg",
-        "credit": "Vaccinationist",
-        "licence": "CC BY-SA 4.0",
-        "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "alt": "Chemical structure of baxdrostat",
-        "width": 500,
-        "height": 219,
-        "hosting": "hotlink"
-      }
+      "scout_source": "ema"
     },
     {
       "id": "openfda-crl:CRL_BLA761524_20261113.pdf",
@@ -409,7 +402,22 @@
       "significance": 90,
       "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
-      "scout_source": "ema"
+      "scout_source": "ema",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg/960px-Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
+        "credit": "Yale Rosen and Jian-Hua Qiao",
+        "licence": "CC BY-SA 2.0",
+        "basisUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "alt": "Small cell variant of squamous cell carcinoma (SCC) mimicking small cell lung carcinoma (SCLC). p63 immunochemistry",
+        "width": 960,
+        "height": 723,
+        "hosting": "hotlink",
+        "type": "micrograph",
+        "relevance": 3,
+        "reason": "exact condition \"lung cancer\" shown as a micrograph",
+        "provider": "commons"
+      }
     },
     {
       "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
@@ -422,7 +430,22 @@
       "significance": 84,
       "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 7d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
       "tier": 4,
-      "scout_source": "clinicaltrials-calendar"
+      "scout_source": "clinicaltrials-calendar",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Fonc-11-582664-g004.webp/500px-Fonc-11-582664-g004.webp",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fonc-11-582664-g004.webp",
+        "credit": "Zhang W, Kong X, Ai B, Wang Z, Wang X, Wang N, Zheng S, Fang Y, Wang J.",
+        "licence": "CC BY 4.0",
+        "basisUrl": "https://creativecommons.org/licenses/by/4.0",
+        "alt": "Figure 4 Mechanism of action of Avelumab. PD-L1 may be expressed on tumor cells and tumor-infiltrating immune cells and can contribute to the inhibition of the anti-tumor immune re",
+        "width": 500,
+        "height": 427,
+        "hosting": "hotlink",
+        "type": "diagram",
+        "relevance": 3,
+        "reason": "drug \"Avelumab\"",
+        "provider": "commons"
+      }
     },
     {
       "id": "ema:EMEA/H/C/007167:ema-opinion:2026-11-12",
@@ -435,18 +458,7 @@
       "significance": 90,
       "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
-      "scout_source": "ema",
-      "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Aumolertinib.svg/500px-Aumolertinib.svg.png",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aumolertinib.svg",
-        "credit": "User:Innerstream",
-        "licence": "Public domain",
-        "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "alt": "Chemical structure of Aumolertinib",
-        "width": 500,
-        "height": 275,
-        "hosting": "hotlink"
-      }
+      "scout_source": "ema"
     },
     {
       "id": "clinicaltrials-calendar:NCT06585787:2026-11-24",
@@ -579,6 +591,19 @@
       "scout_source": "mhra"
     },
     {
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "headline": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+      "blurb": "FDA today announced the Global Reliance Disclosure Program (GRDP), a landmark initiative that will fundamentally transform how the FDA's regulatory drug and biologic approval decisions.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "source_type": "news",
+      "source_name": "FDA press releases",
+      "published_at": "2026-11-17",
+      "significance": 76,
+      "significance_rationale": "fda-press 70; in 0d +6 = 76. FDA press release.",
+      "tier": 4,
+      "scout_source": "fda-press"
+    },
+    {
       "id": "openfda-crl:CRL_BLA761393_20260909.pdf",
       "headline": "FDA sends SEIKAGAKU Corporation a complete response letter",
       "blurb": "A complete response letter means the application was not approved as submitted, and the headings name facility and safety. Application BLA 761393, letter date Sep 9.",
@@ -670,32 +695,6 @@
       "scout_source": "europepmc"
     },
     {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-grants-accelerated-approval-new-treatment-head-and-neck-squamous-cell-carcinoma",
-      "headline": "FDA grants accelerated approval to new head and neck cancer treatment",
-      "blurb": "Food and Drug Administration today granted accelerated approval to Rybrevant Faspro (amivantamab and hyaluronidase-lpuj) for the treatment of adults with recurrent or metastatic head.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-grants-accelerated-approval-new-treatment-head-and-neck-squamous-cell-carcinoma",
-      "source_type": "news",
-      "source_name": "FDA press releases",
-      "published_at": "2026-11-05",
-      "significance": 73,
-      "significance_rationale": "fda-press 70; 12d old +3 = 73. FDA press release.",
-      "tier": 3,
-      "scout_source": "fda-press"
-    },
-    {
-      "id": "europepmc:MED:43040015",
-      "headline": "Chinese scientist sacked after child died in gene-editing trial",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040015).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03752-2",
-      "source_type": "paper",
-      "source_name": "Europe PMC",
-      "published_at": "2026-11-16",
-      "significance": 72,
-      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
-      "tier": 3,
-      "scout_source": "europepmc"
-    },
-    {
       "id": "openai-news:https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
       "headline": "Measuring how AI agents handle everyday wet-lab science",
       "blurb": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
@@ -709,10 +708,10 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43040016",
-      "headline": "Genetic variant that reshaped the human brain was inherited from Neanderthals",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040016).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03762-0",
+      "id": "europepmc:MED:43040015",
+      "headline": "Chinese scientist sacked after child died in gene-editing trial",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040015).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03752-2",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
@@ -735,10 +734,10 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "europepmc:MED:43040017",
-      "headline": "Can AI actually help the climate? Nations want to harness the technology",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040017).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03763-z",
+      "id": "europepmc:MED:43040016",
+      "headline": "Genetic variant that reshaped the human brain was inherited from Neanderthals",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040016).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03762-0",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
@@ -759,6 +758,19 @@
       "significance_rationale": "ai-news 68; 33d old 0 = 68. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "deepmind"
+    },
+    {
+      "id": "europepmc:MED:43040017",
+      "headline": "Can AI actually help the climate? Nations want to harness the technology",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040017).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03763-z",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-16",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
     },
     {
       "id": "bcf-ai:hydrogen-1.0",
