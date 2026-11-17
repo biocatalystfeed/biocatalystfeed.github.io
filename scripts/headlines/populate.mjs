@@ -6,42 +6,9 @@ import { Polite, USER_AGENT } from "./http.mjs";
 import { attachImages } from "./images.mjs";
 import { scoreItem, selectHeadlines } from "./ranking.mjs";
 import { SOURCES } from "./sources.mjs";
+import { readXPicks, xPickItems } from "./x-picks.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-
-function readXPicks(dir) {
-  try {
-    const data = JSON.parse(fs.readFileSync(path.join(dir, "data", "x_picks.json"), "utf8"));
-    return data && typeof data === "object" ? data : { enabled: false, picks: [] };
-  } catch {
-    return { enabled: false, picks: [] };
-  }
-}
-
-function applyXPicks(payload, picks) {
-  if (!picks?.enabled) return;
-  for (const pick of picks.picks || []) {
-    const url = String(pick.url || "");
-    const handle = String(pick.handle || "").replace(/^@/, "");
-    const date = String(pick.date || "");
-    const headline = String(pick.headline || "").trim();
-    const blurb = String(pick.blurb || "").trim();
-    if (!/^https:\/\/(?:x|twitter)\.com\//.test(url) || !handle || !/^\d{4}-\d{2}-\d{2}$/.test(date) || !headline || !blurb) continue;
-    payload.items.push({
-      id: `x-pick:${url}`,
-      headline,
-      blurb,
-      source_url: url,
-      source_type: "news",
-      source_name: `@${handle} on X`,
-      published_at: date,
-      significance: 40,
-      significance_rationale: "Curated X pick. The post text is not copied. See docs/headlines-x.md.",
-      tier: 1,
-      scout_source: "x-picks",
-    });
-  }
-}
 
 export function buildHeadlines({ candidates, today, feedback, sources }) {
   const deduped = new Map();
@@ -61,6 +28,8 @@ export function buildHeadlines({ candidates, today, feedback, sources }) {
       scout_source: candidate.scout_source,
       drop: scored.drop,
       dedupe_key: candidate.dedupe_key,
+      ...(candidate.image_entity ? { image_entity: candidate.image_entity } : {}),
+      ...(candidate.linked_url ? { linked_url: candidate.linked_url } : {}),
     };
     const key = item.dedupe_key || item.id;
     const prev = deduped.get(key);
@@ -109,14 +78,15 @@ async function main() {
       console.error(`${source.id}: ${note}`);
     }
   }
+  const picks = readXPicks(path.join(root, "data", "x_picks.json"));
+  candidates.push(...xPickItems(picks, candidates.map((item) => item.source_url)));
   const payload = buildHeadlines({ candidates, today, feedback, sources });
   try {
-    const placed = await attachImages(polite, payload.items);
-    console.log(`images: ${placed}`);
+    const images = await attachImages(polite, payload.items, { cacheFile: path.join(root, "data", "image-cache.json") });
+    console.log(`images: ${images.placed} commons-calls: ${images.calls}`);
   } catch (error) {
     console.error(`images: ${error instanceof Error ? error.message : error}`);
   }
-  applyXPicks(payload, readXPicks(root));
   const out = path.join(root, "data", "headlines.json");
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, `${JSON.stringify(payload, null, 2)}\n`);

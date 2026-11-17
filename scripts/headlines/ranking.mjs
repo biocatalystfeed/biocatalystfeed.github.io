@@ -75,6 +75,7 @@ export const RULES = {
     "nih-news": 60,
     "ai-news": 68,
     "mhra-news": 74,
+    "x-pick": 58,
     "science-news": 64,
   },
   labels: {
@@ -121,6 +122,7 @@ export const RULES = {
     "nih-news": "NIH news release.",
     "ai-news": "Official lab blog post on an AI or biology topic.",
     "mhra-news": "UK MHRA news item from the GOV.UK atom feed.",
+    "x-pick": "Curated X post. The post text is not copied. The item links to the post and to a primary source.",
     "science-news": "Science or mainstream news item from an official public feed.",
   },
   adjustments: {
@@ -177,6 +179,7 @@ export const RULES = {
     deepmind: 3,
     "openai-news": 3,
     "nvidia-blog": 2,
+    x: 8,
   },
   ruleCaps: {
     "fda-anda": 3,

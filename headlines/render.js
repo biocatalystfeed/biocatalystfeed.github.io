@@ -48,7 +48,11 @@ export function figureFor(item) {
     loading: "lazy",
   });
   const caption = el("figcaption", { class: "credit" });
-  caption.append(`${image.credit || ""} `);
+  caption.append(`${image.credit || ""}. `);
   if (image.basisUrl) caption.append(el("a", { href: image.basisUrl, text: image.licence || "licence", rel: "noopener noreferrer" }));
+  if (image.sourcePage) {
+    caption.append(" · ");
+    caption.append(el("a", { href: image.sourcePage, text: "File page", rel: "noopener noreferrer" }));
+  }
   return el("figure", { class: "shot" }, [img, caption]);
 }

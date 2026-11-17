@@ -484,6 +484,7 @@ export function makeItem(fields) {
     rule: fields.rule,
     adjustments: fields.adjustments || [],
     dedupe_key: fields.dedupe_key || fields.id,
+    ...(fields.image_entity ? { image_entity: fields.image_entity } : {}),
   };
 }
 

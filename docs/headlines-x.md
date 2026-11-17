@@ -30,13 +30,7 @@ The key would be a GitHub Actions secret, not a file in the repo. The workflow w
 
 ## (b) Curated `data/x_picks.json`
 
-An agent with its own sanctioned X read access (not a key stored in this repo) writes a small JSON file and opens a pull request. Each pick is:
-
-- `url`: the post on x.com
-- `handle`: the account
-- `date`: YYYY-MM-DD
-- `headline`: our short lead
-- `blurb`: one sentence in our words, not the post text
+An agent with its own sanctioned X read access (not a key stored in this repo) writes a small JSON file and opens a pull request. Each pick is `postUrl`, `handle` (from `scripts/headlines/x-allowlist.json`), `org`, `postedAt`, `linkedUrl` (a primary-source host on that same allowlist), `linkedTitle`, `kind` (`paper`, `approval`, `model`, or `other`), `headline`, and `blurb`. The headline links to the post. The blurb includes `linkedUrl`. If that URL is already on the page, the pick is dropped. The X source is capped at 15 percent of a full page.
 
 `populate.mjs` merges those rows only when `enabled` is true. The same ranking caps as the rest of the page should apply once this is turned on. The page links to the post. It does not store or reprint the post.
 

@@ -8,7 +8,8 @@ import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
 import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, paperCopy, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
-import { licenceOk, pageImage } from "../images.mjs";
+import { commonsImage, licenceOk, pageImage, uploadThumb } from "../images.mjs";
+import { hostAllowed, xPickItems } from "../x-picks.mjs";
 import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
@@ -524,9 +525,92 @@ test("headline images stay within four and carry a reuse basis", () => {
     for (const key of ["src", "sourcePage", "credit", "licence", "basisUrl", "alt"]) {
       assert.ok(image[key], key);
     }
-    assert.match(image.src, /^https:\/\//);
+    assert.match(image.src, /^https:\/\/upload\.wikimedia\.org\//);
     assert.match(image.basisUrl, /^https:\/\//);
-    assert.match(image.sourcePage, /^https:\/\//);
+    assert.match(image.sourcePage, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    assert.equal(licenceOk(image.licence), true, image.licence);
+    assert.match(image.alt, /Chemical structure of /);
   }
+});
+
+test("disabled x picks add nothing and a valid pick is capped", () => {
+  assert.deepEqual(xPickItems({ enabled: false, picks: [{ postUrl: "https://x.com/US_FDA/status/1", handle: "US_FDA", postedAt: "2026-11-01", linkedUrl: "https://www.fda.gov/news", linkedTitle: "Notice", kind: "approval", headline: "FDA note", blurb: "A notice." }] }), []);
+  const badHost = xPickItems({ enabled: true, picks: [{ postUrl: "https://x.com/US_FDA/status/1", handle: "US_FDA", postedAt: "2026-11-01", linkedUrl: "https://example.com/story", kind: "other", headline: "Off site", blurb: "Not a primary source." }] });
+  assert.equal(badHost.length, 0);
+  const duplicate = xPickItems({
+    enabled: true,
+    picks: [{ postUrl: "https://x.com/NIH/status/9", handle: "NIH", org: "NIH", postedAt: "2026-11-02", linkedUrl: "https://www.nih.gov/news/example", linkedTitle: "Grant", kind: "other", headline: "NIH posts a study page", blurb: "The post points at the study." }],
+  }, ["https://nih.gov/news/example"]);
+  assert.equal(duplicate.length, 0);
+  const kept = xPickItems({
+    enabled: true,
+    picks: [{ postUrl: "https://x.com/GoogleDeepMind/status/42", handle: "GoogleDeepMind", org: "Google DeepMind", postedAt: "2026-11-03", linkedUrl: "https://deepmind.google/blog/example", linkedTitle: "Model", kind: "model", headline: "DeepMind links a model card", blurb: "The post points at the model card." }],
+  });
+  assert.equal(kept.length, 1);
+  assert.equal(kept[0].source_url, "https://x.com/GoogleDeepMind/status/42");
+  assert.match(kept[0].blurb, /https:\/\/deepmind\.google\/blog\/example/);
+  assert.equal(kept[0].scout_source, "x");
+  assert.equal(hostAllowed("https://ai.nejm.org/doi/full/10.1056/example"), true);
+  assert.equal(hostAllowed("https://www.thelancet.com/journals/lancet/article/PIIS0140"), true);
+  const journal = xPickItems({
+    enabled: true,
+    picks: [{
+      postUrl: "https://x.com/EricTopol/status/77",
+      handle: "EricTopol",
+      org: "Scripps",
+      postedAt: "2026-11-04",
+      linkedUrl: "https://ai.nejm.org/doi/full/10.1056/AIoa2500123",
+      linkedTitle: "A NEJM AI paper",
+      kind: "paper",
+      doi: "10.1056/AIoa2500123",
+      blurbSource: "abstract",
+      headline: "NEJM AI posts a methods paper",
+      blurb: "The note points at a methods paper in NEJM AI.",
+    }],
+  });
+  assert.equal(journal.length, 1);
+  assert.equal(journal[0].doi, "10.1056/AIoa2500123");
+  assert.equal(journal[0].blurb_source, "abstract");
+  const tooLong = "word ".repeat(31).trim();
+  assert.equal(xPickItems({ enabled: true, picks: [{ postUrl: "https://x.com/NIH/status/3", handle: "NIH", postedAt: "2026-11-01", linkedUrl: "https://www.nih.gov/news/long", kind: "other", headline: "A short NIH note", blurb: tooLong }] }).length, 0);
+  assert.equal(xPickItems({ enabled: true, picks: [{ postUrl: "https://x.com/NIH/status/4", handle: "NIH", postedAt: "2026-11-01", linkedUrl: "https://www.nih.gov/news/echo", kind: "other", headline: "NIH describes a new study design", blurb: "NIH describes a new study design today" }] }).length, 0);
+  assert.equal(xPickItems({ enabled: true, picks: [{ postUrl: "https://x.com/NIH/status/5", handle: "NIH", postedAt: "2026-11-01", linkedUrl: "https://www.nih.gov/news/post", kind: "other", headline: "NIH links a page", blurb: "The note points at the study page.", postText: "The note points at the study page in full." }] }).length, 0);
+  assert.equal(xPickItems({ enabled: true, picks: [{ postUrl: "https://x.com/NIH/status/6", handle: "NIH", postedAt: "2026-11-01", linkedUrl: "https://www.nih.gov/news/text", kind: "other", headline: "NIH links a page", blurb: "The note points at the study page.", text: "stored post" }] }).length, 0);
+  assert.equal(xPickItems({ enabled: true, picks: [{ postUrl: "https://x.com/NIH/status/8", handle: "NIH", postedAt: "2026-11-01", linkedUrl: "https://www.thelancet.com/journals/lancet/article/x", kind: "paper", headline: "Lancet page", blurb: "Bad source label.", blurbSource: "tweet" }] }).length, 0);
+  const items = [];
+  for (let i = 0; i < 20; i++) items.push({ id: `x${i}`, scout_source: "x", rule: "x-pick", significance: 90, drop: false, published_at: "2026-11-12" });
+  for (const source of ["europepmc", "biorxiv", "medrxiv", "bcf-papers", "nih-reporter", "sec-edgar-8k", "fda-press", "deepmind", "openai-news", "clinicaltrials-calendar", "bcf-ai-discovery", "nvidia-blog"]) {
+    for (let i = 0; i < 6; i++) items.push({ id: `${source}-${i}`, scout_source: source, rule: "paper-journal", significance: 80, drop: false, published_at: "2026-11-10" });
+  }
+  const selected = selectHeadlines(items);
+  const xCount = selected.filter((item) => item.scout_source === "x").length;
+  assert.ok(xCount <= Math.max(1, Math.floor(RULES.globalCap * RULES.sourceShare)), String(xCount));
+  const page = {
+    title: "File:Asundexian.svg",
+    categories: [{ title: "Category:Chemical structures" }],
+    imageinfo: [{
+      mime: "image/svg+xml",
+      url: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Asundexian.svg",
+      width: 512,
+      height: 256,
+      thumbwidth: 400,
+      thumbheight: 200,
+      extmetadata: {
+        LicenseShortName: { value: "CC0" },
+        LicenseUrl: { value: "https://creativecommons.org/publicdomain/zero/1.0/" },
+        Artist: { value: "<a href=\"https://commons.wikimedia.org/wiki/User:Example\">Example</a>" },
+        ImageDescription: { value: "Skeletal formula of asundexian." },
+      },
+    }],
+  };
+  const built = commonsImage(page, "asundexian");
+  assert.ok(built);
+  assert.match(built.src, /^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\//);
+  assert.equal(built.credit, "Example");
+  assert.equal(licenceOk(built.licence), true);
+  assert.equal(commonsImage({ ...page, categories: [{ title: "Category:Logos" }] }, "asundexian"), null);
+  assert.equal(licenceOk("Non-free"), false);
+  assert.equal(licenceOk("PD-US"), true);
+  assert.match(uploadThumb(page.imageinfo[0].url), /400px-Asundexian\.svg\.png$/);
 });
 

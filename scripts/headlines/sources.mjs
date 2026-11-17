@@ -139,6 +139,7 @@ export function drugsfdaItems(applications, today, labels = new Map()) {
         scout_source: "openfda-drugsfda",
         rule,
         adjustments,
+        image_entity: named.ingredient ? { kind: "inn", name: named.ingredient } : null,
         dedupe_key: app.startsWith("BLA") && submission.submission_type === "ORIG"
           ? `bla:${applDigits(application.application_number)}:orig`
           : `drugsfda:${application.application_number}:${published}:${submission.submission_type}:${submission.submission_number || ""}`,
@@ -491,6 +492,7 @@ export function emaItems(records, today) {
       scout_source: "ema",
       rule,
       adjustments,
+      image_entity: inn ? { kind: "inn", name: inn } : null,
       dedupe_key: `ema:${record.ema_product_number || name}`,
     });
   }

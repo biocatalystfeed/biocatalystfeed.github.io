@@ -28,6 +28,8 @@ jobs:
           path: .cache/headlines
           key: headlines-http-v1
       - name: Populate headlines
+        # Reads data/x_picks.json from this checkout. The scheduled run is main,
+        # so a later data-only commit on main is applied on the next run.
         env:
           HEADLINES_CACHE_DIR: ${{ github.workspace }}/.cache/headlines
         run: node scripts/headlines/populate.mjs

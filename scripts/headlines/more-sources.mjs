@@ -53,9 +53,11 @@ export function pressItems(entries, today, { scout, sourceName, rule, feed, sour
     if (!title) continue;
     if (scout === "fda-press" && (!DRUGISH.test(`${title} ${entry.description || ""}`) || (FOODISH.test(title) && !DRUGISH.test(title)))) continue;
     const id = `${scout}:${entry.link || title}`;
+    const product = pressProduct(entry.description || "");
+    const inn = /\(([a-z][a-z0-9-]{4,})\)/.exec(product)?.[1] || "";
     const copy = pressCopy(id, {
       title,
-      product: pressProduct(entry.description || ""),
+      product,
       description: entry.description || "",
       published,
       feed,
@@ -71,6 +73,7 @@ export function pressItems(entries, today, { scout, sourceName, rule, feed, sour
       published_at: published,
       scout_source: scout,
       rule,
+      image_entity: inn ? { kind: "inn", name: inn } : null,
       dedupe_key: `${scout}:${title.toLowerCase()}`,
     });
   }
