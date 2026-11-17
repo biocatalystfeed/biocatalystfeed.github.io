@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<title>Headline review (test version) — BioCatalystFeed</title>
+<link rel="stylesheet" href="/headlines/headlines.css">
+<link rel="stylesheet" href="/headlines/review/review.css">
+</head>
+<body class="review">
+<p class="test-flag">Test version</p>
+<header class="mast">
+  <h1>HEADLINE REVIEW</h1>
+  <p class="dateline" id="dateline"></p>
+  <p class="dek">Scores and one-line rationales from the ranking file. Feedback stays in this browser until you copy or download it. No sign-in and no server.</p>
+  <p class="review-link"><a href="/headlines/">Back to the test headlines</a></p>
+</header>
+<main id="main"><p class="empty">Loading headlines…</p></main>
+<section class="export" aria-label="Export feedback">
+  <h2>Overall notes</h2>
+  <textarea id="overall" rows="4" placeholder="Notes about the whole page. These are not parsed automatically."></textarea>
+  <div class="export-actions">
+    <button type="button" id="download">Download JSON</button>
+    <button type="button" id="copy">Copy JSON</button>
+    <button type="button" id="clear">Clear this browser</button>
+    <span id="export-status" role="status"></span>
+  </div>
+  <pre id="preview" tabindex="0"></pre>
+</section>
+<script type="module" src="/headlines/review/review.js"></script>
+</body>
+</html>

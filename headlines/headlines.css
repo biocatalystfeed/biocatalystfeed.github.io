@@ -1,0 +1,111 @@
+:root {
+  --ink: #161616;
+  --paper: #f4f1e8;
+  --rule: #1c1c1c;
+  --link: #1428a0;
+  --muted: #5e584e;
+  --test: #9d1c1c;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 10px 14px 48px;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+a { color: var(--link); }
+a:visited { color: #551a8b; }
+.test-flag {
+  margin: 0;
+  color: var(--test);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.mast {
+  text-align: center;
+  border-top: 3px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 8px 8px 10px;
+}
+.mast h1 {
+  margin: 2px 0 0;
+  font-family: Impact, "Arial Narrow", Haettenschweiler, sans-serif;
+  font-size: clamp(40px, 8vw, 76px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 0.88;
+}
+.dateline, .dek, .review-link {
+  margin: 4px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.dek { color: var(--muted); }
+.review-link a { font-weight: 700; }
+.lead {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 16px 8px 8px;
+  text-align: center;
+  border-bottom: 3px solid var(--rule);
+}
+.kicker {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.lead .hed {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 0.98;
+  text-decoration-thickness: 2px;
+}
+.lead .blurb {
+  max-width: 680px;
+  margin: 8px auto 0;
+  font-size: 16px;
+}
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px 22px;
+  padding-top: 14px;
+}
+.col { min-width: 0; }
+.item { margin: 0 0 13px; }
+.hed { font-weight: 700; line-height: 1.05; }
+.tier-5 .hed { font-size: 28px; }
+.tier-4 .hed { font-size: 22px; }
+.tier-3 .hed { font-size: 18px; }
+.tier-2 .hed { font-size: 15px; }
+.tier-1 .hed { font-size: 13px; }
+.blurb, .meta, .empty {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.blurb { margin: 3px 0 0; font-size: 13px; line-height: 1.35; }
+.meta { margin: 2px 0 0; color: var(--muted); font-size: 11px; }
+.foot {
+  margin-top: 18px;
+  border-top: 1px solid var(--rule);
+  padding-top: 8px;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.foot p { margin: 0 0 6px; }
+@media (max-width: 800px) {
+  .columns { grid-template-columns: 1fr; }
+  .lead .hed { font-size: 34px; }
+}

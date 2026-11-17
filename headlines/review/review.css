@@ -1,0 +1,71 @@
+body.review { max-width: 860px; }
+body.review .mast h1 { font-size: clamp(32px, 6vw, 48px); }
+.card {
+  margin: 0 0 16px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid #1c1c1c;
+}
+.scoreline {
+  margin: 4px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.scoreline strong { font-size: 22px; }
+.rationale {
+  margin: 0 0 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+}
+.controls { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+fieldset.size { margin: 0; padding: 0; border: 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+fieldset.size legend { padding: 0; font-size: 13px; }
+.vote, .export button, .size {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.vote, .export button {
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 1px solid #1c1c1c;
+  background: #fff;
+  cursor: pointer;
+}
+.vote[aria-pressed="true"] { background: #1c1c1c; color: #fff; }
+.note, #overall, #preview {
+  width: 100%;
+  margin-top: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.note, #overall { min-height: 44px; }
+body.review { padding-bottom: 76px; }
+.export { margin-top: 8px; }
+.export h2 { margin: 0 0 6px; font-size: 18px; }
+.export-actions {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  padding: 8px 14px;
+  background: #f4f1e8;
+  border-top: 3px solid #1c1c1c;
+}
+#preview {
+  max-height: 240px;
+  overflow: auto;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #1c1c1c;
+  white-space: pre-wrap;
+}
+.sources { font-family: Arial, Helvetica, sans-serif; font-size: 13px; }
+@media (max-width: 800px) {
+  .vote, .export button { min-height: 44px; }
+}
