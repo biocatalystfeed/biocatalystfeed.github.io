@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-17T23:14:33.053Z",
+  "generated_at": "2026-11-17T23:55:52.691Z",
   "event_date": "2026-11-17",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -45,14 +45,14 @@
       "id": "ema",
       "enabled": true,
       "status": "ok",
-      "fetched": 20,
+      "fetched": 21,
       "note": "EMA daily medicines JSON. Variation decisions are not used; European Commission decision dates on already-authorised medicines are ignored. Source: European Medicines Agency."
     },
     {
       "id": "health-canada-noc",
       "enabled": true,
       "status": "ok",
-      "fetched": 135,
+      "fetched": 137,
       "note": "Health Canada Notice of Compliance Database. Contains information licensed under the Open Government Licence – Canada. Administrative and veterinary notices are dropped."
     },
     {
@@ -376,7 +376,22 @@
       "significance": 90,
       "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
-      "scout_source": "ema"
+      "scout_source": "ema",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Baxdrostat.svg/500px-Baxdrostat.svg.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Baxdrostat.svg",
+        "credit": "Vaccinationist",
+        "licence": "CC BY-SA 4.0",
+        "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "alt": "Chemical structure of baxdrostat",
+        "width": 500,
+        "height": 219,
+        "hosting": "hotlink",
+        "type": "diagram",
+        "relevance": 3,
+        "reason": "drug \"baxdrostat\"",
+        "provider": "commons"
+      }
     },
     {
       "id": "openfda-crl:CRL_BLA761524_20261113.pdf",
@@ -389,7 +404,22 @@
       "significance": 88,
       "significance_rationale": "fda-crl 82; 4d old +6 = 88. FDA complete response letter.",
       "tier": 5,
-      "scout_source": "openfda-crl"
+      "scout_source": "openfda-crl",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2022_-_Auto-Tech_%26_TalkRobot_SM6_1453_%2852474736868%29.jpg/960px-2022_-_Auto-Tech_%26_TalkRobot_SM6_1453_%2852474736868%29.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2022_-_Auto-Tech_%26_TalkRobot_SM6_1453_(52474736868).jpg",
+        "credit": "Web Summit",
+        "licence": "CC BY 2.0",
+        "basisUrl": "https://creativecommons.org/licenses/by/2.0",
+        "alt": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+        "width": 960,
+        "height": 1445,
+        "hosting": "hotlink",
+        "type": "photo",
+        "relevance": 3,
+        "reason": "drug \"Summit\"",
+        "provider": "commons"
+      }
     },
     {
       "id": "ema:EMEA/H/C/006743:ema-opinion:2026-11-12",
@@ -430,22 +460,7 @@
       "significance": 84,
       "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 7d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
       "tier": 4,
-      "scout_source": "clinicaltrials-calendar",
-      "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Fonc-11-582664-g004.webp/500px-Fonc-11-582664-g004.webp",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fonc-11-582664-g004.webp",
-        "credit": "Zhang W, Kong X, Ai B, Wang Z, Wang X, Wang N, Zheng S, Fang Y, Wang J.",
-        "licence": "CC BY 4.0",
-        "basisUrl": "https://creativecommons.org/licenses/by/4.0",
-        "alt": "Figure 4 Mechanism of action of Avelumab. PD-L1 may be expressed on tumor cells and tumor-infiltrating immune cells and can contribute to the inhibition of the anti-tumor immune re",
-        "width": 500,
-        "height": 427,
-        "hosting": "hotlink",
-        "type": "diagram",
-        "relevance": 3,
-        "reason": "drug \"Avelumab\"",
-        "provider": "commons"
-      }
+      "scout_source": "clinicaltrials-calendar"
     },
     {
       "id": "ema:EMEA/H/C/007167:ema-opinion:2026-11-12",
