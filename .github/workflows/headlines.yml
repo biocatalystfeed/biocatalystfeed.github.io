@@ -6,6 +6,14 @@ on:
     # The populator waits out source crawl-delays itself.
     - cron: "20 1,7,13,19 * * *"
   workflow_dispatch:
+  # A change to the picks file refreshes headlines without waiting for cron.
+  # The job commits only data/headlines.json, which is outside this path
+  # filter. A push made with GITHUB_TOKEN does not start workflows either,
+  # so the populate commit cannot run this job again.
+  push:
+    branches: [main]
+    paths:
+      - data/x_picks.json
 
 permissions:
   contents: write
