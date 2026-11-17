@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-17T01:53:11.755Z",
+  "generated_at": "2026-11-17T01:59:00.695Z",
   "event_date": "2026-11-17",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -385,7 +385,7 @@
     },
     {
       "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
-      "headline": "Avelumab Program Rollover Study",
+      "headline": "Solid Tumors Phase 3 primary completion 2026-11-24",
       "blurb": "Avelumab Program Rollover Study. ClinicalTrials.gov status active not recruiting.",
       "source_url": "https://clinicaltrials.gov/study/NCT03815643",
       "source_type": "trial",
@@ -489,7 +489,7 @@
     },
     {
       "id": "clinicaltrials-calendar:NCT07596199:2026-11-23",
-      "headline": "Diphtheria-Tetanus-acellular Pertussis Vaccines: Phase 3 primary completion",
+      "headline": "Diphtheria-Tetanus-acellular Pertussis Vaccines: Phase 3 primary completion 2026-11-23",
       "blurb": "A Study on the Immune Response and Safety of a Combined Vaccine Against Diphtheria, Tetanus and Acellular Pertussis (dTpa) in Japanese Healthy Pregnant Women. The estimated primary completion date is 2026-11-23.",
       "source_url": "https://clinicaltrials.gov/study/NCT07596199",
       "source_type": "trial",
@@ -515,8 +515,8 @@
     },
     {
       "id": "europepmc:MED:43035093",
-      "headline": "Once-Weekly Ribupatide for Weight Loss in Adults in China",
-      "blurb": "With Overweight or Obesity: Research Summary. Journal listed as JAMA.",
+      "headline": "Once-Weekly Ribupatide for Weight Loss in Adults in China With Overweight or Obesity",
+      "blurb": "Research Summary. Journal listed as JAMA.",
       "source_url": "https://doi.org/10.1001/jama.2026.24848",
       "source_type": "paper",
       "source_name": "Europe PMC",
@@ -541,7 +541,7 @@
     },
     {
       "id": "europepmc:MED:43035094",
-      "headline": "Tirzepatide in Adolescents With Obesity: Research Summary.",
+      "headline": "Tirzepatide in Adolescents With Obesity: Research Summary",
       "blurb": "Europe PMC MED 43035094. First publication date 2026-11-15.",
       "source_url": "https://doi.org/10.1001/jama.2026.23448",
       "source_type": "paper",
@@ -567,8 +567,8 @@
     },
     {
       "id": "europepmc:MED:43035095",
-      "headline": "JAMA: Tale of Two Estimands: Distinguishing What Is Observed",
-      "blurb": "From What Is Inferred. Authors listed: Heagerty PJ, Lewis RJ.",
+      "headline": "JAMA: Tale of Two Estimands: Distinguishing What Is Observed From What Is Inferred",
+      "blurb": "Authors listed: Heagerty PJ, Lewis RJ. First publication date 2026-11-15.",
       "source_url": "https://doi.org/10.1001/jama.2026.24386",
       "source_type": "paper",
       "source_name": "Europe PMC",
@@ -593,7 +593,7 @@
     },
     {
       "id": "europepmc:MED:43035096",
-      "headline": "Tirzepatide in Adolescents With Obesity: The SURMOUNT-ADOLESCENTS Randomized Clinical Trial.",
+      "headline": "Tirzepatide in Adolescents With Obesity: The SURMOUNT-ADOLESCENTS Randomized Clinical Trial",
       "blurb": "Journal listed as JAMA. First publication date 2026-11-15.",
       "source_url": "https://doi.org/10.1001/jama.2026.23420",
       "source_type": "paper",
@@ -619,7 +619,7 @@
     },
     {
       "id": "europepmc:MED:43035097",
-      "headline": "Pediatric Obesity Pharmacotherapy: From Therapeutic Scarcity to Therapeutic Choice.",
+      "headline": "Pediatric Obesity Pharmacotherapy: From Therapeutic Scarcity to Therapeutic Choice",
       "blurb": "Europe PMC MED 43035097. First publication date 2026-11-15.",
       "source_url": "https://doi.org/10.1001/jama.2026.22895",
       "source_type": "paper",
@@ -645,8 +645,8 @@
     },
     {
       "id": "europepmc:MED:43035098",
-      "headline": "Once-Weekly Ribupatide for Weight Loss in Adults in China",
-      "blurb": "With Overweight or Obesity: The GEMINI-1 Randomized Clinical Trial. Europe PMC MED 43035098.",
+      "headline": "Once-Weekly Ribupatide for Weight Loss in Adults in China With Overweight or Obesity",
+      "blurb": "The GEMINI-1 Randomized Clinical Trial. Europe PMC MED 43035098.",
       "source_url": "https://doi.org/10.1001/jama.2026.24796",
       "source_type": "paper",
       "source_name": "Europe PMC",
@@ -671,7 +671,7 @@
     },
     {
       "id": "bcf-papers:MED:43034332",
-      "headline": "Cytotechnology: A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells.",
+      "headline": "Cytotechnology: A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
       "blurb": "Authors listed: Chen H, Li D, Shen C. First publication date 2026-11-14.",
       "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
       "source_type": "paper",
@@ -697,7 +697,7 @@
     },
     {
       "id": "bcf-papers:MED:43023242",
-      "headline": "Int J Oncol: CRISPR opens the door to targeted therapy against glioblastoma (Review).",
+      "headline": "Int J Oncol: CRISPR opens the door to targeted therapy against glioblastoma (Review)",
       "blurb": "Authors listed: Zhang C, Zhang Y, Song N, Zhang L, Zhao Y, Yao C. First publication date 2026-11-13.",
       "source_url": "https://doi.org/10.3892/ijo.2026.5957",
       "source_type": "paper",
@@ -749,8 +749,8 @@
     },
     {
       "id": "medrxiv:10.64898/2026.11.10.26367736",
-      "headline": "Generative AI Versus Primary Care Physicians",
-      "blurb": "from Plan Initiation to Long-Term Maintenance of Chronic Disease Self-Management: A Vignette-Based Validation Study. Corresponding author institution: Peking University.",
+      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
+      "blurb": "of Chronic Disease Self-Management: A Vignette-Based Validation Study. Corresponding author institution: Peking University.",
       "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
       "source_type": "paper",
       "source_name": "medRxiv",
@@ -775,8 +775,8 @@
     },
     {
       "id": "medrxiv:10.64898/2026.11.10.26367739",
-      "headline": "Silent Drift and Site-level Variance in Clinical AI",
-      "blurb": "Real-world performance and subgroup analysis for post-market monitoring of an FDA-cleared artificial intelligence (AI) triage tool for high-risk use case of pulmonary embolism. Category: radiology and imaging.",
+      "headline": "Silent Drift and Site-level Variance in Clinical AI: Real-world performance and subgroup analysis",
+      "blurb": "for post-market monitoring of an FDA-cleared artificial intelligence (AI) triage tool for high-risk use case of pulmonary embolism. Category: radiology and imaging.",
       "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367739",
       "source_type": "paper",
       "source_name": "medRxiv",
@@ -788,8 +788,8 @@
     },
     {
       "id": "bcf-papers:MED:43015004",
-      "headline": "A machine learning-based predictive tool",
-      "blurb": "for complete renal response in lupus nephritis leverages the 3-month treatment milestone. Europe PMC MED 43015004.",
+      "headline": "A machine learning-based predictive tool for complete renal response",
+      "blurb": "in lupus nephritis leverages the 3-month treatment milestone. Europe PMC MED 43015004.",
       "source_url": "https://doi.org/10.1080/0886022x.2026.2751782",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
@@ -801,8 +801,8 @@
     },
     {
       "id": "medrxiv:10.64898/2026.11.10.26367753",
-      "headline": "medRxiv: AToP: An Explainability Framework for Transformer-Based EHR Predictions",
-      "blurb": "Using Attribution-Guided Temporal Pattern Mining. Preprint on medRxiv, not a peer-reviewed article.",
+      "headline": "medRxiv: AToP: An Explainability Framework for Transformer-Based EHR Predictions Using Attribution-Guided Temporal Pattern Mining",
+      "blurb": "Preprint on medRxiv, not a peer-reviewed article. License field: cc_by_nc_nd.",
       "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367753",
       "source_type": "paper",
       "source_name": "medRxiv",
@@ -814,8 +814,8 @@
     },
     {
       "id": "bcf-papers:MED:43016163",
-      "headline": "Predictive value of systemic inflammatory indices for new-onset atrial fibrillation",
-      "blurb": "after acute myocardial infarction: an interpretable machine learning study. Europe PMC MED 43016163.",
+      "headline": "Predictive value of systemic inflammatory indices for new-onset atrial fibrillation after acute myocardial infarction",
+      "blurb": "an interpretable machine learning study. Europe PMC MED 43016163.",
       "source_url": "https://doi.org/10.1080/07853890.2026.2759368",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
@@ -840,8 +840,8 @@
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.18236v1",
-      "headline": "Deciphering multiple binding modes in large protein complexes",
-      "blurb": "via Enhanced Sampling and beta-VAE: the CYFIP1-eIF4E case. arXiv preprint.",
+      "headline": "Deciphering multiple binding modes in large protein complexes via Enhanced Sampling and beta-VAE",
+      "blurb": "the CYFIP1-eIF4E case. arXiv preprint.",
       "source_url": "https://arxiv.org/abs/2611.18236v1",
       "source_type": "paper",
       "source_name": "BioCatalystFeed AI discovery",

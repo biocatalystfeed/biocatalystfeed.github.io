@@ -264,6 +264,33 @@ export function compactIndication(phrase, maxWords = 6) {
   return { core: cut.headline, extra: changed ? original : "" };
 }
 
+export function shortenPaperHeadline(value) {
+  const text = String(value || "").replace(/\s+/g, " ").trim().replace(/\.+$/, "");
+  if (wordCount(text) <= HEADLINE_WORD_MAX) return { headline: text, extra: "" };
+  const cuts = [];
+  const add = (index, skip) => {
+    const left = text.slice(0, index).replace(/[\s,:;—–-]+$/g, "").trim();
+    const right = text.slice(index + skip).replace(/^[\s,:;—–-]+/g, "").trim();
+    const n = wordCount(left);
+    if (left && right && n >= 6 && n <= HEADLINE_WORD_MAX) cuts.push({ left, right, n });
+  };
+  for (const match of text.matchAll(/\s*[:;]\s+/g)) add(match.index, match[0].length);
+  for (const match of text.matchAll(/\s+[–—]\s+/g)) add(match.index, match[0].length);
+  for (const match of text.matchAll(/,\s+/g)) add(match.index, match[0].length);
+  for (const pattern of [/\s+of\b/gi, /\s+for\b/gi, /\s+from\b/gi, /\s+to\b/gi, /\s+with\b/gi, /\s+in\b/gi, /\s+after\b/gi, /\s+using\b/gi, /\s+via\b/gi]) {
+    for (const match of text.matchAll(pattern)) add(match.index, 0);
+  }
+  if (cuts.length) {
+    cuts.sort((a, b) => b.n - a.n);
+    return { headline: cuts[0].left, extra: cuts[0].right };
+  }
+  const words = text.split(/\s+/);
+  const dangling = new Set(["a", "an", "the", "of", "and", "or", "for", "to", "in", "with", "on", "by", "from", "as"]);
+  let keep = Math.min(HEADLINE_WORD_MAX, words.length);
+  while (keep > 6 && dangling.has(words[keep - 1].toLowerCase().replace(/[^a-z]/g, ""))) keep -= 1;
+  return { headline: words.slice(0, keep).join(" "), extra: words.slice(keep).join(" ") };
+}
+
 export function shortenHeadline(value, target = HEADLINE_WORD_TARGET, hardMax = HEADLINE_WORD_MAX) {
   let text = String(value || "").replace(/\s+/g, " ").trim();
   const removed = [];
@@ -307,7 +334,11 @@ function firstSentence(value) {
 }
 
 export function makeItem(fields) {
-  const shortened = shortenHeadline(fields.headline);
+  const shortened = fields.source_type === "paper"
+    ? shortenPaperHeadline(fields.headline)
+    : fields.source_type === "trial"
+      ? { headline: String(fields.headline || "").replace(/\s+/g, " ").trim(), extra: "" }
+      : shortenHeadline(fields.headline);
   let blurbSource = fields.blurb || "";
   if (shortened.extra) {
     const extra = shortened.extra.replace(/\s+/g, " ").trim();
@@ -550,18 +581,22 @@ export function trialCopy(id, facts) {
   const status = `ClinicalTrials.gov status ${facts.status || "not stated"}`;
   const when = `The ${facts.when || "listed"} primary completion date is ${facts.date}`;
   const action = `${phase} primary completion ${facts.date}`;
-  const shortTitle = wordCount(title) <= 8 ? title : "";
+  const withTitle = title && wordCount(`${action}: ${title}`) <= HEADLINE_WORD_MAX ? `${action}: ${title}` : action;
+  const withCondition = (joiner) => {
+    const head = condition ? `${condition}${joiner}${action}` : withTitle;
+    return wordCount(head) <= HEADLINE_WORD_MAX ? head : action;
+  };
   const templates = [
     () => ({
-      headline: condition ? `${condition}: ${action}` : (shortTitle ? `${action}: ${shortTitle}` : action),
-      blurb: sentences(shortTitle ? sponsor : title, shortTitle ? status : sponsor),
+      headline: withCondition(": "),
+      blurb: sentences(title, sponsor),
     }),
     () => ({
-      headline: shortTitle || (condition ? `${condition} ${action}` : action),
+      headline: withCondition(" "),
       blurb: sentences(title, status),
     }),
     () => ({
-      headline: condition ? `${condition}: ${phase} primary completion` : action,
+      headline: condition && wordCount(`${condition}: ${action}`) <= HEADLINE_WORD_MAX ? `${condition}: ${action}` : withTitle,
       blurb: sentences(title, when),
     }),
   ];
