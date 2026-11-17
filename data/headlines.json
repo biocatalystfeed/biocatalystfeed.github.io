@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-17T11:21:05.727Z",
+  "generated_at": "2026-11-17T13:06:43.098Z",
   "event_date": "2026-11-17",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -10,8 +10,8 @@
       "id": "openfda-drugsfda",
       "enabled": true,
       "status": "ok",
-      "fetched": 211,
-      "note": "openFDA drugsfda applications with an approval dated 20260809 to 20261117, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (26 labels matched)."
+      "fetched": 213,
+      "note": "openFDA drugsfda applications with an approval dated 20260809 to 20261117, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (24 labels matched)."
     },
     {
       "id": "openfda-crl",
@@ -59,7 +59,7 @@
       "id": "europepmc",
       "enabled": true,
       "status": "ok",
-      "fetched": 30,
+      "fetched": 33,
       "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped. A blurb uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
@@ -348,7 +348,18 @@
       "significance": 100,
       "significance_rationale": "fda-nme 90; priority-review +8; 8d old +3 = 100. Original FDA approval classed Type 1 (new molecular entity).",
       "tier": 5,
-      "scout_source": "openfda-drugsfda"
+      "scout_source": "openfda-drugsfda",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Asundexian.svg/500px-Asundexian.svg.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Asundexian.svg",
+        "credit": "User:Innerstream",
+        "licence": "Public domain",
+        "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "alt": "Chemical structure of Asundexian",
+        "width": 500,
+        "height": 280,
+        "hosting": "hotlink"
+      }
     },
     {
       "id": "ema:EMEA/H/C/006597:ema-opinion:2026-11-12",
@@ -361,7 +372,18 @@
       "significance": 90,
       "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
-      "scout_source": "ema"
+      "scout_source": "ema",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Baxdrostat.svg/500px-Baxdrostat.svg.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Baxdrostat.svg",
+        "credit": "Vaccinationist",
+        "licence": "CC BY-SA 4.0",
+        "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "alt": "Chemical structure of baxdrostat",
+        "width": 500,
+        "height": 219,
+        "hosting": "hotlink"
+      }
     },
     {
       "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
@@ -413,7 +435,18 @@
       "significance": 90,
       "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
-      "scout_source": "ema"
+      "scout_source": "ema",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Aumolertinib.svg/500px-Aumolertinib.svg.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aumolertinib.svg",
+        "credit": "User:Innerstream",
+        "licence": "Public domain",
+        "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "alt": "Chemical structure of Aumolertinib",
+        "width": 500,
+        "height": 275,
+        "hosting": "hotlink"
+      }
     },
     {
       "id": "clinicaltrials-calendar:NCT07057622:2026-11-24",
@@ -585,15 +618,15 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43035093",
-      "headline": "Once-Weekly Ribupatide for Weight Loss in Adults in China With Overweight or Obesity",
-      "blurb": "Published 2026-11-15 in JAMA (MED 43035093).",
-      "source_url": "https://doi.org/10.1001/jama.2026.24848",
+      "id": "europepmc:MED:43040014",
+      "headline": "The climate is in crisis - here's four things we can do",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040014).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03760-2",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-15",
+      "published_at": "2026-11-16",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -611,15 +644,15 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43035094",
-      "headline": "Tirzepatide in Adolescents With Obesity: Research Summary",
-      "blurb": "Published 2026-11-15 in JAMA (MED 43035094).",
-      "source_url": "https://doi.org/10.1001/jama.2026.23448",
+      "id": "europepmc:MED:43040015",
+      "headline": "Chinese scientist sacked after child died in gene-editing trial",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040015).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03752-2",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-15",
+      "published_at": "2026-11-16",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -637,15 +670,15 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43035096",
-      "headline": "Tirzepatide in Adolescents With Obesity: The SURMOUNT-ADOLESCENTS Randomized Clinical Trial",
-      "blurb": "At week 72, tirzepatide was associated with 18.5% reduction in BMI, compared with 0.5% increase in BMI with placebo, demonstrating superiority over placebo. Published in JAMA.",
-      "source_url": "https://doi.org/10.1001/jama.2026.23420",
+      "id": "europepmc:MED:43040016",
+      "headline": "Genetic variant that reshaped the human brain was inherited from Neanderthals",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040016).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03762-0",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-15",
+      "published_at": "2026-11-16",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -663,15 +696,15 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43035097",
-      "headline": "Pediatric Obesity Pharmacotherapy: From Therapeutic Scarcity to Therapeutic Choice",
-      "blurb": "Published 2026-11-15 in JAMA (MED 43035097).",
-      "source_url": "https://doi.org/10.1001/jama.2026.22895",
+      "id": "europepmc:MED:43040017",
+      "headline": "Can AI actually help the climate? Nations want to harness the technology",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040017).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03763-z",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-15",
+      "published_at": "2026-11-16",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -754,6 +787,32 @@
       "scout_source": "sec-edgar-8k"
     },
     {
+      "id": "bcf-papers:MED:43039660",
+      "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
+      "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
+      "source_url": "https://doi.org/10.26508/lsa.202603861",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-16",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 1d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
+    },
+    {
+      "id": "medrxiv:10.64898/2026.11.10.26367711",
+      "headline": "Automating postmarketing pharmacovigilance with large language model agents",
+      "blurb": "Across the benchmark, MedCheckpoint outperformed two coding-agent baselines in report quality across five dimensions rated by three independent LLM judges. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367711",
+      "source_type": "paper",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-12",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "medrxiv"
+    },
+    {
       "id": "bcf-papers:MED:43034332",
       "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
       "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
@@ -767,10 +826,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.10.26367711",
-      "headline": "Automating postmarketing pharmacovigilance with large language model agents",
-      "blurb": "Across the benchmark, MedCheckpoint outperformed two coding-agent baselines in report quality across five dimensions rated by three independent LLM judges. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367711",
+      "id": "medrxiv:10.64898/2026.11.10.26367736",
+      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
+      "blurb": "Indicated the GenAI system may generate more highly rated self-management advice than PCPs across most evaluated dimensions but offered no advantage in readability. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
       "source_type": "paper",
       "source_name": "medRxiv",
       "published_at": "2026-11-12",
@@ -789,32 +848,6 @@
       "published_at": "2026-11-13",
       "significance": 62,
       "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "bcf-papers"
-    },
-    {
-      "id": "medrxiv:10.64898/2026.11.10.26367736",
-      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
-      "blurb": "Indicated the GenAI system may generate more highly rated self-management advice than PCPs across most evaluated dimensions but offered no advantage in readability. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
-      "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-12",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "medrxiv"
-    },
-    {
-      "id": "bcf-papers:MED:43015004",
-      "headline": "A machine learning-based predictive tool for complete renal response",
-      "blurb": "Published 2026-11-11 in Ren Fail (MED 43015004).",
-      "source_url": "https://doi.org/10.1080/0886022x.2026.2751782",
-      "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-11",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },

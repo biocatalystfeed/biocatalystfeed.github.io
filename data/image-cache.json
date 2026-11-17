@@ -1,0 +1,51 @@
+{
+  "schema": "biocat-image-cache/1",
+  "entries": {
+    "inn:asundexian": {
+      "at": "2026-11-17T13:06:43.304Z",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Asundexian.svg/500px-Asundexian.svg.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Asundexian.svg",
+        "credit": "User:Innerstream",
+        "licence": "Public domain",
+        "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "alt": "Chemical structure of Asundexian",
+        "width": 500,
+        "height": 280,
+        "hosting": "hotlink"
+      }
+    },
+    "inn:baxdrostat": {
+      "at": "2026-11-17T13:06:43.559Z",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Baxdrostat.svg/500px-Baxdrostat.svg.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Baxdrostat.svg",
+        "credit": "Vaccinationist",
+        "licence": "CC BY-SA 4.0",
+        "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "alt": "Chemical structure of baxdrostat",
+        "width": 500,
+        "height": 219,
+        "hosting": "hotlink"
+      }
+    },
+    "inn:sintilimab": {
+      "at": "2026-11-17T13:06:43.713Z",
+      "image": null
+    },
+    "inn:aumolertinib": {
+      "at": "2026-11-17T13:06:43.980Z",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Aumolertinib.svg/500px-Aumolertinib.svg.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aumolertinib.svg",
+        "credit": "User:Innerstream",
+        "licence": "Public domain",
+        "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "alt": "Chemical structure of Aumolertinib",
+        "width": 500,
+        "height": 275,
+        "hosting": "hotlink"
+      }
+    }
+  }
+}
