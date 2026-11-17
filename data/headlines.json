@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-17T13:06:43.098Z",
+  "generated_at": "2026-11-17T20:00:49.629Z",
   "event_date": "2026-11-17",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -17,7 +17,7 @@
       "id": "openfda-crl",
       "enabled": true,
       "status": "ok",
-      "fetched": 13,
+      "fetched": 19,
       "note": "Personal fields in the openFDA letter (representative, signatory, address) are not copied."
     },
     {
@@ -45,14 +45,14 @@
       "id": "ema",
       "enabled": true,
       "status": "ok",
-      "fetched": 20,
+      "fetched": 21,
       "note": "EMA daily medicines JSON. Variation decisions are not used; European Commission decision dates on already-authorised medicines are ignored. Source: European Medicines Agency."
     },
     {
       "id": "health-canada-noc",
       "enabled": true,
       "status": "ok",
-      "fetched": 135,
+      "fetched": 137,
       "note": "Health Canada Notice of Compliance Database. Contains information licensed under the Open Government Licence – Canada. Administrative and veterinary notices are dropped."
     },
     {
@@ -115,7 +115,7 @@
       "id": "fda-press",
       "enabled": true,
       "status": "ok",
-      "fetched": 10,
+      "fetched": 11,
       "note": "FDA press-release RSS. U.S. government work, published for syndication. Items are kept when the title or description names a drug, biologic, vaccine, trial, or related topic. The headline is the agency's title. The blurb adds the publication date and, when the description names a product before an outcome clause, that product text."
     },
     {
@@ -386,17 +386,17 @@
       }
     },
     {
-      "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
-      "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
-      "blurb": "EMD Serono is testing avelumab in solid tumors.",
-      "source_url": "https://clinicaltrials.gov/study/NCT03815643",
-      "source_type": "trial",
-      "source_name": "ClinicalTrials.gov",
-      "published_at": "2026-11-24",
-      "significance": 84,
-      "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 7d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
-      "tier": 4,
-      "scout_source": "clinicaltrials-calendar"
+      "id": "openfda-crl:CRL_BLA761524_20261113.pdf",
+      "headline": "FDA sends Summit Therapeutics Inc. a complete response letter",
+      "blurb": "A complete response letter means the application was not approved as submitted, and the headings name clinical and safety. Application BLA 761524, letter date Nov 13.",
+      "source_url": "https://download.open.fda.gov/crl/CRL_BLA761524_20261113.pdf",
+      "source_type": "regulator",
+      "source_name": "FDA complete response letters (openFDA)",
+      "published_at": "2026-11-13",
+      "significance": 88,
+      "significance_rationale": "fda-crl 82; 4d old +6 = 88. FDA complete response letter.",
+      "tier": 5,
+      "scout_source": "openfda-crl"
     },
     {
       "id": "ema:EMEA/H/C/006743:ema-opinion:2026-11-12",
@@ -412,10 +412,10 @@
       "scout_source": "ema"
     },
     {
-      "id": "clinicaltrials-calendar:NCT06585787:2026-11-24",
-      "headline": "Phase 3 KarXT study in Alzheimer's psychosis reaches primary completion Nov 24",
-      "blurb": "Karuna Therapeutics is testing KarXT for psychosis associated with alzheimer's disease.",
-      "source_url": "https://clinicaltrials.gov/study/NCT06585787",
+      "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
+      "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
+      "blurb": "EMD Serono is testing avelumab in solid tumors.",
+      "source_url": "https://clinicaltrials.gov/study/NCT03815643",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
       "published_at": "2026-11-24",
@@ -449,10 +449,10 @@
       }
     },
     {
-      "id": "clinicaltrials-calendar:NCT07057622:2026-11-24",
-      "headline": "Phase 3 177Lu-DOTATATE study in NETs reaches its primary completion Nov 24",
-      "blurb": "HTA is testing 177Lu-DOTATATE injection with long-acting oxytrexine in adult patients with NETs.",
-      "source_url": "https://clinicaltrials.gov/study/NCT07057622",
+      "id": "clinicaltrials-calendar:NCT06585787:2026-11-24",
+      "headline": "Phase 3 KarXT study in Alzheimer's psychosis reaches primary completion Nov 24",
+      "blurb": "Karuna Therapeutics is testing KarXT for psychosis associated with alzheimer's disease.",
+      "source_url": "https://clinicaltrials.gov/study/NCT06585787",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
       "published_at": "2026-11-24",
@@ -475,15 +475,15 @@
       "scout_source": "purple-book"
     },
     {
-      "id": "clinicaltrials-calendar:NCT06693895:2026-11-23",
-      "headline": "Phase 3 chickenpox vaccine study reaches primary completion Nov 23",
-      "blurb": "GlaxoSmithKline is testing investigational chickenpox vaccine in healthy children, 12 to 15 months of age.",
-      "source_url": "https://clinicaltrials.gov/study/NCT06693895",
+      "id": "clinicaltrials-calendar:NCT07057622:2026-11-24",
+      "headline": "Phase 3 177Lu-DOTATATE study in NETs reaches its primary completion Nov 24",
+      "blurb": "HTA is testing 177Lu-DOTATATE injection with long-acting oxytrexine in adult patients with NETs.",
+      "source_url": "https://clinicaltrials.gov/study/NCT07057622",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
-      "published_at": "2026-11-23",
+      "published_at": "2026-11-24",
       "significance": 84,
-      "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 6d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
+      "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 7d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
       "tier": 4,
       "scout_source": "clinicaltrials-calendar"
     },
@@ -499,6 +499,19 @@
       "significance_rationale": "adcom-meeting 74; in 2d +6 = 80. Federal Register notice of an FDA advisory committee meeting.",
       "tier": 4,
       "scout_source": "federal-register-adcom"
+    },
+    {
+      "id": "clinicaltrials-calendar:NCT06693895:2026-11-23",
+      "headline": "Phase 3 chickenpox vaccine study reaches primary completion Nov 23",
+      "blurb": "GlaxoSmithKline is testing investigational chickenpox vaccine in healthy children, 12 to 15 months of age.",
+      "source_url": "https://clinicaltrials.gov/study/NCT06693895",
+      "source_type": "trial",
+      "source_name": "ClinicalTrials.gov",
+      "published_at": "2026-11-23",
+      "significance": 84,
+      "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 6d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
+      "tier": 4,
+      "scout_source": "clinicaltrials-calendar"
     },
     {
       "id": "mhra:https://www.gov.uk/government/news/mhra-approves-retifanlimab-zynyz-for-the-treatment-of-advanced-anal-cancer",
@@ -540,17 +553,17 @@
       "scout_source": "mhra"
     },
     {
-      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "headline": "Advancing computer-use agents for healthcare teams",
-      "blurb": "Details are in the linked post.",
-      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
+      "headline": "FDA Approves First Drug Shown to Help Patients with Infantile-Onset Niemann-Pick Disease Type C",
+      "blurb": "FDA approved Lembaz (adrabetadex) injection, the first treatment shown to help people with a severe form of Niemann-Pick disease type C (NPC) live longer.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
       "source_type": "news",
-      "source_name": "OpenAI News",
-      "published_at": "2026-11-16",
-      "significance": 74,
-      "significance_rationale": "ai-news 68; 1d old +6 = 74. Official lab blog post on an AI or biology topic.",
-      "tier": 3,
-      "scout_source": "openai-news"
+      "source_name": "FDA press releases",
+      "published_at": "2026-11-17",
+      "significance": 76,
+      "significance_rationale": "fda-press 70; in 0d +6 = 76. FDA press release.",
+      "tier": 4,
+      "scout_source": "fda-press"
     },
     {
       "id": "mhra:https://www.gov.uk/government/news/mhra-guidance-on-its-assessment-of-non-clinical-data-generated-outside-oecd-system",
@@ -566,10 +579,23 @@
       "scout_source": "mhra"
     },
     {
-      "id": "openai-news:https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-      "headline": "More ways to move care forward with ChatGPT for Healthcare",
-      "blurb": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
-      "source_url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "id": "openfda-crl:CRL_BLA761393_20260909.pdf",
+      "headline": "FDA sends SEIKAGAKU Corporation a complete response letter",
+      "blurb": "A complete response letter means the application was not approved as submitted, and the headings name facility and safety. Application BLA 761393, letter date Sep 9.",
+      "source_url": "https://download.open.fda.gov/crl/CRL_BLA761393_20260909.pdf",
+      "source_type": "regulator",
+      "source_name": "FDA complete response letters (openFDA)",
+      "published_at": "2026-09-09",
+      "significance": 76,
+      "significance_rationale": "fda-crl 82; 69d old -6 = 76. FDA complete response letter.",
+      "tier": 4,
+      "scout_source": "openfda-crl"
+    },
+    {
+      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "headline": "Advancing computer-use agents for healthcare teams",
+      "blurb": "Details are in the linked post.",
+      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
       "source_type": "news",
       "source_name": "OpenAI News",
       "published_at": "2026-11-16",
@@ -590,6 +616,19 @@
       "significance_rationale": "ai-news 68; 4d old +6 = 74. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "nvidia-blog"
+    },
+    {
+      "id": "openai-news:https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "headline": "More ways to move care forward with ChatGPT for Healthcare",
+      "blurb": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+      "source_url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "source_type": "news",
+      "source_name": "OpenAI News",
+      "published_at": "2026-11-16",
+      "significance": 74,
+      "significance_rationale": "ai-news 68; 1d old +6 = 74. Official lab blog post on an AI or biology topic.",
+      "tier": 3,
+      "scout_source": "openai-news"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
@@ -657,32 +696,6 @@
       "scout_source": "europepmc"
     },
     {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-provides-clarity-support-cell-and-gene-therapy-development-and-quality",
-      "headline": "FDA Provides Clarity to Support Cell and Gene Therapy Development and Quality",
-      "blurb": "Food and Drug Administration today issued final guidance for manufacturers of cellular and gene therapy (CGT) products to implement a comprehensive, science- and risk-based plan.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-provides-clarity-support-cell-and-gene-therapy-development-and-quality",
-      "source_type": "news",
-      "source_name": "FDA press releases",
-      "published_at": "2026-11-02",
-      "significance": 73,
-      "significance_rationale": "fda-press 70; 15d old +3 = 73. FDA press release.",
-      "tier": 3,
-      "scout_source": "fda-press"
-    },
-    {
-      "id": "europepmc:MED:43040016",
-      "headline": "Genetic variant that reshaped the human brain was inherited from Neanderthals",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040016).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03762-0",
-      "source_type": "paper",
-      "source_name": "Europe PMC",
-      "published_at": "2026-11-16",
-      "significance": 72,
-      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
-      "tier": 3,
-      "scout_source": "europepmc"
-    },
-    {
       "id": "openai-news:https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
       "headline": "Measuring how AI agents handle everyday wet-lab science",
       "blurb": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
@@ -696,10 +709,10 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43040017",
-      "headline": "Can AI actually help the climate? Nations want to harness the technology",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040017).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03763-z",
+      "id": "europepmc:MED:43040016",
+      "headline": "Genetic variant that reshaped the human brain was inherited from Neanderthals",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040016).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03762-0",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
@@ -722,17 +735,17 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "openfda-crl:CRL_NDA218705_20260807.pdf",
-      "headline": "ITM Solucin GmbH receives an FDA complete response letter",
-      "blurb": "A complete response letter means the application was not approved as submitted, and the headings name product quality and facility and safety. Application NDA 218705, letter date Aug 7.",
-      "source_url": "https://download.open.fda.gov/crl/CRL_NDA218705_20260807.pdf",
-      "source_type": "regulator",
-      "source_name": "FDA complete response letters (openFDA)",
-      "published_at": "2026-08-07",
-      "significance": 70,
-      "significance_rationale": "fda-crl 82; 102d old -12 = 70. FDA complete response letter.",
+      "id": "europepmc:MED:43040017",
+      "headline": "Can AI actually help the climate? Nations want to harness the technology",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040017).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03763-z",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-16",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
-      "scout_source": "openfda-crl"
+      "scout_source": "europepmc"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
@@ -748,19 +761,6 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "openfda-crl:CRL_NDA219107_20260721.pdf",
-      "headline": "Apiject Systems Corp. receives an FDA complete response letter",
-      "blurb": "A complete response letter means the application was not approved as submitted, and the headings name product quality and safety. Application NDA 219107, letter date Jul 21.",
-      "source_url": "https://download.open.fda.gov/crl/CRL_NDA219107_20260721.pdf",
-      "source_type": "regulator",
-      "source_name": "FDA complete response letters (openFDA)",
-      "published_at": "2026-07-21",
-      "significance": 70,
-      "significance_rationale": "fda-crl 82; 119d old -12 = 70. FDA complete response letter.",
-      "tier": 3,
-      "scout_source": "openfda-crl"
-    },
-    {
       "id": "bcf-ai:hydrogen-1.0",
       "headline": "Hydrogen-1.0 model release from Deep Principle",
       "blurb": "This card points at the MIT-licensed BF16 weights; quantized variants are published separately. AI model release. Not a peer-reviewed experimental finding.",
@@ -774,6 +774,20 @@
       "scout_source": "bcf-ai-discovery"
     },
     {
+      "id": "x:https://x.com/IsomorphicLabs/status/2122661054723547449",
+      "headline": "Isomorphic Labs announces Series C investment round",
+      "blurb": "The AI drug-design company raised $5 billion, co-led by Greenoaks and Sequoia, to scale its proprietary drug design engine and therapeutic candidate pipeline. https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round",
+      "source_url": "https://x.com/IsomorphicLabs/status/2122661054723547449",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-17",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round"
+    },
+    {
       "id": "sec-edgar:0001193125-26-461412",
       "headline": "Vir Biotechnology, Inc. discloses a material definitive agreement in an 8-K",
       "blurb": "Vir Biotechnology, Inc. disclosed a material definitive agreement and other events and financial statements and exhibits. Accession 0001193125-26-461412.",
@@ -785,6 +799,20 @@
       "significance_rationale": "sec-8k 58; 1d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 3,
       "scout_source": "sec-edgar-8k"
+    },
+    {
+      "id": "x:https://x.com/EricTopol/status/2122349917591175225",
+      "headline": "Plasma proteomics identifies insulin resistance signatures predictive of cardiometabolic disease risk",
+      "blurb": "Blood protein profiling paired with clamp-based insulin sensitivity measurements yielded a tissue-resolved atlas and a model the authors report beats conventional markers for forecasting metabolic and heart disease. https://www.nature.com/articles/s42255-026-01662-1",
+      "source_url": "https://x.com/EricTopol/status/2122349917591175225",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-16",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.nature.com/articles/s42255-026-01662-1"
     },
     {
       "id": "bcf-papers:MED:43039660",
