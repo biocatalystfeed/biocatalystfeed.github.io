@@ -1,7 +1,8 @@
-import { rssEntries, isoFromRfc822, preferHttps, safeItems } from "./copy.mjs";
+import { rssEntries, isoFromRfc822, preferHttps, safeItems, offTopicText, leadIn } from "./copy.mjs";
 import { addDays } from "./text.mjs";
 
-const BIO = /\b(bio|genom|protein|drug|cell|disease|fold|molecule|chemist|science|scientist|health|medical|pharma|clinic|antibody|vaccine|therapy)\b/i;
+const BIO = /genom|protein|\bdrug|\bdna\b|\brna\b|\bcells?\b|disease|molecul|chemist|cheminform|antibod|vaccin|therap|clinical|pharma|\bcancer\b|virus|peptide|\bfold|alzheimer|diabet|obes|hepatitis|wet-lab|\bhealth(?:care)?\b|medical|\bpatients?\b|\bmedicin/i;
+const ADMIN = /\b(outage|services during|office closure|vacancy|recruitment)\b/i;
 
 export const LAB_FEEDS = [
   {
@@ -20,7 +21,7 @@ export const LAB_FEEDS = [
     source_type: "news",
     rule: "ai-news",
     keywords: BIO,
-    note: "Official OpenAI news RSS. robots.txt allows /. Filtered to science and biology posts. Title, link, date, and a short blurb only.",
+    note: "Official OpenAI news RSS. robots.txt allows /. Filtered to biology, health, drug, genome, protein, or clinical posts. Title, link, date, and a short blurb only.",
   },
   {
     id: "nvidia-blog",
@@ -42,12 +43,9 @@ export const LAB_FEEDS = [
   },
 ];
 
-function ownBlurb(entry, date, name) {
-  const title = String(entry.title || "").replace(/\s+/g, " ").trim();
-  const desc = String(entry.description || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-  const first = desc.split(/(?<=\.)\s/)[0] || "";
-  const usable = first && first.length < 180 && first.toLowerCase() !== title.toLowerCase() ? first.replace(/\.+$/, "") : "";
-  return usable ? `${name} item dated ${date}. ${usable}.` : `${name} item dated ${date}.`;
+function ownBlurb(entry, name) {
+  const title = leadIn(entry.title || "");
+  return `The ${name} post reports ${title}.`;
 }
 
 export function feedItems(entries, today, feed) {
@@ -58,14 +56,15 @@ export function feedItems(entries, today, feed) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(published) || published < from || published > today) continue;
     const title = String(entry.title || "").replace(/\s+/g, " ").trim();
     if (!title || /^google deepmind news$/i.test(title) || /^openai news$/i.test(title) || /^nvidia blog$/i.test(title)) continue;
-    if (feed.keywords && !feed.keywords.test(`${title} ${entry.description || ""}`)) continue;
+    if (offTopicText(`${title} ${entry.description || ""}`) || ADMIN.test(title)) continue;
+    if (feed.keywords && !feed.keywords.test(title)) continue;
     const adjustments = [];
     if (/\bfirst\b/i.test(title)) adjustments.push("source-first");
     if (feed.rule === "ai-news" && /\b(model|alpha|genome|protein|fold)\b/i.test(title)) adjustments.push("ai-biology-release");
     rows.push({
       id: `${feed.id}:${entry.link || title}`,
       headline: title,
-      blurb: ownBlurb(entry, published, feed.name),
+      blurb: ownBlurb(entry, feed.name),
       source_url: preferHttps(entry.link),
       source_type: feed.source_type,
       source_name: feed.name,

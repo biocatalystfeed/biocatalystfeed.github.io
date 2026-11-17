@@ -132,6 +132,7 @@ export const RULES = {
     "source-first": 12,
     "pivotal-readout": 8,
     "ai-biology-release": 10,
+    "routine-filing": -18,
   },
   past: [
     { maxDays: 7, delta: 6 },
