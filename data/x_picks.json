@@ -1,5 +1,5 @@
 {
   "schema": "biocat-x-picks/1",
-  "enabled": false,
+  "enabled": true,
   "picks": []
 }
