@@ -1,8 +1,8 @@
-export const RELEVANCE_MIN = 2;
+export const RELEVANCE_MIN = 3;
 export const MAX_PAGE_IMAGES = 4;
 export const TOP_IMAGE_ITEMS = 5;
 
-const GENERIC = new Set(["europe", "phase", "study", "trial", "fda", "nih", "purple", "orange", "book", "health", "canada", "approved", "approval", "treatment", "cancer", "disease", "adults", "primary", "completion", "reaches", "grants", "accelerated", "biologics", "deutschland", "therapeutics", "pharmaceutical", "pharmaceuticals", "holdings", "systems", "devices", "panel", "microbiology", "advisory", "meeting", "provides", "clarity", "support", "development", "quality", "research", "summary", "adolescents", "obesity", "overweight", "weekly", "once", "china", "weight", "loss", "labs", "lab", "model", "round", "series", "company", "announces", "investment", "blood", "heart", "protein", "cell", "cells", "human", "posts", "links", "plasma", "signatures"]);
+const GENERIC = new Set(["europe", "phase", "study", "trial", "fda", "nih", "purple", "orange", "book", "health", "canada", "approved", "approval", "treatment", "cancer", "disease", "adults", "primary", "completion", "reaches", "grants", "accelerated", "biologics", "deutschland", "therapeutics", "pharmaceutical", "pharmaceuticals", "holdings", "systems", "devices", "panel", "microbiology", "advisory", "meeting", "provides", "clarity", "support", "development", "quality", "research", "summary", "adolescents", "obesity", "overweight", "weekly", "once", "china", "weight", "loss", "labs", "lab", "model", "round", "series", "company", "announces", "investment", "blood", "heart", "protein", "cell", "cells", "human", "posts", "links", "plasma", "signatures", "solid", "tumor", "tumors", "pressure", "delivery", "common", "form"]);
 
 const TOPICS = ["lung cancer", "blood pressure", "breast cancer", "insulin resistance", "heart disease", "type 2 diabetes", "alzheimer", "solid tumors"];
 
@@ -37,12 +37,21 @@ export function exactName(text, name) {
   return new RegExp(`(?:^|[^A-Za-z0-9])${escaped}(?:[^A-Za-z0-9]|$)`, "i").test(String(text || ""));
 }
 
-export function imageType(text) {
-  const hay = String(text || "");
+export function imageType(input) {
+  const hay = typeof input === "string"
+    ? input
+    : `${input?.title || ""} ${input?.categories || ""} ${input?.description || ""} ${input?.src || ""} ${input?.mime || ""}`;
+  const mime = typeof input === "string" ? "" : String(input?.mime || "");
+  if (/chemical structures|skeletal formula|structural formula|chemical structure|ball-and-stick|ball and stick|space-filling|3d ball/i.test(hay)) return "diagram";
+  if (/\b(schematic|diagram|flowchart|infographic|line drawing|waveform|chart|graph|plot|microneedles?|mechanisms? of action)\b/i.test(hay)) return "diagram";
   if (/\b(?:micrograph|microscop\w*|histolog\w*|histopath\w*|immunohisto\w*|immunochem\w*|h&e stain|electron micrograph)\b/i.test(hay)) return "micrograph";
-  if (/chemical structures|skeletal formula|structural formula|chemical structure|ball-and-stick/i.test(hay)) return "diagram";
-  if (/\b(illustration|drawing|painting|artwork|artist's impression|artist’s impression)\b/i.test(hay)) return "illustration";
+  if (/\b(illustration|drawing|painting|artwork|cartoon|parody|artist's impression|artist’s impression)\b/i.test(hay)) return "illustration";
+  if (mime === "image/svg+xml") return "diagram";
   return "photo";
+}
+
+export function isArtwork(text) {
+  return /\b(paintings?|cartoons?|parody|artworks?|caricature|comic strip|oil on canvas|watercolor|after [A-Z][a-z]+)\b/.test(String(text || ""));
 }
 
 export function personRisk(text) {
@@ -57,36 +66,66 @@ export function imageEntities(item) {
     if (found.some((entry) => entry.term.toLowerCase() === clean.toLowerCase())) return;
     found.push({ term: clean, weight, kind });
   };
-  if (item?.image_entity?.name) add(item.image_entity.name, 2, "drug");
+  if (item?.image_entity?.name) add(item.image_entity.name, 3, "drug");
   const headline = String(item?.headline || "");
   const owner = /\b([A-Z][A-Za-z0-9.&-]+(?:\s+[A-Z][A-Za-z0-9.&-]+){0,3})'s\b/.exec(headline);
-  if (owner) add(owner[1], 2, "org");
+  if (owner) add(owner[1], 3, "org");
   const lead = /^([A-Z][A-Za-z0-9.&-]+(?:\s+[A-Z][A-Za-z0-9.&-]+){0,3})\s+(?:announces|posts|links|describes|reports)\b/.exec(headline);
-  if (lead) add(lead[1], 2, "org");
+  if (lead) add(lead[1], 3, "org");
   const firm = /\b([A-Z][A-Za-z0-9.&-]+(?:\s+[A-Z][A-Za-z0-9.&-]+){0,3})\s+Inc\.?\b/.exec(headline);
-  if (firm) add(firm[1], 2, "org");
-  for (const match of headline.matchAll(/\(([A-Za-z][A-Za-z0-9-]{3,})\)/g)) add(match[1], 2, "drug");
+  if (firm) add(firm[1], 3, "org");
+  for (const match of headline.matchAll(/\(([A-Za-z][A-Za-z0-9-]{3,})\)/g)) add(match[1], 3, "drug");
+  for (const match of headline.matchAll(/\b([A-Z][a-z]{6,}[a-zA-Z0-9-]*)\b/g)) add(match[1], 3, "drug");
   const blob = `${headline} ${item?.blurb || ""}`.toLowerCase();
   for (const phrase of TOPICS) {
-    if (blob.includes(phrase)) add(phrase, 2, "topic");
+    if (blob.includes(phrase)) add(phrase, 3, "topic");
   }
   return found.slice(0, 4);
 }
 
-export function photoQuery(entities) {
-  const topic = entities.find((entry) => entry.kind === "topic");
-  const org = entities.find((entry) => entry.kind === "org");
-  return (topic || org || entities[0])?.term || "";
+export function searchTerms(entities) {
+  const ordered = ["org", "topic", "drug"].flatMap((kind) => entities.filter((entry) => entry.kind === kind));
+  const terms = [];
+  for (const entry of ordered) {
+    if (!terms.some((term) => term.toLowerCase() === entry.term.toLowerCase())) terms.push(entry.term);
+  }
+  return terms.slice(0, 2);
 }
 
-export function relevanceScore(entities, text) {
-  let score = 0;
+export function photoQuery(entities) {
+  return searchTerms(entities)[0] || "";
+}
+
+const DEVICE_ASIDE = /\b(microneedle|schematic|delivery system|nanoparticle|apparatus|engineered polymeric)\b/i;
+
+export function explainMatch(entities, text, type = "photo") {
+  const hay = String(text || "");
+  if (isArtwork(hay)) return { score: 0, reason: "artwork, painting, cartoon, or parody" };
+  const reasons = [];
   for (const entity of entities || []) {
-    if (!exactName(text, entity.term)) continue;
-    if (/^bayer$/i.test(entity.term) && /\bbayer\s+(?:filter|pattern|mosaic|matrix|sensor)\b/i.test(text)) continue;
-    score += entity.weight;
+    const words = entity.term.toLowerCase().split(/\s+/);
+    if (words.length < 2 && words.every((word) => GENERIC.has(word))) continue;
+    if (entity.kind !== "topic" && words.every((word) => GENERIC.has(word))) continue;
+    if (!exactName(hay, entity.term)) continue;
+    if (/^bayer$/i.test(entity.term) && /\bbayer\s+(?:filter|pattern|mosaic|matrix|sensor)\b/i.test(hay)) continue;
+    if (entity.kind === "topic") {
+      if (type === "diagram" || type === "illustration") continue;
+      if (DEVICE_ASIDE.test(hay)) continue;
+      reasons.push(`exact condition "${entity.term}" shown as a ${type}`);
+    } else {
+      reasons.push(`${entity.kind} "${entity.term}"`);
+    }
   }
-  return score;
+  return { score: reasons.length ? RELEVANCE_MIN : 0, reason: reasons.join("; ") };
+}
+
+export function relevanceScore(entities, text, type = "photo") {
+  return explainMatch(entities, text, type).score;
+}
+
+export function imageResponseOk(status, contentType) {
+  const type = String(contentType || "").split(";")[0].trim();
+  return (status === 200 || status === 206) && /^image\//i.test(type);
 }
 
 export function candidateProblem(candidate) {
@@ -96,6 +135,7 @@ export function candidateProblem(candidate) {
   if (String(candidate.alt).trim().split(/\s+/).length < 3) return "alt is not descriptive";
   if (!licenceOk(candidate.licence) && candidate.licence !== "Open Government Licence v3.0") return "licence not allowlisted";
   if (personRisk(candidate.alt)) return "identifiable patient or child";
+  if (isArtwork(`${candidate.alt || ""} ${candidate.sourcePage || ""}`)) return "artwork, painting, cartoon, or parody";
   if (Number(candidate.relevance || 0) < RELEVANCE_MIN) return "below relevance threshold";
   return "";
 }

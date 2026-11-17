@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-17T22:58:52.589Z",
+  "generated_at": "2026-11-17T23:14:33.053Z",
   "event_date": "2026-11-17",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -360,7 +360,8 @@
         "height": 173,
         "hosting": "hotlink",
         "type": "photo",
-        "relevance": 2,
+        "relevance": 3,
+        "reason": "org \"Bayer\"",
         "provider": "commons"
       }
     },
@@ -375,21 +376,7 @@
       "significance": 90,
       "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
-      "scout_source": "ema",
-      "image": {
-        "src": "https://live.staticflickr.com/7356/8749833424_c31288a1f9.jpg",
-        "sourcePage": "https://www.flickr.com/photos/9106303@N05/8749833424",
-        "credit": "Mike Licht, NotionsCapital.com",
-        "licence": "CC BY 2.0",
-        "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-        "alt": "Cell Phones & Blood Pressure, after Adriaen Brouwer",
-        "width": 500,
-        "height": 499,
-        "hosting": "hotlink",
-        "type": "illustration",
-        "relevance": 2,
-        "provider": "openverse"
-      }
+      "scout_source": "ema"
     },
     {
       "id": "openfda-crl:CRL_BLA761524_20261113.pdf",
@@ -427,7 +414,8 @@
         "height": 723,
         "hosting": "hotlink",
         "type": "micrograph",
-        "relevance": 2,
+        "relevance": 3,
+        "reason": "exact condition \"lung cancer\" shown as a micrograph",
         "provider": "commons"
       }
     },
@@ -444,17 +432,18 @@
       "tier": 4,
       "scout_source": "clinicaltrials-calendar",
       "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Engineered_polymeric_microneedle_cellular_delivery.jpg/500px-Engineered_polymeric_microneedle_cellular_delivery.jpg",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Engineered_polymeric_microneedle_cellular_delivery.jpg",
-        "credit": "Bme2023boi",
-        "licence": "CC BY-SA 4.0",
-        "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "alt": "This image represents a basic overview on how scientists have created a porous microneedle matrix to load T-cells into for delivery to solid tumors",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Fonc-11-582664-g004.webp/500px-Fonc-11-582664-g004.webp",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fonc-11-582664-g004.webp",
+        "credit": "Zhang W, Kong X, Ai B, Wang Z, Wang X, Wang N, Zheng S, Fang Y, Wang J.",
+        "licence": "CC BY 4.0",
+        "basisUrl": "https://creativecommons.org/licenses/by/4.0",
+        "alt": "Figure 4 Mechanism of action of Avelumab. PD-L1 may be expressed on tumor cells and tumor-infiltrating immune cells and can contribute to the inhibition of the anti-tumor immune re",
         "width": 500,
-        "height": 269,
+        "height": 427,
         "hosting": "hotlink",
-        "type": "photo",
-        "relevance": 2,
+        "type": "diagram",
+        "relevance": 3,
+        "reason": "drug \"Avelumab\"",
         "provider": "commons"
       }
     },

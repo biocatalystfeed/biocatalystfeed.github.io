@@ -8,8 +8,8 @@ import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
 import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, paperCopy, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
-import { commonsImage, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
-import { imageEntities, relevanceScore } from "../image-score.mjs";
+import { commonsImage, imageResponseOk, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
+import { explainMatch, imageEntities, imageType, relevanceScore } from "../image-score.mjs";
 import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
@@ -559,11 +559,11 @@ test("image placement rejects a weak or non-allowlisted match and varies the typ
     basisUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourcePage: "https://commons.wikimedia.org/wiki/File:Example.jpg",
     type: "photo",
-    relevance: 2,
+    relevance: 3,
   };
   const placed = placeImages([
-    { index: 0, candidates: [base, { ...base, src: "https://upload.wikimedia.org/diagram.png", type: "diagram", alt: "Chemical structure of asundexian", relevance: 2 }] },
-    { index: 1, candidates: [{ ...base, src: "https://upload.wikimedia.org/second.jpg", type: "photo", relevance: 2 }, { ...base, src: "https://upload.wikimedia.org/scope.jpg", type: "micrograph", alt: "Micrograph of lung tissue", relevance: 2 }] },
+    { index: 0, candidates: [base, { ...base, src: "https://upload.wikimedia.org/diagram.png", type: "diagram", alt: "Chemical structure of asundexian", relevance: 3 }] },
+    { index: 1, candidates: [{ ...base, src: "https://upload.wikimedia.org/second.jpg", type: "photo", relevance: 3 }, { ...base, src: "https://upload.wikimedia.org/scope.jpg", type: "micrograph", alt: "Micrograph of lung tissue", relevance: 3 }] },
     { index: 2, candidates: [{ ...base, src: "https://upload.wikimedia.org/weak.jpg", relevance: 1, alt: "A vague picture" }] },
     { index: 3, candidates: [{ ...base, src: "https://upload.wikimedia.org/nc.jpg", licence: "CC BY-NC 4.0", relevance: 4 }] },
     { index: 4, candidates: [{ ...base, src: "https://upload.wikimedia.org/child.jpg", alt: "A child in a hospital", relevance: 4, type: "illustration" }] },
@@ -571,14 +571,26 @@ test("image placement rejects a weak or non-allowlisted match and varies the typ
   assert.deepEqual(placed.map((row) => row.image.type), ["photo", "micrograph"]);
   assert.equal(placed.filter((row) => row.image.type === "diagram").length, 0);
   const onlyDiagrams = placeImages([
-    { index: 0, candidates: [{ ...base, src: "https://upload.wikimedia.org/a.svg", type: "diagram", relevance: 2 }] },
-    { index: 1, candidates: [{ ...base, src: "https://upload.wikimedia.org/b.svg", type: "diagram", relevance: 2 }] },
+    { index: 0, candidates: [{ ...base, src: "https://upload.wikimedia.org/a.svg", type: "diagram", relevance: 3 }] },
+    { index: 1, candidates: [{ ...base, src: "https://upload.wikimedia.org/b.svg", type: "diagram", relevance: 3 }] },
   ]);
   assert.equal(onlyDiagrams.length, 1);
   const entities = imageEntities({ headline: "FDA approves Bayer's Sunharbo (asundexian), a new molecular entity", image_entity: { kind: "inn", name: "asundexian" } });
-  assert.equal(relevanceScore(entities, "Skeletal formula of asundexian"), 2);
+  assert.equal(relevanceScore(entities, "Skeletal formula of asundexian"), 3);
   assert.equal(relevanceScore(entities, "A random hospital corridor"), 0);
   assert.equal(relevanceScore(entities, "The Bayer pattern on a Mars camera"), 0);
+  const pressure = imageEntities({ headline: "Europe recommends AstraZeneca's Baxfendy for high blood pressure in adults" });
+  const cuff = explainMatch(pressure, "A clinician measuring blood pressure with a cuff", "photo");
+  assert.equal(cuff.score, 3);
+  assert.match(cuff.reason, /blood pressure/);
+  assert.equal(explainMatch(pressure, "Cell Phones & Blood Pressure, after Adriaen Brouwer", "illustration").score, 0);
+  const tumor = imageEntities({ headline: "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24" });
+  assert.equal(imageType("Engineered polymeric microneedle cellular delivery. A basic overview of a porous microneedle matrix."), "diagram");
+  assert.equal(explainMatch(tumor, "porous microneedle matrix to load T-cells for delivery to solid tumors", "diagram").score, 0);
+  assert.equal(relevanceScore([{ term: "solid", kind: "topic" }], "a solid block"), 0);
+  assert.equal(imageResponseOk(200, "image/jpeg"), true);
+  assert.equal(imageResponseOk(200, "text/html"), false);
+  assert.equal(imageResponseOk(404, "image/jpeg"), false);
   const open = openverseImage({
     license: "by-sa",
     license_version: "4.0",
@@ -614,7 +626,8 @@ test("image placement rejects a weak or non-allowlisted match and varies the typ
   assert.match(IMAGE_SOURCES["flickr-niaid"].robots, /Disallow/);
   assert.equal(IMAGE_SOURCES["nci-visuals"].allowed, false);
   assert.equal(IMAGE_SOURCES["cdc-phil"].allowed, false);
-  assert.equal(IMAGE_SOURCES.openverse.allowed, true);
+  assert.equal(IMAGE_SOURCES.openverse.allowed, false);
+  assert.match(IMAGE_SOURCES.openverse.robots, /Disallow: \/v1\/images\//);
   assert.equal(IMAGE_SOURCES.nasa.allowed, true);
 });
 

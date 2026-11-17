@@ -11,10 +11,10 @@ export const IMAGE_SOURCES = {
   },
   openverse: {
     id: "openverse",
-    allowed: true,
+    allowed: false,
     endpoint: "https://api.openverse.org/v1/images/",
-    robots: "api.openverse.org/robots.txt has User-agent: * / Disallow: /v1/images/. That stops a crawler from treating the API as pages. The API itself answers anonymous clients and sends X-RateLimit-Limit-Anon-Burst (20/min) and X-RateLimit-Limit-Anon-Sustained (200/day).",
-    terms: "This client is the documented API, not a site crawl. It requests license=cc0 and license=by only, stays under five calls a run, and stops if the remaining rate-limit header hits zero. CC BY-SA and any NC or ND result is dropped even if the API returns it.",
+    robots: "api.openverse.org/robots.txt has User-agent: * / Disallow: /v1/images/.",
+    terms: "The API also publishes anonymous rate limits (20/minute, 200/day). That conflict is enough to leave the client off. Set OPENVERSE_IMAGES=1 to call it. CC0 and CC BY would be the only licences kept.",
   },
   nasa: {
     id: "nasa",
@@ -47,5 +47,6 @@ export const IMAGE_SOURCES = {
 };
 
 export function sourceAllowed(id) {
+  if (id === "openverse") return process.env.OPENVERSE_IMAGES === "1";
   return IMAGE_SOURCES[id]?.allowed === true;
 }

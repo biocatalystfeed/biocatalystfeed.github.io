@@ -47,514 +47,307 @@
         "hosting": "hotlink"
       }
     },
-    "commons-photo:bayer": {
-      "at": "2026-11-17T23:03:09.763Z",
+    "v2:commons-photo:asundexian": {
+      "at": "2026-11-17T23:14:33.504Z",
+      "images": []
+    },
+    "v2:nasa:asundexian": {
+      "at": "2026-11-17T23:14:33.631Z",
+      "images": []
+    },
+    "v2:commons-photo:sunharbo": {
+      "at": "2026-11-17T23:14:33.948Z",
+      "images": []
+    },
+    "v2:nasa:sunharbo": {
+      "at": "2026-11-17T23:14:33.983Z",
+      "images": []
+    },
+    "v2:commons-photo:baxdrostat": {
+      "at": "2026-11-17T23:14:34.314Z",
       "images": [
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Pano-bayer-leverkusen.jpg/960px-Pano-bayer-leverkusen.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Pano-bayer-leverkusen.jpg",
-          "credit": "A.Savin",
-          "licence": "CC BY-SA 3.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-          "alt": "A pano of the Bayer main factories in Leverkusen, Germany.",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Baxdrostat_3D.png/960px-Baxdrostat_3D.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Baxdrostat_3D.png",
+          "credit": "Jovan.gec",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "A 3D ball and stick representation of a baxrdrostat molecule.",
           "width": 960,
-          "height": 173,
+          "height": 459,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 2,
+          "relevance": 3,
+          "reason": "drug \"baxdrostat\"",
+          "provider": "commons"
+        }
+      ]
+    },
+    "v2:nasa:baxdrostat": {
+      "at": "2026-11-17T23:14:34.355Z",
+      "images": []
+    },
+    "v2:commons-photo:baxfendy": {
+      "at": "2026-11-17T23:14:34.795Z",
+      "images": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Baxdrostat_3D.png/960px-Baxdrostat_3D.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Baxdrostat_3D.png",
+          "credit": "Jovan.gec",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "A 3D ball and stick representation of a baxrdrostat molecule.",
+          "width": 960,
+          "height": 459,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "drug \"baxdrostat\"",
+          "provider": "commons"
+        }
+      ]
+    },
+    "v2:nasa:baxfendy": {
+      "at": "2026-11-17T23:14:34.833Z",
+      "images": []
+    },
+    "v2:commons-photo:summit": {
+      "at": "2026-11-17T23:14:35.543Z",
+      "images": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Summit_skyline.jpg/960px-Summit_skyline.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Summit_skyline.jpg",
+          "credit": "Original uploader was Daniel Case at en.wikipedia",
+          "licence": "CC BY-SA 3.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "alt": "Photographed by Daniel Case from the top level of the en:Overlook Hospital parking garage 2006-10-29.",
+          "width": 960,
+          "height": 414,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/BayArena_neu_2009.jpg/960px-BayArena_neu_2009.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:BayArena_neu_2009.jpg",
-          "credit": "H005",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Summitting_Island_Peak.jpg/960px-Summitting_Island_Peak.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Summitting_Island_Peak.jpg",
+          "credit": "Mountaineer",
+          "licence": "CC BY 3.0",
+          "basisUrl": "https://creativecommons.org/licenses/by/3.0",
+          "alt": "Climber taking the final few steps onto the 20,305 ft. (6,189 m) summit of Imja Tse ( Island Peak ) in Nepal.",
+          "width": 960,
+          "height": 1280,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Hilltop_Bicycles_Summit_NJ.JPG/960px-Hilltop_Bicycles_Summit_NJ.JPG",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Hilltop_Bicycles_Summit_NJ.JPG",
+          "credit": "Tomwsulcer",
+          "licence": "CC0",
+          "basisUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "alt": "Bicycle mechanic and co-manager Sam Cooper of Hilltop Bicycles in Summit, New Jersey.",
+          "width": 960,
+          "height": 524,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Pirin_-_Vihren_peak.JPG/960px-Pirin_-_Vihren_peak.JPG",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Pirin_-_Vihren_peak.JPG",
+          "credit": "Pudelek (Marcin Szala)",
           "licence": "CC BY-SA 3.0",
           "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-          "alt": "The BayArena , home stadium of Bayer 04 Leverkusen , in 2009 just after completion of the new roof",
+          "alt": "VIhren peak, Pirin, Bulgaria",
           "width": 960,
-          "height": 462,
+          "height": 593,
           "hosting": "hotlink",
           "type": "photo",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Metallist-Bayer-04_%287%29.jpg/500px-Metallist-Bayer-04_%287%29.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Metallist-Bayer-04_(7).jpg",
-          "credit": "Дмитрий Неймырок",
-          "licence": "CC BY-SA 3.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-          "alt": "Bayer Leverkusen 2012",
-          "width": 500,
-          "height": 357,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bayer_crater_4154_h3.jpg/500px-Bayer_crater_4154_h3.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Bayer_crater_4154_h3.jpg",
-          "credit": "James Stuby based on NASA image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Census_Bureau_map_of_Summit%2C_New_Jersey.png/500px-Census_Bureau_map_of_Summit%2C_New_Jersey.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Census_Bureau_map_of_Summit%2C_New_Jersey.png",
+          "credit": "United States Census Bureau",
           "licence": "Public domain",
           "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-          "alt": "Slightly oblique view of Bayer (crater) , on the moon.",
+          "alt": "Census Bureau map of Summit",
           "width": 500,
-          "height": 500,
+          "height": 370,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 2,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Leverkusen%2C_straatzicht_Bayer_-_Science_for_a_better_life_foto2_2015-04-18_12.10.jpg/960px-Leverkusen%2C_straatzicht_Bayer_-_Science_for_a_better_life_foto2_2015-04-18_12.10.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Leverkusen%2C_straatzicht_Bayer_-_Science_for_a_better_life_foto2_2015-04-18_12.10.jpg",
-          "credit": "Michielverbeek",
-          "licence": "CC BY-SA 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-          "alt": "Leverkusen, view to a street: Bayer - Science for a better life",
-          "width": 960,
-          "height": 603,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Bayer_Belford_Roxo.jpg/960px-Bayer_Belford_Roxo.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Bayer_Belford_Roxo.jpg",
-          "credit": "Sir Velpertex di Crantx",
-          "licence": "CC BY-SA 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-          "alt": "A unidade da Bayer localizada em Belford Roxo, Rio de Janeiro, Brasil.",
-          "width": 960,
-          "height": 720,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/2023-09-09_Handball%2C_Bundesliga_Frauen%2C_Th%C3%BCringer_HC_-_TSV_Bayer_04_Leverkusen_1DX_1840_by_Stepro.jpg/960px-2023-09-09_Handball%2C_Bundesliga_Frauen%2C_Th%C3%BCringer_HC_-_TSV_Bayer_04_Leverkusen_1DX_1840_by_Stepro.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:2023-09-09_Handball%2C_Bundesliga_Frauen%2C_Th%C3%BCringer_HC_-_TSV_Bayer_04_Leverkusen_1DX_1840_by_Stepro.jpg",
-          "credit": "Steffen Prößdorf",
-          "licence": "CC BY-SA 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-          "alt": "Handball, Bundesliga Frauen, Thüringer HC - TSV Bayer 04 Leverkusen: Jubel, celebration über den deutlichen Sieg, von links: Jennifer Rode (Thüringer HC, 43), Josefine Huber (Thüri",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cholatse_Peak%2C_Nepal%2C_Himalayas.jpg/960px-Cholatse_Peak%2C_Nepal%2C_Himalayas.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Cholatse_Peak%2C_Nepal%2C_Himalayas.jpg",
+          "credit": "Vyacheslav Argenberg",
+          "licence": "CC BY 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by/4.0",
+          "alt": "Cholatse Peak, Jobo Lhaptshan. View of Mount Cholatse (6,440 metres (21,129 ft)) with Chola terminal moraine in Chola Valley to the south of the Great Himalayan Range in Mahalangur",
           "width": 960,
           "height": 641,
           "hosting": "hotlink",
           "type": "photo",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/BayArena_in_Leverkusen_%282023-09-21_18-38-04%29.jpg/960px-BayArena_in_Leverkusen_%282023-09-21_18-38-04%29.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:BayArena_in_Leverkusen_(2023-09-21_18-38-04).jpg",
-          "credit": "Liv Lovisa",
-          "licence": "CC BY 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/4.0",
-          "alt": "BayArena in Leverkusen, Germany before a Europa League match between Bayer 04 Leverkusen and BK Häcken, taken from the away stand",
-          "width": 960,
-          "height": 720,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "commons"
-        }
-      ]
-    },
-    "openverse:bayer": {
-      "at": "2026-11-17T23:03:09.829Z",
-      "images": [
-        {
-          "src": "https://live.staticflickr.com/65535/52117808965_94fccdcee0_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/184802432@N05/52117808965",
-          "credit": "Stefan-Mueller-climate",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Manon Gerhardt von Extinction Rebellion singt Bine Maja bei Blockade der Bayer-Zentrale zum Biodiversitätstag",
-          "width": 1024,
-          "height": 681,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/4003/4396252958_28ae41f3c9.jpg",
-          "sourcePage": "https://www.flickr.com/photos/32365888@N05/4396252958",
-          "credit": "Caza_No_7",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Homage to Herbert Bayer",
-          "width": 500,
-          "height": 333,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/7633/16771493349_cf37cab70b_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/31411679@N08/16771493349",
-          "credit": "aldenjewell",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Bayer's Chevrolet, New York, 1932",
-          "width": 1024,
-          "height": 796,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/52117799365_9366a86a0b_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/184802432@N05/52117799365",
-          "credit": "Stefan-Mueller-climate",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Performance von Extinction Rebellion, um auf das von Bayer mitverursachte Artensterben und die drohenden Versorgungskrisen hinzuweisen.",
-          "width": 1024,
-          "height": 758,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/8659/16157778026_9a9bb8d152_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/39160147@N03/16157778026",
-          "credit": "JeepersMedia",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Bayer Aspirin",
-          "width": 1024,
-          "height": 765,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/7563/15997787807_ab96e32f36_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/39160147@N03/15997787807",
-          "credit": "JeepersMedia",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Bayer Aspirin",
-          "width": 1024,
-          "height": 734,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/1255/1201709115_133b3927a3_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/24559254@N00/1201709115",
-          "credit": "Conanil",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Turning Bayer",
-          "width": 1024,
-          "height": 768,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Herbert_Bayer_Stadelwand_1936.jpg",
-          "sourcePage": "https://commons.wikimedia.org/w/index.php?curid=24556654",
-          "credit": "M.T. Abraham Center",
-          "licence": "CC BY 3.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/3.0/",
-          "alt": "Herbert Bayer Stadelwand 1936",
-          "width": 2035,
-          "height": 1451,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        }
-      ]
-    },
-    "nasa:bayer": {
-      "at": "2026-11-17T23:03:09.929Z",
-      "images": [
-        {
-          "src": "https://images-assets.nasa.gov/image/PIA16799/PIA16799~small.jpg",
-          "sourcePage": "https://images.nasa.gov/details/PIA16799",
-          "credit": "NASA/JPL-Caltech/MSSS/ASU",
-          "licence": "Public domain (U.S. government work)",
-          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-          "alt": "The color cameras on NASA Mars rover Curiosity, including the pair that make up the rover Mastcam instrument, use the same type of Bayer pattern RGB filter as found in typical comm",
-          "width": 640,
-          "height": 480,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "nasa"
-        },
-        {
-          "src": "https://images-assets.nasa.gov/image/PIA22065/PIA22065~small.jpg",
-          "sourcePage": "https://images.nasa.gov/details/PIA22065",
-          "credit": "NASA/JPL-Caltech/MSSS/ASU",
-          "licence": "Public domain (U.S. government work)",
-          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-          "alt": "This pair of images from the Mast Camera (Mastcam) on NASA's Curiosity rover illustrates how special filters are used to scout terrain ahead for variations in the local bedrock. Th",
-          "width": 640,
-          "height": 289,
-          "hosting": "hotlink",
-          "type": "micrograph",
-          "relevance": 0,
-          "provider": "nasa"
-        },
-        {
-          "src": "https://images-assets.nasa.gov/image/PIA22066/PIA22066~small.jpg",
-          "sourcePage": "https://images.nasa.gov/details/PIA22066",
-          "credit": "NASA/JPL-Caltech/MSSS",
-          "licence": "Public domain (U.S. government work)",
-          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-          "alt": "This false-color image demonstrates how use of special filters available on the Mast Camera (Mastcam) of NASA's Curiosity Mars rover can reveal the presence of certain minerals in ",
-          "width": 640,
-          "height": 570,
-          "hosting": "hotlink",
-          "type": "micrograph",
-          "relevance": 0,
-          "provider": "nasa"
-        }
-      ]
-    },
-    "commons-photo:blood pressure": {
-      "at": "2026-11-17T23:03:09.939Z",
-      "images": [
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Oscillometric_Blood_Pressure_Waveform.jpg/960px-Oscillometric_Blood_Pressure_Waveform.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Oscillometric_Blood_Pressure_Waveform.jpg",
-          "credit": "Amirhossein Ashrafzadeh",
-          "licence": "CC BY-SA 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-          "alt": "Oscillometric Blood Pressure Waveform; Taken from OMRON M2 (HEM-7121-E) blood pressure monitor PC Board using GW INSTEK GDS-1102A-U digital storage oscilloscope by me. In this case",
-          "width": 960,
-          "height": 540,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Checking_blood_pressure.jpg/960px-Checking_blood_pressure.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Checking_blood_pressure.jpg",
-          "credit": "Pambelle12",
-          "licence": "CC BY-SA 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-          "alt": "This is an image with the theme \" Health and Wellness in Africa \" from:",
-          "width": 960,
-          "height": 720,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Measuring_Blood_Pressure.jpg/960px-Measuring_Blood_Pressure.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Measuring_Blood_Pressure.jpg",
-          "credit": "Alice.Mukesh",
-          "licence": "CC BY-SA 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-          "alt": "This is an image with the theme \" Health and Wellness in Africa \" from:",
-          "width": 960,
-          "height": 771,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ambulatory_blood_pressure_monitoring._Elevated_nocturnal_BP._-_es.jpg/960px-Ambulatory_blood_pressure_monitoring._Elevated_nocturnal_BP._-_es.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Ambulatory_blood_pressure_monitoring._Elevated_nocturnal_BP._-_es.jpg",
-          "credit": "Jmarchn",
-          "licence": "CC BY-SA 3.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-          "alt": "Ambulatory blood pressure monitoring diagram. Elevated systolic BP in the nocturnal period. 66 year old man.",
-          "width": 960,
-          "height": 426,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Checking_blood_pressure_at_home.jpg/960px-Checking_blood_pressure_at_home.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Checking_blood_pressure_at_home.jpg",
-          "credit": "Beendy234",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Summit_NJ_Downtown.jpg/960px-Summit_NJ_Downtown.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Summit_NJ_Downtown.jpg",
+          "credit": "AZacharyZ",
           "licence": "CC0",
           "basisUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-          "alt": "Checking blood pressure at home",
+          "alt": "Springfield Avenue and Maple St in Summit, NJ",
           "width": 960,
-          "height": 860,
+          "height": 536,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 2,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         }
       ]
     },
-    "openverse:blood pressure": {
-      "at": "2026-11-17T23:03:09.956Z",
+    "v2:nasa:summit": {
+      "at": "2026-11-17T23:14:36.206Z",
       "images": [
         {
-          "src": "https://live.staticflickr.com/3722/10668630046_53eca2c5eb_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/107621760@N03/10668630046",
-          "credit": "medisave",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Blood Pressure Monitor",
-          "width": 1024,
-          "height": 912,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/8062/8210286870_7eb9814892_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/30329962@N08/8210286870",
-          "credit": "Mark Turnauckas",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "How To Take Your Cat's Blood Pressure",
-          "width": 1024,
-          "height": 578,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/7356/8749833424_c31288a1f9.jpg",
-          "sourcePage": "https://www.flickr.com/photos/9106303@N05/8749833424",
-          "credit": "Mike Licht, NotionsCapital.com",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Cell Phones & Blood Pressure, after Adriaen Brouwer",
-          "width": 500,
-          "height": 499,
-          "hosting": "hotlink",
-          "type": "illustration",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/3790/10668850893_e3f31c22a0_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/107621760@N03/10668850893",
-          "credit": "medisave",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Blood Pressure Monitor",
-          "width": 999,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/1867/43811315094_bd21399e0e_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/104346167@N06/43811315094",
-          "credit": "jlcampbell104",
-          "licence": "CC0 1.0",
-          "basisUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "alt": "Know your blood pressure.",
-          "width": 1024,
-          "height": 683,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/48545975471_b48de9c7dc_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/183469667@N05/48545975471",
-          "credit": "SELF Magazine",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Young woman having her blood pressure taken",
-          "width": 1024,
-          "height": 753,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/48546127592_92a95a2288_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/183469667@N05/48546127592",
-          "credit": "SELF Magazine",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Doctor taking a young woman's blood pressure",
-          "width": 758,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/1091/1396378277_d678b00a71_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/44124366475@N01/1396378277",
-          "credit": "topgold",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Blood Pressure",
-          "width": 1024,
-          "height": 768,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        }
-      ]
-    },
-    "nasa:blood pressure": {
-      "at": "2026-11-17T23:03:10.233Z",
-      "images": [
-        {
-          "src": "https://images-assets.nasa.gov/image/KSC-03pd2838/KSC-03pd2838~small.jpg",
-          "sourcePage": "https://images.nasa.gov/details/KSC-03pd2838",
-          "credit": "NASA",
+          "src": "https://images-assets.nasa.gov/image/PIA02683/PIA02683~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA02683",
+          "credit": "NASA/JPL/ASU",
           "licence": "Public domain (U.S. government work)",
           "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-          "alt": "KENNEDY SPACE CENTER, FLA. - An employee gets a blood pressure check from one of the participating organizations in Spaceport Super Safety and Health Day at KSC and Cape Canaveral ",
+          "alt": "This image shows the summit of Hecates Tholus. The summit caldera is located in the top of the image",
+          "width": 312,
+          "height": 640,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "drug \"Summit\""
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/PIA03610/PIA03610~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA03610",
+          "credit": "NASA/JPL-Caltech/Cornell",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "Summit Panorama with Rover Deck",
           "width": 640,
-          "height": 417,
+          "height": 187,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 2,
-          "provider": "nasa"
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "drug \"Summit\""
         },
         {
-          "src": "https://images-assets.nasa.gov/image/8901592/8901592~small.jpg",
-          "sourcePage": "https://images.nasa.gov/details/8901592",
-          "credit": "NASA",
+          "src": "https://images-assets.nasa.gov/image/PIA04786/PIA04786~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA04786",
+          "credit": "NASA/JPL/Arizona State University",
           "licence": "Public domain (U.S. government work)",
           "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-          "alt": "(PCG) Protein Crystal Growth Renin. Enzyme produced by the kidneys, plays a major role in the chemical reaction that controls blood pressure. Principal Investigator on STS-26 was C",
+          "alt": "The Summit of Olympus Mons",
+          "width": 259,
+          "height": 640,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "drug \"Summit\""
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/PIA04194/PIA04194~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA04194",
+          "credit": "NASA/JPL",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "Windy Summit and Plains in Gusev",
+          "width": 640,
+          "height": 640,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "drug \"Summit\""
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/KSC-20220316-PH-KLS01_0277/KSC-20220316-PH-KLS01_0277~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/KSC-20220316-PH-KLS01_0277",
+          "credit": "NASA/Kim Shiflett",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "U.S. Dept. of Education Deputy Secretary Cindy Marten signs the floor of the Lunabotics arena at the Center for Space Education at NASA’s Kennedy Space Center Visitor Complex in Fl",
           "width": 426,
           "height": 640,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 2,
-          "provider": "nasa"
+          "relevance": 0,
+          "provider": "nasa",
+          "reason": ""
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/PIA03057/PIA03057~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA03057",
+          "credit": "NASA/JPL-Caltech",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "Looking Back at Spirit Trail to the Summit",
+          "width": 640,
+          "height": 103,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "drug \"Summit\""
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/PIA03640/PIA03640~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA03640",
+          "credit": "NASA/JPL/Cornell",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "Descent from the Summit of Husband Hill",
+          "width": 640,
+          "height": 100,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "drug \"Summit\""
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/PIA04184/PIA04184~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA04184",
+          "credit": "NASA/JPL-Caltech/Cornell",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "Spirit Spectacular View from the Summit",
+          "width": 640,
+          "height": 179,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "drug \"Summit\""
         }
       ]
     },
-    "commons-photo:summit therapeutics": {
-      "at": "2026-11-17T23:03:10.542Z",
+    "v2:commons-photo:summit therapeutics": {
+      "at": "2026-11-17T23:14:36.496Z",
       "images": [
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2022_-_Auto-Tech_%26_TalkRobot_SM6_1453_%2852474736868%29.jpg/960px-2022_-_Auto-Tech_%26_TalkRobot_SM6_1453_%2852474736868%29.jpg",
@@ -567,7 +360,8 @@
           "height": 1445,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
@@ -581,7 +375,8 @@
           "height": 650,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
@@ -595,7 +390,8 @@
           "height": 1499,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
@@ -609,7 +405,8 @@
           "height": 684,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
@@ -623,7 +420,8 @@
           "height": 647,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
@@ -637,7 +435,8 @@
           "height": 654,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
@@ -651,7 +450,8 @@
           "height": 669,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         },
         {
@@ -665,358 +465,88 @@
           "height": 636,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
+          "relevance": 3,
+          "reason": "drug \"Summit\"",
           "provider": "commons"
         }
       ]
     },
-    "openverse:summit therapeutics": {
-      "at": "2026-11-17T23:03:10.559Z",
-      "images": [
-        {
-          "src": "https://live.staticflickr.com/65535/52060119073_51a14515fa_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/44124348109@N01/52060119073",
-          "credit": "jurvetson",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Rethinking Psychedelics: The Next Generation of Treatment",
-          "width": 994,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/52474191796_cdcc70983e_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/74711243@N06/52474191796",
-          "credit": "Web Summit",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "SM7_8009",
-          "width": 1024,
-          "height": 712,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/52474471954_5401f74073_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/74711243@N06/52474471954",
-          "credit": "Web Summit",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "SM6_1501",
-          "width": 1024,
-          "height": 709,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/52474471739_ec784397b1_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/74711243@N06/52474471739",
-          "credit": "Web Summit",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "SZ9_6022",
-          "width": 656,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/52474657920_f37472ef10_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/74711243@N06/52474657920",
-          "credit": "Web Summit",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "SM6_1450",
-          "width": 1024,
-          "height": 693,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/52473690917_85b99a7089_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/74711243@N06/52473690917",
-          "credit": "Web Summit",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "SM6_1461",
-          "width": 681,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/52474736868_5b537b6b4c_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/74711243@N06/52474736868",
-          "credit": "Web Summit",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "SM6_1453",
-          "width": 681,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/65535/52474736228_cbdf53eefb_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/74711243@N06/52474736228",
-          "credit": "Web Summit",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "SM6_1401",
-          "width": 1024,
-          "height": 729,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        }
-      ]
-    },
-    "nasa:summit therapeutics": {
-      "at": "2026-11-17T23:03:10.602Z",
+    "v2:nasa:summit therapeutics": {
+      "at": "2026-11-17T23:14:36.496Z",
       "images": []
     },
-    "commons-photo:lung cancer": {
-      "at": "2026-11-17T23:03:10.609Z",
+    "v2:commons-photo:sintilimab": {
+      "at": "2026-11-17T23:14:39.393Z",
+      "images": []
+    },
+    "v2:nasa:sintilimab": {
+      "at": "2026-11-17T23:14:39.393Z",
+      "images": []
+    },
+    "v2:commons-photo:fortvita": {
+      "at": "2026-11-17T23:14:39.738Z",
+      "images": []
+    },
+    "v2:nasa:fortvita": {
+      "at": "2026-11-17T23:14:39.738Z",
+      "images": []
+    },
+    "v2:commons-photo:avelumab": {
+      "at": "2026-11-17T23:14:40.533Z",
       "images": [
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg/960px-Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
-          "credit": "Yale Rosen and Jian-Hua Qiao",
-          "licence": "CC BY-SA 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-          "alt": "Small cell variant of squamous cell carcinoma (SCC) mimicking small cell lung carcinoma (SCLC). p63 immunochemistry",
-          "width": 960,
-          "height": 723,
-          "hosting": "hotlink",
-          "type": "micrograph",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Lung_cancer_HAVCR2.jpg/960px-Lung_cancer_HAVCR2.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung_cancer_HAVCR2.jpg",
-          "credit": "Jurajb101",
-          "licence": "CC BY-SA 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-          "alt": "Immunohistochemical analysis of paraffin-embedded human lung carcinoma tissue using HAVCR2.",
-          "width": 960,
-          "height": 720,
-          "hosting": "hotlink",
-          "type": "micrograph",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Cancer_de_pulmon.jpg/960px-Cancer_de_pulmon.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Cancer_de_pulmon.jpg",
-          "credit": "Modificado de OpenStax College",
-          "licence": "CC BY-SA 3.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-          "alt": "Esquema en el que se muestran las principales estructuras del sistema respiratorio y un cancer de pulmón que afecta al lóbulo superior del pulmón derecho.",
-          "width": 960,
-          "height": 641,
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Monoclonal_antibodies_used_in_the_treatment_of_non_small_cell_lung_cancer_and_their_mechanism_of_action.webp/500px-Monoclonal_antibodies_used_in_the_treatment_of_non_small_cell_lung_cancer_and_their_mechanism_of_action.webp",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Monoclonal_antibodies_used_in_the_treatment_of_non_small_cell_lung_cancer_and_their_mechanism_of_action.webp",
+          "credit": "First line Immunotherapy for Non-Small Cell Lung Cancer. Nasser NJ, Gorenberg M, Agbarya A. Pharmaceuticals (Basel). 202",
+          "licence": "CC BY 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by/4.0",
+          "alt": "Non-small cell lung cancer (NSCLC) cells expressing programmed death-ligand 1 (PD-L1) could interact with programmed death receptor 1 (PD-1) expressed on the surface of T cells, an",
+          "width": 500,
+          "height": 322,
           "hosting": "hotlink",
           "type": "photo",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lung_cancer_-_Healthy_lung_Smokers_lung_with_cancer_--_Smart-Servier.jpg/960px-Lung_cancer_-_Healthy_lung_Smokers_lung_with_cancer_--_Smart-Servier.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung_cancer_-_Healthy_lung_Smokers_lung_with_cancer_--_Smart-Servier.jpg",
-          "credit": "Laboratoires Servier",
-          "licence": "CC BY-SA 3.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-          "alt": "Lung cancer",
-          "width": 960,
-          "height": 540,
-          "hosting": "hotlink",
-          "type": "illustration",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lung_cancer_histology_collection.png/960px-Lung_cancer_histology_collection.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung_cancer_histology_collection.png",
-          "credit": "\"Atlas of Pulmonary Pathology\" on Flickr (Yale Rosen, [6] )",
-          "licence": "CC BY-SA 4.0",
-          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-          "alt": "Four images of lung histology: (Top-left) Normal lung, bronchiole at center, with alveoli (mostly air) surrounding (Top-right) Lung adenocarcinoma showing papillary (finger-like) g",
-          "width": 960,
-          "height": 723,
-          "hosting": "hotlink",
-          "type": "micrograph",
-          "relevance": 2,
-          "provider": "commons"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Lung-cancer-deaths.png/960px-Lung-cancer-deaths.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung-cancer-deaths.png",
-          "credit": "MDWiki(from Our World In Data)",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Fonc-11-582664-g004.webp/500px-Fonc-11-582664-g004.webp",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Fonc-11-582664-g004.webp",
+          "credit": "Zhang W, Kong X, Ai B, Wang Z, Wang X, Wang N, Zheng S, Fang Y, Wang J.",
           "licence": "CC BY 4.0",
           "basisUrl": "https://creativecommons.org/licenses/by/4.0",
-          "alt": "lung cancer",
-          "width": 960,
-          "height": 678,
+          "alt": "Figure 4 Mechanism of action of Avelumab. PD-L1 may be expressed on tumor cells and tumor-infiltrating immune cells and can contribute to the inhibition of the anti-tumor immune re",
+          "width": 500,
+          "height": 427,
           "hosting": "hotlink",
           "type": "diagram",
-          "relevance": 2,
+          "relevance": 3,
+          "reason": "drug \"Avelumab\"",
           "provider": "commons"
         },
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Lung_cancer_death_rate_%E2%80%93_males_in_the_UK%2C_1950_to_2019%2C_OWID.png/960px-Lung_cancer_death_rate_%E2%80%93_males_in_the_UK%2C_1950_to_2019%2C_OWID.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung_cancer_death_rate_%E2%80%93_males_in_the_UK%2C_1950_to_2019%2C_OWID.png",
-          "credit": "MDWiki(from Our World In Data)",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/13046_2019_1094_Fig6_HTML.webp/500px-13046_2019_1094_Fig6_HTML.webp",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:13046_2019_1094_Fig6_HTML.webp",
+          "credit": "N. A. Seebacher, A. E. Stacy, G. M. Porter & A. M. Merlot",
           "licence": "CC BY 4.0",
           "basisUrl": "https://creativecommons.org/licenses/by/4.0",
-          "alt": "lung cancer",
-          "width": 960,
-          "height": 678,
+          "alt": "Mechanisms of action of immune checkpoint inhibitors. Two signals are required to initiate the activation of T cells. The first signal involves the binding of a MHC to a TCR on T-c",
+          "width": 500,
+          "height": 277,
           "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
+          "type": "diagram",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         }
       ]
     },
-    "openverse:lung cancer": {
-      "at": "2026-11-17T23:03:10.623Z",
-      "images": [
-        {
-          "src": "https://live.staticflickr.com/3740/10572980284_026c78617c_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/66488214@N05/10572980284",
-          "credit": "Office for National Statistics",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Lung cancer in England October 2013",
-          "width": 378,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/8451/8032518633_bdc3540ec8_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/48973657@N00/8032518633",
-          "credit": "See-ming Lee (SML)",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "吸煙引致肺癌 Smoking causes lung cancer / SML.20120928.IP3",
-          "width": 1024,
-          "height": 765,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Lung_cancer.jpg",
-          "sourcePage": "https://commons.wikimedia.org/w/index.php?curid=5306727",
-          "credit": "Emmanuelm at en.wikipedia",
-          "licence": "CC BY 3.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/3.0/",
-          "alt": "Lung cancer",
-          "width": 416,
-          "height": 754,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/42/81976232_0dee3ac3da.jpg",
-          "sourcePage": "https://www.flickr.com/photos/92203585@N00/81976232",
-          "credit": "jetalone",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Lung cancer man on cigarette",
-          "width": 375,
-          "height": 500,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/1/11/Pie_chart_of_lung_cancers.svg",
-          "sourcePage": "https://commons.wikimedia.org/w/index.php?curid=15469615",
-          "credit": "Mikael Häggström. When using this image in external works, it may be cited as: Häggström, Mikael (2014). 'Medical gallery of Mikael Häggström 2014'. WikiJournal of Medicine 1 (2). DOI:10.15347/wjm/2014.008. ISSN 2002-4436. Public Domain. or By Mikael Häggström, used with permission.",
-          "licence": "CC0 1.0",
-          "basisUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
-          "alt": "Pie chart of lung cancers",
-          "width": 482,
-          "height": 368,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/753/21125403865_17b885cef3_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/75358728@N05/21125403865",
-          "credit": "Libertas Academica",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Figure 1 from 'Analysis of Lung Flute–collected Sputum for Lung Cancer Diagnosis'",
-          "width": 1024,
-          "height": 452,
-          "hosting": "hotlink",
-          "type": "illustration",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/37/74296399_b5969d1e01.jpg",
-          "sourcePage": "https://www.flickr.com/photos/46179909@N00/74296399",
-          "credit": "GreenFlames09",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Lung Cancer 4",
-          "width": 500,
-          "height": 375,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/40/74296380_6dee0b9032.jpg",
-          "sourcePage": "https://www.flickr.com/photos/46179909@N00/74296380",
-          "credit": "GreenFlames09",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Lung Cancer 2",
-          "width": 500,
-          "height": 375,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
-          "provider": "openverse"
-        }
-      ]
-    },
-    "nasa:lung cancer": {
-      "at": "2026-11-17T23:03:10.674Z",
+    "v2:nasa:avelumab": {
+      "at": "2026-11-17T23:14:40.533Z",
       "images": []
     },
-    "commons-photo:solid tumors": {
-      "at": "2026-11-17T23:03:10.680Z",
+    "v2:commons-photo:solid tumors": {
+      "at": "2026-11-17T23:14:40.887Z",
       "images": [
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Weiches-fibrom-augenlid.jpg/960px-Weiches-fibrom-augenlid.jpg",
@@ -1030,6 +560,7 @@
           "hosting": "hotlink",
           "type": "photo",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1044,6 +575,7 @@
           "hosting": "hotlink",
           "type": "micrograph",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1056,8 +588,9 @@
           "width": 500,
           "height": 269,
           "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 2,
+          "type": "diagram",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1072,6 +605,7 @@
           "hosting": "hotlink",
           "type": "micrograph",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1086,6 +620,7 @@
           "hosting": "hotlink",
           "type": "micrograph",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1100,6 +635,7 @@
           "hosting": "hotlink",
           "type": "micrograph",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1114,6 +650,7 @@
           "hosting": "hotlink",
           "type": "micrograph",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1128,145 +665,529 @@
           "hosting": "hotlink",
           "type": "micrograph",
           "relevance": 0,
+          "reason": "",
           "provider": "commons"
         }
       ]
     },
-    "openverse:solid tumors": {
-      "at": "2026-11-17T23:03:10.694Z",
+    "v2:nasa:solid tumors": {
+      "at": "2026-11-17T23:14:40.887Z",
+      "images": []
+    },
+    "v2:commons-photo:bayer": {
+      "at": "2026-11-17T23:17:30.716Z",
       "images": [
         {
-          "src": "https://upload.wikimedia.org/wikipedia/commons/2/24/Intravascular_cells_and_solid_tumor_targets_for_immunoliposomes.png",
-          "sourcePage": "https://commons.wikimedia.org/w/index.php?curid=146652918",
-          "credit": "Jiaxing Di",
-          "licence": "CC0 1.0",
-          "basisUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
-          "alt": "Intravascular cells and solid tumor targets for immunoliposomes",
-          "width": 2244,
-          "height": 1336,
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Pano-bayer-leverkusen.jpg/960px-Pano-bayer-leverkusen.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Pano-bayer-leverkusen.jpg",
+          "credit": "A.Savin",
+          "licence": "CC BY-SA 3.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "alt": "A pano of the Bayer main factories in Leverkusen, Germany.",
+          "width": 960,
+          "height": 173,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "org \"Bayer\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/BayArena_neu_2009.jpg/960px-BayArena_neu_2009.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:BayArena_neu_2009.jpg",
+          "credit": "H005",
+          "licence": "CC BY-SA 3.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "alt": "The BayArena , home stadium of Bayer 04 Leverkusen , in 2009 just after completion of the new roof",
+          "width": 960,
+          "height": 462,
           "hosting": "hotlink",
           "type": "photo",
           "relevance": 0,
-          "provider": "openverse"
+          "reason": "sports club, not the company",
+          "provider": "commons"
         },
         {
-          "src": "https://live.staticflickr.com/58/210920329_c803d8fc8f_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/78147607@N00/210920329",
-          "credit": "euthman",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Nodular Hidradenoma",
-          "width": 748,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/190/482649679_499c6747aa_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/78147607@N00/482649679",
-          "credit": "euthman",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Mucinous Cystadenocarcinoma of the Ovary",
-          "width": 1024,
-          "height": 925,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/4430/37162117631_707a8c4231_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/44124348109@N01/37162117631",
-          "credit": "jurvetson",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Getting a deep peek inside us at Health Nucleus",
-          "width": 805,
-          "height": 1024,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/5218/5387630856_d17267cfa1_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/55370236@N07/5387630856",
-          "credit": "James_Seattle",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Jan 25 2011 [Day 085] 'Tumor On Board'",
-          "width": 1024,
-          "height": 771,
-          "hosting": "hotlink",
-          "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
-        },
-        {
-          "src": "https://live.staticflickr.com/7039/6936924743_4136c4c49e.jpg",
-          "sourcePage": "https://www.flickr.com/photos/75358728@N05/6936924743",
-          "credit": "Libertas Academica",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Figure 1",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Metallist-Bayer-04_%287%29.jpg/500px-Metallist-Bayer-04_%287%29.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Metallist-Bayer-04_(7).jpg",
+          "credit": "Дмитрий Неймырок",
+          "licence": "CC BY-SA 3.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "alt": "Bayer Leverkusen 2012",
           "width": 500,
-          "height": 403,
+          "height": 357,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
+          "relevance": 3,
+          "reason": "org \"Bayer\"",
+          "provider": "commons"
         },
         {
-          "src": "https://live.staticflickr.com/3756/9257763498_f32c487aed_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/78147607@N00/9257763498",
-          "credit": "euthman",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Solid and Cystic Hidradenoma, Foot (gross, with ruler)",
-          "width": 1024,
-          "height": 748,
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bayer_crater_4154_h3.jpg/500px-Bayer_crater_4154_h3.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Bayer_crater_4154_h3.jpg",
+          "credit": "James Stuby based on NASA image",
+          "licence": "Public domain",
+          "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "alt": "Slightly oblique view of Bayer (crater) , on the moon.",
+          "width": 500,
+          "height": 500,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 0,
-          "provider": "openverse"
+          "relevance": 3,
+          "reason": "org \"Bayer\"",
+          "provider": "commons"
         },
         {
-          "src": "https://live.staticflickr.com/7452/9257763336_4c761b058b_b.jpg",
-          "sourcePage": "https://www.flickr.com/photos/78147607@N00/9257763336",
-          "credit": "euthman",
-          "licence": "CC BY 2.0",
-          "basisUrl": "https://creativecommons.org/licenses/by/2.0/",
-          "alt": "Solid and Cystic Hidradenoma, Foot (Gross, without ruler)",
-          "width": 1024,
-          "height": 725,
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Leverkusen%2C_straatzicht_Bayer_-_Science_for_a_better_life_foto2_2015-04-18_12.10.jpg/960px-Leverkusen%2C_straatzicht_Bayer_-_Science_for_a_better_life_foto2_2015-04-18_12.10.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Leverkusen%2C_straatzicht_Bayer_-_Science_for_a_better_life_foto2_2015-04-18_12.10.jpg",
+          "credit": "Michielverbeek",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "Leverkusen, view to a street: Bayer - Science for a better life",
+          "width": 960,
+          "height": 603,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "org \"Bayer\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Bayer_Belford_Roxo.jpg/960px-Bayer_Belford_Roxo.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Bayer_Belford_Roxo.jpg",
+          "credit": "Sir Velpertex di Crantx",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "A unidade da Bayer localizada em Belford Roxo, Rio de Janeiro, Brasil.",
+          "width": 960,
+          "height": 720,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "org \"Bayer\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/2023-09-09_Handball%2C_Bundesliga_Frauen%2C_Th%C3%BCringer_HC_-_TSV_Bayer_04_Leverkusen_1DX_1840_by_Stepro.jpg/960px-2023-09-09_Handball%2C_Bundesliga_Frauen%2C_Th%C3%BCringer_HC_-_TSV_Bayer_04_Leverkusen_1DX_1840_by_Stepro.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:2023-09-09_Handball%2C_Bundesliga_Frauen%2C_Th%C3%BCringer_HC_-_TSV_Bayer_04_Leverkusen_1DX_1840_by_Stepro.jpg",
+          "credit": "Steffen Prößdorf",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "Handball, Bundesliga Frauen, Thüringer HC - TSV Bayer 04 Leverkusen: Jubel, celebration über den deutlichen Sieg, von links: Jennifer Rode (Thüringer HC, 43), Josefine Huber (Thüri",
+          "width": 960,
+          "height": 641,
           "hosting": "hotlink",
           "type": "photo",
           "relevance": 0,
-          "provider": "openverse"
+          "reason": "sports club, not the company",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/BayArena_in_Leverkusen_%282023-09-21_18-38-04%29.jpg/960px-BayArena_in_Leverkusen_%282023-09-21_18-38-04%29.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:BayArena_in_Leverkusen_(2023-09-21_18-38-04).jpg",
+          "credit": "Liv Lovisa",
+          "licence": "CC BY 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by/4.0",
+          "alt": "BayArena in Leverkusen, Germany before a Europa League match between Bayer 04 Leverkusen and BK Häcken, taken from the away stand",
+          "width": 960,
+          "height": 720,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 0,
+          "reason": "sports club, not the company",
+          "provider": "commons"
         }
       ]
     },
-    "nasa:solid tumors": {
-      "at": "2026-11-17T23:03:10.748Z",
+    "v2:nasa:bayer": {
+      "at": "2026-11-17T23:17:30.813Z",
       "images": [
         {
-          "src": "https://images-assets.nasa.gov/image/8901588/8901588~small.jpg",
-          "sourcePage": "https://images.nasa.gov/details/8901588",
-          "credit": "NASA",
+          "src": "https://images-assets.nasa.gov/image/PIA16799/PIA16799~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA16799",
+          "credit": "NASA/JPL-Caltech/MSSS/ASU",
           "licence": "Public domain (U.S. government work)",
           "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-          "alt": "(PCG) Protein Crystal Growth Gamma-Interferon. Stimulates the body's immune system and is used clinically in the treatment of cancer. Potential as an anti-tumor agent against solid",
-          "width": 425,
-          "height": 640,
+          "alt": "The color cameras on NASA Mars rover Curiosity, including the pair that make up the rover Mastcam instrument, use the same type of Bayer pattern RGB filter as found in typical comm",
+          "width": 640,
+          "height": 480,
           "hosting": "hotlink",
           "type": "photo",
           "relevance": 0,
-          "provider": "nasa"
+          "provider": "nasa",
+          "reason": ""
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/PIA22065/PIA22065~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA22065",
+          "credit": "NASA/JPL-Caltech/MSSS/ASU",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "This pair of images from the Mast Camera (Mastcam) on NASA's Curiosity rover illustrates how special filters are used to scout terrain ahead for variations in the local bedrock. Th",
+          "width": 640,
+          "height": 289,
+          "hosting": "hotlink",
+          "type": "micrograph",
+          "relevance": 0,
+          "provider": "nasa",
+          "reason": ""
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/PIA22066/PIA22066~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/PIA22066",
+          "credit": "NASA/JPL-Caltech/MSSS",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "This false-color image demonstrates how use of special filters available on the Mast Camera (Mastcam) of NASA's Curiosity Mars rover can reveal the presence of certain minerals in ",
+          "width": 640,
+          "height": 570,
+          "hosting": "hotlink",
+          "type": "micrograph",
+          "relevance": 0,
+          "provider": "nasa",
+          "reason": ""
         }
       ]
+    },
+    "v2:commons-photo:astrazeneca": {
+      "at": "2026-11-17T23:17:31.700Z",
+      "images": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AstraZeneca_Site%2C_Loughborough_-_geograph.org.uk_-_6419.jpg/500px-AstraZeneca_Site%2C_Loughborough_-_geograph.org.uk_-_6419.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:AstraZeneca_Site%2C_Loughborough_-_geograph.org.uk_-_6419.jpg",
+          "credit": "Chris J Dixon",
+          "licence": "CC BY-SA 2.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "alt": "AstraZeneca Site, Loughborough. Looking East, canal bridge just visible on the left.",
+          "width": 500,
+          "height": 341,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "org \"AstraZeneca\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/AstraZeneca_HQ_in_Cambridge_UK.jpg/960px-AstraZeneca_HQ_in_Cambridge_UK.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:AstraZeneca_HQ_in_Cambridge_UK.jpg",
+          "credit": "D Wells",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "AstraZeneca HQ in Cambridge UK",
+          "width": 960,
+          "height": 720,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "org \"AstraZeneca\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/COVID-19_vaccine_AstraZeneca_Jan_2021.jpg/960px-COVID-19_vaccine_AstraZeneca_Jan_2021.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:COVID-19_vaccine_AstraZeneca_Jan_2021.jpg",
+          "credit": "Whispyhistory",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "COVID-19 vaccine AstraZeneca Jan 2021 (UK)",
+          "width": 960,
+          "height": 1109,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "org \"AstraZeneca\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/AstraZeneca_Oxford_University_COVID-19_Vaccine_4ml_vials.jpg/960px-AstraZeneca_Oxford_University_COVID-19_Vaccine_4ml_vials.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:AstraZeneca_Oxford_University_COVID-19_Vaccine_4ml_vials.jpg",
+          "credit": "Whispyhistory",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "AstraZeneca Oxford University COVID-19 Vaccine 4ml vials (UK 2021) used in primary care. Eight full doses of vaccine (0.5ml) were in each vial. Some vials contained nine doses.",
+          "width": 960,
+          "height": 621,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "org \"AstraZeneca\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Oxford_AstraZeneca_COVID-19_vaccine_%28Fiocruz_version%29_2021_D.jpg/960px-Oxford_AstraZeneca_COVID-19_vaccine_%28Fiocruz_version%29_2021_D.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Oxford_AstraZeneca_COVID-19_vaccine_(Fiocruz_version)_2021_D.jpg",
+          "credit": "Agência Brasília",
+          "licence": "CC BY 2.0",
+          "basisUrl": "https://creativecommons.org/licenses/by/2.0",
+          "alt": "Quem chega em um dos 54 pontos de vacinação contra a covid-19, no Distrito Federal, talvez não imagine o planejamento necessário para viabilizar a aplicação da vacina na população.",
+          "width": 960,
+          "height": 641,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "org \"AstraZeneca\"",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Packning_av_vadd_och_bomull_p%C3%A5_Astra_AB_S%C3%B6dert%C3%A4lje.jpg/500px-Packning_av_vadd_och_bomull_p%C3%A5_Astra_AB_S%C3%B6dert%C3%A4lje.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Packning_av_vadd_och_bomull_p%C3%A5_Astra_AB_S%C3%B6dert%C3%A4lje.jpg",
+          "credit": "Fritz Pettersson",
+          "licence": "Public domain",
+          "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "alt": "According to source photo from 1943-1944",
+          "width": 500,
+          "height": 342,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 0,
+          "reason": "",
+          "provider": "commons"
+        }
+      ]
+    },
+    "v2:nasa:astrazeneca": {
+      "at": "2026-11-17T23:17:31.746Z",
+      "images": []
+    },
+    "v2:commons-photo:blood pressure": {
+      "at": "2026-11-17T23:17:32.241Z",
+      "images": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Oscillometric_Blood_Pressure_Waveform.jpg/960px-Oscillometric_Blood_Pressure_Waveform.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Oscillometric_Blood_Pressure_Waveform.jpg",
+          "credit": "Amirhossein Ashrafzadeh",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "Oscillometric Blood Pressure Waveform; Taken from OMRON M2 (HEM-7121-E) blood pressure monitor PC Board using GW INSTEK GDS-1102A-U digital storage oscilloscope by me. In this case",
+          "width": 960,
+          "height": 540,
+          "hosting": "hotlink",
+          "type": "diagram",
+          "relevance": 0,
+          "reason": "",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Checking_blood_pressure.jpg/960px-Checking_blood_pressure.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Checking_blood_pressure.jpg",
+          "credit": "Pambelle12",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "This is an image with the theme \" Health and Wellness in Africa \" from:",
+          "width": 960,
+          "height": 720,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "exact condition \"blood pressure\" shown as a photo",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Measuring_Blood_Pressure.jpg/960px-Measuring_Blood_Pressure.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Measuring_Blood_Pressure.jpg",
+          "credit": "Alice.Mukesh",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "This is an image with the theme \" Health and Wellness in Africa \" from:",
+          "width": 960,
+          "height": 771,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "exact condition \"blood pressure\" shown as a photo",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ambulatory_blood_pressure_monitoring._Elevated_nocturnal_BP._-_es.jpg/960px-Ambulatory_blood_pressure_monitoring._Elevated_nocturnal_BP._-_es.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Ambulatory_blood_pressure_monitoring._Elevated_nocturnal_BP._-_es.jpg",
+          "credit": "Jmarchn",
+          "licence": "CC BY-SA 3.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "alt": "Ambulatory blood pressure monitoring diagram. Elevated systolic BP in the nocturnal period. 66 year old man.",
+          "width": 960,
+          "height": 426,
+          "hosting": "hotlink",
+          "type": "diagram",
+          "relevance": 0,
+          "reason": "",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Checking_blood_pressure_at_home.jpg/960px-Checking_blood_pressure_at_home.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Checking_blood_pressure_at_home.jpg",
+          "credit": "Beendy234",
+          "licence": "CC0",
+          "basisUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "alt": "Checking blood pressure at home",
+          "width": 960,
+          "height": 860,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "exact condition \"blood pressure\" shown as a photo",
+          "provider": "commons"
+        }
+      ]
+    },
+    "v2:nasa:blood pressure": {
+      "at": "2026-11-17T23:17:32.530Z",
+      "images": [
+        {
+          "src": "https://images-assets.nasa.gov/image/KSC-03pd2838/KSC-03pd2838~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/KSC-03pd2838",
+          "credit": "NASA",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "KENNEDY SPACE CENTER, FLA. - An employee gets a blood pressure check from one of the participating organizations in Spaceport Super Safety and Health Day at KSC and Cape Canaveral ",
+          "width": 640,
+          "height": 417,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "exact condition \"blood pressure\" shown as a photo"
+        },
+        {
+          "src": "https://images-assets.nasa.gov/image/8901592/8901592~small.jpg",
+          "sourcePage": "https://images.nasa.gov/details/8901592",
+          "credit": "NASA",
+          "licence": "Public domain (U.S. government work)",
+          "basisUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+          "alt": "(PCG) Protein Crystal Growth Renin. Enzyme produced by the kidneys, plays a major role in the chemical reaction that controls blood pressure. Principal Investigator on STS-26 was C",
+          "width": 426,
+          "height": 640,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "provider": "nasa",
+          "reason": "exact condition \"blood pressure\" shown as a photo"
+        }
+      ]
+    },
+    "inn:baxfendy": {
+      "at": "2026-11-17T23:17:32.677Z",
+      "image": null
+    },
+    "v2:commons-photo:lung cancer": {
+      "at": "2026-11-17T23:17:35.916Z",
+      "images": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg/960px-Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
+          "credit": "Yale Rosen and Jian-Hua Qiao",
+          "licence": "CC BY-SA 2.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "alt": "Small cell variant of squamous cell carcinoma (SCC) mimicking small cell lung carcinoma (SCLC). p63 immunochemistry",
+          "width": 960,
+          "height": 723,
+          "hosting": "hotlink",
+          "type": "micrograph",
+          "relevance": 3,
+          "reason": "exact condition \"lung cancer\" shown as a micrograph",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Lung_cancer_HAVCR2.jpg/960px-Lung_cancer_HAVCR2.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung_cancer_HAVCR2.jpg",
+          "credit": "Jurajb101",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "Immunohistochemical analysis of paraffin-embedded human lung carcinoma tissue using HAVCR2.",
+          "width": 960,
+          "height": 720,
+          "hosting": "hotlink",
+          "type": "micrograph",
+          "relevance": 3,
+          "reason": "exact condition \"lung cancer\" shown as a micrograph",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Cancer_de_pulmon.jpg/960px-Cancer_de_pulmon.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Cancer_de_pulmon.jpg",
+          "credit": "Modificado de OpenStax College",
+          "licence": "CC BY-SA 3.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "alt": "Esquema en el que se muestran las principales estructuras del sistema respiratorio y un cancer de pulmón que afecta al lóbulo superior del pulmón derecho.",
+          "width": 960,
+          "height": 641,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 0,
+          "reason": "",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lung_cancer_-_Healthy_lung_Smokers_lung_with_cancer_--_Smart-Servier.jpg/960px-Lung_cancer_-_Healthy_lung_Smokers_lung_with_cancer_--_Smart-Servier.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung_cancer_-_Healthy_lung_Smokers_lung_with_cancer_--_Smart-Servier.jpg",
+          "credit": "Laboratoires Servier",
+          "licence": "CC BY-SA 3.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "alt": "Lung cancer",
+          "width": 960,
+          "height": 540,
+          "hosting": "hotlink",
+          "type": "illustration",
+          "relevance": 0,
+          "reason": "",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lung_cancer_histology_collection.png/960px-Lung_cancer_histology_collection.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung_cancer_histology_collection.png",
+          "credit": "\"Atlas of Pulmonary Pathology\" on Flickr (Yale Rosen, [6] )",
+          "licence": "CC BY-SA 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "alt": "Four images of lung histology: (Top-left) Normal lung, bronchiole at center, with alveoli (mostly air) surrounding (Top-right) Lung adenocarcinoma showing papillary (finger-like) g",
+          "width": 960,
+          "height": 723,
+          "hosting": "hotlink",
+          "type": "micrograph",
+          "relevance": 3,
+          "reason": "exact condition \"lung cancer\" shown as a micrograph",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Lung-cancer-deaths.png/960px-Lung-cancer-deaths.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung-cancer-deaths.png",
+          "credit": "MDWiki(from Our World In Data)",
+          "licence": "CC BY 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by/4.0",
+          "alt": "lung cancer",
+          "width": 960,
+          "height": 678,
+          "hosting": "hotlink",
+          "type": "diagram",
+          "relevance": 0,
+          "reason": "",
+          "provider": "commons"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Lung_cancer_death_rate_%E2%80%93_males_in_the_UK%2C_1950_to_2019%2C_OWID.png/960px-Lung_cancer_death_rate_%E2%80%93_males_in_the_UK%2C_1950_to_2019%2C_OWID.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lung_cancer_death_rate_%E2%80%93_males_in_the_UK%2C_1950_to_2019%2C_OWID.png",
+          "credit": "MDWiki(from Our World In Data)",
+          "licence": "CC BY 4.0",
+          "basisUrl": "https://creativecommons.org/licenses/by/4.0",
+          "alt": "lung cancer",
+          "width": 960,
+          "height": 678,
+          "hosting": "hotlink",
+          "type": "photo",
+          "relevance": 3,
+          "reason": "exact condition \"lung cancer\" shown as a photo",
+          "provider": "commons"
+        }
+      ]
+    },
+    "v2:nasa:lung cancer": {
+      "at": "2026-11-17T23:17:35.978Z",
+      "images": []
+    },
+    "inn:fortvita": {
+      "at": "2026-11-17T23:17:36.128Z",
+      "image": null
+    },
+    "inn:avelumab": {
+      "at": "2026-11-17T23:17:36.418Z",
+      "image": null
     }
   }
 }

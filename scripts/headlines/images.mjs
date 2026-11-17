@@ -2,20 +2,23 @@ import fs from "node:fs";
 import path from "node:path";
 import { createNasaClient } from "./image-sources/nasa.mjs";
 import { createOpenverseClient } from "./image-sources/openverse.mjs";
-import { IMAGE_SOURCES } from "./image-sources/terms.mjs";
+import { IMAGE_SOURCES, sourceAllowed } from "./image-sources/terms.mjs";
 import {
   MAX_PAGE_IMAGES,
   TOP_IMAGE_ITEMS,
   candidateProblem,
   commonsUserAgent,
   exactName,
+  explainMatch,
   imageEntities,
+  imageResponseOk,
   imageType,
   licenceOk,
   personRisk,
   photoQuery,
   placeImages,
   relevanceScore,
+  searchTerms,
   stripTags,
 } from "./image-score.mjs";
 
@@ -25,13 +28,16 @@ export {
   candidateProblem,
   commonsUserAgent,
   exactName,
+  explainMatch,
   imageEntities,
+  imageResponseOk,
   imageType,
   licenceOk,
   personRisk,
   photoQuery,
   placeImages,
   relevanceScore,
+  searchTerms,
   stripTags,
 };
 
@@ -200,7 +206,8 @@ export function commonsImage(page, entityName) {
     height,
     hosting: "hotlink",
     type: "diagram",
-    relevance: 2,
+    relevance: 3,
+    reason: `drug "${entityName}"`,
     provider: "commons",
   };
 }
@@ -280,6 +287,7 @@ export function commonsTopicImage(page, entities) {
   const description = stripTags(meta.ImageDescription?.value || "");
   const hay = `${title} ${categories} ${description}`;
   if (LOGO.test(hay) || STOCK.test(hay) || personRisk(hay)) return null;
+  const type = imageType({ title, categories, description, mime: info.mime, src: info.thumburl || info.url || "" });
   const licence = stripTags(meta.LicenseShortName?.value || meta.License?.value || meta.UsageTerms?.value || "");
   const basisUrl = licenceLink(licence, meta.LicenseUrl?.value || "");
   const artist = stripTags(meta.Artist?.value || meta.Credit?.value || "");
@@ -309,8 +317,9 @@ export function commonsTopicImage(page, entities) {
     width,
     height,
     hosting: "hotlink",
-    type: imageType(hay),
-    relevance: relevanceScore(entities, hay),
+    type,
+    relevance: explainMatch(entities, hay, type).score,
+    reason: explainMatch(entities, hay, type).reason,
     provider: "commons",
   };
 }
@@ -343,7 +352,7 @@ async function structureFor(client, cache, name) {
   if (cache[key]) {
     const image = cache[key].image;
     if (!image) return null;
-    return { ...image, type: image.type || "diagram", relevance: image.relevance || 2, provider: image.provider || "commons" };
+    return { ...image, type: "diagram", relevance: 3, reason: image.reason || `drug "${name}"`, provider: image.provider || "commons" };
   }
   const payload = await client.get({
     generator: "search",
@@ -369,15 +378,33 @@ async function pagePhoto(polite, item) {
     if (!buf) return null;
     const image = pageImage(buf.toString("utf8"), item.source_url, item.scout_source === "mhra" ? "ogl" : "federal");
     if (!image) return null;
-    return { ...image, type: "photo", relevance: 2, provider: item.scout_source };
+    return { ...image, type: "photo", relevance: 3, reason: "openly licensed image on the source page", provider: item.scout_source };
   } catch {
     return null;
+  }
+}
+
+export async function imageLoads(url) {
+  try {
+    const response = await fetch(url, {
+      headers: { "User-Agent": commonsUserAgent(), Accept: "image/avif,image/webp,image/*,*/*;q=0.8" },
+      redirect: "follow",
+      signal: AbortSignal.timeout(20000),
+    });
+    const ok = imageResponseOk(response.status, response.headers.get("content-type"));
+    await response.body?.cancel();
+    return ok;
+  } catch {
+    return false;
   }
 }
 
 export async function attachImages(polite, items, { cacheFile, reportFile } = {}) {
   const list = Array.isArray(items) ? items : [];
   const cache = cacheFile ? readImageCache(cacheFile) : {};
+  for (const key of Object.keys(cache)) {
+    if (/^(commons-photo|openverse|nasa):/.test(key)) delete cache[key];
+  }
   const client = createCommonsClient();
   const openverse = createOpenverseClient();
   const nasa = createNasaClient();
@@ -386,16 +413,20 @@ export async function attachImages(polite, items, { cacheFile, reportFile } = {}
   for (let index = 0; index < Math.min(list.length, TOP_IMAGE_ITEMS); index += 1) {
     const item = list[index];
     const entities = imageEntities(item);
-    const query = photoQuery(entities);
+    const terms = searchTerms(entities);
     const candidates = [];
-    if (query) {
-      candidates.push(...await cachedList(cache, `commons-photo:${query.toLowerCase()}`, () => commonsPhotoSearch(client, query, entities)));
-      candidates.push(...await cachedList(cache, `openverse:${query.toLowerCase()}`, () => openverse.search(query, entities)));
-      candidates.push(...await cachedList(cache, `nasa:${query.toLowerCase()}`, () => nasa.search(query, entities)));
+    for (const query of terms) {
+      candidates.push(...await cachedList(cache, `v2:commons-photo:${query.toLowerCase()}`, () => commonsPhotoSearch(client, query, entities)));
+      if (sourceAllowed("openverse")) {
+        candidates.push(...await cachedList(cache, `v2:openverse:${query.toLowerCase()}`, () => openverse.search(query, entities)));
+      }
+      candidates.push(...await cachedList(cache, `v2:nasa:${query.toLowerCase()}`, () => nasa.search(query, entities)));
     }
-    if (item.image_entity?.kind === "inn" && item.image_entity.name) {
+    const namedDrug = entities.find((entry) => entry.kind === "drug" && entry.term.length > 6);
+    const structureName = item.image_entity?.kind === "inn" ? item.image_entity.name : namedDrug?.term;
+    if (structureName) {
       try {
-        const diagram = await structureFor(client, cache, item.image_entity.name);
+        const diagram = await structureFor(client, cache, structureName);
         if (diagram) candidates.push(diagram);
       } catch {
         // A failed structure lookup leaves the photo candidates in place.
@@ -404,22 +435,30 @@ export async function attachImages(polite, items, { cacheFile, reportFile } = {}
     const owned = polite ? await pagePhoto(polite, item) : null;
     if (owned) candidates.push(owned);
     for (const candidate of candidates) {
-      const fromAlt = String(candidate.alt || "").startsWith("Chemical structure") ? "diagram" : imageType(candidate.alt);
-      if (fromAlt !== "photo") candidate.type = fromAlt;
-      else if (!candidate.type) candidate.type = "photo";
-      const file = `${candidate.sourcePage || ""} ${candidate.src || ""}`;
+      const file = `${candidate.sourcePage || ""} ${candidate.src || ""} ${candidate.alt || ""}`;
+      const retyped = imageType(file);
+      if (retyped === "diagram" || retyped === "micrograph" || retyped === "illustration") candidate.type = retyped;
       if (/smart-servier|servier medical art/i.test(file)) candidate.type = "illustration";
-      if (/\b(?:chart|graph|plot|deaths)\b/i.test(file)) candidate.type = "diagram";
-      const blob = `${candidate.alt || ""} ${candidate.credit || ""} ${candidate.sourcePage || ""}`;
-      if (entities.some((entity) => /^bayer$/i.test(entity.term)) && /\bbayer\s+(?:filter|pattern|mosaic|matrix|sensor)\b/i.test(blob)) {
-        candidate.relevance = 0;
+      if (/\b(?:chart|graph|plot|deaths|death rate|waveform)\b/i.test(file)) candidate.type = "diagram";
+      if (candidate.reason == null) {
+        const match = explainMatch(entities, file, candidate.type);
+        candidate.relevance = match.score;
+        candidate.reason = match.reason;
       }
-      if (/\b(handball|football|soccer|basketball|stadium|bayarena|bundesliga|championship|goalkeeper|fifa|uefa)\b/i.test(blob)) {
+      if (/\b(handball|football|soccer|basketball|stadium|bayarena|bundesliga|championship|goalkeeper|fifa|uefa)\b/i.test(file)) {
         candidate.relevance = 0;
+        candidate.reason = "sports club, not the company";
       }
-      if (candidate.provider === "nasa" && !entities.some((entity) => exactName(`${candidate.alt || ""} ${candidate.credit || ""}`, entity.term))) {
-        candidate.relevance = 0;
+      if (candidate.type === "diagram" || candidate.type === "illustration") {
+        const depicted = explainMatch(entities, file, candidate.type);
+        candidate.relevance = depicted.score;
+        candidate.reason = depicted.reason;
       }
+    }
+    for (const candidate of candidates.filter((row) => !candidateProblem(row)).slice(0, 4)) {
+      if (await imageLoads(candidate.src)) continue;
+      candidate.relevance = 0;
+      candidate.reason = "image URL did not return an image";
     }
     const rejected = candidates
       .map((candidate) => ({ candidate, why: candidateProblem(candidate) }))
@@ -438,7 +477,7 @@ export async function attachImages(polite, items, { cacheFile, reportFile } = {}
       id: item.id,
       headline: item.headline,
       entities,
-      query,
+      query: terms.join("; "),
       rejected,
     });
     delete item.image_entity;
@@ -467,6 +506,7 @@ export async function attachImages(polite, items, { cacheFile, reportFile } = {}
       provider: row.image.provider,
       type: row.image.type,
       relevance: row.image.relevance,
+      why: row.image.reason || "",
       licence: row.image.licence,
       credit: row.image.credit,
       sourcePage: row.image.sourcePage,

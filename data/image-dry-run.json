@@ -10,10 +10,10 @@
     },
     "openverse": {
       "id": "openverse",
-      "allowed": true,
+      "allowed": false,
       "endpoint": "https://api.openverse.org/v1/images/",
-      "robots": "api.openverse.org/robots.txt has User-agent: * / Disallow: /v1/images/. That stops a crawler from treating the API as pages. The API itself answers anonymous clients and sends X-RateLimit-Limit-Anon-Burst (20/min) and X-RateLimit-Limit-Anon-Sustained (200/day).",
-      "terms": "This client is the documented API, not a site crawl. It requests license=cc0 and license=by only, stays under five calls a run, and stops if the remaining rate-limit header hits zero. CC BY-SA and any NC or ND result is dropped even if the API returns it."
+      "robots": "api.openverse.org/robots.txt has User-agent: * / Disallow: /v1/images/.",
+      "terms": "The API also publishes anonymous rate limits (20/minute, 200/day). That conflict is enough to leave the client off. Set OPENVERSE_IMAGES=1 to call it. CC0 and CC BY would be the only licences kept."
     },
     "nasa": {
       "id": "nasa",
@@ -52,16 +52,21 @@
       "entities": [
         {
           "term": "Bayer",
-          "weight": 2,
+          "weight": 3,
           "kind": "org"
         },
         {
           "term": "asundexian",
-          "weight": 2,
+          "weight": 3,
+          "kind": "drug"
+        },
+        {
+          "term": "Sunharbo",
+          "weight": 3,
           "kind": "drug"
         }
       ],
-      "query": "Bayer",
+      "query": "Bayer; asundexian",
       "rejected": [
         {
           "provider": "commons",
@@ -85,27 +90,6 @@
           "why": "below relevance threshold"
         },
         {
-          "provider": "openverse",
-          "title": "Bayer Aspirin",
-          "score": 2,
-          "type": "photo",
-          "why": "alt is not descriptive"
-        },
-        {
-          "provider": "openverse",
-          "title": "Bayer Aspirin",
-          "score": 2,
-          "type": "photo",
-          "why": "alt is not descriptive"
-        },
-        {
-          "provider": "openverse",
-          "title": "Turning Bayer",
-          "score": 2,
-          "type": "photo",
-          "why": "alt is not descriptive"
-        },
-        {
           "provider": "nasa",
           "title": "The color cameras on NASA Mars rover Curiosity, including the pair that make up the rover Mastcam instrument, use the same type of Bayer pattern RGB filter as found in typical comm",
           "score": 0,
@@ -118,12 +102,20 @@
           "score": 0,
           "type": "micrograph",
           "why": "below relevance threshold"
+        },
+        {
+          "provider": "nasa",
+          "title": "This false-color image demonstrates how use of special filters available on the Mast Camera (Mastcam) of NASA's Curiosity Mars rover can reveal the presence of certain minerals in ",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
         }
       ],
       "chosen": {
         "provider": "commons",
         "type": "photo",
-        "relevance": 2,
+        "relevance": 3,
+        "why": "org \"Bayer\"",
         "licence": "CC BY-SA 3.0",
         "credit": "A.Savin",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Pano-bayer-leverkusen.jpg",
@@ -137,34 +129,45 @@
       "entities": [
         {
           "term": "AstraZeneca",
-          "weight": 2,
+          "weight": 3,
           "kind": "org"
         },
         {
+          "term": "Baxfendy",
+          "weight": 3,
+          "kind": "drug"
+        },
+        {
           "term": "blood pressure",
-          "weight": 2,
+          "weight": 3,
           "kind": "topic"
         }
       ],
-      "query": "blood pressure",
+      "query": "AstraZeneca; blood pressure",
       "rejected": [
         {
-          "provider": "openverse",
-          "title": "Blood Pressure",
-          "score": 2,
+          "provider": "commons",
+          "title": "According to source photo from 1943-1944",
+          "score": 0,
           "type": "photo",
-          "why": "alt is not descriptive"
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Oscillometric Blood Pressure Waveform; Taken from OMRON M2 (HEM-7121-E) blood pressure monitor PC Board using GW INSTEK GDS-1102A-U digital storage oscilloscope by me. In this case",
+          "score": 0,
+          "type": "diagram",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Ambulatory blood pressure monitoring diagram. Elevated systolic BP in the nocturnal period. 66 year old man.",
+          "score": 0,
+          "type": "diagram",
+          "why": "below relevance threshold"
         }
       ],
-      "chosen": {
-        "provider": "openverse",
-        "type": "illustration",
-        "relevance": 2,
-        "licence": "CC BY 2.0",
-        "credit": "Mike Licht, NotionsCapital.com",
-        "sourcePage": "https://www.flickr.com/photos/9106303@N05/8749833424",
-        "alt": "Cell Phones & Blood Pressure, after Adriaen Brouwer"
-      }
+      "skipped": "10 matches cleared the threshold but they are all photos, and the previous image is a photo."
     },
     {
       "index": 2,
@@ -173,69 +176,13 @@
       "entities": [
         {
           "term": "Summit Therapeutics",
-          "weight": 2,
+          "weight": 3,
           "kind": "org"
         }
       ],
       "query": "Summit Therapeutics",
-      "rejected": [
-        {
-          "provider": "commons",
-          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, at Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        }
-      ]
+      "rejected": [],
+      "skipped": "8 matches cleared the threshold but they are all photos, and the previous image is a photo."
     },
     {
       "index": 3,
@@ -243,12 +190,22 @@
       "headline": "Europe backs Fortvita Biologics' Zybrivo for a common form of lung cancer in adults",
       "entities": [
         {
+          "term": "Fortvita",
+          "weight": 3,
+          "kind": "drug"
+        },
+        {
+          "term": "Zybrivo",
+          "weight": 3,
+          "kind": "drug"
+        },
+        {
           "term": "lung cancer",
-          "weight": 2,
+          "weight": 3,
           "kind": "topic"
         }
       ],
-      "query": "lung cancer",
+      "query": "lung cancer; Fortvita",
       "rejected": [
         {
           "provider": "commons",
@@ -260,43 +217,30 @@
         {
           "provider": "commons",
           "title": "Lung cancer",
-          "score": 2,
+          "score": 0,
           "type": "illustration",
           "why": "alt is not descriptive"
         },
         {
           "provider": "commons",
           "title": "lung cancer",
-          "score": 2,
+          "score": 0,
           "type": "diagram",
           "why": "alt is not descriptive"
         },
         {
           "provider": "commons",
           "title": "lung cancer",
-          "score": 2,
+          "score": 3,
           "type": "photo",
           "why": "alt is not descriptive"
-        },
-        {
-          "provider": "openverse",
-          "title": "Lung cancer",
-          "score": 2,
-          "type": "photo",
-          "why": "alt is not descriptive"
-        },
-        {
-          "provider": "openverse",
-          "title": "Pie chart of lung cancers",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
         }
       ],
       "chosen": {
         "provider": "commons",
         "type": "micrograph",
-        "relevance": 2,
+        "relevance": 3,
+        "why": "exact condition \"lung cancer\" shown as a micrograph",
         "licence": "CC BY-SA 2.0",
         "credit": "Yale Rosen and Jian-Hua Qiao",
         "sourcePage": "https://commons.wikimedia.org/wiki/File:Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
@@ -309,12 +253,17 @@
       "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
       "entities": [
         {
+          "term": "Avelumab",
+          "weight": 3,
+          "kind": "drug"
+        },
+        {
           "term": "solid tumors",
-          "weight": 2,
+          "weight": 3,
           "kind": "topic"
         }
       ],
-      "query": "solid tumors",
+      "query": "solid tumors; Avelumab",
       "rejected": [
         {
           "provider": "commons",
@@ -328,6 +277,13 @@
           "title": "Tumor of the thyroid with solid cell nest features disclosing small cells of the main cell type (a) that express p63 (b) and cytokeratin 5 (c), in the absence of TTF1, calcitonin, ",
           "score": 0,
           "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "This image represents a basic overview on how scientists have created a porous microneedle matrix to load T-cells into for delivery to solid tumors",
+          "score": 0,
+          "type": "diagram",
           "why": "below relevance threshold"
         },
         {
@@ -364,23 +320,17 @@
           "score": 0,
           "type": "micrograph",
           "why": "below relevance threshold"
-        },
-        {
-          "provider": "openverse",
-          "title": "Intravascular cells and solid tumor targets for immunoliposomes",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
         }
       ],
       "chosen": {
         "provider": "commons",
-        "type": "photo",
-        "relevance": 2,
-        "licence": "CC BY-SA 4.0",
-        "credit": "Bme2023boi",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Engineered_polymeric_microneedle_cellular_delivery.jpg",
-        "alt": "This image represents a basic overview on how scientists have created a porous microneedle matrix to load T-cells into for delivery to solid tumors"
+        "type": "diagram",
+        "relevance": 3,
+        "why": "drug \"Avelumab\"",
+        "licence": "CC BY 4.0",
+        "credit": "Zhang W, Kong X, Ai B, Wang Z, Wang X, Wang N, Zheng S, Fang Y, Wang J.",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fonc-11-582664-g004.webp",
+        "alt": "Figure 4 Mechanism of action of Avelumab. PD-L1 may be expressed on tumor cells and tumor-infiltrating immune cells and can contribute to the inhibition of the anti-tumor immune re"
       }
     }
   ]
