@@ -7,6 +7,8 @@ import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
+import { fdaApprovalCopy, hashId, indicationPhrase, pressProduct } from "../copy.mjs";
+import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
 
@@ -105,12 +107,26 @@ test("drugsfda items keep the application page and skip labeling supplements", (
   assert.equal(items[0].source_url, "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425");
   assert.match(items[0].headline, /Lyrfigtu/);
   assert.equal(items[0].blurb.includes("cure"), false);
+  assert.ok(items[0].blurb.length > 20);
   const unnamed = drugsfdaItems([{
     application_number: "NDA221291",
     sponsor_name: "BAYER HEALTHCARE",
     submissions: [{ submission_type: "ORIG", submission_number: "1", submission_status: "AP", submission_status_date: "20261109", submission_class_code: "TYPE 1", submission_class_code_description: "Type 1 - New Molecular Entity", review_priority: "PRIORITY" }],
   }], "2026-11-17");
-  assert.equal(unnamed[0].headline, "FDA records original approval of NDA 221291");
+  assert.match(unnamed[0].headline, /NDA 221291/);
+  assert.doesNotMatch(unnamed[0].headline, /Bayer/);
+  assert.match(unnamed[0].blurb, /Bayer|Type 1|priority|2026-11-09/);
+  assert.notEqual(unnamed[0].blurb, unnamed[0].headline);
+  const indicated = drugsfdaItems([{
+    application_number: "NDA220425",
+    sponsor_name: "ELEVAR",
+    products: [{ brand_name: "LYRFIGTU", active_ingredients: [{ name: "EXAMPLE" }], dosage_form: "CAPSULE", route: "ORAL" }],
+    submissions: [{ submission_type: "ORIG", submission_number: "1", submission_status: "AP", submission_status_date: "20260923", submission_class_code: "TYPE 1", submission_class_code_description: "Type 1 - New Molecular Entity", review_priority: "PRIORITY" }],
+  }], "2026-11-17", new Map([["NDA220425", { indication: "the treatment of adults with example disease", area: "Kinase inhibitor" }]]));
+  assert.match(indicated[0].headline, /Lyrfigtu/);
+  assert.match(indicated[0].headline, /example disease/);
+  assert.match(indicated[0].blurb, /Elevar|Type 1|2026-09-23|capsule|oral|priority/);
+  assert.equal(indicated[0].blurb.includes(indicated[0].headline), false);
 });
 
 test("complete response letters drop personal fields", () => {
@@ -185,13 +201,18 @@ test("purple book changes become one item per event", () => {
 
 test("ema items use authorisation and opinion dates, not variation decisions", () => {
   const items = emaItems([
-    { category: "Human", generic: "No", name_of_medicine: "Aumseqa", international_non_proprietary_name_common_name: "aumolertinib", ema_product_number: "EMEA/H/C/1", medicine_status: "Opinion", opinion_status: "Positive", opinion_adopted_date: "12/11/2026", medicine_url: "https://www.ema.europa.eu/en/medicines/human/EPAR/aumseqa", biosimilar: "No", conditional_approval: "No", orphan_medicine: "No" },
+    { category: "Human", generic: "No", name_of_medicine: "Aumseqa", international_non_proprietary_name_common_name: "aumolertinib", ema_product_number: "EMEA/H/C/1", medicine_status: "Opinion", opinion_status: "Positive", opinion_adopted_date: "12/11/2026", medicine_url: "https://www.ema.europa.eu/en/medicines/human/EPAR/aumseqa", biosimilar: "No", conditional_approval: "No", orphan_medicine: "No", therapeutic_indication: "Treatment of non-small cell lung cancer in adults.", therapeutic_area_mesh: "Carcinoma, Non-Small-Cell Lung", pharmacotherapeutic_group_human: "Epidermal growth factor receptor (EGFR) tyrosine kinase inhibitors", marketing_authorisation_developer_applicant_holder: "SFL Pharmaceuticals Deutschland GmbH" },
     { category: "Human", generic: "No", name_of_medicine: "Soliris", international_non_proprietary_name_common_name: "eculizumab", ema_product_number: "EMEA/H/C/2", medicine_status: "Authorised", opinion_status: "", marketing_authorisation_date: "20/06/2007", european_commission_decision_date: "16/11/2026", medicine_url: "https://www.ema.europa.eu/en/medicines/human/EPAR/soliris", biosimilar: "No", conditional_approval: "No", orphan_medicine: "Yes" },
     { category: "Human", generic: "Yes", name_of_medicine: "Generic", ema_product_number: "EMEA/H/C/3", medicine_status: "Authorised", marketing_authorisation_date: "12/11/2026", medicine_url: "https://www.ema.europa.eu/en/medicines/human/EPAR/generic" },
   ], "2026-11-17");
   assert.equal(items.length, 1);
   assert.equal(items[0].rule, "ema-opinion");
-  assert.match(items[0].blurb, /European Medicines Agency/);
+  const packed = `${items[0].headline} ${items[0].blurb}`;
+  assert.match(packed, /Aumseqa/);
+  assert.match(packed, /non-small cell lung cancer|Carcinoma, Non-Small-Cell Lung/i);
+  assert.match(packed, /SFL Pharmaceuticals|tyrosine kinase|EMEA\/H\/C\/1/);
+  assert.ok(items[0].blurb.length > 20);
+  assert.equal(items[0].blurb.includes(items[0].headline), false);
 });
 
 test("paper titles that assert efficacy are skipped", () => {
@@ -201,7 +222,9 @@ test("paper titles that assert efficacy are skipped", () => {
   ]);
   assert.equal(items.length, 1);
   assert.match(items[0].source_url, /^https:\/\/doi\.org\/10\.1000\/example$/);
-  assert.equal(items[0].blurb, "");
+  assert.match(items[0].blurb, /2026-11-09/);
+  assert.match(items[0].blurb, /Europe PMC|MED/);
+  assert.equal(items[0].blurb.includes(items[0].headline), false);
 });
 
 test("adcom keeps meeting notices and drops nominations", () => {
@@ -231,4 +254,77 @@ test("built file keeps the contract fields and applies feedback", () => {
     assert.ok(key in payload.items[0], key);
   }
   assert.equal("drop" in payload.items[0], false);
+});
+
+test("wording is chosen from the item id and an indication leads", () => {
+  assert.equal(hashId("same"), hashId("same"));
+  assert.notEqual(hashId("same"), hashId("other"));
+  const facts = {
+    rule: "fda-nme",
+    brand: "Lyrfigtu",
+    ingredient: "Example",
+    sponsor: "Elevar",
+    app: "NDA 220425",
+    desc: "Type 1 - New Molecular Entity",
+    priority: true,
+    reviewPriority: "PRIORITY",
+    published: "2026-09-23",
+    indication: "the treatment of adults with example disease",
+    area: "",
+    route: "ORAL",
+    dosage: "CAPSULE",
+  };
+  const headlines = new Set();
+  for (let i = 0; i < 12; i++) {
+    const copy = fdaApprovalCopy(`openfda:${i}`, facts);
+    assert.equal(copy.headline, fdaApprovalCopy(`openfda:${i}`, facts).headline);
+    assert.match(copy.headline, /Lyrfigtu/);
+    assert.match(copy.headline, /example disease/);
+    assert.ok(copy.blurb);
+    assert.equal(copy.blurb.includes(copy.headline), false);
+    headlines.add(copy.headline);
+  }
+  assert.ok(headlines.size >= 2);
+  assert.equal(indicationPhrase("1 INDICATIONS AND USAGE Example is indicated for the treatment of adults with atopic dermatitis."), "the treatment of adults with atopic dermatitis");
+  assert.equal(indicationPhrase("HIBSAGO is indicated in combination with other therapy for treatment of chronic hepatitis B virus (HBV) infection in adult patients without cirrhosis: who have been on therapy."), "treatment of chronic hepatitis B virus (HBV) infection in adult patients without cirrhosis");
+  assert.equal(pressProduct("FDA today approved Sunharbo (asundexian) 50 mg tablets, the first factor XIa inhibitor to reduce the risk of stroke."), "Sunharbo (asundexian) 50 mg tablets");
+});
+
+test("adjacent items change source and regulators stay at or under half", () => {
+  const items = [];
+  for (const source of REGULATOR_SOURCES) {
+    for (let i = 0; i < 6; i++) {
+      items.push({ id: `${source}-${i}`, scout_source: source, rule: "fda-nme", significance: 90 - i, drop: false, published_at: "2026-11-01" });
+    }
+  }
+  for (let i = 0; i < 4; i++) {
+    items.push({ id: `europepmc-${i}`, scout_source: "europepmc", rule: "paper-phase3", significance: 70, drop: false, published_at: "2026-11-10" });
+  }
+  const selected = selectHeadlines(items);
+  const regs = selected.filter((item) => REGULATOR_SOURCES.has(item.scout_source)).length;
+  assert.ok(selected.length >= 2);
+  assert.ok(regs <= selected.length - regs);
+  for (let i = 1; i < selected.length; i++) {
+    const alternativeLeft = selected.slice(i).some((item) => item.scout_source !== selected[i - 1].scout_source);
+    if (alternativeLeft) assert.notEqual(selected[i].scout_source, selected[i - 1].scout_source);
+  }
+});
+
+test("pubmed eutils and x stay disabled", () => {
+  const pubmed = SOURCES.find((row) => row.id === "pubmed-eutils");
+  assert.equal(pubmed.enabled, false);
+  assert.equal(pubmed.fetch, undefined);
+  assert.match(pubmed.reason, /Disallow: \//);
+  const x = SOURCES.find((row) => row.id === "x");
+  assert.equal(x.enabled, false);
+  assert.equal(x.fetch, undefined);
+  assert.match(x.reason, /credential/i);
+  for (const id of ["biorxiv", "medrxiv", "bcf-papers", "bcf-ai-discovery", "nih-reporter", "sec-edgar-8k", "fda-press", "nih-news"]) {
+    const source = SOURCES.find((row) => row.id === id);
+    assert.equal(source.enabled, true, id);
+    assert.equal(typeof source.fetch, "function", id);
+  }
+  const robots = parseRobots("User-agent: *\nDisallow: /cgi-bin\nAllow: /Archives/edgar/data\n");
+  assert.equal(robotsDecision(robots, "BioCatalystFeed contact@biocat.ai", "/cgi-bin/browse-edgar").allowed, false);
+  assert.equal(robotsDecision(robots, "BioCatalystFeed contact@biocat.ai", "/Archives/edgar/daily-index/2026/QTR4/master.idx").allowed, true);
 });

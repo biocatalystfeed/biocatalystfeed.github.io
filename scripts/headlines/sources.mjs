@@ -3,7 +3,22 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
-import { addDays, assertFactual, clip, httpUrl, isoFromDmy, isoFromMdy, isoFromUs, isoFromYmd, parseCsv, titleCaseCaps } from "./text.mjs";
+import {
+  adcomCopy,
+  areaFromClass,
+  crlCopy,
+  emaCopy,
+  fdaApprovalCopy,
+  healthCanadaCopy,
+  indicationPhrase,
+  orangeCopy,
+  paperRecords,
+  purpleCopy,
+  safeItems,
+  trialCopy,
+} from "./copy.mjs";
+import { MORE_SOURCES } from "./more-sources.mjs";
+import { addDays, isoFromDmy, isoFromMdy, isoFromUs, isoFromYmd, parseCsv, titleCaseCaps } from "./text.mjs";
 
 const execFileAsync = promisify(execFile);
 
@@ -19,46 +34,6 @@ const FR_API = "https://www.federalregister.gov/api/v1/documents.json";
 const EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/search";
 
 const CONSENT_DATE = "2026-11-17";
-
-function item(fields) {
-  const headline = clip(fields.headline, 220).replace(/\.{2,}/g, ".");
-  const blurb = clip(fields.blurb || "", 420).replace(/\.{2,}/g, ".");
-  assertFactual(headline, fields.id);
-  assertFactual(blurb, fields.id);
-  const source_url = httpUrl(fields.source_url);
-  if (!source_url || !/^\d{4}-\d{2}-\d{2}$/.test(fields.published_at)) return null;
-  return {
-    id: fields.id,
-    headline,
-    blurb,
-    source_url,
-    source_type: fields.source_type,
-    source_name: fields.source_name,
-    published_at: fields.published_at,
-    scout_source: fields.scout_source,
-    rule: fields.rule,
-    adjustments: fields.adjustments || [],
-    dedupe_key: fields.dedupe_key || fields.id,
-  };
-}
-
-function safeItems(rows) {
-  const out = [];
-  for (const row of rows) {
-    try {
-      const made = item(row);
-      if (made) out.push(made);
-    } catch {
-      /* A generated line failed the factual check. Drop it rather than rewrite it. */
-    }
-  }
-  return out;
-}
-
-function approvalHeadline(prefix, who, app) {
-  if (!who || who === app) return `${prefix} ${app}`;
-  return `${prefix} ${who}, ${app}`;
-}
 
 function prettyApp(applicationNumber) {
   const m = /^(NDA|ANDA|BLA)\s*(\d+)$/i.exec(String(applicationNumber || "").replace(/\s+/g, ""));
@@ -76,21 +51,32 @@ function drugsFdaUrl(applicationNumber) {
   return digits ? `${DRUGSFDA}${digits}` : "";
 }
 
-function namesOf(application) {
+function namesOf(application, labels) {
   const brands = [];
   const ingredients = [];
+  let route = "";
+  let dosage = "";
   for (const product of application.products || []) {
     if (product.brand_name && !brands.includes(product.brand_name)) brands.push(product.brand_name);
+    if (!route && product.route) route = product.route;
+    if (!dosage && product.dosage_form) dosage = product.dosage_form;
     for (const ingredient of product.active_ingredients || []) {
       if (ingredient.name && !ingredients.includes(ingredient.name)) ingredients.push(ingredient.name);
     }
   }
   const brand = titleCaseCaps(brands[0] || "");
   const ingredient = titleCaseCaps(ingredients[0] || "");
+  const key = String(application.application_number || "").replace(/\s+/g, "");
+  const extra = labels?.get?.(key) || {};
+  const epc = areaFromClass((application.openfda?.pharm_class_epc || [])[0] || "");
   return {
     brand,
     ingredient: ingredient.length > 80 ? "" : ingredient,
     sponsor: titleCaseCaps(application.sponsor_name || ""),
+    route,
+    dosage,
+    indication: extra.indication || "",
+    area: extra.area || epc,
   };
 }
 
@@ -108,7 +94,7 @@ function fdaRule(application, submission) {
   return "";
 }
 
-export function drugsfdaItems(applications, today) {
+export function drugsfdaItems(applications, today, labels = new Map()) {
   const from = addDays(today, -100);
   const rows = [];
   for (const application of applications) {
@@ -118,28 +104,33 @@ export function drugsfdaItems(applications, today) {
       if (!published || published < from || published > today) continue;
       const rule = fdaRule(application, submission);
       if (!rule) continue;
-      const { brand, ingredient, sponsor } = namesOf(application);
+      const named = namesOf(application, labels);
       const app = prettyApp(application.application_number);
-      const what = brand || ingredient;
       const desc = submission.submission_class_code_description || submission.submission_class_code || "original";
       const priority = submission.review_priority === "PRIORITY";
-      let headline = approvalHeadline("FDA records an approval for", what, app);
-      let blurb = "";
-      if (rule === "fda-nme") headline = approvalHeadline("FDA records original approval of", what, app);
-      else if (rule === "fda-bla") headline = approvalHeadline("FDA records original BLA approval of", what, app);
-      else if (rule === "fda-biosimilar") headline = approvalHeadline("FDA records biosimilar approval of", what, app);
-      else if (rule === "fda-orig") headline = approvalHeadline("FDA records original NDA approval of", what, app);
-      else if (rule === "fda-efficacy") headline = approvalHeadline("FDA records an efficacy supplement for", what, app);
-      else if (rule === "fda-anda") headline = approvalHeadline("FDA records ANDA approval of", what, app);
-      if (rule !== "fda-anda") {
-        blurb = `Sponsor listed as ${sponsor || "not named"}. FDA submission class: ${desc}${priority ? ", review priority: priority" : ""}. Approval date ${published}.`;
-      }
+      const id = `openfda-drugsfda:${application.application_number}:${published}:${submission.submission_type}:${submission.submission_number || ""}`;
+      const copy = fdaApprovalCopy(id, {
+        rule,
+        brand: named.brand,
+        ingredient: named.ingredient,
+        sponsor: named.sponsor,
+        app,
+        desc,
+        priority,
+        reviewPriority: submission.review_priority || "",
+        published,
+        indication: named.indication,
+        area: named.area,
+        route: named.route,
+        dosage: named.dosage,
+      });
+      if (!copy) continue;
       const adjustments = [];
       if (priority && rule !== "fda-anda") adjustments.push("priority-review");
       rows.push({
-        id: `openfda-drugsfda:${application.application_number}:${published}:${submission.submission_type}:${submission.submission_number || ""}`,
-        headline,
-        blurb,
+        id,
+        headline: copy.headline,
+        blurb: copy.blurb,
         source_url: drugsFdaUrl(application.application_number),
         source_type: "regulator",
         source_name: "FDA Drugs@FDA (openFDA)",
@@ -186,11 +177,13 @@ export function crlItems(records, today) {
     const company = titleCaseCaps(record.company_name || "");
     const topics = crlTopics(record.text);
     const status = record.approval_status || "not stated";
-    const topicSentence = topics.length ? ` Section headings include ${topics.length === 1 ? topics[0] : `${topics.slice(0, -1).join(", ")} and ${topics.at(-1)}`}.` : "";
+    const id = `openfda-crl:${file}`;
+    const copy = crlCopy(id, { apps: apps.join(", "), company, topics, status, published });
+    if (!copy) continue;
     rows.push({
-      id: `openfda-crl:${file}`,
-      headline: `FDA complete response letter for ${apps.join(", ") || "an application"}${company ? `, ${company}` : ""}`,
-      blurb: `Letter date ${published}. openFDA lists the application status as ${status}.${topicSentence}`,
+      id,
+      headline: copy.headline,
+      blurb: copy.blurb,
       source_url: `${CRL_PDF}${encodeURIComponent(file)}`,
       source_type: "regulator",
       source_name: "FDA complete response letters (openFDA)",
@@ -257,12 +250,21 @@ export function orangeBookLoe(tables, today, horizonDays = 75) {
     hits.push({ applNo, protection, trade, ingredient, who, applicant: titleCaseCaps(product.applicant || "") });
   }
   hits.sort((a, b) => a.protection.date.localeCompare(b.protection.date) || a.applNo.localeCompare(b.applNo));
-  return safeItems(hits.slice(0, 8).map((hit, index) => ({
-    id: `orange-book:${hit.applNo}:${hit.protection.date}`,
-    headline: `${hit.who} (NDA ${hit.applNo}): Orange Book last listed protection ${hit.protection.date}`,
-    blurb: index < 2
-      ? `Applicant listed as ${hit.applicant || "not named"}. Last unexpired listing is ${hit.protection.kind} ${hit.protection.code}. Listed patents are not verified by FDA.`
-      : "",
+  return safeItems(hits.slice(0, 8).map((hit) => {
+    const id = `orange-book:${hit.applNo}:${hit.protection.date}`;
+    const copy = orangeCopy(id, {
+      who: hit.who,
+      applNo: hit.applNo,
+      date: hit.protection.date,
+      kind: hit.protection.kind,
+      code: hit.protection.code,
+      applicant: hit.applicant,
+    });
+    if (!copy) return null;
+    return {
+    id,
+    headline: copy.headline,
+    blurb: copy.blurb,
     source_url: `${ORANGE_PAGE}?Appl_Type=N&Appl_No=${encodeURIComponent(hit.applNo)}`,
     source_type: "regulator",
     source_name: "FDA Orange Book",
@@ -270,7 +272,8 @@ export function orangeBookLoe(tables, today, horizonDays = 75) {
     scout_source: "orange-book",
     rule: hit.protection.kind === "exclusivity" ? "orange-loe-exclusivity" : "orange-loe-patent",
     dedupe_key: `orange:${hit.applNo}`,
-  })));
+    };
+  }));
 }
 
 function monthBounds(year, monthIndex) {
@@ -325,53 +328,38 @@ export function purpleBookItems(csvText, csvUrl) {
       : csvUrl;
     const who = name || proper || `BLA ${bla}`;
     const substance = proper && proper.length <= 80 ? proper : "";
-    if (/revok/i.test(licensure) && bounds.start) {
+    const report = stamp ? stamp[0] : "monthly";
+    const pushPurple = (event, published, rule, dedupe) => {
+      const id = `purple-book:${bla}:${event}:${published}`;
+      const copy = purpleCopy(id, {
+        event, who, bla, applicant, license, licensure, published, report, substance,
+        ref: refTrade || refProper,
+      });
+      if (!copy) return;
       rows.push({
-        id: `purple-book:${bla}:revoked:${bounds.start}`,
-        headline: `FDA Purple Book lists ${who} (BLA ${bla}) licensure as ${licensure}`,
-        blurb: `Applicant listed as ${applicant || "not named"}. License type: ${license || "not stated"}. From the ${stamp ? stamp[0] : "monthly"} Purple Book changes report.`,
+        id,
+        headline: copy.headline,
+        blurb: copy.blurb,
         source_url: source,
         source_type: "regulator",
         source_name: "FDA Purple Book",
-        published_at: bounds.start,
+        published_at: published,
         scout_source: "purple-book",
-        rule: "purple-revoked",
-        dedupe_key: `bla:${bla}:revoked`,
+        rule,
+        dedupe_key: dedupe,
       });
+    };
+    if (/revok/i.test(licensure) && bounds.start) {
+      pushPurple("revoked", bounds.start, "purple-revoked", `bla:${bla}:revoked`);
       continue;
     }
     if (inter) {
-      const ref = refTrade || refProper;
-      rows.push({
-        id: `purple-book:${bla}:interchangeable:${inter}`,
-        headline: ref
-          ? `FDA Purple Book lists ${who} (BLA ${bla}) as interchangeable with ${ref}`
-          : `FDA Purple Book lists ${who} (BLA ${bla}) as interchangeable`,
-        blurb: `Applicant listed as ${applicant || "not named"}. Interchangeability date ${inter}. License type: ${license || "not stated"}.`,
-        source_url: source,
-        source_type: "regulator",
-        source_name: "FDA Purple Book",
-        published_at: inter,
-        scout_source: "purple-book",
-        rule: "purple-interchangeable",
-        dedupe_key: `bla:${bla}:interchangeable`,
-      });
+      pushPurple("interchangeable", inter, "purple-interchangeable", `bla:${bla}:interchangeable`);
       continue;
     }
     if (!flaggedNew || !approval || (bounds.end && approval < addDays(bounds.end, -150))) continue;
     const biosimilar = /351\(k\)|biosimilar/i.test(license);
-    rows.push({
-      id: `purple-book:${bla}:new:${approval}`,
-      headline: `FDA Purple Book lists a new license for ${who}${substance ? ` (${substance})` : ""}, BLA ${bla}`,
-      blurb: `Applicant listed as ${applicant || "not named"}. License type: ${license || "not stated"}. Approval date ${approval}.`,
-      source_url: source,
-      source_type: "regulator",
-      source_name: "FDA Purple Book",
-      published_at: approval,
-      scout_source: "purple-book",
-      rule: biosimilar ? "purple-biosimilar" : "purple-351a",
-      dedupe_key: `bla:${bla}:orig`,
-    });
+    pushPurple("new", approval, biosimilar ? "purple-biosimilar" : "purple-351a", `bla:${bla}:orig`);
   }
   return safeItems(rows);
 }
@@ -391,16 +379,13 @@ export function adcomItems(documents, today) {
     const committee = title.split(";")[0].trim();
     const rest = title.split(";").slice(1).join(";").trim();
     const published = doc.publication_date || meeting;
-    const lead = {
-      meeting: `FDA advisory committee meeting listed for ${meeting}: ${committee}`,
-      postpone: `FDA advisory committee meeting postponed to ${meeting}: ${committee}`,
-      cancel: `FDA advisory committee meeting cancelled: ${committee}`,
-      amendment: `FDA advisory committee meeting notice amended for ${meeting}: ${committee}`,
-    }[kind];
+    const id = `adcom:${doc.document_number || meeting}:${kind}`;
+    const copy = adcomCopy(id, { kind, meeting, committee, rest, published });
+    if (!copy) continue;
     rows.push({
-      id: `adcom:${doc.document_number || meeting}:${kind}`,
-      headline: lead,
-      blurb: `${rest ? `${clip(rest, 220).replace(/[.\s]+$/g, "")}. ` : ""}Federal Register publication date ${published}.`,
+      id,
+      headline: copy.headline,
+      blurb: copy.blurb,
       source_url: doc.html_url,
       source_type: "regulator",
       source_name: "Federal Register",
@@ -467,19 +452,37 @@ export function emaItems(records, today) {
     const adjustments = [];
     if (yes(record.biosimilar)) adjustments.push("biosimilar");
     if (yes(record.conditional_approval)) adjustments.push("conditional");
-    const verb = {
-      "ema-opinion": `EMA lists a ${String(record.opinion_status || "recorded").toLowerCase()} opinion for`,
-      "ema-authorisation": "EMA marketing authorisation date for",
-      "ema-refusal": "EMA records a refusal for",
-      "ema-withdrawal": "EMA application withdrawn:",
-      "ema-lapse": `EMA lists ${record.medicine_status || "a status change"} for`,
+    const statusWord = String(record.opinion_status || "recorded").toLowerCase();
+    const event = {
+      "ema-opinion": `EMA ${statusWord} opinion`,
+      "ema-authorisation": "EMA marketing authorisation",
+      "ema-refusal": "EMA refusal",
+      "ema-withdrawal": "EMA application withdrawal",
+      "ema-lapse": `EMA lists ${record.medicine_status || "a status change"}`,
     }[rule];
+    const id = `ema:${record.ema_product_number || name}:${rule}:${published}`;
+    const indication = String(record.therapeutic_indication || "").replace(/\s+/g, " ").trim();
+    const copy = emaCopy(id, {
+      rule,
+      name,
+      inn,
+      event,
+      indication: indication.length <= 140 ? indication : "",
+      mesh: String(record.therapeutic_area_mesh || "").replace(/\s+/g, " ").trim(),
+      group: String(record.pharmacotherapeutic_group_human || "").replace(/\s+/g, " ").trim(),
+      holder: String(record.marketing_authorisation_developer_applicant_holder || "").replace(/\s+/g, " ").trim(),
+      productNumber: record.ema_product_number || "",
+      published,
+      orphan: yes(record.orphan_medicine),
+      conditional: yes(record.conditional_approval),
+      biosimilar: yes(record.biosimilar),
+      medicineStatus: record.medicine_status || "",
+    });
+    if (!copy) continue;
     rows.push({
-      id: `ema:${record.ema_product_number || name}:${rule}:${published}`,
-      headline: `${verb} ${name}${inn ? ` (${inn})` : ""}`,
-      blurb: rule === "ema-lapse"
-        ? `Event date ${published}. Source: European Medicines Agency.`
-        : `Medicine status in the EMA export: ${record.medicine_status || "not stated"}${yes(record.orphan_medicine) ? ". Listed as an orphan medicine" : ""}. Source: European Medicines Agency.`,
+      id,
+      headline: copy.headline,
+      blurb: copy.blurb,
       source_url: record.medicine_url,
       source_type: "regulator",
       source_name: "European Medicines Agency",
@@ -537,7 +540,6 @@ export function healthCanadaItems(tables, today) {
     else continue;
     const brand = titleCaseCaps((brands.get(row.noc_number) || [])[0] || "");
     const ingredient = titleCaseCaps((ingredients.get(row.noc_number) || [])[0] || "");
-    const who = brand || ingredient || `NOC ${row.noc_number}`;
     const kind = {
       "hc-priority-nas": "priority new active substance",
       "hc-nas": "new active substance",
@@ -546,12 +548,23 @@ export function healthCanadaItems(tables, today) {
       "hc-snds": "supplement",
       "hc-ands": "abbreviated submission",
     }[rule];
+    const id = `health-canada:${row.noc_number}`;
+    const reason = String(row.noc_reason_submission || row.noc_reason_supplement || "").replace(/\s+/g, " ").trim();
+    const copy = healthCanadaCopy(id, {
+      brand,
+      ingredient,
+      notice: row.noc_number,
+      kind,
+      manufacturer: titleCaseCaps(row.noc_manufacturer_name || ""),
+      published,
+      therapeuticClass: String(row.noc_therapeutic_class || "").replace(/\s+/g, " ").trim(),
+      reason: reason.length <= 140 ? reason : "",
+    });
+    if (!copy) continue;
     rows.push({
-      id: `health-canada:${row.noc_number}`,
-      headline: `Health Canada notice of compliance: ${who} (${kind})`,
-      blurb: rule === "hc-ands" || rule === "hc-snds"
-        ? ""
-        : `Manufacturer listed as ${titleCaseCaps(row.noc_manufacturer_name || "not named")}. Notice ${row.noc_number}, date ${published}. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.`,
+      id,
+      headline: copy.headline,
+      blurb: copy.blurb,
       source_url: `${HC_PAGE}${row.noc_number}`,
       source_type: "regulator",
       source_name: "Health Canada Notice of Compliance Database",
@@ -565,34 +578,8 @@ export function healthCanadaItems(tables, today) {
   return safeItems(rows);
 }
 
-const PAPER_CLAIM = /\b(effective|efficacy|superior|improved|benefit|success|safe and well)\b/i;
-
-export function europePmcItems(results) {
-  const rows = [];
-  for (const record of results || []) {
-    const title = String(record.title || "").replace(/\s+/g, " ").trim();
-    if (!title || PAPER_CLAIM.test(title)) continue;
-    if (!/\bphase\s*(3|iii)\b/i.test(title)) continue;
-    if (!/\b(trial|study|randomi[sz]ed)\b/i.test(title)) continue;
-    const published = String(record.firstPublicationDate || "").slice(0, 10);
-    const doi = String(record.doi || "");
-    const source = String(record.source || "");
-    const id = String(record.id || "");
-    const url = /^10\.\d+\//.test(doi) ? `https://doi.org/${doi}` : (source && id ? `https://europepmc.org/article/${source}/${id}` : "");
-    rows.push({
-      id: `europepmc:${source}:${id}`,
-      headline: title,
-      blurb: rows.length % 2 === 0 ? "" : `Europe PMC ${source} ${id}, first publication date ${published}.`,
-      source_url: url,
-      source_type: "paper",
-      source_name: "Europe PMC",
-      published_at: published,
-      scout_source: "europepmc",
-      rule: "paper-phase3",
-      dedupe_key: `paper:${doi || id}`,
-    });
-  }
-  return safeItems(rows);
+export function europePmcItems(results, options = {}) {
+  return paperRecords(results, { mode: "phase3", scout: "europepmc", sourceName: "Europe PMC", rule: "paper-phase3", label: "Europe PMC", ...options });
 }
 
 export function calendarItems(calendar, today) {
@@ -616,12 +603,22 @@ export function calendarItems(calendar, today) {
     }
     const status = String(event.status || "").replaceAll("_", " ").toLowerCase();
     const when = String(event.readout_date_type || "listed").toLowerCase();
+    const id = `clinicaltrials-calendar:${event.nct_id}:${event.readout_date}`;
+    const copy = trialCopy(id, {
+      phase3,
+      title: String(event.title || "").replace(/\s+/g, " ").trim(),
+      condition: titleCaseCaps(event.conditions || ""),
+      sponsor: event.sponsor || "",
+      status,
+      when,
+      date: event.readout_date,
+      generated,
+    });
+    if (!copy) continue;
     rows.push({
-      id: `clinicaltrials-calendar:${event.nct_id}:${event.readout_date}`,
-      headline: `${phase3 ? "Phase 3" : "Phase 2"} primary completion listed for ${event.readout_date}: ${event.title}`,
-      blurb: !phase3 && phase2 === 2
-        ? ""
-        : `${event.sponsor || "Sponsor not named"}. ClinicalTrials.gov status ${status}. The ${when} primary completion date is taken from this site's readout calendar generated ${generated || "earlier"}.`,
+      id,
+      headline: copy.headline,
+      blurb: copy.blurb,
       source_url: event.url,
       source_type: "trial",
       source_name: "ClinicalTrials.gov",
@@ -648,14 +645,57 @@ async function openFdaSearch(polite, pathName, search, { pages = 8, limit = 100 
   return out;
 }
 
+async function labelFacts(polite, applicationNumbers) {
+  const map = new Map();
+  const apps = [...new Set(applicationNumbers.map((value) => String(value || "").replace(/\s+/g, "")).filter(Boolean))].slice(0, 40);
+  for (let i = 0; i < apps.length; i += 4) {
+    const chunk = apps.slice(i, i + 4);
+    const search = `(${chunk.map((value) => `openfda.application_number:${value}`).join("+OR+")})`;
+    const url = `${OPENFDA}/drug/label.json?search=${search}&limit=${chunk.length}`;
+    let payload = null;
+    try {
+      payload = await polite.getJson(url);
+    } catch {
+      continue;
+    }
+    for (const rec of payload?.results || []) {
+      const indication = indicationPhrase((rec.indications_and_usage || [])[0] || "");
+      const area = areaFromClass((rec.openfda?.pharm_class_epc || [])[0] || "");
+      for (const num of rec.openfda?.application_number || []) {
+        map.set(String(num).replace(/\s+/g, ""), { indication, area });
+      }
+    }
+  }
+  return map;
+}
+
 async function fetchDrugsfda(ctx) {
   const from = addDays(ctx.today, -100).replaceAll("-", "");
   const to = ctx.today.replaceAll("-", "");
   const search = `submissions.submission_status_date:[${from}+TO+${to}]+AND+submissions.submission_status:AP`;
   const applications = await openFdaSearch(ctx.polite, "/drug/drugsfda.json", search);
+  const prelim = drugsfdaItems(applications, ctx.today);
+  const byDate = [...prelim].sort((a, b) => (a.published_at < b.published_at ? 1 : a.published_at > b.published_at ? -1 : 0));
+  const preferred = byDate.filter((row) => row.rule === "fda-nme" || row.rule === "fda-bla");
+  const numbers = [];
+  const seen = new Set();
+  for (const row of [...preferred, ...byDate]) {
+    const num = String(row.id.split(":")[1] || "").replace(/\s+/g, "");
+    if (!num || seen.has(num)) continue;
+    seen.add(num);
+    numbers.push(num);
+    if (numbers.length >= 40) break;
+  }
+  let labels = new Map();
+  try {
+    labels = await labelFacts(ctx.polite, numbers);
+  } catch {
+    labels = new Map();
+  }
+  const withLabels = labels.size ? drugsfdaItems(applications, ctx.today, labels) : prelim;
   return {
-    items: drugsfdaItems(applications, ctx.today),
-    note: `openFDA drugsfda applications with an approval dated ${from} to ${to}, filtered locally to the matching submission.`,
+    items: withLabels,
+    note: `openFDA drugsfda applications with an approval dated ${from} to ${to}, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (${labels.size} labels matched).`,
   };
 }
 
@@ -768,17 +808,30 @@ async function fetchHealthCanada(ctx) {
   };
 }
 
-async function fetchEuropePmc(ctx) {
+async function europeQuery(polite, query, pageSize) {
   const url = new URL(EPMC);
-  const from = addDays(ctx.today, -21);
-  url.searchParams.set("query", `FIRST_PDATE:[${from} TO ${ctx.today}] AND (TITLE:"phase 3 trial" OR TITLE:"phase III trial" OR TITLE:"phase 3 study" OR TITLE:"phase III study" OR TITLE:"phase 3 randomized" OR TITLE:"phase III randomized" OR TITLE:"phase 3 randomised" OR TITLE:"phase III randomised")`);
+  url.searchParams.set("query", query);
   url.searchParams.set("format", "json");
-  url.searchParams.set("pageSize", "15");
-  url.searchParams.set("resultType", "lite");
-  const payload = await ctx.polite.getJson(url.href);
+  url.searchParams.set("pageSize", String(pageSize));
+  url.searchParams.set("sort", "P_PDATE_D desc");
+  const payload = await polite.getJson(url.href);
+  return payload?.resultList?.result || [];
+}
+
+async function fetchEuropePmc(ctx) {
+  const phaseFrom = addDays(ctx.today, -45);
+  const recentFrom = addDays(ctx.today, -21);
+  const phase = await europeQuery(ctx.polite, `FIRST_PDATE:[${phaseFrom} TO ${ctx.today}] AND (TITLE:"phase 3" OR TITLE:"phase III") AND (TITLE:trial OR TITLE:study OR TITLE:randomized OR TITLE:randomised)`, 15);
+  const journals = await europeQuery(ctx.polite, `FIRST_PDATE:[${recentFrom} TO ${ctx.today}] AND SRC:MED AND (JOURNAL:"N Engl J Med" OR JOURNAL:"Lancet" OR JOURNAL:"JAMA" OR JOURNAL:"Nature Medicine" OR JOURNAL:"Nature Biotechnology" OR JOURNAL:"Nature" OR JOURNAL:"Science" OR JOURNAL:"Cell" OR JOURNAL:"BMJ")`, 15);
+  const ai = await europeQuery(ctx.polite, `FIRST_PDATE:[${recentFrom} TO ${ctx.today}] AND (TITLE:"machine learning" OR TITLE:"deep learning" OR TITLE:"protein language" OR TITLE:"artificial intelligence") AND (TITLE:protein OR TITLE:genom OR TITLE:molecul OR TITLE:drug OR TITLE:cell OR TITLE:biolog)`, 12);
+  const items = [
+    ...paperRecords(phase, { mode: "phase3", from: phaseFrom, today: ctx.today, rule: "paper-phase3" }),
+    ...paperRecords(journals, { mode: "journal", from: recentFrom, today: ctx.today, rule: "paper-journal" }),
+    ...paperRecords(ai, { mode: "ai", from: recentFrom, today: ctx.today, rule: "paper-ai" }),
+  ];
   return {
-    items: europePmcItems(payload?.resultList?.result || []),
-    note: "Europe PMC, the same API the site demo calls. Titles that assert efficacy or effectiveness are skipped. Crawl-delay on ebi.ac.uk is respected.",
+    items,
+    note: "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped. Crawl-delay on ebi.ac.uk is respected.",
   };
 }
 
@@ -837,10 +890,25 @@ export const SOURCES = [
     enabled: true,
     fetch: fetchCalendar,
   },
+  ...MORE_SOURCES,
   {
     id: "clinicaltrials-api",
     enabled: false,
     reason: "clinicaltrials.gov robots.txt Disallow: /api/ for User-agent *. The populator does not call it. Study records already extracted into calendar/calendar.json are read locally.",
+  },
+  {
+    id: "pubmed-eutils",
+    enabled: false,
+    // eutils.ncbi.nlm.nih.gov robots.txt is a blanket disallow. MEDLINE records are read through Europe PMC instead.
+    reason: "Disabled. eutils.ncbi.nlm.nih.gov robots.txt says Disallow: / for User-agent *. The populator does not call PubMed E-utilities. MEDLINE records are queried through Europe PMC, whose API allows this use.",
+  },
+  {
+    id: "x",
+    enabled: false,
+    // data/x_allowlist_v1.csv lists handles, but reading posts needs the X API.
+    // That API requires credentials, and this repository does not store any.
+    // Unofficial scraping or syndication would conflict with X's terms.
+    reason: "Disabled. X posts are not fetched. The X API requires credentials, and this repository does not store any. Scraping or an unofficial syndication feed would conflict with X's terms. Handles that would be in scope remain listed in data/x_allowlist_v1.csv.",
   },
   {
     id: "swissmedic",

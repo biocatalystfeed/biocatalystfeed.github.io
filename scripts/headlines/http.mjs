@@ -2,6 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 
 export const USER_AGENT = "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)";
+// SEC fair-access asks for a declared contact in the User-Agent. This is not a secret.
+export const SEC_USER_AGENT = "BioCatalystFeed contact@biocat.ai";
 
 const MIN_INTERVAL_MS = 1100;
 
@@ -131,19 +133,21 @@ export class Polite {
     return robotsDecision(this.robots.get(origin), this.userAgent, target.pathname);
   }
 
-  async #request(url, { checkRobots = true, timeout = 45000, headers = {} } = {}) {
+  async #request(url, { checkRobots = true, timeout = 45000, headers = {}, method = "GET", body, userAgent, minInterval } = {}) {
     const target = typeof url === "string" ? new URL(url) : url;
     if (checkRobots) {
       const decision = await this.decisionFor(target.href);
       if (!decision.allowed) throw new RobotsDenied(target.href);
-      await this.#wait(target.origin, Math.max(this.minInterval, decision.delayMs));
+      await this.#wait(target.origin, Math.max(minInterval ?? this.minInterval, decision.delayMs));
     }
     const response = await fetch(target, {
+      method,
+      body,
       redirect: "follow",
       signal: AbortSignal.timeout(timeout),
       headers: {
-        "User-Agent": this.userAgent,
-        Accept: "application/json, text/plain, text/csv, application/zip, */*",
+        "User-Agent": userAgent || this.userAgent,
+        Accept: "application/json, text/plain, text/csv, application/xml, text/xml, application/zip, */*",
         ...headers,
       },
     });
@@ -157,10 +161,10 @@ export class Polite {
     this.nextAt.set(origin, Date.now() + delayMs);
   }
 
-  async getBuffer(url, { timeout = 120000 } = {}) {
+  async getBuffer(url, { timeout = 120000, userAgent, minInterval, headers } = {}) {
     let lastError;
     for (let attempt = 0; attempt < 3; attempt++) {
-      const response = await this.#request(url, { timeout });
+      const response = await this.#request(url, { timeout, userAgent, minInterval, headers });
       if (response.status === 404) return null;
       if (response.status === 429 || response.status >= 500) {
         const retry = Number(response.headers.get("retry-after"));
@@ -178,10 +182,38 @@ export class Polite {
     throw lastError || new Error(`failed ${url}`);
   }
 
-  async getJson(url) {
-    const buf = await this.getBuffer(url, { timeout: 60000 });
+  async getJson(url, options = {}) {
+    const buf = await this.getBuffer(url, { timeout: 60000, ...options });
     if (!buf) return null;
     return JSON.parse(buf.toString("utf8"));
+  }
+
+  async postJson(url, payload, { timeout = 60000, userAgent, minInterval, headers = {} } = {}) {
+    let lastError;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const response = await this.#request(url, {
+        timeout,
+        userAgent,
+        minInterval,
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json", Accept: "application/json", ...headers },
+      });
+      if (response.status === 404) return null;
+      if (response.status === 429 || response.status >= 500) {
+        const retry = Number(response.headers.get("retry-after"));
+        const wait = Number.isFinite(retry) ? Math.min(retry * 1000, 60000) : 1500 * (attempt + 1);
+        lastError = new Error(`${response.status} from ${url}`);
+        if (attempt < 2) {
+          await sleep(wait);
+          continue;
+        }
+        throw lastError;
+      }
+      if (!response.ok) throw new Error(`${response.status} from ${url}`);
+      return JSON.parse(await response.text());
+    }
+    throw lastError || new Error(`failed ${url}`);
   }
 
   readCache(file, url, maxAgeMs) {
