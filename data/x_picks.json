@@ -1,5 +1,27 @@
 {
   "schema": "biocat-x-picks/1",
   "enabled": true,
-  "picks": []
+  "picks": [
+    {
+      "handle": "IsomorphicLabs",
+      "postUrl": "https://x.com/IsomorphicLabs/status/2122661054723547449",
+      "linkedUrl": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round",
+      "postedAt": "2026-11-17",
+      "headline": "Isomorphic Labs announces Series C investment round",
+      "blurb": "The AI drug-design company raised $5 billion, co-led by Greenoaks and Sequoia, to scale its proprietary drug design engine and therapeutic candidate pipeline.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2122349917591175225",
+      "linkedUrl": "https://www.nature.com/articles/s42255-026-01662-1",
+      "postedAt": "2026-11-16",
+      "headline": "Plasma proteomics identifies insulin resistance signatures predictive of cardiometabolic disease risk",
+      "blurb": "Blood protein profiling paired with clamp-based insulin sensitivity measurements yielded a tissue-resolved atlas and a model the authors report beats conventional markers for forecasting metabolic and heart disease.",
+      "kind": "paper",
+      "blurbSource": "page-description",
+      "doi": "10.1038/s42255-026-01662-1"
+    }
+  ]
 }
