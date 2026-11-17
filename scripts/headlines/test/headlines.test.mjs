@@ -7,7 +7,7 @@ import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
-import { fdaApprovalCopy, hashId, indicationPhrase, pressProduct } from "../copy.mjs";
+import { fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
@@ -307,6 +307,47 @@ test("adjacent items change source and regulators stay at or under half", () => 
   for (let i = 1; i < selected.length; i++) {
     const alternativeLeft = selected.slice(i).some((item) => item.scout_source !== selected[i - 1].scout_source);
     if (alternativeLeft) assert.notEqual(selected[i].scout_source, selected[i - 1].scout_source);
+  }
+});
+
+test("headlines stay within 14 words by trimming clauses", () => {
+  const hibsago = "Hibsago (Bepirovirsen) indicated for treatment of chronic hepatitis B virus (HBV) infection in adult patients without cirrhosis";
+  const cut = shortenHeadline(hibsago);
+  assert.ok(wordCount(cut.headline) <= HEADLINE_WORD_MAX, cut.headline);
+  assert.ok(wordCount(cut.headline) <= 12, cut.headline);
+  assert.match(cut.headline, /Hibsago/);
+  assert.match(cut.headline, /hepatitis B/);
+  assert.match(cut.extra, /adult patients without cirrhosis/);
+  const press = shortenHeadline("FDA Approves First Factor Xla Inhibitor to Help Prevent Stroke in Certain Adults at High Risk");
+  assert.ok(wordCount(press.headline) <= HEADLINE_WORD_MAX);
+  assert.match(press.headline, /FDA Approves/);
+  assert.match(press.headline, /Stroke/);
+  assert.match(press.extra, /Certain Adults/);
+  const compared = "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance of Chronic Disease Self-Management: A Vignette-Based Validation Study";
+  assert.ok(wordCount(compared) > 14);
+  const paperCut = shortenPaperHeadline(compared);
+  assert.ok(wordCount(paperCut.headline) >= 6, paperCut.headline);
+  assert.ok(wordCount(paperCut.headline) <= HEADLINE_WORD_MAX, paperCut.headline);
+  assert.match(paperCut.headline, /Versus Primary Care Physicians from Plan/);
+  const intact = "JAMA: Tale of Two Estimands: Distinguishing What Is Observed From What Is Inferred";
+  assert.ok(wordCount(intact) <= 14);
+  assert.equal(shortenPaperHeadline(intact).headline, intact);
+  const trials = [
+    trialCopy("t1", { phase3: true, title: "A Study on the Immune Response and Safety of a Combined Vaccine", condition: "Diphtheria-Tetanus-acellular Pertussis Vaccines", sponsor: "Example", status: "recruiting", when: "estimated", date: "2026-11-23" }),
+    trialCopy("t2", { phase3: true, title: "Avelumab Program Rollover Study", condition: "", sponsor: "Example", status: "active", when: "estimated", date: "2026-11-24" }),
+    trialCopy("t3", { phase3: false, title: "A very long study title that would crowd out the completion date if it were pasted in full here", condition: "Solid Tumors", sponsor: "Example", status: "recruiting", when: "listed", date: "2026-12-01" }),
+  ];
+  for (const item of trials) {
+    assert.match(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
+    assert.ok(wordCount(item.headline) <= HEADLINE_WORD_MAX, item.headline);
+  }
+  const file = JSON.parse(fs.readFileSync(path.join(root, "data", "headlines.json"), "utf8"));
+  for (const item of file.items) {
+    assert.ok(wordCount(item.headline) <= HEADLINE_WORD_MAX, item.headline);
+    assert.ok(item.blurb.trim());
+    assert.match(item.source_url, /^https?:\/\//);
+    if (item.source_type === "trial") assert.match(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
+    if (item.source_type === "paper") assert.ok(wordCount(item.headline) >= 6, item.headline);
   }
 });
 
