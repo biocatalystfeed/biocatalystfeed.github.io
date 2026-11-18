@@ -48,6 +48,13 @@ export function normalizeResults(route, payload) {
   }).filter((row) => row.title && row.href);
 }
 
+export function searchStatusNote(rowCount, { loading = false, failed = false } = {}) {
+  if (rowCount > 0) return "";
+  if (failed) return "Search is unavailable.";
+  if (loading) return "Searching…";
+  return "No results.";
+}
+
 export function mountSearch(doc = document, accountsOrPromise = []) {
   const form = doc.querySelector("#finder");
   const input = doc.querySelector("#hl-q");
@@ -84,14 +91,14 @@ export function mountSearch(doc = document, accountsOrPromise = []) {
       controller = new AbortController();
       const accounts = await accountsReady;
       const tracked = trackedSearchRows(accounts, term);
-      show(tracked, "Searching…");
+      show(tracked, searchStatusNote(tracked.length, { loading: true }));
       try {
         const rows = [...tracked, ...await searchAll(term, (url, options) => fetch(url, { ...options, signal: controller.signal }))];
         if (controller.signal.aborted) return;
-        show(rows, rows.length ? "" : "No results.");
+        show(rows, searchStatusNote(rows.length));
       } catch (error) {
         if (error?.name === "AbortError") return;
-        show(tracked, tracked.length ? "" : "Search is unavailable.");
+        show(tracked, searchStatusNote(tracked.length, { failed: true }));
       }
     }, 450);
   });
