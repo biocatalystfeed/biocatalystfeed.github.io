@@ -1,0 +1,4027 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed FDA decision calendar
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:fe934e9e84220d4b2e6a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:ADCOM (scheduled): AdCom 2026-11-19: Microbiology Devices Panel of 
+ the Medical Devices Advisory Committee
+DESCRIPTION:AdCom 2026-11-19: Microbiology Devices Panel of the Medical Dev
+ ices Advisory Committee\nConfidence: scheduled\nSource: https://www.federa
+ lregister.gov/documents/2026/09/16/2026-18920/microbiology-devices-panel-o
+ f-the-medical-devices-advisory-committee-notice-of-meeting-establishment\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/09/16/2026-18920/microbi
+ ology-devices-panel-of-the-medical-devices-advisory-committee-notice-of-me
+ eting-establishment
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:e55165b575de859a6c6c@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:CAPR PDUFA (company-disclosed): PDUFA November 22\, 2026 - CAPRICOR
+  THERAPEUTICS\, INC.
+DESCRIPTION:PDUFA November 22\, 2026 - CAPRICOR THERAPEUTICS\, INC.\nConfid
+ ence: company-disclosed\nTicker CAPR (confidence 1.0)\nSource: https://www
+ .sec.gov/Archives/edgar/data/1133869/000110465926125150/capr-ex99d1.htm\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1133869/000110465926125150/capr
+ -ex99d1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:c964f0c4758fe068992b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:BBIO PDUFA (company-disclosed): PDUFA November 27\, 2026 - BridgeBi
+ o Pharma\, Inc.
+DESCRIPTION:PDUFA November 27\, 2026 - BridgeBio Pharma\, Inc.\nConfidence:
+  company-disclosed\nTicker BBIO (confidence 1.0)\nSource: https://www.sec.
+ gov/Archives/edgar/data/1743881/000174388126000033/bbio-20260930xex991.htm
+ \nScheduling/reference data from public records\; dates can move. Not inve
+ stment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1743881/000174388126000033/bbio
+ -20260930xex991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:a0f06b3d1c83a3223745@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:COGT PDUFA (company-disclosed): bezuclastinib
+DESCRIPTION:PDUFA November 30\, 2026 - Cogent Biosciences\, Inc. (bezuclast
+ inib)\nConfidence: company-disclosed\nTicker COGT (confidence 1.0)\nSource
+ : https://www.sec.gov/Archives/edgar/data/1622229/000119312526449926/cogt-
+ ex99_1.htm\nScheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1622229/000119312526449926/cogt
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:8946f5a6563b86f9d7dc@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:ANAB PDUFA (company-disclosed): imsidolimab
+DESCRIPTION:PDUFA Dec. 12\, 2026 - ANAPTYSBIO\, INC (imsidolimab)\nConfiden
+ ce: company-disclosed\nTicker ANAB (confidence 1.0)\nSource: https://www.s
+ ec.gov/Archives/edgar/data/1370053/000119312526396690/anab-ex99_1.htm\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1370053/000119312526396690/anab
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:f6b2e9cda2fe8dfb571e@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:VNDA PDUFA (company-disclosed): imsidolimab
+DESCRIPTION:PDUFA December 12\, 2026 - Vanda Pharmaceuticals Inc. (imsidoli
+ mab)\nConfidence: company-disclosed\nTicker VNDA (confidence 1.0)\nSource:
+  https://www.sec.gov/Archives/edgar/data/1347178/000162828026053308/vnda8-
+ k852026exhibit991.htm\nScheduling/reference data from public records\; dat
+ es can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1347178/000162828026053308/vnda
+ 8-k852026exhibit991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:cf78e8dd472f8adc6439@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY:MLYS PDUFA (company-disclosed): lorundrostat
+DESCRIPTION:PDUFA December 22\, 2026 - Mineralys Therapeutics\, Inc. (lorun
+ drostat)\nConfidence: company-disclosed\nTicker MLYS (confidence 1.0)\nSou
+ rce: https://www.sec.gov/Archives/edgar/data/1933414/000193341426000142/ml
+ ys2026q38kex991.htm\nScheduling/reference data from public records\; dates
+  can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1933414/000193341426000142/mlys
+ 2026q38kex991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:1363807714957010cc9c@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:PRAX PDUFA (company-disclosed): ulixacaltamide
+DESCRIPTION:PDUFA December 27\, 2026 - Praxis Precision Medicines\, Inc. (u
+ lixacaltamide)\nConfidence: company-disclosed\nTicker PRAX (confidence 1.0
+ )\nSource: https://www.sec.gov/Archives/edgar/data/1689548/000168954826000
+ 086/praxisq32026pr.htm\nScheduling/reference data from public records\; da
+ tes can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1689548/000168954826000086/prax
+ isq32026pr.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:9e2ec8e40c40b33e01b9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:BHVN PDUFA (company-disclosed): PDUFA first quarter of 2027 - Bioha
+ ven Ltd.
+DESCRIPTION:PDUFA first quarter of 2027 - Biohaven Ltd.\nConfidence: compan
+ y-disclosed\nDate precision: quarter (shown on the first day)\nTicker BHVN
+  (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/1935979
+ /000193597926000083/bhvn-20261022.htm\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1935979/000193597926000083/bhvn
+ -20261022.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:2d23735e8a66f9af6a3e@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:CRMD PDUFA (company-disclosed): PDUFA Q1 2027 - CorMedix Inc.
+DESCRIPTION:PDUFA Q1 2027 - CorMedix Inc.\nConfidence: company-disclosed\nD
+ ate precision: quarter (shown on the first day)\nTicker CRMD (confidence 1
+ .0)\nSource: https://www.sec.gov/Archives/edgar/data/1410098/0001213900261
+ 10477/ea030895701ex99-1.htm\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1410098/000121390026110477/ea03
+ 0895701ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:7e8245ec90dc30820104@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270122
+SUMMARY:DYN PDUFA (company-disclosed): rostudirsen
+DESCRIPTION:PDUFA January 21\, 2027 - Dyne Therapeutics\, Inc. (rostudirsen
+ )\nConfidence: company-disclosed\nTicker DYN (confidence 1.0)\nSource: htt
+ ps://www.sec.gov/Archives/edgar/data/1818794/000181879426000013/dyn-ex99_1
+ .htm\nScheduling/reference data from public records\; dates can move. Not 
+ investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1818794/000181879426000013/dyn-
+ ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:4e83bcab93085d3c5335@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ANAB PDUFA (company-disclosed): PDUFA February 2027 - ANAPTYSBIO\, 
+ INC
+DESCRIPTION:PDUFA February 2027 - ANAPTYSBIO\, INC\nConfidence: company-dis
+ closed\nDate precision: month (shown on the first day)\nTicker ANAB (confi
+ dence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/1370053/000119
+ 312526396690/anab-ex99_1.htm\nScheduling/reference data from public record
+ s\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1370053/000119312526396690/anab
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:d5dac277c40e8a4c6933@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:APMD PDUFA (company-disclosed): PDUFA February 28\, 2027 - Apnimed\
+ , Inc.
+DESCRIPTION:PDUFA February 28\, 2027 - Apnimed\, Inc.\nConfidence: company-
+ disclosed\nTicker APMD (confidence 1.0)\nSource: https://www.sec.gov/Archi
+ ves/edgar/data/1745648/000119312526462171/apmd-ex99_1.htm\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1745648/000119312526462171/apmd
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:0c985e199b365bf84e37@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:PVLA PDUFA (company-disclosed): PDUFA February 28\, 2027 - PALVELLA
+  THERAPEUTICS\, INC.
+DESCRIPTION:PDUFA February 28\, 2027 - PALVELLA THERAPEUTICS\, INC.\nConfid
+ ence: company-disclosed\nTicker PVLA (confidence 1.0)\nSource: https://www
+ .sec.gov/Archives/edgar/data/1583648/000119312526448594/pvla-ex99_2.htm\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1583648/000119312526448594/pvla
+ -ex99_2.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:526e3fa9d3fd9b7e35cd@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+SUMMARY:NTLA PDUFA (company-disclosed): PDUFA MARCH 10\, 2027 - Intellia Th
+ erapeutics\, Inc.
+DESCRIPTION:PDUFA MARCH 10\, 2027 - Intellia Therapeutics\, Inc.\nConfidenc
+ e: company-disclosed\nTicker NTLA (confidence 1.0)\nSource: https://www.se
+ c.gov/Archives/edgar/data/1652130/000119312526460948/ntla-ex99_1.htm\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1652130/000119312526460948/ntla
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:3dbf6886137afdd01452@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270316
+DTEND;VALUE=DATE:20270317
+SUMMARY:AQST PDUFA (company-disclosed): PDUFA March 16\, 2027 - Aquestive T
+ herapeutics\, Inc.
+DESCRIPTION:PDUFA March 16\, 2027 - Aquestive Therapeutics\, Inc.\nConfiden
+ ce: company-disclosed\nTicker AQST (confidence 1.0)\nSource: https://www.s
+ ec.gov/Archives/edgar/data/1398733/000139873326000079/jefferiesglobalhealt
+ hcar.htm\nScheduling/reference data from public records\; dates can move. 
+ Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1398733/000139873326000079/jeff
+ eriesglobalhealthcar.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:302b28e85809c323be25@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270325
+DTEND;VALUE=DATE:20270326
+SUMMARY:UNCY PDUFA (company-disclosed): PDUFA March 25\, 2027 - Unicycive T
+ herapeutics\, Inc.
+DESCRIPTION:PDUFA March 25\, 2027 - Unicycive Therapeutics\, Inc.\nConfiden
+ ce: company-disclosed\nTicker UNCY (confidence 1.0)\nSource: https://www.s
+ ec.gov/Archives/edgar/data/1766140/000121390026120261/ea031236501ex99-1.ht
+ m\nScheduling/reference data from public records\; dates can move. Not inv
+ estment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1766140/000121390026120261/ea03
+ 1236501ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:6e647fe5deded62fc726@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:ATRA PDUFA (company-disclosed): PDUFA March 31\, 2027 - Atara Bioth
+ erapeutics\, Inc.
+DESCRIPTION:PDUFA March 31\, 2027 - Atara Biotherapeutics\, Inc.\nConfidenc
+ e: company-disclosed\nTicker ATRA (confidence 1.0)\nSource: https://www.se
+ c.gov/Archives/edgar/data/1604464/000110465926125171/tmb-ex99d1.htm\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1604464/000110465926125171/tmb-
+ ex99d1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:df950432cfc4c316e801@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:HRMY PDUFA (company-disclosed): PDUFA April 1\, 2027 - Harmony Bios
+ ciences Holdings\, Inc.
+DESCRIPTION:PDUFA April 1\, 2027 - Harmony Biosciences Holdings\, Inc.\nCon
+ fidence: company-disclosed\nTicker HRMY (confidence 1.0)\nSource: https://
+ www.sec.gov/Archives/edgar/data/1802665/000110465926122377/hrmy-ex99d1.htm
+ \nScheduling/reference data from public records\; dates can move. Not inve
+ stment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1802665/000110465926122377/hrmy
+ -ex99d1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:e5708a7e335b6b9fe101@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270414
+DTEND;VALUE=DATE:20270415
+SUMMARY:INBX PDUFA (company-disclosed): PDUFA April 14\, 2027 - Inhibrx Bio
+ sciences\, Inc.
+DESCRIPTION:PDUFA April 14\, 2027 - Inhibrx Biosciences\, Inc.\nConfidence:
+  company-disclosed\nTicker INBX (confidence 1.0)\nSource: https://www.sec.
+ gov/Archives/edgar/data/2007919/000200791926000033/inhibrx-20260615.htm\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/2007919/000200791926000033/inhi
+ brx-20260615.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:36071142b7f2ae81a033@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:QURE PDUFA (company-disclosed): ifezuntirgene
+DESCRIPTION:PDUFA May 1\, 2027 - uniQure N.V. (ifezuntirgene)\nConfidence: 
+ company-disclosed\nTicker QURE (confidence 1.0)\nSource: https://www.sec.g
+ ov/Archives/edgar/data/1590560/000110465926120915/tm2628699d1_ex99-1.htm\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1590560/000110465926120915/tm26
+ 28699d1_ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:5b028eed19e20fbdee33@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:AXSM PDUFA (company-disclosed): PDUFA May 1\, 2027 - Axsome Therape
+ utics\, Inc.
+DESCRIPTION:PDUFA May 1\, 2027 - Axsome Therapeutics\, Inc.\nConfidence: co
+ mpany-disclosed\nTicker AXSM (confidence 1.0)\nSource: https://www.sec.gov
+ /Archives/edgar/data/1579428/000119312526341206/axsm-ex99_1.htm\nSchedulin
+ g/reference data from public records\; dates can move. Not investment\, le
+ gal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1579428/000119312526341206/axsm
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:c26a5dfd8485b62cc112@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270601
+DTEND;VALUE=DATE:20270602
+SUMMARY:RFL PDUFA (company-disclosed): PDUFA June 2027 - Rafael Holdings\, 
+ Inc.
+DESCRIPTION:PDUFA June 2027 - Rafael Holdings\, Inc.\nConfidence: company-d
+ isclosed\nDate precision: month (shown on the first day)\nTicker RFL (conf
+ idence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/1713863/00012
+ 1390026117552/ea031154001ex99-1.htm\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1713863/000121390026117552/ea03
+ 1154001ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:467b48df6af8afe9a570@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270615
+SUMMARY:URGN PDUFA (company-disclosed): PDUFA June 14\, 2027 - UroGen Pharm
+ a Ltd.
+DESCRIPTION:PDUFA June 14\, 2027 - UroGen Pharma Ltd.\nConfidence: company-
+ disclosed\nTicker URGN (confidence 1.0)\nSource: https://www.sec.gov/Archi
+ ves/edgar/data/1668243/000143774926034769/ex_1036873.htm\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1668243/000143774926034769/ex_1
+ 036873.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:afee2ac9507c5b661bf9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20280101
+DTEND;VALUE=DATE:20280102
+SUMMARY:BBIO PDUFA (company-disclosed): infigratinib
+DESCRIPTION:PDUFA first half of 2028 - BridgeBio Pharma\, Inc. (infigratini
+ b)\nConfidence: company-disclosed\nDate precision: half (shown on the firs
+ t day)\nTicker BBIO (confidence 1.0)\nSource: https://www.sec.gov/Archives
+ /edgar/data/1743881/000174388126000033/bbio-20260930xex991.htm\nScheduling
+ /reference data from public records\; dates can move. Not investment\, leg
+ al or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1743881/000174388126000033/bbio
+ -20260930xex991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:efdf374084eeeb204ad0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:SMMT CRL: AK112/SMT112 (also referred to by the Applicant as ivones
+ cimab)
+DESCRIPTION:CRL 2026-11-13: Summit Therapeutics Inc. BLA 761524 (AK112/SMT1
+ 12 (also referred to by the Applicant as ivonescimab))\nConfidence: confir
+ med\nTicker SMMT (confidence 0.9)\nSource: https://download.open.fda.gov/c
+ rl/CRL_BLA761524_20261113.pdf\nScheduling/reference data from public recor
+ ds\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761524_20261113.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b0f487abde6314630780@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:TEVA APPROVAL: IGALMI
+DESCRIPTION:Approved 2026-11-13: IGALMI (NDA215390 SUPPL3)\nConfidence: con
+ firmed\nTicker TEVA (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215390\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215390
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:83e5f62f55129fafcaa9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:GENENTECH APPROVAL: GAZYVA
+DESCRIPTION:Approved 2026-11-13: GAZYVA (BLA125486 SUPPL44)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=125486\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125486
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:7f556f922d7447ac9f94@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:AZN APPROVAL: IMFINZI
+DESCRIPTION:Approved 2026-11-13: IMFINZI (BLA761069 SUPPL59)\nConfidence: c
+ onfirmed\nTicker AZN (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761069\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761069
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5eb806f20095efe01cd2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:ALEXION PHARM APPROVAL: KLYGEFA
+DESCRIPTION:Approved 2026-11-13: KLYGEFA (BLA761488 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=761488\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761488
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1458d3658db41b4a697e@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:CYTK APPROVAL: MYQORZO
+DESCRIPTION:Approved 2026-11-13: MYQORZO (NDA219083 SUPPL2)\nConfidence: co
+ nfirmed\nTicker CYTK (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219083\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219083
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:71adc9e259d6a31434e7@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:BIIB APPROVAL: ZURZUVAE
+DESCRIPTION:Approved 2026-11-13: ZURZUVAE (NDA217369 SUPPL4)\nConfidence: c
+ onfirmed\nTicker BIIB (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217369\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217369
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ed6db8fc459171db4988@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:BIOCON BIOLOGICS INC APPROVAL: PEBRILZO
+DESCRIPTION:Approved 2026-11-12: PEBRILZO (BLA761501 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761501\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761501
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:78ebe032734581caf4c5@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:EMD SERONO APPROVAL: PIMJETMI
+DESCRIPTION:Approved 2026-11-10: PIMJETMI (NDA220414 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=220414\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220414
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:42d748c50c3d3d44bee0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:CMG PHARM CO LTD APPROVAL: MEZOFY
+DESCRIPTION:Approved 2026-11-10: MEZOFY (NDA211448 SUPPL1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=211448\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=211448
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:97f150108a5fb070ec5f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:AVYXA HOLDINGS APPROVAL: OXDERYS
+DESCRIPTION:Approved 2026-11-09: OXDERYS (NDA221093 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=221093\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221093
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a47a73fd5477cdd424e5@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:BAYER HEALTHCARE APPROVAL: SUNHARBO
+DESCRIPTION:Approved 2026-11-09: SUNHARBO (NDA221291 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=221291\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221291
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:349bb1e736e154f63bbf@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:FMS APPROVAL: MULTIBIC
+DESCRIPTION:Approved 2026-11-09: MULTIBIC (NDA219457 ORIG1)\nConfidence: co
+ nfirmed\nTicker FMS (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219457\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219457
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:37432abc83a7859ac6ca@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:IMNM PDUFA (company-disclosed): PDUFA November 9\, 2026 - Immunome 
+ Inc.
+DESCRIPTION:PDUFA November 9\, 2026 - Immunome Inc.\nConfidence: company-di
+ sclosed\nTicker IMNM (confidence 1.0)\nSource: https://www.sec.gov/Archive
+ s/edgar/data/1472012/000119312526453556/imnm-ex99_1.htm\nScheduling/refere
+ nce data from public records\; dates can move. Not investment\, legal or m
+ edical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1472012/000119312526453556/imnm
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:c29822059b3455457ee1@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:JANSSEN BIOTECH APPROVAL: RYBREVANT FASPRO
+DESCRIPTION:Approved 2026-11-05: RYBREVANT FASPRO (BLA761433 SUPPL2)\nConfi
+ dence: confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/
+ index.cfm?event=overview.process&ApplNo=761433\nScheduling/reference data 
+ from public records\; dates can move. Not investment\, legal or medical ad
+ vice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761433
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:7419082befd4a75f488a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:MLTX PDUFA (company-disclosed): PDUFA November 2026 - MoonLake Immu
+ notherapeutics
+DESCRIPTION:PDUFA November 2026 - MoonLake Immunotherapeutics\nConfidence: 
+ company-disclosed\nDate precision: month (shown on the first day)\nTicker 
+ MLTX (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/182
+ 1586/000121390026070362/ea029539901ex99-1.htm\nScheduling/reference data f
+ rom public records\; dates can move. Not investment\, legal or medical adv
+ ice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1821586/000121390026070362/ea02
+ 9539901ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:dde017f1458e198adf3d@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Sydnexis ADCOM (scheduled): AdCom 2026-10-30: Dermatologic and Opht
+ halmic Drugs Advisory Committee - NDA 219694
+DESCRIPTION:AdCom 2026-10-30: Dermatologic and Ophthalmic Drugs Advisory Co
+ mmittee - NDA 219694\nConfidence: scheduled\nSource: https://www.federalre
+ gister.gov/documents/2026/09/25/2026-19700/dermatologic-and-ophthalmic-dru
+ gs-advisory-committee-notice-of-meeting-establishment-of-a-public\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/09/25/2026-19700/dermato
+ logic-and-ophthalmic-drugs-advisory-committee-notice-of-meeting-establishm
+ ent-of-a-public
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:3dc4cc2a7007f0f085a5@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:INO PDUFA (company-disclosed): PDUFA October 30\, 2026 - INOVIO PHA
+ RMACEUTICALS\, INC.
+DESCRIPTION:PDUFA October 30\, 2026 - INOVIO PHARMACEUTICALS\, INC.\nConfid
+ ence: company-disclosed\nTicker INO (confidence 1.0)\nSource: https://www.
+ sec.gov/Archives/edgar/data/1055726/000105572626000024/ino-63026x8kex991.h
+ tm\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1055726/000105572626000024/ino-
+ 63026x8kex991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:0acde661bcdf80e56b9a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:AVYXA HOLDINGS APPROVAL: AXYCIS
+DESCRIPTION:Approved 2026-10-29: AXYCIS (NDA220748 ORIG1)\nConfidence: conf
+ irmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?e
+ vent=overview.process&ApplNo=220748\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220748
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:481f39856b2789694fdf@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:SUN PHARMA GLOBAL APPROVAL: ILUMYA
+DESCRIPTION:Approved 2026-10-29: ILUMYA (BLA761067 SUPPL31)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761067\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761067
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:09e113bbc1a089d9df75@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:XBRANE BIOPHARMA AB APPROVAL: LUCAMZI
+DESCRIPTION:Approved 2026-10-27: LUCAMZI (BLA761187 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=761187\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761187
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ef114689b9b1673837aa@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:PFE APPROVAL: TALZENNA
+DESCRIPTION:Approved 2026-10-26: TALZENNA (NDA217439 SUPPL4)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217439\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217439
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6c16a678184c1a0542d8@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:PFE APPROVAL: TALZENNA
+DESCRIPTION:Approved 2026-10-26: TALZENNA (NDA211651 SUPPL14)\nConfidence: 
+ confirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211651\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=211651
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9fdc486f96454b05e8e9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:PHARMACOSMOS APPROVAL: MONOFERRIC
+DESCRIPTION:Approved 2026-10-23: MONOFERRIC (NDA208171 SUPPL6)\nConfidence:
+  confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=208171\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208171
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ea40eba7fb9c4ce3c927@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:NVO APPROVAL: AWIQLI FLEXTOUCH
+DESCRIPTION:Approved 2026-10-23: AWIQLI FLEXTOUCH (BLA761326 SUPPL1)\nConfi
+ dence: confirmed\nTicker NVO (confidence 0.95)\nSource: https://www.access
+ data.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=7613
+ 26\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761326
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1ad6806cdfe7e8902280@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:ABBV APPROVAL: SKYRIZI
+DESCRIPTION:Approved 2026-10-23: SKYRIZI (BLA761105 SUPPL53)\nConfidence: c
+ onfirmed\nTicker ABBV (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761105\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761105
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:50ab17ca9fafc44132a3@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:AMGN APPROVAL: PAVBLU
+DESCRIPTION:Approved 2026-10-22: PAVBLU (BLA761298 ORIG2)\nConfidence: conf
+ irmed\nTicker AMGN (confidence 0.9)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761298\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761298
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:df0ee68016a30f140b8d@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:FORMYCON AG APPROVAL: AHZANTIVE
+DESCRIPTION:Approved 2026-10-22: AHZANTIVE (BLA761378 ORIG2)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=761378\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761378
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:272f38a324c904704225@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:SANDOZ INC APPROVAL: ENZEEVU
+DESCRIPTION:Approved 2026-10-22: ENZEEVU (BLA761382 ORIG2)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=761382\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761382
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:33b4e08b9173eb3b6b54@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:ALEXION PHARM APPROVAL: ULTOMIRIS
+DESCRIPTION:Approved 2026-10-21: ULTOMIRIS (BLA761108 SUPPL46)\nConfidence:
+  confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=761108\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761108
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:91845aeade1ac84b4119@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:GLAXOSMITHKLINE APPROVAL: HIBSAGO
+DESCRIPTION:Approved 2026-10-20: HIBSAGO (NDA221276 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=221276\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221276
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:47aba0979aece4d65475@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:GLAXOSMITHKLINE APPROVAL: JEMPERLI
+DESCRIPTION:Approved 2026-10-19: JEMPERLI (BLA761174 SUPPL15)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=761174\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761174
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e9d87733028ed3ed5b85@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:FRESENIUS MEDCL CARE APPROVAL: CIENBY
+DESCRIPTION:Approved 2026-10-19: CIENBY (NDA219455 ORIG1)\nConfidence: conf
+ irmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?e
+ vent=overview.process&ApplNo=219455\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219455
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bfce8a142bed75c79dda@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:FRESENIUS MEDCL CARE APPROVAL: CALREZDY
+DESCRIPTION:Approved 2026-10-19: CALREZDY (NDA219456 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=219456\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219456
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:cb41063c032ae150571f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:BLUEPRINT MEDICINES APPROVAL: AYVAKIT
+DESCRIPTION:Approved 2026-10-16: AYVAKIT (NDA212608 SUPPL21)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=212608\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=212608
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ab8247576bc73fc1fbeb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:FAMYGEN LIFE SCI APPROVAL: RYZUMVI
+DESCRIPTION:Approved 2026-10-16: RYZUMVI (NDA217064 SUPPL5)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=217064\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217064
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:7f12c8714adf06e86053@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:ROSEMONT PHARMS APPROVAL: YULZETY
+DESCRIPTION:Approved 2026-10-16: YULZETY (NDA221033 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=221033\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221033
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:514ca414165bf506bb10@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-10-16: KEYTRUDA (BLA125514 SUPPL191)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:471a042ff4f3e9deb2d0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-10-16: KEYTRUDA QLEX (BLA761467 SUPPL8)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5ed3320c53ebd37ce83d@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:ALC APPROVAL: BRYTLY
+DESCRIPTION:Approved 2026-10-16: BRYTLY (NDA220341 ORIG1)\nConfidence: conf
+ irmed\nTicker ALC (confidence 0.6)\nSource: https://www.accessdata.fda.gov
+ /scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220341\nScheduli
+ ng/reference data from public records\; dates can move. Not investment\, l
+ egal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220341
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:13e5ba6cbb2460c6d345@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:GENENTECH APPROVAL: ENSPRYNG
+DESCRIPTION:Approved 2026-10-15: ENSPRYNG (BLA761149 SUPPL8)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=761149\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761149
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:3e87805a3a2875d73c03@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:NVS APPROVAL: COSENTYX
+DESCRIPTION:Approved 2026-10-15: COSENTYX (BLA761349 SUPPL13)\nConfidence: 
+ confirmed\nTicker NVS (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761349\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761349
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0cc81eb3c5378e793f83@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:COSETTE APPROVAL: EVOXAC
+DESCRIPTION:Approved 2026-10-15: EVOXAC (NDA221183 ORIG1)\nConfidence: conf
+ irmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?e
+ vent=overview.process&ApplNo=221183\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221183
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:deba6619f706b2453321@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:UCB INC APPROVAL: ZILBRYSQ
+DESCRIPTION:Approved 2026-10-15: ZILBRYSQ (NDA216834 SUPPL15)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=216834\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=216834
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:63e7284a4c02dd3938da@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:ALTOR BIOSCIENCE\, LLC\, AN INDIRECT WHOLLY-OWNED SU APPROVAL: ANKT
+ IVA
+DESCRIPTION:Approved 2026-10-14: ANKTIVA (BLA761336 SUPPL2)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761336\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761336
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d64c41c76b91f40802e7@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:MRK APPROVAL: ENFLONSIA
+DESCRIPTION:Approved 2026-10-14: ENFLONSIA (BLA761432 SUPPL3)\nConfidence: 
+ confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761432\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761432
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:df1ae6794307ba0cbb4b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:VIFOR FRESENIUS APPROVAL: VELPHORO
+DESCRIPTION:Approved 2026-10-13: VELPHORO (NDA205109 SUPPL14)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=205109\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=205109
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bcf17ad23c1a78e1eddb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:BRACCO APPROVAL: ISOVUE READI
+DESCRIPTION:Approved 2026-10-09: ISOVUE READI (NDA220583 ORIG1)\nConfidence
+ : confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index
+ .cfm?event=overview.process&ApplNo=220583\nScheduling/reference data from 
+ public records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220583
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4864af6809795e377b84@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:AICURIS ANTI-INFECT APPROVAL: HOVILPRI
+DESCRIPTION:Approved 2026-10-09: HOVILPRI (NDA221154 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=221154\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221154
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c147175cd08f202d4adb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:LLY APPROVAL: OLUMIANT
+DESCRIPTION:Approved 2026-10-09: OLUMIANT (NDA207924 SUPPL10)\nConfidence: 
+ confirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207924\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=207924
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1e4415a12266799794fd@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:AMGN APPROVAL: REPATHA
+DESCRIPTION:Approved 2026-10-09: REPATHA (BLA125522 SUPPL47)\nConfidence: c
+ onfirmed\nTicker AMGN (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125522\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125522
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:690bed965c9c3747a624@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:GENENTECH INC APPROVAL: TECENTRIQ HYBREZA
+DESCRIPTION:Approved 2026-10-08: TECENTRIQ HYBREZA (BLA761347 SUPPL11)\nCon
+ fidence: confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/da
+ f/index.cfm?event=overview.process&ApplNo=761347\nScheduling/reference dat
+ a from public records\; dates can move. Not investment\, legal or medical 
+ advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761347
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:7e36da8b8a3aad7dd188@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:GENENTECH INC APPROVAL: TECENTRIQ
+DESCRIPTION:Approved 2026-10-08: TECENTRIQ (BLA761034 SUPPL65)\nConfidence:
+  confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=761034\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761034
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b13995ddb65bc4973214@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:TEVA APPROVAL: WELTRUZA
+DESCRIPTION:Approved 2026-10-08: WELTRUZA (NDA219007 ORIG1)\nConfidence: co
+ nfirmed\nTicker TEVA (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219007\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219007
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:42c135cd435208ff20a7@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:AZN APPROVAL: BREZTRI AEROSPHERE
+DESCRIPTION:Approved 2026-10-08: BREZTRI AEROSPHERE (NDA220290 ORIG1)\nConf
+ idence: confirmed\nTicker AZN (confidence 0.6)\nSource: https://www.access
+ data.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=2202
+ 90\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220290
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0288d18e1482220f28ba@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:SEAGEN APPROVAL: TUKYSA
+DESCRIPTION:Approved 2026-10-07: TUKYSA (NDA213411 SUPPL10)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=213411\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213411
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:66f1a2c70cb2f4646965@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:NVS APPROVAL: RHAPSIDO
+DESCRIPTION:Approved 2026-10-06: RHAPSIDO (NDA218436 SUPPL1)\nConfidence: c
+ onfirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218436\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218436
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0c90e926cf76d4a4ee17@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:LOXO ONCOL APPROVAL: JAYPIRCA
+DESCRIPTION:Approved 2026-10-02: JAYPIRCA (NDA216059 SUPPL6)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=216059\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=216059
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bf5fa5c9f6a6b16b8806@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:ADCOM (scheduled): AdCom 2026-10-01: Vaccines and Related Biologica
+ l Products Advisory Committee
+DESCRIPTION:AdCom 2026-10-01: Vaccines and Related Biological Products Advi
+ sory Committee\nConfidence: scheduled\nSource: https://www.federalregister
+ .gov/documents/2026/09/09/2026-18349/vaccines-and-related-biological-produ
+ cts-advisory-committee-notice-of-meeting-establishment-of-a\nScheduling/re
+ ference data from public records\; dates can move. Not investment\, legal 
+ or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/09/09/2026-18349/vaccine
+ s-and-related-biological-products-advisory-committee-notice-of-meeting-est
+ ablishment-of-a
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:04b17f288dd53c168e9f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:EVER APPROVAL: TRABECTEDIN
+DESCRIPTION:Approved 2026-10-01: TRABECTEDIN (NDA219617 ORIG1)\nConfidence:
+  confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=219617\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219617
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b92d1ef30d876c4e25f1@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:BMY APPROVAL: CAMZYOS
+DESCRIPTION:Approved 2026-09-30: CAMZYOS (NDA214998 SUPPL13)\nConfidence: c
+ onfirmed\nTicker BMY (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214998\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=214998
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:99b4df7491c29e5c2383@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:AGIO PDUFA (company-disclosed): PDUFA September 30\, 2026 - AGIOS P
+ HARMACEUTICALS\, INC.
+DESCRIPTION:PDUFA September 30\, 2026 - AGIOS PHARMACEUTICALS\, INC.\nConfi
+ dence: company-disclosed\nTicker AGIO (confidence 1.0)\nSource: https://ww
+ w.sec.gov/Archives/edgar/data/1439222/000143922226000129/agio-110526xfyxex
+ 991earnin.htm\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1439222/000143922226000129/agio
+ -110526xfyxex991earnin.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:5fd858e40696007f7218@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:SRRK PDUFA (company-disclosed): PDUFA September 30\, 2026 - Scholar
+  Rock Holding Corp
+DESCRIPTION:PDUFA September 30\, 2026 - Scholar Rock Holding Corp\nConfiden
+ ce: company-disclosed\nTicker SRRK (confidence 1.0)\nSource: https://www.s
+ ec.gov/Archives/edgar/data/1727196/000119312526336715/srrk-ex99_1.htm\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1727196/000119312526336715/srrk
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:c0132c01d6548dd82e70@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:RARE THYROID APPROVAL: EMCITATE
+DESCRIPTION:Approved 2026-09-28: EMCITATE (NDA220963 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=220963\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220963
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:67a32cde24cd6d0a733f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:ABBV APPROVAL: JUVMO\; JUVMO (COPACKAGED)
+DESCRIPTION:Approved 2026-09-25: JUVMO\; JUVMO (COPACKAGED) (NDA220415 ORIG
+ 1)\nConfidence: confirmed\nTicker ABBV (confidence 0.9)\nSource: https://w
+ ww.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&Ap
+ plNo=220415\nScheduling/reference data from public records\; dates can mov
+ e. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220415
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:71c2ab1f4d1b2251e0f3@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:ADVENTAPHARMA APPROVAL: ZUEINO
+DESCRIPTION:Approved 2026-09-25: ZUEINO (NDA218379 ORIG1)\nConfidence: conf
+ irmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?e
+ vent=overview.process&ApplNo=218379\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218379
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4542bb6ebf7dd5ea5746@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:AZURITY APPROVAL: LAMLIQUE
+DESCRIPTION:Approved 2026-09-25: LAMLIQUE (NDA221109 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=221109\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221109
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e6ec1ad92bd16007e09a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:MIRM APPROVAL: ATEBRIOZ
+DESCRIPTION:Approved 2026-09-25: ATEBRIOZ (NDA221198 ORIG1)\nConfidence: co
+ nfirmed\nTicker MIRM (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221198\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221198
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e2c2f7b0e994f751e804@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:GENENTECH APPROVAL: GAZYVA
+DESCRIPTION:Approved 2026-09-25: GAZYVA (BLA125486 SUPPL43)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=125486\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125486
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:739b59e49142bb019ea0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:LLY APPROVAL: OLUMIANT
+DESCRIPTION:Approved 2026-09-25: OLUMIANT (NDA207924 SUPPL9)\nConfidence: c
+ onfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207924\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=207924
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:490fa36f6bb6d140b93b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:TEVA APPROVAL: DEGEVMA
+DESCRIPTION:Approved 2026-09-25: DEGEVMA (BLA761481 ORIG1)\nConfidence: con
+ firmed\nTicker TEVA (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761481\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761481
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:da5a3f0117ac29122973@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:EISAI INC APPROVAL: LENVIMA
+DESCRIPTION:Approved 2026-09-24: LENVIMA (NDA206947 SUPPL35)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=206947\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=206947
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:427d9e08d1252f4cf6db@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:MRK APPROVAL: WELIREG
+DESCRIPTION:Approved 2026-09-24: WELIREG (NDA215383 SUPPL13)\nConfidence: c
+ onfirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215383\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215383
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:87129a7138f7a0eb8d66@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:ADCOM (scheduled): AdCom 2026-09-23: Molecular and Clinical Genetic
+ s Panel of the Medical Devices Advisory Committee
+DESCRIPTION:AdCom 2026-09-23: Molecular and Clinical Genetics Panel of the 
+ Medical Devices Advisory Committee\nConfidence: scheduled\nSource: https:/
+ /www.federalregister.gov/documents/2026/08/10/2026-16245/molecular-and-cli
+ nical-genetics-panel-of-the-medical-devices-advisory-committee-notice-of-m
+ eeting\nScheduling/reference data from public records\; dates can move. No
+ t investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/08/10/2026-16245/molecul
+ ar-and-clinical-genetics-panel-of-the-medical-devices-advisory-committee-n
+ otice-of-meeting
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:804fb9fcc4ae307ec93f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:ELEVAR APPROVAL: LYRFIGTU
+DESCRIPTION:Approved 2026-09-23: LYRFIGTU (NDA220425 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=220425\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220425
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bb1487374e8fcfebfefb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:LLY APPROVAL: ONSWIK
+DESCRIPTION:Approved 2026-09-23: ONSWIK (BLA761408 ORIG1)\nConfidence: conf
+ irmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761408\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761408
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a2a54ec3a7358baea857@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:AGL WELDING SUPPLY CO INC DBA AGL GAS TECHNOLOGIES APPROVAL: CARBON
+  DIOXIDE\, USP
+DESCRIPTION:Approved 2026-09-22: CARBON DIOXIDE\, USP (NDA222000 ORIG1)\nCo
+ nfidence: confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/d
+ af/index.cfm?event=overview.process&ApplNo=222000\nScheduling/reference da
+ ta from public records\; dates can move. Not investment\, legal or medical
+  advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=222000
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:dff45e0ec0fb6cdffbe2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:MRK APPROVAL: WINREVAIR
+DESCRIPTION:Approved 2026-09-21: WINREVAIR (BLA761363 SUPPL12)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761363\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761363
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:58e5b4fc59974788153f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+SUMMARY:RARE PDUFA (company-disclosed): apazunersen
+DESCRIPTION:PDUFA September 19\, 2026 - Ultragenyx Pharmaceutical Inc. (apa
+ zunersen)\nConfidence: company-disclosed\nTicker RARE (confidence 1.0)\nSo
+ urce: https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/r
+ are-ex99_1.htm\nScheduling/reference data from public records\; dates can 
+ move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/rare
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:c581653c32031d307ca4@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+SUMMARY:LLY APPROVAL: INLURIYO
+DESCRIPTION:Approved 2026-09-18: INLURIYO (NDA218881 SUPPL1)\nConfidence: c
+ onfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218881\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218881
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d98d9ce817ba6626bfd7@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+SUMMARY:LLY APPROVAL: VERZENIO
+DESCRIPTION:Approved 2026-09-18: VERZENIO (NDA208716 SUPPL22)\nConfidence: 
+ confirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208716\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208716
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d5aaf4eb8a74f589fbd4@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+SUMMARY:INTRABIO APPROVAL: AQNEURSA
+DESCRIPTION:Approved 2026-09-18: AQNEURSA (NDA219132 SUPPL2)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=219132\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219132
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:95b42190db8e5825f648@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:ADCOM (scheduled): AdCom 2026-09-16: Pediatric Advisory Committee (
+ PAC)
+DESCRIPTION:AdCom 2026-09-16: Pediatric Advisory Committee (PAC)\nConfidenc
+ e: scheduled\nSource: https://www.federalregister.gov/documents/2026/07/28
+ /2026-15149/pediatric-advisory-committee-pac-notice-of-meeting-establishme
+ nt-of-a-public-docket-request-for\nScheduling/reference data from public r
+ ecords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/07/28/2026-15149/pediatr
+ ic-advisory-committee-pac-notice-of-meeting-establishment-of-a-public-dock
+ et-request-for
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:35aa0b45b06e68147be2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:NUVB APPROVAL: IBTROZI
+DESCRIPTION:Approved 2026-09-16: IBTROZI (NDA219713 SUPPL4)\nConfidence: co
+ nfirmed\nTicker NUVB (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219713\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219713
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a0d63d1f9b30c56b1553@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:BAYER HLTHCARE APPROVAL: KERENDIA
+DESCRIPTION:Approved 2026-09-16: KERENDIA (NDA215341 SUPPL11)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=215341\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215341
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e16b0379fe964915d19a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:AZN APPROVAL: TRUQAP
+DESCRIPTION:Approved 2026-09-16: TRUQAP (NDA218197 SUPPL6)\nConfidence: con
+ firmed\nTicker AZN (confidence 0.9)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218197\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218197
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e4cc0376f4ff2aa9eec2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260916
+SUMMARY:EMERGE BIOSCIENCE PTE. LTD. APPROVAL: GARZULYS
+DESCRIPTION:Approved 2026-09-15: GARZULYS (BLA761497 ORIG2)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761497\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761497
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2b8764162a0ac6974784@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
+SUMMARY:AZN APPROVAL: TAGRISSO
+DESCRIPTION:Approved 2026-09-14: TAGRISSO (NDA208065 SUPPL35)\nConfidence: 
+ confirmed\nTicker AZN (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208065\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208065
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:12994640616f233dab59@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
+SUMMARY:CURIUM APPROVAL: BEXLUTRY
+DESCRIPTION:Approved 2026-09-14: BEXLUTRY (NDA218525 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=218525\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218525
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ca3dfa0ef9413f0fa367@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:SRRK APPROVAL: ISEMBYLD
+DESCRIPTION:Approved 2026-09-11: ISEMBYLD (BLA761463 ORIG1)\nConfidence: co
+ nfirmed\nTicker SRRK (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761463\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761463
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:8e1be2cc67174cd697bb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:TLX APPROVAL: PIXCLARA
+DESCRIPTION:Approved 2026-09-11: PIXCLARA (NDA218592 ORIG1)\nConfidence: co
+ nfirmed\nTicker TLX (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218592\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218592
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:904820ef2f4c805b9518@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:PHAR APPROVAL: JOENJA
+DESCRIPTION:Approved 2026-09-11: JOENJA (NDA217759 SUPPL6)\nConfidence: con
+ firmed\nTicker PHAR (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217759\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217759
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9a4fe0cbd7eb140ca136@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:SEIKAGAKU Corporation CRL: SI-6603 (condoliase) injection
+DESCRIPTION:CRL 2026-09-09: SEIKAGAKU Corporation BLA 761393 (SI-6603 (cond
+ oliase) injection)\nConfidence: confirmed\nSource: https://download.open.f
+ da.gov/crl/CRL_BLA761393_20260909.pdf\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761393_20260909.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:fa75410199d8b352d72b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:BFRI APPROVAL: AMELUZ
+DESCRIPTION:Approved 2026-09-09: AMELUZ (NDA208081 SUPPL40)\nConfidence: co
+ nfirmed\nTicker BFRI (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208081\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208081
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:426d05388c15510a5383@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:BAYER HEALTHCARE APPROVAL: HYRNUO
+DESCRIPTION:Approved 2026-09-09: HYRNUO (NDA219972 SUPPL1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=219972\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219972
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:03b7fa12f94865389b12@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20260905
+SUMMARY:AZN APPROVAL: ETCAMAH
+DESCRIPTION:Approved 2026-09-04: ETCAMAH (NDA220359 ORIG1)\nConfidence: con
+ firmed\nTicker AZN (confidence 0.9)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220359\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220359
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bc5789d5f00da43f63a0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260904
+SUMMARY:HANDA ONCOL APPROVAL: OMCAZIO
+DESCRIPTION:Approved 2026-09-03: OMCAZIO (NDA220613 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=220613\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220613
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e09a255ea3f41fd085b2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260904
+SUMMARY:IONS APPROVAL: ZANVASTRO
+DESCRIPTION:Approved 2026-09-03: ZANVASTRO (NDA220210 ORIG1)\nConfidence: c
+ onfirmed\nTicker IONS (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220210\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220210
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b721f9838116fe554ee3@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY:PHARMAESSENTIA CORP APPROVAL: BESREMI
+DESCRIPTION:Approved 2026-08-28: BESREMI (BLA761166 SUPPL13)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=761166\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761166
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d231270d89944eaf7f57@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY:TAK APPROVAL: MIMRYLO
+DESCRIPTION:Approved 2026-08-28: MIMRYLO (NDA220605 ORIG1)\nConfidence: con
+ firmed\nTicker TAK (confidence 0.6)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220605\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220605
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ca1fc31d4f1c927b3bcf@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY:JANSSEN BIOTECH APPROVAL: STELARA
+DESCRIPTION:Approved 2026-08-28: STELARA (BLA761044 SUPPL21)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=761044\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761044
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4ec366c86390448eb853@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:LLY APPROVAL: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJARO KWIKPEN
+DESCRIPTION:Approved 2026-08-27: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJ
+ ARO KWIKPEN (NDA215866 SUPPL44)\nConfidence: confirmed\nTicker LLY (confid
+ ence 0.95)\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=215866\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215866
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:05829244ae34ed1cb49d@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:LLY APPROVAL: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJARO KWIKPEN
+DESCRIPTION:Approved 2026-08-27: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJ
+ ARO KWIKPEN (NDA215866 SUPPL45)\nConfidence: confirmed\nTicker LLY (confid
+ ence 0.95)\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=215866\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215866
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:367d8b0a437877c77703@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:GILD APPROVAL: BIXLENVO
+DESCRIPTION:Approved 2026-08-27: BIXLENVO (NDA221104 ORIG1)\nConfidence: co
+ nfirmed\nTicker GILD (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221104\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221104
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:14370f43179cb92a78d6@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:GILD APPROVAL: BIXLENVO SUNLENCA STARTER PACK (COPACKAGED)
+DESCRIPTION:Approved 2026-08-27: BIXLENVO SUNLENCA STARTER PACK (COPACKAGED
+ ) (NDA221443 ORIG1)\nConfidence: confirmed\nTicker GILD (confidence 0.9)\n
+ Source: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=ov
+ erview.process&ApplNo=221443\nScheduling/reference data from public record
+ s\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221443
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ee3083ae65a1c90becf5@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:GILD APPROVAL: SUNLENCA
+DESCRIPTION:Approved 2026-08-27: SUNLENCA (NDA215973 SUPPL24)\nConfidence: 
+ confirmed\nTicker GILD (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215973\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215973
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bdc44aaece0fc0fe64cb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:GILD APPROVAL: SUNLENCA
+DESCRIPTION:Approved 2026-08-27: SUNLENCA (NDA215974 SUPPL17)\nConfidence: 
+ confirmed\nTicker GILD (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215974\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215974
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:7a18fa42eb643ddd2bd0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:PRIOVANT THERAP APPROVAL: LISRAYA
+DESCRIPTION:Approved 2026-08-27: LISRAYA (NDA220106 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=220106\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220106
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a2148587b73bddee06dc@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:LLY APPROVAL: ZEPBOUND\; ZEPBOUND (AUTOINJECTOR)\; ZEPBOUND KWIKPEN
+DESCRIPTION:Approved 2026-08-26: ZEPBOUND\; ZEPBOUND (AUTOINJECTOR)\; ZEPBO
+ UND KWIKPEN (NDA217806 SUPPL41)\nConfidence: confirmed\nTicker LLY (confid
+ ence 0.95)\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=217806\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217806
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0d79267228d03855dda1@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:RVMD APPROVAL: RASONQUE
+DESCRIPTION:Approved 2026-08-26: RASONQUE (NDA220910 ORIG1)\nConfidence: co
+ nfirmed\nTicker RVMD (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220910\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220910
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e509a3ac7332eac44281@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:SUN PHARM APPROVAL: VOBRIG
+DESCRIPTION:Approved 2026-08-26: VOBRIG (NDA213225 ORIG1)\nConfidence: conf
+ irmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?e
+ vent=overview.process&ApplNo=213225\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213225
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2513161dd77753f74cfb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:BEIGENE APPROVAL: TEVIMBRA
+DESCRIPTION:Approved 2026-08-25: TEVIMBRA (BLA761232 SUPPL18)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=761232\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761232
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:169ce390474878581a9c@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:JAZZ APPROVAL: ZIIHERA
+DESCRIPTION:Approved 2026-08-25: ZIIHERA (BLA761416 SUPPL2)\nConfidence: co
+ nfirmed\nTicker JAZZ (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761416\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761416
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:69f49e0914e45a674582@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:VIIV HLTHCARE APPROVAL: TIVICAY
+DESCRIPTION:Approved 2026-08-25: TIVICAY (NDA204790 SUPPL34)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=204790\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=204790
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0012c9144c69e17f6ec9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:VIIV HLTHCARE APPROVAL: TIVICAY PD
+DESCRIPTION:Approved 2026-08-25: TIVICAY PD (NDA213983 SUPPL7)\nConfidence:
+  confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=213983\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213983
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:105a731924667dfff113@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:ZYME PDUFA (company-disclosed): zanidatamab
+DESCRIPTION:PDUFA August 25\, 2026 - Zymeworks Inc. (zanidatamab)\nConfiden
+ ce: company-disclosed\nTicker ZYME (confidence 1.0)\nSource: https://www.s
+ ec.gov/Archives/edgar/data/1937653/000193765326000046/ex991q22026_earnings
+ xrelea.htm\nScheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1937653/000193765326000046/ex99
+ 1q22026_earningsxrelea.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:e14b9014f756ee7dcd65@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:JANSSEN BIOTECH APPROVAL: IMAAVY
+DESCRIPTION:Approved 2026-08-24: IMAAVY (BLA761430 SUPPL2)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=761430\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761430
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d1710f32f22254e4b237@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:RARE PDUFA (company-disclosed): rebisufligene
+DESCRIPTION:PDUFA August 23\, 2026 - Ultragenyx Pharmaceutical Inc. (rebisu
+ fligene)\nConfidence: company-disclosed\nTicker RARE (confidence 1.0)\nSou
+ rce: https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/ra
+ re-ex99_1.htm\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/rare
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:468a63f63aa3bcd4cce5@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260821
+SUMMARY:APELLIS PHARMS APPROVAL: EMPAVELI
+DESCRIPTION:Approved 2026-08-20: EMPAVELI (NDA215014 SUPPL12)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=215014\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215014
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9fce70662728520f072c@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260820
+SUMMARY:REGN APPROVAL: PASATRU
+DESCRIPTION:Approved 2026-08-19: PASATRU (BLA761508 ORIG1)\nConfidence: con
+ firmed\nTicker REGN (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761508\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761508
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e51510cd676986217e39@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260818
+DTEND;VALUE=DATE:20260819
+SUMMARY:SamChunDang Pharm. Co.\, Ltd. CRL: SCD411
+DESCRIPTION:CRL 2026-08-18: SamChunDang Pharm. Co.\, Ltd. BLA 761494 (SCD41
+ 1)\nConfidence: confirmed\nSource: https://download.open.fda.gov/crl/CRL_B
+ LA761494_20260818.pdf\nScheduling/reference data from public records\; dat
+ es can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761494_20260818.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:7564548d85440696a563@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260818
+DTEND;VALUE=DATE:20260819
+SUMMARY:Xspray Pharma AB CRL: CRL 2026-08-18: Xspray Pharma AB NDA 216195
+DESCRIPTION:CRL 2026-08-18: Xspray Pharma AB NDA 216195\nConfidence: confir
+ med\nSource: https://download.open.fda.gov/crl/CRL_NDA216195_20260818.pdf\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA216195_20260818.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6f9e95b2698c2d7457fd@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:BIOCON BIOLOGICS INC APPROVAL: YESINTEK
+DESCRIPTION:Approved 2026-08-14: YESINTEK (BLA761406 SUPPL2)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=761406\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761406
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:20e9f9333b5fad2f7f2e@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:BAX APPROVAL: SODIUM BICARBONATE
+DESCRIPTION:Approved 2026-08-14: SODIUM BICARBONATE (NDA218524 ORIG1)\nConf
+ idence: confirmed\nTicker BAX (confidence 0.6)\nSource: https://www.access
+ data.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=2185
+ 24\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218524
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b3223e5419e418e31b78@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+SUMMARY:CERVEAU LANTHEUS APPROVAL: TAUKLARIFY
+DESCRIPTION:Approved 2026-08-13: TAUKLARIFY (NDA220496 ORIG1)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=220496\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220496
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:8dd69212e162aac7a9a6@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+SUMMARY:BMY APPROVAL: ZENBEXUS
+DESCRIPTION:Approved 2026-08-13: ZENBEXUS (NDA221075 ORIG1)\nConfidence: co
+ nfirmed\nTicker BMY (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221075\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221075
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:cbdcf893d3701241a401@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260809
+DTEND;VALUE=DATE:20260810
+SUMMARY:LIN APPROVAL: NITROUS OXIDE\, USP
+DESCRIPTION:Approved 2026-08-09: NITROUS OXIDE\, USP (NDA221892 ORIG1)\nCon
+ fidence: confirmed\nTicker LIN (confidence 0.6)\nSource: https://www.acces
+ sdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221
+ 892\nScheduling/reference data from public records\; dates can move. Not i
+ nvestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221892
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:513ce3f4fe16abd81ca7@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260808
+SUMMARY:ITM Solucin GmbH CRL: MPA (Iutetium Lu177 edotreotide) injection
+DESCRIPTION:CRL 2026-08-07: ITM Solucin GmbH NDA 218705 (MPA (Iutetium Lu17
+ 7 edotreotide) injection)\nConfidence: confirmed\nSource: https://download
+ .open.fda.gov/crl/CRL_NDA218705_20260807.pdf\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA218705_20260807.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1a55b1c8a3bad1fb3e36@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+SUMMARY:TAK APPROVAL: ORZEYFUL
+DESCRIPTION:Approved 2026-08-05: ORZEYFUL (NDA220860 ORIG1)\nConfidence: co
+ nfirmed\nTicker TAK (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220860\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220860
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:50215e8906b4e45a81bb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+SUMMARY:MRNA PDUFA (company-disclosed): PDUFA August 5 - Moderna\, Inc.
+DESCRIPTION:PDUFA August 5 - Moderna\, Inc.\nConfidence: company-disclosed\
+ nTicker MRNA (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/
+ data/1682852/000168285226000147/exhibit9912026q2pressrelea.htm\nScheduling
+ /reference data from public records\; dates can move. Not investment\, leg
+ al or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1682852/000168285226000147/exhi
+ bit9912026q2pressrelea.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:3ae8ed265960024bbafe@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:NVS APPROVAL: PLUVICTO
+DESCRIPTION:Approved 2026-07-31: PLUVICTO (NDA215833 SUPPL37)\nConfidence: 
+ confirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215833\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215833
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:36b29d719c97e74d5811@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:DR REDDYS LABS SA APPROVAL: ZIMRIXBY
+DESCRIPTION:Approved 2026-07-31: ZIMRIXBY (BLA761376 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761376\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761376
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bf8bb50d21a47dc23724@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+SUMMARY:REPL ADCOM (scheduled): AdCom 2026-07-30: Cellular\, Tissue\, and G
+ ene Therapies Advisory Committee - BLA 125827
+DESCRIPTION:AdCom 2026-07-30: Cellular\, Tissue\, and Gene Therapies Adviso
+ ry Committee - BLA 125827\nConfidence: scheduled\nTicker REPL (confidence 
+ 0.9)\nSource: https://www.federalregister.gov/documents/2026/07/08/2026-13
+ 810/cellular-tissue-and-gene-therapies-advisory-committee-notice-of-meetin
+ g-establishment-of-a-public\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/07/08/2026-13810/cellula
+ r-tissue-and-gene-therapies-advisory-committee-notice-of-meeting-establish
+ ment-of-a-public
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:0671d1eca5361d55fba0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+SUMMARY:REPL ADCOM (scheduled): AdCom 2026-07-30: Cellular\, Tissue\, and G
+ ene Therapies Advisory Committee - BLA 125827
+DESCRIPTION:AdCom 2026-07-30: Cellular\, Tissue\, and Gene Therapies Adviso
+ ry Committee - BLA 125827\nConfidence: scheduled\nTicker REPL (confidence 
+ 0.9)\nSource: https://www.federalregister.gov/documents/2026/07/24/2026-15
+ 017/cellular-tissue-and-gene-therapies-advisory-committee-notice-of-meetin
+ g-establishment-of-a-public\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/07/24/2026-15017/cellula
+ r-tissue-and-gene-therapies-advisory-committee-notice-of-meeting-establish
+ ment-of-a-public
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:337da3311e1e9801e8a7@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:CAPR ADCOM (scheduled): AdCom 2026-07-29: Cellular\, Tissue\, and G
+ ene Therapies Advisory Committee - BLA 125842
+DESCRIPTION:AdCom 2026-07-29: Cellular\, Tissue\, and Gene Therapies Adviso
+ ry Committee - BLA 125842\nConfidence: scheduled\nTicker CAPR (confidence 
+ 0.9)\nSource: https://www.federalregister.gov/documents/2026/06/29/2026-13
+ 096/cellular-tissue-and-gene-therapies-advisory-committee-notice-of-meetin
+ g-establishment-of-a-public\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/06/29/2026-13096/cellula
+ r-tissue-and-gene-therapies-advisory-committee-notice-of-meeting-establish
+ ment-of-a-public
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:2f95b7969fbdb250cc66@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:CAPR ADCOM (scheduled): AdCom 2026-07-29: Cellular\, Tissue\, and G
+ ene Therapies Advisory Committee - BLA 125842
+DESCRIPTION:AdCom 2026-07-29: Cellular\, Tissue\, and Gene Therapies Adviso
+ ry Committee - BLA 125842\nConfidence: scheduled\nTicker CAPR (confidence 
+ 0.9)\nSource: https://www.federalregister.gov/documents/2026/07/24/2026-15
+ 016/cellular-tissue-and-gene-therapies-advisory-committee-amendment-of-not
+ ice-biologics-license\nScheduling/reference data from public records\; dat
+ es can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/07/24/2026-15016/cellula
+ r-tissue-and-gene-therapies-advisory-committee-amendment-of-notice-biologi
+ cs-license
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:18e32b81392f6cdc282b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:Fresenius Kabi USA\, LLC CRL: Glycophos (sodium glycerophosphate in
+ jection)
+DESCRIPTION:CRL 2026-07-29: Fresenius Kabi USA\, LLC NDA 220381/Original 2\
+ , NDA 220381 (Glycophos (sodium glycerophosphate injection))\nConfidence: 
+ confirmed\nSource: https://download.open.fda.gov/crl/CRL_NDA220381_2026072
+ 9.pdf\nScheduling/reference data from public records\; dates can move. Not
+  investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220381_20260729.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:50704c6647a2276d206d@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:FRESENIUS KABI USA APPROVAL: GLYCOPHOS
+DESCRIPTION:Approved 2026-07-29: GLYCOPHOS (NDA220381 ORIG1)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=220381\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220381
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9715c2e0f0f08ed2713f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:CMP DEV LLC APPROVAL: QLONILIK
+DESCRIPTION:Approved 2026-07-29: QLONILIK (NDA221094 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=221094\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221094
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bb71359a8886e2d1a377@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:OTLK PDUFA (company-disclosed): bevacizumab-vikg
+DESCRIPTION:PDUFA July 29\, 2026 - Outlook Therapeutics\, Inc. (bevacizumab
+ -vikg)\nConfidence: company-disclosed\nTicker OTLK (confidence 1.0)\nSourc
+ e: https://www.sec.gov/Archives/edgar/data/1649989/000110465926074346/tm26
+ 18010d1_ex99-1.htm\nScheduling/reference data from public records\; dates 
+ can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1649989/000110465926074346/tm26
+ 18010d1_ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:8db5b91c7c809d3ad167@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+SUMMARY:VTRS APPROVAL: GWYN LO
+DESCRIPTION:Approved 2026-07-28: GWYN LO (NDA219990 ORIG1)\nConfidence: con
+ firmed\nTicker VTRS (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219990\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219990
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:defba55ea5b4029df2b2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:ASTELLAS APPROVAL: XTANDI
+DESCRIPTION:Approved 2026-07-24: XTANDI (NDA213674 SUPPL16)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=213674\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213674
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1e98829dd57ee1aa0ce9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:OTLK APPROVAL: LYTENAVA
+DESCRIPTION:Approved 2026-07-24: LYTENAVA (BLA761320 ORIG1)\nConfidence: co
+ nfirmed\nTicker OTLK (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761320\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761320
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9523de52bab19a92890d@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:KENVUE BRANDS APPROVAL: TYLENOL WITH NAPROXEN
+DESCRIPTION:Approved 2026-07-24: TYLENOL WITH NAPROXEN (NDA219962 ORIG1)\nC
+ onfidence: confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/
+ daf/index.cfm?event=overview.process&ApplNo=219962\nScheduling/reference d
+ ata from public records\; dates can move. Not investment\, legal or medica
+ l advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219962
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:355c515b979e538fda2a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:MRBK APPROVAL: IDKIT:HP
+DESCRIPTION:Approved 2026-07-24: IDKIT:HP (NDA021314 SUPPL14)\nConfidence: 
+ confirmed\nTicker MRBK (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021314\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=021314
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:101482b9832db689272e@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:EMERGE BIOSCIENCE PTE. LTD. APPROVAL: GARZULYS
+DESCRIPTION:Approved 2026-07-24: GARZULYS (BLA761497 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761497\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761497
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9cd8b925e4d8e6f2e81e@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:OTSUKA APPROVAL: SIMTRIYO
+DESCRIPTION:Approved 2026-07-24: SIMTRIYO (NDA218145 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=218145\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218145
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d21bc4b7c334d207d50a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:ASTELLAS APPROVAL: XTANDI
+DESCRIPTION:Approved 2026-07-24: XTANDI (NDA203415 SUPPL26)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=203415\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=203415
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5b80289195bc7f26d069@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+SUMMARY:ADCOM (scheduled): AdCom 2026-07-23: Pharmacy Compounding Advisory 
+ Committee
+DESCRIPTION:AdCom 2026-07-23: Pharmacy Compounding Advisory Committee\nConf
+ idence: scheduled\nSource: https://www.federalregister.gov/documents/2026/
+ 04/16/2026-07361/pharmacy-compounding-advisory-committee-notice-of-meeting
+ -establishment-of-a-public-docket-request\nScheduling/reference data from 
+ public records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/04/16/2026-07361/pharmac
+ y-compounding-advisory-committee-notice-of-meeting-establishment-of-a-publ
+ ic-docket-request
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:c10ea477edc4db8d0ba8@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+SUMMARY:SCPHARMACEUTICALS APPROVAL: FUROSCIX\; FUROSCIX READYFLOW (AUTOINJE
+ CTOR)
+DESCRIPTION:Approved 2026-07-23: FUROSCIX\; FUROSCIX READYFLOW (AUTOINJECTO
+ R) (NDA209988 SUPPL7)\nConfidence: confirmed\nSource: https://www.accessda
+ ta.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209988
+ \nScheduling/reference data from public records\; dates can move. Not inve
+ stment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=209988
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9295b90a0b9d27551920@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+SUMMARY:AETERNA ZENTARIS APPROVAL: MACRILEN
+DESCRIPTION:Approved 2026-07-23: MACRILEN (NDA205598 SUPPL5)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=205598\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=205598
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:8fe8d01d45785c9adde4@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260722
+DTEND;VALUE=DATE:20260723
+SUMMARY:NUVALENT APPROVAL: JIDEYTRO
+DESCRIPTION:Approved 2026-07-22: JIDEYTRO (NDA220185 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=220185\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220185
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:8bf715ebab35e98d77e9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260721
+DTEND;VALUE=DATE:20260722
+SUMMARY:Apiject Systems Corp. CRL: glycopyrrolate solution
+DESCRIPTION:CRL 2026-07-21: Apiject Systems Corp. NDA 219107 (glycopyrrolat
+ e solution)\nConfidence: confirmed\nSource: https://download.open.fda.gov/
+ crl/CRL_NDA219107_20260721.pdf\nScheduling/reference data from public reco
+ rds\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA219107_20260721.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a22ff915e9153ac317c1@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260719
+DTEND;VALUE=DATE:20260720
+SUMMARY:NE APPROVAL: AIR
+DESCRIPTION:Approved 2026-07-19: AIR (NDA221805 ORIG1)\nConfidence: confirm
+ ed\nTicker NE (confidence 0.6)\nSource: https://www.accessdata.fda.gov/scr
+ ipts/cder/daf/index.cfm?event=overview.process&ApplNo=221805\nScheduling/r
+ eference data from public records\; dates can move. Not investment\, legal
+  or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221805
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0088986c5a4a27340088@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260716
+DTEND;VALUE=DATE:20260717
+SUMMARY:MUNDIPHARMA APPROVAL: REZZAYO
+DESCRIPTION:Approved 2026-07-16: REZZAYO (NDA217417 SUPPL7)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=217417\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217417
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2167a59f8251e5bfb139@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260716
+DTEND;VALUE=DATE:20260717
+SUMMARY:NVS APPROVAL: FABHALTA
+DESCRIPTION:Approved 2026-07-16: FABHALTA (NDA218276 SUPPL7)\nConfidence: c
+ onfirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218276\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218276
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4d5fbc0d2466f65bf718@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260716
+DTEND;VALUE=DATE:20260717
+SUMMARY:SUN PHARMA GLOBAL APPROVAL: ILUMYA
+DESCRIPTION:Approved 2026-07-16: ILUMYA (BLA761067 SUPPL27)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761067\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761067
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e6bca29f0315fda39764@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
+SUMMARY:MSD APPROVAL: LIPFENDRA
+DESCRIPTION:Approved 2026-07-15: LIPFENDRA (NDA220848 ORIG1)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=220848\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220848
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0a758e53560297ebd94a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:CELC APPROVAL: REVTORPYK
+DESCRIPTION:Approved 2026-07-14: REVTORPYK (NDA219908 ORIG1)\nConfidence: c
+ onfirmed\nTicker CELC (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219908\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219908
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:110dd4ba68988b18313c@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:LLY APPROVAL: RETEVMO
+DESCRIPTION:Approved 2026-07-14: RETEVMO (NDA218160 SUPPL7)\nConfidence: co
+ nfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218160\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218160
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:814fe8c1f7af164c4fc0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:LLY APPROVAL: RETEVMO
+DESCRIPTION:Approved 2026-07-14: RETEVMO (NDA213246 SUPPL17)\nConfidence: c
+ onfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213246\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213246
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ceae3c00c3667a909bdd@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260713
+DTEND;VALUE=DATE:20260714
+SUMMARY:EISAI INC APPROVAL: LEQEMBI IQLIK
+DESCRIPTION:Approved 2026-07-13: LEQEMBI IQLIK (BLA761375 SUPPL1)\nConfiden
+ ce: confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/ind
+ ex.cfm?event=overview.process&ApplNo=761375\nScheduling/reference data fro
+ m public records\; dates can move. Not investment\, legal or medical advic
+ e.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761375
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2711c4146151465cb7ee@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260713
+DTEND;VALUE=DATE:20260714
+SUMMARY:LLY APPROVAL: VERZENIO
+DESCRIPTION:Approved 2026-07-13: VERZENIO (NDA208716 SUPPL21)\nConfidence: 
+ confirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208716\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208716
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:94b359b26e148ba1261b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-07-10: KEYTRUDA (BLA125514 SUPPL194)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:64f8cddced87634dca26@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-07-10: KEYTRUDA QLEX (BLA761467 SUPPL12)\nConfide
+ nce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdat
+ a.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6f6f94e5322ab294e037@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+SUMMARY:PROVEPHARM SAS APPROVAL: ZYOGREEN
+DESCRIPTION:Approved 2026-07-10: ZYOGREEN (NDA218579 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=218579\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218579
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6ec4f9118bbec363028b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+SUMMARY:ASTELLAS APPROVAL: PADCEV
+DESCRIPTION:Approved 2026-07-10: PADCEV (BLA761137 SUPPL37)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761137\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761137
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4892c7333ebf238018d5@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260710
+SUMMARY:JHPCY CRL: SHR- 1210 injection
+DESCRIPTION:CRL 2026-07-09: Jiangsu Hengrui Pharmaceuticals Co.\, Ltd. BLA 
+ 761308 (SHR- 1210 injection)\nConfidence: confirmed\nTicker JHPCY (confide
+ nce 0.6)\nSource: https://download.open.fda.gov/crl/CRL_BLA761308_20260709
+ _Redacted.pdf\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761308_20260709_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d77f5fc4bbb0f1f8facd@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260710
+SUMMARY:Elevar Therapeutics Inc. CRL: rivoceranib tablet
+DESCRIPTION:CRL 2026-07-09: Elevar Therapeutics Inc. NDA 216586 (rivocerani
+ b tablet)\nConfidence: confirmed\nSource: https://download.open.fda.gov/cr
+ l/CRL_NDA216586_20260709_Redacted.pdf\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA216586_20260709_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4a7da7d6e45e382d081a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260710
+SUMMARY:AMRX APPROVAL: SODIUM BICARBONATE
+DESCRIPTION:Approved 2026-07-09: SODIUM BICARBONATE (NDA220790 ORIG1)\nConf
+ idence: confirmed\nTicker AMRX (confidence 0.9)\nSource: https://www.acces
+ sdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220
+ 790\nScheduling/reference data from public records\; dates can move. Not i
+ nvestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220790
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:abd8e578e95d7da066c2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260710
+SUMMARY:SNY APPROVAL: SARCLISA ESCENA
+DESCRIPTION:Approved 2026-07-09: SARCLISA ESCENA (BLA761445 ORIG1)\nConfide
+ nce: confirmed\nTicker SNY (confidence 0.6)\nSource: https://www.accessdat
+ a.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761445\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761445
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2a6331d86fe24ca18a53@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260707
+DTEND;VALUE=DATE:20260708
+SUMMARY:GLENMARK SPECLT APPROVAL: RYALTRIS
+DESCRIPTION:Approved 2026-07-07: RYALTRIS (NDA211746 SUPPL11)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=211746\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=211746
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:65257fb992e508f52b0c@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260707
+DTEND;VALUE=DATE:20260708
+SUMMARY:VERA APPROVAL: TRUTAKNA
+DESCRIPTION:Approved 2026-07-07: TRUTAKNA (BLA761486 ORIG1)\nConfidence: co
+ nfirmed\nTicker VERA (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761486\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761486
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6554d3cef483970db284@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260702
+DTEND;VALUE=DATE:20260703
+SUMMARY:Ascelia Pharma AB CRL: (PN) (manganese chloride tetrahydrate — po
+ wder for oral solution)
+DESCRIPTION:CRL 2026-07-02: Ascelia Pharma AB NDA 220544 ((PN) (manganese c
+ hloride tetrahydrate — powder for oral solution))\nConfidence: confirmed
+ \nSource: https://download.open.fda.gov/crl/CRL_NDA220544_20260702_Redacte
+ d.pdf\nScheduling/reference data from public records\; dates can move. Not
+  investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220544_20260702_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5c64100dcbf95854296b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:NVS APPROVAL: KISQALI FEMARA CO-PACK (COPACKAGED)
+DESCRIPTION:Approved 2026-07-01: KISQALI FEMARA CO-PACK (COPACKAGED) (NDA20
+ 9935 SUPPL33)\nConfidence: confirmed\nTicker NVS (confidence 0.9)\nSource:
+  https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.
+ process&ApplNo=209935\nScheduling/reference data from public records\; dat
+ es can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=209935
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:db040a8bf9aed5580703@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:NVS APPROVAL: KISQALI
+DESCRIPTION:Approved 2026-07-01: KISQALI (NDA209092 SUPPL27)\nConfidence: c
+ onfirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209092\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=209092
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:fc848ef511675e5bc48d@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:IMNM PDUFA (company-disclosed): varegacestat
+DESCRIPTION:PDUFA July 2026 - Immunome Inc. (varegacestat)\nConfidence: com
+ pany-disclosed\nDate precision: month (shown on the first day)\nTicker IMN
+ M (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/147201
+ 2/000119312526453556/imnm-ex99_1.htm\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1472012/000119312526453556/imnm
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:ddbc00417a75f90ee173@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:RARE PDUFA (company-disclosed): PDUFA second half of 2026 - Ultrage
+ nyx Pharmaceutical Inc.
+DESCRIPTION:PDUFA second half of 2026 - Ultragenyx Pharmaceutical Inc.\nCon
+ fidence: company-disclosed\nDate precision: half (shown on the first day)\
+ nTicker RARE (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/
+ data/1515673/000119312526332802/rare-ex99_1.htm\nScheduling/reference data
+  from public records\; dates can move. Not investment\, legal or medical a
+ dvice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/rare
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:435c26f8a99be80586f6@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:UNCY CRL: oxylanthanum carbonate tablets
+DESCRIPTION:CRL 2026-06-29: Unicycive Therapeutics Inc. NDA 218607 (oxylant
+ hanum carbonate tablets)\nConfidence: confirmed\nTicker UNCY (confidence 0
+ .9)\nSource: https://download.open.fda.gov/crl/CRL_NDA218607_20260629.pdf\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA218607_20260629.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:82934f0d198300ccb174@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:Ipsen Biopharm Ltd. CRL: relabotulinumtoxin A injection
+DESCRIPTION:CRL 2026-06-29: Ipsen Biopharm Ltd. BLA 761311 (relabotulinumto
+ xin A injection)\nConfidence: confirmed\nSource: https://download.open.fda
+ .gov/crl/CRL_BLA761311_20260629_Redacted.pdf\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761311_20260629_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9ab8ca2d61b7b7f8e5d2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:ARQT APPROVAL: ZORYVE
+DESCRIPTION:Approved 2026-06-29: ZORYVE (NDA215985 SUPPL15)\nConfidence: co
+ nfirmed\nTicker ARQT (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215985\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215985
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:72432af4aed2945e88e6@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260626
+DTEND;VALUE=DATE:20260627
+SUMMARY:Evergreen Theragnostics\, Inc. CRL: the Preparation of Gallium Ga E
+ dotreotide Injection
+DESCRIPTION:CRL 2026-06-26: Evergreen Theragnostics\, Inc. NDA 216900 (the 
+ Preparation of Gallium Ga Edotreotide Injection)\nConfidence: confirmed\nS
+ ource: https://download.open.fda.gov/crl/CRL_NDA216900_20260626_Redacted.p
+ df\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA216900_20260626_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d2d00a388d3963e704b7@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260626
+DTEND;VALUE=DATE:20260627
+SUMMARY:Swedish Orphan Biovitrum AB (publ) CRL: sirolimus for injectable su
+ spension
+DESCRIPTION:CRL 2026-06-26: Swedish Orphan Biovitrum AB (publ) BLA 761438 (
+ sirolimus for injectable suspension)\nConfidence: confirmed\nSource: https
+ ://download.open.fda.gov/crl/CRL_BLA761438_20260626_Redacted.pdf\nScheduli
+ ng/reference data from public records\; dates can move. Not investment\, l
+ egal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761438_20260626_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:87debdbaea9783d9940e@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260626
+DTEND;VALUE=DATE:20260627
+SUMMARY:DECIPHERA PHARMS APPROVAL: ROMVIMZA
+DESCRIPTION:Approved 2026-06-26: ROMVIMZA (NDA219304 SUPPL2)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=219304\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219304
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:8e78e703cfad0a52fc2f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260626
+DTEND;VALUE=DATE:20260627
+SUMMARY:VRDN APPROVAL: LUMVOA
+DESCRIPTION:Approved 2026-06-26: LUMVOA (BLA761530 ORIG1)\nConfidence: conf
+ irmed\nTicker VRDN (confidence 0.6)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761530\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761530
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:065bf5fb095e08945760@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260626
+DTEND;VALUE=DATE:20260627
+SUMMARY:ABBV APPROVAL: SKYRIZI
+DESCRIPTION:Approved 2026-06-26: SKYRIZI (BLA761105 SUPPL45)\nConfidence: c
+ onfirmed\nTicker ABBV (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761105\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761105
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e673438fcedb15d566a0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260626
+SUMMARY:MERZ PHARMS APPROVAL: Xeomin
+DESCRIPTION:Approved 2026-06-25: Xeomin (BLA125360 SUPPL108)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=125360\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125360
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:f6f8ac2744c36ffd36a9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:AVYXA HOLDINGS APPROVAL: NAVITRUX
+DESCRIPTION:Approved 2026-06-24: NAVITRUX (NDA220436 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=220436\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220436
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4dbc642f10a567472458@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:PFE APPROVAL: IBRANCE
+DESCRIPTION:Approved 2026-06-24: IBRANCE (NDA207103 SUPPL24)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207103\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=207103
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:618657e9bd95e4cf0024@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-06-24: KEYTRUDA (BLA125514 SUPPL187)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c565fa7a8ac72ec0b1a7@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:PFE APPROVAL: IBRANCE
+DESCRIPTION:Approved 2026-06-24: IBRANCE (NDA212436 SUPPL12)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212436\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=212436
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a34eee5dc0758d8a9002@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-06-24: KEYTRUDA QLEX (BLA761467 SUPPL4)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:75b34c8f73a4d0ad1e10@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:IONS APPROVAL: TRYNGOLZA (AUTOINJECTOR)
+DESCRIPTION:Approved 2026-06-24: TRYNGOLZA (AUTOINJECTOR) (NDA218614 SUPPL4
+ )\nConfidence: confirmed\nTicker IONS (confidence 0.6)\nSource: https://ww
+ w.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&App
+ lNo=218614\nScheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218614
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c3a7d3407a51359656a8@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:IMMUNOMEDICS INC APPROVAL: TRODELVY
+DESCRIPTION:Approved 2026-06-24: TRODELVY (BLA761115 SUPPL64)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=761115\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761115
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:371a652b58902e0db2d2@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:IMMUNOMEDICS INC APPROVAL: TRODELVY
+DESCRIPTION:Approved 2026-06-24: TRODELVY (BLA761115 SUPPL63)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=761115\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761115
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c4afb16ed19a726772ae@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260623
+DTEND;VALUE=DATE:20260624
+SUMMARY:Tanvex BioPharma USA\, Inc. CRL: CRL 2026-06-23: Tanvex BioPharma U
+ SA\, Inc. BLA 761266
+DESCRIPTION:CRL 2026-06-23: Tanvex BioPharma USA\, Inc. BLA 761266\nConfide
+ nce: confirmed\nSource: https://download.open.fda.gov/crl/CRL_BLA761266_20
+ 260623_Redacted.pdf\nScheduling/reference data from public records\; dates
+  can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761266_20260623_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:80e72e84c713f976fb15@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260620
+DTEND;VALUE=DATE:20260621
+SUMMARY:QUIT CRL: cytisinicline tablet\, ©
+DESCRIPTION:CRL 2026-06-20: Achieve Life Sciences\, Inc. NDA 218995 (cytisi
+ nicline tablet\, ©)\nConfidence: confirmed\nTicker QUIT (confidence 0.9)\
+ nSource: https://download.open.fda.gov/crl/CRL_NDA218995_20260620_Redacted
+ .pdf\nScheduling/reference data from public records\; dates can move. Not 
+ investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA218995_20260620_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:20378fbe6da40e5840fe@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+SUMMARY:ADCOM (scheduled): AdCom 2026-06-18: Vaccines and Related Biologica
+ l Products Advisory Committee
+DESCRIPTION:AdCom 2026-06-18: Vaccines and Related Biological Products Advi
+ sory Committee\nConfidence: scheduled\nSource: https://www.federalregister
+ .gov/documents/2026/05/22/2026-10321/vaccines-and-related-biological-produ
+ cts-advisory-committee-notice-of-meeting-establishment-of-a\nScheduling/re
+ ference data from public records\; dates can move. Not investment\, legal 
+ or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/05/22/2026-10321/vaccine
+ s-and-related-biological-products-advisory-committee-notice-of-meeting-est
+ ablishment-of-a
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:7c9a413abbc6885198c8@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+SUMMARY:ZEAL.CO APPROVAL: ZEGALOGUE\; ZEGALOGUE (AUTOINJECTOR)
+DESCRIPTION:Approved 2026-06-18: ZEGALOGUE\; ZEGALOGUE (AUTOINJECTOR) (NDA2
+ 14231 SUPPL4)\nConfidence: confirmed\nTicker ZEAL.CO (confidence 0.95)\nSo
+ urce: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=over
+ view.process&ApplNo=214231\nScheduling/reference data from public records\
+ ; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=214231
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a7925e0bf5aba334682a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260617
+DTEND;VALUE=DATE:20260618
+SUMMARY:Avyxa Holdings\, LLC CRL: Cisplatin Injection
+DESCRIPTION:CRL 2026-06-17: Avyxa Holdings\, LLC NDA 220748 (Cisplatin Inje
+ ction)\nConfidence: confirmed\nSource: https://download.open.fda.gov/crl/C
+ RL_NDA220748_20260617.pdf\nScheduling/reference data from public records\;
+  dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220748_20260617.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e36067cac6c61abd21f0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260617
+DTEND;VALUE=DATE:20260618
+SUMMARY:GLAXOSMITHKLINE APPROVAL: UTEBZI
+DESCRIPTION:Approved 2026-06-17: UTEBZI (NDA215960 ORIG1)\nConfidence: conf
+ irmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?e
+ vent=overview.process&ApplNo=215960\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215960
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c886b73d5453719bcbc3@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260616
+DTEND;VALUE=DATE:20260617
+SUMMARY:AZURITY APPROVAL: APREPITANT
+DESCRIPTION:Approved 2026-06-16: APREPITANT (NDA218754 ORIG1)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=218754\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218754
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1df45731ab815cbfc6d1@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260616
+DTEND;VALUE=DATE:20260617
+SUMMARY:AMPH APPROVAL: REXTOVY
+DESCRIPTION:Approved 2026-06-16: REXTOVY (NDA208969 SUPPL2)\nConfidence: co
+ nfirmed\nTicker AMPH (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208969\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208969
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:06f9620eb2e040a1e0be@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260615
+DTEND;VALUE=DATE:20260616
+SUMMARY:Tris Pharma\, Inc. CRL: oxybate for extended-release powder for ora
+ l suspension (oxybate ER OS)
+DESCRIPTION:CRL 2026-06-15: Tris Pharma\, Inc. NDA 220138 (oxybate for exte
+ nded-release powder for oral suspension (oxybate ER OS))\nConfidence: conf
+ irmed\nSource: https://download.open.fda.gov/crl/CRL_NDA220138_20260615_Re
+ dacted.pdf\nScheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220138_20260615_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bcdd327c34bd8147333b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:PROVENTION BIO INC APPROVAL: TZIELD
+DESCRIPTION:Approved 2026-06-12: TZIELD (BLA761183 SUPPL10)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=761183\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761183
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b666c9183b939f527cf8@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:MRK APPROVAL: WELIREG
+DESCRIPTION:Approved 2026-06-12: WELIREG (NDA215383 SUPPL15)\nConfidence: c
+ onfirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215383\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215383
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:897ca66b05ba98af9730@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-06-12: KEYTRUDA (BLA125514 SUPPL192)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5f19dc43526498f4bcf9@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-06-12: KEYTRUDA QLEX (BLA761467 SUPPL9)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:8c9061c4744b4bcffe3f@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:BAYER HEALTHCARE APPROVAL: AMBELVIST
+DESCRIPTION:Approved 2026-06-12: AMBELVIST (NDA219627 ORIG1)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=219627\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219627
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:f8b906b24898eba9e353@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:ABBV APPROVAL: SKYRIZI
+DESCRIPTION:Approved 2026-06-12: SKYRIZI (BLA761105 SUPPL44)\nConfidence: c
+ onfirmed\nTicker ABBV (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761105\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761105
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9445dd3696800e30640a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:AZN APPROVAL: TRUQAP
+DESCRIPTION:Approved 2026-06-12: TRUQAP (NDA218197 SUPPL4)\nConfidence: con
+ firmed\nTicker AZN (confidence 0.9)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218197\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218197
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:f2f907017b894616e4e0@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260611
+DTEND;VALUE=DATE:20260612
+SUMMARY:HOFFMANN-LA ROCHE APPROVAL: ALECENSA
+DESCRIPTION:Approved 2026-06-11: ALECENSA (NDA208434 SUPPL16)\nConfidence: 
+ confirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.c
+ fm?event=overview.process&ApplNo=208434\nScheduling/reference data from pu
+ blic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208434
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9a33dde747e12860d99d@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260611
+SUMMARY:Bridge Regulatory Affairs\, LLC CRL: octreotide hydrochloride exten
+ ded- release injection
+DESCRIPTION:CRL 2026-06-10: Bridge Regulatory Affairs\, LLC NDA 218600 (oct
+ reotide hydrochloride extended- release injection)\nConfidence: confirmed\
+ nSource: https://download.open.fda.gov/crl/CRL_NDA218600_20260610_Redacted
+ .pdf\nScheduling/reference data from public records\; dates can move. Not 
+ investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA218600_20260610_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:84745ed7870becb91130@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260609
+DTEND;VALUE=DATE:20260610
+SUMMARY:LLY APPROVAL: EBGLYSS
+DESCRIPTION:Approved 2026-06-09: EBGLYSS (BLA761306 SUPPL6)\nConfidence: co
+ nfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761306\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761306
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:7a56c94d3cbc34c3fd7b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260605
+DTEND;VALUE=DATE:20260606
+SUMMARY:PFE APPROVAL: HYMPAVZI
+DESCRIPTION:Approved 2026-06-05: HYMPAVZI (BLA761369 SUPPL3)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761369\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761369
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bb62946437aea2e9f2c3@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260605
+SUMMARY:Xspray Pharma AB CRL: (9) (nilotinib) capsules
+DESCRIPTION:CRL 2026-06-04: Xspray Pharma AB NDA 217644 ((9) (nilotinib) ca
+ psules)\nConfidence: confirmed\nSource: https://download.open.fda.gov/crl/
+ CRL_NDA217644_20260604_Redacted.pdf\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA217644_20260604_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:13c341f2ad345e416dad@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260602
+DTEND;VALUE=DATE:20260603
+SUMMARY:CASPER PHARMA LLC APPROVAL: TIOCYSTIN
+DESCRIPTION:Approved 2026-06-02: TIOCYSTIN (NDA212927 ORIG1)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=212927\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=212927
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:66694ef2e041f353f8f1@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260602
+DTEND;VALUE=DATE:20260603
+SUMMARY:LUPIN LIMITED APPROVAL: RANLUSPEC
+DESCRIPTION:Approved 2026-06-02: RANLUSPEC (BLA761480 ORIG1)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=761480\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761480
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:e129d9b82e745be9d6ce@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:CING CRL: dexmethylphenidate hydrochloride extended-release tablets
+DESCRIPTION:CRL 2026-05-29: Cingulate Therapeutics\, LLC NDA 220283 (dexmet
+ hylphenidate hydrochloride extended-release tablets)\nConfidence: confirme
+ d\nTicker CING (confidence 0.9)\nSource: https://download.open.fda.gov/crl
+ /CRL_NDA220283_20260529_Redacted.pdf\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220283_20260529_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1b5db9b5873c6cf7678a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:SHIONOGI APPROVAL: XOCOVA
+DESCRIPTION:Approved 2026-05-29: XOCOVA (NDA220442 ORIG1)\nConfidence: conf
+ irmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?e
+ vent=overview.process&ApplNo=220442\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220442
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:f0c527a0be37c882a7c1@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:HAISCO APPROVAL: CYPSEDO
+DESCRIPTION:Approved 2026-05-29: CYPSEDO (NDA220482 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=220482\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220482
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:3f7b8b649b226574d0ee@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:WOCKHARDT BIO AG APPROVAL: ZAYNICH
+DESCRIPTION:Approved 2026-05-29: ZAYNICH (NDA220787 ORIG1)\nConfidence: con
+ firmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?
+ event=overview.process&ApplNo=220787\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220787
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1398e78a61df49b5df5c@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:MNKD APPROVAL: AFREZZA
+DESCRIPTION:Approved 2026-05-29: AFREZZA (BLA022472 SUPPL29)\nConfidence: c
+ onfirmed\nTicker MNKD (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022472\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=022472
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:be7441e71870e2786bfd@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:CYCLE APPROVAL: CAVHANZA
+DESCRIPTION:Approved 2026-05-29: CAVHANZA (NDA217379 ORIG1)\nConfidence: co
+ nfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+ ?event=overview.process&ApplNo=217379\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217379
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b35f9769b8185f12678b@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260528
+DTEND;VALUE=DATE:20260529
+SUMMARY:ADCOM (scheduled): AdCom 2026-05-28: Vaccines and Related Biologica
+ l Products Advisory Committee
+DESCRIPTION:AdCom 2026-05-28: Vaccines and Related Biological Products Advi
+ sory Committee\nConfidence: scheduled\nSource: https://www.federalregister
+ .gov/documents/2026/04/27/2026-08122/vaccines-and-related-biological-produ
+ cts-advisory-committee-notice-of-meeting-establishment-of-a\nScheduling/re
+ ference data from public records\; dates can move. Not investment\, legal 
+ or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/04/27/2026-08122/vaccine
+ s-and-related-biological-products-advisory-committee-notice-of-meeting-est
+ ablishment-of-a
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:7670fa53c5c1538aa6cb@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260528
+DTEND;VALUE=DATE:20260529
+SUMMARY:JANSSEN BIOTECH APPROVAL: TREMFYA
+DESCRIPTION:Approved 2026-05-28: TREMFYA (BLA761061 SUPPL34)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=761061\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761061
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:81f18cfee64b7d4bf1bf@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260528
+DTEND;VALUE=DATE:20260529
+SUMMARY:AZN APPROVAL: IMFINZI
+DESCRIPTION:Approved 2026-05-28: IMFINZI (BLA761069 SUPPL53)\nConfidence: c
+ onfirmed\nTicker AZN (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761069\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761069
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:ccb5086da2f9bff3389a@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:ABBV APPROVAL: DECNUPAZ
+DESCRIPTION:Approved 2026-05-27: DECNUPAZ (BLA761460 ORIG1)\nConfidence: co
+ nfirmed\nTicker ABBV (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761460\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761460
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1cac484a555aca2b1eb8@biocat.ai
+DTSTAMP:20261118T181353Z
+DTSTART;VALUE=DATE:20260523
+DTEND;VALUE=DATE:20260524
+SUMMARY:ACTELION APPROVAL: UPTRAVI
+DESCRIPTION:Approved 2026-05-23: UPTRAVI (NDA207947 SUPPL14)\nConfidence: c
+ onfirmed\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.cf
+ m?event=overview.process&ApplNo=207947\nScheduling/reference data from pub
+ lic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=207947
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR
