@@ -1,0 +1,22 @@
+{
+  "separateCap": false,
+  "maxImages": 4,
+  "aiSources": [
+    "deepmind",
+    "openai-news",
+    "nvidia-blog",
+    "anthropic",
+    "isomorphic",
+    "meta-ai",
+    "microsoft-research"
+  ],
+  "aiNames": [
+    "OpenAI",
+    "Google DeepMind",
+    "NVIDIA",
+    "Anthropic",
+    "Isomorphic Labs",
+    "Meta AI",
+    "Microsoft Research"
+  ]
+}

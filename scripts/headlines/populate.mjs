@@ -3,7 +3,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadFeedback } from "./feedback.mjs";
 import { Polite, USER_AGENT } from "./http.mjs";
-import { attachImages } from "./images.mjs";
+import { attachImages, imageLoads } from "./images.mjs";
+import { attachLinkPreviews } from "./link-preview.mjs";
+import { commonsUserAgent } from "./image-score.mjs";
 import { scoreItem, selectHeadlines } from "./ranking.mjs";
 import { SOURCES } from "./sources.mjs";
 import { readXPicks, xPickItems } from "./x-picks.mjs";
@@ -84,6 +86,12 @@ async function main() {
   try {
     const images = await attachImages(polite, payload.items, { cacheFile: path.join(root, "data", "image-cache.json") });
     console.log(`images: ${images.placed} commons-calls: ${images.calls} openverse-calls: ${images.openverseCalls} nasa-calls: ${images.nasaCalls}`);
+    polite.userAgent = commonsUserAgent();
+    const previews = await attachLinkPreviews(polite, payload.items, {
+      cacheFile: path.join(root, "data", "og-url-cache.json"),
+      loadImage: (url) => imageLoads(url),
+    });
+    console.log(`link-previews: kept ${previews.kept.length} placed ${previews.placed.length} separate-cap-total ${previews.separateCapTotal}`);
   } catch (error) {
     console.error(`images: ${error instanceof Error ? error.message : error}`);
   }
