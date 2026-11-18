@@ -1,4 +1,4 @@
-import { el, figureFor, formatDay, itemLink, loadHeadlines, sourceLine, tweetEmbed } from "./render.js";
+import { el, figureFor, formatDay, itemLink, loadHeadlines, sourceLine, tweetEmbed, watchTweetSlots } from "./render.js";
 import { mountSearch } from "./search.js";
 
 const main = document.querySelector("#main");
@@ -47,6 +47,7 @@ try {
     const columns = [0, 1, 2].map(() => el("div", { class: "col" }));
     rest.forEach((item, index) => columns[index % 3].append(article(item)));
     main.append(leadBlock, el("section", { class: "columns" }, columns));
+    watchTweetSlots(main);
   }
   const foot = document.querySelector("#run");
   foot.textContent = footerNotes(data);
