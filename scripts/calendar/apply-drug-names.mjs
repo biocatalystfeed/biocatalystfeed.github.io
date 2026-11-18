@@ -270,14 +270,18 @@ function countsFor(html) {
   };
 }
 
+function tidyDrugLists(html) {
+  return html.replace(/Drugs:[\s\S]*?<\/p>/g, (list) => list
+    .replace(/,\s*,/g, ",")
+    .replace(/Drugs:\s*,/g, "Drugs:")
+    .replace(/,\s*\./g, "."));
+}
+
 for (const [slug, html] of finalPages) {
   const dir = path.join(drugRoot, slug);
   fs.mkdirSync(dir, { recursive: true });
-  let next = replaceAnchors(html);
+  let next = tidyDrugLists(replaceAnchors(html));
   next = next.replace(/<li>\s*<\/li>/g, "");
-  next = next.replace(/,\s*,/g, ",");
-  next = next.replace(/Drugs:\s*,/g, "Drugs:");
-  next = next.replace(/,\s*\./g, ".");
   fs.writeFileSync(path.join(dir, "index.html"), next);
   finalPages.set(slug, next);
 }
@@ -319,12 +323,8 @@ for (const file of [...walk(path.join(repo, "calendar")), path.join(repo, "sitem
   if (file.startsWith(`${drugRoot}${path.sep}`) && path.basename(path.dirname(file)) !== "drug") continue;
   let html = read(file);
   const original = html;
-  html = replaceAnchors(html);
-  html = dedupeDrugList(html);
+  html = tidyDrugLists(dedupeDrugList(replaceAnchors(html)));
   html = html.replace(/<li>\s*<\/li>/g, "");
-  html = html.replace(/,\s*,/g, ",");
-  html = html.replace(/Drugs:\s*,/g, "Drugs:");
-  html = html.replace(/,\s*\./g, ".");
   html = html.replace(/<p>Drugs:\s*<\/p>/g, "");
   if (file.endsWith(`${path.sep}sitemap.xml`)) html = retargetSitemap(html);
   if (html !== original) fs.writeFileSync(file, html);
