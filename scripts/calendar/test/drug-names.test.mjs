@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { cleanDrugNames, drugSlug, isPlaceholderDrug } from "../drug-names.mjs";
+import { cleanDrugNames, drugSlug, isPlaceholderDrug, tidyDrugLists } from "../drug-names.mjs";
 
 test("placeholder arms and test drugs are dropped", () => {
   for (const name of [
@@ -56,4 +56,13 @@ test("packed drug lists split and ambiguous lists stay or drop", () => {
   assert.deepEqual(drugSlug("Furmonertinib"), "furmonertinib");
   assert.deepEqual(drugSlug("WD-890"), "wd-890");
   assert.deepEqual(drugSlug("nab-paclitaxel"), "nab-paclitaxel");
+});
+
+test("drug-list cleanup leaves CSS selectors alone", () => {
+  const css = "<style>.f input,.f select{padding:6px}</style>";
+  assert.equal(tidyDrugLists(css), css);
+  assert.equal(
+    tidyDrugLists("<p>Drugs: <a href=\"a/\">A</a>, .</p>"),
+    "<p>Drugs: <a href=\"a/\">A</a>.</p>",
+  );
 });

@@ -147,6 +147,13 @@ export function cleanDrugNames(value) {
   return whole ? [whole] : [];
 }
 
+export function tidyDrugLists(html) {
+  return String(html || "").replace(/Drugs:[\s\S]*?<\/p>/g, (list) => list
+    .replace(/,\s*,/g, ",")
+    .replace(/Drugs:\s*,/g, "Drugs:")
+    .replace(/,\s*\./g, "."));
+}
+
 export function drugSlug(name) {
   return spaces(decode(name))
     .toLowerCase()

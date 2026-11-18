@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { cleanDrugNames, drugSlug } from "./drug-names.mjs";
+import { cleanDrugNames, drugSlug, tidyDrugLists } from "./drug-names.mjs";
 
 const repo = path.resolve(import.meta.dirname, "../..");
 const drugRoot = path.join(repo, "calendar", "drug");
@@ -268,13 +268,6 @@ function countsFor(html) {
     up: dataRows(html, "Upcoming trial readouts").length,
     fda: dataRows(html, "Upcoming FDA decision events").length,
   };
-}
-
-function tidyDrugLists(html) {
-  return html.replace(/Drugs:[\s\S]*?<\/p>/g, (list) => list
-    .replace(/,\s*,/g, ",")
-    .replace(/Drugs:\s*,/g, "Drugs:")
-    .replace(/,\s*\./g, "."));
 }
 
 for (const [slug, html] of finalPages) {
