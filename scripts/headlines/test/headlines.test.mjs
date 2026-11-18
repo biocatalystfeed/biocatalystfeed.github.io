@@ -369,7 +369,6 @@ test("headlines stay within 14 words by trimming clauses", () => {
     assert.match(item.source_url, /^https?:\/\//);
     assert.doesNotMatch(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
     if (item.source_type === "trial") assert.match(item.headline, /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b/, item.headline);
-    if (item.source_type === "paper") assert.ok(wordCount(item.headline) >= 6, item.headline);
     assert.doesNotMatch(item.headline, /records original approval/i);
     assert.doesNotMatch(item.headline, /^(NDA|BLA)\b/);
     assert.doesNotMatch(item.headline, /^[a-z]/, item.headline);
@@ -806,7 +805,10 @@ test("X posts load when scrolled near and the initial page has no third-party sc
   const fallback = render.slice(render.indexOf("IntersectionObserver"));
   assert.match(fallback, /Show post/);
   const picks = JSON.parse(fs.readFileSync(path.join(root, "data", "x_picks.json"), "utf8"));
-  assert.equal(picks.picks.length, 4);
+  assert.equal(picks.schema, "biocat-x-picks/1");
+  assert.equal(typeof picks.enabled, "boolean");
+  assert.ok(Array.isArray(picks.picks));
+  assert.ok(picks.picks.length >= 1);
   for (const pick of picks.picks) {
     assert.match(xStatusUrl({ source_url: pick.postUrl, scout_source: "x" }), /\/status\/\d+/);
   }

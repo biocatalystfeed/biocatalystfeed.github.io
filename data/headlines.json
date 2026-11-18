@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-18T13:15:27.892Z",
+  "generated_at": "2026-11-18T19:13:50.138Z",
   "event_date": "2026-11-18",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -10,7 +10,7 @@
       "id": "openfda-drugsfda",
       "enabled": true,
       "status": "ok",
-      "fetched": 214,
+      "fetched": 215,
       "note": "openFDA drugsfda applications with an approval dated 20260810 to 20261118, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (26 labels matched)."
     },
     {
@@ -58,9 +58,9 @@
     {
       "id": "europepmc",
       "enabled": true,
-      "status": "error",
-      "fetched": 0,
-      "note": "503 from https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=FIRST_PDATE%3A%5B2026-10-28+TO+2026-11-18%5D+AND+%28TITLE%3A%22machine+learning%22+OR+TITLE%3A%22deep+learning%22+OR+TITLE%3A%22protein+language%22+OR+TITLE%3A%22artificial+intelligence%22%29+AND+%28TITLE%3Aprotein+OR+TITLE%3Agenom+OR+TITLE%3Amolecul+OR+TITLE%3Adrug+OR+TITLE%3Acell+OR+TITLE%3Abiolog%29&format=json&resultType=co"
+      "status": "ok",
+      "fetched": 38,
+      "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped. A blurb uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
       "id": "clinicaltrials-calendar",
@@ -86,9 +86,9 @@
     {
       "id": "bcf-papers",
       "enabled": true,
-      "status": "error",
-      "fetched": 0,
-      "note": "502 from https://biocatalystfeed-api.biocatalystfeed.workers.dev/papers?q=FIRST_PDATE%3A%5B2026-10-28%20TO%202026-11-18%5D%20AND%20(TITLE%3A%22protein%20language%22%20OR%20TITLE%3A%22machine%20learning%22%20OR%20TITLE%3ACRISPR%20OR%20TITLE%3A%22single-cell%22)"
+      "status": "ok",
+      "fetched": 10,
+      "note": "BioCatalystFeed Worker /papers, which proxies the Europe PMC search API. Same metadata terms as a direct Europe PMC call. Titles that assert efficacy are skipped. Duplicate DOIs collapse with the direct Europe PMC source."
     },
     {
       "id": "bcf-ai-discovery",
@@ -115,7 +115,7 @@
       "id": "fda-press",
       "enabled": true,
       "status": "ok",
-      "fetched": 11,
+      "fetched": 12,
       "note": "FDA press-release RSS. U.S. government work, published for syndication. Items are kept when the title or description names a drug, biologic, vaccine, trial, or related topic. The headline is the agency's title. The blurb adds the publication date and, when the description names a product before an outcome clause, that product text."
     },
     {
@@ -576,6 +576,32 @@
       "scout_source": "mhra"
     },
     {
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "headline": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+      "blurb": "FDA today announced the Global Reliance Disclosure Program (GRDP), a landmark initiative that will fundamentally transform how the FDA's regulatory drug and biologic approval decisions.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "source_type": "news",
+      "source_name": "FDA press releases",
+      "published_at": "2026-11-17",
+      "significance": 76,
+      "significance_rationale": "fda-press 70; 1d old +6 = 76. FDA press release.",
+      "tier": 4,
+      "scout_source": "fda-press"
+    },
+    {
+      "id": "openfda-crl:CRL_BLA761393_20260909.pdf",
+      "headline": "FDA sends SEIKAGAKU Corporation a complete response letter",
+      "blurb": "A complete response letter means the application was not approved as submitted, and the headings name facility and safety. Application BLA 761393, letter date Sep 9.",
+      "source_url": "https://download.open.fda.gov/crl/CRL_BLA761393_20260909.pdf",
+      "source_type": "regulator",
+      "source_name": "FDA complete response letters (openFDA)",
+      "published_at": "2026-09-09",
+      "significance": 76,
+      "significance_rationale": "fda-crl 82; 70d old -6 = 76. FDA complete response letter.",
+      "tier": 4,
+      "scout_source": "openfda-crl"
+    },
+    {
       "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
       "headline": "Advancing computer-use agents for healthcare teams",
       "blurb": "Details are in the linked post.",
@@ -641,6 +667,19 @@
       "scout_source": "fda-press"
     },
     {
+      "id": "europepmc:MED:43045780",
+      "headline": "The origins of scrotal asymmetry",
+      "blurb": "Published 2026-11-17 in Nature (MED 43045780).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03279-6",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-17",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
       "id": "openai-news:https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
       "headline": "Measuring how AI agents handle everyday wet-lab science",
       "blurb": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
@@ -654,17 +693,17 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-grants-accelerated-approval-new-treatment-head-and-neck-squamous-cell-carcinoma",
-      "headline": "FDA grants accelerated approval to new head and neck cancer treatment",
-      "blurb": "Food and Drug Administration today granted accelerated approval to Rybrevant Faspro (amivantamab and hyaluronidase-lpuj) for the treatment of adults with recurrent or metastatic head.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-grants-accelerated-approval-new-treatment-head-and-neck-squamous-cell-carcinoma",
-      "source_type": "news",
-      "source_name": "FDA press releases",
-      "published_at": "2026-11-05",
-      "significance": 73,
-      "significance_rationale": "fda-press 70; 13d old +3 = 73. FDA press release.",
+      "id": "europepmc:MED:43045782",
+      "headline": "Voyager 1 is about to achieve a cosmic first: one 'light day' from Earth",
+      "blurb": "Published 2026-11-17 in Nature (MED 43045782).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03672-1",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-17",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
-      "scout_source": "fda-press"
+      "scout_source": "europepmc"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
@@ -680,17 +719,17 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "bcf-ai:hydrogen-1.0",
-      "headline": "Hydrogen-1.0 model release from Deep Principle",
-      "blurb": "This card points at the MIT-licensed BF16 weights; quantized variants are published separately. AI model release. Not a peer-reviewed experimental finding.",
-      "source_url": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/",
-      "source_type": "model",
-      "source_name": "BioCatalystFeed AI discovery",
-      "published_at": "2026-11-06",
-      "significance": 65,
-      "significance_rationale": "ai-model 62; 12d old +3 = 65. Curated AI model-release card from the BioCatalystFeed AI discovery endpoint.",
+      "id": "europepmc:MED:43045783",
+      "headline": "Is academia's risk-averse culture stifling scientific discovery?",
+      "blurb": "Published 2026-11-17 in Nature (MED 43045783).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03772-y",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-17",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
-      "scout_source": "bcf-ai-discovery"
+      "scout_source": "europepmc"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
@@ -706,6 +745,59 @@
       "scout_source": "deepmind"
     },
     {
+      "id": "europepmc:MED:43045786",
+      "headline": "'Light and sound' therapy for Alzheimer's flops in long-anticipated trial",
+      "blurb": "Published 2026-11-17 in Nature (MED 43045786).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03770-0",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-17",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
+      "id": "bcf-ai:hydrogen-1.0",
+      "headline": "Hydrogen-1.0 model release from Deep Principle",
+      "blurb": "This card points at the MIT-licensed BF16 weights; quantized variants are published separately. AI model release. Not a peer-reviewed experimental finding.",
+      "source_url": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/",
+      "source_type": "model",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-06",
+      "significance": 65,
+      "significance_rationale": "ai-model 62; 12d old +3 = 65. Curated AI model-release card from the BioCatalystFeed AI discovery endpoint.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
+    },
+    {
+      "id": "orange-book:209569:2026-12-20",
+      "headline": "Tissueblue: Orange Book protection date Dec 20",
+      "blurb": "NDA 209569. Applicant listed as Dutch Ophthalmic Research Center International Bv.",
+      "source_url": "https://www.accessdata.fda.gov/scripts/cder/ob/results_product.cfm?Appl_Type=N&Appl_No=209569",
+      "source_type": "regulator",
+      "source_name": "FDA Orange Book",
+      "published_at": "2026-12-20",
+      "significance": 64,
+      "significance_rationale": "orange-loe-exclusivity 64; in 32d 0 = 64. Soonest Orange Book loss of exclusivity is an exclusivity code.",
+      "tier": 3,
+      "scout_source": "orange-book"
+    },
+    {
+      "id": "x:https://x.com/EricTopol/status/2123061598462075034",
+      "headline": "At-home microbiome tests are taking off. Can they be trusted?",
+      "blurb": "A Nature reporter sent stool samples to two direct-to-consumer companies to compare what each one told her about her gut microbiome. https://www.nature.com/articles/d41586-026-03710-y",
+      "source_url": "https://x.com/EricTopol/status/2123061598462075034",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-18",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.nature.com/articles/d41586-026-03710-y"
+    },
+    {
       "id": "sec-edgar:0001104659-26-128825",
       "headline": "SELLAS Life Sciences Group, Inc. discloses a Regulation FD disclosure in an 8-K",
       "blurb": "SELLAS Life Sciences Group, Inc. disclosed a Regulation FD disclosure and other events and financial statements and exhibits. Accession 0001104659-26-128825.",
@@ -717,6 +809,60 @@
       "significance_rationale": "sec-8k 58; 1d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 3,
       "scout_source": "sec-edgar-8k"
+    },
+    {
+      "id": "x:https://x.com/EricTopol/status/2123093437994123356",
+      "headline": "Conservation of the tumour microenvironment across organs and species",
+      "blurb": "Screening thousands of public single-cell datasets, the authors report shared stromal and immune programs across 42 cancer types in over 2,000 human and mouse tumours, released as an interactive atlas. https://www.nature.com/articles/s41586-026-11270-4",
+      "source_url": "https://x.com/EricTopol/status/2123093437994123356",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-18",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.nature.com/articles/s41586-026-11270-4"
+    },
+    {
+      "id": "bcf-papers:MED:43046633",
+      "headline": "Association of questionnaire-defined probable obstructive sleep apnea with advanced cardiovascular-kidney-metabolic syndrome in US adults",
+      "blurb": "Published 2026-11-17 in Ren Fail (MED 43046633).",
+      "source_url": "https://doi.org/10.1080/0886022x.2026.2757912",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-17",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 1d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
+    },
+    {
+      "id": "x:https://x.com/EricTopol/status/2123094879157006708",
+      "headline": "Hypothalamic volume and cell-type changes in ageing and Alzheimer's disease",
+      "blurb": "HypoAD pairs MRI from 458 people with single-nucleus RNA sequencing of 614,403 nuclei, reporting that metabolism- and circadian-regulating hypothalamic subregions are particularly vulnerable in ageing and Alzheimer's. https://www.nature.com/articles/s41586-026-11305-w",
+      "source_url": "https://x.com/EricTopol/status/2123094879157006708",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-18",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.nature.com/articles/s41586-026-11305-w"
+    },
+    {
+      "id": "bcf-papers:MED:43039660",
+      "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
+      "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
+      "source_url": "https://doi.org/10.26508/lsa.202603861",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-16",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2122716956205916227",
@@ -733,17 +879,17 @@
       "linked_url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.09.765412",
-      "headline": "Coarse-tuning to improve a protein foundation model for a domain of proteins: the example",
-      "blurb": "Show that coarse-tuned models outperform the original foundation model when applied to various transfer learning tasks. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.09.765412",
+      "id": "bcf-papers:MED:43034332",
+      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
+      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
+      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
       "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-12",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-14",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "biorxiv"
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2122801525672317145",
@@ -760,17 +906,17 @@
       "linked_url": "https://www.science.org/doi/10.1126/scisignal.aef1375"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.10.26367711",
-      "headline": "Automating postmarketing pharmacovigilance with large language model agents",
-      "blurb": "Across the benchmark, MedCheckpoint outperformed two coding-agent baselines in report quality across five dimensions rated by three independent LLM judges. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367711",
+      "id": "biorxiv:10.64898/2026.11.09.765412",
+      "headline": "Coarse-tuning to improve a protein foundation model for a domain of proteins: the example",
+      "blurb": "Show that coarse-tuned models outperform the original foundation model when applied to various transfer learning tasks. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.09.765412",
       "source_type": "paper",
-      "source_name": "medRxiv",
+      "source_name": "bioRxiv",
       "published_at": "2026-11-12",
       "significance": 62,
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "medrxiv"
+      "scout_source": "biorxiv"
     },
     {
       "id": "x:https://x.com/IsomorphicLabs/status/2122661054723547449",
@@ -787,10 +933,10 @@
       "linked_url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.10.26367736",
-      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
-      "blurb": "Indicated the GenAI system may generate more highly rated self-management advice than PCPs across most evaluated dimensions but offered no advantage in readability. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
+      "id": "medrxiv:10.64898/2026.11.10.26367711",
+      "headline": "Automating postmarketing pharmacovigilance with large language model agents",
+      "blurb": "Across the benchmark, MedCheckpoint outperformed two coding-agent baselines in report quality across five dimensions rated by three independent LLM judges. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367711",
       "source_type": "paper",
       "source_name": "medRxiv",
       "published_at": "2026-11-12",
@@ -798,47 +944,6 @@
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "medrxiv"
-    },
-    {
-      "id": "x:https://x.com/EricTopol/status/2122347083965563328",
-      "headline": "Opportunistic risk assessment of major osteoporotic fractures from routine chest radiographs using deep learning",
-      "blurb": "The study asks whether a deep-learning model reading routine chest X-rays can capture fracture risk in the osteopenic range, where bone density scores and FRAX leave gaps. https://ai.nejm.org/doi/full/10.1056/AIoa2600590",
-      "source_url": "https://x.com/EricTopol/status/2122347083965563328",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-16",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://ai.nejm.org/doi/full/10.1056/AIoa2600590"
-    },
-    {
-      "id": "medrxiv:10.64898/2026.11.10.26367739",
-      "headline": "Silent Drift and Site-level Variance in Clinical AI: Real-world performance and subgroup analysis",
-      "blurb": "Overall sensitivity was 64.1% (95% CI, 61.5-66.6%), specificity 98.8% (95% CI, 98.6-99.0%), compared with 93% sensitivity and 93.7% specificity in the FDA 510(k) summary. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367739",
-      "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-12",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "medrxiv"
-    },
-    {
-      "id": "x:https://x.com/EricTopol/status/2122349917591175225",
-      "headline": "Plasma proteomics identifies insulin resistance signatures predictive of cardiometabolic disease risk",
-      "blurb": "Blood protein profiling paired with clamp-based insulin sensitivity measurements yielded a tissue-resolved atlas and a model the authors report beats conventional markers for forecasting metabolic and heart disease. https://www.nature.com/articles/s42255-026-01662-1",
-      "source_url": "https://x.com/EricTopol/status/2122349917591175225",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-16",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.nature.com/articles/s42255-026-01662-1"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.22137v1",
@@ -854,18 +959,17 @@
       "scout_source": "bcf-ai-discovery"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2122367388649988494",
-      "headline": "Microbial bile acid deconjugation counters metabolic decline in aging",
-      "blurb": "Aged mice and human centenarians share a gut-microbe signature of increased bile acid deconjugation, and engineered native bacteria boosting it improved metabolic markers in aged mice. https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00453-5",
-      "source_url": "https://x.com/EricTopol/status/2122367388649988494",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-16",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "id": "medrxiv:10.64898/2026.11.10.26367736",
+      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
+      "blurb": "Indicated the GenAI system may generate more highly rated self-management advice than PCPs across most evaluated dimensions but offered no advantage in readability. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
+      "source_type": "paper",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-12",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00453-5"
+      "scout_source": "medrxiv"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.21857v1",
@@ -879,6 +983,19 @@
       "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
+    },
+    {
+      "id": "medrxiv:10.64898/2026.11.10.26367739",
+      "headline": "Silent Drift and Site-level Variance in Clinical AI: Real-world performance and subgroup analysis",
+      "blurb": "Overall sensitivity was 64.1% (95% CI, 61.5-66.6%), specificity 98.8% (95% CI, 98.6-99.0%), compared with 93% sensitivity and 93.7% specificity in the FDA 510(k) summary. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367739",
+      "source_type": "paper",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-12",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "medrxiv"
     },
     {
       "id": "biorxiv:10.64898/2026.02.23.703392",
@@ -970,6 +1087,19 @@
       "significance_rationale": "sec-8k 58; routine-filing -18; 9d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 2,
       "scout_source": "sec-edgar-8k"
+    },
+    {
+      "id": "health-canada:38648",
+      "headline": "Zds-Enzalutamide (Enzalutamide): Health Canada abbreviated submission",
+      "blurb": "Notice 38648, date 2026-11-13. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38648",
+      "source_type": "regulator",
+      "source_name": "Health Canada Notice of Compliance Database",
+      "published_at": "2026-11-13",
+      "significance": 40,
+      "significance_rationale": "hc-ands 34; 5d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
+      "tier": 2,
+      "scout_source": "health-canada-noc"
     }
   ]
 }
