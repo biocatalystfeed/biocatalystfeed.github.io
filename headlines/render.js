@@ -48,10 +48,6 @@ export function figureFor(item) {
     loading: "lazy",
   });
   const caption = el("figcaption", { class: "credit" });
-  if (image.kind === "link-preview") {
-    caption.append(el("a", { href: image.sourcePage, text: `Image: ${image.publisher || image.credit || "Source"}`, rel: "noopener noreferrer" }));
-    return el("figure", { class: "shot" }, [img, caption]);
-  }
   caption.append(`${image.credit || ""}. `);
   if (image.basisUrl) caption.append(el("a", { href: image.basisUrl, text: image.licence || "licence", rel: "noopener noreferrer" }));
   if (image.sourcePage) {
@@ -75,9 +71,14 @@ export function loadTwitterWidgets() {
   return twitterLoader;
 }
 
-export function tweetEmbed(item) {
+export function xStatusUrl(item) {
   const href = String(item?.source_url || "");
-  if (!/\/status\/\d+/.test(href)) return null;
+  return /\/status\/\d+/.test(href) ? href : "";
+}
+
+export function tweetEmbed(item) {
+  const href = xStatusUrl(item);
+  if (!href) return null;
   const quote = el("blockquote", { class: "twitter-tweet" });
   quote.append(el("a", { href, text: href, rel: "noopener noreferrer" }));
   const button = el("button", { type: "button", class: "show-post", text: "Show post" });

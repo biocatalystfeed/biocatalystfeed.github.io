@@ -14,7 +14,7 @@ import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { hostAllowed, xPickItems } from "../x-picks.mjs";
-import { countImages, previewProblem, readPreview } from "../link-preview.mjs";
+import { xStatusUrl } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
@@ -718,39 +718,28 @@ test("disabled x picks add nothing and a valid pick is capped", () => {
   assert.match(uploadThumb(page.imageinfo[0].url), /400px-Asundexian\.svg\.png$/);
 });
 
-test("link previews drop logos and defaults, and the page does not load X widgets up front", () => {
-  const page = `<html><head>
-    <meta property="og:title" content="A lab bench at the company">
-    <meta property="og:image" content="https://cdn.example.com/photos/bench.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:alt" content="Scientists at a laboratory bench">
-    <meta property="og:site_name" content="OpenAI">
-  </head></html>`;
-  const kept = readPreview(page, "https://openai.com/index/example");
-  assert.equal(previewProblem(kept), "");
-  assert.equal(kept.alt, "Scientists at a laboratory bench");
-  assert.equal(previewProblem({ image: "https://cdn.example.com/logo.png", alt: "Logo", width: 1200 }), "logo, favicon, or site default");
-  assert.equal(previewProblem({ image: "https://cdn.example.com/photos/bench.jpg", alt: "Bench", width: 200 }), "under 300px wide");
-  const seen = new Map([["https://cdn.example.com/cards/shared.jpg", 2]]);
-  assert.equal(previewProblem({ image: "https://cdn.example.com/cards/shared.jpg", alt: "Card", width: 1200 }, seen), "same image used across the domain");
-  assert.equal(imageResponseOk(200, "image/jpeg"), true);
-  assert.equal(imageResponseOk(200, "text/html; charset=utf-8"), false);
-  const items = [
-    { image: { type: "photo", kind: "commons" } },
-    { image: { type: "micrograph", kind: "commons" } },
-    { image: { type: "diagram", kind: "commons" } },
-    { image: { type: "photo", kind: "commons" } },
-    {},
-  ];
-  const previews = [{ index: 4, image: { type: "illustration", kind: "link-preview", src: "https://cdn.example.com/a.jpg" } }];
-  assert.equal(countImages(items, previews, { separateCap: false }).chosen.length, 0);
-  assert.equal(countImages(items, previews, { separateCap: true }).total, 5);
+test("X posts get a click-to-load embed and no publisher image is fetched", () => {
   const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
   const render = fs.readFileSync(path.join(root, "headlines", "render.js"), "utf8");
+  const pageJs = fs.readFileSync(path.join(root, "headlines", "headlines.js"), "utf8");
+  const populate = fs.readFileSync(path.join(root, "scripts", "headlines", "populate.mjs"), "utf8");
   assert.match(html, /content="noindex"/);
   assert.doesNotMatch(html, /widgets\.js/);
+  assert.doesNotMatch(html, /<script[^>]+src=["']https?:/i);
+  assert.equal(fs.existsSync(path.join(root, "scripts", "headlines", "link-preview.mjs")), false);
+  assert.equal(fs.existsSync(path.join(root, "data", "og-url-cache.json")), false);
+  assert.doesNotMatch(populate, /attachLinkPreviews|og:image|og-url-cache/);
+  assert.doesNotMatch(render, /link-preview|og:image/);
+  assert.match(pageJs, /tweetEmbed\(item\)/);
   assert.match(render, /Show post/);
-  assert.match(render, /platform\.twitter\.com\/widgets\.js/);
-  assert.match(render, /addEventListener\("click"/);
+  const clickAt = render.indexOf('addEventListener("click"');
+  const widgetCall = render.indexOf("loadTwitterWidgets().then");
+  assert.ok(clickAt > 0 && widgetCall > clickAt);
+  const picks = JSON.parse(fs.readFileSync(path.join(root, "data", "x_picks.json"), "utf8"));
+  assert.ok(picks.picks.length > 0);
+  for (const pick of picks.picks) {
+    assert.match(xStatusUrl({ source_url: pick.postUrl, scout_source: "x" }), /\/status\/\d+/);
+  }
+  assert.equal(xStatusUrl({ source_url: "https://www.fda.gov/news", scout_source: "fda-press" }), "");
 });
 
