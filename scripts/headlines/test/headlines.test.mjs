@@ -15,7 +15,7 @@ import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { hostAllowed, xPickItems } from "../x-picks.mjs";
 import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatStamp, keepLastToken } from "../../../headlines/render.js";
-import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
+import { SEARCH_ROUTES, searchStatusNote, searchUrls } from "../../../headlines/search.js";
 import { accountsFromAllowlist, matchTrackedAccounts, trackedSearchRows } from "../../../headlines/tracked-accounts.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
@@ -852,5 +852,14 @@ test("tracked X account search matches names and handles", () => {
   assert.ok(matchTrackedAccounts(live, "bryan johnson").some((account) => account.handle === "bryan_johnson"));
   assert.ok(matchTrackedAccounts(live, "_katetolo").some((account) => account.handle === "_katetolo"));
   assert.ok(matchTrackedAccounts(live, "demis hassabis").some((account) => account.handle === "demishassabis"));
+});
+
+test("Searching stays hidden once a search result is shown", () => {
+  assert.equal(searchStatusNote(0, { loading: true }), "Searching…");
+  assert.equal(searchStatusNote(1, { loading: true }), "");
+  assert.equal(searchStatusNote(2), "");
+  assert.equal(searchStatusNote(0), "No results.");
+  assert.equal(searchStatusNote(0, { failed: true }), "Search is unavailable.");
+  assert.equal(searchStatusNote(1, { failed: true }), "");
 });
 
