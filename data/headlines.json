@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-18T01:07:21.706Z",
+  "generated_at": "2026-11-18T08:40:06.482Z",
   "event_date": "2026-11-18",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -10,8 +10,8 @@
       "id": "openfda-drugsfda",
       "enabled": true,
       "status": "ok",
-      "fetched": 212,
-      "note": "openFDA drugsfda applications with an approval dated 20260810 to 20261118, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (24 labels matched)."
+      "fetched": 214,
+      "note": "openFDA drugsfda applications with an approval dated 20260810 to 20261118, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (26 labels matched)."
     },
     {
       "id": "openfda-crl",
@@ -94,7 +94,7 @@
       "id": "bcf-ai-discovery",
       "enabled": true,
       "status": "ok",
-      "fetched": 5,
+      "fetched": 4,
       "note": "BioCatalystFeed Worker /ai-discovery. Curated model cards are included only when verified_as_of or published falls in the last 45 days. arXiv rows come from the worker's allowlisted category query and are labeled as preprints. Summaries are not copied. No X client is called."
     },
     {
@@ -108,8 +108,8 @@
       "id": "sec-edgar-8k",
       "enabled": true,
       "status": "ok",
-      "fetched": 71,
-      "note": "SEC EDGAR daily index Form 8-K rows for 129 tickers already listed in calendar/calendar.json. 7 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
+      "fetched": 78,
+      "note": "SEC EDGAR daily index Form 8-K rows for 129 tickers already listed in calendar/calendar.json. 6 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
     },
     {
       "id": "fda-press",
@@ -784,6 +784,19 @@
       "scout_source": "orange-book"
     },
     {
+      "id": "sec-edgar:0001104659-26-128825",
+      "headline": "SELLAS Life Sciences Group, Inc. discloses a Regulation FD disclosure in an 8-K",
+      "blurb": "SELLAS Life Sciences Group, Inc. disclosed a Regulation FD disclosure and other events and financial statements and exhibits. Accession 0001104659-26-128825.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1390478/000110465926128825/0001104659-26-128825-index.html",
+      "source_type": "filing",
+      "source_name": "SEC EDGAR",
+      "published_at": "2026-11-17",
+      "significance": 64,
+      "significance_rationale": "sec-8k 58; 1d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "tier": 3,
+      "scout_source": "sec-edgar-8k"
+    },
+    {
       "id": "x:https://x.com/EricTopol/status/2122716956205916227",
       "headline": "Innate immune memory of past hepatic injury promotes ischemic cardiac inflammation",
       "blurb": "Liver-derived palmitic acid and AP-1-dependent epigenetic reprogramming of myeloid progenitors and cardiac macrophages are proposed to carry an inflammatory memory that may affect recovery after a heart attack. https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3",
@@ -798,17 +811,17 @@
       "linked_url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3"
     },
     {
-      "id": "sec-edgar:0001193125-26-461412",
-      "headline": "Vir Biotechnology, Inc. discloses a material definitive agreement in an 8-K",
-      "blurb": "Vir Biotechnology, Inc. disclosed a material definitive agreement and other events and financial statements and exhibits. Accession 0001193125-26-461412.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1706431/000119312526461412/0001193125-26-461412-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
+      "id": "bcf-papers:MED:43039660",
+      "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
+      "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
+      "source_url": "https://doi.org/10.26508/lsa.202603861",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
       "published_at": "2026-11-16",
-      "significance": 64,
-      "significance_rationale": "sec-8k 58; 2d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2122801525672317145",
@@ -825,15 +838,15 @@
       "linked_url": "https://www.science.org/doi/10.1126/scisignal.aef1375"
     },
     {
-      "id": "bcf-papers:MED:43039660",
-      "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
-      "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
-      "source_url": "https://doi.org/10.26508/lsa.202603861",
+      "id": "bcf-papers:MED:43034332",
+      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
+      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
+      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-16",
+      "published_at": "2026-11-14",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },
@@ -852,15 +865,15 @@
       "linked_url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round"
     },
     {
-      "id": "bcf-papers:MED:43034332",
-      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
-      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
-      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
+      "id": "bcf-papers:MED:43023242",
+      "headline": "CRISPR opens the door to targeted therapy against glioblastoma (Review)",
+      "blurb": "Published 2026-11-13 in Int J Oncol (MED 43023242).",
+      "source_url": "https://doi.org/10.3892/ijo.2026.5957",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-14",
+      "published_at": "2026-11-13",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },
@@ -877,19 +890,6 @@
       "tier": 3,
       "scout_source": "x",
       "linked_url": "https://www.nature.com/articles/s42255-026-01662-1"
-    },
-    {
-      "id": "bcf-papers:MED:43023242",
-      "headline": "CRISPR opens the door to targeted therapy against glioblastoma (Review)",
-      "blurb": "Published 2026-11-13 in Int J Oncol (MED 43023242).",
-      "source_url": "https://doi.org/10.3892/ijo.2026.5957",
-      "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-13",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "bcf-papers"
     },
     {
       "id": "biorxiv:10.64898/2026.11.09.765412",
@@ -918,15 +918,15 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.20429v1",
-      "headline": "FiuMD: Heterogeneous Batching for Coarse-Grained Molecular Dynamics with Neural Network Potentials",
-      "blurb": "FiuMD is a GPU molecular dynamics engine that advances many independent biomolecular simulations as a single batch, even when the systems differ in size, topology. Posted on arXiv. Preprint, not peer-reviewed.",
-      "source_url": "https://arxiv.org/abs/2611.20429v1",
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.22137v1",
+      "headline": "Efficient strategies for obtaining accurate kinetics from biased simulations",
+      "blurb": "And it is not obvious which to choose for a given problem. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.22137v1",
       "source_type": "paper",
       "source_name": "BioCatalystFeed AI discovery",
-      "published_at": "2026-11-16",
+      "published_at": "2026-11-17",
       "significance": 60,
-      "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
     },
@@ -944,10 +944,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.20580v1",
-      "headline": "MultiCAsp: Spatially Informed Canonical Association Analysis of Multi-Omic Data",
-      "blurb": "Simultaneous profiling of multiple molecular layers at spatially resolved locations creates opportunities to identify shared cross-modal biological variation in its tissue context. Posted on arXiv. Preprint, not peer-reviewed.",
-      "source_url": "https://arxiv.org/abs/2611.20580v1",
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.21857v1",
+      "headline": "Tmol: a GPU-accelerated implementation of the Rosetta energy function for machine learning",
+      "blurb": "Physics-inspired forcefields complement generative machine learning models, showing better generalization beyond the training distribution. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.21857v1",
       "source_type": "paper",
       "source_name": "BioCatalystFeed AI discovery",
       "published_at": "2026-11-16",
