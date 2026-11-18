@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-18T19:13:50.138Z",
+  "generated_at": "2026-11-18T21:31:34.662Z",
   "event_date": "2026-11-18",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -17,7 +17,7 @@
       "id": "openfda-crl",
       "enabled": true,
       "status": "ok",
-      "fetched": 18,
+      "fetched": 19,
       "note": "Personal fields in the openFDA letter (representative, signatory, address) are not copied."
     },
     {
@@ -52,7 +52,7 @@
       "id": "health-canada-noc",
       "enabled": true,
       "status": "ok",
-      "fetched": 137,
+      "fetched": 155,
       "note": "Health Canada Notice of Compliance Database. Contains information licensed under the Open Government Licence – Canada. Administrative and veterinary notices are dropped."
     },
     {
@@ -66,7 +66,7 @@
       "id": "clinicaltrials-calendar",
       "enabled": true,
       "status": "ok",
-      "fetched": 45,
+      "fetched": 39,
       "note": "Read-only use of calendar/calendar.json. The ClinicalTrials.gov API is not called, because robots.txt disallows /api/. Study-page links are used. This job does not write calendar files."
     },
     {
@@ -108,14 +108,14 @@
       "id": "sec-edgar-8k",
       "enabled": true,
       "status": "ok",
-      "fetched": 78,
-      "note": "SEC EDGAR daily index Form 8-K rows for 129 tickers already listed in calendar/calendar.json. 6 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
+      "fetched": 74,
+      "note": "SEC EDGAR daily index Form 8-K rows for 125 tickers already listed in calendar/calendar.json. 6 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
     },
     {
       "id": "fda-press",
       "enabled": true,
       "status": "ok",
-      "fetched": 12,
+      "fetched": 13,
       "note": "FDA press-release RSS. U.S. government work, published for syndication. Items are kept when the title or description names a drug, biologic, vaccine, trial, or related topic. The headline is the agency's title. The blurb adds the publication date and, when the description names a product before an outcome clause, that product text."
     },
     {
@@ -459,6 +459,32 @@
       "scout_source": "clinicaltrials-calendar"
     },
     {
+      "id": "openfda-crl:CRL_NDA220054_20261019.pdf",
+      "headline": "FDA sends Cristcot HCA LLC a complete response letter",
+      "blurb": "A complete response letter means the application was not approved as submitted, and the headings name clinical and product quality and safety. Application NDA 220054, letter date Oct 19.",
+      "source_url": "https://download.open.fda.gov/crl/CRL_NDA220054_20261019.pdf",
+      "source_type": "regulator",
+      "source_name": "FDA complete response letters (openFDA)",
+      "published_at": "2026-10-19",
+      "significance": 82,
+      "significance_rationale": "fda-crl 82; 30d old 0 = 82. FDA complete response letter.",
+      "tier": 4,
+      "scout_source": "openfda-crl"
+    },
+    {
+      "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
+      "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
+      "blurb": "EMD Serono is testing avelumab in solid tumors.",
+      "source_url": "https://clinicaltrials.gov/study/NCT03815643",
+      "source_type": "trial",
+      "source_name": "ClinicalTrials.gov",
+      "published_at": "2026-11-24",
+      "significance": 84,
+      "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 6d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
+      "tier": 4,
+      "scout_source": "clinicaltrials-calendar"
+    },
+    {
       "id": "purple-book:125845:new:2026-09-17",
       "headline": "Fayuvi (rebisufligene etisparvovec-hopf) gets a Purple Book license",
       "blurb": "The Purple Book records a new biologics license for Fayuvi (rebisufligene etisparvovec-hopf). BLA 125845, date Sep 17, Ultragenyx Pharmaceutical Inc.",
@@ -472,10 +498,10 @@
       "scout_source": "purple-book"
     },
     {
-      "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
-      "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
-      "blurb": "EMD Serono is testing avelumab in solid tumors.",
-      "source_url": "https://clinicaltrials.gov/study/NCT03815643",
+      "id": "clinicaltrials-calendar:NCT06585787:2026-11-24",
+      "headline": "Phase 3 KarXT study in Alzheimer's psychosis reaches primary completion Nov 24",
+      "blurb": "Karuna Therapeutics is testing KarXT for psychosis associated with alzheimer's disease.",
+      "source_url": "https://clinicaltrials.gov/study/NCT06585787",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
       "published_at": "2026-11-24",
@@ -496,19 +522,6 @@
       "significance_rationale": "adcom-meeting 74; in 1d +6 = 80. Federal Register notice of an FDA advisory committee meeting.",
       "tier": 4,
       "scout_source": "federal-register-adcom"
-    },
-    {
-      "id": "clinicaltrials-calendar:NCT06585787:2026-11-24",
-      "headline": "Phase 3 KarXT study in Alzheimer's psychosis reaches primary completion Nov 24",
-      "blurb": "Karuna Therapeutics is testing KarXT for psychosis associated with alzheimer's disease.",
-      "source_url": "https://clinicaltrials.gov/study/NCT06585787",
-      "source_type": "trial",
-      "source_name": "ClinicalTrials.gov",
-      "published_at": "2026-11-24",
-      "significance": 84,
-      "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 6d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
-      "tier": 4,
-      "scout_source": "clinicaltrials-calendar"
     },
     {
       "id": "mhra:https://www.gov.uk/government/news/new-mhra-service-to-support-medicines-innovation-and-strengthen-uk-manufacturing",
@@ -550,15 +563,15 @@
       "scout_source": "mhra"
     },
     {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
-      "headline": "FDA Approves First Drug Shown to Help Patients with Infantile-Onset Niemann-Pick Disease Type C",
-      "blurb": "FDA approved Lembaz (adrabetadex) injection, the first treatment shown to help people with a severe form of Niemann-Pick disease type C (NPC) live longer.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-treat-neurological-symptoms-type-3-gaucher-disease",
+      "headline": "FDA Approves First Drug to Treat Neurological Symptoms of Type 3 Gaucher Disease",
+      "blurb": "It covers fDA today approved Infilbray venglustat tablets the first treatment.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-treat-neurological-symptoms-type-3-gaucher-disease",
       "source_type": "news",
       "source_name": "FDA press releases",
-      "published_at": "2026-11-17",
+      "published_at": "2026-11-18",
       "significance": 76,
-      "significance_rationale": "fda-press 70; 1d old +6 = 76. FDA press release.",
+      "significance_rationale": "fda-press 70; in 0d +6 = 76. FDA press release.",
       "tier": 4,
       "scout_source": "fda-press"
     },
@@ -576,6 +589,32 @@
       "scout_source": "mhra"
     },
     {
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
+      "headline": "FDA Approves First Drug Shown to Help Patients with Infantile-Onset Niemann-Pick Disease Type C",
+      "blurb": "FDA approved Lembaz (adrabetadex) injection, the first treatment shown to help people with a severe form of Niemann-Pick disease type C (NPC) live longer.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
+      "source_type": "news",
+      "source_name": "FDA press releases",
+      "published_at": "2026-11-17",
+      "significance": 76,
+      "significance_rationale": "fda-press 70; 1d old +6 = 76. FDA press release.",
+      "tier": 4,
+      "scout_source": "fda-press"
+    },
+    {
+      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "headline": "Advancing computer-use agents for healthcare teams",
+      "blurb": "Details are in the linked post.",
+      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "source_type": "news",
+      "source_name": "OpenAI News",
+      "published_at": "2026-11-16",
+      "significance": 74,
+      "significance_rationale": "ai-news 68; 2d old +6 = 74. Official lab blog post on an AI or biology topic.",
+      "tier": 3,
+      "scout_source": "openai-news"
+    },
+    {
       "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
       "headline": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
       "blurb": "FDA today announced the Global Reliance Disclosure Program (GRDP), a landmark initiative that will fundamentally transform how the FDA's regulatory drug and biologic approval decisions.",
@@ -589,23 +628,10 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "openfda-crl:CRL_BLA761393_20260909.pdf",
-      "headline": "FDA sends SEIKAGAKU Corporation a complete response letter",
-      "blurb": "A complete response letter means the application was not approved as submitted, and the headings name facility and safety. Application BLA 761393, letter date Sep 9.",
-      "source_url": "https://download.open.fda.gov/crl/CRL_BLA761393_20260909.pdf",
-      "source_type": "regulator",
-      "source_name": "FDA complete response letters (openFDA)",
-      "published_at": "2026-09-09",
-      "significance": 76,
-      "significance_rationale": "fda-crl 82; 70d old -6 = 76. FDA complete response letter.",
-      "tier": 4,
-      "scout_source": "openfda-crl"
-    },
-    {
-      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "headline": "Advancing computer-use agents for healthcare teams",
-      "blurb": "Details are in the linked post.",
-      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "id": "openai-news:https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "headline": "More ways to move care forward with ChatGPT for Healthcare",
+      "blurb": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+      "source_url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
       "source_type": "news",
       "source_name": "OpenAI News",
       "published_at": "2026-11-16",
@@ -628,19 +654,6 @@
       "scout_source": "nvidia-blog"
     },
     {
-      "id": "openai-news:https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-      "headline": "More ways to move care forward with ChatGPT for Healthcare",
-      "blurb": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
-      "source_url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-      "source_type": "news",
-      "source_name": "OpenAI News",
-      "published_at": "2026-11-16",
-      "significance": 74,
-      "significance_rationale": "ai-news 68; 2d old +6 = 74. Official lab blog post on an AI or biology topic.",
-      "tier": 3,
-      "scout_source": "openai-news"
-    },
-    {
       "id": "deepmind:https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
       "headline": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
       "blurb": "Predicting how DNA sequences and their variations impact specific human cell types and disease.",
@@ -652,19 +665,6 @@
       "significance_rationale": "ai-news 68; 7d old +6 = 74. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "deepmind"
-    },
-    {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-factor-xla-inhibitor-help-prevent-stroke-certain-adults-high-risk",
-      "headline": "FDA approves a first Factor XIa inhibitor to prevent stroke",
-      "blurb": "FDA today approved Sunharbo (asundexian) 50 mg tablets, the first factor XIa (FXIa) inhibitor for use in combination with antiplatelet therapy to reduce the risk.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-factor-xla-inhibitor-help-prevent-stroke-certain-adults-high-risk",
-      "source_type": "news",
-      "source_name": "FDA press releases",
-      "published_at": "2026-11-09",
-      "significance": 73,
-      "significance_rationale": "fda-press 70; 9d old +3 = 73. FDA press release.",
-      "tier": 3,
-      "scout_source": "fda-press"
     },
     {
       "id": "europepmc:MED:43045780",
@@ -1089,15 +1089,15 @@
       "scout_source": "sec-edgar-8k"
     },
     {
-      "id": "health-canada:38648",
-      "headline": "Zds-Enzalutamide (Enzalutamide): Health Canada abbreviated submission",
-      "blurb": "Notice 38648, date 2026-11-13. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
-      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38648",
+      "id": "health-canada:38653",
+      "headline": "Sandoz Linagliptin (Linagliptin): Health Canada abbreviated submission",
+      "blurb": "Notice 38653, date 2026-11-16. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38653",
       "source_type": "regulator",
       "source_name": "Health Canada Notice of Compliance Database",
-      "published_at": "2026-11-13",
+      "published_at": "2026-11-16",
       "significance": 40,
-      "significance_rationale": "hc-ands 34; 5d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
+      "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
       "tier": 2,
       "scout_source": "health-canada-noc"
     }
