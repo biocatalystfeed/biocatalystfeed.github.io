@@ -521,12 +521,15 @@ test("the public headlines page drops test wording and shows a dated source line
   assert.equal(review.includes("test headlines"), false);
 });
 
-test("headlines search hits every worker route and the page stays noindex", () => {
+test("headlines search hits every worker route and the review page stays noindex", () => {
   const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
   const css = fs.readFileSync(path.join(root, "headlines", "headlines.css"), "utf8");
   const workflow = fs.readFileSync(path.join(root, ".github", "workflows", "headlines.yml"), "utf8");
   const picks = JSON.parse(fs.readFileSync(path.join(root, "data", "x_picks.json"), "utf8"));
-  assert.match(html, /name="robots" content="noindex"/);
+  assert.doesNotMatch(html, /name="robots" content="noindex"/);
+  assert.match(html, /rel="canonical" href="https:\/\/biocat\.ai\/headlines\/"/);
+  const review = fs.readFileSync(path.join(root, "headlines", "review", "index.html"), "utf8");
+  assert.match(review, /content="noindex"/);
   assert.match(html, /id="hl-q"/);
   assert.match(html, /href="\/#demo"/);
   assert.match(html, /biocatalystfeed-api\.biocatalystfeed\.workers\.dev/);
@@ -774,7 +777,16 @@ test("X posts load when scrolled near and the initial page has no third-party sc
   const render = fs.readFileSync(path.join(root, "headlines", "render.js"), "utf8");
   const pageJs = fs.readFileSync(path.join(root, "headlines", "headlines.js"), "utf8");
   const populate = fs.readFileSync(path.join(root, "scripts", "headlines", "populate.mjs"), "utf8");
-  assert.match(html, /content="noindex"/);
+  assert.doesNotMatch(html, /content="noindex"/);
+  assert.match(html, /rel="canonical" href="https:\/\/biocat\.ai\/headlines\/"/);
+  const reviewHtml = fs.readFileSync(path.join(root, "headlines", "review", "index.html"), "utf8");
+  assert.match(reviewHtml, /content="noindex"/);
+  const robots = fs.readFileSync(path.join(root, "robots.txt"), "utf8");
+  const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+  assert.match(robots, /Disallow: \/headlines\/review\//);
+  assert.doesNotMatch(robots, /Disallow: \/headlines\/\s/);
+  assert.match(sitemap, /<loc>https:\/\/biocat\.ai\/headlines\/<\/loc>/);
+  assert.doesNotMatch(sitemap, /headlines\/review/);
   assert.doesNotMatch(html, /widgets\.js/);
   assert.doesNotMatch(html, /<script[^>]+src=["']https?:/i);
   assert.doesNotMatch(populate, /attachLinkPreviews|og:image|og-url-cache|link-preview/);

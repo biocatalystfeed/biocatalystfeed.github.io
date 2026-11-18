@@ -2,7 +2,7 @@
 
 Design only. Nothing here calls X, stores a key, or spends money. `data/x_picks.json` is an empty file with `"enabled": false`. `populate.mjs` ignores it until that flag is true, and even then it only copies picks that are already in the file. It does not fetch posts.
 
-The page stays noindex. A pick, if one is ever added, would be a headline, a one-line blurb in our words, and a link to the post. The post text itself would not be copied.
+The public page is indexable. `/headlines/review/` stays noindex. A pick, if one is ever added, would be a headline, a one-line blurb in our words, and a link to the post. The post text itself would not be copied.
 
 ## What we would read
 
