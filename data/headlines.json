@@ -1,7 +1,7 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-17T23:55:52.691Z",
-  "event_date": "2026-11-17",
+  "generated_at": "2026-11-18T00:09:08.191Z",
+  "event_date": "2026-11-18",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
   "ranking": "scripts/headlines/ranking.mjs",
@@ -10,14 +10,14 @@
       "id": "openfda-drugsfda",
       "enabled": true,
       "status": "ok",
-      "fetched": 213,
-      "note": "openFDA drugsfda applications with an approval dated 20260809 to 20261117, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (24 labels matched)."
+      "fetched": 212,
+      "note": "openFDA drugsfda applications with an approval dated 20260810 to 20261118, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (24 labels matched)."
     },
     {
       "id": "openfda-crl",
       "enabled": true,
       "status": "ok",
-      "fetched": 19,
+      "fetched": 18,
       "note": "Personal fields in the openFDA letter (representative, signatory, address) are not copied."
     },
     {
@@ -45,14 +45,14 @@
       "id": "ema",
       "enabled": true,
       "status": "ok",
-      "fetched": 21,
+      "fetched": 20,
       "note": "EMA daily medicines JSON. Variation decisions are not used; European Commission decision dates on already-authorised medicines are ignored. Source: European Medicines Agency."
     },
     {
       "id": "health-canada-noc",
       "enabled": true,
       "status": "ok",
-      "fetched": 137,
+      "fetched": 135,
       "note": "Health Canada Notice of Compliance Database. Contains information licensed under the Open Government Licence – Canada. Administrative and veterinary notices are dropped."
     },
     {
@@ -66,22 +66,22 @@
       "id": "clinicaltrials-calendar",
       "enabled": true,
       "status": "ok",
-      "fetched": 46,
+      "fetched": 45,
       "note": "Read-only use of calendar/calendar.json. The ClinicalTrials.gov API is not called, because robots.txt disallows /api/. Study-page links are used. This job does not write calendar files."
     },
     {
       "id": "biorxiv",
       "enabled": true,
       "status": "ok",
-      "fetched": 24,
-      "note": "biorxiv details API, 2026-11-11 to 2026-11-17, 120 metadata rows scanned. Titles are linked to the preprint page. A blurb uses one results sentence of at most 25 words when the abstract is present, and otherwise says the server and that the item is a preprint, not peer-reviewed. The abstract is not copied. Category filter is bioinformatics, genomics, synthetic biology, systems biology, pharmacology, or bioengineering for bioRxiv, and clinical categories with a therapy or trial word for medRxiv, plus AI-method titles."
+      "fetched": 16,
+      "note": "biorxiv details API, 2026-11-12 to 2026-11-18, 90 metadata rows scanned. Titles are linked to the preprint page. A blurb uses one results sentence of at most 25 words when the abstract is present, and otherwise says the server and that the item is a preprint, not peer-reviewed. The abstract is not copied. Category filter is bioinformatics, genomics, synthetic biology, systems biology, pharmacology, or bioengineering for bioRxiv, and clinical categories with a therapy or trial word for medRxiv, plus AI-method titles."
     },
     {
       "id": "medrxiv",
       "enabled": true,
       "status": "ok",
-      "fetched": 11,
-      "note": "medrxiv details API, 2026-11-11 to 2026-11-17, 120 metadata rows scanned. Titles are linked to the preprint page. A blurb uses one results sentence of at most 25 words when the abstract is present, and otherwise says the server and that the item is a preprint, not peer-reviewed. The abstract is not copied. Category filter is bioinformatics, genomics, synthetic biology, systems biology, pharmacology, or bioengineering for bioRxiv, and clinical categories with a therapy or trial word for medRxiv, plus AI-method titles."
+      "fetched": 10,
+      "note": "medrxiv details API, 2026-11-12 to 2026-11-18, 120 metadata rows scanned. Titles are linked to the preprint page. A blurb uses one results sentence of at most 25 words when the abstract is present, and otherwise says the server and that the item is a preprint, not peer-reviewed. The abstract is not copied. Category filter is bioinformatics, genomics, synthetic biology, systems biology, pharmacology, or bioengineering for bioRxiv, and clinical categories with a therapy or trial word for medRxiv, plus AI-method titles."
     },
     {
       "id": "bcf-papers",
@@ -102,14 +102,14 @@
       "enabled": true,
       "status": "ok",
       "fetched": 30,
-      "note": "NIH RePORTER project search for titles matching gene therapy, cell therapy, monoclonal antibody, CRISPR, drug discovery with a project start from 2026-09-03 to 2026-11-17. Award amounts and activity codes are the API fields. Abstracts are not copied. The API is the public RePORTER service; project pages are linked."
+      "note": "NIH RePORTER project search for titles matching gene therapy, cell therapy, monoclonal antibody, CRISPR, drug discovery with a project start from 2026-09-04 to 2026-11-18. Award amounts and activity codes are the API fields. Abstracts are not copied. The API is the public RePORTER service; project pages are linked."
     },
     {
       "id": "sec-edgar-8k",
       "enabled": true,
       "status": "ok",
-      "fetched": 84,
-      "note": "SEC EDGAR daily index Form 8-K rows for 129 tickers already listed in calendar/calendar.json. 6 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
+      "fetched": 71,
+      "note": "SEC EDGAR daily index Form 8-K rows for 129 tickers already listed in calendar/calendar.json. 7 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
     },
     {
       "id": "fda-press",
@@ -346,7 +346,7 @@
       "source_name": "FDA Drugs@FDA (openFDA)",
       "published_at": "2026-11-09",
       "significance": 100,
-      "significance_rationale": "fda-nme 90; priority-review +8; 8d old +3 = 100. Original FDA approval classed Type 1 (new molecular entity).",
+      "significance_rationale": "fda-nme 90; priority-review +8; 9d old +3 = 100. Original FDA approval classed Type 1 (new molecular entity).",
       "tier": 5,
       "scout_source": "openfda-drugsfda",
       "image": {
@@ -374,7 +374,7 @@
       "source_name": "European Medicines Agency",
       "published_at": "2026-11-12",
       "significance": 90,
-      "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
+      "significance_rationale": "ema-opinion 84; 6d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
       "scout_source": "ema",
       "image": {
@@ -388,9 +388,9 @@
         "height": 219,
         "hosting": "hotlink",
         "type": "diagram",
+        "provider": "commons",
         "relevance": 3,
-        "reason": "drug \"baxdrostat\"",
-        "provider": "commons"
+        "reason": "drug \"baxdrostat\""
       }
     },
     {
@@ -402,24 +402,9 @@
       "source_name": "FDA complete response letters (openFDA)",
       "published_at": "2026-11-13",
       "significance": 88,
-      "significance_rationale": "fda-crl 82; 4d old +6 = 88. FDA complete response letter.",
+      "significance_rationale": "fda-crl 82; 5d old +6 = 88. FDA complete response letter.",
       "tier": 5,
-      "scout_source": "openfda-crl",
-      "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2022_-_Auto-Tech_%26_TalkRobot_SM6_1453_%2852474736868%29.jpg/960px-2022_-_Auto-Tech_%26_TalkRobot_SM6_1453_%2852474736868%29.jpg",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:2022_-_Auto-Tech_%26_TalkRobot_SM6_1453_(52474736868).jpg",
-        "credit": "Web Summit",
-        "licence": "CC BY 2.0",
-        "basisUrl": "https://creativecommons.org/licenses/by/2.0",
-        "alt": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
-        "width": 960,
-        "height": 1445,
-        "hosting": "hotlink",
-        "type": "photo",
-        "relevance": 3,
-        "reason": "drug \"Summit\"",
-        "provider": "commons"
-      }
+      "scout_source": "openfda-crl"
     },
     {
       "id": "ema:EMEA/H/C/006743:ema-opinion:2026-11-12",
@@ -430,33 +415,18 @@
       "source_name": "European Medicines Agency",
       "published_at": "2026-11-12",
       "significance": 90,
-      "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
+      "significance_rationale": "ema-opinion 84; 6d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
-      "scout_source": "ema",
-      "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg/960px-Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
-        "credit": "Yale Rosen and Jian-Hua Qiao",
-        "licence": "CC BY-SA 2.0",
-        "basisUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "alt": "Small cell variant of squamous cell carcinoma (SCC) mimicking small cell lung carcinoma (SCLC). p63 immunochemistry",
-        "width": 960,
-        "height": 723,
-        "hosting": "hotlink",
-        "type": "micrograph",
-        "relevance": 3,
-        "reason": "exact condition \"lung cancer\" shown as a micrograph",
-        "provider": "commons"
-      }
+      "scout_source": "ema"
     },
     {
-      "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
-      "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
-      "blurb": "EMD Serono is testing avelumab in solid tumors.",
-      "source_url": "https://clinicaltrials.gov/study/NCT03815643",
+      "id": "clinicaltrials-calendar:NCT06775860:2026-11-25",
+      "headline": "Phase 3 ICP-332 study in atopic dermatitis reaches its primary completion Nov 25",
+      "blurb": "Beijing InnoCare is testing ICP-332 in atopic dermatitis.",
+      "source_url": "https://clinicaltrials.gov/study/NCT06775860",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
-      "published_at": "2026-11-24",
+      "published_at": "2026-11-25",
       "significance": 84,
       "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 7d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
       "tier": 4,
@@ -471,18 +441,18 @@
       "source_name": "European Medicines Agency",
       "published_at": "2026-11-12",
       "significance": 90,
-      "significance_rationale": "ema-opinion 84; 5d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
+      "significance_rationale": "ema-opinion 84; 6d old +6 = 90. EMA opinion on a medicine that is not yet authorised in this export.",
       "tier": 5,
       "scout_source": "ema"
     },
     {
-      "id": "clinicaltrials-calendar:NCT06585787:2026-11-24",
-      "headline": "Phase 3 KarXT study in Alzheimer's psychosis reaches primary completion Nov 24",
-      "blurb": "Karuna Therapeutics is testing KarXT for psychosis associated with alzheimer's disease.",
-      "source_url": "https://clinicaltrials.gov/study/NCT06585787",
+      "id": "clinicaltrials-calendar:NCT07216079:2026-11-25",
+      "headline": "Phase 3 ITP study in immune thrombocytopenia reaches primary completion Nov 25",
+      "blurb": "Sanofi is testing ITP in immune thrombocytopenia.",
+      "source_url": "https://clinicaltrials.gov/study/NCT07216079",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
-      "published_at": "2026-11-24",
+      "published_at": "2026-11-25",
       "significance": 84,
       "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 7d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
       "tier": 4,
@@ -497,20 +467,20 @@
       "source_name": "FDA Purple Book",
       "published_at": "2026-09-17",
       "significance": 82,
-      "significance_rationale": "purple-351a 88; 61d old -6 = 82. New 351(a) biologic in the Purple Book monthly changes report.",
+      "significance_rationale": "purple-351a 88; 62d old -6 = 82. New 351(a) biologic in the Purple Book monthly changes report.",
       "tier": 4,
       "scout_source": "purple-book"
     },
     {
-      "id": "clinicaltrials-calendar:NCT07057622:2026-11-24",
-      "headline": "Phase 3 177Lu-DOTATATE study in NETs reaches its primary completion Nov 24",
-      "blurb": "HTA is testing 177Lu-DOTATATE injection with long-acting oxytrexine in adult patients with NETs.",
-      "source_url": "https://clinicaltrials.gov/study/NCT07057622",
+      "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
+      "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
+      "blurb": "EMD Serono is testing avelumab in solid tumors.",
+      "source_url": "https://clinicaltrials.gov/study/NCT03815643",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
       "published_at": "2026-11-24",
       "significance": 84,
-      "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 7d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
+      "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 6d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
       "tier": 4,
       "scout_source": "clinicaltrials-calendar"
     },
@@ -523,18 +493,18 @@
       "source_name": "Federal Register",
       "published_at": "2026-11-19",
       "significance": 80,
-      "significance_rationale": "adcom-meeting 74; in 2d +6 = 80. Federal Register notice of an FDA advisory committee meeting.",
+      "significance_rationale": "adcom-meeting 74; in 1d +6 = 80. Federal Register notice of an FDA advisory committee meeting.",
       "tier": 4,
       "scout_source": "federal-register-adcom"
     },
     {
-      "id": "clinicaltrials-calendar:NCT06693895:2026-11-23",
-      "headline": "Phase 3 chickenpox vaccine study reaches primary completion Nov 23",
-      "blurb": "GlaxoSmithKline is testing investigational chickenpox vaccine in healthy children, 12 to 15 months of age.",
-      "source_url": "https://clinicaltrials.gov/study/NCT06693895",
+      "id": "clinicaltrials-calendar:NCT06585787:2026-11-24",
+      "headline": "Phase 3 KarXT study in Alzheimer's psychosis reaches primary completion Nov 24",
+      "blurb": "Karuna Therapeutics is testing KarXT for psychosis associated with alzheimer's disease.",
+      "source_url": "https://clinicaltrials.gov/study/NCT06585787",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
-      "published_at": "2026-11-23",
+      "published_at": "2026-11-24",
       "significance": 84,
       "significance_rationale": "trial-phase3 70; pivotal-readout +8; in 6d +6 = 84. Phase 3 primary completion date on the ClinicalTrials.gov study record.",
       "tier": 4,
@@ -549,7 +519,7 @@
       "source_name": "UK MHRA",
       "published_at": "2026-11-11",
       "significance": 80,
-      "significance_rationale": "mhra-news 74; 6d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; 7d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -562,7 +532,7 @@
       "source_name": "FDA Purple Book",
       "published_at": "2026-10-22",
       "significance": 80,
-      "significance_rationale": "purple-interchangeable 80; 26d old 0 = 80. Purple Book lists an interchangeability date in the report month.",
+      "significance_rationale": "purple-interchangeable 80; 27d old 0 = 80. Purple Book lists an interchangeability date in the report month.",
       "tier": 4,
       "scout_source": "purple-book"
     },
@@ -575,7 +545,7 @@
       "source_name": "UK MHRA",
       "published_at": "2026-11-09",
       "significance": 77,
-      "significance_rationale": "mhra-news 74; 8d old +3 = 77. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; 9d old +3 = 77. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -588,7 +558,7 @@
       "source_name": "FDA press releases",
       "published_at": "2026-11-17",
       "significance": 76,
-      "significance_rationale": "fda-press 70; in 0d +6 = 76. FDA press release.",
+      "significance_rationale": "fda-press 70; 1d old +6 = 76. FDA press release.",
       "tier": 4,
       "scout_source": "fda-press"
     },
@@ -601,7 +571,7 @@
       "source_name": "UK MHRA",
       "published_at": "2026-11-04",
       "significance": 77,
-      "significance_rationale": "mhra-news 74; 13d old +3 = 77. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; 14d old +3 = 77. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -614,7 +584,7 @@
       "source_name": "FDA press releases",
       "published_at": "2026-11-17",
       "significance": 76,
-      "significance_rationale": "fda-press 70; in 0d +6 = 76. FDA press release.",
+      "significance_rationale": "fda-press 70; 1d old +6 = 76. FDA press release.",
       "tier": 4,
       "scout_source": "fda-press"
     },
@@ -627,7 +597,7 @@
       "source_name": "FDA complete response letters (openFDA)",
       "published_at": "2026-09-09",
       "significance": 76,
-      "significance_rationale": "fda-crl 82; 69d old -6 = 76. FDA complete response letter.",
+      "significance_rationale": "fda-crl 82; 70d old -6 = 76. FDA complete response letter.",
       "tier": 4,
       "scout_source": "openfda-crl"
     },
@@ -640,7 +610,7 @@
       "source_name": "OpenAI News",
       "published_at": "2026-11-16",
       "significance": 74,
-      "significance_rationale": "ai-news 68; 1d old +6 = 74. Official lab blog post on an AI or biology topic.",
+      "significance_rationale": "ai-news 68; 2d old +6 = 74. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "openai-news"
     },
@@ -653,7 +623,7 @@
       "source_name": "NVIDIA Blog",
       "published_at": "2026-11-13",
       "significance": 74,
-      "significance_rationale": "ai-news 68; 4d old +6 = 74. Official lab blog post on an AI or biology topic.",
+      "significance_rationale": "ai-news 68; 5d old +6 = 74. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "nvidia-blog"
     },
@@ -666,7 +636,7 @@
       "source_name": "OpenAI News",
       "published_at": "2026-11-16",
       "significance": 74,
-      "significance_rationale": "ai-news 68; 1d old +6 = 74. Official lab blog post on an AI or biology topic.",
+      "significance_rationale": "ai-news 68; 2d old +6 = 74. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "openai-news"
     },
@@ -679,7 +649,7 @@
       "source_name": "Google DeepMind",
       "published_at": "2026-11-11",
       "significance": 74,
-      "significance_rationale": "ai-news 68; 6d old +6 = 74. Official lab blog post on an AI or biology topic.",
+      "significance_rationale": "ai-news 68; 7d old +6 = 74. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "deepmind"
     },
@@ -692,7 +662,7 @@
       "source_name": "FDA press releases",
       "published_at": "2026-11-09",
       "significance": 73,
-      "significance_rationale": "fda-press 70; 8d old +3 = 73. FDA press release.",
+      "significance_rationale": "fda-press 70; 9d old +3 = 73. FDA press release.",
       "tier": 3,
       "scout_source": "fda-press"
     },
@@ -705,7 +675,7 @@
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -718,7 +688,7 @@
       "source_name": "OpenAI News",
       "published_at": "2026-11-06",
       "significance": 71,
-      "significance_rationale": "ai-news 68; 11d old +3 = 71. Official lab blog post on an AI or biology topic.",
+      "significance_rationale": "ai-news 68; 12d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "openai-news"
     },
@@ -731,7 +701,7 @@
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -744,7 +714,7 @@
       "source_name": "Google DeepMind",
       "published_at": "2026-11-03",
       "significance": 71,
-      "significance_rationale": "ai-news 68; 14d old +3 = 71. Official lab blog post on an AI or biology topic.",
+      "significance_rationale": "ai-news 68; 15d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "deepmind"
     },
@@ -757,7 +727,7 @@
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -770,7 +740,7 @@
       "source_name": "Google DeepMind",
       "published_at": "2026-10-15",
       "significance": 68,
-      "significance_rationale": "ai-news 68; 33d old 0 = 68. Official lab blog post on an AI or biology topic.",
+      "significance_rationale": "ai-news 68; 34d old 0 = 68. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "deepmind"
     },
@@ -783,7 +753,7 @@
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -796,7 +766,7 @@
       "source_name": "BioCatalystFeed AI discovery",
       "published_at": "2026-11-06",
       "significance": 65,
-      "significance_rationale": "ai-model 62; 11d old +3 = 65. Curated AI model-release card from the BioCatalystFeed AI discovery endpoint.",
+      "significance_rationale": "ai-model 62; 12d old +3 = 65. Curated AI model-release card from the BioCatalystFeed AI discovery endpoint.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
     },
@@ -809,7 +779,7 @@
       "source_name": "X",
       "published_at": "2026-11-17",
       "significance": 64,
-      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
       "linked_url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round"
@@ -823,7 +793,7 @@
       "source_name": "SEC EDGAR",
       "published_at": "2026-11-16",
       "significance": 64,
-      "significance_rationale": "sec-8k 58; 1d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "significance_rationale": "sec-8k 58; 2d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 3,
       "scout_source": "sec-edgar-8k"
     },
@@ -836,7 +806,7 @@
       "source_name": "X",
       "published_at": "2026-11-16",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
       "linked_url": "https://www.nature.com/articles/s42255-026-01662-1"
@@ -850,7 +820,33 @@
       "source_name": "Europe PMC via BioCatalystFeed papers API",
       "published_at": "2026-11-16",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 1d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.09.765412",
+      "headline": "Coarse-tuning to improve a protein foundation model for a domain of proteins: the example",
+      "blurb": "Show that coarse-tuned models outperform the original foundation model when applied to various transfer learning tasks. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.09.765412",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-12",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "biorxiv"
+    },
+    {
+      "id": "bcf-papers:MED:43034332",
+      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
+      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
+      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-14",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },
@@ -863,33 +859,7 @@
       "source_name": "medRxiv",
       "published_at": "2026-11-12",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "medrxiv"
-    },
-    {
-      "id": "bcf-papers:MED:43034332",
-      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
-      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
-      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
-      "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-14",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "bcf-papers"
-    },
-    {
-      "id": "medrxiv:10.64898/2026.11.10.26367736",
-      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
-      "blurb": "Indicated the GenAI system may generate more highly rated self-management advice than PCPs across most evaluated dimensions but offered no advantage in readability. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
-      "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-12",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "medrxiv"
     },
@@ -902,35 +872,22 @@
       "source_name": "Europe PMC via BioCatalystFeed papers API",
       "published_at": "2026-11-13",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.10.26367739",
-      "headline": "Silent Drift and Site-level Variance in Clinical AI: Real-world performance and subgroup analysis",
-      "blurb": "Overall sensitivity was 64.1% (95% CI, 61.5-66.6%), specificity 98.8% (95% CI, 98.6-99.0%), compared with 93% sensitivity and 93.7% specificity in the FDA 510(k) summary. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367739",
+      "id": "medrxiv:10.64898/2026.11.10.26367736",
+      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
+      "blurb": "Indicated the GenAI system may generate more highly rated self-management advice than PCPs across most evaluated dimensions but offered no advantage in readability. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
       "source_type": "paper",
       "source_name": "medRxiv",
       "published_at": "2026-11-12",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "medrxiv"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.09.765456",
-      "headline": "ScDeepSim: Deep Generative Simulation for Controlled Benchmarking of Single-Cell Methods",
-      "blurb": "Benchmarking single-cell computational methods requires both realistic data and reliable ground truth. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.09.765456",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-11",
-      "significance": 62,
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "biorxiv"
+      "scout_source": "medrxiv"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.20429v1",
@@ -941,22 +898,22 @@
       "source_name": "BioCatalystFeed AI discovery",
       "published_at": "2026-11-16",
       "significance": 60,
-      "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.10.765480",
-      "headline": "A Complete Three-Dimensional Spiral Ganglion Neuron Map in a Human Adult",
-      "blurb": "These models were then applied to all other sections and compared to manual counts by three experienced histopathologists. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.10.765480",
+      "id": "medrxiv:10.64898/2026.11.10.26367739",
+      "headline": "Silent Drift and Site-level Variance in Clinical AI: Real-world performance and subgroup analysis",
+      "blurb": "Overall sensitivity was 64.1% (95% CI, 61.5-66.6%), specificity 98.8% (95% CI, 98.6-99.0%), compared with 93% sensitivity and 93.7% specificity in the FDA 510(k) summary. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367739",
       "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-11",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-12",
       "significance": 62,
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "biorxiv"
+      "scout_source": "medrxiv"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.20580v1",
@@ -967,18 +924,18 @@
       "source_name": "BioCatalystFeed AI discovery",
       "published_at": "2026-11-16",
       "significance": 60,
-      "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
     },
     {
-      "id": "biorxiv:10.1101/2023.12.11.571124",
-      "headline": "An interactive web application for exploring human plasma and fibroblast metabolomics data from patients",
-      "blurb": "Metabolomic profiling is instrumental in understanding the systemic and cellular impact of inborn errors of metabolism (IEMs), monogenic disorders caused by pathogenic genomic variants. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.1101/2023.12.11.571124",
+      "id": "biorxiv:10.64898/2026.02.23.703392",
+      "headline": "DemuxHMM: Large-Scale Single-Cell Embryo Profiling via Recombination Barcoding",
+      "blurb": "High-resolution developmental time-courses with single-cell RNA sequencing (scRNA-seq) increasingly target trajectory inference and other analyses in the study of development and disease. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.02.23.703392",
       "source_type": "paper",
       "source_name": "bioRxiv",
-      "published_at": "2026-11-11",
+      "published_at": "2026-11-12",
       "significance": 56,
       "significance_rationale": "paper-preprint 50; 6d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
       "tier": 2,
@@ -993,22 +950,22 @@
       "source_name": "NIH RePORTER",
       "published_at": "2026-09-30",
       "significance": 54,
-      "significance_rationale": "nih-grant 60; 48d old -6 = 54. NIH RePORTER project with a start date in the window.",
+      "significance_rationale": "nih-grant 60; 49d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
     },
     {
-      "id": "sec-edgar:0001628280-26-072195",
-      "headline": "Harrow, Inc. discloses results of operations in an 8-K",
-      "blurb": "Harrow, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001628280-26-072195.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1360214/000162828026072195/0001628280-26-072195-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-09",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 8d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "id": "biorxiv:10.64898/2026.03.29.711974",
+      "headline": "Panmap: Scalable phylogeny-guided alignment, genotyping, and placement on pangenomes",
+      "blurb": "Pangenomes capture population-level variation but remain computationally challenging at scale. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.03.29.711974",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-12",
+      "significance": 56,
+      "significance_rationale": "paper-preprint 50; 6d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
       "tier": 2,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "biorxiv"
     },
     {
       "id": "nih-reporter:11405186",
@@ -1019,20 +976,20 @@
       "source_name": "NIH RePORTER",
       "published_at": "2026-09-30",
       "significance": 54,
-      "significance_rationale": "nih-grant 60; 48d old -6 = 54. NIH RePORTER project with a start date in the window.",
+      "significance_rationale": "nih-grant 60; 49d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
     },
     {
-      "id": "sec-edgar:0001829126-26-012024",
-      "headline": "Neonc Technologies Holdings, Inc. discloses results of operations in an 8-K",
-      "blurb": "Neonc Technologies Holdings, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001829126-26-012024.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1979414/000182912626012024/0001829126-26-012024-index.html",
+      "id": "sec-edgar:0001193125-26-454476",
+      "headline": "Corbus Pharmaceuticals Holdings, Inc. reports results of operations",
+      "blurb": "Corbus Pharmaceuticals Holdings, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001193125-26-454476.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1595097/000119312526454476/0001193125-26-454476-index.html",
       "source_type": "filing",
       "source_name": "SEC EDGAR",
-      "published_at": "2026-11-05",
+      "published_at": "2026-11-10",
       "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 12d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "significance_rationale": "sec-8k 58; routine-filing -18; 8d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 2,
       "scout_source": "sec-edgar-8k"
     },
@@ -1045,9 +1002,22 @@
       "source_name": "NIH RePORTER",
       "published_at": "2026-09-30",
       "significance": 54,
-      "significance_rationale": "nih-grant 60; 48d old -6 = 54. NIH RePORTER project with a start date in the window.",
+      "significance_rationale": "nih-grant 60; 49d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
+    },
+    {
+      "id": "sec-edgar:0001628280-26-072195",
+      "headline": "Harrow, Inc. discloses results of operations in an 8-K",
+      "blurb": "Harrow, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001628280-26-072195.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1360214/000162828026072195/0001628280-26-072195-index.html",
+      "source_type": "filing",
+      "source_name": "SEC EDGAR",
+      "published_at": "2026-11-09",
+      "significance": 43,
+      "significance_rationale": "sec-8k 58; routine-filing -18; 9d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "tier": 2,
+      "scout_source": "sec-edgar-8k"
     }
   ]
 }

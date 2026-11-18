@@ -588,6 +588,11 @@ test("image placement rejects a weak or non-allowlisted match and varies the typ
   assert.equal(imageType("Engineered polymeric microneedle cellular delivery. A basic overview of a porous microneedle matrix."), "diagram");
   assert.equal(explainMatch(tumor, "porous microneedle matrix to load T-cells for delivery to solid tumors", "diagram").score, 0);
   assert.equal(relevanceScore([{ term: "solid", kind: "topic" }], "a solid block"), 0);
+  const summit = imageEntities({ headline: "FDA sends Summit Therapeutics Inc. a complete response letter" });
+  assert.deepEqual(summit.map((entry) => entry.term), ["Summit Therapeutics"]);
+  assert.equal(explainMatch(summit, "2022 Auto-Tech and TalkRobot at Web Summit", "photo").score, 0);
+  assert.equal(explainMatch([{ term: "Summit", kind: "org" }], "Photographed at Web Summit in Lisbon", "photo").score, 0);
+  assert.equal(explainMatch([{ term: "Bayer", kind: "org" }], "A pano of the Bayer main factories in Leverkusen", "photo").score, 3);
   assert.equal(imageResponseOk(200, "image/jpeg"), true);
   assert.equal(imageResponseOk(200, "text/html"), false);
   assert.equal(imageResponseOk(404, "image/jpeg"), false);

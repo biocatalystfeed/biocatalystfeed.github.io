@@ -352,7 +352,7 @@ async function structureFor(client, cache, name) {
   if (cache[key]) {
     const image = cache[key].image;
     if (!image) return null;
-    return { ...image, type: "diagram", relevance: 3, reason: image.reason || `drug "${name}"`, provider: image.provider || "commons" };
+    return { ...image, type: image.type || "diagram", provider: image.provider || "commons" };
   }
   const payload = await client.get({
     generator: "search",
@@ -435,24 +435,15 @@ export async function attachImages(polite, items, { cacheFile, reportFile } = {}
     const owned = polite ? await pagePhoto(polite, item) : null;
     if (owned) candidates.push(owned);
     for (const candidate of candidates) {
-      const file = `${candidate.sourcePage || ""} ${candidate.src || ""} ${candidate.alt || ""}`;
+      const file = `${candidate.alt || ""} ${candidate.credit || ""} ${candidate.sourcePage || ""} ${candidate.src || ""}`;
       const retyped = imageType(file);
-      if (retyped === "diagram" || retyped === "micrograph" || retyped === "illustration") candidate.type = retyped;
-      if (/smart-servier|servier medical art/i.test(file)) candidate.type = "illustration";
-      if (/\b(?:chart|graph|plot|deaths|death rate|waveform)\b/i.test(file)) candidate.type = "diagram";
-      if (candidate.reason == null) {
-        const match = explainMatch(entities, file, candidate.type);
-        candidate.relevance = match.score;
-        candidate.reason = match.reason;
-      }
+      if (retyped !== "photo") candidate.type = retyped;
+      const match = explainMatch(entities, file, candidate.type || "photo");
+      candidate.relevance = match.score;
+      candidate.reason = match.reason;
       if (/\b(handball|football|soccer|basketball|stadium|bayarena|bundesliga|championship|goalkeeper|fifa|uefa)\b/i.test(file)) {
         candidate.relevance = 0;
         candidate.reason = "sports club, not the company";
-      }
-      if (candidate.type === "diagram" || candidate.type === "illustration") {
-        const depicted = explainMatch(entities, file, candidate.type);
-        candidate.relevance = depicted.score;
-        candidate.reason = depicted.reason;
       }
     }
     for (const candidate of candidates.filter((row) => !candidateProblem(row)).slice(0, 4)) {
