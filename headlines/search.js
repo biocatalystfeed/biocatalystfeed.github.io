@@ -94,6 +94,19 @@ export function mountSearch(doc = document) {
     if (!form.contains(event.target)) close();
   });
   form.addEventListener("submit", (event) => event.preventDefault());
+  doc.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && form.contains(doc.activeElement)) {
+      input.blur();
+      close();
+      return;
+    }
+    if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey) return;
+    const active = doc.activeElement;
+    const typing = active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || active.isContentEditable);
+    if (typing) return;
+    event.preventDefault();
+    input.focus();
+  });
 }
 
 export async function searchAll(term, fetchImpl = fetch) {

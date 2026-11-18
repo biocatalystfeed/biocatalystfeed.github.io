@@ -12,17 +12,27 @@
 <body>
 <p class="test-flag">Test version</p>
 <header class="mast">
-  <form class="finder" id="finder" role="search">
-    <label class="finder-label" for="hl-q">Search</label>
-    <input id="hl-q" type="search" placeholder="Trials, papers, grants, AI" autocomplete="off" enterkeyhint="search" aria-controls="hl-hits" aria-label="Search biocat.ai">
-    <a class="finder-more" href="/#demo">Full search →</a>
-    <div id="hl-hits" class="finder-hits" hidden></div>
-  </form>
   <h1>BIOCAT HEADLINES</h1>
   <p class="dateline" id="dateline"></p>
   <p class="dek">Public regulator, trial, paper, preprint, grant, filing, and official press records. Ranked by script, with no human curation. Not medical or investment advice.</p>
   <p class="review-link"><a href="/headlines/review/">Review this test page</a></p>
 </header>
+<form class="finder" id="finder" role="search">
+  <div class="finder-bar">
+    <label class="finder-label" for="hl-q">Search</label>
+    <svg class="finder-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"></circle>
+      <path d="M15.5 15.5 L21 21" fill="none" stroke="currentColor" stroke-width="2"></path>
+    </svg>
+    <input id="hl-q" type="search" placeholder="Trials, papers, grants, AI" autocomplete="off" enterkeyhint="search" aria-controls="hl-hits">
+    <button class="finder-go" type="submit">Search</button>
+  </div>
+  <p class="finder-extra">
+    <a class="finder-more" href="/#demo">Full search →</a>
+    <span class="finder-hint">Press / to search</span>
+  </p>
+  <div id="hl-hits" class="finder-hits" hidden></div>
+</form>
 <main id="main"><p class="empty">Loading headlines…</p></main>
 <footer class="foot">
   <p id="run"></p>
