@@ -14,7 +14,7 @@ import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { hostAllowed, xPickItems } from "../x-picks.mjs";
-import { xStatusUrl } from "../../../headlines/render.js";
+import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
@@ -716,6 +716,27 @@ test("disabled x picks add nothing and a valid pick is capped", () => {
   assert.equal(licenceOk("Non-free"), false);
   assert.equal(licenceOk("PD-US"), true);
   assert.match(uploadThumb(page.imageinfo[0].url), /400px-Asundexian\.svg\.png$/);
+});
+
+test("an X embed that does not render shows the stored text, author, and a View on X link", () => {
+  const href = "https://x.com/EricTopol/status/2122801525672317145";
+  assert.equal(tweetAuthor({ source_url: href }), "@EricTopol");
+  assert.equal(tweetAuthor({ source_url: "https://twitter.com/IsomorphicLabs/status/99" }), "@IsomorphicLabs");
+  assert.equal(tweetAuthor({ source_url: "https://www.fda.gov/news" }), "");
+  assert.equal(tweetFallbackText({ blurb: "Stored note.", headline: "Title" }), "Stored note.");
+  assert.equal(tweetFallbackText({ headline: "Title only" }), "Title only");
+  assert.equal(tweetFallbackText({}), "");
+  assert.ok(TWEET_RENDER_MS >= 6000 && TWEET_RENDER_MS <= 8000);
+  const render = fs.readFileSync(path.join(root, "headlines", "render.js"), "utf8");
+  assert.match(render, /class: "tweet-card"/);
+  assert.match(render, /View on X/);
+  assert.match(render, /script\.onerror/);
+  assert.match(render, /twttr\.ready/);
+  assert.match(render, /blockquote/);
+  const css = fs.readFileSync(path.join(root, "headlines", "headlines.css"), "utf8");
+  assert.match(css, /max-width:\s*100%/);
+  assert.match(css, /min-height:\s*44px/);
+  assert.doesNotMatch(render, /og:image|link-preview/);
 });
 
 test("X posts load when scrolled near and the initial page has no third-party script", () => {
