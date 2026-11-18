@@ -76,17 +76,40 @@ export function xStatusUrl(item) {
   return /\/status\/\d+/.test(href) ? href : "";
 }
 
+function renderTweetSlot(slot) {
+  loadTwitterWidgets().then(() => {
+    if (window.twttr?.widgets) window.twttr.widgets.load(slot);
+  });
+}
+
+export function watchTweetSlots(root = document) {
+  const slots = [...root.querySelectorAll(".tweet-slot")];
+  if (!slots.length) return;
+  if (typeof IntersectionObserver !== "function") {
+    for (const slot of slots) {
+      const button = el("button", { type: "button", class: "show-post", text: "Show post" });
+      button.addEventListener("click", () => {
+        button.hidden = true;
+        renderTweetSlot(slot);
+      });
+      slot.prepend(button);
+    }
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      observer.unobserve(entry.target);
+      renderTweetSlot(entry.target);
+    }
+  }, { rootMargin: "200px" });
+  for (const slot of slots) observer.observe(slot);
+}
+
 export function tweetEmbed(item) {
   const href = xStatusUrl(item);
   if (!href) return null;
   const quote = el("blockquote", { class: "twitter-tweet" });
   quote.append(el("a", { href, text: href, rel: "noopener noreferrer" }));
-  const button = el("button", { type: "button", class: "show-post", text: "Show post" });
-  button.addEventListener("click", () => {
-    button.hidden = true;
-    loadTwitterWidgets().then(() => {
-      if (window.twttr?.widgets) window.twttr.widgets.load(quote.parentElement);
-    });
-  });
-  return el("div", { class: "tweet-slot" }, [button, quote]);
+  return el("div", { class: "tweet-slot" }, [quote]);
 }
