@@ -4,13 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
+<meta name="description" content="Biotech headlines from public regulator, trial, paper, preprint, grant, filing, and press records, ranked by significance. Not medical or investment advice.">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://platform.twitter.com; style-src 'self'; img-src 'self' data: https://upload.wikimedia.org https://pbs.twimg.com https://abs.twimg.com https://ton.twimg.com; frame-src https://platform.twitter.com https://syndication.twitter.com; connect-src 'self' https://biocatalystfeed-api.biocatalystfeed.workers.dev https://platform.twitter.com https://syndication.twitter.com; base-uri 'self'; form-action 'none'; object-src 'none'">
-<title>Headlines (test version) — BioCatalystFeed</title>
+<title>BioCat Headlines — biotech news ranked by significance</title>
+<link rel="icon" href="/assets/brand/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="stylesheet" href="/headlines/headlines.css">
 </head>
 <body>
-<p class="test-flag">Test version</p>
 <header class="mast">
   <form class="finder" id="finder" role="search">
     <label class="finder-label" for="hl-q">Search</label>
@@ -20,13 +23,17 @@
   </form>
   <h1>BIOCAT HEADLINES</h1>
   <p class="dateline" id="dateline"></p>
-  <p class="dek">Public regulator, trial, paper, preprint, grant, filing, and official press records. Ranked by script, with no human curation. Not medical or investment advice.</p>
-  <p class="review-link"><a href="/headlines/review/">Review this test page</a></p>
+  <p class="dek">Public regulator, trial, paper, preprint, grant, filing, and press records, ranked by significance.</p>
 </header>
-<main id="main"><p class="empty">Loading headlines…</p></main>
+<main id="main">
+  <p class="empty">Headlines could not be loaded.</p>
+  <p class="empty-actions"><a href="/headlines/">Try again</a> <a href="/">biocat.ai</a></p>
+</main>
 <footer class="foot">
-  <p id="run"></p>
-  <p>Each headline links to its primary source. Orange Book patents are listed by applicants and are not verified by FDA. Purple Book exclusivity is listed only where FDA has made a determination. EMA records are from the European Medicines Agency. Health Canada records contain information licensed under the Open Government Licence – Canada. FDA press releases and NIH RePORTER records are U.S. government works. SEC items link to EDGAR filing indexes. Preprint items link to the preprint and are not peer-reviewed articles. Dates are the event dates on those records.</p>
+  <p>Public regulator, trial, paper, preprint, grant, filing, and press records. Image credits are shown on each image. X posts belong to their authors.</p>
+  <p>Not medical or investment advice.</p>
+  <p><a href="/">biocat.ai</a></p>
+  <p id="updated"></p>
 </footer>
 <script type="module" src="/headlines/headlines.js"></script>
 </body>

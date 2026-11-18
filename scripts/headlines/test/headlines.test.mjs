@@ -14,7 +14,7 @@ import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { hostAllowed, xPickItems } from "../x-picks.mjs";
-import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS } from "../../../headlines/render.js";
+import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatStamp, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
@@ -489,6 +489,36 @@ test("pubmed eutils and x stay disabled", () => {
   const robots = parseRobots("User-agent: *\nDisallow: /cgi-bin\nAllow: /Archives/edgar/data\n");
   assert.equal(robotsDecision(robots, "BioCatalystFeed contact@biocat.ai", "/cgi-bin/browse-edgar").allowed, false);
   assert.equal(robotsDecision(robots, "BioCatalystFeed contact@biocat.ai", "/Archives/edgar/daily-index/2026/QTR4/master.idx").allowed, true);
+});
+
+test("the public headlines page drops test wording and shows a dated source line", () => {
+  const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
+  const review = fs.readFileSync(path.join(root, "headlines", "review", "index.html"), "utf8");
+  const pageJs = fs.readFileSync(path.join(root, "headlines", "headlines.js"), "utf8");
+  const css = fs.readFileSync(path.join(root, "headlines", "headlines.css"), "utf8");
+  assert.equal(html.includes("Test version"), false);
+  assert.equal(html.includes("Review this test page"), false);
+  assert.equal(html.includes("/headlines/review/"), false);
+  assert.match(html, /BioCat Headlines — biotech news ranked by significance/);
+  assert.match(html, /name="description"/);
+  assert.match(html, /href="\/assets\/brand\/favicon\.ico"/);
+  assert.match(html, /Not medical or investment advice\./);
+  assert.match(html, /href="\/">biocat\.ai/);
+  assert.match(html, /id="updated"/);
+  assert.match(html, /Try again/);
+  assert.match(html, /float: right|class="finder"/);
+  assert.match(css, /\.finder \{[\s\S]*float: right/);
+  assert.match(css, /text-wrap: pretty/);
+  assert.match(pageJs, /showUnavailable\("Headlines could not be loaded\."\)/);
+  assert.match(pageJs, /showUnavailable\("No headlines in this edition\."\)/);
+  assert.match(pageJs, /href: "\/headlines\/", text: "Try again"/);
+  assert.match(pageJs, /href: "\/", text: "biocat\.ai"/);
+  assert.equal(formatDay("2026-11-09"), "Mon, Nov 9, 2026");
+  assert.match(formatStamp("2026-11-18T08:40:00.000Z"), /^Wed, Nov 18, 2026, 8:40 AM/);
+  assert.equal(keepLastToken("Application NDA 221291."), "Application NDA\u00a0221291.");
+  assert.match(review, /content="noindex"/);
+  assert.match(review, /Back to headlines/);
+  assert.equal(review.includes("test headlines"), false);
 });
 
 test("headlines search hits every worker route and the page stays noindex", () => {
