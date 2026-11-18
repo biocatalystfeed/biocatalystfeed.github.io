@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /headlines/
+Disallow: /headlines/review/
 Sitemap: https://biocat.ai/sitemap.xml

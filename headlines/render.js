@@ -4,11 +4,29 @@ export async function loadHeadlines() {
   return response.json();
 }
 
+function utcDate(iso) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/.exec(String(iso || ""));
+  if (!match) return null;
+  return new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]), Number(match[4] || 0), Number(match[5] || 0)));
+}
+
 export function formatDay(iso) {
-  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || ""));
-  if (!match) return "";
-  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
-  return new Intl.DateTimeFormat("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
+  const date = utcDate(iso);
+  if (!date) return "";
+  return new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
+}
+
+export function formatStamp(iso) {
+  const date = utcDate(iso);
+  if (!date) return "";
+  const clock = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC", timeZoneName: "short" }).format(date);
+  return `${formatDay(iso)}, ${clock}`;
+}
+
+export function keepLastToken(text) {
+  const value = String(text || "").replace(/\s+/g, " ").trim();
+  const match = value.match(/^(.*\S)\s+(\S{1,12})$/);
+  return match ? `${match[1]}\u00a0${match[2]}` : value;
 }
 
 export function el(tag, attrs = {}, children = []) {

@@ -14,7 +14,7 @@ import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { hostAllowed, xPickItems } from "../x-picks.mjs";
-import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS } from "../../../headlines/render.js";
+import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatStamp, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
@@ -491,12 +491,45 @@ test("pubmed eutils and x stay disabled", () => {
   assert.equal(robotsDecision(robots, "BioCatalystFeed contact@biocat.ai", "/Archives/edgar/daily-index/2026/QTR4/master.idx").allowed, true);
 });
 
-test("headlines search hits every worker route and the page stays noindex", () => {
+test("the public headlines page drops test wording and shows a dated source line", () => {
+  const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
+  const review = fs.readFileSync(path.join(root, "headlines", "review", "index.html"), "utf8");
+  const pageJs = fs.readFileSync(path.join(root, "headlines", "headlines.js"), "utf8");
+  const css = fs.readFileSync(path.join(root, "headlines", "headlines.css"), "utf8");
+  assert.equal(html.includes("Test version"), false);
+  assert.equal(html.includes("Review this test page"), false);
+  assert.equal(html.includes("/headlines/review/"), false);
+  assert.match(html, /BioCat Headlines — biotech news ranked by significance/);
+  assert.match(html, /name="description"/);
+  assert.match(html, /href="\/assets\/brand\/favicon\.ico"/);
+  assert.match(html, /Not medical or investment advice\./);
+  assert.match(html, /href="\/">biocat\.ai/);
+  assert.match(html, /id="updated"/);
+  assert.match(html, /Try again/);
+  assert.match(html, /float: right|class="finder"/);
+  assert.match(css, /\.finder \{[\s\S]*float: right/);
+  assert.match(css, /text-wrap: pretty/);
+  assert.match(pageJs, /showUnavailable\("Headlines could not be loaded\."\)/);
+  assert.match(pageJs, /showUnavailable\("No headlines in this edition\."\)/);
+  assert.match(pageJs, /href: "\/headlines\/", text: "Try again"/);
+  assert.match(pageJs, /href: "\/", text: "biocat\.ai"/);
+  assert.equal(formatDay("2026-11-09"), "Mon, Nov 9, 2026");
+  assert.match(formatStamp("2026-11-18T08:40:00.000Z"), /^Wed, Nov 18, 2026, 8:40 AM/);
+  assert.equal(keepLastToken("Application NDA 221291."), "Application NDA\u00a0221291.");
+  assert.match(review, /content="noindex"/);
+  assert.match(review, /Back to headlines/);
+  assert.equal(review.includes("test headlines"), false);
+});
+
+test("headlines search hits every worker route and the review page stays noindex", () => {
   const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
   const css = fs.readFileSync(path.join(root, "headlines", "headlines.css"), "utf8");
   const workflow = fs.readFileSync(path.join(root, ".github", "workflows", "headlines.yml"), "utf8");
   const picks = JSON.parse(fs.readFileSync(path.join(root, "data", "x_picks.json"), "utf8"));
-  assert.match(html, /name="robots" content="noindex"/);
+  assert.doesNotMatch(html, /name="robots" content="noindex"/);
+  assert.match(html, /rel="canonical" href="https:\/\/biocat\.ai\/headlines\/"/);
+  const review = fs.readFileSync(path.join(root, "headlines", "review", "index.html"), "utf8");
+  assert.match(review, /content="noindex"/);
   assert.match(html, /id="hl-q"/);
   assert.match(html, /href="\/#demo"/);
   assert.match(html, /biocatalystfeed-api\.biocatalystfeed\.workers\.dev/);
@@ -744,7 +777,16 @@ test("X posts load when scrolled near and the initial page has no third-party sc
   const render = fs.readFileSync(path.join(root, "headlines", "render.js"), "utf8");
   const pageJs = fs.readFileSync(path.join(root, "headlines", "headlines.js"), "utf8");
   const populate = fs.readFileSync(path.join(root, "scripts", "headlines", "populate.mjs"), "utf8");
-  assert.match(html, /content="noindex"/);
+  assert.doesNotMatch(html, /content="noindex"/);
+  assert.match(html, /rel="canonical" href="https:\/\/biocat\.ai\/headlines\/"/);
+  const reviewHtml = fs.readFileSync(path.join(root, "headlines", "review", "index.html"), "utf8");
+  assert.match(reviewHtml, /content="noindex"/);
+  const robots = fs.readFileSync(path.join(root, "robots.txt"), "utf8");
+  const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+  assert.match(robots, /Disallow: \/headlines\/review\//);
+  assert.doesNotMatch(robots, /Disallow: \/headlines\/\s/);
+  assert.match(sitemap, /<loc>https:\/\/biocat\.ai\/headlines\/<\/loc>/);
+  assert.doesNotMatch(sitemap, /headlines\/review/);
   assert.doesNotMatch(html, /widgets\.js/);
   assert.doesNotMatch(html, /<script[^>]+src=["']https?:/i);
   assert.doesNotMatch(populate, /attachLinkPreviews|og:image|og-url-cache|link-preview/);
