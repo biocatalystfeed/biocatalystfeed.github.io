@@ -16,11 +16,25 @@ export function formatDay(iso) {
   return new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
 }
 
-export function formatStamp(iso) {
+export function formatStamp(iso, timeZone) {
   const date = utcDate(iso);
   if (!date) return "";
-  const clock = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC", timeZoneName: "short" }).format(date);
-  return `${formatDay(iso)}, ${clock}`;
+  const options = {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZoneName: "short",
+  };
+  if (timeZone) options.timeZone = timeZone;
+  try {
+    return new Intl.DateTimeFormat("en-US", options).format(date);
+  } catch {
+    const clock = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC", timeZoneName: "short" }).format(date);
+    return `${formatDay(iso)}, ${clock}`;
+  }
 }
 
 export function keepLastToken(text) {

@@ -33,7 +33,9 @@ try {
   const data = await loadHeadlines();
   dateline.textContent = data.generated_at ? formatDay(data.generated_at) : "";
   const updated = document.querySelector("#updated");
-  if (updated) updated.textContent = data.generated_at ? `Updated ${formatStamp(data.generated_at)}` : "";
+  if (updated && data.generated_at) {
+    updated.replaceChildren(el("time", { datetime: data.generated_at, text: `Updated ${formatStamp(data.generated_at)}` }));
+  }
   const items = Array.isArray(data.items) ? data.items : [];
   if (!items.length) {
     showUnavailable("No headlines in this edition.");

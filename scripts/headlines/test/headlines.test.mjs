@@ -514,7 +514,10 @@ test("the public headlines page drops test wording and shows a dated source line
   assert.match(pageJs, /href: "\/headlines\/", text: "Try again"/);
   assert.match(pageJs, /href: "\/", text: "biocat\.ai"/);
   assert.equal(formatDay("2026-11-09"), "Mon, Nov 9, 2026");
-  assert.match(formatStamp("2026-11-18T08:40:00.000Z"), /^Wed, Nov 18, 2026, 8:40 AM/);
+  assert.equal(formatStamp("2026-11-18T08:40:00.000Z", "Asia/Tokyo"), "Wed, Nov 18, 2026, 5:40 PM GMT+9");
+  assert.match(formatStamp("2026-11-18T08:40:00.000Z", "Not/AZone"), /8:40 AM UTC/);
+  assert.match(pageJs, /datetime: data\.generated_at/);
+  assert.match(pageJs, /formatStamp\(data\.generated_at\)/);
   assert.equal(keepLastToken("Application NDA 221291."), "Application NDA\u00a0221291.");
   assert.match(review, /content="noindex"/);
   assert.match(review, /Back to headlines/);
