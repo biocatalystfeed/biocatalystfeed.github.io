@@ -59,15 +59,21 @@ export function figureFor(item) {
 
 let twitterLoader = null;
 
+export const TWEET_RENDER_MS = 7000;
+const TWEET_ROOT_MARGIN = 200;
+const TWEET_MIN_HEIGHT = 160;
+
 export function loadTwitterWidgets() {
   if (twitterLoader) return twitterLoader;
-  twitterLoader = new Promise((resolve) => {
+  twitterLoader = new Promise((resolve, reject) => {
     const script = document.createElement("script");
     script.src = "https://platform.twitter.com/widgets.js";
     script.async = true;
     script.onload = () => resolve();
+    script.onerror = () => reject(new Error("widgets.js failed"));
     document.body.append(script);
   });
+  twitterLoader.catch(() => {});
   return twitterLoader;
 }
 
@@ -76,10 +82,78 @@ export function xStatusUrl(item) {
   return /\/status\/\d+/.test(href) ? href : "";
 }
 
+export function tweetAuthor(item) {
+  const match = xStatusUrl(item).match(/\/\/(?:www\.)?(?:x|twitter)\.com\/([^/?#]+)\/status\/\d+/i);
+  return match ? `@${match[1]}` : "";
+}
+
+export function tweetFallbackText(item) {
+  return String(item?.blurb || item?.headline || "").replace(/\s+/g, " ").trim();
+}
+
+function fallbackCard(item, tag = "div") {
+  const href = xStatusUrl(item) || String(item?.source_url || "");
+  const children = [];
+  const author = tweetAuthor(item) || String(item?.author || "");
+  if (author) children.push(el("p", { class: "tweet-author", text: author }));
+  const text = tweetFallbackText(item);
+  if (text) children.push(el("p", { class: "tweet-text", text }));
+  if (href) children.push(el("a", { class: "tweet-open", href, text: "View on X", rel: "noopener noreferrer" }));
+  return el(tag, { class: "tweet-card" }, children);
+}
+
+function showFallback(slot) {
+  const frame = slot.querySelector("iframe");
+  if (frame && frame.getBoundingClientRect().height < TWEET_MIN_HEIGHT) frame.remove();
+  let card = slot.querySelector(".tweet-card");
+  if (!card) {
+    card = fallbackCard({ source_url: slot.dataset.href, blurb: slot.dataset.text, author: slot.dataset.author });
+    slot.prepend(card);
+  }
+  card.hidden = false;
+}
+
+function embedRendered(slot) {
+  const frame = slot.querySelector("iframe");
+  return !!frame && frame.getBoundingClientRect().height >= TWEET_MIN_HEIGHT;
+}
+
 function renderTweetSlot(slot) {
+  if (slot.dataset.loading === "1") return;
+  slot.dataset.loading = "1";
+  const started = Date.now();
+  let fellBack = false;
+  const timer = setInterval(() => {
+    if (embedRendered(slot)) {
+      clearInterval(timer);
+      const card = slot.querySelector(".tweet-card");
+      const frame = slot.querySelector("iframe");
+      if (card && frame && !card.contains(frame)) card.hidden = true;
+      return;
+    }
+    const elapsed = Date.now() - started;
+    if (!fellBack && elapsed >= TWEET_RENDER_MS) {
+      fellBack = true;
+      showFallback(slot);
+    }
+    if (elapsed >= TWEET_RENDER_MS * 2) clearInterval(timer);
+  }, 250);
   loadTwitterWidgets().then(() => {
-    if (window.twttr?.widgets) window.twttr.widgets.load(slot);
-  });
+    const twttr = window.twttr;
+    const paint = () => {
+      if (twttr?.widgets?.load) twttr.widgets.load(slot);
+      else showFallback(slot);
+    };
+    if (typeof twttr?.ready === "function") twttr.ready(paint);
+    else paint();
+  }).catch(() => showFallback(slot));
+}
+
+function nearViewport(slot) {
+  const rect = slot.getBoundingClientRect();
+  if (rect.height < 1) return false;
+  const view = window.innerHeight || document.documentElement.clientHeight || 0;
+  return rect.bottom >= -TWEET_ROOT_MARGIN && rect.top <= view + TWEET_ROOT_MARGIN;
 }
 
 export function watchTweetSlots(root = document) {
@@ -88,28 +162,53 @@ export function watchTweetSlots(root = document) {
   if (typeof IntersectionObserver !== "function") {
     for (const slot of slots) {
       const button = el("button", { type: "button", class: "show-post", text: "Show post" });
-      button.addEventListener("click", () => {
-        button.hidden = true;
-        renderTweetSlot(slot);
-      });
+      button.addEventListener("click", () => renderTweetSlot(slot));
       slot.prepend(button);
     }
     return;
   }
+  const pending = new Set(slots);
+  const start = (slot) => {
+    if (!pending.has(slot)) return;
+    pending.delete(slot);
+    renderTweetSlot(slot);
+    if (!pending.size) stop();
+  };
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
+      if (entry.boundingClientRect.height < 1) continue;
       observer.unobserve(entry.target);
-      renderTweetSlot(entry.target);
+      start(entry.target);
     }
   }, { rootMargin: "200px" });
-  for (const slot of slots) observer.observe(slot);
+  const onScroll = () => {
+    for (const slot of pending) {
+      if (nearViewport(slot)) start(slot);
+    }
+  };
+  const stop = () => {
+    observer.disconnect();
+    window.removeEventListener("scroll", onScroll);
+    window.removeEventListener("resize", onScroll);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  for (const slot of slots) {
+    observer.observe(slot);
+    if (nearViewport(slot)) start(slot);
+  }
 }
 
 export function tweetEmbed(item) {
   const href = xStatusUrl(item);
   if (!href) return null;
-  const quote = el("blockquote", { class: "twitter-tweet" });
-  quote.append(el("a", { href, text: href, rel: "noopener noreferrer" }));
-  return el("div", { class: "tweet-slot" }, [quote]);
+  const quote = fallbackCard(item, "blockquote");
+  quote.classList.add("twitter-tweet");
+  return el("div", {
+    class: "tweet-slot",
+    "data-href": href,
+    "data-author": tweetAuthor(item),
+    "data-text": tweetFallbackText(item),
+  }, [quote]);
 }
