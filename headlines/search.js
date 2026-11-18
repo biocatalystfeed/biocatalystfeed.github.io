@@ -1,3 +1,5 @@
+import { trackedSearchRows } from "./tracked-accounts.js";
+
 export const SEARCH_API = "https://biocatalystfeed-api.biocatalystfeed.workers.dev";
 export const SEARCH_ROUTES = ["trials", "papers", "grants", "ai-discovery"];
 
@@ -46,11 +48,12 @@ export function normalizeResults(route, payload) {
   }).filter((row) => row.title && row.href);
 }
 
-export function mountSearch(doc = document) {
+export function mountSearch(doc = document, accountsOrPromise = []) {
   const form = doc.querySelector("#finder");
   const input = doc.querySelector("#hl-q");
   const panel = doc.querySelector("#hl-hits");
   if (!form || !input || !panel) return;
+  const accountsReady = Promise.resolve(accountsOrPromise).then((rows) => rows || []).catch(() => []);
   let timer = 0;
   let controller = null;
   const close = () => { panel.hidden = true; panel.replaceChildren(); };
@@ -79,14 +82,16 @@ export function mountSearch(doc = document) {
     timer = window.setTimeout(async () => {
       controller?.abort();
       controller = new AbortController();
-      show([], "Searching…");
+      const accounts = await accountsReady;
+      const tracked = trackedSearchRows(accounts, term);
+      show(tracked, "Searching…");
       try {
-        const rows = await searchAll(term, (url, options) => fetch(url, { ...options, signal: controller.signal }));
+        const rows = [...tracked, ...await searchAll(term, (url, options) => fetch(url, { ...options, signal: controller.signal }))];
         if (controller.signal.aborted) return;
         show(rows, rows.length ? "" : "No results.");
       } catch (error) {
         if (error?.name === "AbortError") return;
-        show([], "Search is unavailable.");
+        show(tracked, tracked.length ? "" : "Search is unavailable.");
       }
     }, 450);
   });

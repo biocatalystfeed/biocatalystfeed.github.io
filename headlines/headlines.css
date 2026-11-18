@@ -176,6 +176,33 @@ blockquote.tweet-card { quotes: none; }
 .empty { margin: 16px 0 0; font-size: 16px; }
 .empty-actions { margin: 8px 0 0; }
 .empty-actions a { display: inline-flex; align-items: center; min-height: 44px; margin-right: 16px; font-weight: 700; }
+.tracked {
+  margin-top: 18px;
+  border-top: 1px solid var(--rule);
+  padding-top: 8px;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.tracked summary {
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tracked-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 2px 16px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.tracked-list a { font-weight: 700; }
+.tracked-handle { font-weight: 400; color: var(--muted); }
 .foot {
   margin-top: 18px;
   border-top: 1px solid var(--rule);
@@ -206,4 +233,6 @@ blockquote.tweet-card { quotes: none; }
   .finder input { padding: 10px 8px; }
   .tweet-open, .show-post { display: inline-flex; align-items: center; }
   .finder-hits { position: static; width: 100%; }
+  .tracked summary { display: flex; align-items: center; min-height: 44px; }
+  .tracked-list a { display: inline-flex; align-items: baseline; gap: 4px; min-height: 44px; }
 }
