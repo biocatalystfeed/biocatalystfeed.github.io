@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed RFL catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:c26a5dfd8485b62cc112@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270601
+DTEND;VALUE=DATE:20270602
+SUMMARY:RFL PDUFA (company-disclosed): PDUFA June 2027 - Rafael Holdings\, 
+ Inc.
+DESCRIPTION:PDUFA June 2027 - Rafael Holdings\, Inc.\nConfidence: company-d
+ isclosed\nDate precision: month (shown on the first day)\nTicker RFL (conf
+ idence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/1713863/00012
+ 1390026117552/ea031154001ex99-1.htm\nScheduling/reference data from public
+  records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1713863/000121390026117552/ea03
+ 1154001ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

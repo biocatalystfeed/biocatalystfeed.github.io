@@ -1,0 +1,45 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed BBIO catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:c964f0c4758fe068992b@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:BBIO PDUFA (company-disclosed): PDUFA November 27\, 2026 - BridgeBi
+ o Pharma\, Inc.
+DESCRIPTION:PDUFA November 27\, 2026 - BridgeBio Pharma\, Inc.\nConfidence:
+  company-disclosed\nTicker BBIO (confidence 1.0)\nSource: https://www.sec.
+ gov/Archives/edgar/data/1743881/000174388126000033/bbio-20260930xex991.htm
+ \nScheduling/reference data from public records\; dates can move. Not inve
+ stment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1743881/000174388126000033/bbio
+ -20260930xex991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:afee2ac9507c5b661bf9@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20280101
+DTEND;VALUE=DATE:20280102
+SUMMARY:BBIO PDUFA (company-disclosed): infigratinib
+DESCRIPTION:PDUFA first half of 2028 - BridgeBio Pharma\, Inc. (infigratini
+ b)\nConfidence: company-disclosed\nDate precision: half (shown on the firs
+ t day)\nTicker BBIO (confidence 1.0)\nSource: https://www.sec.gov/Archives
+ /edgar/data/1743881/000174388126000033/bbio-20260930xex991.htm\nScheduling
+ /reference data from public records\; dates can move. Not investment\, leg
+ al or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1743881/000174388126000033/bbio
+ -20260930xex991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed NPCE trial readouts
+X-WR-CALNAME:BioCatalystFeed NPCE catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:06c00e04ff2de2dd8587@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:8d58991657cb1ced8275@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:NPCE P2 readout (est.): RNS System LGS Feasibility Study

@@ -3,18 +3,17 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed MLTX trial readouts
+X-WR-CALNAME:BioCatalystFeed MLTX catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:c39b01e952a9e0c37e46@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:98a73efb0a1eb55126a7@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
-SUMMARY:MLTX P3 readout (est.): Evaluation of Sonelokimab in Patients With 
- Active Psoriatic Arthritis and Anti-TNFα Inadequate Response
+SUMMARY:MLTX P3 readout (est.): IZAR-2
 DESCRIPTION:Evaluation of Sonelokimab in Patients With Active Psoriatic Art
  hritis and Anti-TNFα Inadequate Response\nNCT06641089 | PHASE3 | ACTIVE_N
  OT_RECRUITING | sponsor: MoonLake Immunotherapeutics AG\nPrimary completio
@@ -25,5 +24,23 @@ DESCRIPTION:Evaluation of Sonelokimab in Patients With Active Psoriatic Art
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06641089
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:7419082befd4a75f488a@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:MLTX PDUFA (company-disclosed): PDUFA November 2026 - MoonLake Immu
+ notherapeutics
+DESCRIPTION:PDUFA November 2026 - MoonLake Immunotherapeutics\nConfidence: 
+ company-disclosed\nDate precision: month (shown on the first day)\nTicker 
+ MLTX (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/182
+ 1586/000121390026070362/ea029539901ex99-1.htm\nScheduling/reference data f
+ rom public records\; dates can move. Not investment\, legal or medical adv
+ ice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1821586/000121390026070362/ea02
+ 9539901ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
 END:VEVENT
 END:VCALENDAR

@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed IDYA trial readouts
+X-WR-CALNAME:BioCatalystFeed IDYA catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:6af006db3bdc0dd0b32b@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:a72f5ac84c185761d32d@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:IDYA P2/P3 readout (est.): IDE196 (Darovasertib) in Combination Wit
@@ -27,8 +27,8 @@ URL:https://clinicaltrials.gov/study/NCT05987332
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:1bda0f96dfe1dec5ac1e@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:fbeab5597db0279540de@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
 SUMMARY:IDYA P1/P2 readout (est.): Study of IDE196 in Patients With Solid T

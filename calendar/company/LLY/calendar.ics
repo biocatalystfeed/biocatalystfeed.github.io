@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed LLY trial readouts
+X-WR-CALNAME:BioCatalystFeed LLY catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:0e0c966309d713d8fac4@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:8f760bdc5e5c6bd7c516@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:LLY P2 readout (est.): A Study to Evaluate LY3537021 for the Treatm
@@ -18,17 +18,17 @@ SUMMARY:LLY P2 readout (est.): A Study to Evaluate LY3537021 for the Treatm
 DESCRIPTION:A Study to Evaluate LY3537021 for the Treatment of Nausea and V
  omiting Caused by Chemotherapy in Adults With Cancer\nNCT07169851 | PHASE2
   | RECRUITING | sponsor: Eli Lilly and Company\nPrimary completion date (E
- STIMATED)\; top-line results usually follow later.\nTicker LLY (confidence
-  0.95)\nSource: https://clinicaltrials.gov/study/NCT07169851\nScheduling/r
- eference data from public records\; dates can move. Not investment\, legal
-  or medical advice.
+ STIMATED)\; top-line results usually follow later.\nDate precision: month 
+ (shown on the first day)\nTicker LLY (confidence 0.95)\nSource: https://cl
+ inicaltrials.gov/study/NCT07169851\nScheduling/reference data from public 
+ records\; dates can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07169851
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:92d0b7b90d8396b8d3e5@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:95cb84f41bbc7ad69459@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:LLY P2 readout (est.): A Study Comparing Abemaciclib Plus Temozolom
@@ -38,45 +38,302 @@ DESCRIPTION:A Study Comparing Abemaciclib Plus Temozolomide to Temozolomide
   Monotherapy in Children and Young Adults With High-grade Glioma Following
   Radiotherapy\nNCT06413706 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Eli
   Lilly and Company\nPrimary completion date (ESTIMATED)\; top-line results
-  usually follow later.\nTicker LLY (confidence 0.95)\nSource: https://clin
- icaltrials.gov/study/NCT06413706\nScheduling/reference data from public re
- cords\; dates can move. Not investment\, legal or medical advice.
+  usually follow later.\nDate precision: month (shown on the first day)\nTi
+ cker LLY (confidence 0.95)\nSource: https://clinicaltrials.gov/study/NCT06
+ 413706\nScheduling/reference data from public records\; dates can move. No
+ t investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06413706
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:49df830241d407c56d86@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:722c7e791d64f34151bb@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-SUMMARY:LLY P3 readout (est.): A Platform Trial for Pediatric Participants 
- With Obesity or Overweight (LY900040)
+SUMMARY:LLY P3 readout (est.): ADVANCE
 DESCRIPTION:A Platform Trial for Pediatric Participants With Obesity or Ove
  rweight (LY900040)\nNCT06672549 | PHASE3 | RECRUITING | sponsor: Eli Lilly
   and Company\nPrimary completion date (ESTIMATED)\; top-line results usual
- ly follow later.\nTicker LLY (confidence 0.95)\nSource: https://clinicaltr
- ials.gov/study/NCT06672549\nScheduling/reference data from public records\
- ; dates can move. Not investment\, legal or medical advice.
+ ly follow later.\nDate precision: month (shown on the first day)\nTicker L
+ LY (confidence 0.95)\nSource: https://clinicaltrials.gov/study/NCT06672549
+ \nScheduling/reference data from public records\; dates can move. Not inve
+ stment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06672549
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:7963783c4a92457933c2@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:96b38b8779941611c5a3@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-SUMMARY:LLY P2 readout (est.): A Study of Brenipatide in Adults Who Quit Sm
- oking Cigarettes and Want to Avoid Relapse
+SUMMARY:LLY P2 readout (est.): RENEW-Smk-1
 DESCRIPTION:A Study of Brenipatide in Adults Who Quit Smoking Cigarettes an
  d Want to Avoid Relapse\nNCT07223840 | PHASE2 | RECRUITING | sponsor: Eli 
  Lilly and Company\nPrimary completion date (ESTIMATED)\; top-line results 
- usually follow later.\nTicker LLY (confidence 0.95)\nSource: https://clini
- caltrials.gov/study/NCT07223840\nScheduling/reference data from public rec
- ords\; dates can move. Not investment\, legal or medical advice.
+ usually follow later.\nDate precision: month (shown on the first day)\nTic
+ ker LLY (confidence 0.95)\nSource: https://clinicaltrials.gov/study/NCT072
+ 23840\nScheduling/reference data from public records\; dates can move. Not
+  investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07223840
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:c147175cd08f202d4adb@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:LLY APPROVAL: OLUMIANT
+DESCRIPTION:Approved 2026-10-09: OLUMIANT (NDA207924 SUPPL10)\nConfidence: 
+ confirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207924\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=207924
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:739b59e49142bb019ea0@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:LLY APPROVAL: OLUMIANT
+DESCRIPTION:Approved 2026-09-25: OLUMIANT (NDA207924 SUPPL9)\nConfidence: c
+ onfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207924\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=207924
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bb1487374e8fcfebfefb@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:LLY APPROVAL: ONSWIK
+DESCRIPTION:Approved 2026-09-23: ONSWIK (BLA761408 ORIG1)\nConfidence: conf
+ irmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761408\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761408
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c581653c32031d307ca4@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+SUMMARY:LLY APPROVAL: INLURIYO
+DESCRIPTION:Approved 2026-09-18: INLURIYO (NDA218881 SUPPL1)\nConfidence: c
+ onfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218881\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218881
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d98d9ce817ba6626bfd7@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+SUMMARY:LLY APPROVAL: VERZENIO
+DESCRIPTION:Approved 2026-09-18: VERZENIO (NDA208716 SUPPL22)\nConfidence: 
+ confirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208716\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208716
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4ec366c86390448eb853@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:LLY APPROVAL: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJARO KWIKPEN
+DESCRIPTION:Approved 2026-08-27: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJ
+ ARO KWIKPEN (NDA215866 SUPPL44)\nConfidence: confirmed\nTicker LLY (confid
+ ence 0.95)\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=215866\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215866
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:05829244ae34ed1cb49d@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:LLY APPROVAL: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJARO KWIKPEN
+DESCRIPTION:Approved 2026-08-27: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJ
+ ARO KWIKPEN (NDA215866 SUPPL45)\nConfidence: confirmed\nTicker LLY (confid
+ ence 0.95)\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=215866\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215866
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a2148587b73bddee06dc@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:LLY APPROVAL: ZEPBOUND\; ZEPBOUND (AUTOINJECTOR)\; ZEPBOUND KWIKPEN
+DESCRIPTION:Approved 2026-08-26: ZEPBOUND\; ZEPBOUND (AUTOINJECTOR)\; ZEPBO
+ UND KWIKPEN (NDA217806 SUPPL41)\nConfidence: confirmed\nTicker LLY (confid
+ ence 0.95)\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=217806\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217806
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:110dd4ba68988b18313c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:LLY APPROVAL: RETEVMO
+DESCRIPTION:Approved 2026-07-14: RETEVMO (NDA218160 SUPPL7)\nConfidence: co
+ nfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218160\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218160
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:814fe8c1f7af164c4fc0@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:LLY APPROVAL: RETEVMO
+DESCRIPTION:Approved 2026-07-14: RETEVMO (NDA213246 SUPPL17)\nConfidence: c
+ onfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213246\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213246
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2711c4146151465cb7ee@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260713
+DTEND;VALUE=DATE:20260714
+SUMMARY:LLY APPROVAL: VERZENIO
+DESCRIPTION:Approved 2026-07-13: VERZENIO (NDA208716 SUPPL21)\nConfidence: 
+ confirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208716\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208716
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:84745ed7870becb91130@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260609
+DTEND;VALUE=DATE:20260610
+SUMMARY:LLY APPROVAL: EBGLYSS
+DESCRIPTION:Approved 2026-06-09: EBGLYSS (BLA761306 SUPPL6)\nConfidence: co
+ nfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761306\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761306
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:08a2b797ca4a9a5e7f05@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260401
+DTEND;VALUE=DATE:20260402
+SUMMARY:LLY APPROVAL: FOUNDAYO
+DESCRIPTION:Approved 2026-04-01: FOUNDAYO (NDA220934 ORIG1)\nConfidence: co
+ nfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220934\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220934
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6dc35c166bc5c42853a4@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251219
+DTEND;VALUE=DATE:20251220
+SUMMARY:LLY APPROVAL: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJARO KWIKPEN
+DESCRIPTION:Approved 2025-12-19: MOUNJARO\; MOUNJARO (AUTOINJECTOR)\; MOUNJ
+ ARO KWIKPEN (NDA215866 SUPPL39)\nConfidence: confirmed\nTicker LLY (confid
+ ence 0.95)\nSource: https://www.accessdata.fda.gov/scripts/cder/daf/index.
+ cfm?event=overview.process&ApplNo=215866\nScheduling/reference data from p
+ ublic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215866
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2b8c91163a9d527ad7eb@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251120
+DTEND;VALUE=DATE:20251121
+SUMMARY:LLY APPROVAL: RETEVMO
+DESCRIPTION:Approved 2025-11-20: RETEVMO (NDA218160 SUPPL6)\nConfidence: co
+ nfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218160\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218160
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bc257c350dfc0d95db3b@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251120
+DTEND;VALUE=DATE:20251121
+SUMMARY:LLY APPROVAL: RETEVMO
+DESCRIPTION:Approved 2025-11-20: RETEVMO (NDA213246 SUPPL15)\nConfidence: c
+ onfirmed\nTicker LLY (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213246\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213246
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

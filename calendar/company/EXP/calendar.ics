@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed EXP catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:9d566f24435e8a3612c0@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260413
+DTEND;VALUE=DATE:20260414
+SUMMARY:EXP CRL: Fulvestrant Injection
+DESCRIPTION:CRL 2026-04-13: Eagle Pharmaceuticals\, Inc. NDA 220045 (Fulves
+ trant Injection)\nConfidence: confirmed\nTicker EXP (confidence 0.6)\nSour
+ ce: https://download.open.fda.gov/crl/CRL_NDA220045_20260413_Redacted.pdf\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220045_20260413_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

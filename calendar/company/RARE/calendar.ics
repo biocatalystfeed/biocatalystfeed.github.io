@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed RARE trial readouts
+X-WR-CALNAME:BioCatalystFeed RARE catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:cad164a92ebf316330fd@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:ea46d07dad0a7a2f389e@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:RARE P3 readout (est.): Setrusumab in Pediatric Japanese Subjects W
@@ -18,11 +18,62 @@ SUMMARY:RARE P3 readout (est.): Setrusumab in Pediatric Japanese Subjects W
 DESCRIPTION:Setrusumab in Pediatric Japanese Subjects With Osteogenesis Imp
  erfecta\nNCT06636071 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Ultrageny
  x Pharmaceutical Inc\nPrimary completion date (ESTIMATED)\; top-line resul
- ts usually follow later.\nTicker RARE (confidence 0.9)\nSource: https://cl
- inicaltrials.gov/study/NCT06636071\nScheduling/reference data from public 
- records\; dates can move. Not investment\, legal or medical advice.
+ ts usually follow later.\nDate precision: month (shown on the first day)\n
+ Ticker RARE (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT
+ 06636071\nScheduling/reference data from public records\; dates can move. 
+ Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06636071
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:58e5b4fc59974788153f@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+SUMMARY:RARE PDUFA (company-disclosed): apazunersen
+DESCRIPTION:PDUFA September 19\, 2026 - Ultragenyx Pharmaceutical Inc. (apa
+ zunersen)\nConfidence: company-disclosed\nTicker RARE (confidence 1.0)\nSo
+ urce: https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/r
+ are-ex99_1.htm\nScheduling/reference data from public records\; dates can 
+ move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/rare
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:d1710f32f22254e4b237@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:RARE PDUFA (company-disclosed): rebisufligene
+DESCRIPTION:PDUFA August 23\, 2026 - Ultragenyx Pharmaceutical Inc. (rebisu
+ fligene)\nConfidence: company-disclosed\nTicker RARE (confidence 1.0)\nSou
+ rce: https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/ra
+ re-ex99_1.htm\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/rare
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:ddbc00417a75f90ee173@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:RARE PDUFA (company-disclosed): PDUFA second half of 2026 - Ultrage
+ nyx Pharmaceutical Inc.
+DESCRIPTION:PDUFA second half of 2026 - Ultragenyx Pharmaceutical Inc.\nCon
+ fidence: company-disclosed\nDate precision: half (shown on the first day)\
+ nTicker RARE (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/
+ data/1515673/000119312526332802/rare-ex99_1.htm\nScheduling/reference data
+  from public records\; dates can move. Not investment\, legal or medical a
+ dvice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1515673/000119312526332802/rare
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
 END:VEVENT
 END:VCALENDAR

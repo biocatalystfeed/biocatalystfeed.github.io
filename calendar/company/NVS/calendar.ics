@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed NVS trial readouts
+X-WR-CALNAME:BioCatalystFeed NVS catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:708f5f6b1614fd2f390c@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:be3c6f1e8801496601f9@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:NVS P2 readout (est.): An Open-label Study of JSB462 (Luxdegalutami
@@ -29,12 +29,11 @@ URL:https://clinicaltrials.gov/study/NCT06991556
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:d749230e06af75cb7117@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:e83e71bc9fa3edef1880@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
-SUMMARY:NVS P2 readout (est.): A Phase II Study of AAA617 Alone and AAA617 
- in Combination With ARPI in Patients With PSMA PET Scan Positive CRPC
+SUMMARY:NVS P2 readout (est.): PSMACare
 DESCRIPTION:A Phase II Study of AAA617 Alone and AAA617 in Combination With
   ARPI in Patients With PSMA PET Scan Positive CRPC\nNCT05849298 | PHASE2 |
   ACTIVE_NOT_RECRUITING | sponsor: Novartis Pharmaceuticals\nPrimary comple
@@ -47,29 +46,8 @@ URL:https://clinicaltrials.gov/study/NCT05849298
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:8a5d2aca27adedc636b7@biocat.ai
-DTSTAMP:20261111T175519Z
-DTSTART;VALUE=DATE:20261230
-DTEND;VALUE=DATE:20261231
-SUMMARY:NVS P3 readout (est.): Roll-over Study to Collect and Assess Long-t
- erm Safety of Everolimus in Patients With TSC and Refractory Seizures Who 
- Have Completed the EXIST-3 Study [CRAD001M2304] and Who Are Benefitting Fr
- om Continued Treatment
-DESCRIPTION:Roll-over Study to Collect and Assess Long-term Safety of Evero
- limus in Patients With TSC and Refractory Seizures Who Have Completed the 
- EXIST-3 Study [CRAD001M2304] and Who Are Benefitting From Continued Treatm
- ent\nNCT02962414 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Novartis Phar
- maceuticals\nPrimary completion date (ESTIMATED)\; top-line results usuall
- y follow later.\nTicker NVS (confidence 0.9)\nSource: https://clinicaltria
- ls.gov/study/NCT02962414\nScheduling/reference data from public records\; 
- dates can move. Not investment\, legal or medical advice.
-TRANSP:TRANSPARENT
-URL:https://clinicaltrials.gov/study/NCT02962414
-CATEGORIES:readout,ESTIMATED
-END:VEVENT
-BEGIN:VEVENT
-UID:e0909461036355a479a4@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:3e04c77b7d0e58aee62c@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
 SUMMARY:NVS P2 readout (est.): Iptacopan in Patients With ANCA Associated V
@@ -85,12 +63,28 @@ URL:https://clinicaltrials.gov/study/NCT06388941
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:ee96d1777c95ca236ecf@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:c2e8e1b3ae4824e4cc1e@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20270117
+SUMMARY:NVS P3 readout (est.): ACS
+DESCRIPTION:Evaluation of Efficacy and Safety of Early in Hospital Initiati
+ on of Inclisiran Treatment in Patients With Acute Coronary Syndromes\nNCT0
+ 7102628 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Novartis Pharmaceutica
+ ls\nPrimary completion date (ESTIMATED)\; top-line results usually follow 
+ later.\nTicker NVS (confidence 0.9)\nSource: https://clinicaltrials.gov/st
+ udy/NCT07102628\nScheduling/reference data from public records\; dates can
+  move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07102628
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:13d3b904d9cc35d67d05@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270126
-SUMMARY:NVS P1/P2 readout (est.): Study of JDQ443 in Patients With Advanced
-  Solid Tumors Harboring the KRAS G12C Mutation
+SUMMARY:NVS P1/P2 readout (est.): KontRASt-01
 DESCRIPTION:Study of JDQ443 in Patients With Advanced Solid Tumors Harborin
  g the KRAS G12C Mutation\nNCT04699188 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUIT
  ING | sponsor: Novartis Pharmaceuticals\nPrimary completion date (ESTIMATE
@@ -103,14 +97,11 @@ URL:https://clinicaltrials.gov/study/NCT04699188
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:5826b3ebfd2af6803728@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:2a041b7fae76a9fed45b@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
-SUMMARY:NVS P3 readout (est.): Study to Assess the Efficacy and Safety of A
- lpelisib Plus Fulvestrant in Participants With HR-positive (HR+)\, HER2-ne
- gative\, Advanced Breast Cancer After Treatment With a CDK4/6 Inhibitor an
- d an Aromatase Inhibitor.
+SUMMARY:NVS P3 readout (est.): EPIK-B5
 DESCRIPTION:Study to Assess the Efficacy and Safety of Alpelisib Plus Fulve
  strant in Participants With HR-positive (HR+)\, HER2-negative\, Advanced B
  reast Cancer After Treatment With a CDK4/6 Inhibitor and an Aromatase Inhi
@@ -124,8 +115,8 @@ URL:https://clinicaltrials.gov/study/NCT05038735
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:7dc4ecc9597216983f3d@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:82cb970664b184f7a02c@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
 SUMMARY:NVS P2 readout (est.): Study Assessing the Efficacy and Safety of T
@@ -144,12 +135,11 @@ URL:https://clinicaltrials.gov/study/NCT04544189
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:d83ec3e228ec95b3313a@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:3c2ad869b7b783542030@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-SUMMARY:NVS P3 readout (est.): Study of Efficacy and Safety of Iptacopan in
-  Patients With C3 Glomerulopathy.
+SUMMARY:NVS P3 readout (est.): APPEAR-C3G
 DESCRIPTION:Study of Efficacy and Safety of Iptacopan in Patients With C3 G
  lomerulopathy.\nNCT04817618 | PHASE3 | RECRUITING | sponsor: Novartis Phar
  maceuticals\nPrimary completion date (ESTIMATED)\; top-line results usuall
@@ -161,8 +151,8 @@ URL:https://clinicaltrials.gov/study/NCT04817618
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:fa37381732f3d2be9a63@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:195c04d7bb3273ef73d6@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:NVS P2 readout (est.): Ribociclib (LEE011) Rollover Study for Conti
@@ -178,8 +168,8 @@ URL:https://clinicaltrials.gov/study/NCT02934568
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:544c0be289426f006c49@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:989f6de5256b93567a8a@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270202
 DTEND;VALUE=DATE:20270203
 SUMMARY:NVS P2 readout (est.): Study of Efficacy and Safety of LXH254 Combi
@@ -197,13 +187,11 @@ URL:https://clinicaltrials.gov/study/NCT04417621
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:f2939e30a26c8ddb7e35@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:f5f01c73af6a21e0d09d@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-SUMMARY:NVS P2 readout (est.): Platform Study to Evaluate the Efficacy and 
- Safety of Anti-malarial Agents in Participants With Uncomplicated Plasmodi
- um Falciparum Malaria (Cohort C2)
+SUMMARY:NVS P2 readout (est.): PLATINUM
 DESCRIPTION:Platform Study to Evaluate the Efficacy and Safety of Anti-mala
  rial Agents in Participants With Uncomplicated Plasmodium Falciparum Malar
  ia (Cohort C2)\nNCT07811908 | PHASE2 | RECRUITING | sponsor: Novartis Phar
@@ -214,5 +202,197 @@ DESCRIPTION:Platform Study to Evaluate the Efficacy and Safety of Anti-mala
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07811908
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:3e87805a3a2875d73c03@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:NVS APPROVAL: COSENTYX
+DESCRIPTION:Approved 2026-10-15: COSENTYX (BLA761349 SUPPL13)\nConfidence: 
+ confirmed\nTicker NVS (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761349\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761349
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:66f1a2c70cb2f4646965@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:NVS APPROVAL: RHAPSIDO
+DESCRIPTION:Approved 2026-10-06: RHAPSIDO (NDA218436 SUPPL1)\nConfidence: c
+ onfirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218436\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218436
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:3ae8ed265960024bbafe@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:NVS APPROVAL: PLUVICTO
+DESCRIPTION:Approved 2026-07-31: PLUVICTO (NDA215833 SUPPL37)\nConfidence: 
+ confirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215833\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215833
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2167a59f8251e5bfb139@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260716
+DTEND;VALUE=DATE:20260717
+SUMMARY:NVS APPROVAL: FABHALTA
+DESCRIPTION:Approved 2026-07-16: FABHALTA (NDA218276 SUPPL7)\nConfidence: c
+ onfirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218276\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218276
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5c64100dcbf95854296b@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:NVS APPROVAL: KISQALI FEMARA CO-PACK (COPACKAGED)
+DESCRIPTION:Approved 2026-07-01: KISQALI FEMARA CO-PACK (COPACKAGED) (NDA20
+ 9935 SUPPL33)\nConfidence: confirmed\nTicker NVS (confidence 0.9)\nSource:
+  https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.
+ process&ApplNo=209935\nScheduling/reference data from public records\; dat
+ es can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=209935
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:db040a8bf9aed5580703@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:NVS APPROVAL: KISQALI
+DESCRIPTION:Approved 2026-07-01: KISQALI (NDA209092 SUPPL27)\nConfidence: c
+ onfirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209092\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=209092
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:39b62ca53c423eedc6d7@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260417
+DTEND;VALUE=DATE:20260418
+SUMMARY:NVS APPROVAL: COSENTYX
+DESCRIPTION:Approved 2026-04-17: COSENTYX (BLA125504 SUPPL97)\nConfidence: 
+ confirmed\nTicker NVS (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125504\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125504
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b4f6104860db361afb3c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260417
+DTEND;VALUE=DATE:20260418
+SUMMARY:NVS APPROVAL: COSENTYX
+DESCRIPTION:Approved 2026-04-17: COSENTYX (BLA125504 SUPPL98)\nConfidence: 
+ confirmed\nTicker NVS (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125504\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125504
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:852987181c358d561e39@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260312
+DTEND;VALUE=DATE:20260313
+SUMMARY:NVS APPROVAL: COSENTYX
+DESCRIPTION:Approved 2026-03-12: COSENTYX (BLA125504 SUPPL91)\nConfidence: 
+ confirmed\nTicker NVS (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125504\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125504
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c7190944ad667cea883d@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260212
+DTEND;VALUE=DATE:20260213
+SUMMARY:NVS APPROVAL: LEQVIO
+DESCRIPTION:Approved 2026-02-12: LEQVIO (NDA214012 SUPPL18)\nConfidence: co
+ nfirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214012\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=214012
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c6d9822a3b1baa8a9c16@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260212
+DTEND;VALUE=DATE:20260213
+SUMMARY:NVS APPROVAL: LEQVIO
+DESCRIPTION:Approved 2026-02-12: LEQVIO (NDA214012 SUPPL17)\nConfidence: co
+ nfirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214012\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=214012
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c5404e6f1ff0cf9482e0@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251125
+DTEND;VALUE=DATE:20251126
+SUMMARY:NVS APPROVAL: SCEMBLIX
+DESCRIPTION:Approved 2025-11-25: SCEMBLIX (NDA215358 SUPPL12)\nConfidence: 
+ confirmed\nTicker NVS (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215358\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215358
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

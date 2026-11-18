@@ -3,26 +3,25 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed KARD trial readouts
+X-WR-CALNAME:BioCatalystFeed KARD catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:b295aeaf2bcf3ef922a4@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:594fa0352070df7be782@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:KARD P2 readout (est.): Study of Efficacy and Safety of Tonlamarsen
-  in Participants With a Recent Hospitalization and a Concurrent Episode of
-  Acute Severe Hypertension
+SUMMARY:KARD P2 readout (est.): KARDINAL-ASH
 DESCRIPTION:Study of Efficacy and Safety of Tonlamarsen in Participants Wit
  h a Recent Hospitalization and a Concurrent Episode of Acute Severe Hypert
  ension\nNCT07511361 | PHASE2 | RECRUITING | sponsor: Kardigan\, Inc.\nPrim
  ary completion date (ESTIMATED)\; top-line results usually follow later.\n
- Ticker KARD (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT
- 07511361\nScheduling/reference data from public records\; dates can move. 
- Not investment\, legal or medical advice.
+ Date precision: month (shown on the first day)\nTicker KARD (confidence 0.
+ 9)\nSource: https://clinicaltrials.gov/study/NCT07511361\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07511361
 CATEGORIES:readout,ESTIMATED

@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed VNDA trial readouts
+X-WR-CALNAME:BioCatalystFeed VNDA catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:23d1d6b9423074b9d017@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:22a34d40e4d301c9983c@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:VNDA P3 readout (est.): Study to Evaluate the Efficacy and Safety o
@@ -18,17 +18,17 @@ SUMMARY:VNDA P3 readout (est.): Study to Evaluate the Efficacy and Safety o
 DESCRIPTION:Study to Evaluate the Efficacy and Safety of VQW-765 for the On
  -Demand Treatment of Social Anxiety Disorder\nNCT07221578 | PHASE3 | ACTIV
  E_NOT_RECRUITING | sponsor: Vanda Pharmaceuticals\nPrimary completion date
-  (ESTIMATED)\; top-line results usually follow later.\nTicker VNDA (confid
- ence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07221578\nSchedulin
- g/reference data from public records\; dates can move. Not investment\, le
- gal or medical advice.
+  (ESTIMATED)\; top-line results usually follow later.\nDate precision: mon
+ th (shown on the first day)\nTicker VNDA (confidence 0.9)\nSource: https:/
+ /clinicaltrials.gov/study/NCT07221578\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07221578
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:d09025bfbb079b4fc938@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:5fbf684e2aa8144defc3@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:VNDA P3 readout (est.): A Study to Evaluate Tradipitant on Treating
@@ -42,5 +42,53 @@ DESCRIPTION:A Study to Evaluate Tradipitant on Treating Nausea and Vomiting
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07446439
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:f6b2e9cda2fe8dfb571e@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:VNDA PDUFA (company-disclosed): imsidolimab
+DESCRIPTION:PDUFA December 12\, 2026 - Vanda Pharmaceuticals Inc. (imsidoli
+ mab)\nConfidence: company-disclosed\nTicker VNDA (confidence 1.0)\nSource:
+  https://www.sec.gov/Archives/edgar/data/1347178/000162828026053308/vnda8-
+ k852026exhibit991.htm\nScheduling/reference data from public records\; dat
+ es can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1347178/000162828026053308/vnda
+ 8-k852026exhibit991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:253fefd9948e88080a93@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260220
+DTEND;VALUE=DATE:20260221
+SUMMARY:VNDA APPROVAL: BYSANTI
+DESCRIPTION:Approved 2026-02-20: BYSANTI (NDA220358 ORIG1)\nConfidence: con
+ firmed\nTicker VNDA (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220358\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220358
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:86ebdf81aa6afc446bc5@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251230
+DTEND;VALUE=DATE:20251231
+SUMMARY:VNDA APPROVAL: NEREUS
+DESCRIPTION:Approved 2025-12-30: NEREUS (NDA220152 ORIG1)\nConfidence: conf
+ irmed\nTicker VNDA (confidence 0.6)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220152\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220152
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

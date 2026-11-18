@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed SIGA trial readouts
+X-WR-CALNAME:BioCatalystFeed SIGA catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:329194bd8d9aa081367d@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:2de3025ae1a32980a56e@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:SIGA P2 readout (est.): Study to Assess the Safety and Immunogenici

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed APMD catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:d5dac277c40e8a4c6933@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:APMD PDUFA (company-disclosed): PDUFA February 28\, 2027 - Apnimed\
+ , Inc.
+DESCRIPTION:PDUFA February 28\, 2027 - Apnimed\, Inc.\nConfidence: company-
+ disclosed\nTicker APMD (confidence 1.0)\nSource: https://www.sec.gov/Archi
+ ves/edgar/data/1745648/000119312526462171/apmd-ex99_1.htm\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1745648/000119312526462171/apmd
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

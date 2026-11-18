@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed GMAB catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:3adc3ff924cd2776e1c8@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260327
+DTEND;VALUE=DATE:20260328
+SUMMARY:GMAB APPROVAL: EPKINLY
+DESCRIPTION:Approved 2026-03-27: EPKINLY (BLA761324 SUPPL10)\nConfidence: c
+ onfirmed\nTicker GMAB (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761324\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761324
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

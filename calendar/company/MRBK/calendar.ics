@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MRBK catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:355c515b979e538fda2a@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:MRBK APPROVAL: IDKIT:HP
+DESCRIPTION:Approved 2026-07-24: IDKIT:HP (NDA021314 SUPPL14)\nConfidence: 
+ confirmed\nTicker MRBK (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021314\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=021314
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

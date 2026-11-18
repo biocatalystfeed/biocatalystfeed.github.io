@@ -3,18 +3,36 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed SUPN trial readouts
+X-WR-CALNAME:BioCatalystFeed SUPN catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:65f9adac852fa4cf5650@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:79fe13acb117a5bfac06@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:SUPN P3 readout (est.): Open-label Study to Evaluate Long-term Safe
+ ty and Efficacy of SPN-812 (Viloxazine Extended-release Capsule)
+DESCRIPTION:Open-label Study to Evaluate Long-term Safety and Efficacy of S
+ PN-812 (Viloxazine Extended-release Capsule)\nNCT02736656 | PHASE3 | ACTIV
+ E_NOT_RECRUITING | sponsor: Supernus Pharmaceuticals\, Inc.\nPrimary compl
+ etion date (ESTIMATED)\; top-line results usually follow later.\nDate prec
+ ision: month (shown on the first day)\nTicker SUPN (confidence 0.9)\nSourc
+ e: https://clinicaltrials.gov/study/NCT02736656\nScheduling/reference data
+  from public records\; dates can move. Not investment\, legal or medical a
+ dvice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT02736656
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:fb53bcf1084afcf1336c@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
-SUMMARY:SUPN P1/P2 readout (est.): BIS-001-ER for the Treatment of Adult Fo
- cal Impaired Awareness Seizures
+SUMMARY:SUPN P1/P2 readout (est.): FIAS
 DESCRIPTION:BIS-001-ER for the Treatment of Adult Focal Impaired Awareness 
  Seizures\nNCT03474770 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: S
  upernus Pharmaceuticals\, Inc.\nPrimary completion date (ESTIMATED)\; top-
@@ -27,8 +45,8 @@ URL:https://clinicaltrials.gov/study/NCT03474770
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:72dcb5954595f14ead53@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:279e2b5bfa3e39923e37@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:SUPN P2 readout (est.): Double-blind\, Placebo-controlled Study in 

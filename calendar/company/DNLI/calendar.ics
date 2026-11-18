@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed DNLI trial readouts
+X-WR-CALNAME:BioCatalystFeed DNLI catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:27fca1938e23cd4e979f@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:dcf46a5998ccd7024f7d@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:DNLI P1/P2 readout (est.): A Study to Evaluate the Safety\, Tolerab
@@ -20,12 +20,29 @@ DESCRIPTION:A Study to Evaluate the Safety\, Tolerability\, Pharmacokinetic
  s\, and Pharmacodynamics of DNL593 in Healthy Participants and Participant
  s With Frontotemporal Dementia (FTD-GRN)\nNCT05262023 | PHASE1/PHASE2 | AC
  TIVE_NOT_RECRUITING | sponsor: Denali Therapeutics Inc.\nPrimary completio
- n date (ESTIMATED)\; top-line results usually follow later.\nTicker DNLI (
- confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05262023\nSch
- eduling/reference data from public records\; dates can move. Not investmen
- t\, legal or medical advice.
+ n date (ESTIMATED)\; top-line results usually follow later.\nDate precisio
+ n: month (shown on the first day)\nTicker DNLI (confidence 0.9)\nSource: h
+ ttps://clinicaltrials.gov/study/NCT05262023\nScheduling/reference data fro
+ m public records\; dates can move. Not investment\, legal or medical advic
+ e.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT05262023
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:acc8a0bcfe8c8cc4853c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260324
+DTEND;VALUE=DATE:20260325
+SUMMARY:DNLI APPROVAL: AVLAYAH
+DESCRIPTION:Approved 2026-03-24: AVLAYAH (BLA761485 ORIG1)\nConfidence: con
+ firmed\nTicker DNLI (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761485\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761485
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed NTHI trial readouts
+X-WR-CALNAME:BioCatalystFeed NTHI catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:fc9f8b878250b07e162e@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:92563cdae9f8ffdf3b7c@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:NTHI P1/P2 readout (est.): Safety and Efficacy Study in Recurrent o
@@ -27,8 +27,8 @@ URL:https://clinicaltrials.gov/study/NCT02704858
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:1022426ee9ee051791f8@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:0ac1a280ed5fe4425e95@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
 SUMMARY:NTHI P2 readout (est.): NEO100 and High-Grade Meningioma

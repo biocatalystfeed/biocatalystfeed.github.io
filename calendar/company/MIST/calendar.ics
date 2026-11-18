@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MIST catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8d1fdf7e2b0295b23c14@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251212
+DTEND;VALUE=DATE:20251213
+SUMMARY:MIST APPROVAL: CARDAMYST
+DESCRIPTION:Approved 2025-12-12: CARDAMYST (NDA218571 ORIG1)\nConfidence: c
+ onfirmed\nTicker MIST (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218571\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218571
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

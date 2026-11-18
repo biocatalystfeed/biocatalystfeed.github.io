@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed OMER trial readouts
+X-WR-CALNAME:BioCatalystFeed OMER catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:21806ea9534a9847c5a7@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:4ec1ac26d3f1ec3c96f1@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:OMER P2 readout (est.): Long-Term Safety\, Tolerability and Efficac
@@ -18,12 +18,28 @@ SUMMARY:OMER P2 readout (est.): Long-Term Safety\, Tolerability and Efficac
 DESCRIPTION:Long-Term Safety\, Tolerability and Efficacy of OMS906 in Parox
  ysmal Nocturnal Hemoglobinuria\nNCT06298955 | PHASE2 | ACTIVE_NOT_RECRUITI
  NG | sponsor: Omeros Corporation\nPrimary completion date (ESTIMATED)\; to
- p-line results usually follow later.\nTicker OMER (confidence 0.9)\nSource
- : https://clinicaltrials.gov/study/NCT06298955\nScheduling/reference data 
- from public records\; dates can move. Not investment\, legal or medical ad
- vice.
+ p-line results usually follow later.\nDate precision: month (shown on the 
+ first day)\nTicker OMER (confidence 0.9)\nSource: https://clinicaltrials.g
+ ov/study/NCT06298955\nScheduling/reference data from public records\; date
+ s can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06298955
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:07b493e0221f209ecc69@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251223
+DTEND;VALUE=DATE:20251224
+SUMMARY:OMER APPROVAL: YARTEMLEA
+DESCRIPTION:Approved 2025-12-23: YARTEMLEA (BLA761152 ORIG1)\nConfidence: c
+ onfirmed\nTicker OMER (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761152\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761152
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

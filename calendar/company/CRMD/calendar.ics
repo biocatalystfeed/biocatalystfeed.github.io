@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed CRMD catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:2d23735e8a66f9af6a3e@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:CRMD PDUFA (company-disclosed): PDUFA Q1 2027 - CorMedix Inc.
+DESCRIPTION:PDUFA Q1 2027 - CorMedix Inc.\nConfidence: company-disclosed\nD
+ ate precision: quarter (shown on the first day)\nTicker CRMD (confidence 1
+ .0)\nSource: https://www.sec.gov/Archives/edgar/data/1410098/0001213900261
+ 10477/ea030895701ex99-1.htm\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1410098/000121390026110477/ea03
+ 0895701ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

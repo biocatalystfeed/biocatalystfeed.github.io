@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed INO catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:3dc4cc2a7007f0f085a5@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:INO PDUFA (company-disclosed): PDUFA October 30\, 2026 - INOVIO PHA
+ RMACEUTICALS\, INC.
+DESCRIPTION:PDUFA October 30\, 2026 - INOVIO PHARMACEUTICALS\, INC.\nConfid
+ ence: company-disclosed\nTicker INO (confidence 1.0)\nSource: https://www.
+ sec.gov/Archives/edgar/data/1055726/000105572626000024/ino-63026x8kex991.h
+ tm\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1055726/000105572626000024/ino-
+ 63026x8kex991.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

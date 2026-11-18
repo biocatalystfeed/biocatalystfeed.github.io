@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed OCGN catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:ddf08bfcdc4cb27e6e3d@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270213
+SUMMARY:OCGN P3 readout (est.): liMeliGhT
+DESCRIPTION:A Phase 3 Study Of OCU400 Gene Therapy for the Treatment Of Ret
+ initis Pigmentosa\nNCT06388200 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor:
+  Ocugen\nPrimary completion date (ESTIMATED)\; top-line results usually fo
+ llow later.\nTicker OCGN (confidence 0.9)\nSource: https://clinicaltrials.
+ gov/study/NCT06388200\nScheduling/reference data from public records\; dat
+ es can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06388200
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed BFRI catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:fa75410199d8b352d72b@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:BFRI APPROVAL: AMELUZ
+DESCRIPTION:Approved 2026-09-09: AMELUZ (NDA208081 SUPPL40)\nConfidence: co
+ nfirmed\nTicker BFRI (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208081\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208081
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

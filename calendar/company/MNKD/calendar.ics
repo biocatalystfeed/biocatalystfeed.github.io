@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MNKD catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:1398e78a61df49b5df5c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:MNKD APPROVAL: AFREZZA
+DESCRIPTION:Approved 2026-05-29: AFREZZA (BLA022472 SUPPL29)\nConfidence: c
+ onfirmed\nTicker MNKD (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022472\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=022472
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c4f8451dcd13995991e1@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260123
+DTEND;VALUE=DATE:20260124
+SUMMARY:MNKD APPROVAL: AFREZZA
+DESCRIPTION:Approved 2026-01-23: AFREZZA (BLA022472 SUPPL27)\nConfidence: c
+ onfirmed\nTicker MNKD (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022472\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=022472
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

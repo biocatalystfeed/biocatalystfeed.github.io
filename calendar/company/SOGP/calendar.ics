@@ -3,31 +3,32 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed SOGP trial readouts
+X-WR-CALNAME:BioCatalystFeed SOGP catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:d71eff0357ee135b7ee8@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:09a6c01f71bae9c289fb@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:SOGP P2 readout (est.): SPI-1005 in Adults Receiving Cochlear Impla
  nt
 DESCRIPTION:SPI-1005 in Adults Receiving Cochlear Implant\nNCT06340633 | PH
  ASE2 | RECRUITING | sponsor: Sound Pharmaceuticals\, Incorporated\nPrimary
-  completion date (ESTIMATED)\; top-line results usually follow later.\nTic
- ker SOGP (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT063
- 40633\nScheduling/reference data from public records\; dates can move. Not
-  investment\, legal or medical advice.
+  completion date (ESTIMATED)\; top-line results usually follow later.\nDat
+ e precision: month (shown on the first day)\nTicker SOGP (confidence 0.9)\
+ nSource: https://clinicaltrials.gov/study/NCT06340633\nScheduling/referenc
+ e data from public records\; dates can move. Not investment\, legal or med
+ ical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06340633
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:490b0dae13d983bb2560@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:cc4fb88f346966999be6@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:SOGP P3 readout (est.): SPI-1005 for the Treatment of Meniere's Dis
@@ -35,9 +36,10 @@ SUMMARY:SOGP P3 readout (est.): SPI-1005 for the Treatment of Meniere's Dis
 DESCRIPTION:SPI-1005 for the Treatment of Meniere's Disease (Open Label)\nN
  CT06859788 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Sound Pharmaceutica
  ls\, Incorporated\nPrimary completion date (ESTIMATED)\; top-line results 
- usually follow later.\nTicker SOGP (confidence 0.9)\nSource: https://clini
- caltrials.gov/study/NCT06859788\nScheduling/reference data from public rec
- ords\; dates can move. Not investment\, legal or medical advice.
+ usually follow later.\nDate precision: month (shown on the first day)\nTic
+ ker SOGP (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT068
+ 59788\nScheduling/reference data from public records\; dates can move. Not
+  investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06859788
 CATEGORIES:readout,ESTIMATED

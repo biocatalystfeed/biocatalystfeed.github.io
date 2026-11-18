@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed TARS trial readouts
+X-WR-CALNAME:BioCatalystFeed TARS catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:18481c8f6c8c40c765cc@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:9d327d10c55f22cffc2e@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:TARS P2 readout (est.): Study of Lotilaner Ophthalmic Gel in Patien

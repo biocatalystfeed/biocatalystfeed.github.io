@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed SCNLD trial readouts
+X-WR-CALNAME:BioCatalystFeed SCNLD catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:ba6890b7de0da41e2b6e@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:77f3455d62281442fc99@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:SCNLD P2 readout (est.): SCIB1 and iSCIB1+ in Melanoma Patients Rec

@@ -3,33 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed PFE trial readouts
+X-WR-CALNAME:BioCatalystFeed PFE catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:7608c632a421a418dd48@biocat.ai
-DTSTAMP:20261111T175519Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
-SUMMARY:PFE P2 readout (est.): A Study To Learn About Two Study Medicines (
- PF-07275315 And PF-07264660) In People Who Have Moderate To Severe Atopic 
- Dermatitis
-DESCRIPTION:A Study To Learn About Two Study Medicines (PF-07275315 And PF-
- 07264660) In People Who Have Moderate To Severe Atopic Dermatitis\nNCT0599
- 5964 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary completio
- n date (ESTIMATED)\; top-line results usually follow later.\nTicker PFE (c
- onfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05995964\nSche
- duling/reference data from public records\; dates can move. Not investment
- \, legal or medical advice.
-TRANSP:TRANSPARENT
-URL:https://clinicaltrials.gov/study/NCT05995964
-CATEGORIES:readout,ESTIMATED
-END:VEVENT
-BEGIN:VEVENT
-UID:1f05eaca8d24f7c0e56a@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:22091366b46904a2a93c@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:PFE P3 readout (est.): A Study to Learn About the Study Medicine Ca
@@ -47,12 +28,11 @@ URL:https://clinicaltrials.gov/study/NCT06641466
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:14d9119d6a0d17232f6b@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:b2d83be16ddf27164c32@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
-SUMMARY:PFE P3 readout (est.): A Study to Learn About Medicine Called Ritle
- citinib in Children Aged Between 6 to 12 Years With Severe Alopecia Areata
+SUMMARY:PFE P3 readout (est.): B7981027
 DESCRIPTION:A Study to Learn About Medicine Called Ritlecitinib in Children
   Aged Between 6 to 12 Years With Severe Alopecia Areata\nNCT07029711 | PHA
  SE3 | ACTIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary completion date (ES
@@ -65,8 +45,8 @@ URL:https://clinicaltrials.gov/study/NCT07029711
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:53affb8147cf9815bbbe@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:9899bab22cbfcc19087a@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:PFE P3 readout (est.): A Study to Learn About the Safety\, Tolerabi
@@ -84,8 +64,8 @@ URL:https://clinicaltrials.gov/study/NCT07500506
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:5bbd0c9b289c068f9964@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:fd3fda57bf19e0a9d02e@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:PFE P2 readout (est.): A 16-Week Study to Learn About the Study Med
@@ -104,8 +84,8 @@ URL:https://clinicaltrials.gov/study/NCT07228390
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:0cef0edd81db37846729@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:22ad286ed7fcc89f8577@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
 SUMMARY:PFE P2 readout (est.): A Study to Learn About Ritlecitinib for the 
@@ -121,12 +101,11 @@ URL:https://clinicaltrials.gov/study/NCT07219615
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:71a713a6be2b309794b1@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:d5598d1bd574ac0df1e3@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
-SUMMARY:PFE P3 readout (est.): Vepdegestrant (ARV-471/PF-07850327) + Palboc
- iclib vs Letrozole + Palbociclib in ER(+)/HER2(-) Advanced Breast Cancer
+SUMMARY:PFE P3 readout (est.): VERITAC-3
 DESCRIPTION:Vepdegestrant (ARV-471/PF-07850327) + Palbociclib vs Letrozole 
  + Palbociclib in ER(+)/HER2(-) Advanced Breast Cancer\nNCT05909397 | PHASE
  3 | ACTIVE_NOT_RECRUITING | sponsor: Pfizer\nPrimary completion date (ESTI
@@ -139,8 +118,8 @@ URL:https://clinicaltrials.gov/study/NCT05909397
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:363e39fb01c514f31639@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:0331a4bf8e69c4f3eb5d@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:PFE P2 readout (est.): PF-07104091 as a Single Agent and in Combina
@@ -156,8 +135,8 @@ URL:https://clinicaltrials.gov/study/NCT04553133
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:5eecd9408bb09ba3a249@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:f0a4a8fc095e2ca1f302@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:PFE P3 readout (est.): Continued Access Study for Participants Deri
@@ -174,12 +153,11 @@ URL:https://clinicaltrials.gov/study/NCT05059522
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:057cd0a85300da09bc96@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:e743e178ded34787a2fc@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
-SUMMARY:PFE P3 readout (est.): Study to Evaluate the Efficacy\, Immunogenic
- ity\, and Safety of RSVpreF in Adults.
+SUMMARY:PFE P3 readout (est.): RENOIR
 DESCRIPTION:Study to Evaluate the Efficacy\, Immunogenicity\, and Safety of
   RSVpreF in Adults.\nNCT05035212 | PHASE3 | ACTIVE_NOT_RECRUITING | sponso
  r: Pfizer\nPrimary completion date (ESTIMATED)\; top-line results usually 
@@ -191,8 +169,8 @@ URL:https://clinicaltrials.gov/study/NCT05035212
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:bd40476a40e899efe0fc@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:cbfb9f7e3f7dfe29c744@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270126
 SUMMARY:PFE P3 readout (est.): A Phase 3 Study in India to Describe the Saf
@@ -206,5 +184,117 @@ DESCRIPTION:A Phase 3 Study in India to Describe the Safety and Immunogenic
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07653100
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:ef114689b9b1673837aa@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:PFE APPROVAL: TALZENNA
+DESCRIPTION:Approved 2026-10-26: TALZENNA (NDA217439 SUPPL4)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217439\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217439
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6c16a678184c1a0542d8@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:PFE APPROVAL: TALZENNA
+DESCRIPTION:Approved 2026-10-26: TALZENNA (NDA211651 SUPPL14)\nConfidence: 
+ confirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211651\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=211651
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4dbc642f10a567472458@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:PFE APPROVAL: IBRANCE
+DESCRIPTION:Approved 2026-06-24: IBRANCE (NDA207103 SUPPL24)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207103\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=207103
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c565fa7a8ac72ec0b1a7@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:PFE APPROVAL: IBRANCE
+DESCRIPTION:Approved 2026-06-24: IBRANCE (NDA212436 SUPPL12)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212436\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=212436
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:7a56c94d3cbc34c3fd7b@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260605
+DTEND;VALUE=DATE:20260606
+SUMMARY:PFE APPROVAL: HYMPAVZI
+DESCRIPTION:Approved 2026-06-05: HYMPAVZI (BLA761369 SUPPL3)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761369\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761369
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:bf14c9292b3199548d74@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260306
+DTEND;VALUE=DATE:20260307
+SUMMARY:PFE APPROVAL: XELJANZ
+DESCRIPTION:Approved 2026-03-06: XELJANZ (NDA213082 SUPPL13)\nConfidence: c
+ onfirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213082\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213082
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:4c98a90bfe3134ca09d9@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260306
+DTEND;VALUE=DATE:20260307
+SUMMARY:PFE APPROVAL: XELJANZ XR
+DESCRIPTION:Approved 2026-03-06: XELJANZ XR (NDA208246 SUPPL27)\nConfidence
+ : confirmed\nTicker PFE (confidence 0.9)\nSource: https://www.accessdata.f
+ da.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208246\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208246
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

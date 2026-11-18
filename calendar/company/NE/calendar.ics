@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed NE catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:a22ff915e9153ac317c1@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260719
+DTEND;VALUE=DATE:20260720
+SUMMARY:NE APPROVAL: AIR
+DESCRIPTION:Approved 2026-07-19: AIR (NDA221805 ORIG1)\nConfidence: confirm
+ ed\nTicker NE (confidence 0.6)\nSource: https://www.accessdata.fda.gov/scr
+ ipts/cder/daf/index.cfm?event=overview.process&ApplNo=221805\nScheduling/r
+ eference data from public records\; dates can move. Not investment\, legal
+  or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=221805
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

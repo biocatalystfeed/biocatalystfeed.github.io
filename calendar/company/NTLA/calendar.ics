@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed NTLA catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:526e3fa9d3fd9b7e35cd@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+SUMMARY:NTLA PDUFA (company-disclosed): PDUFA MARCH 10\, 2027 - Intellia Th
+ erapeutics\, Inc.
+DESCRIPTION:PDUFA MARCH 10\, 2027 - Intellia Therapeutics\, Inc.\nConfidenc
+ e: company-disclosed\nTicker NTLA (confidence 1.0)\nSource: https://www.se
+ c.gov/Archives/edgar/data/1652130/000119312526460948/ntla-ex99_1.htm\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1652130/000119312526460948/ntla
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

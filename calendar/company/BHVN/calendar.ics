@@ -3,32 +3,32 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed BHVN trial readouts
+X-WR-CALNAME:BioCatalystFeed BHVN catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:559139e739025b08325d@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:814df84ba8fa9cdf8c03@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:BHVN P2/P3 readout (est.): A Study to Determine if BHV-7000 is Effe
- ctive and Safe in Adults With Refractory Focal Onset Epilepsy
+SUMMARY:BHVN P2/P3 readout (est.): RISE 2
 DESCRIPTION:A Study to Determine if BHV-7000 is Effective and Safe in Adult
  s With Refractory Focal Onset Epilepsy\nNCT06132893 | PHASE2/PHASE3 | ACTI
  VE_NOT_RECRUITING | sponsor: Biohaven Therapeutics Ltd.\nPrimary completio
- n date (ESTIMATED)\; top-line results usually follow later.\nTicker BHVN (
- confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06132893\nSch
- eduling/reference data from public records\; dates can move. Not investmen
- t\, legal or medical advice.
+ n date (ESTIMATED)\; top-line results usually follow later.\nDate precisio
+ n: month (shown on the first day)\nTicker BHVN (confidence 0.9)\nSource: h
+ ttps://clinicaltrials.gov/study/NCT06132893\nScheduling/reference data fro
+ m public records\; dates can move. Not investment\, legal or medical advic
+ e.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06132893
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:9bfc5d97dc3a602129aa@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:fa958720115f9ed5c629@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:BHVN P2 readout (est.): Long-term Safety and Tolerability of BHV-70
@@ -36,11 +36,29 @@ SUMMARY:BHVN P2 readout (est.): Long-term Safety and Tolerability of BHV-70
 DESCRIPTION:Long-term Safety and Tolerability of BHV-7000\nNCT06443463 | PH
  ASE2 | ENROLLING_BY_INVITATION | sponsor: Biohaven Therapeutics Ltd.\nPrim
  ary completion date (ESTIMATED)\; top-line results usually follow later.\n
- Ticker BHVN (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT
- 06443463\nScheduling/reference data from public records\; dates can move. 
- Not investment\, legal or medical advice.
+ Date precision: month (shown on the first day)\nTicker BHVN (confidence 0.
+ 9)\nSource: https://clinicaltrials.gov/study/NCT06443463\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06443463
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:9e2ec8e40c40b33e01b9@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:BHVN PDUFA (company-disclosed): PDUFA first quarter of 2027 - Bioha
+ ven Ltd.
+DESCRIPTION:PDUFA first quarter of 2027 - Biohaven Ltd.\nConfidence: compan
+ y-disclosed\nDate precision: quarter (shown on the first day)\nTicker BHVN
+  (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/1935979
+ /000193597926000083/bhvn-20261022.htm\nScheduling/reference data from publ
+ ic records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1935979/000193597926000083/bhvn
+ -20261022.htm
+CATEGORIES:pdufa,company-disclosed
 END:VEVENT
 END:VCALENDAR

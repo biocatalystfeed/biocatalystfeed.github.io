@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed GNLX trial readouts
+X-WR-CALNAME:BioCatalystFeed GNLX catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:dabf2ed547596ea1fa99@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:b4769f6cb19d0227657f@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:GNLX P3 readout (est.): Efficacy & Safety of Olvi-Vec and Platinum-
@@ -21,29 +21,29 @@ DESCRIPTION:Efficacy & Safety of Olvi-Vec and Platinum-doublet + Bevacizuma
  b Compared to Physician's Choice of Chemotherapy and Bevacizumab in Platin
  um-Resistant/Refractory Ovarian Cancer (PRROC) (OnPrime\, GOG-3076)\nNCT05
  281471 | PHASE3 | RECRUITING | sponsor: Genelux Corporation\nPrimary compl
- etion date (ESTIMATED)\; top-line results usually follow later.\nTicker GN
- LX (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05281471\
- nScheduling/reference data from public records\; dates can move. Not inves
- tment\, legal or medical advice.
+ etion date (ESTIMATED)\; top-line results usually follow later.\nDate prec
+ ision: month (shown on the first day)\nTicker GNLX (confidence 0.9)\nSourc
+ e: https://clinicaltrials.gov/study/NCT05281471\nScheduling/reference data
+  from public records\; dates can move. Not investment\, legal or medical a
+ dvice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT05281471
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:3bdf4b9039655f9ec106@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:6f4e0c6a29a8257106a5@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-SUMMARY:GNLX P2 readout (est.): Efficacy & Safety of Olvimulogene Nanivacir
- epvec & Platinum-doublet + Physician's Choice of Immune Checkpoint Inhibit
- or Compared to Docetaxel in NSCL Cancer
+SUMMARY:GNLX P2 readout (est.): VIRO-25
 DESCRIPTION:Efficacy & Safety of Olvimulogene Nanivacirepvec & Platinum-dou
  blet + Physician's Choice of Immune Checkpoint Inhibitor Compared to Docet
  axel in NSCL Cancer\nNCT06463665 | PHASE2 | RECRUITING | sponsor: Genelux 
  Corporation\nPrimary completion date (ESTIMATED)\; top-line results usuall
- y follow later.\nTicker GNLX (confidence 0.9)\nSource: https://clinicaltri
- als.gov/study/NCT06463665\nScheduling/reference data from public records\;
-  dates can move. Not investment\, legal or medical advice.
+ y follow later.\nDate precision: month (shown on the first day)\nTicker GN
+ LX (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06463665\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06463665
 CATEGORIES:readout,ESTIMATED

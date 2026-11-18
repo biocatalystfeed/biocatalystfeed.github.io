@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ZEAL.CO catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:7c9a413abbc6885198c8@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+SUMMARY:ZEAL.CO APPROVAL: ZEGALOGUE\; ZEGALOGUE (AUTOINJECTOR)
+DESCRIPTION:Approved 2026-06-18: ZEGALOGUE\; ZEGALOGUE (AUTOINJECTOR) (NDA2
+ 14231 SUPPL4)\nConfidence: confirmed\nTicker ZEAL.CO (confidence 0.95)\nSo
+ urce: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=over
+ view.process&ApplNo=214231\nScheduling/reference data from public records\
+ ; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=214231
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

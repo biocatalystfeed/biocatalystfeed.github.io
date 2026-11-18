@@ -3,32 +3,31 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed AXSM trial readouts
+X-WR-CALNAME:BioCatalystFeed AXSM catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:ff89cc59495ca644e3d2@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:fde43515a10285da20b6@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:AXSM P3 readout (est.): Elucidating TAAR-1\, Dopamine\, and Norepin
- ephrine in Binge Eating Disorder Using Solriamfetol
+SUMMARY:AXSM P3 readout (est.): ENGAGE
 DESCRIPTION:Elucidating TAAR-1\, Dopamine\, and Norepinephrine in Binge Eat
  ing Disorder Using Solriamfetol\nNCT06413433 | PHASE3 | RECRUITING | spons
  or: Axsome Therapeutics\, Inc.\nPrimary completion date (ESTIMATED)\; top-
- line results usually follow later.\nTicker AXSM (confidence 0.9)\nSource: 
- https://clinicaltrials.gov/study/NCT06413433\nScheduling/reference data fr
- om public records\; dates can move. Not investment\, legal or medical advi
- ce.
+ line results usually follow later.\nDate precision: month (shown on the fi
+ rst day)\nTicker AXSM (confidence 0.9)\nSource: https://clinicaltrials.gov
+ /study/NCT06413433\nScheduling/reference data from public records\; dates 
+ can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06413433
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:6ff746fde69539a7b313@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:07e8339bbd07be8fb9a2@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:AXSM P3 readout (est.): Studying Solriamfetol Modulation of TAAR-1\
@@ -36,12 +35,45 @@ SUMMARY:AXSM P3 readout (est.): Studying Solriamfetol Modulation of TAAR-1\
 DESCRIPTION:Studying Solriamfetol Modulation of TAAR-1\, Dopamine\, and Nor
  epinephrine in Shift Work Disorder (SUSTAIN)\nNCT06568367 | PHASE3 | RECRU
  ITING | sponsor: Axsome Therapeutics\, Inc.\nPrimary completion date (ESTI
- MATED)\; top-line results usually follow later.\nTicker AXSM (confidence 0
- .9)\nSource: https://clinicaltrials.gov/study/NCT06568367\nScheduling/refe
- rence data from public records\; dates can move. Not investment\, legal or
-  medical advice.
+ MATED)\; top-line results usually follow later.\nDate precision: month (sh
+ own on the first day)\nTicker AXSM (confidence 0.9)\nSource: https://clini
+ caltrials.gov/study/NCT06568367\nScheduling/reference data from public rec
+ ords\; dates can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06568367
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:5b028eed19e20fbdee33@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:AXSM PDUFA (company-disclosed): PDUFA May 1\, 2027 - Axsome Therape
+ utics\, Inc.
+DESCRIPTION:PDUFA May 1\, 2027 - Axsome Therapeutics\, Inc.\nConfidence: co
+ mpany-disclosed\nTicker AXSM (confidence 1.0)\nSource: https://www.sec.gov
+ /Archives/edgar/data/1579428/000119312526341206/axsm-ex99_1.htm\nSchedulin
+ g/reference data from public records\; dates can move. Not investment\, le
+ gal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1579428/000119312526341206/axsm
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:417a93461e92fe84c968@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260501
+SUMMARY:AXSM APPROVAL: AUVELITY
+DESCRIPTION:Approved 2026-04-30: AUVELITY (NDA215430 SUPPL18)\nConfidence: 
+ confirmed\nTicker AXSM (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215430\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215430
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

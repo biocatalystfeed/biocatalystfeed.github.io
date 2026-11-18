@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed CING catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:e129d9b82e745be9d6ce@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:CING CRL: dexmethylphenidate hydrochloride extended-release tablets
+DESCRIPTION:CRL 2026-05-29: Cingulate Therapeutics\, LLC NDA 220283 (dexmet
+ hylphenidate hydrochloride extended-release tablets)\nConfidence: confirme
+ d\nTicker CING (confidence 0.9)\nSource: https://download.open.fda.gov/crl
+ /CRL_NDA220283_20260529_Redacted.pdf\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220283_20260529_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

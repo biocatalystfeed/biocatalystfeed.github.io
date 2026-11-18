@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed IBO trial readouts
+X-WR-CALNAME:BioCatalystFeed IBO catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:53d64dda4794ed50f149@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:166a783561b6ef6d35b3@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:IBO P1/P2 readout (est.): Study to Evaluate IMP9064 as a Monotherap

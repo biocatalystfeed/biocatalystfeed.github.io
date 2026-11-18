@@ -3,19 +3,17 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed TTRX trial readouts
+X-WR-CALNAME:BioCatalystFeed TTRX catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:e82051f461679a4b2e25@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:2ae80c7f32092a3e9aa6@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-SUMMARY:TTRX P2/P3 readout (est.): A Double-Blind\, Randomized\, Vehicle-Co
- ntrolled Phase 2 Study to Assess the Efficacy and Safety of GX-03 in Adult
-  Subjects With Moderate to Severe Atopic Dermatitis (Eczema)
+SUMMARY:TTRX P2/P3 readout (est.): GX-03 in AD
 DESCRIPTION:A Double-Blind\, Randomized\, Vehicle-Controlled Phase 2 Study 
  to Assess the Efficacy and Safety of GX-03 in Adult Subjects With Moderate
   to Severe Atopic Dermatitis (Eczema)\nNCT07355075 | PHASE2/PHASE3 | RECRU

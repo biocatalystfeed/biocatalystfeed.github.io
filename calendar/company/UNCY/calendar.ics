@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed UNCY catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:302b28e85809c323be25@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270325
+DTEND;VALUE=DATE:20270326
+SUMMARY:UNCY PDUFA (company-disclosed): PDUFA March 25\, 2027 - Unicycive T
+ herapeutics\, Inc.
+DESCRIPTION:PDUFA March 25\, 2027 - Unicycive Therapeutics\, Inc.\nConfiden
+ ce: company-disclosed\nTicker UNCY (confidence 1.0)\nSource: https://www.s
+ ec.gov/Archives/edgar/data/1766140/000121390026120261/ea031236501ex99-1.ht
+ m\nScheduling/reference data from public records\; dates can move. Not inv
+ estment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1766140/000121390026120261/ea03
+ 1236501ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:435c26f8a99be80586f6@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:UNCY CRL: oxylanthanum carbonate tablets
+DESCRIPTION:CRL 2026-06-29: Unicycive Therapeutics Inc. NDA 218607 (oxylant
+ hanum carbonate tablets)\nConfidence: confirmed\nTicker UNCY (confidence 0
+ .9)\nSource: https://download.open.fda.gov/crl/CRL_NDA218607_20260629.pdf\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA218607_20260629.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

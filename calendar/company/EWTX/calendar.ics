@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed EWTX trial readouts
+X-WR-CALNAME:BioCatalystFeed EWTX catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:668ea09307b44d4164d4@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:6ee31ec3b7174c3e2b3f@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:EWTX P2 readout (est.): A Study of EDG-5506 in Children With Duchen
@@ -18,9 +18,10 @@ SUMMARY:EWTX P2 readout (est.): A Study of EDG-5506 in Children With Duchen
 DESCRIPTION:A Study of EDG-5506 in Children With Duchenne Muscular Dystroph
  y (LYNX)\nNCT05540860 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Edgewise
   Therapeutics\, Inc.\nPrimary completion date (ESTIMATED)\; top-line resul
- ts usually follow later.\nTicker EWTX (confidence 0.9)\nSource: https://cl
- inicaltrials.gov/study/NCT05540860\nScheduling/reference data from public 
- records\; dates can move. Not investment\, legal or medical advice.
+ ts usually follow later.\nDate precision: month (shown on the first day)\n
+ Ticker EWTX (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT
+ 05540860\nScheduling/reference data from public records\; dates can move. 
+ Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT05540860
 CATEGORIES:readout,ESTIMATED

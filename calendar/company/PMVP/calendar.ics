@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed PMVP trial readouts
+X-WR-CALNAME:BioCatalystFeed PMVP catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:4ece1b2f32372d3acd9c@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:29e54c126b9cc54d6d13@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:PMVP P1/P2 readout (est.): The Evaluation of PC14586 in Patients Wi

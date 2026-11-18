@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ATRA catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:6e647fe5deded62fc726@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:ATRA PDUFA (company-disclosed): PDUFA March 31\, 2027 - Atara Bioth
+ erapeutics\, Inc.
+DESCRIPTION:PDUFA March 31\, 2027 - Atara Biotherapeutics\, Inc.\nConfidenc
+ e: company-disclosed\nTicker ATRA (confidence 1.0)\nSource: https://www.se
+ c.gov/Archives/edgar/data/1604464/000110465926125171/tmb-ex99d1.htm\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1604464/000110465926125171/tmb-
+ ex99d1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

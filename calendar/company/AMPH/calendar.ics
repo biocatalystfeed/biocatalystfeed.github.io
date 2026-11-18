@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AMPH catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:1df45731ab815cbfc6d1@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260616
+DTEND;VALUE=DATE:20260617
+SUMMARY:AMPH APPROVAL: REXTOVY
+DESCRIPTION:Approved 2026-06-16: REXTOVY (NDA208969 SUPPL2)\nConfidence: co
+ nfirmed\nTicker AMPH (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208969\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=208969
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:3b22d8d63586d06e0c66@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260226
+DTEND;VALUE=DATE:20260227
+SUMMARY:AMPH CRL: We also acknowledge receipt of your amendment dated as SP
+  which was not reviewed for this action
+DESCRIPTION:CRL 2026-02-26: Amphastar Pharmaceuticals\, Inc. BLA 761403 (We
+  also acknowledge receipt of your amendment dated as SP which was not revi
+ ewed for this action)\nConfidence: confirmed\nTicker AMPH (confidence 0.9)
+ \nSource: https://download.open.fda.gov/crl/CRL_BLA761403_20260226.pdf\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761403_20260226.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

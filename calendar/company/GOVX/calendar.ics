@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed GOVX trial readouts
+X-WR-CALNAME:BioCatalystFeed GOVX catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:307cabbae711278ffbb4@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:2620e66cb4c2fda35df5@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:GOVX P2 readout (est.): SARS-CoV-2 Vaccine (GEO-CM04S1) Versus mRNA

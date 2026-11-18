@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed JAZZ trial readouts
+X-WR-CALNAME:BioCatalystFeed JAZZ catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:3fed7c4a6895c1d07728@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:cbc4858552fcf750f3be@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:JAZZ P2 readout (est.): A Phase 2 Study of Zanidatamab in Patients 
@@ -24,5 +24,37 @@ DESCRIPTION:A Phase 2 Study of Zanidatamab in Patients With HER2-expressing
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06695845
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:169ce390474878581a9c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:JAZZ APPROVAL: ZIIHERA
+DESCRIPTION:Approved 2026-08-25: ZIIHERA (BLA761416 SUPPL2)\nConfidence: co
+ nfirmed\nTicker JAZZ (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761416\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761416
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:91c24beb0ce9c64062b9@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260127
+DTEND;VALUE=DATE:20260128
+SUMMARY:JAZZ APPROVAL: VYXEOS
+DESCRIPTION:Approved 2026-01-27: VYXEOS (NDA209401 SUPPL18)\nConfidence: co
+ nfirmed\nTicker JAZZ (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209401\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=209401
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed MRNA catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:50215e8906b4e45a81bb@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+SUMMARY:MRNA PDUFA (company-disclosed): PDUFA August 5 - Moderna\, Inc.
+DESCRIPTION:PDUFA August 5 - Moderna\, Inc.\nConfidence: company-disclosed\
+ nTicker MRNA (confidence 1.0)\nSource: https://www.sec.gov/Archives/edgar/
+ data/1682852/000168285226000147/exhibit9912026q2pressrelea.htm\nScheduling
+ /reference data from public records\; dates can move. Not investment\, leg
+ al or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1682852/000168285226000147/exhi
+ bit9912026q2pressrelea.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

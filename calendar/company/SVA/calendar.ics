@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed SVA trial readouts
+X-WR-CALNAME:BioCatalystFeed SVA catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:ceb8cb684b25f46180df@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:e43cc5e8c1aacd6c5114@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
 SUMMARY:SVA P3 readout (est.): Immunogenicity and Safety of Rabies Vaccine 
@@ -27,8 +27,8 @@ URL:https://clinicaltrials.gov/study/NCT07055295
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:2dd9d2abb7e465d516e8@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:d0001037b97106e3c6b6@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:SVA P3 readout (est.): Phase Ⅲ Trial of Group ACYW135 Meningococc
@@ -36,17 +36,17 @@ SUMMARY:SVA P3 readout (est.): Phase Ⅲ Trial of Group ACYW135 Meningococc
 DESCRIPTION:Phase Ⅲ Trial of Group ACYW135 Meningococcal Conjugate Vaccin
  e in Children Aged 12-23 Months\nNCT07505836 | PHASE3 | RECRUITING | spons
  or: Sinovac Biotech Co.\, Ltd\nPrimary completion date (ESTIMATED)\; top-l
- ine results usually follow later.\nTicker SVA (confidence 0.9)\nSource: ht
- tps://clinicaltrials.gov/study/NCT07505836\nScheduling/reference data from
-  public records\; dates can move. Not investment\, legal or medical advice
- .
+ ine results usually follow later.\nDate precision: month (shown on the fir
+ st day)\nTicker SVA (confidence 0.9)\nSource: https://clinicaltrials.gov/s
+ tudy/NCT07505836\nScheduling/reference data from public records\; dates ca
+ n move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07505836
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:d08bb226ce9c5d215f09@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:e7182b929a6c7e5e33ed@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270130
 DTEND;VALUE=DATE:20270131
 SUMMARY:SVA P3 readout (est.): Immunogenicity and Safety of Rabies Vaccine 

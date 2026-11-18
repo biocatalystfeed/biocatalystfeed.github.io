@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AGIO catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:99b4df7491c29e5c2383@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:AGIO PDUFA (company-disclosed): PDUFA September 30\, 2026 - AGIOS P
+ HARMACEUTICALS\, INC.
+DESCRIPTION:PDUFA September 30\, 2026 - AGIOS PHARMACEUTICALS\, INC.\nConfi
+ dence: company-disclosed\nTicker AGIO (confidence 1.0)\nSource: https://ww
+ w.sec.gov/Archives/edgar/data/1439222/000143922226000129/agio-110526xfyxex
+ 991earnin.htm\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1439222/000143922226000129/agio
+ -110526xfyxex991earnin.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:e3f51350ecdaf28304bb@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251223
+DTEND;VALUE=DATE:20251224
+SUMMARY:AGIO APPROVAL: AQVESME\; PYRUKYND
+DESCRIPTION:Approved 2025-12-23: AQVESME\; PYRUKYND (NDA216196 SUPPL3)\nCon
+ fidence: confirmed\nTicker AGIO (confidence 0.6)\nSource: https://www.acce
+ ssdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=21
+ 6196\nScheduling/reference data from public records\; dates can move. Not 
+ investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=216196
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

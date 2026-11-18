@@ -3,24 +3,24 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed ABVX trial readouts
+X-WR-CALNAME:BioCatalystFeed ABVX catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:262e6b3dcd8ca44fa1ca@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:674c25ba707051a27af6@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:ABVX P2 readout (est.): Efficacy and Safety of Obefazimod in Subjec
- ts With Moderately to Severely Active Crohn's Disease
+SUMMARY:ABVX P2 readout (est.): ENHANCE-CD
 DESCRIPTION:Efficacy and Safety of Obefazimod in Subjects With Moderately t
  o Severely Active Crohn's Disease\nNCT06456593 | PHASE2 | RECRUITING | spo
  nsor: Abivax S.A.\nPrimary completion date (ESTIMATED)\; top-line results 
- usually follow later.\nTicker ABVX (confidence 0.9)\nSource: https://clini
- caltrials.gov/study/NCT06456593\nScheduling/reference data from public rec
- ords\; dates can move. Not investment\, legal or medical advice.
+ usually follow later.\nDate precision: month (shown on the first day)\nTic
+ ker ABVX (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT064
+ 56593\nScheduling/reference data from public records\; dates can move. Not
+  investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06456593
 CATEGORIES:readout,ESTIMATED
