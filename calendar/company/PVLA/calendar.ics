@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed PVLA catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:0c985e199b365bf84e37@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:PVLA PDUFA (company-disclosed): PDUFA February 28\, 2027 - PALVELLA
+  THERAPEUTICS\, INC.
+DESCRIPTION:PDUFA February 28\, 2027 - PALVELLA THERAPEUTICS\, INC.\nConfid
+ ence: company-disclosed\nTicker PVLA (confidence 1.0)\nSource: https://www
+ .sec.gov/Archives/edgar/data/1583648/000119312526448594/pvla-ex99_2.htm\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1583648/000119312526448594/pvla
+ -ex99_2.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

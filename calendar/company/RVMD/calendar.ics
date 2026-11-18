@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed RVMD catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:0d79267228d03855dda1@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:RVMD APPROVAL: RASONQUE
+DESCRIPTION:Approved 2026-08-26: RASONQUE (NDA220910 ORIG1)\nConfidence: co
+ nfirmed\nTicker RVMD (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220910\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220910
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

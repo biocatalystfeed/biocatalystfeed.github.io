@@ -3,32 +3,32 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed PRAX trial readouts
+X-WR-CALNAME:BioCatalystFeed PRAX catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:8bd348543bd54bd04984@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:9c399b854a9f9d0a9ae1@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:PRAX P3 readout (est.): A Clinical Trial for Participants With DEE 
- to Assess Efficacy\, Safety\, Tolerability\, and PK of Relutrigine
+SUMMARY:PRAX P3 readout (est.): EMERALD
 DESCRIPTION:A Clinical Trial for Participants With DEE to Assess Efficacy\,
   Safety\, Tolerability\, and PK of Relutrigine\nNCT07010471 | PHASE3 | ACT
  IVE_NOT_RECRUITING | sponsor: Praxis Precision Medicines\nPrimary completi
- on date (ESTIMATED)\; top-line results usually follow later.\nTicker PRAX 
- (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07010471\nSc
- heduling/reference data from public records\; dates can move. Not investme
- nt\, legal or medical advice.
+ on date (ESTIMATED)\; top-line results usually follow later.\nDate precisi
+ on: month (shown on the first day)\nTicker PRAX (confidence 0.9)\nSource: 
+ https://clinicaltrials.gov/study/NCT07010471\nScheduling/reference data fr
+ om public records\; dates can move. Not investment\, legal or medical advi
+ ce.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07010471
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:043ad6c41ad2ad5de772@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:227fec5e580455965f52@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:PRAX P3 readout (est.): A Clinical Trial of Elsunersen in Pediatric
@@ -36,29 +36,45 @@ SUMMARY:PRAX P3 readout (est.): A Clinical Trial of Elsunersen in Pediatric
 DESCRIPTION:A Clinical Trial of Elsunersen in Pediatric SCN2A-DEE to Assess
   Efficacy and Safety\nNCT07019922 | PHASE3 | RECRUITING | sponsor: Praxis 
  Precision Medicines\nPrimary completion date (ESTIMATED)\; top-line result
- s usually follow later.\nTicker PRAX (confidence 0.9)\nSource: https://cli
- nicaltrials.gov/study/NCT07019922\nScheduling/reference data from public r
- ecords\; dates can move. Not investment\, legal or medical advice.
+ s usually follow later.\nDate precision: month (shown on the first day)\nT
+ icker PRAX (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT0
+ 7019922\nScheduling/reference data from public records\; dates can move. N
+ ot investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07019922
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:aec5c9a9cca87e97b36a@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:a6f9a15cda292542a1fb@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
-SUMMARY:PRAX P3 readout (est.): Randomized Clinical Trial Evaluating the Ef
- ficacy and Safety of Vormatrigine in Adults With Focal Seizures
+SUMMARY:PRAX P3 readout (est.): POWER2
 DESCRIPTION:Randomized Clinical Trial Evaluating the Efficacy and Safety of
   Vormatrigine in Adults With Focal Seizures\nNCT07505004 | PHASE3 | ACTIVE
  _NOT_RECRUITING | sponsor: Praxis Precision Medicines\nPrimary completion 
- date (ESTIMATED)\; top-line results usually follow later.\nTicker PRAX (co
- nfidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT07505004\nSched
- uling/reference data from public records\; dates can move. Not investment\
- , legal or medical advice.
+ date (ESTIMATED)\; top-line results usually follow later.\nDate precision:
+  month (shown on the first day)\nTicker PRAX (confidence 0.9)\nSource: htt
+ ps://clinicaltrials.gov/study/NCT07505004\nScheduling/reference data from 
+ public records\; dates can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07505004
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:1363807714957010cc9c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:PRAX PDUFA (company-disclosed): ulixacaltamide
+DESCRIPTION:PDUFA December 27\, 2026 - Praxis Precision Medicines\, Inc. (u
+ lixacaltamide)\nConfidence: company-disclosed\nTicker PRAX (confidence 1.0
+ )\nSource: https://www.sec.gov/Archives/edgar/data/1689548/000168954826000
+ 086/praxisq32026pr.htm\nScheduling/reference data from public records\; da
+ tes can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1689548/000168954826000086/prax
+ isq32026pr.htm
+CATEGORIES:pdufa,company-disclosed
 END:VEVENT
 END:VCALENDAR

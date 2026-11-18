@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed TVTX catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:1d8e3b8961af5f8daa48@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260413
+DTEND;VALUE=DATE:20260414
+SUMMARY:TVTX APPROVAL: FILSPARI
+DESCRIPTION:Approved 2026-04-13: FILSPARI (NDA216403 SUPPL6)\nConfidence: c
+ onfirmed\nTicker TVTX (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216403\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=216403
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

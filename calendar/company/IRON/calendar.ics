@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed IRON catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:86eca664a76d015e0a21@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260213
+DTEND;VALUE=DATE:20260214
+SUMMARY:IRON CRL: CRL 2026-02-13: Disc Medicine\, Inc. NDA 220707
+DESCRIPTION:CRL 2026-02-13: Disc Medicine\, Inc. NDA 220707\nConfidence: co
+ nfirmed\nTicker IRON (confidence 0.9)\nSource: https://download.open.fda.g
+ ov/crl/CRL_NDA220707_20260213.pdf\nScheduling/reference data from public r
+ ecords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220707_20260213.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed OGN catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b5ca5dae4ea43d78f634@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260116
+DTEND;VALUE=DATE:20260117
+SUMMARY:OGN APPROVAL: IMPLANON\; NEXPLANON
+DESCRIPTION:Approved 2026-01-16: IMPLANON\; NEXPLANON (NDA021529 SUPPL27)\n
+ Confidence: confirmed\nTicker OGN (confidence 0.9)\nSource: https://www.ac
+ cessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=
+ 021529\nScheduling/reference data from public records\; dates can move. No
+ t investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=021529
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

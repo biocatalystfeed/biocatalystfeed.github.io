@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed GKOS catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:c57f70cbfd96b150da3c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260127
+DTEND;VALUE=DATE:20260128
+SUMMARY:GKOS APPROVAL: IDOSE TR
+DESCRIPTION:Approved 2026-01-27: IDOSE TR (NDA218010 SUPPL4)\nConfidence: c
+ onfirmed\nTicker GKOS (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218010\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218010
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

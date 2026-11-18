@@ -3,19 +3,17 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed VTRS trial readouts
+X-WR-CALNAME:BioCatalystFeed VTRS catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:aeebff08afc8fd316fbb@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:6a90fda403a7b2c6b67e@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-SUMMARY:VTRS P3 readout (est.): A Research Study to Evaluate the Efficacy a
- nd Safety of Cenerimod in Subjects Suffering From Systemic Lupus Erythemat
- osus
+SUMMARY:VTRS P3 readout (est.): OPUS-2
 DESCRIPTION:A Research Study to Evaluate the Efficacy and Safety of Cenerim
  od in Subjects Suffering From Systemic Lupus Erythematosus\nNCT05672576 | 
  PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Viatris Innovation GmbH\nPrimary
@@ -26,5 +24,21 @@ DESCRIPTION:A Research Study to Evaluate the Efficacy and Safety of Cenerim
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT05672576
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:8db5b91c7c809d3ad167@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+SUMMARY:VTRS APPROVAL: GWYN LO
+DESCRIPTION:Approved 2026-07-28: GWYN LO (NDA219990 ORIG1)\nConfidence: con
+ firmed\nTicker VTRS (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219990\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219990
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

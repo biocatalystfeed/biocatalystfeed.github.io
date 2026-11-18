@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed CAPR catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:e55165b575de859a6c6c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:CAPR PDUFA (company-disclosed): PDUFA November 22\, 2026 - CAPRICOR
+  THERAPEUTICS\, INC.
+DESCRIPTION:PDUFA November 22\, 2026 - CAPRICOR THERAPEUTICS\, INC.\nConfid
+ ence: company-disclosed\nTicker CAPR (confidence 1.0)\nSource: https://www
+ .sec.gov/Archives/edgar/data/1133869/000110465926125150/capr-ex99d1.htm\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1133869/000110465926125150/capr
+ -ex99d1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:337da3311e1e9801e8a7@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:CAPR ADCOM (scheduled): AdCom 2026-07-29: Cellular\, Tissue\, and G
+ ene Therapies Advisory Committee - BLA 125842
+DESCRIPTION:AdCom 2026-07-29: Cellular\, Tissue\, and Gene Therapies Adviso
+ ry Committee - BLA 125842\nConfidence: scheduled\nTicker CAPR (confidence 
+ 0.9)\nSource: https://www.federalregister.gov/documents/2026/06/29/2026-13
+ 096/cellular-tissue-and-gene-therapies-advisory-committee-notice-of-meetin
+ g-establishment-of-a-public\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/06/29/2026-13096/cellula
+ r-tissue-and-gene-therapies-advisory-committee-notice-of-meeting-establish
+ ment-of-a-public
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:2f95b7969fbdb250cc66@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:CAPR ADCOM (scheduled): AdCom 2026-07-29: Cellular\, Tissue\, and G
+ ene Therapies Advisory Committee - BLA 125842
+DESCRIPTION:AdCom 2026-07-29: Cellular\, Tissue\, and Gene Therapies Adviso
+ ry Committee - BLA 125842\nConfidence: scheduled\nTicker CAPR (confidence 
+ 0.9)\nSource: https://www.federalregister.gov/documents/2026/07/24/2026-15
+ 016/cellular-tissue-and-gene-therapies-advisory-committee-amendment-of-not
+ ice-biologics-license\nScheduling/reference data from public records\; dat
+ es can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/07/24/2026-15016/cellula
+ r-tissue-and-gene-therapies-advisory-committee-amendment-of-notice-biologi
+ cs-license
+CATEGORIES:adcom,scheduled
+END:VEVENT
+END:VCALENDAR

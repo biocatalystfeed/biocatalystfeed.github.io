@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed HRMY catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:df950432cfc4c316e801@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:HRMY PDUFA (company-disclosed): PDUFA April 1\, 2027 - Harmony Bios
+ ciences Holdings\, Inc.
+DESCRIPTION:PDUFA April 1\, 2027 - Harmony Biosciences Holdings\, Inc.\nCon
+ fidence: company-disclosed\nTicker HRMY (confidence 1.0)\nSource: https://
+ www.sec.gov/Archives/edgar/data/1802665/000110465926122377/hrmy-ex99d1.htm
+ \nScheduling/reference data from public records\; dates can move. Not inve
+ stment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1802665/000110465926122377/hrmy
+ -ex99d1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:15ea10299bb62ef43b2c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260213
+DTEND;VALUE=DATE:20260214
+SUMMARY:HRMY APPROVAL: WAKIX
+DESCRIPTION:Approved 2026-02-13: WAKIX (NDA211150 SUPPL6)\nConfidence: conf
+ irmed\nTicker HRMY (confidence 0.9)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211150\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=211150
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

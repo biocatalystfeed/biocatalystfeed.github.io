@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed TAK trial readouts
+X-WR-CALNAME:BioCatalystFeed TAK catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:6cd0ff8d4705b23097d9@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:93ae2e1696fefea94c3a@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:TAK P2 readout (est.): A Study of TAK-360 in Adults With Idiopathic
@@ -26,8 +26,8 @@ URL:https://clinicaltrials.gov/study/NCT06812078
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:a7847d83dc00ec479f99@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:3b255bf0ca27963550bf@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:TAK P2 readout (est.): A Study of TAK-360 in Adults With Narcolepsy
@@ -43,8 +43,8 @@ URL:https://clinicaltrials.gov/study/NCT06952699
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:8052bfd058663f45fd90@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:5706de3fb54b2e0f8981@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:TAK P3 readout (est.): A Trial of TAK-861 for the Treatment of Narc
@@ -60,8 +60,8 @@ URL:https://clinicaltrials.gov/study/NCT07363720
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:cfe1f34e5d6d37702a5c@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:1b7e1d97f0940c50819c@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:TAK P3 readout (est.): A Study to Evaluate the Safety and Tolerabil
@@ -83,8 +83,8 @@ URL:https://clinicaltrials.gov/study/NCT05319353
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:e1e895e78cecd44b0c89@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:6a4b33593894ecbcdad1@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270205
 DTEND;VALUE=DATE:20270206
 SUMMARY:TAK P2 readout (est.): A Study of Zasocitinib in Adults With Hidrad
@@ -100,8 +100,8 @@ URL:https://clinicaltrials.gov/study/NCT07244263
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:abd06bfb9256e1776928@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:9daab703f82916dfc778@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270210
 DTEND;VALUE=DATE:20270211
 SUMMARY:TAK P3 readout (est.): A Study of Teduglutide in Chinese Adults Wit
@@ -115,5 +115,72 @@ DESCRIPTION:A Study of Teduglutide in Chinese Adults With Short Bowel Syndr
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06973304
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:e4ba6eb5f7e8d50cfe63@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:TAK P2 readout (est.): A Study on the Safety of TAK-279 and Whether
+  it Can Reduce Inflammation in the Bowel of Participants With Moderately t
+ o Severely Active Crohn's Disease
+DESCRIPTION:A Study on the Safety of TAK-279 and Whether it Can Reduce Infl
+ ammation in the Bowel of Participants With Moderately to Severely Active C
+ rohn's Disease\nNCT06233461 | PHASE2 | RECRUITING | sponsor: Takeda\nPrima
+ ry completion date (ESTIMATED)\; top-line results usually follow later.\nT
+ icker TAK (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06
+ 233461\nScheduling/reference data from public records\; dates can move. No
+ t investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT06233461
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:d231270d89944eaf7f57@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY:TAK APPROVAL: MIMRYLO
+DESCRIPTION:Approved 2026-08-28: MIMRYLO (NDA220605 ORIG1)\nConfidence: con
+ firmed\nTicker TAK (confidence 0.6)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220605\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220605
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1a55b1c8a3bad1fb3e36@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+SUMMARY:TAK APPROVAL: ORZEYFUL
+DESCRIPTION:Approved 2026-08-05: ORZEYFUL (NDA220860 ORIG1)\nConfidence: co
+ nfirmed\nTicker TAK (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220860\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220860
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:173435922bd14eb7000f@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251121
+DTEND;VALUE=DATE:20251122
+SUMMARY:TAK APPROVAL: LIVTENCITY
+DESCRIPTION:Approved 2025-11-21: LIVTENCITY (NDA215596 SUPPL7)\nConfidence:
+  confirmed\nTicker TAK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215596\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215596
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

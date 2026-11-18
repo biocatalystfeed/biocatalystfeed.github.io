@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed GRCE catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:4b937bcf3378c321606f@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260423
+DTEND;VALUE=DATE:20260424
+SUMMARY:GRCE CRL: (nimodipine) injection
+DESCRIPTION:CRL 2026-04-23: Grace Therapeutics U.S.\, Inc. NDA 220304 ((nim
+ odipine) injection)\nConfidence: confirmed\nTicker GRCE (confidence 0.6)\n
+ Source: https://download.open.fda.gov/crl/CRL_NDA220304_20260423_Redacted.
+ pdf\nScheduling/reference data from public records\; dates can move. Not i
+ nvestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA220304_20260423_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

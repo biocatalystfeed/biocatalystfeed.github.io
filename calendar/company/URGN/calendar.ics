@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed URGN catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:467b48df6af8afe9a570@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270615
+SUMMARY:URGN PDUFA (company-disclosed): PDUFA June 14\, 2027 - UroGen Pharm
+ a Ltd.
+DESCRIPTION:PDUFA June 14\, 2027 - UroGen Pharma Ltd.\nConfidence: company-
+ disclosed\nTicker URGN (confidence 1.0)\nSource: https://www.sec.gov/Archi
+ ves/edgar/data/1668243/000143774926034769/ex_1036873.htm\nScheduling/refer
+ ence data from public records\; dates can move. Not investment\, legal or 
+ medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1668243/000143774926034769/ex_1
+ 036873.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

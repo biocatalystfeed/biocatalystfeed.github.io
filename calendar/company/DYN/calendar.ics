@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed DYN catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:7e8245ec90dc30820104@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270122
+SUMMARY:DYN PDUFA (company-disclosed): rostudirsen
+DESCRIPTION:PDUFA January 21\, 2027 - Dyne Therapeutics\, Inc. (rostudirsen
+ )\nConfidence: company-disclosed\nTicker DYN (confidence 1.0)\nSource: htt
+ ps://www.sec.gov/Archives/edgar/data/1818794/000181879426000013/dyn-ex99_1
+ .htm\nScheduling/reference data from public records\; dates can move. Not 
+ investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1818794/000181879426000013/dyn-
+ ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

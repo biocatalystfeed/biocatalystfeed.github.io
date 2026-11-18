@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed INBX catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:e5708a7e335b6b9fe101@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270414
+DTEND;VALUE=DATE:20270415
+SUMMARY:INBX PDUFA (company-disclosed): PDUFA April 14\, 2027 - Inhibrx Bio
+ sciences\, Inc.
+DESCRIPTION:PDUFA April 14\, 2027 - Inhibrx Biosciences\, Inc.\nConfidence:
+  company-disclosed\nTicker INBX (confidence 1.0)\nSource: https://www.sec.
+ gov/Archives/edgar/data/2007919/000200791926000033/inhibrx-20260615.htm\nS
+ cheduling/reference data from public records\; dates can move. Not investm
+ ent\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/2007919/000200791926000033/inhi
+ brx-20260615.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,91 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed TEVA catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b0f487abde6314630780@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:TEVA APPROVAL: IGALMI
+DESCRIPTION:Approved 2026-11-13: IGALMI (NDA215390 SUPPL3)\nConfidence: con
+ firmed\nTicker TEVA (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215390\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215390
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b13995ddb65bc4973214@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:TEVA APPROVAL: WELTRUZA
+DESCRIPTION:Approved 2026-10-08: WELTRUZA (NDA219007 ORIG1)\nConfidence: co
+ nfirmed\nTicker TEVA (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219007\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219007
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:490fa36f6bb6d140b93b@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:TEVA APPROVAL: DEGEVMA
+DESCRIPTION:Approved 2026-09-25: DEGEVMA (BLA761481 ORIG1)\nConfidence: con
+ firmed\nTicker TEVA (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761481\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761481
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5df4cc4007c9afbebd18@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260327
+DTEND;VALUE=DATE:20260328
+SUMMARY:TEVA APPROVAL: PONLIMSI
+DESCRIPTION:Approved 2026-03-27: PONLIMSI (BLA761385 ORIG1)\nConfidence: co
+ nfirmed\nTicker TEVA (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761385\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761385
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:dbaf5f10fbd11bf38131@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251119
+DTEND;VALUE=DATE:20251120
+SUMMARY:TEVA APPROVAL: IGALMI
+DESCRIPTION:Approved 2025-11-19: IGALMI (NDA215390 SUPPL2)\nConfidence: con
+ firmed\nTicker TEVA (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215390\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215390
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

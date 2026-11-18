@@ -3,18 +3,17 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed AMGN trial readouts
+X-WR-CALNAME:BioCatalystFeed AMGN catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:b473904069206d53d2a4@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:23a9610247924b6ad4ed@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
-SUMMARY:AMGN P1/P2 readout (est.): A Study of Anvumetostat in Participants 
- With Advanced MTAP-null Solid Tumors (MTAPESTRY 101)
+SUMMARY:AMGN P1/P2 readout (est.): MTAPESTRY 101
 DESCRIPTION:A Study of Anvumetostat in Participants With Advanced MTAP-null
   Solid Tumors (MTAPESTRY 101)\nNCT05094336 | PHASE1/PHASE2 | ACTIVE_NOT_RE
  CRUITING | sponsor: Amgen\nPrimary completion date (ESTIMATED)\; top-line 
@@ -26,12 +25,11 @@ URL:https://clinicaltrials.gov/study/NCT05094336
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:c84af83b3ad41d3f9147@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:ed4c88f60437e23a2078@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
-SUMMARY:AMGN P3 readout (est.): Pharmacokinetic Similarity Between ABP 234 
- and Keytruda® (Pembrolizumab)
+SUMMARY:AMGN P3 readout (est.): Eucalyptus
 DESCRIPTION:Pharmacokinetic Similarity Between ABP 234 and Keytruda® (Pemb
  rolizumab)\nNCT06430866 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Amgen\
  nPrimary completion date (ESTIMATED)\; top-line results usually follow lat
@@ -43,8 +41,8 @@ URL:https://clinicaltrials.gov/study/NCT06430866
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:e584aa26848addf4a7ec@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:c37640b98878616f875b@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:AMGN P1/P2 readout (est.): A Study of AMG 732 in Healthy Participan
@@ -60,13 +58,11 @@ URL:https://clinicaltrials.gov/study/NCT06401044
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:b58047322790d0dec117@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:d189451e8ecce656ae9c@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270122
-SUMMARY:AMGN P3 readout (est.): Evaluation of Maridebart Cafraglutide in Ad
- ult Participants Without Type 2 Diabetes Mellitus Who Have Obesity or Are 
- Overweight
+SUMMARY:AMGN P3 readout (est.): MARITIME-1
 DESCRIPTION:Evaluation of Maridebart Cafraglutide in Adult Participants Wit
  hout Type 2 Diabetes Mellitus Who Have Obesity or Are Overweight\nNCT06858
  839 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Amgen\nPrimary completion 
@@ -79,13 +75,11 @@ URL:https://clinicaltrials.gov/study/NCT06858839
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:0848a29c35a32233fbbf@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:79d51bd783a3d0ef1739@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270122
-SUMMARY:AMGN P3 readout (est.): Efficacy and Safety of Maridebart Cafraglut
- ide in Adult Participants With Type 2 Diabetes Mellitus Who Have Obesity o
- r Are Overweight
+SUMMARY:AMGN P3 readout (est.): MARITIME-2
 DESCRIPTION:Efficacy and Safety of Maridebart Cafraglutide in Adult Partici
  pants With Type 2 Diabetes Mellitus Who Have Obesity or Are Overweight\nNC
  T06858878 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Amgen\nPrimary compl
@@ -96,5 +90,53 @@ DESCRIPTION:Efficacy and Safety of Maridebart Cafraglutide in Adult Partici
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06858878
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:50ab17ca9fafc44132a3@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:AMGN APPROVAL: PAVBLU
+DESCRIPTION:Approved 2026-10-22: PAVBLU (BLA761298 ORIG2)\nConfidence: conf
+ irmed\nTicker AMGN (confidence 0.9)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761298\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761298
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1e4415a12266799794fd@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:AMGN APPROVAL: REPATHA
+DESCRIPTION:Approved 2026-10-09: REPATHA (BLA125522 SUPPL47)\nConfidence: c
+ onfirmed\nTicker AMGN (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125522\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125522
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0b07b64750e66bd5b4e2@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251119
+DTEND;VALUE=DATE:20251120
+SUMMARY:AMGN APPROVAL: IMDELLTRA
+DESCRIPTION:Approved 2025-11-19: IMDELLTRA (BLA761344 SUPPL1)\nConfidence: 
+ confirmed\nTicker AMGN (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761344\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761344
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

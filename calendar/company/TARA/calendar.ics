@@ -3,26 +3,25 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed TARA trial readouts
+X-WR-CALNAME:BioCatalystFeed TARA catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:3f4f9d9e709176806120@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:ba335ad2f7a53a721d47@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:TARA P2 readout (est.): Safety and Efficacy Study of Intracystic TA
- RA-002 for the Treatment of Lymphatic Malformations in Participants 6 Mont
- hs to Less Than 18 Years of Age
+SUMMARY:TARA P2 readout (est.): STARBORN-1
 DESCRIPTION:Safety and Efficacy Study of Intracystic TARA-002 for the Treat
  ment of Lymphatic Malformations in Participants 6 Months to Less Than 18 Y
  ears of Age\nNCT05871970 | PHASE2 | RECRUITING | sponsor: Protara Therapeu
  tics\nPrimary completion date (ESTIMATED)\; top-line results usually follo
- w later.\nTicker TARA (confidence 0.9)\nSource: https://clinicaltrials.gov
- /study/NCT05871970\nScheduling/reference data from public records\; dates 
- can move. Not investment\, legal or medical advice.
+ w later.\nDate precision: month (shown on the first day)\nTicker TARA (con
+ fidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05871970\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT05871970
 CATEGORIES:readout,ESTIMATED

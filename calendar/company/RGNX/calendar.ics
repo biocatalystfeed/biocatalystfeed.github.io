@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed RGNX catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:5491173faaa24b6797c1@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260207
+DTEND;VALUE=DATE:20260208
+SUMMARY:RGNX CRL: clemidsogene lanparvovee\, (1)
+DESCRIPTION:CRL 2026-02-07: REGENXBIO\, Inc. BL 125840 (clemidsogene lanpar
+ vovee\, (1))\nConfidence: confirmed\nTicker RGNX (confidence 0.9)\nSource:
+  https://download.open.fda.gov/crl/CRL_BLA125840_20260207.pdf\nScheduling/
+ reference data from public records\; dates can move. Not investment\, lega
+ l or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA125840_20260207.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed MRK trial readouts
+X-WR-CALNAME:BioCatalystFeed MRK catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:dac774e03470467e9b94@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:e4f78a1429f6367d6e4a@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:MRK P3 readout (est.): Study of Pembrolizumab (MK-3475) in Combinat
@@ -31,8 +31,8 @@ URL:https://clinicaltrials.gov/study/NCT04634877
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:bb92ff014b8498c17f7c@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:0e24b2c05fc383b9165e@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:MRK P1/P2 readout (est.): A Study of Belzutifan (MK-6482) in Combin
@@ -51,8 +51,8 @@ URL:https://clinicaltrials.gov/study/NCT05468697
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:fcc959ee452186d0b91f@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:f6672bf68d76b66982bc@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:MRK P3 readout (est.): Study of Pembrolizumab (MK-3475) Monotherapy
@@ -74,8 +74,8 @@ URL:https://clinicaltrials.gov/study/NCT05609968
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:c25f2c8acd2896ef5f67@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:71d283bb82a17269e6aa@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:MRK P3 readout (est.): Efficacy Against Oral Persistent Infection\,
@@ -93,8 +93,8 @@ URL:https://clinicaltrials.gov/study/NCT04199689
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:19e1a5ed2ef8cdeb26c8@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:2a784a66cade349cd9c3@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:MRK P3 readout (est.): Efficacy and Safety of Pembrolizumab (MK-347
@@ -111,5 +111,345 @@ DESCRIPTION:Efficacy and Safety of Pembrolizumab (MK-3475) in Combination W
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT04241185
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:9732df1c46890ff99cbc@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270213
+SUMMARY:MRK P2 readout (est.): Safety and Efficacy of Pembrolizumab (MK-347
+ 5) in Children and Young Adults With Classical Hodgkin Lymphoma (MK-3475-6
+ 67/KEYNOTE-667)
+DESCRIPTION:Safety and Efficacy of Pembrolizumab (MK-3475) in Children and 
+ Young Adults With Classical Hodgkin Lymphoma (MK-3475-667/KEYNOTE-667)\nNC
+ T03407144 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Merck Sharp & Dohme 
+ LLC\nPrimary completion date (ESTIMATED)\; top-line results usually follow
+  later.\nTicker MRK (confidence 0.6)\nSource: https://clinicaltrials.gov/s
+ tudy/NCT03407144\nScheduling/reference data from public records\; dates ca
+ n move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT03407144
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:ef28db6d51eff94c6fd8@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:MRK P2 readout (est.): Study to Evaluate Tulisokibart in Adults Wit
+ h Psoriatic Arthritis (MK-7240-015)
+DESCRIPTION:Study to Evaluate Tulisokibart in Adults With Psoriatic Arthrit
+ is (MK-7240-015)\nNCT07486960 | PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: 
+ Merck Sharp & Dohme LLC\nPrimary completion date (ESTIMATED)\; top-line re
+ sults usually follow later.\nTicker MRK (confidence 0.6)\nSource: https://
+ clinicaltrials.gov/study/NCT07486960\nScheduling/reference data from publi
+ c records\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07486960
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:514ca414165bf506bb10@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-10-16: KEYTRUDA (BLA125514 SUPPL191)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:471a042ff4f3e9deb2d0@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-10-16: KEYTRUDA QLEX (BLA761467 SUPPL8)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:d64c41c76b91f40802e7@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:MRK APPROVAL: ENFLONSIA
+DESCRIPTION:Approved 2026-10-14: ENFLONSIA (BLA761432 SUPPL3)\nConfidence: 
+ confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761432\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761432
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:427d9e08d1252f4cf6db@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:MRK APPROVAL: WELIREG
+DESCRIPTION:Approved 2026-09-24: WELIREG (NDA215383 SUPPL13)\nConfidence: c
+ onfirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215383\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215383
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:dff45e0ec0fb6cdffbe2@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:MRK APPROVAL: WINREVAIR
+DESCRIPTION:Approved 2026-09-21: WINREVAIR (BLA761363 SUPPL12)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761363\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761363
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:94b359b26e148ba1261b@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-07-10: KEYTRUDA (BLA125514 SUPPL194)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:64f8cddced87634dca26@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-07-10: KEYTRUDA QLEX (BLA761467 SUPPL12)\nConfide
+ nce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdat
+ a.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\
+ nScheduling/reference data from public records\; dates can move. Not inves
+ tment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:618657e9bd95e4cf0024@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-06-24: KEYTRUDA (BLA125514 SUPPL187)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a34eee5dc0758d8a9002@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-06-24: KEYTRUDA QLEX (BLA761467 SUPPL4)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b666c9183b939f527cf8@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:MRK APPROVAL: WELIREG
+DESCRIPTION:Approved 2026-06-12: WELIREG (NDA215383 SUPPL15)\nConfidence: c
+ onfirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215383\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215383
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:897ca66b05ba98af9730@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-06-12: KEYTRUDA (BLA125514 SUPPL192)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5f19dc43526498f4bcf9@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-06-12: KEYTRUDA QLEX (BLA761467 SUPPL9)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b43b5db0174e1ba3a60f@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260424
+DTEND;VALUE=DATE:20260425
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-04-24: KEYTRUDA QLEX (BLA761467 SUPPL3)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0868a027edadc7d94eee@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260210
+DTEND;VALUE=DATE:20260211
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2026-02-10: KEYTRUDA (BLA125514 SUPPL186)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:fb3516a10709f94730c9@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260210
+DTEND;VALUE=DATE:20260211
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2026-02-10: KEYTRUDA QLEX (BLA761467 SUPPL2)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:970cb607b770d7619cc6@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260127
+DTEND;VALUE=DATE:20260128
+SUMMARY:MRK APPROVAL: NOXAFIL
+DESCRIPTION:Approved 2026-01-27: NOXAFIL (NDA205053 SUPPL18)\nConfidence: c
+ onfirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205053\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=205053
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:70af68e087da88f68c8c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260127
+DTEND;VALUE=DATE:20260128
+SUMMARY:MRK APPROVAL: NOXAFIL
+DESCRIPTION:Approved 2026-01-27: NOXAFIL (NDA205596 SUPPL21)\nConfidence: c
+ onfirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205596\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=205596
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b233343ca30a18409966@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251121
+DTEND;VALUE=DATE:20251122
+SUMMARY:MRK APPROVAL: KEYTRUDA
+DESCRIPTION:Approved 2025-11-21: KEYTRUDA (BLA125514 SUPPL188)\nConfidence:
+  confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125514\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=125514
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:1924721e9e05650032ea@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251121
+DTEND;VALUE=DATE:20251122
+SUMMARY:MRK APPROVAL: KEYTRUDA QLEX
+DESCRIPTION:Approved 2025-11-21: KEYTRUDA QLEX (BLA761467 SUPPL1)\nConfiden
+ ce: confirmed\nTicker MRK (confidence 0.6)\nSource: https://www.accessdata
+ .fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761467\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761467
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

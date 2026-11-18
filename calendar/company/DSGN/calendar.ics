@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed DSGN trial readouts
+X-WR-CALNAME:BioCatalystFeed DSGN catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:429432c08572dd5bb324@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:4d56a5c888c6e323ed67@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:DSGN P1/P2 readout (est.): A Multiple Ascending Dose Study of DT-21
@@ -18,9 +18,10 @@ SUMMARY:DSGN P1/P2 readout (est.): A Multiple Ascending Dose Study of DT-21
 DESCRIPTION:A Multiple Ascending Dose Study of DT-216P2 in Patients With Fr
  iedreich's Ataxia\nNCT06874010 | PHASE1/PHASE2 | RECRUITING | sponsor: Des
  ign Therapeutics\, Inc.\nPrimary completion date (ESTIMATED)\; top-line re
- sults usually follow later.\nTicker DSGN (confidence 0.9)\nSource: https:/
- /clinicaltrials.gov/study/NCT06874010\nScheduling/reference data from publ
- ic records\; dates can move. Not investment\, legal or medical advice.
+ sults usually follow later.\nDate precision: month (shown on the first day
+ )\nTicker DSGN (confidence 0.9)\nSource: https://clinicaltrials.gov/study/
+ NCT06874010\nScheduling/reference data from public records\; dates can mov
+ e. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06874010
 CATEGORIES:readout,ESTIMATED

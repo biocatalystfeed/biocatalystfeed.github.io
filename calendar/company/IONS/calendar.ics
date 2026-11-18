@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed IONS trial readouts
+X-WR-CALNAME:BioCatalystFeed IONS catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:59210aa764a3dff6ef5d@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:02ddcd4e2ae006d5b15e@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:IONS P3 readout (est.): A Study to Assess the Long-Term Safety and 
@@ -20,11 +20,44 @@ DESCRIPTION:A Study to Assess the Long-Term Safety and Efficacy of Donidalo
  rsen in the Prophylactic Treatment of Hereditary Angioedema (HAE)\nNCT0539
  2114 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Ionis Pharmaceuticals\, I
  nc.\nPrimary completion date (ESTIMATED)\; top-line results usually follow
-  later.\nTicker IONS (confidence 0.9)\nSource: https://clinicaltrials.gov/
- study/NCT05392114\nScheduling/reference data from public records\; dates c
- an move. Not investment\, legal or medical advice.
+  later.\nDate precision: month (shown on the first day)\nTicker IONS (conf
+ idence 0.9)\nSource: https://clinicaltrials.gov/study/NCT05392114\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT05392114
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:e09a255ea3f41fd085b2@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260904
+SUMMARY:IONS APPROVAL: ZANVASTRO
+DESCRIPTION:Approved 2026-09-03: ZANVASTRO (NDA220210 ORIG1)\nConfidence: c
+ onfirmed\nTicker IONS (confidence 0.6)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220210\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220210
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:75b34c8f73a4d0ad1e10@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:IONS APPROVAL: TRYNGOLZA (AUTOINJECTOR)
+DESCRIPTION:Approved 2026-06-24: TRYNGOLZA (AUTOINJECTOR) (NDA218614 SUPPL4
+ )\nConfidence: confirmed\nTicker IONS (confidence 0.6)\nSource: https://ww
+ w.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&App
+ lNo=218614\nScheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218614
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

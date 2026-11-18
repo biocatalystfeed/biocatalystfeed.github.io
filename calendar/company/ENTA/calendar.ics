@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed ENTA trial readouts
+X-WR-CALNAME:BioCatalystFeed ENTA catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:49b286ca7f8bfb2bcc01@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:e546e2762fdc02a89c1f@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:ENTA P2 readout (est.): A Phase 2 Study to Investigate the Efficacy
@@ -20,10 +20,10 @@ DESCRIPTION:A Phase 2 Study to Investigate the Efficacy and Safety of Zelic
  apavir in Participants Aged ≥28 Days to ≤36 Months of Age Infected Wit
  h Respiratory Syncytial Virus\nNCT07482657 | PHASE2 | RECRUITING | sponsor
  : Enanta Pharmaceuticals\, Inc\nPrimary completion date (ESTIMATED)\; top-
- line results usually follow later.\nTicker ENTA (confidence 0.9)\nSource: 
- https://clinicaltrials.gov/study/NCT07482657\nScheduling/reference data fr
- om public records\; dates can move. Not investment\, legal or medical advi
- ce.
+ line results usually follow later.\nDate precision: month (shown on the fi
+ rst day)\nTicker ENTA (confidence 0.9)\nSource: https://clinicaltrials.gov
+ /study/NCT07482657\nScheduling/reference data from public records\; dates 
+ can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07482657
 CATEGORIES:readout,ESTIMATED

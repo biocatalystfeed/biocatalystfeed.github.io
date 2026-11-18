@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed CORT trial readouts
+X-WR-CALNAME:BioCatalystFeed CORT catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:b6fe3d177387be27c2a7@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:88b7b9fce7aec5af3f95@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:CORT P2 readout (est.): Extension Study to Evaluate the Safety of L
@@ -18,12 +18,43 @@ SUMMARY:CORT P2 readout (est.): Extension Study to Evaluate the Safety of L
 DESCRIPTION:Extension Study to Evaluate the Safety of Long-Term Use of Rela
  corilant in Patients With Cushing Syndrome\nNCT03604198 | PHASE2 | ACTIVE_
  NOT_RECRUITING | sponsor: Corcept Therapeutics\nPrimary completion date (E
- STIMATED)\; top-line results usually follow later.\nTicker CORT (confidenc
- e 0.9)\nSource: https://clinicaltrials.gov/study/NCT03604198\nScheduling/r
- eference data from public records\; dates can move. Not investment\, legal
-  or medical advice.
+ STIMATED)\; top-line results usually follow later.\nDate precision: month 
+ (shown on the first day)\nTicker CORT (confidence 0.9)\nSource: https://cl
+ inicaltrials.gov/study/NCT03604198\nScheduling/reference data from public 
+ records\; dates can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT03604198
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:341f60e32dd4bd47639c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260325
+DTEND;VALUE=DATE:20260326
+SUMMARY:CORT APPROVAL: LIFYORLI (COPACKAGED)
+DESCRIPTION:Approved 2026-03-25: LIFYORLI (COPACKAGED) (NDA220641 ORIG1)\nC
+ onfidence: confirmed\nTicker CORT (confidence 0.6)\nSource: https://www.ac
+ cessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=
+ 220641\nScheduling/reference data from public records\; dates can move. No
+ t investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220641
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:8b99b2d2a9aec18ecb7d@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260128
+DTEND;VALUE=DATE:20260129
+SUMMARY:CORT CRL: relacorilant capsules
+DESCRIPTION:CRL 2026-01-28: Corcept Therapeutics NDA 219398 (relacorilant c
+ apsules)\nConfidence: confirmed\nTicker CORT (confidence 0.9)\nSource: htt
+ ps://download.open.fda.gov/crl/CRL_NDA219398_20260128.pdf\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_NDA219398_20260128.pdf
+CATEGORIES:crl,confirmed
 END:VEVENT
 END:VCALENDAR

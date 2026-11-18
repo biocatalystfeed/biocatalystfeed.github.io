@@ -1,0 +1,75 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ACAD catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:1de367a280bed50161f1@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260427
+DTEND;VALUE=DATE:20260428
+SUMMARY:ACAD APPROVAL: NUPLAZID
+DESCRIPTION:Approved 2026-04-27: NUPLAZID (NDA207318 SUPPL16)\nConfidence: 
+ confirmed\nTicker ACAD (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207318\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=207318
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0a827f90d0040890772d@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260427
+DTEND;VALUE=DATE:20260428
+SUMMARY:ACAD APPROVAL: NUPLAZID
+DESCRIPTION:Approved 2026-04-27: NUPLAZID (NDA210793 SUPPL14)\nConfidence: 
+ confirmed\nTicker ACAD (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=210793\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=210793
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6a6ff25d5f7f5b7520e9@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260327
+DTEND;VALUE=DATE:20260328
+SUMMARY:ACAD APPROVAL: DAYBUE
+DESCRIPTION:Approved 2026-03-27: DAYBUE (NDA217026 SUPPL8)\nConfidence: con
+ firmed\nTicker ACAD (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217026\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=217026
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:0d1bc15dc035e5b3dd57@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251211
+DTEND;VALUE=DATE:20251212
+SUMMARY:ACAD APPROVAL: DAYBUE STIX
+DESCRIPTION:Approved 2025-12-11: DAYBUE STIX (NDA219884 ORIG1)\nConfidence:
+  confirmed\nTicker ACAD (confidence 0.6)\nSource: https://www.accessdata.f
+ da.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219884\nSc
+ heduling/reference data from public records\; dates can move. Not investme
+ nt\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219884
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

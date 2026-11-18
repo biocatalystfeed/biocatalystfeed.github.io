@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed AD catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:21334c7828e5c7a54cc8@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260224
+DTEND;VALUE=DATE:20260225
+SUMMARY:AD APPROVAL: BRAFTOVI
+DESCRIPTION:Approved 2026-02-24: BRAFTOVI (NDA210496 SUPPL19)\nConfidence: 
+ confirmed\nTicker AD (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=210496\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=210496
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:5081b70779ff28f9aedd@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260224
+DTEND;VALUE=DATE:20260225
+SUMMARY:AD APPROVAL: BRAFTOVI
+DESCRIPTION:Approved 2026-02-24: BRAFTOVI (NDA210496 SUPPL21)\nConfidence: 
+ confirmed\nTicker AD (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=210496\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=210496
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

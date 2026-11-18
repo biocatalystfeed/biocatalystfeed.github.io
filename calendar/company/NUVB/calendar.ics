@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed NUVB catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:35aa0b45b06e68147be2@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:NUVB APPROVAL: IBTROZI
+DESCRIPTION:Approved 2026-09-16: IBTROZI (NDA219713 SUPPL4)\nConfidence: co
+ nfirmed\nTicker NUVB (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219713\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219713
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

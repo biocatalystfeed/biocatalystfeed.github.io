@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed PCRX trial readouts
+X-WR-CALNAME:BioCatalystFeed PCRX catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:a2a80b320d24786833a4@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:5c9008448cdccfe800dd@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:PCRX P3 readout (est.): ZILRETTA in Subjects With Shoulder Osteoart
@@ -18,9 +18,10 @@ SUMMARY:PCRX P3 readout (est.): ZILRETTA in Subjects With Shoulder Osteoart
 DESCRIPTION:ZILRETTA in Subjects With Shoulder Osteoarthritis\nNCT06269705 
  | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Pacira Pharmaceuticals\, Inc\n
  Primary completion date (ESTIMATED)\; top-line results usually follow late
- r.\nTicker PCRX (confidence 0.9)\nSource: https://clinicaltrials.gov/study
- /NCT06269705\nScheduling/reference data from public records\; dates can mo
- ve. Not investment\, legal or medical advice.
+ r.\nDate precision: month (shown on the first day)\nTicker PCRX (confidenc
+ e 0.9)\nSource: https://clinicaltrials.gov/study/NCT06269705\nScheduling/r
+ eference data from public records\; dates can move. Not investment\, legal
+  or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06269705
 CATEGORIES:readout,ESTIMATED

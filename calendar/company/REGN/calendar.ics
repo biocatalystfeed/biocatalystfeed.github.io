@@ -3,57 +3,17 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed REGN trial readouts
+X-WR-CALNAME:BioCatalystFeed REGN catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:a404346e89450acdf4c9@biocat.ai
-DTSTAMP:20261111T175519Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:REGN P1/P2 readout (est.): A Trial to Find Out How Safe REGN7075 is
-  and How Well it Works in Combination With Cemiplimab for Adult Participan
- ts With Advanced Cancers
-DESCRIPTION:A Trial to Find Out How Safe REGN7075 is and How Well it Works 
- in Combination With Cemiplimab for Adult Participants With Advanced Cancer
- s\nNCT04626635 | PHASE1/PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Regenero
- n Pharmaceuticals\nPrimary completion date (ESTIMATED)\; top-line results 
- usually follow later.\nTicker REGN (confidence 0.9)\nSource: https://clini
- caltrials.gov/study/NCT04626635\nScheduling/reference data from public rec
- ords\; dates can move. Not investment\, legal or medical advice.
-TRANSP:TRANSPARENT
-URL:https://clinicaltrials.gov/study/NCT04626635
-CATEGORIES:readout,ESTIMATED
-END:VEVENT
-BEGIN:VEVENT
-UID:c1385c5dfdf903f1413e@biocat.ai
-DTSTAMP:20261111T175519Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:REGN P2 readout (est.): Study of Olatorepatide in Adult Participant
- s Living With Overweight or Obesity in the US
-DESCRIPTION:Study of Olatorepatide in Adult Participants Living With Overwe
- ight or Obesity in the US\nNCT07431086 | PHASE2 | ACTIVE_NOT_RECRUITING | 
- sponsor: Regeneron Pharmaceuticals\nPrimary completion date (ESTIMATED)\; 
- top-line results usually follow later.\nTicker REGN (confidence 0.9)\nSour
- ce: https://clinicaltrials.gov/study/NCT07431086\nScheduling/reference dat
- a from public records\; dates can move. Not investment\, legal or medical 
- advice.
-TRANSP:TRANSPARENT
-URL:https://clinicaltrials.gov/study/NCT07431086
-CATEGORIES:readout,ESTIMATED
-END:VEVENT
-BEGIN:VEVENT
-UID:0c8295dc3a58c03d70c6@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:57a7d42226e19971843b@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
-SUMMARY:REGN P2 readout (est.): A Study to Test the Safety\, Tolerability\,
-  and Efficacy of an Antibody\, REGN7999\, Injected Under the Skin for the 
- Treatment of Iron Overload in Adult Participants With Non-Transfusion Depe
- ndent β-thalassemia\, Using MRI Scans to Measure Iron Levels in the Body
+SUMMARY:REGN P2 readout (est.): FERVENT-1
 DESCRIPTION:A Study to Test the Safety\, Tolerability\, and Efficacy of an 
  Antibody\, REGN7999\, Injected Under the Skin for the Treatment of Iron Ov
  erload in Adult Participants With Non-Transfusion Dependent β-thalassemia
@@ -68,13 +28,11 @@ URL:https://clinicaltrials.gov/study/NCT06421636
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:42a1daac76a5c7bc3eb3@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:a552f9d2e10ea592f95d@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261229
 DTEND;VALUE=DATE:20261230
-SUMMARY:REGN P2 readout (est.): A Study to See How Safe and Effective Aliro
- cumab is When Given Weekly to Adult Participants Who Have Hypercholesterol
- emia
+SUMMARY:REGN P2 readout (est.): ASCEND-QW
 DESCRIPTION:A Study to See How Safe and Effective Alirocumab is When Given 
  Weekly to Adult Participants Who Have Hypercholesterolemia\nNCT07477704 | 
  PHASE2 | ACTIVE_NOT_RECRUITING | sponsor: Regeneron Pharmaceuticals\nPrima
@@ -87,8 +45,8 @@ URL:https://clinicaltrials.gov/study/NCT07477704
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:9c0c592f8366997642a7@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:57c5db36b700a8808351@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:REGN P3 readout (est.): A Trial to See if the Combination of Fianli
@@ -107,12 +65,11 @@ URL:https://clinicaltrials.gov/study/NCT05608291
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:0dae0dd41bf56ecc520a@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:f14de2a0e968ff92e7bd@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270209
 DTEND;VALUE=DATE:20270210
-SUMMARY:REGN P2 readout (est.): Safety in Adult Participants With Atrial Fi
- brillation Who Are Treated With Anticoagulation
+SUMMARY:REGN P2 readout (est.): ROXI-ATLAS
 DESCRIPTION:Safety in Adult Participants With Atrial Fibrillation Who Are T
  reated With Anticoagulation\nNCT07175428 | PHASE2 | RECRUITING | sponsor: 
  Regeneron Pharmaceuticals\nPrimary completion date (ESTIMATED)\; top-line 
@@ -122,5 +79,85 @@ DESCRIPTION:Safety in Adult Participants With Atrial Fibrillation Who Are T
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT07175428
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:9fce70662728520f072c@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260820
+SUMMARY:REGN APPROVAL: PASATRU
+DESCRIPTION:Approved 2026-08-19: PASATRU (BLA761508 ORIG1)\nConfidence: con
+ firmed\nTicker REGN (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761508\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761508
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:a6ed595d6cf202261326@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260422
+DTEND;VALUE=DATE:20260423
+SUMMARY:REGN APPROVAL: DUPIXENT
+DESCRIPTION:Approved 2026-04-22: DUPIXENT (BLA761055 SUPPL74)\nConfidence: 
+ confirmed\nTicker REGN (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761055\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761055
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:da5430eb41534fc7a015@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+SUMMARY:REGN APPROVAL: EYLEA HD
+DESCRIPTION:Approved 2026-04-02: EYLEA HD (BLA761355 SUPPL5)\nConfidence: c
+ onfirmed\nTicker REGN (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761355\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761355
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:94e56036d89fd5af43aa@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260223
+DTEND;VALUE=DATE:20260224
+SUMMARY:REGN APPROVAL: DUPIXENT
+DESCRIPTION:Approved 2026-02-23: DUPIXENT (BLA761055 SUPPL75)\nConfidence: 
+ confirmed\nTicker REGN (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761055\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761055
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:cb889ac5e84accfd1e09@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251119
+DTEND;VALUE=DATE:20251120
+SUMMARY:REGN APPROVAL: EYLEA HD
+DESCRIPTION:Approved 2025-11-19: EYLEA HD (BLA761355 SUPPL10)\nConfidence: 
+ confirmed\nTicker REGN (confidence 0.9)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761355\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761355
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

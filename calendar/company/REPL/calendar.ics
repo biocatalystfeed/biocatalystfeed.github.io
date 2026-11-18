@@ -1,0 +1,63 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed REPL catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:bf8bb50d21a47dc23724@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+SUMMARY:REPL ADCOM (scheduled): AdCom 2026-07-30: Cellular\, Tissue\, and G
+ ene Therapies Advisory Committee - BLA 125827
+DESCRIPTION:AdCom 2026-07-30: Cellular\, Tissue\, and Gene Therapies Adviso
+ ry Committee - BLA 125827\nConfidence: scheduled\nTicker REPL (confidence 
+ 0.9)\nSource: https://www.federalregister.gov/documents/2026/07/08/2026-13
+ 810/cellular-tissue-and-gene-therapies-advisory-committee-notice-of-meetin
+ g-establishment-of-a-public\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/07/08/2026-13810/cellula
+ r-tissue-and-gene-therapies-advisory-committee-notice-of-meeting-establish
+ ment-of-a-public
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:0671d1eca5361d55fba0@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+SUMMARY:REPL ADCOM (scheduled): AdCom 2026-07-30: Cellular\, Tissue\, and G
+ ene Therapies Advisory Committee - BLA 125827
+DESCRIPTION:AdCom 2026-07-30: Cellular\, Tissue\, and Gene Therapies Adviso
+ ry Committee - BLA 125827\nConfidence: scheduled\nTicker REPL (confidence 
+ 0.9)\nSource: https://www.federalregister.gov/documents/2026/07/24/2026-15
+ 017/cellular-tissue-and-gene-therapies-advisory-committee-notice-of-meetin
+ g-establishment-of-a-public\nScheduling/reference data from public records
+ \; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.federalregister.gov/documents/2026/07/24/2026-15017/cellula
+ r-tissue-and-gene-therapies-advisory-committee-notice-of-meeting-establish
+ ment-of-a-public
+CATEGORIES:adcom,scheduled
+END:VEVENT
+BEGIN:VEVENT
+UID:22a4be3a5d82ff9ecf67@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260410
+DTEND;VALUE=DATE:20260411
+SUMMARY:REPL CRL: CRL 2026-04-10: Replimune\, Inc. BL 125827
+DESCRIPTION:CRL 2026-04-10: Replimune\, Inc. BL 125827\nConfidence: confirm
+ ed\nTicker REPL (confidence 0.9)\nSource: https://download.open.fda.gov/cr
+ l/CRL_BLA125827_20260410.pdf\nScheduling/reference data from public record
+ s\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA125827_20260410.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

@@ -3,24 +3,24 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed XENE trial readouts
+X-WR-CALNAME:BioCatalystFeed XENE catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:4d1488a7221df8c2f205@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:6c895e63ec9d76f3f433@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
-SUMMARY:XENE P3 readout (est.): An Open-Label Study of Azetukalner in Major
-  Depressive Disorder
+SUMMARY:XENE P3 readout (est.): X-NOVA-OLE
 DESCRIPTION:An Open-Label Study of Azetukalner in Major Depressive Disorder
  \nNCT06922110 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: Xenon Pharmaceut
  icals Inc.\nPrimary completion date (ESTIMATED)\; top-line results usually
-  follow later.\nTicker XENE (confidence 0.9)\nSource: https://clinicaltria
- ls.gov/study/NCT06922110\nScheduling/reference data from public records\; 
- dates can move. Not investment\, legal or medical advice.
+  follow later.\nDate precision: month (shown on the first day)\nTicker XEN
+ E (confidence 0.9)\nSource: https://clinicaltrials.gov/study/NCT06922110\n
+ Scheduling/reference data from public records\; dates can move. Not invest
+ ment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06922110
 CATEGORIES:readout,ESTIMATED

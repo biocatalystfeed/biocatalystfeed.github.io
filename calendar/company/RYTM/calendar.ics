@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed RYTM catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:3940127fc06bf184b2f3@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260319
+DTEND;VALUE=DATE:20260320
+SUMMARY:RYTM APPROVAL: IMCIVREE
+DESCRIPTION:Approved 2026-03-19: IMCIVREE (NDA213793 SUPPL9)\nConfidence: c
+ onfirmed\nTicker RYTM (confidence 0.9)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213793\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=213793
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

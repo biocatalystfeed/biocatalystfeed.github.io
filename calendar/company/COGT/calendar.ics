@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed COGT catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:a0f06b3d1c83a3223745@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:COGT PDUFA (company-disclosed): bezuclastinib
+DESCRIPTION:PDUFA November 30\, 2026 - Cogent Biosciences\, Inc. (bezuclast
+ inib)\nConfidence: company-disclosed\nTicker COGT (confidence 1.0)\nSource
+ : https://www.sec.gov/Archives/edgar/data/1622229/000119312526449926/cogt-
+ ex99_1.htm\nScheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1622229/000119312526449926/cogt
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

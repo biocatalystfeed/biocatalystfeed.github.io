@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ANAB catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:8946f5a6563b86f9d7dc@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:ANAB PDUFA (company-disclosed): imsidolimab
+DESCRIPTION:PDUFA Dec. 12\, 2026 - ANAPTYSBIO\, INC (imsidolimab)\nConfiden
+ ce: company-disclosed\nTicker ANAB (confidence 1.0)\nSource: https://www.s
+ ec.gov/Archives/edgar/data/1370053/000119312526396690/anab-ex99_1.htm\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1370053/000119312526396690/anab
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:4e83bcab93085d3c5335@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:ANAB PDUFA (company-disclosed): PDUFA February 2027 - ANAPTYSBIO\, 
+ INC
+DESCRIPTION:PDUFA February 2027 - ANAPTYSBIO\, INC\nConfidence: company-dis
+ closed\nDate precision: month (shown on the first day)\nTicker ANAB (confi
+ dence 1.0)\nSource: https://www.sec.gov/Archives/edgar/data/1370053/000119
+ 312526396690/anab-ex99_1.htm\nScheduling/reference data from public record
+ s\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1370053/000119312526396690/anab
+ -ex99_1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed CYTK catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:1458d3658db41b4a697e@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:CYTK APPROVAL: MYQORZO
+DESCRIPTION:Approved 2026-11-13: MYQORZO (NDA219083 SUPPL2)\nConfidence: co
+ nfirmed\nTicker CYTK (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219083\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219083
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:f13b051efabcb2719325@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251219
+DTEND;VALUE=DATE:20251220
+SUMMARY:CYTK APPROVAL: MYQORZO
+DESCRIPTION:Approved 2025-12-19: MYQORZO (NDA219083 ORIG1)\nConfidence: con
+ firmed\nTicker CYTK (confidence 0.9)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219083\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219083
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

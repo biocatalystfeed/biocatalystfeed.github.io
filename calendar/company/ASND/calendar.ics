@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed ASND catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:b44f9e0183e9dfde8561@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260227
+DTEND;VALUE=DATE:20260228
+SUMMARY:ASND APPROVAL: YUVIWEL
+DESCRIPTION:Approved 2026-02-27: YUVIWEL (NDA219164 ORIG1)\nConfidence: con
+ firmed\nTicker ASND (confidence 0.6)\nSource: https://www.accessdata.fda.g
+ ov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=219164\nSchedu
+ ling/reference data from public records\; dates can move. Not investment\,
+  legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=219164
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

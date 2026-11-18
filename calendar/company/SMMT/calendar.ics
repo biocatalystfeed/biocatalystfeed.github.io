@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed SMMT catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:efdf374084eeeb204ad0@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:SMMT CRL: AK112/SMT112 (also referred to by the Applicant as ivones
+ cimab)
+DESCRIPTION:CRL 2026-11-13: Summit Therapeutics Inc. BLA 761524 (AK112/SMT1
+ 12 (also referred to by the Applicant as ivonescimab))\nConfidence: confir
+ med\nTicker SMMT (confidence 0.9)\nSource: https://download.open.fda.gov/c
+ rl/CRL_BLA761524_20261113.pdf\nScheduling/reference data from public recor
+ ds\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761524_20261113.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

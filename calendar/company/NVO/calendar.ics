@@ -3,14 +3,14 @@ VERSION:2.0
 PRODID:-//BioCatalystFeed//bcf//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:BioCatalystFeed NVO trial readouts
+X-WR-CALNAME:BioCatalystFeed NVO catalysts
 X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
  . Not investment\, legal or medical advice.
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:c5cc70739396aa0d4124@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:4efa60f6e64c2d5af55a@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:NVO P2 readout (est.): A Research Study on How Well Different Doses
@@ -28,8 +28,8 @@ URL:https://clinicaltrials.gov/study/NCT07184632
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:5b295723a409e5a33f90@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:36f917ed2eab1e1ca680@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270115
 SUMMARY:NVO P2 readout (est.): A Research Study on How Well Different Doses
@@ -46,14 +46,11 @@ URL:https://clinicaltrials.gov/study/NCT07395687
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:f9597f6c8e4068775512@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:6c041788a2636017be7e@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270126
-SUMMARY:NVO P3 readout (est.): A Research Study to See How a Weekly Insulin
- \, Insulin Icodec\, Helps in Reducing the Blood Sugar Compared to Daily In
- sulin Glargine\, Both in Combination With Insulin Aspart\, in Adults With 
- Type 1 Diabetes
+SUMMARY:NVO P3 readout (est.): ONWARDS 11
 DESCRIPTION:A Research Study to See How a Weekly Insulin\, Insulin Icodec\,
   Helps in Reducing the Blood Sugar Compared to Daily Insulin Glargine\, Bo
  th in Combination With Insulin Aspart\, in Adults With Type 1 Diabetes\nNC
@@ -67,12 +64,11 @@ URL:https://clinicaltrials.gov/study/NCT07076199
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:d7a94dcf08bf8b6c11ff@biocat.ai
-DTSTAMP:20261111T175519Z
+UID:01816cc47c910dc989c5@biocat.ai
+DTSTAMP:20261118T181352Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-SUMMARY:NVO P3 readout (est.): ARTEMIS - A Research Study to Look at How Zi
- ltivekimab Works Compared to Placebo in People With a Heart Attack
+SUMMARY:NVO P3 readout (est.): ARTEMIS
 DESCRIPTION:ARTEMIS - A Research Study to Look at How Ziltivekimab Works Co
  mpared to Placebo in People With a Heart Attack\nNCT06118281 | PHASE3 | AC
  TIVE_NOT_RECRUITING | sponsor: Novo Nordisk A/S\nPrimary completion date (
@@ -83,5 +79,133 @@ DESCRIPTION:ARTEMIS - A Research Study to Look at How Ziltivekimab Works Co
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06118281
 CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
+UID:ea40eba7fb9c4ce3c927@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:NVO APPROVAL: AWIQLI FLEXTOUCH
+DESCRIPTION:Approved 2026-10-23: AWIQLI FLEXTOUCH (BLA761326 SUPPL1)\nConfi
+ dence: confirmed\nTicker NVO (confidence 0.95)\nSource: https://www.access
+ data.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=7613
+ 26\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761326
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:2f6140475797226791b4@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260326
+DTEND;VALUE=DATE:20260327
+SUMMARY:NVO APPROVAL: AWIQLI FLEXTOUCH
+DESCRIPTION:Approved 2026-03-26: AWIQLI FLEXTOUCH (BLA761326 ORIG2)\nConfid
+ ence: confirmed\nTicker NVO (confidence 0.95)\nSource: https://www.accessd
+ ata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=76132
+ 6\nScheduling/reference data from public records\; dates can move. Not inv
+ estment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761326
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9d75cb50a0a110a87b07@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260319
+DTEND;VALUE=DATE:20260320
+SUMMARY:NVO APPROVAL: WEGOVY\; WEGOVY FLEXTOUCH\; WEGOVY HD
+DESCRIPTION:Approved 2026-03-19: WEGOVY\; WEGOVY FLEXTOUCH\; WEGOVY HD (NDA
+ 215256 SUPPL29)\nConfidence: confirmed\nTicker NVO (confidence 0.95)\nSour
+ ce: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvi
+ ew.process&ApplNo=215256\nScheduling/reference data from public records\; 
+ dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215256
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:9310253c4bc30e809b28@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260227
+DTEND;VALUE=DATE:20260228
+SUMMARY:NVO APPROVAL: SOGROYA
+DESCRIPTION:Approved 2026-02-27: SOGROYA (BLA761156 SUPPL15)\nConfidence: c
+ onfirmed\nTicker NVO (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761156\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761156
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:c2fb151cf8b7b3ec4ece@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260227
+DTEND;VALUE=DATE:20260228
+SUMMARY:NVO APPROVAL: SOGROYA
+DESCRIPTION:Approved 2026-02-27: SOGROYA (BLA761156 SUPPL14)\nConfidence: c
+ onfirmed\nTicker NVO (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761156\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761156
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:8bf0edeac21ab807c08e@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260227
+DTEND;VALUE=DATE:20260228
+SUMMARY:NVO APPROVAL: SOGROYA
+DESCRIPTION:Approved 2026-02-27: SOGROYA (BLA761156 SUPPL12)\nConfidence: c
+ onfirmed\nTicker NVO (confidence 0.95)\nSource: https://www.accessdata.fda
+ .gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761156\nSche
+ duling/reference data from public records\; dates can move. Not investment
+ \, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761156
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:371d86d53371e24ab450@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251222
+DTEND;VALUE=DATE:20251223
+SUMMARY:NVO APPROVAL: WEGOVY
+DESCRIPTION:Approved 2025-12-22: WEGOVY (NDA218316 ORIG1)\nConfidence: conf
+ irmed\nTicker NVO (confidence 0.95)\nSource: https://www.accessdata.fda.go
+ v/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218316\nSchedul
+ ing/reference data from public records\; dates can move. Not investment\, 
+ legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218316
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:6771e90fa8c37e1428bd@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251121
+DTEND;VALUE=DATE:20251122
+SUMMARY:NVO APPROVAL: WEGOVY\; WEGOVY FLEXTOUCH\; WEGOVY HD
+DESCRIPTION:Approved 2025-11-21: WEGOVY\; WEGOVY FLEXTOUCH\; WEGOVY HD (NDA
+ 215256 SUPPL23)\nConfidence: confirmed\nTicker NVO (confidence 0.95)\nSour
+ ce: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvi
+ ew.process&ApplNo=215256\nScheduling/reference data from public records\; 
+ dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=215256
+CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

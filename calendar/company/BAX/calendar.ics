@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed BAX catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:20e9f9333b5fad2f7f2e@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:BAX APPROVAL: SODIUM BICARBONATE
+DESCRIPTION:Approved 2026-08-14: SODIUM BICARBONATE (NDA218524 ORIG1)\nConf
+ idence: confirmed\nTicker BAX (confidence 0.6)\nSource: https://www.access
+ data.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=2185
+ 24\nScheduling/reference data from public records\; dates can move. Not in
+ vestment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=218524
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:47204dd6da4fb208d154@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260330
+DTEND;VALUE=DATE:20260331
+SUMMARY:BAX APPROVAL: EPINEPHRINE
+DESCRIPTION:Approved 2026-03-30: EPINEPHRINE (NDA220626 ORIG1)\nConfidence:
+  confirmed\nTicker BAX (confidence 0.6)\nSource: https://www.accessdata.fd
+ a.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220626\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=220626
+CATEGORIES:approval,confirmed
+END:VEVENT
+END:VCALENDAR

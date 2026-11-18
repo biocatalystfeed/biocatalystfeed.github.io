@@ -1,0 +1,58 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed OTLK catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:bb71359a8886e2d1a377@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:OTLK PDUFA (company-disclosed): bevacizumab-vikg
+DESCRIPTION:PDUFA July 29\, 2026 - Outlook Therapeutics\, Inc. (bevacizumab
+ -vikg)\nConfidence: company-disclosed\nTicker OTLK (confidence 1.0)\nSourc
+ e: https://www.sec.gov/Archives/edgar/data/1649989/000110465926074346/tm26
+ 18010d1_ex99-1.htm\nScheduling/reference data from public records\; dates 
+ can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.sec.gov/Archives/edgar/data/1649989/000110465926074346/tm26
+ 18010d1_ex99-1.htm
+CATEGORIES:pdufa,company-disclosed
+END:VEVENT
+BEGIN:VEVENT
+UID:1e98829dd57ee1aa0ce9@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:OTLK APPROVAL: LYTENAVA
+DESCRIPTION:Approved 2026-07-24: LYTENAVA (BLA761320 ORIG1)\nConfidence: co
+ nfirmed\nTicker OTLK (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761320\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761320
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:b0eab7ec3f4dc2d11376@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20251230
+DTEND;VALUE=DATE:20251231
+SUMMARY:OTLK CRL: bevacizumab-vikg injection
+DESCRIPTION:CRL 2025-12-30: Outlook Therapeutics\, Inc. BLA 761320 (bevaciz
+ umab-vikg injection)\nConfidence: confirmed\nTicker OTLK (confidence 0.9)\
+ nSource: https://download.open.fda.gov/crl/CRL_BLA761320_20251230.pdf\nSch
+ eduling/reference data from public records\; dates can move. Not investmen
+ t\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761320_20251230.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR

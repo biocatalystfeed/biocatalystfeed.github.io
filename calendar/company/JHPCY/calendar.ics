@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed JHPCY catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:4892c7333ebf238018d5@biocat.ai
+DTSTAMP:20261118T181352Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260710
+SUMMARY:JHPCY CRL: SHR- 1210 injection
+DESCRIPTION:CRL 2026-07-09: Jiangsu Hengrui Pharmaceuticals Co.\, Ltd. BLA 
+ 761308 (SHR- 1210 injection)\nConfidence: confirmed\nTicker JHPCY (confide
+ nce 0.6)\nSource: https://download.open.fda.gov/crl/CRL_BLA761308_20260709
+ _Redacted.pdf\nScheduling/reference data from public records\; dates can m
+ ove. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA761308_20260709_Redacted.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+END:VCALENDAR
