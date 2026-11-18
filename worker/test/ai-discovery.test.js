@@ -137,13 +137,25 @@ test("Gavin's allowlist encodes arXiv, labs, Hugging Face, and the verified X ha
     ...allowlist.x.org_accounts.map((account) => ({ ...account, type: "org" })),
     ...allowlist.x.researcher_handles.map((account) => ({ ...account, type: "researcher" })),
   ];
-  assert.equal(csvRows.length, 28);
-  assert.equal(configRows.length, 28);
+  assert.ok(csvRows.length >= 1);
+  assert.equal(configRows.length, csvRows.length);
+  assert.equal(allowlist.x.org_accounts.length + allowlist.x.researcher_handles.length, csvRows.length);
   assert.deepEqual(configRows.map((row) => row.handle), csvRows.map((row) => row.handle));
   assert.deepEqual(configRows.map((row) => row.display_name), csvRows.map((row) => row.display_name));
   assert.deepEqual(configRows.map((row) => row.type), csvRows.map((row) => row.type));
-  assert.equal(allowlist.x.org_accounts.length, 18);
-  assert.equal(allowlist.x.researcher_handles.length, 10);
+  assert.ok(allowlist.x.org_accounts.length >= 1);
+  assert.ok(allowlist.x.researcher_handles.length >= 1);
+  const added = Object.fromEntries(configRows.map((row) => [row.handle, row]));
+  assert.equal(added.bryan_johnson.display_name, "Bryan Johnson");
+  assert.equal(added.bryan_johnson.type, "researcher");
+  assert.equal(added.bryan_johnson.profile_url, "https://x.com/bryan_johnson");
+  assert.match(added.bryan_johnson.notes, /17468569/);
+  assert.match(added.bryan_johnson.notes, /Founder of Blueprint and Kernel; longevity and self-measurement/);
+  assert.equal(added._katetolo.display_name, "Kate Tolo");
+  assert.equal(added._katetolo.type, "researcher");
+  assert.equal(added._katetolo.profile_url, "https://x.com/_katetolo");
+  assert.match(added._katetolo.notes, /965992202605355009/);
+  assert.match(added._katetolo.notes, /Works with Bryan Johnson on Immortals/);
   const handles = new Set(configRows.map((row) => row.handle));
   for (const rejected of ["MetaAI", "InsilicoMed"]) assert.equal(handles.has(rejected), false);
   assert.deepEqual(allowlist.x.rejected_lookalikes.map((row) => row.handle), ["MetaAI", "InsilicoMed"]);

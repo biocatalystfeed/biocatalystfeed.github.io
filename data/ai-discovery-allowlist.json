@@ -440,6 +440,22 @@
         "verified_on": "2026-11-06",
         "profile_url": "https://x.com/tesssmidt",
         "notes": "Live-fetched; Atomic architect at MIT EECS; geometric deep learning for molecules"
+      },
+      {
+        "handle": "bryan_johnson",
+        "display_name": "Bryan Johnson",
+        "affiliation": "Blueprint and Kernel",
+        "verified_on": "2026-11-18",
+        "profile_url": "https://x.com/bryan_johnson",
+        "notes": "X user id 17468569; bio: Founder of Blueprint and Kernel; longevity and self-measurement."
+      },
+      {
+        "handle": "_katetolo",
+        "display_name": "Kate Tolo",
+        "affiliation": "Immortals",
+        "verified_on": "2026-11-18",
+        "profile_url": "https://x.com/_katetolo",
+        "notes": "X user id 965992202605355009; bio: Works with Bryan Johnson on Immortals."
       }
     ]
   },
