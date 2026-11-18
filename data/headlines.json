@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-18T00:09:08.191Z",
+  "generated_at": "2026-11-18T01:07:21.706Z",
   "event_date": "2026-11-18",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -45,21 +45,21 @@
       "id": "ema",
       "enabled": true,
       "status": "ok",
-      "fetched": 20,
+      "fetched": 21,
       "note": "EMA daily medicines JSON. Variation decisions are not used; European Commission decision dates on already-authorised medicines are ignored. Source: European Medicines Agency."
     },
     {
       "id": "health-canada-noc",
       "enabled": true,
       "status": "ok",
-      "fetched": 135,
+      "fetched": 137,
       "note": "Health Canada Notice of Compliance Database. Contains information licensed under the Open Government Licence – Canada. Administrative and veterinary notices are dropped."
     },
     {
       "id": "europepmc",
       "enabled": true,
       "status": "ok",
-      "fetched": 33,
+      "fetched": 35,
       "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped. A blurb uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
@@ -667,15 +667,15 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43040014",
-      "headline": "The climate is in crisis - here's four things we can do",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040014).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03760-2",
+      "id": "europepmc:MED:43042892",
+      "headline": "Toward a Healthier Future Through Obesity Prevention and Care",
+      "blurb": "And relevance The emergence of effective obesity management medications offers a significant opportunity to curb the prevalence of obesity. Published in JAMA.",
+      "source_url": "https://doi.org/10.1001/jama.2026.19759",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-16",
+      "published_at": "2026-11-17",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -693,15 +693,15 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43040015",
-      "headline": "Chinese scientist sacked after child died in gene-editing trial",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040015).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03752-2",
+      "id": "europepmc:MED:43043095",
+      "headline": "Call for Papers on the Future of Obesity",
+      "blurb": "Published 2026-11-17 in JAMA (MED 43043095).",
+      "source_url": "https://doi.org/10.1001/jama.2026.26288",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-16",
+      "published_at": "2026-11-17",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -719,10 +719,10 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "europepmc:MED:43040016",
-      "headline": "Genetic variant that reshaped the human brain was inherited from Neanderthals",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040016).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03762-0",
+      "id": "europepmc:MED:43040014",
+      "headline": "The climate is in crisis - here's four things we can do",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040014).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03760-2",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
@@ -745,10 +745,10 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "europepmc:MED:43040017",
-      "headline": "Can AI actually help the climate? Nations want to harness the technology",
-      "blurb": "Published 2026-11-16 in Nature (MED 43040017).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03763-z",
+      "id": "europepmc:MED:43040015",
+      "headline": "Chinese scientist sacked after child died in gene-editing trial",
+      "blurb": "Published 2026-11-16 in Nature (MED 43040015).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03752-2",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-16",
@@ -771,6 +771,73 @@
       "scout_source": "bcf-ai-discovery"
     },
     {
+      "id": "orange-book:209569:2026-12-20",
+      "headline": "Tissueblue: Orange Book protection date Dec 20",
+      "blurb": "NDA 209569. Applicant listed as Dutch Ophthalmic Research Center International Bv.",
+      "source_url": "https://www.accessdata.fda.gov/scripts/cder/ob/results_product.cfm?Appl_Type=N&Appl_No=209569",
+      "source_type": "regulator",
+      "source_name": "FDA Orange Book",
+      "published_at": "2026-12-20",
+      "significance": 64,
+      "significance_rationale": "orange-loe-exclusivity 64; in 32d 0 = 64. Soonest Orange Book loss of exclusivity is an exclusivity code.",
+      "tier": 3,
+      "scout_source": "orange-book"
+    },
+    {
+      "id": "x:https://x.com/EricTopol/status/2122716956205916227",
+      "headline": "Innate immune memory of past hepatic injury promotes ischemic cardiac inflammation",
+      "blurb": "Liver-derived palmitic acid and AP-1-dependent epigenetic reprogramming of myeloid progenitors and cardiac macrophages are proposed to carry an inflammatory memory that may affect recovery after a heart attack. https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3",
+      "source_url": "https://x.com/EricTopol/status/2122716956205916227",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-17",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3"
+    },
+    {
+      "id": "sec-edgar:0001193125-26-461412",
+      "headline": "Vir Biotechnology, Inc. discloses a material definitive agreement in an 8-K",
+      "blurb": "Vir Biotechnology, Inc. disclosed a material definitive agreement and other events and financial statements and exhibits. Accession 0001193125-26-461412.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1706431/000119312526461412/0001193125-26-461412-index.html",
+      "source_type": "filing",
+      "source_name": "SEC EDGAR",
+      "published_at": "2026-11-16",
+      "significance": 64,
+      "significance_rationale": "sec-8k 58; 2d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "tier": 3,
+      "scout_source": "sec-edgar-8k"
+    },
+    {
+      "id": "x:https://x.com/EricTopol/status/2122801525672317145",
+      "headline": "Alcohol use reduces the efficacy of anti-PD1 immunotherapy by disrupting antitumor immunity",
+      "blurb": "In mouse models of lung and bladder cancer, moderate-to-heavy ethanol intake cut checkpoint-inhibitor benefit by about half, and a patient lung cancer cohort showed a similar association. https://www.science.org/doi/10.1126/scisignal.aef1375",
+      "source_url": "https://x.com/EricTopol/status/2122801525672317145",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-17",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.science.org/doi/10.1126/scisignal.aef1375"
+    },
+    {
+      "id": "bcf-papers:MED:43039660",
+      "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
+      "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
+      "source_url": "https://doi.org/10.26508/lsa.202603861",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-16",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
+    },
+    {
       "id": "x:https://x.com/IsomorphicLabs/status/2122661054723547449",
       "headline": "Isomorphic Labs announces Series C investment round",
       "blurb": "The AI drug-design company raised $5 billion, co-led by Greenoaks and Sequoia, to scale its proprietary drug design engine and therapeutic candidate pipeline. https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round",
@@ -785,17 +852,17 @@
       "linked_url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round"
     },
     {
-      "id": "sec-edgar:0001193125-26-461412",
-      "headline": "Vir Biotechnology, Inc. discloses a material definitive agreement in an 8-K",
-      "blurb": "Vir Biotechnology, Inc. disclosed a material definitive agreement and other events and financial statements and exhibits. Accession 0001193125-26-461412.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1706431/000119312526461412/0001193125-26-461412-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-16",
-      "significance": 64,
-      "significance_rationale": "sec-8k 58; 2d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "id": "bcf-papers:MED:43034332",
+      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
+      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
+      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-14",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2122349917591175225",
@@ -812,15 +879,15 @@
       "linked_url": "https://www.nature.com/articles/s42255-026-01662-1"
     },
     {
-      "id": "bcf-papers:MED:43039660",
-      "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
-      "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
-      "source_url": "https://doi.org/10.26508/lsa.202603861",
+      "id": "bcf-papers:MED:43023242",
+      "headline": "CRISPR opens the door to targeted therapy against glioblastoma (Review)",
+      "blurb": "Published 2026-11-13 in Int J Oncol (MED 43023242).",
+      "source_url": "https://doi.org/10.3892/ijo.2026.5957",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-16",
+      "published_at": "2026-11-13",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },
@@ -838,49 +905,10 @@
       "scout_source": "biorxiv"
     },
     {
-      "id": "bcf-papers:MED:43034332",
-      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
-      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
-      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
-      "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-14",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "bcf-papers"
-    },
-    {
       "id": "medrxiv:10.64898/2026.11.10.26367711",
       "headline": "Automating postmarketing pharmacovigilance with large language model agents",
       "blurb": "Across the benchmark, MedCheckpoint outperformed two coding-agent baselines in report quality across five dimensions rated by three independent LLM judges. Posted on medRxiv. Preprint, not peer-reviewed.",
       "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367711",
-      "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-12",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "medrxiv"
-    },
-    {
-      "id": "bcf-papers:MED:43023242",
-      "headline": "CRISPR opens the door to targeted therapy against glioblastoma (Review)",
-      "blurb": "Published 2026-11-13 in Int J Oncol (MED 43023242).",
-      "source_url": "https://doi.org/10.3892/ijo.2026.5957",
-      "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-13",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "bcf-papers"
-    },
-    {
-      "id": "medrxiv:10.64898/2026.11.10.26367736",
-      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
-      "blurb": "Indicated the GenAI system may generate more highly rated self-management advice than PCPs across most evaluated dimensions but offered no advantage in readability. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
       "source_type": "paper",
       "source_name": "medRxiv",
       "published_at": "2026-11-12",
@@ -903,10 +931,10 @@
       "scout_source": "bcf-ai-discovery"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.10.26367739",
-      "headline": "Silent Drift and Site-level Variance in Clinical AI: Real-world performance and subgroup analysis",
-      "blurb": "Overall sensitivity was 64.1% (95% CI, 61.5-66.6%), specificity 98.8% (95% CI, 98.6-99.0%), compared with 93% sensitivity and 93.7% specificity in the FDA 510(k) summary. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367739",
+      "id": "medrxiv:10.64898/2026.11.10.26367736",
+      "headline": "Generative AI Versus Primary Care Physicians from Plan Initiation to Long-Term Maintenance",
+      "blurb": "Indicated the GenAI system may generate more highly rated self-management advice than PCPs across most evaluated dimensions but offered no advantage in readability. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367736",
       "source_type": "paper",
       "source_name": "medRxiv",
       "published_at": "2026-11-12",
@@ -927,6 +955,19 @@
       "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
+    },
+    {
+      "id": "medrxiv:10.64898/2026.11.10.26367739",
+      "headline": "Silent Drift and Site-level Variance in Clinical AI: Real-world performance and subgroup analysis",
+      "blurb": "Overall sensitivity was 64.1% (95% CI, 61.5-66.6%), specificity 98.8% (95% CI, 98.6-99.0%), compared with 93% sensitivity and 93.7% specificity in the FDA 510(k) summary. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367739",
+      "source_type": "paper",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-12",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "medrxiv"
     },
     {
       "id": "biorxiv:10.64898/2026.02.23.703392",
