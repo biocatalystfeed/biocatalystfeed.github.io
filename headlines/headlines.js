@@ -1,4 +1,4 @@
-import { el, figureFor, formatDay, itemLink, loadHeadlines, sourceLine } from "./render.js";
+import { el, figureFor, formatDay, itemLink, loadHeadlines, sourceLine, tweetEmbed } from "./render.js";
 import { mountSearch } from "./search.js";
 
 const main = document.querySelector("#main");
@@ -9,6 +9,8 @@ function article(item) {
   const shot = figureFor(item);
   if (shot) nodes.push(shot);
   nodes.push(itemLink(item, "hed"));
+  const post = tweetEmbed(item);
+  if (post) nodes.push(post);
   if (item.blurb) nodes.push(el("p", { class: "blurb", text: item.blurb }));
   nodes.push(sourceLine(item));
   return el("article", { class: `item tier-${item.tier || 1}` }, nodes);

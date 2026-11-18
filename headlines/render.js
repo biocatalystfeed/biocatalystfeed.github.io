@@ -56,3 +56,37 @@ export function figureFor(item) {
   }
   return el("figure", { class: "shot" }, [img, caption]);
 }
+
+let twitterLoader = null;
+
+export function loadTwitterWidgets() {
+  if (twitterLoader) return twitterLoader;
+  twitterLoader = new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.onload = () => resolve();
+    document.body.append(script);
+  });
+  return twitterLoader;
+}
+
+export function xStatusUrl(item) {
+  const href = String(item?.source_url || "");
+  return /\/status\/\d+/.test(href) ? href : "";
+}
+
+export function tweetEmbed(item) {
+  const href = xStatusUrl(item);
+  if (!href) return null;
+  const quote = el("blockquote", { class: "twitter-tweet" });
+  quote.append(el("a", { href, text: href, rel: "noopener noreferrer" }));
+  const button = el("button", { type: "button", class: "show-post", text: "Show post" });
+  button.addEventListener("click", () => {
+    button.hidden = true;
+    loadTwitterWidgets().then(() => {
+      if (window.twttr?.widgets) window.twttr.widgets.load(quote.parentElement);
+    });
+  });
+  return el("div", { class: "tweet-slot" }, [button, quote]);
+}

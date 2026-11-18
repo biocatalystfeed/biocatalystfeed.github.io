@@ -14,6 +14,7 @@ import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { hostAllowed, xPickItems } from "../x-picks.mjs";
+import { xStatusUrl } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
@@ -715,5 +716,30 @@ test("disabled x picks add nothing and a valid pick is capped", () => {
   assert.equal(licenceOk("Non-free"), false);
   assert.equal(licenceOk("PD-US"), true);
   assert.match(uploadThumb(page.imageinfo[0].url), /400px-Asundexian\.svg\.png$/);
+});
+
+test("X posts get a click-to-load embed and no publisher image is fetched", () => {
+  const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
+  const render = fs.readFileSync(path.join(root, "headlines", "render.js"), "utf8");
+  const pageJs = fs.readFileSync(path.join(root, "headlines", "headlines.js"), "utf8");
+  const populate = fs.readFileSync(path.join(root, "scripts", "headlines", "populate.mjs"), "utf8");
+  assert.match(html, /content="noindex"/);
+  assert.doesNotMatch(html, /widgets\.js/);
+  assert.doesNotMatch(html, /<script[^>]+src=["']https?:/i);
+  assert.equal(fs.existsSync(path.join(root, "scripts", "headlines", "link-preview.mjs")), false);
+  assert.equal(fs.existsSync(path.join(root, "data", "og-url-cache.json")), false);
+  assert.doesNotMatch(populate, /attachLinkPreviews|og:image|og-url-cache/);
+  assert.doesNotMatch(render, /link-preview|og:image/);
+  assert.match(pageJs, /tweetEmbed\(item\)/);
+  assert.match(render, /Show post/);
+  const clickAt = render.indexOf('addEventListener("click"');
+  const widgetCall = render.indexOf("loadTwitterWidgets().then");
+  assert.ok(clickAt > 0 && widgetCall > clickAt);
+  const picks = JSON.parse(fs.readFileSync(path.join(root, "data", "x_picks.json"), "utf8"));
+  assert.ok(picks.picks.length > 0);
+  for (const pick of picks.picks) {
+    assert.match(xStatusUrl({ source_url: pick.postUrl, scout_source: "x" }), /\/status\/\d+/);
+  }
+  assert.equal(xStatusUrl({ source_url: "https://www.fda.gov/news", scout_source: "fda-press" }), "");
 });
 
