@@ -1,5 +1,6 @@
 import { el, figureFor, formatDay, formatStamp, itemLink, keepLastToken, loadHeadlines, sourceLine, tweetEmbed, watchTweetSlots } from "./render.js";
 import { mountSearch } from "./search.js";
+import { loadTrackedAccounts, renderTrackedAccounts } from "./tracked-accounts.js";
 
 const main = document.querySelector("#main");
 const dateline = document.querySelector("#dateline");
@@ -27,7 +28,9 @@ function showUnavailable(message) {
   );
 }
 
-mountSearch(document);
+const accountsReady = loadTrackedAccounts().catch(() => []);
+mountSearch(document, accountsReady);
+accountsReady.then((accounts) => renderTrackedAccounts(document.querySelector("#tracked-accounts"), accounts));
 
 try {
   const data = await loadHeadlines();

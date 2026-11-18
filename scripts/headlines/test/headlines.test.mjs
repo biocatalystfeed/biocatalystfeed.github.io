@@ -16,6 +16,7 @@ import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { hostAllowed, xPickItems } from "../x-picks.mjs";
 import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatStamp, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchUrls } from "../../../headlines/search.js";
+import { accountsFromAllowlist, matchTrackedAccounts, trackedSearchRows } from "../../../headlines/tracked-accounts.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
@@ -813,5 +814,43 @@ test("X posts load when scrolled near and the initial page has no third-party sc
     assert.match(xStatusUrl({ source_url: pick.postUrl, scout_source: "x" }), /\/status\/\d+/);
   }
   assert.equal(xStatusUrl({ source_url: "https://www.fda.gov/news", scout_source: "fda-press" }), "");
+});
+
+test("tracked X account search matches names and handles", () => {
+  const sample = accountsFromAllowlist({
+    x: {
+      org_accounts: [{ handle: "GoogleDeepMind", display_name: "Google DeepMind" }],
+      researcher_handles: [
+        { handle: "bryan_johnson", display_name: "Bryan Johnson" },
+        { handle: "@_katetolo", display_name: "Kate Tolo" },
+        { handle: "demishassabis", display_name: "Demis Hassabis" },
+      ],
+    },
+  });
+  assert.deepEqual(matchTrackedAccounts(sample, "bryan johnson").map((account) => account.handle), ["bryan_johnson"]);
+  assert.deepEqual(matchTrackedAccounts(sample, "@Bryan_Johnson").map((account) => account.handle), ["bryan_johnson"]);
+  assert.deepEqual(matchTrackedAccounts(sample, "_katetolo").map((account) => account.handle), ["_katetolo"]);
+  assert.deepEqual(matchTrackedAccounts(sample, "demis hassabis").map((account) => account.handle), ["demishassabis"]);
+  assert.deepEqual(matchTrackedAccounts(sample, "deep mind").map((account) => account.handle), ["GoogleDeepMind"]);
+  assert.equal(matchTrackedAccounts(sample, "q").length, 0);
+  const bryan = trackedSearchRows(sample, "bryan johnson")[0];
+  assert.equal(bryan.type, "Tracked X account");
+  assert.equal(bryan.title, "Bryan Johnson @bryan_johnson");
+  assert.equal(bryan.href, "https://x.com/bryan_johnson");
+
+  const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
+  const pageJs = fs.readFileSync(path.join(root, "headlines", "headlines.js"), "utf8");
+  assert.match(html, /id="tracked-accounts"/);
+  assert.match(pageJs, /renderTrackedAccounts/);
+  const live = accountsFromAllowlist(JSON.parse(fs.readFileSync(path.join(root, "data", "ai-discovery-allowlist.json"), "utf8")));
+  for (const handle of ["bryan_johnson", "_katetolo", "demishassabis"]) {
+    const account = live.find((row) => row.handle === handle);
+    assert.ok(account, handle);
+    assert.equal(account.href, `https://x.com/${handle}`);
+    assert.equal(account.href.includes("pbs.twimg"), false);
+  }
+  assert.ok(matchTrackedAccounts(live, "bryan johnson").some((account) => account.handle === "bryan_johnson"));
+  assert.ok(matchTrackedAccounts(live, "_katetolo").some((account) => account.handle === "_katetolo"));
+  assert.ok(matchTrackedAccounts(live, "demis hassabis").some((account) => account.handle === "demishassabis"));
 });
 
