@@ -22,9 +22,14 @@ import { assertFactual, factualViolation } from "../text.mjs";
 
 const root = path.resolve(import.meta.dirname, "../../..");
 
-test("homepage does not link to the headlines test", () => {
+test("homepage links to headlines from the nav", () => {
   const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
-  assert.equal(html.includes("/headlines"), false);
+  const css = fs.readFileSync(path.join(root, "style.css"), "utf8");
+  assert.match(html, /<a href="\/headlines\/">Headlines<\/a>/);
+  assert.match(css, /a\[href="\/headlines\/"\]\{display:inline-flex/);
+  assert.match(css, /min-height:44px/);
+  assert.match(css, /a\[href="\/headlines\/"\]:focus-visible/);
+  assert.match(css, /:not\(\[href="\/headlines\/"\]\)/);
 });
 
 test("swissmedic and pmda stay disabled, with no fetcher", () => {
