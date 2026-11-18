@@ -51,14 +51,14 @@
       "headline": "FDA approves Bayer's Sunharbo (asundexian), a new molecular entity",
       "entities": [
         {
+          "term": "Asundexian",
+          "weight": 3,
+          "kind": "drug"
+        },
+        {
           "term": "Bayer",
           "weight": 3,
           "kind": "org"
-        },
-        {
-          "term": "asundexian",
-          "weight": 3,
-          "kind": "drug"
         },
         {
           "term": "Sunharbo",
@@ -66,7 +66,7 @@
           "kind": "drug"
         }
       ],
-      "query": "Bayer; asundexian",
+      "query": "Bayer; Asundexian",
       "rejected": [
         {
           "provider": "commons",
@@ -128,6 +128,11 @@
       "headline": "Europe recommends AstraZeneca's Baxfendy for high blood pressure in adults",
       "entities": [
         {
+          "term": "baxdrostat",
+          "weight": 3,
+          "kind": "drug"
+        },
+        {
           "term": "AstraZeneca",
           "weight": 3,
           "kind": "org"
@@ -161,13 +166,36 @@
         },
         {
           "provider": "commons",
+          "title": "This is an image with the theme \" Health and Wellness in Africa \" from:",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "This is an image with the theme \" Health and Wellness in Africa \" from:",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
           "title": "Ambulatory blood pressure monitoring diagram. Elevated systolic BP in the nocturnal period. 66 year old man.",
           "score": 0,
           "type": "diagram",
           "why": "below relevance threshold"
         }
       ],
-      "skipped": "10 matches cleared the threshold but they are all photos, and the previous image is a photo."
+      "chosen": {
+        "provider": "commons",
+        "type": "diagram",
+        "relevance": 3,
+        "why": "drug \"baxdrostat\"",
+        "licence": "CC BY-SA 4.0",
+        "credit": "Vaccinationist",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Baxdrostat.svg",
+        "alt": "Chemical structure of baxdrostat"
+      }
     },
     {
       "index": 2,
@@ -181,14 +209,75 @@
         }
       ],
       "query": "Summit Therapeutics",
-      "rejected": [],
-      "skipped": "8 matches cleared the threshold but they are all photos, and the previous image is a photo."
+      "rejected": [
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, on Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Jacob Becraft, Co-founder & CEO, Strand Therapeutics, at Auto/Tech & TalkRobot stage during day two of Web Summit 2022 at the Altice Arena in Lisbon, Portugal. Pho",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "3 November 2022; Nikhita Singh, Co-founder & Chief Product Officer, Artificial; Jacob Becraft, Co-founder & CEO, Strand Therapeutics; Victoria Sun, Principal, Playground Global and",
+          "score": 0,
+          "type": "photo",
+          "why": "below relevance threshold"
+        }
+      ]
     },
     {
       "index": 3,
       "id": "ema:EMEA/H/C/006743:ema-opinion:2026-11-12",
       "headline": "Europe backs Fortvita Biologics' Zybrivo for a common form of lung cancer in adults",
       "entities": [
+        {
+          "term": "sintilimab",
+          "weight": 3,
+          "kind": "drug"
+        },
         {
           "term": "Fortvita",
           "weight": 3,
@@ -205,8 +294,22 @@
           "kind": "topic"
         }
       ],
-      "query": "lung cancer; Fortvita",
+      "query": "lung cancer; sintilimab",
       "rejected": [
+        {
+          "provider": "commons",
+          "title": "Small cell variant of squamous cell carcinoma (SCC) mimicking small cell lung carcinoma (SCLC). p63 immunochemistry",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
+          "title": "Immunohistochemical analysis of paraffin-embedded human lung carcinoma tissue using HAVCR2.",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
         {
           "provider": "commons",
           "title": "Esquema en el que se muestran las principales estructuras del sistema respiratorio y un cancer de pulmón que afecta al lóbulo superior del pulmón derecho.",
@@ -223,6 +326,13 @@
         },
         {
           "provider": "commons",
+          "title": "Four images of lung histology: (Top-left) Normal lung, bronchiole at center, with alveoli (mostly air) surrounding (Top-right) Lung adenocarcinoma showing papillary (finger-like) g",
+          "score": 0,
+          "type": "micrograph",
+          "why": "below relevance threshold"
+        },
+        {
+          "provider": "commons",
           "title": "lung cancer",
           "score": 0,
           "type": "diagram",
@@ -235,103 +345,15 @@
           "type": "photo",
           "why": "alt is not descriptive"
         }
-      ],
-      "chosen": {
-        "provider": "commons",
-        "type": "micrograph",
-        "relevance": 3,
-        "why": "exact condition \"lung cancer\" shown as a micrograph",
-        "licence": "CC BY-SA 2.0",
-        "credit": "Yale Rosen and Jian-Hua Qiao",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Small_cell_variant_epidermoid_carcinoma_of_the_lung_-_p63.jpg",
-        "alt": "Small cell variant of squamous cell carcinoma (SCC) mimicking small cell lung carcinoma (SCLC). p63 immunochemistry"
-      }
+      ]
     },
     {
       "index": 4,
-      "id": "clinicaltrials-calendar:NCT03815643:2026-11-24",
-      "headline": "Phase 3 Avelumab study in solid tumors reaches its primary completion Nov 24",
-      "entities": [
-        {
-          "term": "Avelumab",
-          "weight": 3,
-          "kind": "drug"
-        },
-        {
-          "term": "solid tumors",
-          "weight": 3,
-          "kind": "topic"
-        }
-      ],
-      "query": "solid tumors; Avelumab",
-      "rejected": [
-        {
-          "provider": "commons",
-          "title": "Soft Fibroma (fibroma molle).",
-          "score": 0,
-          "type": "photo",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "Tumor of the thyroid with solid cell nest features disclosing small cells of the main cell type (a) that express p63 (b) and cytokeratin 5 (c), in the absence of TTF1, calcitonin, ",
-          "score": 0,
-          "type": "micrograph",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "This image represents a basic overview on how scientists have created a porous microneedle matrix to load T-cells into for delivery to solid tumors",
-          "score": 0,
-          "type": "diagram",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "Histopathology of solid pseudopapillary tumor, H&E stain.",
-          "score": 0,
-          "type": "micrograph",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "Histopathology of solid pseudopapillary tumor, H&E stain.",
-          "score": 0,
-          "type": "micrograph",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "Beta-catenin immunohistochemistry in solid pseudopapillary tumor, showing both nuclear and cytoplasmic staining.",
-          "score": 0,
-          "type": "micrograph",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "Histopathology of solid pseudopapillary tumor with intracytoplasmic hyaline globules. H&E stain",
-          "score": 0,
-          "type": "micrograph",
-          "why": "below relevance threshold"
-        },
-        {
-          "provider": "commons",
-          "title": "Histopathology of solid pseudopapillary tumor with area of foamy macrophages. H&E stain",
-          "score": 0,
-          "type": "micrograph",
-          "why": "below relevance threshold"
-        }
-      ],
-      "chosen": {
-        "provider": "commons",
-        "type": "diagram",
-        "relevance": 3,
-        "why": "drug \"Avelumab\"",
-        "licence": "CC BY 4.0",
-        "credit": "Zhang W, Kong X, Ai B, Wang Z, Wang X, Wang N, Zheng S, Fang Y, Wang J.",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fonc-11-582664-g004.webp",
-        "alt": "Figure 4 Mechanism of action of Avelumab. PD-L1 may be expressed on tumor cells and tumor-infiltrating immune cells and can contribute to the inhibition of the anti-tumor immune re"
-      }
+      "id": "clinicaltrials-calendar:NCT06775860:2026-11-25",
+      "headline": "Phase 3 ICP-332 study in atopic dermatitis reaches its primary completion Nov 25",
+      "entities": [],
+      "query": "",
+      "rejected": []
     }
   ]
 }

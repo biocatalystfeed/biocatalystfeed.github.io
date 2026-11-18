@@ -360,8 +360,8 @@
           "height": 1445,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "drug \"Summit\"",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -375,8 +375,8 @@
           "height": 650,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "drug \"Summit\"",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -390,8 +390,8 @@
           "height": 1499,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "drug \"Summit\"",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -405,8 +405,8 @@
           "height": 684,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "drug \"Summit\"",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -420,8 +420,8 @@
           "height": 647,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "drug \"Summit\"",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -435,8 +435,8 @@
           "height": 654,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "drug \"Summit\"",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -450,8 +450,8 @@
           "height": 669,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "drug \"Summit\"",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -465,8 +465,8 @@
           "height": 636,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "drug \"Summit\"",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         }
       ]
@@ -977,8 +977,8 @@
           "height": 720,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "exact condition \"blood pressure\" shown as a photo",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -992,8 +992,8 @@
           "height": 771,
           "hosting": "hotlink",
           "type": "photo",
-          "relevance": 3,
-          "reason": "exact condition \"blood pressure\" shown as a photo",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1081,8 +1081,8 @@
           "height": 723,
           "hosting": "hotlink",
           "type": "micrograph",
-          "relevance": 3,
-          "reason": "exact condition \"lung cancer\" shown as a micrograph",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1096,8 +1096,8 @@
           "height": 720,
           "hosting": "hotlink",
           "type": "micrograph",
-          "relevance": 3,
-          "reason": "exact condition \"lung cancer\" shown as a micrograph",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {
@@ -1141,8 +1141,8 @@
           "height": 723,
           "hosting": "hotlink",
           "type": "micrograph",
-          "relevance": 3,
-          "reason": "exact condition \"lung cancer\" shown as a micrograph",
+          "relevance": 0,
+          "reason": "",
           "provider": "commons"
         },
         {

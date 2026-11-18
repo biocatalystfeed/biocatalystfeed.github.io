@@ -4,6 +4,8 @@ export const TOP_IMAGE_ITEMS = 5;
 
 const GENERIC = new Set(["europe", "phase", "study", "trial", "fda", "nih", "purple", "orange", "book", "health", "canada", "approved", "approval", "treatment", "cancer", "disease", "adults", "primary", "completion", "reaches", "grants", "accelerated", "biologics", "deutschland", "therapeutics", "pharmaceutical", "pharmaceuticals", "holdings", "systems", "devices", "panel", "microbiology", "advisory", "meeting", "provides", "clarity", "support", "development", "quality", "research", "summary", "adolescents", "obesity", "overweight", "weekly", "once", "china", "weight", "loss", "labs", "lab", "model", "round", "series", "company", "announces", "investment", "blood", "heart", "protein", "cell", "cells", "human", "posts", "links", "plasma", "signatures", "solid", "tumor", "tumors", "pressure", "delivery", "common", "form"]);
 
+export const AMBIGUOUS_COMPANY = new Set(["summit", "apple", "arrow", "pioneer", "genesis"]);
+
 const TOPICS = ["lung cancer", "blood pressure", "breast cancer", "insulin resistance", "heart disease", "type 2 diabetes", "alzheimer", "solid tumors"];
 
 const PEOPLE = /\b(child|children|infant|infants|baby|babies|toddler|toddlers|pediatric|paediatric|patient|patients|newborn|newborns)\b/i;
@@ -63,6 +65,8 @@ export function imageEntities(item) {
   const add = (term, weight, kind) => {
     const clean = String(term || "").replace(/\s+/g, " ").trim();
     if (clean.length < 4 || GENERIC.has(clean.toLowerCase())) return;
+    const orgWords = clean.split(/\s+/);
+    if (kind === "org" && orgWords.length === 1 && AMBIGUOUS_COMPANY.has(orgWords[0].toLowerCase())) return;
     if (found.some((entry) => entry.term.toLowerCase() === clean.toLowerCase())) return;
     found.push({ term: clean, weight, kind });
   };
@@ -106,6 +110,7 @@ export function explainMatch(entities, text, type = "photo") {
     const words = entity.term.toLowerCase().split(/\s+/);
     if (words.length < 2 && words.every((word) => GENERIC.has(word))) continue;
     if (entity.kind !== "topic" && words.every((word) => GENERIC.has(word))) continue;
+    if (entity.kind === "org" && words.length === 1 && AMBIGUOUS_COMPANY.has(words[0])) continue;
     if (!exactName(hay, entity.term)) continue;
     if (/^bayer$/i.test(entity.term) && /\bbayer\s+(?:filter|pattern|mosaic|matrix|sensor)\b/i.test(hay)) continue;
     if (entity.kind === "topic") {
