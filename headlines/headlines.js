@@ -1,6 +1,6 @@
 import { el, figureFor, formatLocalDay, formatStamp, formatUpdatedTime, itemLink, keepLastToken, loadHeadlines, sourceLine, tweetEmbed, watchTweetSlots } from "./render.js";
 import { mountSearch } from "./search.js";
-import { applyTrackedAccountFilter, loadTrackedAccounts, renderTrackedAccounts } from "./tracked-accounts.js";
+import { applyTrackedAccountFilter, bindTrackedDisclosure, loadTrackedAccounts, markTrackedOpen, renderTrackedAccounts } from "./tracked-accounts.js";
 
 const main = document.querySelector("#main");
 const dateline = document.querySelector("#dateline");
@@ -28,12 +28,14 @@ function showUnavailable(message) {
   );
 }
 
+const trackedSection = document.querySelector("#tracked-accounts");
+bindTrackedDisclosure(trackedSection);
+document.querySelector('.tracked-jump a[href="#tracked-accounts"]')?.addEventListener("click", () => markTrackedOpen(trackedSection));
 const accountsReady = loadTrackedAccounts().catch(() => []);
 mountSearch(document, accountsReady);
 accountsReady.then((accounts) => {
-  const section = document.querySelector("#tracked-accounts");
-  renderTrackedAccounts(section, accounts);
-  applyTrackedAccountFilter(section, accounts, document.querySelector("#hl-q")?.value || "");
+  renderTrackedAccounts(trackedSection, accounts);
+  applyTrackedAccountFilter(trackedSection, accounts, document.querySelector("#hl-q")?.value || "");
 });
 
 try {

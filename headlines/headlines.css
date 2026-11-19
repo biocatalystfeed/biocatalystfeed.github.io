@@ -43,6 +43,14 @@ a:visited { color: #551a8b; }
   font-family: Arial, Helvetica, sans-serif;
 }
 .mast h1 { clear: both; }
+.tracked-jump {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.tracked-jump a { color: var(--muted); font-weight: 400; }
 .finder-label {
   position: absolute;
   width: 1px;
@@ -186,12 +194,25 @@ blockquote.tweet-card { quotes: none; }
   line-height: 1.4;
 }
 .tracked summary {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
   color: var(--ink);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  list-style: none;
   cursor: pointer;
+}
+.tracked summary::-webkit-details-marker { display: none; }
+.tracked summary::marker { content: none; }
+.tracked summary::before {
+  content: "▸";
+  font-weight: 400;
+}
+.tracked details[open] > summary::before {
+  content: "▾";
 }
 .tracked-list {
   margin: 8px 0 0;
