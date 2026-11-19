@@ -17,6 +17,27 @@ DeepPrinciple,Deep Principle,org,Deep Principle,641,2026-11-06,Live-fetched; ver
 arxiv,arXiv.org,org,arXiv (Cornell),56594,2026-11-06,Live-fetched; official preprint archive news account
 biorxivpreprint,bioRxiv,org,bioRxiv (Cold Spring Harbor Laboratory),139852,2026-11-06,Live-fetched; official bioRxiv subject-area preprint alerts
 huggingface,Hugging Face,org,Hugging Face,837198,2026-11-06,Live-fetched; verified blue; The AI community building the future
+endpts,Endpoints News,org,Endpoints News,,2026-11-19,role: outlet; X user id 3460109487; Endpoints News
+biospace,BioSpace,org,BioSpace,,2026-11-19,role: outlet; X user id 21793154; BioSpace
+fwhealthtech,Fierce Healthcare,org,Fierce Healthcare,,2026-11-19,role: outlet; X user id 442068154; Fierce Healthcare health tech
+IEEESpectrum,IEEE Spectrum,org,IEEE Spectrum,,2026-11-19,"role: outlet, tech; X user id 15825547; IEEE Spectrum"
+_BrightFocus,BrightFocus Foundation,org,BrightFocus Foundation,,2026-11-19,role: foundation; X user id 21762776; BrightFocus Foundation
+statnews,STAT News,org,STAT News,,2026-11-19,role: outlet; X user id 3290364847; STAT News
+FierceBiotech,Fierce Biotech,org,Fierce Biotech,,2026-11-19,role: outlet; X user id 18294197; Fierce Biotech
+alzforum,Alzforum,org,Alzforum,,2026-11-19,role: outlet; X user id 66274576; Alzforum
+BioPharmaDive,BioPharma Dive,org,BioPharma Dive,,2026-11-19,role: outlet; X user id 1564125781; BioPharma Dive
+OpenAI,OpenAI,org,OpenAI,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+AnthropicAI,Anthropic,org,Anthropic,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+NVIDIAHealth,NVIDIA Health,org,NVIDIA,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+medrxivpreprint,medRxiv,org,medRxiv,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+US_FDA,U.S. FDA,org,U.S. Food and Drug Administration,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+NIH,NIH,org,National Institutes of Health,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+EMA_News,EMA,org,European Medicines Agency,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+MHRAgovuk,MHRA,org,Medicines and Healthcare products Regulatory Agency,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+broadinstitute,Broad Institute,org,Broad Institute,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+czbiohub,CZ Biohub,org,Chan Zuckerberg Biohub,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+embl,EMBL,org,European Molecular Biology Laboratory,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
+BakerLaboratory,Baker Lab,org,Institute for Protein Design,,2026-11-19,Synced from the headlines X picks allowlist. X user id unknown.
 demishassabis,Demis Hassabis,researcher,Google DeepMind / Isomorphic Labs,1956873,2026-11-06,Live-fetched; verified blue; Nobel Laureate; Co-Founder & Chair DeepMind; CEO Isomorphic Labs
 pushmeet,Pushmeet Kohli,researcher,Google DeepMind / Google Cloud,30072,2026-11-06,Live-fetched; verified blue; Chief Scientist Google Cloud; VP DeepMind; AlphaFold/Co-Scientist
 pdhsu,Patrick Hsu,researcher,Arc Institute / Stanford,88384,2026-11-06,Live-fetched; verified blue; Arc co-founder; Stanford professor; biology and ML
@@ -29,3 +50,5 @@ jure,Jure Leskovec,researcher,Stanford / graph ML,45719,2026-11-06,Live-fetched;
 tesssmidt,Prof. Tess Smidt,researcher,MIT EECS,1501,2026-11-06,Live-fetched; Atomic architect at MIT EECS; geometric deep learning for molecules
 bryan_johnson,Bryan Johnson,researcher,Blueprint and Kernel,,2026-11-18,X user id 17468569; bio: Founder of Blueprint and Kernel; longevity and self-measurement.
 _katetolo,Kate Tolo,researcher,Immortals,,2026-11-18,X user id 965992202605355009; bio: Works with Bryan Johnson on Immortals.
+RLCscienceboss,Ryan Cross,researcher,Endpoints News,,2026-11-19,"role: journalist; X user id 3056932372; Ryan Cross, Endpoints News"
+EricTopol,Eric Topol,researcher,,,2026-11-19,role: researcher; X user id unknown; Synced from the headlines X picks allowlist.

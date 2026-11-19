@@ -1,6 +1,28 @@
 import { assertFactual, clip, factualViolation, httpUrl } from "./text.mjs";
 
 export const OUTCOME_CLAIM = /\b(effective|efficacy|superior|improved|benefit|success|safe and well)\b/i;
+export const NATURE_NEWS_DOI = /^10\.1038\/d41586-/i;
+export const NATURE_NEWS_TOPIC = /\b(?:trials?|phases?|fda|pivotal|readouts?|approvals?)\b/i;
+
+export function natureNewsTrial(doi, title) {
+  return NATURE_NEWS_DOI.test(String(doi || "")) && NATURE_NEWS_TOPIC.test(String(title || ""));
+}
+
+function quotedAttr(tag, name) {
+  const match = new RegExp(`\\b${name}\\s*=\\s*(["'])([\\s\\S]*?)\\1`, "i").exec(tag);
+  return match ? match[2] : "";
+}
+
+export function metaDescription(html) {
+  const tags = String(html || "").match(/<meta\b[^>]*>/gi) || [];
+  for (const tag of tags) {
+    const name = quotedAttr(tag, "name") || quotedAttr(tag, "property");
+    if (!/^(?:description|og:description)$/i.test(name)) continue;
+    const content = quotedAttr(tag, "content");
+    if (content.trim()) return unescapeBasic(content);
+  }
+  return "";
+}
 
 const JOURNAL_OK = new Set([
   "nature",
@@ -766,7 +788,7 @@ export function healthCanadaCopy(id, facts) {
 export function paperCopy(id, facts) {
   const title = sentenceCase(stripVenue(facts.title));
   const journal = facts.journal || "";
-  const finding = condenseFact(facts.abstract, title);
+  const finding = condenseFact(facts.pageDescription, title) || condenseFact(facts.abstract, title);
   const venue = journal || (facts.preprint ? "" : "Europe PMC");
   const where = facts.preprint
     ? `Posted on ${facts.venue || "the preprint server"}. Preprint, not peer-reviewed`
@@ -1003,7 +1025,10 @@ export function paperRecords(results, options = {}) {
   const rows = [];
   for (const record of results || []) {
     const title = unescapeBasic(String(record.title || "").replace(/<[^>]+>/g, " "));
-    if (!title || OUTCOME_CLAIM.test(title) || offTopicText(title)) continue;
+    const doiEarly = String(record.doi || "");
+    const natureTrial = natureNewsTrial(doiEarly, title);
+    if (!title || offTopicText(title)) continue;
+    if (!natureTrial && OUTCOME_CLAIM.test(title)) continue;
     if (mode === "phase3") {
       if (!/\bphase\s*(3|iii)\b/i.test(title)) continue;
       if (!/\b(trial|study|randomi[sz]ed)\b/i.test(title)) continue;
@@ -1013,7 +1038,7 @@ export function paperRecords(results, options = {}) {
     if (mode === "ai" && !/\b(machine learning|deep learning|artificial intelligence|protein language|foundation model|neural network|CRISPR|single-cell|genomic)\b/i.test(title)) continue;
     const published = String(record.firstPublicationDate || "").slice(0, 10);
     if (options.from && (!published || published < options.from || (options.today && published > options.today))) continue;
-    const doi = String(record.doi || "");
+    const doi = doiEarly;
     const source = String(record.source || "");
     const recordId = String(record.id || "");
     const url = /^10\.\d+\//.test(doi) ? `https://doi.org/${doi}` : (source && recordId ? `https://europepmc.org/article/${source}/${recordId}` : "");
@@ -1027,6 +1052,7 @@ export function paperRecords(results, options = {}) {
       recordId: `${source} ${recordId}`.trim(),
       authors: String(record.authorString || "").replace(/\s+/g, " ").trim(),
       abstract: String(record.abstractText || record.abstract || "").replace(/<[^>]+>/g, " "),
+      pageDescription: natureTrial ? (options.pageDescriptions?.[doi] || "") : "",
     });
     if (!copy || !/^\d{4}-\d{2}-\d{2}$/.test(published)) continue;
     rows.push({
@@ -1039,6 +1065,7 @@ export function paperRecords(results, options = {}) {
       published_at: published,
       scout_source: scout,
       rule: options.rule || "paper-phase3",
+      ...(natureTrial ? { adjustments: ["pivotal-readout"] } : {}),
       dedupe_key: `paper:${doi || recordId}`,
     });
   }

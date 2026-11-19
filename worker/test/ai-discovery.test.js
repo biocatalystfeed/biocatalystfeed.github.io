@@ -162,6 +162,11 @@ test("Gavin's allowlist encodes arXiv, labs, Hugging Face, and the verified X ha
   assert.deepEqual(allowlist.x.handles_not_found.map((row) => row.person), ["David Baker", "John Jumper", "Regina Barzilay"]);
   assert.equal(allowlist.labs.every((lab) => handles.has(lab.x_handle)), true);
   assert.equal(allowlist.x.org_accounts.every((account) => account.profile_url === `https://x.com/${account.handle}`), true);
+  const picks = JSON.parse(readFileSync(new URL("scripts/headlines/x-allowlist.json", root), "utf8"));
+  assert.deepEqual([...picks.handles].sort(), configRows.map((row) => row.handle).sort());
+  assert.ok(configRows.some((row) => row.handle === "endpts" && /3460109487/.test(row.notes)));
+  assert.equal(picks.linkedHosts.includes("endpoints.news"), false);
+  assert.equal(picks.linkedHosts.includes("statnews.com"), false);
   assert.match(allowlist.x._comment, /does not auto-publish/);
   assert.ok(allowlist.hard_nos.some((rule) => /beats/i.test(rule)));
 });

@@ -747,14 +747,14 @@
     {
       "id": "europepmc:MED:43045786",
       "headline": "'Light and sound' therapy for Alzheimer's flops in long-anticipated trial",
-      "blurb": "Published 2026-11-17 in Nature (MED 43045786).",
+      "blurb": "A closely watched study found no cognitive benefit from a brain-stimulating headset designed to treat Alzheimer’s disease. Published in Nature.",
       "source_url": "https://doi.org/10.1038/d41586-026-03770-0",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-17",
-      "significance": 72,
-      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
-      "tier": 3,
+      "significance": 80,
+      "significance_rationale": "paper-journal 66; pivotal-readout +8; 1d old +6 = 80. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 4,
       "scout_source": "europepmc"
     },
     {

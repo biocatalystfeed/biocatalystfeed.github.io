@@ -12,6 +12,8 @@ import {
   healthCanadaCopy,
   indicationPhrase,
   orangeCopy,
+  metaDescription,
+  natureNewsTrial,
   paperRecords,
   purpleCopy,
   safeItems,
@@ -823,20 +825,40 @@ async function europeQuery(polite, query, pageSize) {
   return payload?.resultList?.result || [];
 }
 
+async function natureNewsDescriptions(polite, records) {
+  const map = {};
+  for (const record of records || []) {
+    const doi = String(record.doi || "");
+    const title = String(record.title || "").replace(/<[^>]+>/g, " ");
+    if (!natureNewsTrial(doi, title)) continue;
+    const slug = doi.replace(/^10\.1038\//i, "");
+    const url = `https://www.nature.com/articles/${slug}`;
+    try {
+      const buf = await polite.getBuffer(url, { timeout: 30000, headers: { Accept: "text/html" } });
+      const description = buf ? metaDescription(buf.toString("utf8")) : "";
+      if (description) map[doi] = description;
+    } catch {
+      // A robots.txt denial or a failed fetch leaves the journal fallback blurb.
+    }
+  }
+  return map;
+}
+
 async function fetchEuropePmc(ctx) {
   const phaseFrom = addDays(ctx.today, -45);
   const recentFrom = addDays(ctx.today, -21);
   const phase = await europeQuery(ctx.polite, `FIRST_PDATE:[${phaseFrom} TO ${ctx.today}] AND (TITLE:"phase 3" OR TITLE:"phase III") AND (TITLE:trial OR TITLE:study OR TITLE:randomized OR TITLE:randomised)`, 15);
   const journals = await europeQuery(ctx.polite, `FIRST_PDATE:[${recentFrom} TO ${ctx.today}] AND SRC:MED AND (JOURNAL:"N Engl J Med" OR JOURNAL:"Lancet" OR JOURNAL:"JAMA" OR JOURNAL:"Nature Medicine" OR JOURNAL:"Nature Biotechnology" OR JOURNAL:"Nature" OR JOURNAL:"Science" OR JOURNAL:"Cell" OR JOURNAL:"BMJ")`, 15);
   const ai = await europeQuery(ctx.polite, `FIRST_PDATE:[${recentFrom} TO ${ctx.today}] AND (TITLE:"machine learning" OR TITLE:"deep learning" OR TITLE:"protein language" OR TITLE:"artificial intelligence") AND (TITLE:protein OR TITLE:genom OR TITLE:molecul OR TITLE:drug OR TITLE:cell OR TITLE:biolog)`, 12);
+  const pageDescriptions = await natureNewsDescriptions(ctx.polite, journals);
   const items = [
     ...paperRecords(phase, { mode: "phase3", from: phaseFrom, today: ctx.today, rule: "paper-phase3" }),
-    ...paperRecords(journals, { mode: "journal", from: recentFrom, today: ctx.today, rule: "paper-journal" }),
+    ...paperRecords(journals, { mode: "journal", from: recentFrom, today: ctx.today, rule: "paper-journal", pageDescriptions }),
     ...paperRecords(ai, { mode: "ai", from: recentFrom, today: ctx.today, rule: "paper-ai" }),
   ];
   return {
     items,
-    note: "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped. A blurb uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected.",
+    note: "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped, except Nature news DOIs (10.1038/d41586-) whose titles name a trial, phase, FDA action, pivotal study, readout, or approval. Those items get the pivotal-readout adjustment, and their blurb is the page meta description when nature.com/robots.txt allows the article. A blurb otherwise uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected.",
   };
 }
 

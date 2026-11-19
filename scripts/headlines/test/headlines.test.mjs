@@ -7,7 +7,7 @@ import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
-import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, paperCopy, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
+import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, metaDescription, natureNewsTrial, OUTCOME_CLAIM, paperCopy, paperRecords, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { commonsImage, imageResponseOk, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
 import { explainMatch, imageEntities, imageType, relevanceScore } from "../image-score.mjs";
 import { nasaImage } from "../image-sources/nasa.mjs";
@@ -459,6 +459,57 @@ test("blurbs state the point without repeating the headline", () => {
   assert.doesNotMatch(bare.blurb, /^The paper reports/i);
 });
 
+test("Nature news trial stories keep the pivotal-readout boost and the page description", () => {
+  const description = "A closely watched study found no cognitive benefit from a brain-stimulating headset designed to treat Alzheimer's disease.";
+  const html = `<html><head><meta name="description" content="${description}"></head></html>`;
+  assert.equal(metaDescription(html), description);
+  const title = "'Light and sound' therapy for Alzheimer's flops in long-anticipated trial";
+  const doi = "10.1038/d41586-026-03770-0";
+  assert.equal(natureNewsTrial(doi, title), true);
+  assert.equal(OUTCOME_CLAIM.test("no cognitive benefit in a pivotal Alzheimer's trial"), true);
+  const record = {
+    title,
+    journalTitle: "Nature",
+    firstPublicationDate: "2026-11-17",
+    doi,
+    source: "MED",
+    id: "43045786",
+    abstractText: "",
+  };
+  const kept = paperRecords([record], {
+    mode: "journal",
+    from: "2026-11-01",
+    today: "2026-11-18",
+    rule: "paper-journal",
+    pageDescriptions: { [doi]: description },
+  });
+  assert.equal(kept.length, 1);
+  assert.deepEqual(kept[0].adjustments, ["pivotal-readout"]);
+  assert.match(kept[0].blurb, /no cognitive benefit/);
+  assert.doesNotMatch(kept[0].blurb, /cure|breakthrough|miracle|promising/i);
+  const scored = scoreItem(kept[0], "2026-11-18", new Map());
+  assert.equal(scored.significance, 80);
+  assert.equal(scored.tier, 4);
+  const claimed = paperRecords([{
+    ...record,
+    title: "Headset shows no cognitive benefit in a pivotal Alzheimer's trial",
+  }], { mode: "journal", from: "2026-11-01", today: "2026-11-18", rule: "paper-journal" });
+  assert.equal(claimed.length, 1);
+  const dropped = paperRecords([{
+    ...record,
+    doi: "10.1038/s41586-026-00000-0",
+    title: "Headset shows no cognitive benefit in a pivotal Alzheimer's trial",
+  }], { mode: "journal", from: "2026-11-01", today: "2026-11-18", rule: "paper-journal" });
+  assert.equal(dropped.length, 0);
+  const other = paperRecords([{
+    ...record,
+    doi: "10.1038/d41586-026-03279-6",
+    title: "The origins of scrotal asymmetry",
+  }], { mode: "journal", from: "2026-11-01", today: "2026-11-18", rule: "paper-journal" });
+  assert.equal(other.length, 1);
+  assert.deepEqual(other[0].adjustments, []);
+});
+
 test("leads stay grammatical and off-topic posts stay out", () => {
   const stroke = pressLead("FDA Approves First Factor Xla Inhibitor to Help Prevent Stroke in Certain Adults at High Risk");
   assert.match(stroke, /stroke/i);
@@ -852,6 +903,10 @@ test("tracked X account search matches names and handles", () => {
   assert.ok(matchTrackedAccounts(live, "bryan johnson").some((account) => account.handle === "bryan_johnson"));
   assert.ok(matchTrackedAccounts(live, "_katetolo").some((account) => account.handle === "_katetolo"));
   assert.ok(matchTrackedAccounts(live, "demis hassabis").some((account) => account.handle === "demishassabis"));
+  const endpts = matchTrackedAccounts(live, "endpts");
+  assert.deepEqual(endpts.map((account) => account.handle), ["endpts"]);
+  assert.equal(endpts[0].href, "https://x.com/endpts");
+  assert.match(trackedSearchRows(live, "endpts")[0].title, /@endpts/);
 });
 
 test("Searching stays hidden once a search result is shown", () => {
