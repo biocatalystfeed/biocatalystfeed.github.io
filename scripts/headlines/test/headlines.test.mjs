@@ -14,7 +14,7 @@ import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { canonUrl, dedupeByCanonUrl, hostAllowed, xPickItems } from "../x-picks.mjs";
-import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatStamp, keepLastToken } from "../../../headlines/render.js";
+import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatLocalDay, formatStamp, formatUpdatedTime, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchStatusNote, searchUrls } from "../../../headlines/search.js";
 import { accountsFromAllowlist, matchTrackedAccounts, trackedSearchRows } from "../../../headlines/tracked-accounts.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
@@ -570,6 +570,10 @@ test("the public headlines page drops test wording and shows a dated source line
   assert.match(pageJs, /href: "\/headlines\/", text: "Try again"/);
   assert.match(pageJs, /href: "\/", text: "biocat\.ai"/);
   assert.equal(formatDay("2026-11-09"), "Mon, Nov 9, 2026");
+  assert.equal(formatLocalDay("2026-11-18T21:31:00Z", "Asia/Tokyo"), "Thu, Nov 19, 2026");
+  assert.equal(formatUpdatedTime("2026-11-18T21:31:00Z", "Asia/Tokyo"), "6:31 AM");
+  assert.equal(formatLocalDay("2026-11-18T21:31:00Z", "America/New_York"), "Wed, Nov 18, 2026");
+  assert.equal(formatUpdatedTime("2026-11-18T21:31:00Z", "America/New_York"), "4:31 PM");
   assert.equal(formatStamp("2026-11-18T08:40:00.000Z", "Asia/Tokyo"), "Wed, Nov 18, 2026, 5:40 PM GMT+9");
   assert.match(formatStamp("2026-11-18T08:40:00.000Z", "Not/AZone"), /8:40 AM UTC/);
   assert.match(pageJs, /datetime: data\.generated_at/);
@@ -600,7 +604,10 @@ test("headlines search hits every worker route and the review page stays noindex
     assert.equal(xPickItems({ enabled: true, picks: [pick] }).length, 1);
   }
   assert.match(workflow, /cron: "20 1,7,13,19 \* \* \*"/);
+  assert.match(workflow, /cron: "0 2,8,14,20 \* \* \*"/);
   assert.match(workflow, /group: headlines-update/);
+  assert.match(workflow, /cancel-in-progress: false/);
+  assert.match(workflow, /age < 3/);
   assert.match(workflow, /git diff --cached --quiet/);
   const urls = searchUrls("GLP-1");
   assert.equal(urls.length, SEARCH_ROUTES.length);

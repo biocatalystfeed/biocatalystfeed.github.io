@@ -16,6 +16,22 @@ export function formatDay(iso) {
   return new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
 }
 
+export function formatLocalDay(iso, timeZone) {
+  const date = utcDate(iso);
+  if (!date) return "";
+  const options = { weekday: "short", month: "short", day: "numeric", year: "numeric" };
+  if (timeZone) options.timeZone = timeZone;
+  return new Intl.DateTimeFormat("en-US", options).format(date);
+}
+
+export function formatUpdatedTime(iso, timeZone) {
+  const date = utcDate(iso);
+  if (!date) return "";
+  const options = { hour: "numeric", minute: "2-digit" };
+  if (timeZone) options.timeZone = timeZone;
+  return new Intl.DateTimeFormat("en-US", options).format(date);
+}
+
 export function formatStamp(iso, timeZone) {
   const date = utcDate(iso);
   if (!date) return "";
