@@ -16,7 +16,7 @@ import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { canonUrl, dedupeByCanonUrl, hostAllowed, xPickItems } from "../x-picks.mjs";
 import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatLocalDay, formatStamp, formatUpdatedTime, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchStatusNote, searchUrls } from "../../../headlines/search.js";
-import { accountsFromAllowlist, matchTrackedAccounts, trackedSearchRows } from "../../../headlines/tracked-accounts.js";
+import { accountsFromAllowlist, applyTrackedAccountFilter, matchTrackedAccounts, trackedSearchRows } from "../../../headlines/tracked-accounts.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
@@ -992,6 +992,47 @@ test("trial dates keep a day, or name the month and year", () => {
   assert.doesNotMatch(missing.headline, /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/);
   assert.doesNotMatch(missing.headline, /\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\b/);
   assert.ok(wordCount(missing.headline) <= HEADLINE_WORD_MAX, missing.headline);
+});
+
+test("tracked accounts stay inline and separators follow visible entries", () => {
+  const css = fs.readFileSync(path.join(root, "headlines", "headlines.css"), "utf8");
+  const listRule = css.slice(css.indexOf(".tracked-list {"), css.indexOf(".tracked-list li"));
+  assert.match(listRule, /font-size:\s*14px/);
+  assert.doesNotMatch(listRule, /display:\s*grid/);
+  assert.match(css, /\.tracked-list li\s*\{[^}]*display:\s*inline-block[^}]*white-space:\s*nowrap/s);
+  assert.match(css, /\.tracked-list li\[hidden\]\s*\{[^}]*display:\s*none/s);
+  assert.match(css, /\.tracked-list li:not\(\[hidden\]\):has\(~ li:not\(\[hidden\]\)\)::after\s*\{[^}]*content:\s*" · "/s);
+  assert.doesNotMatch(css, /\.tracked-list a\s*\{[^}]*min-height:\s*44px/s);
+
+  const accounts = [
+    { handle: "GoogleDeepMind", display_name: "Google DeepMind", href: "https://x.com/GoogleDeepMind" },
+    { handle: "MSFTResearch", display_name: "Microsoft Research", href: "https://x.com/MSFTResearch" },
+    { handle: "AIatMeta", display_name: "AI at Meta", href: "https://x.com/AIatMeta" },
+    { handle: "bryan_johnson", display_name: "Bryan Johnson", href: "https://x.com/bryan_johnson" },
+    { handle: "OpenAI", display_name: "OpenAI", href: "https://x.com/OpenAI" },
+  ];
+  const items = accounts.map((account) => ({
+    hidden: false,
+    textContent: `${account.display_name} @${account.handle}`,
+  }));
+  const section = {
+    querySelector(selector) {
+      if (selector === ".tracked-list") return { querySelectorAll: () => items };
+      return null;
+    },
+  };
+  const shown = applyTrackedAccountFilter(section, accounts, "ai");
+  assert.deepEqual(shown.map((account) => account.handle), ["AIatMeta", "OpenAI"]);
+  assert.deepEqual(items.map((item) => item.hidden), [true, true, false, true, false]);
+  assert.equal(items.some((item) => item.textContent.includes("·")), false);
+  applyTrackedAccountFilter(section, accounts, "aspirin");
+  assert.deepEqual(items.map((item) => item.hidden), [false, false, false, false, false]);
+  applyTrackedAccountFilter(section, accounts, "q");
+  assert.ok(items.every((item) => item.hidden === false));
+  const source = fs.readFileSync(path.join(root, "headlines", "tracked-accounts.js"), "utf8");
+  const render = source.slice(source.indexOf("export function renderTrackedAccounts"));
+  assert.match(render, /link\.href = account\.href/);
+  assert.doesNotMatch(render, /·/);
 });
 
 test("Searching stays hidden once a search result is shown", () => {

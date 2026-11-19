@@ -1,6 +1,6 @@
 import { el, figureFor, formatLocalDay, formatStamp, formatUpdatedTime, itemLink, keepLastToken, loadHeadlines, sourceLine, tweetEmbed, watchTweetSlots } from "./render.js";
 import { mountSearch } from "./search.js";
-import { loadTrackedAccounts, renderTrackedAccounts } from "./tracked-accounts.js";
+import { applyTrackedAccountFilter, loadTrackedAccounts, renderTrackedAccounts } from "./tracked-accounts.js";
 
 const main = document.querySelector("#main");
 const dateline = document.querySelector("#dateline");
@@ -30,7 +30,11 @@ function showUnavailable(message) {
 
 const accountsReady = loadTrackedAccounts().catch(() => []);
 mountSearch(document, accountsReady);
-accountsReady.then((accounts) => renderTrackedAccounts(document.querySelector("#tracked-accounts"), accounts));
+accountsReady.then((accounts) => {
+  const section = document.querySelector("#tracked-accounts");
+  renderTrackedAccounts(section, accounts);
+  applyTrackedAccountFilter(section, accounts, document.querySelector("#hl-q")?.value || "");
+});
 
 try {
   const data = await loadHeadlines();
