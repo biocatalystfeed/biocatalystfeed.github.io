@@ -202,17 +202,21 @@ blockquote.tweet-card { quotes: none; }
 }
 .tracked-list li {
   display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
   white-space: nowrap;
 }
 .tracked-list li[hidden] {
   display: none;
 }
 .tracked-list li:not([hidden]):has(~ li:not([hidden]))::after {
-  content: " · ";
+  content: "·";
+  margin: 0 0.35em;
   font-weight: 400;
   color: var(--muted);
 }
-.tracked-list a { font-weight: 700; }
+.tracked-list a { font-weight: 400; }
 .tracked-handle { font-weight: 400; color: var(--muted); }
 .foot {
   margin-top: 18px;

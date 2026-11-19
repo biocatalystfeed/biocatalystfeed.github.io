@@ -1001,7 +1001,8 @@ test("tracked accounts stay inline and separators follow visible entries", () =>
   assert.doesNotMatch(listRule, /display:\s*grid/);
   assert.match(css, /\.tracked-list li\s*\{[^}]*display:\s*inline-block[^}]*white-space:\s*nowrap/s);
   assert.match(css, /\.tracked-list li\[hidden\]\s*\{[^}]*display:\s*none/s);
-  assert.match(css, /\.tracked-list li:not\(\[hidden\]\):has\(~ li:not\(\[hidden\]\)\)::after\s*\{[^}]*content:\s*" · "/s);
+  assert.match(css, /\.tracked-list li:not\(\[hidden\]\):has\(~ li:not\(\[hidden\]\)\)::after\s*\{[^}]*content:\s*"·"[^}]*margin:\s*0 0\.35em/s);
+  assert.match(css, /\.tracked-list a\s*\{\s*font-weight:\s*400/);
   assert.doesNotMatch(css, /\.tracked-list a\s*\{[^}]*min-height:\s*44px/s);
 
   const accounts = [
