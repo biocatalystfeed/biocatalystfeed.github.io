@@ -358,6 +358,174 @@
         "verified_on": "2026-11-06",
         "profile_url": "https://x.com/huggingface",
         "notes": "Live-fetched; verified blue; The AI community building the future"
+      },
+      {
+        "handle": "endpts",
+        "display_name": "Endpoints News",
+        "affiliation": "Endpoints News",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/endpts",
+        "notes": "role: outlet; X user id 3460109487; Endpoints News"
+      },
+      {
+        "handle": "biospace",
+        "display_name": "BioSpace",
+        "affiliation": "BioSpace",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/biospace",
+        "notes": "role: outlet; X user id 21793154; BioSpace"
+      },
+      {
+        "handle": "fwhealthtech",
+        "display_name": "Fierce Healthcare",
+        "affiliation": "Fierce Healthcare",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/fwhealthtech",
+        "notes": "role: outlet; X user id 442068154; Fierce Healthcare health tech"
+      },
+      {
+        "handle": "IEEESpectrum",
+        "display_name": "IEEE Spectrum",
+        "affiliation": "IEEE Spectrum",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/IEEESpectrum",
+        "notes": "role: outlet, tech; X user id 15825547; IEEE Spectrum"
+      },
+      {
+        "handle": "_BrightFocus",
+        "display_name": "BrightFocus Foundation",
+        "affiliation": "BrightFocus Foundation",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/_BrightFocus",
+        "notes": "role: foundation; X user id 21762776; BrightFocus Foundation"
+      },
+      {
+        "handle": "statnews",
+        "display_name": "STAT News",
+        "affiliation": "STAT News",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/statnews",
+        "notes": "role: outlet; X user id 3290364847; STAT News"
+      },
+      {
+        "handle": "FierceBiotech",
+        "display_name": "Fierce Biotech",
+        "affiliation": "Fierce Biotech",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/FierceBiotech",
+        "notes": "role: outlet; X user id 18294197; Fierce Biotech"
+      },
+      {
+        "handle": "alzforum",
+        "display_name": "Alzforum",
+        "affiliation": "Alzforum",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/alzforum",
+        "notes": "role: outlet; X user id 66274576; Alzforum"
+      },
+      {
+        "handle": "BioPharmaDive",
+        "display_name": "BioPharma Dive",
+        "affiliation": "BioPharma Dive",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/BioPharmaDive",
+        "notes": "role: outlet; X user id 1564125781; BioPharma Dive"
+      },
+      {
+        "handle": "OpenAI",
+        "display_name": "OpenAI",
+        "affiliation": "OpenAI",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/OpenAI",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "AnthropicAI",
+        "display_name": "Anthropic",
+        "affiliation": "Anthropic",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/AnthropicAI",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "NVIDIAHealth",
+        "display_name": "NVIDIA Health",
+        "affiliation": "NVIDIA",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/NVIDIAHealth",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "medrxivpreprint",
+        "display_name": "medRxiv",
+        "affiliation": "medRxiv",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/medrxivpreprint",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "US_FDA",
+        "display_name": "U.S. FDA",
+        "affiliation": "U.S. Food and Drug Administration",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/US_FDA",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "NIH",
+        "display_name": "NIH",
+        "affiliation": "National Institutes of Health",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/NIH",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "EMA_News",
+        "display_name": "EMA",
+        "affiliation": "European Medicines Agency",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/EMA_News",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "MHRAgovuk",
+        "display_name": "MHRA",
+        "affiliation": "Medicines and Healthcare products Regulatory Agency",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/MHRAgovuk",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "broadinstitute",
+        "display_name": "Broad Institute",
+        "affiliation": "Broad Institute",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/broadinstitute",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "czbiohub",
+        "display_name": "CZ Biohub",
+        "affiliation": "Chan Zuckerberg Biohub",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/czbiohub",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "embl",
+        "display_name": "EMBL",
+        "affiliation": "European Molecular Biology Laboratory",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/embl",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
+      },
+      {
+        "handle": "BakerLaboratory",
+        "display_name": "Baker Lab",
+        "affiliation": "Institute for Protein Design",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/BakerLaboratory",
+        "notes": "Synced from the headlines X picks allowlist. X user id unknown."
       }
     ],
     "researcher_handles": [
@@ -456,6 +624,22 @@
         "verified_on": "2026-11-18",
         "profile_url": "https://x.com/_katetolo",
         "notes": "X user id 965992202605355009; bio: Works with Bryan Johnson on Immortals."
+      },
+      {
+        "handle": "RLCscienceboss",
+        "display_name": "Ryan Cross",
+        "affiliation": "Endpoints News",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/RLCscienceboss",
+        "notes": "role: journalist; X user id 3056932372; Ryan Cross, Endpoints News"
+      },
+      {
+        "handle": "EricTopol",
+        "display_name": "Eric Topol",
+        "affiliation": "",
+        "verified_on": "2026-11-19",
+        "profile_url": "https://x.com/EricTopol",
+        "notes": "role: researcher; X user id unknown; Synced from the headlines X picks allowlist."
       }
     ]
   },
