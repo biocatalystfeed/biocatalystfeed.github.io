@@ -194,14 +194,29 @@ blockquote.tweet-card { quotes: none; }
   cursor: pointer;
 }
 .tracked-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
-  gap: 2px 16px;
   margin: 8px 0 0;
   padding: 0;
   list-style: none;
+  font-size: 14px;
+  line-height: 1.5;
 }
-.tracked-list a { font-weight: 700; }
+.tracked-list li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.tracked-list li[hidden] {
+  display: none;
+}
+.tracked-list li:not([hidden]):has(~ li:not([hidden]))::after {
+  content: "·";
+  margin: 0 0.35em;
+  font-weight: 400;
+  color: var(--muted);
+}
+.tracked-list a { font-weight: 400; }
 .tracked-handle { font-weight: 400; color: var(--muted); }
 .foot {
   margin-top: 18px;
@@ -234,5 +249,7 @@ blockquote.tweet-card { quotes: none; }
   .tweet-open, .show-post { display: inline-flex; align-items: center; }
   .finder-hits { position: static; width: 100%; }
   .tracked summary { display: flex; align-items: center; min-height: 44px; }
-  .tracked-list a { display: inline-flex; align-items: baseline; gap: 4px; min-height: 44px; }
+  .tracked-list,
+  .tracked-list a { font-size: 14px; }
+  .tracked-list a { display: inline; min-height: 0; }
 }

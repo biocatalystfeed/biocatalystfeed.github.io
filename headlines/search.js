@@ -1,4 +1,4 @@
-import { trackedSearchRows } from "./tracked-accounts.js";
+import { applyTrackedAccountFilter, trackedSearchRows } from "./tracked-accounts.js";
 
 export const SEARCH_API = "https://biocatalystfeed-api.biocatalystfeed.workers.dev";
 export const SEARCH_ROUTES = ["trials", "papers", "grants", "ai-discovery"];
@@ -85,6 +85,11 @@ export function mountSearch(doc = document, accountsOrPromise = []) {
   input.addEventListener("input", () => {
     window.clearTimeout(timer);
     const term = input.value.trim();
+    const trackedSection = doc.querySelector("#tracked-accounts");
+    accountsReady.then((accounts) => {
+      if (input.value.trim() !== term) return;
+      applyTrackedAccountFilter(trackedSection, accounts, term);
+    });
     if (term.length < 2) { close(); return; }
     timer = window.setTimeout(async () => {
       controller?.abort();

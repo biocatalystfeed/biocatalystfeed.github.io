@@ -44,6 +44,23 @@ export async function loadTrackedAccounts(fetchImpl = fetch) {
   return accountsFromAllowlist(await response.json());
 }
 
+export function applyTrackedAccountFilter(section, accounts, query) {
+  if (!section) return [];
+  const list = section.querySelector(".tracked-list");
+  if (!list) return [];
+  const items = [...list.querySelectorAll("li")];
+  const matched = new Set(matchTrackedAccounts(accounts, query).map((account) => account.handle.toLowerCase()));
+  const filtering = matched.size > 0;
+  const visible = [];
+  items.forEach((item, index) => {
+    const account = accounts?.[index];
+    const show = !filtering || Boolean(account && matched.has(String(account.handle).toLowerCase()));
+    item.hidden = !show;
+    if (show && account) visible.push(account);
+  });
+  return visible;
+}
+
 export function renderTrackedAccounts(section, accounts) {
   if (!section) return;
   const list = section.querySelector(".tracked-list");
