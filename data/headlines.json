@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-19T13:13:51.286Z",
+  "generated_at": "2026-11-19T19:13:14.479Z",
   "event_date": "2026-11-19",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -45,7 +45,7 @@
       "id": "ema",
       "enabled": true,
       "status": "ok",
-      "fetched": 21,
+      "fetched": 22,
       "note": "EMA daily medicines JSON. Variation decisions are not used; European Commission decision dates on already-authorised medicines are ignored. Source: European Medicines Agency."
     },
     {
@@ -58,9 +58,9 @@
     {
       "id": "europepmc",
       "enabled": true,
-      "status": "error",
-      "fetched": 0,
-      "note": "The operation was aborted due to timeout"
+      "status": "ok",
+      "fetched": 37,
+      "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped, except Nature news DOIs (10.1038/d41586-) whose titles name a trial, phase, FDA action, pivotal study, readout, or approval. Those items get the pivotal-readout adjustment, and their blurb is the page meta description when nature.com/robots.txt allows the article. A blurb otherwise uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
       "id": "clinicaltrials-calendar",
@@ -552,6 +552,32 @@
       "scout_source": "mhra"
     },
     {
+      "id": "europepmc:MED:43045786",
+      "headline": "'Light and sound' therapy for Alzheimer's flops in long-anticipated trial",
+      "blurb": "Published 2026-11-17 in Nature (MED 43045786).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03770-0",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-17",
+      "significance": 80,
+      "significance_rationale": "paper-journal 66; pivotal-readout +8; 2d old +6 = 80. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 4,
+      "scout_source": "europepmc"
+    },
+    {
+      "id": "mhra:https://www.gov.uk/government/news/mhra-appoints-senior-nhs-executive-as-new-chief-finance-and-commercial-officer",
+      "headline": "MHRA appoints senior NHS executive as new Chief Finance and Commercial Officer",
+      "blurb": "The Medicines and Healthcare products Regulatory Agency (MHRA) has appointed a new Chief Financial and Commercial Officer to drive forward the financial aspects of its.",
+      "source_url": "https://www.gov.uk/government/news/mhra-appoints-senior-nhs-executive-as-new-chief-finance-and-commercial-officer",
+      "source_type": "regulator",
+      "source_name": "UK MHRA",
+      "published_at": "2026-11-19",
+      "significance": 80,
+      "significance_rationale": "mhra-news 74; in 0d +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "tier": 4,
+      "scout_source": "mhra"
+    },
+    {
       "id": "purple-book:761274:interchangeable:2026-10-22",
       "headline": "Purple Book: Yesafili is interchangeable with Eylea",
       "blurb": "The Purple Book lists Yesafili as interchangeable with Eylea. BLA 761274, date Oct 22, Biocon Biologics Inc.",
@@ -565,15 +591,15 @@
       "scout_source": "purple-book"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/mhra-appoints-senior-nhs-executive-as-new-chief-finance-and-commercial-officer",
-      "headline": "MHRA appoints senior NHS executive as new Chief Finance and Commercial Officer",
-      "blurb": "The Medicines and Healthcare products Regulatory Agency (MHRA) has appointed a new Chief Financial and Commercial Officer to drive forward the financial aspects of its.",
-      "source_url": "https://www.gov.uk/government/news/mhra-appoints-senior-nhs-executive-as-new-chief-finance-and-commercial-officer",
+      "id": "mhra:https://www.gov.uk/government/news/new-mhra-service-to-support-medicines-innovation-and-strengthen-uk-manufacturing",
+      "headline": "New MHRA service to support medicines innovation and strengthen UK manufacturing",
+      "blurb": "AdvanceGxP will give developers earlier practical support for advanced manufacturing technologies, accelerating patient access to innovative medicines while strengthening UK manufacturing.",
+      "source_url": "https://www.gov.uk/government/news/new-mhra-service-to-support-medicines-innovation-and-strengthen-uk-manufacturing",
       "source_type": "regulator",
       "source_name": "UK MHRA",
-      "published_at": "2026-11-19",
+      "published_at": "2026-11-18",
       "significance": 80,
-      "significance_rationale": "mhra-news 74; in 0d +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; 1d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -591,32 +617,6 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/new-mhra-service-to-support-medicines-innovation-and-strengthen-uk-manufacturing",
-      "headline": "New MHRA service to support medicines innovation and strengthen UK manufacturing",
-      "blurb": "AdvanceGxP will give developers earlier practical support for advanced manufacturing technologies, accelerating patient access to innovative medicines while strengthening UK manufacturing.",
-      "source_url": "https://www.gov.uk/government/news/new-mhra-service-to-support-medicines-innovation-and-strengthen-uk-manufacturing",
-      "source_type": "regulator",
-      "source_name": "UK MHRA",
-      "published_at": "2026-11-18",
-      "significance": 80,
-      "significance_rationale": "mhra-news 74; 1d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
-      "tier": 4,
-      "scout_source": "mhra"
-    },
-    {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
-      "headline": "FDA Approves First Drug Shown to Help Patients with Infantile-Onset Niemann-Pick Disease Type C",
-      "blurb": "FDA approved Lembaz (adrabetadex) injection, the first treatment shown to help people with a severe form of Niemann-Pick disease type C (NPC) live longer.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
-      "source_type": "news",
-      "source_name": "FDA press releases",
-      "published_at": "2026-11-17",
-      "significance": 76,
-      "significance_rationale": "fda-press 70; 2d old +6 = 76. FDA press release.",
-      "tier": 4,
-      "scout_source": "fda-press"
-    },
-    {
       "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
       "headline": "Advancing computer-use agents for healthcare teams",
       "blurb": "Details are in the linked post.",
@@ -630,10 +630,10 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
-      "headline": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
-      "blurb": "FDA today announced the Global Reliance Disclosure Program (GRDP), a landmark initiative that will fundamentally transform how the FDA's regulatory drug and biologic approval decisions.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
+      "headline": "FDA Approves First Drug Shown to Help Patients with Infantile-Onset Niemann-Pick Disease Type C",
+      "blurb": "FDA approved Lembaz (adrabetadex) injection, the first treatment shown to help people with a severe form of Niemann-Pick disease type C (NPC) live longer.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
       "source_type": "news",
       "source_name": "FDA press releases",
       "published_at": "2026-11-17",
@@ -656,6 +656,19 @@
       "scout_source": "openai-news"
     },
     {
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "headline": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+      "blurb": "FDA today announced the Global Reliance Disclosure Program (GRDP), a landmark initiative that will fundamentally transform how the FDA's regulatory drug and biologic approval decisions.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "source_type": "news",
+      "source_name": "FDA press releases",
+      "published_at": "2026-11-17",
+      "significance": 76,
+      "significance_rationale": "fda-press 70; 2d old +6 = 76. FDA press release.",
+      "tier": 4,
+      "scout_source": "fda-press"
+    },
+    {
       "id": "nvidia-blog:https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
       "headline": "AI Is Helping Care Teams Get Patients the Right Care, Sooner",
       "blurb": "From pediatric research to smart hospitals, AI is helping care teams spend less time on routine tasks and more time with patients.",
@@ -667,6 +680,19 @@
       "significance_rationale": "ai-news 68; 6d old +6 = 74. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "nvidia-blog"
+    },
+    {
+      "id": "europepmc:MED:43045780",
+      "headline": "The origins of scrotal asymmetry",
+      "blurb": "Published 2026-11-17 in Nature (MED 43045780).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03279-6",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-17",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
@@ -682,6 +708,19 @@
       "scout_source": "deepmind"
     },
     {
+      "id": "europepmc:MED:43045782",
+      "headline": "Voyager 1 is about to achieve a cosmic first: one 'light day' from Earth",
+      "blurb": "Published 2026-11-17 in Nature (MED 43045782).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03672-1",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-17",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
       "id": "openai-news:https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
       "headline": "Measuring how AI agents handle everyday wet-lab science",
       "blurb": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
@@ -693,6 +732,19 @@
       "significance_rationale": "ai-news 68; 13d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "openai-news"
+    },
+    {
+      "id": "europepmc:MED:43045783",
+      "headline": "Is academia's risk-averse culture stifling scientific discovery?",
+      "blurb": "Published 2026-11-17 in Nature (MED 43045783).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03772-y",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-17",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
@@ -747,10 +799,10 @@
       "scout_source": "orange-book"
     },
     {
-      "id": "x:https://x.com/IsomorphicLabs/status/2123382767434297656",
-      "headline": "Isomorphic Labs enters strategic research collaboration with MSD",
-      "blurb": "The AI drug-design company will pair its IsoDDE drug design engine with MSD's proprietary data and discovery experience under the new agreement. https://www.isomorphiclabs.com/articles/isomorphic-labs-enters-into-a-research-collaboration-with-msd",
-      "source_url": "https://x.com/IsomorphicLabs/status/2123382767434297656",
+      "id": "x:https://x.com/EricTopol/status/2123422121145835854",
+      "headline": "Programmable functional RNA design with a virtual scientist",
+      "blurb": "RhoAgent is an agentic system that proposes RNA designs and refines them with experimental feedback, using a diffusion-based model to target three-dimensional structure. https://www.nature.com/articles/s41587-026-03362-3",
+      "source_url": "https://x.com/EricTopol/status/2123422121145835854",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-19",
@@ -758,7 +810,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-enters-into-a-research-collaboration-with-msd"
+      "linked_url": "https://www.nature.com/articles/s41587-026-03362-3"
     },
     {
       "id": "sec-edgar:0001493152-26-053017",
@@ -774,10 +826,10 @@
       "scout_source": "sec-edgar-8k"
     },
     {
-      "id": "x:https://x.com/embl/status/2123401849503985836",
-      "headline": "How a tiny chemical mark is placed to double gene activity",
-      "blurb": "High-resolution images of the nucleosome spools that package DNA show how one enzyme adds a precise chemical modification that regulates gene activity. https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/",
-      "source_url": "https://x.com/embl/status/2123401849503985836",
+      "id": "x:https://x.com/IEEESpectrum/status/2123431276321382589",
+      "headline": "Meet Shepherd, the meta-agent keeping rogue AI in check",
+      "blurb": "The tool applies version control and sandboxing so that AI agents can recover from mistakes while a supervising agent manages them. https://spectrum.ieee.org/ai-agent-manager",
+      "source_url": "https://x.com/IEEESpectrum/status/2123431276321382589",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-19",
@@ -785,7 +837,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/"
+      "linked_url": "https://spectrum.ieee.org/ai-agent-manager"
     },
     {
       "id": "bcf-papers:MED:43046633",
@@ -801,10 +853,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/statnews/status/2123379407276446159",
-      "headline": "In cancer drug development, the spotlight shifts onto Erasca's KRAS-targeted treatment",
-      "blurb": "STAT's biotech scorecard asks whether Erasca has found a pan-RAS cancer drug that is more potent and better tolerated than Revolution Medicines' candidate. https://www.statnews.com/2026/11/19/erasca-kras-targeted-treatment-new-data-pancreatic-cancer/",
-      "source_url": "https://x.com/statnews/status/2123379407276446159",
+      "id": "x:https://x.com/biospace/status/2123476417140650384",
+      "headline": "Actinogen's sole drug fails pivotal Alzheimer's study, sinking stock 80%",
+      "blurb": "The Australian biotech's lead candidate missed in a late-stage trial, though the company still intends to take the data to the FDA to discuss next steps. https://www.biospace.com/drug-development/actinogens-sole-drug-fails-pivotal-alzheimers-study-sinking-stock-80",
+      "source_url": "https://x.com/biospace/status/2123476417140650384",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-19",
@@ -812,7 +864,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/19/erasca-kras-targeted-treatment-new-data-pancreatic-cancer/"
+      "linked_url": "https://www.biospace.com/drug-development/actinogens-sole-drug-fails-pivotal-alzheimers-study-sinking-stock-80"
     },
     {
       "id": "bcf-papers:MED:43039660",
@@ -828,18 +880,18 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2123061598462075034",
-      "headline": "At-home microbiome tests are taking off. Can they be trusted?",
-      "blurb": "A Nature reporter sent stool samples to two direct-to-consumer companies to compare what each one told her about her gut microbiome. https://www.nature.com/articles/d41586-026-03710-y",
-      "source_url": "https://x.com/EricTopol/status/2123061598462075034",
+      "id": "x:https://x.com/broadinstitute/status/2123452023349637589",
+      "headline": "Targeting a cellular \"traffic jam\" treats multiple diseases in mice",
+      "blurb": "Researchers describe a strategy that clears cells of the misfolded proteins behind a group of inherited genetic diseases. https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice",
+      "source_url": "https://x.com/broadinstitute/status/2123452023349637589",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-19",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.nature.com/articles/d41586-026-03710-y"
+      "linked_url": "https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice"
     },
     {
       "id": "medrxiv:10.64898/2026.08.04.26359728",
@@ -855,18 +907,18 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2123093437994123356",
-      "headline": "Conservation of the tumour microenvironment across organs and species",
-      "blurb": "Screening thousands of public single-cell datasets, the authors report shared stromal and immune programs across 42 cancer types in over 2,000 human and mouse tumours, released as an interactive atlas. https://www.nature.com/articles/s41586-026-11270-4",
-      "source_url": "https://x.com/EricTopol/status/2123093437994123356",
+      "id": "x:https://x.com/statnews/status/2123462617360470506",
+      "headline": "Peptide market poised to explode with new Hims and Noom launches",
+      "blurb": "Two consumer health companies are widening access to peptides, a market opening up in a regulatory gray area despite thin scientific evidence. https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
+      "source_url": "https://x.com/statnews/status/2123462617360470506",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-19",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.nature.com/articles/s41586-026-11270-4"
+      "linked_url": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.12.26367461",
@@ -880,6 +932,33 @@
       "significance_rationale": "paper-ai 56; 4d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "medrxiv"
+    },
+    {
+      "id": "x:https://x.com/statnews/status/2123479565934731610",
+      "headline": "A cardiologist is puzzled by the blockbuster new study on deprescribing statins",
+      "blurb": "A cardiologist's opinion piece finds a large trial on stopping statins confusing and raises questions about how to read its results. https://www.statnews.com/2026/11/19/deprescribing-statins-study-stream-trial-aha-questions/",
+      "source_url": "https://x.com/statnews/status/2123479565934731610",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-19",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.statnews.com/2026/11/19/deprescribing-statins-study-stream-trial-aha-questions/"
+    },
+    {
+      "id": "bcf-papers:MED:43034332",
+      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
+      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
+      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-14",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2123094879157006708",
@@ -896,17 +975,17 @@
       "linked_url": "https://www.nature.com/articles/s41586-026-11305-w"
     },
     {
-      "id": "bcf-papers:MED:43034332",
-      "headline": "A cross-study single-cell atlas reveals heterogeneous transcriptional states in PMA-differentiated THP-1 cells",
-      "blurb": "Published 2026-11-14 in Cytotechnology (MED 43034332).",
-      "source_url": "https://doi.org/10.1007/s10616-026-01116-2",
+      "id": "biorxiv:10.64898/2026.11.01.763444",
+      "headline": "Learning inhibitor interactions from protein deep mutational scanning data and deep learning models",
+      "blurb": "Suggest that a primary limitation in improving performance on this task lies in the scarcity of mutation-conditioned protein-ligand training data rather than model architecture alone. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.01.763444",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-14",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-13",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "biorxiv"
     },
     {
       "id": "x:https://x.com/biospace/status/2123114007976358379",
@@ -921,33 +1000,6 @@
       "tier": 3,
       "scout_source": "x",
       "linked_url": "https://www.biospace.com/business/pfizer-launches-into-autoimmune-car-t-with-chinas-starna-in-up-to-2-6b-deal"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.01.763444",
-      "headline": "Learning inhibitor interactions from protein deep mutational scanning data and deep learning models",
-      "blurb": "Suggest that a primary limitation in improving performance on this task lies in the scarcity of mutation-conditioned protein-ligand training data rather than model architecture alone. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.01.763444",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-13",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/biospace/status/2123129151305523432",
-      "headline": "Merck scraps centerpiece of $2.7B ArQule buy after late-stage safety concerns",
-      "blurb": "Merck is ending several Phase 3 trials of nemtabrutinib after a benefit-risk review, removing it from the race among non-covalent BTK inhibitors. https://www.biospace.com/drug-development/merck-scraps-centerpiece-of-2-7b-arqule-buy-after-late-stage-safety-concerns",
-      "source_url": "https://x.com/biospace/status/2123129151305523432",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-18",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.biospace.com/drug-development/merck-scraps-centerpiece-of-2-7b-arqule-buy-after-late-stage-safety-concerns"
     },
     {
       "id": "biorxiv:10.64898/2026.11.11.765853",
@@ -1041,17 +1093,17 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "sec-edgar:0001193125-26-454476",
-      "headline": "Corbus Pharmaceuticals Holdings, Inc. reports results of operations",
-      "blurb": "Corbus Pharmaceuticals Holdings, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001193125-26-454476.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1595097/000119312526454476/0001193125-26-454476-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-10",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 9d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "id": "health-canada:38696",
+      "headline": "Spc-Fenofibrate S (Fenofibrate): Health Canada abbreviated submission",
+      "blurb": "Notice 38696, date 2026-11-17. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38696",
+      "source_type": "regulator",
+      "source_name": "Health Canada Notice of Compliance Database",
+      "published_at": "2026-11-17",
+      "significance": 40,
+      "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
       "tier": 2,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "health-canada-noc"
     },
     {
       "id": "nih-reporter:11409527",
@@ -1065,19 +1117,6 @@
       "significance_rationale": "nih-grant 60; 50d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
-    },
-    {
-      "id": "sec-edgar:0001628280-26-072195",
-      "headline": "Harrow, Inc. discloses results of operations in an 8-K",
-      "blurb": "Harrow, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001628280-26-072195.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1360214/000162828026072195/0001628280-26-072195-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-09",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 10d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
     }
   ]
 }
