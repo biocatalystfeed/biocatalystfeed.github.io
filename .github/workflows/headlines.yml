@@ -78,4 +78,12 @@ jobs:
             exit 0
           fi
           git commit -m "Update headlines from public sources"
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt ${attempt} of 3)."
+          done
+          echo "Push failed after 3 attempts."
+          exit 1
