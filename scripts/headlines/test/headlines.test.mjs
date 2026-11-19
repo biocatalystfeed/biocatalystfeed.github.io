@@ -7,7 +7,7 @@ import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines, rewriteDatelineFallbacks } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
-import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, metaDescription, natureNewsTrial, OUTCOME_CLAIM, paperCopy, paperRecords, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
+import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, humanDate, indicationPhrase, metaDescription, natureNewsTrial, OUTCOME_CLAIM, paperCopy, paperRecords, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { commonsImage, imageResponseOk, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
 import { explainMatch, imageEntities, imageType, relevanceScore } from "../image-score.mjs";
 import { nasaImage } from "../image-sources/nasa.mjs";
@@ -369,7 +369,7 @@ test("headlines stay within 14 words by trimming clauses", () => {
     assert.ok(item.blurb.trim());
     assert.match(item.source_url, /^https?:\/\//);
     assert.doesNotMatch(item.headline, /\d{4}-\d{2}-\d{2}/, item.headline);
-    if (item.source_type === "trial") assert.match(item.headline, /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b/, item.headline);
+    if (item.source_type === "trial") assert.match(item.headline, /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\b|\bin (?:January|February|March|April|May|June|July|August|September|October|November|December) \d{4}\b/, item.headline);
     assert.doesNotMatch(item.headline, /records original approval/i);
     assert.doesNotMatch(item.headline, /^(NDA|BLA)\b/);
     assert.doesNotMatch(item.headline, /^[a-z]/, item.headline);
@@ -961,6 +961,37 @@ test("tracked X account search matches names and handles", () => {
   assert.deepEqual(endpts.map((account) => account.handle), ["endpts"]);
   assert.equal(endpts[0].href, "https://x.com/endpts");
   assert.match(trackedSearchRows(live, "endpts")[0].title, /@endpts/);
+});
+
+test("trial dates keep a day, or name the month and year", () => {
+  assert.equal(humanDate("2026-11-26"), "Nov 26");
+  assert.equal(humanDate("2026-11-01"), "Nov 1");
+  assert.equal(humanDate("2026-11"), "in November 2026");
+  assert.equal(humanDate("2026-02"), "in February 2026");
+  assert.equal(humanDate("2026-13"), "");
+  assert.equal(humanDate("2026-11-00"), "");
+  assert.equal(humanDate("2026-11-32"), "");
+  assert.equal(humanDate("soon"), "");
+  assert.equal(humanDate(""), "");
+  const facts = {
+    phase3: true,
+    title: "Study of MT1013 for the Treatment of Patients With Secondary Hyperparathyroidism",
+    condition: "Secondary Hyperparathyroidism, Chronic Kidney Disease",
+    sponsor: "Shaanxi Micot Pharmaceutical Technology Co., Ltd.",
+  };
+  const withDay = trialCopy("clinicaltrials-calendar:NCT07122401:2026-11-26", { ...facts, date: "2026-11-26" });
+  assert.match(withDay.headline, /\bNov 26\b/);
+  assert.doesNotMatch(withDay.headline, /November/);
+  assert.ok(wordCount(withDay.headline) <= HEADLINE_WORD_MAX, withDay.headline);
+  const monthOnly = trialCopy("month-only", { ...facts, date: "2026-11" });
+  assert.match(monthOnly.headline, /\bin November 2026\b/);
+  assert.doesNotMatch(monthOnly.headline, /\bNov \d/);
+  assert.ok(wordCount(monthOnly.headline) <= HEADLINE_WORD_MAX, monthOnly.headline);
+  const missing = trialCopy("missing-date", { ...facts, date: "soon" });
+  assert.doesNotMatch(missing.headline, /reaches primary completion/);
+  assert.doesNotMatch(missing.headline, /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/);
+  assert.doesNotMatch(missing.headline, /\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\b/);
+  assert.ok(wordCount(missing.headline) <= HEADLINE_WORD_MAX, missing.headline);
 });
 
 test("Searching stays hidden once a search result is shown", () => {

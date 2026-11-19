@@ -170,7 +170,7 @@ export function condenseFact(text, avoid, maxWords = 25) {
     if (avoid && echoesHeadline(avoid, sentence)) {
       const rest = afterOverlap(avoid, sentence);
       const clause = /\b(is|are|was|were|will|has|have|aims|supports|helps|includes|means)\b/i.test(rest);
-      sentence = rest ? (clause ? rest : `It covers ${rest.charAt(0).toLowerCase()}${rest.slice(1)}`) : "";
+      sentence = rest ? (clause ? rest : `It covers ${leadIn(rest)}`) : "";
     }
     if (!sentence) continue;
     sentence = clipWords(sentence, maxWords).replace(/[,:;]\s*$/g, "");
@@ -529,6 +529,7 @@ function kindOf(rule, id) {
 }
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const CONDITION_RULES = [
   [/head and neck squamous cell carcinoma/i, "head and neck cancer"],
   [/non[-\s]?squamous non[-\s]?small cell lung cancer/i, "a common form of lung cancer"],
@@ -540,11 +541,19 @@ const CONDITION_RULES = [
 ];
 
 export function humanDate(iso) {
-  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || ""));
-  if (!match) return "";
-  const month = MONTHS[Number(match[2]) - 1];
+  const text = String(iso || "").trim();
+  const full = /^(\d{4})-(\d{2})-(\d{2})/.exec(text);
+  if (full) {
+    const month = MONTHS[Number(full[2]) - 1];
+    const day = Number(full[3]);
+    if (!month || day < 1 || day > 31) return "";
+    return `${month} ${day}`;
+  }
+  const monthOnly = /^(\d{4})-(\d{2})$/.exec(text);
+  if (!monthOnly) return "";
+  const month = MONTH_NAMES[Number(monthOnly[2]) - 1];
   if (!month) return "";
-  return `${month} ${Number(match[3])}`;
+  return `in ${month} ${monthOnly[1]}`;
 }
 
 export function sentenceCase(value) {
@@ -854,6 +863,8 @@ export function trialCopy(id, facts) {
     focus = fromTitle ? layCondition(fromTitle[1].split(/,| in | for /i)[0]) : (facts.condition ? layCondition(facts.condition) : "");
   }
   const when = humanDate(facts.date);
+  const completion = when ? `reaches primary completion ${when}` : "";
+  const dated = (line) => (completion ? `${line} ${completion}` : line);
   const drug = drugToken(title);
   const same = drug && focus && drug.toLowerCase() === focus.toLowerCase();
   const study = same
@@ -866,17 +877,24 @@ export function trialCopy(id, facts) {
     const safe = echoesHeadline(headline, line) ? `${sponsor} is the sponsor of this ${phase.toLowerCase()} study` : line;
     return sentences(safe);
   };
+  const options = [
+    dated(study),
+    drug && !same ? dated(`${phase} ${drug} study`) : "",
+    drug ? dated(`${phase} ${drug}`) : "",
+    completion ? dated(`${phase} study`) : "",
+  ].filter(Boolean);
+  const withIts = options.map((line) => line.replace("reaches primary completion", "reaches its primary completion"));
   const templates = [
     () => {
-      const headline = fitLead([`${study} reaches primary completion ${when}`]);
+      const headline = fitLead(options);
       return { headline, blurb: blurbFor(headline) };
     },
     () => {
-      const headline = fitLead([`${study} reaches its primary completion ${when}`, `${study} reaches primary completion ${when}`]);
+      const headline = fitLead(withIts);
       return { headline, blurb: blurbFor(headline) };
     },
     () => {
-      const headline = fitLead([`${study} reaches primary completion ${when}`]);
+      const headline = fitLead(options);
       return { headline, blurb: blurbFor(headline) };
     },
   ];
