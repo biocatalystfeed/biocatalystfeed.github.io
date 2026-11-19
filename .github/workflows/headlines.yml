@@ -79,7 +79,7 @@ jobs:
           fi
           git commit -m "Update headlines from public sources"
           for attempt in 1 2 3; do
-            git pull --rebase origin main
+            git pull --rebase --autostash origin main
             if git push; then
               exit 0
             fi
