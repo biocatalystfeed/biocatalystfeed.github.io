@@ -44,6 +44,52 @@ export async function loadTrackedAccounts(fetchImpl = fetch) {
   return accountsFromAllowlist(await response.json());
 }
 
+export function trackedSummaryText(count) {
+  const total = Number(count) || 0;
+  return total > 0 ? `Tracked X accounts (${total})` : "Tracked X accounts";
+}
+
+export function setTrackedSummary(section, count) {
+  const summary = section?.querySelector("summary");
+  if (!summary) return "";
+  const label = trackedSummaryText(count);
+  summary.textContent = label;
+  return label;
+}
+
+export function markTrackedOpen(section) {
+  const details = section?.querySelector("details");
+  if (!details) return false;
+  details.open = true;
+  details.dataset.userOpen = "true";
+  return true;
+}
+
+export function rememberTrackedToggle(details) {
+  if (!details) return;
+  details.dataset.userOpen = details.open ? "false" : "true";
+}
+
+export function bindTrackedDisclosure(section, win = typeof window === "undefined" ? undefined : window) {
+  const details = section?.querySelector("details");
+  const summary = section?.querySelector("summary");
+  if (!details) return;
+  if (details.dataset.userOpen == null) details.dataset.userOpen = details.open ? "true" : "false";
+  summary?.addEventListener("click", () => rememberTrackedToggle(details));
+  const openForHash = () => {
+    if (win?.location?.hash === "#tracked-accounts") markTrackedOpen(section);
+  };
+  win?.addEventListener?.("hashchange", openForHash);
+  openForHash();
+}
+
+function syncTrackedDisclosure(section, filtering) {
+  const details = section?.querySelector("details");
+  if (!details) return;
+  if (details.dataset.userOpen == null) details.dataset.userOpen = details.open ? "true" : "false";
+  details.open = filtering ? true : details.dataset.userOpen === "true";
+}
+
 export function applyTrackedAccountFilter(section, accounts, query) {
   if (!section) return [];
   const list = section.querySelector(".tracked-list");
@@ -58,6 +104,7 @@ export function applyTrackedAccountFilter(section, accounts, query) {
     item.hidden = !show;
     if (show && account) visible.push(account);
   });
+  syncTrackedDisclosure(section, filtering);
   return visible;
 }
 
@@ -85,4 +132,5 @@ export function renderTrackedAccounts(section, accounts) {
     item.append(link);
     list.append(item);
   }
+  setTrackedSummary(section, list.querySelectorAll("li").length);
 }

@@ -16,7 +16,7 @@ import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
 import { canonUrl, dedupeByCanonUrl, hostAllowed, xPickItems } from "../x-picks.mjs";
 import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatLocalDay, formatStamp, formatUpdatedTime, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchStatusNote, searchUrls } from "../../../headlines/search.js";
-import { accountsFromAllowlist, applyTrackedAccountFilter, matchTrackedAccounts, trackedSearchRows } from "../../../headlines/tracked-accounts.js";
+import { accountsFromAllowlist, applyTrackedAccountFilter, bindTrackedDisclosure, markTrackedOpen, matchTrackedAccounts, rememberTrackedToggle, setTrackedSummary, trackedSearchRows, trackedSummaryText } from "../../../headlines/tracked-accounts.js";
 import { REGULATOR_SOURCES } from "../ranking.mjs";
 import { SOURCES, adcomItems, crlItems, drugsfdaItems, emaItems, europePmcItems, orangeBookLoe, purpleBookItems } from "../sources.mjs";
 import { assertFactual, factualViolation } from "../text.mjs";
@@ -1004,6 +1004,14 @@ test("tracked accounts stay inline and separators follow visible entries", () =>
   assert.match(css, /\.tracked-list li:not\(\[hidden\]\):has\(~ li:not\(\[hidden\]\)\)::after\s*\{[^}]*content:\s*"·"[^}]*margin:\s*0 0\.35em/s);
   assert.match(css, /\.tracked-list a\s*\{\s*font-weight:\s*400/);
   assert.doesNotMatch(css, /\.tracked-list a\s*\{[^}]*min-height:\s*44px/s);
+  assert.match(css, /\.tracked summary::before\s*\{[^}]*content:\s*"▸"/s);
+  assert.match(css, /\.tracked details\[open\] > summary::before\s*\{[^}]*content:\s*"▾"/s);
+  assert.match(css, /\.tracked summary\s*\{[^}]*min-height:\s*44px/s);
+  const html = fs.readFileSync(path.join(root, "headlines", "index.html"), "utf8");
+  assert.doesNotMatch(html, /<details open>/);
+  assert.match(html, /<p class="tracked-jump"><a href="#tracked-accounts">Tracked X accounts ↓<\/a><\/p>/);
+  assert.equal(trackedSummaryText(52), "Tracked X accounts (52)");
+  assert.equal(trackedSummaryText(0), "Tracked X accounts");
 
   const accounts = [
     { handle: "GoogleDeepMind", display_name: "Google DeepMind", href: "https://x.com/GoogleDeepMind" },
@@ -1034,6 +1042,60 @@ test("tracked accounts stay inline and separators follow visible entries", () =>
   const render = source.slice(source.indexOf("export function renderTrackedAccounts"));
   assert.match(render, /link\.href = account\.href/);
   assert.doesNotMatch(render, /·/);
+  assert.match(render, /setTrackedSummary/);
+});
+
+test("tracked accounts collapse until a jump, hash, or matching search opens them", () => {
+  const summary = { textContent: "", addEventListener() {} };
+  const details = { open: false, dataset: {} };
+  const items = [
+    { hidden: false, textContent: "Google DeepMind @GoogleDeepMind" },
+    { hidden: false, textContent: "AI at Meta @AIatMeta" },
+  ];
+  const accounts = [
+    { handle: "GoogleDeepMind", display_name: "Google DeepMind", href: "https://x.com/GoogleDeepMind" },
+    { handle: "AIatMeta", display_name: "AI at Meta", href: "https://x.com/AIatMeta" },
+  ];
+  const section = {
+    querySelector(selector) {
+      if (selector === "summary") return summary;
+      if (selector === "details") return details;
+      if (selector === ".tracked-list") return { querySelectorAll: () => items };
+      return null;
+    },
+  };
+  assert.equal(setTrackedSummary(section, items.length), "Tracked X accounts (2)");
+  assert.equal(summary.textContent, "Tracked X accounts (2)");
+  const listeners = {};
+  const win = {
+    location: { hash: "" },
+    addEventListener(type, fn) { listeners[type] = fn; },
+  };
+  bindTrackedDisclosure(section, win);
+  assert.equal(details.dataset.userOpen, "false");
+  assert.equal(details.open, false);
+  win.location.hash = "#tracked-accounts";
+  listeners.hashchange();
+  assert.equal(details.open, true);
+  assert.equal(details.dataset.userOpen, "true");
+  details.open = false;
+  rememberTrackedToggle(details);
+  assert.equal(details.dataset.userOpen, "true");
+  applyTrackedAccountFilter(section, accounts, "ai");
+  assert.equal(details.open, true);
+  assert.equal(details.dataset.userOpen, "true");
+  applyTrackedAccountFilter(section, accounts, "");
+  assert.equal(details.open, true);
+  details.open = false;
+  details.dataset.userOpen = "false";
+  applyTrackedAccountFilter(section, accounts, "ai");
+  assert.equal(details.open, true);
+  assert.equal(details.dataset.userOpen, "false");
+  applyTrackedAccountFilter(section, accounts, "");
+  assert.equal(details.open, false);
+  assert.equal(markTrackedOpen(section), true);
+  assert.equal(details.open, true);
+  assert.equal(details.dataset.userOpen, "true");
 });
 
 test("Searching stays hidden once a search result is shown", () => {
