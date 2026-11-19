@@ -15,4 +15,4 @@ jobs:
         with:
           node-version: "22"
       - name: Run headlines tests
-        run: node --test scripts/headlines/test/*.test.mjs
+        run: node --test scripts/headlines/test/*.test.mjs worker-timer/test/timer.test.mjs
