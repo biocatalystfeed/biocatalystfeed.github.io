@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-19T03:35:37.424Z",
+  "generated_at": "2026-11-19T07:07:55.465Z",
   "event_date": "2026-11-19",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -94,7 +94,7 @@
       "id": "bcf-ai-discovery",
       "enabled": true,
       "status": "ok",
-      "fetched": 4,
+      "fetched": 5,
       "note": "BioCatalystFeed Worker /ai-discovery. Curated model cards are included only when verified_as_of or published falls in the last 45 days. arXiv rows come from the worker's allowlisted category query and are labeled as preprints. Summaries are not copied. No X client is called."
     },
     {
@@ -463,7 +463,7 @@
     {
       "id": "clinicaltrials-calendar:NCT07122401:2026-11-26",
       "headline": "Phase 3 MT1013 study reaches primary completion Nov 26",
-      "blurb": "Shaanxi Micot is the sponsor of this phase 3 study.",
+      "blurb": "Shaanxi Micot is testing MT1013 in secondary hyperparathyroidism, chronic kidney disease.",
       "source_url": "https://clinicaltrials.gov/study/NCT07122401",
       "source_type": "trial",
       "source_name": "ClinicalTrials.gov",
@@ -893,18 +893,18 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2122716956205916227",
-      "headline": "Innate immune memory of past hepatic injury promotes ischemic cardiac inflammation",
-      "blurb": "Liver-derived palmitic acid and AP-1-dependent epigenetic reprogramming of myeloid progenitors and cardiac macrophages are proposed to carry an inflammatory memory that may affect recovery after a heart attack. https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3",
-      "source_url": "https://x.com/EricTopol/status/2122716956205916227",
+      "id": "x:https://x.com/biospace/status/2123114007976358379",
+      "headline": "Pfizer launches into autoimmune CAR T with China's Starna in up to $2.6B deal",
+      "blurb": "Under the agreement, Starna will work with Pfizer on three in vivo CAR T candidates aimed at autoimmune indications. https://www.biospace.com/business/pfizer-launches-into-autoimmune-car-t-with-chinas-starna-in-up-to-2-6b-deal",
+      "source_url": "https://x.com/biospace/status/2123114007976358379",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-17",
+      "published_at": "2026-11-18",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3"
+      "linked_url": "https://www.biospace.com/business/pfizer-launches-into-autoimmune-car-t-with-chinas-starna-in-up-to-2-6b-deal"
     },
     {
       "id": "medrxiv:10.64898/2026.11.12.26367461",
@@ -920,18 +920,18 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2122801525672317145",
-      "headline": "Alcohol use reduces the efficacy of anti-PD1 immunotherapy by disrupting antitumor immunity",
-      "blurb": "In mouse models of lung and bladder cancer, moderate-to-heavy ethanol intake cut checkpoint-inhibitor benefit by about half, and a patient lung cancer cohort showed a similar association. https://www.science.org/doi/10.1126/scisignal.aef1375",
-      "source_url": "https://x.com/EricTopol/status/2122801525672317145",
+      "id": "x:https://x.com/biospace/status/2123129151305523432",
+      "headline": "Merck scraps centerpiece of $2.7B ArQule buy after late-stage safety concerns",
+      "blurb": "Merck is ending several Phase 3 trials of nemtabrutinib after a benefit-risk review, removing it from the race among non-covalent BTK inhibitors. https://www.biospace.com/drug-development/merck-scraps-centerpiece-of-2-7b-arqule-buy-after-late-stage-safety-concerns",
+      "source_url": "https://x.com/biospace/status/2123129151305523432",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-17",
+      "published_at": "2026-11-18",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.science.org/doi/10.1126/scisignal.aef1375"
+      "linked_url": "https://www.biospace.com/drug-development/merck-scraps-centerpiece-of-2-7b-arqule-buy-after-late-stage-safety-concerns"
     },
     {
       "id": "bcf-papers:MED:43034332",
@@ -947,10 +947,64 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/IsomorphicLabs/status/2122661054723547449",
-      "headline": "Isomorphic Labs announces Series C investment round",
-      "blurb": "The AI drug-design company raised $5 billion, co-led by Greenoaks and Sequoia, to scale its proprietary drug design engine and therapeutic candidate pipeline. https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round",
-      "source_url": "https://x.com/IsomorphicLabs/status/2122661054723547449",
+      "id": "x:https://x.com/biospace/status/2123136656614002830",
+      "headline": "CTAD 2026: Biogen and AriBio report Alzheimer's therapy wins",
+      "blurb": "Conference reports describe positive results for two companies' programs while two others fell short; one of those plans an FDA filing based on a subgroup signal. https://www.biospace.com/drug-development/ctad-2026-biogen-aribio-lead-the-way-in-slowing-cognitive-decline-in-alzheimers",
+      "source_url": "https://x.com/biospace/status/2123136656614002830",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-18",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.biospace.com/drug-development/ctad-2026-biogen-aribio-lead-the-way-in-slowing-cognitive-decline-in-alzheimers"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.01.763444",
+      "headline": "Learning inhibitor interactions from protein deep mutational scanning data and deep learning models",
+      "blurb": "Suggest that a primary limitation in improving performance on this task lies in the scarcity of mutation-conditioned protein-ligand training data rather than model architecture alone. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.01.763444",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-13",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "biorxiv"
+    },
+    {
+      "id": "x:https://x.com/statnews/status/2123129204543807659",
+      "headline": "With $173 million, new startup takes aim at sickle cell",
+      "blurb": "Marrow Therapeutics' founder is pursuing a sickle cell therapy meant to rival gene therapy's effectiveness while avoiding its drawbacks, backed by fresh venture funding. https://www.statnews.com/2026/11/17/new-startup-developing-novel-sickle-cell-anemia-infusion-no-gene-therapy/",
+      "source_url": "https://x.com/statnews/status/2123129204543807659",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-18",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.statnews.com/2026/11/17/new-startup-developing-novel-sickle-cell-anemia-infusion-no-gene-therapy/"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765853",
+      "headline": "MicroDUET: a dual-headed genomic foundation model for pathogen surveillance",
+      "blurb": "Pathogen genomic surveillance works from raw reads, assembled genomes and alignments, representations that are slow and costly to compare at scale. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765853",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-13",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "biorxiv"
+    },
+    {
+      "id": "x:https://x.com/EricTopol/status/2122716956205916227",
+      "headline": "Innate immune memory of past hepatic injury promotes ischemic cardiac inflammation",
+      "blurb": "Liver-derived palmitic acid and AP-1-dependent epigenetic reprogramming of myeloid progenitors and cardiac macrophages are proposed to carry an inflammatory memory that may affect recovery after a heart attack. https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3",
+      "source_url": "https://x.com/EricTopol/status/2122716956205916227",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-17",
@@ -958,13 +1012,13 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round"
+      "linked_url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00449-3"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.01.763444",
-      "headline": "Learning inhibitor interactions from protein deep mutational scanning data and deep learning models",
-      "blurb": "Suggest that a primary limitation in improving performance on this task lies in the scarcity of mutation-conditioned protein-ligand training data rather than model architecture alone. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.01.763444",
+      "id": "biorxiv:10.64898/2026.11.11.766014",
+      "headline": "Large language models complement established workflows for mechanistic model construction and refinement",
+      "blurb": "Show how LLMs can strengthen and complement established workflows for constructing and refining biologically informed models. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.766014",
       "source_type": "paper",
       "source_name": "bioRxiv",
       "published_at": "2026-11-13",
@@ -987,54 +1041,15 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.11.765853",
-      "headline": "MicroDUET: a dual-headed genomic foundation model for pathogen surveillance",
-      "blurb": "Pathogen genomic surveillance works from raw reads, assembled genomes and alignments, representations that are slow and costly to compare at scale. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765853",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-13",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.23777v1",
-      "headline": "STORM: A Lightweight Structure-Free Model for Binding Affinity Prediction",
-      "blurb": "Accurately predicting a small molecule's binding affinity to a protein, a critical task in drug discovery, remains challenging. Posted on arXiv. Preprint, not peer-reviewed.",
-      "source_url": "https://arxiv.org/abs/2611.23777v1",
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.24150v1",
+      "headline": "Micrograph B-factor estimation via Wilson statistics",
+      "blurb": "The single-particle cryo-electron microscopy imaging process is known to cause exponential decay in the amplitude and power spectra of proteins. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.24150v1",
       "source_type": "paper",
       "source_name": "BioCatalystFeed AI discovery",
       "published_at": "2026-11-18",
       "significance": 60,
       "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
-      "tier": 3,
-      "scout_source": "bcf-ai-discovery"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.11.766014",
-      "headline": "Large language models complement established workflows for mechanistic model construction and refinement",
-      "blurb": "Show how LLMs can strengthen and complement established workflows for constructing and refining biologically informed models. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.766014",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-13",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.22137v1",
-      "headline": "Efficient strategies for obtaining accurate kinetics from biased simulations",
-      "blurb": "And it is not obvious which to choose for a given problem. Posted on arXiv. Preprint, not peer-reviewed.",
-      "source_url": "https://arxiv.org/abs/2611.22137v1",
-      "source_type": "paper",
-      "source_name": "BioCatalystFeed AI discovery",
-      "published_at": "2026-11-17",
-      "significance": 60,
-      "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
     },
@@ -1052,49 +1067,23 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "sec-edgar:0001193125-26-454476",
-      "headline": "Corbus Pharmaceuticals Holdings, Inc. reports results of operations",
-      "blurb": "Corbus Pharmaceuticals Holdings, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001193125-26-454476.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1595097/000119312526454476/0001193125-26-454476-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-10",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 9d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.24546v1",
+      "headline": "Biases and Limits of AlphaFold Predictions for Non-Globular Proteins",
+      "blurb": "AlphaFold has transformed protein structure prediction, making structural models accessible across the life sciences. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.24546v1",
+      "source_type": "paper",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-18",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
     },
     {
       "id": "nih-reporter:11405186",
       "headline": "Development of OPGx-RDH12 as a gene therapy for RDH12 deficiency",
       "blurb": "Opus Genetics Inc. received $1,004,925 in NIH funding (R44). Project start Sep 30.",
       "source_url": "https://reporter.nih.gov/project-details/11405186",
-      "source_type": "grant",
-      "source_name": "NIH RePORTER",
-      "published_at": "2026-09-30",
-      "significance": 54,
-      "significance_rationale": "nih-grant 60; 50d old -6 = 54. NIH RePORTER project with a start date in the window.",
-      "tier": 2,
-      "scout_source": "nih-reporter"
-    },
-    {
-      "id": "sec-edgar:0001628280-26-072195",
-      "headline": "Harrow, Inc. discloses results of operations in an 8-K",
-      "blurb": "Harrow, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001628280-26-072195.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1360214/000162828026072195/0001628280-26-072195-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-09",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 10d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
-    },
-    {
-      "id": "nih-reporter:11409527",
-      "headline": "Gene therapy to normalize intraocular pressure for the treatment of juvenile open angle glaucoma",
-      "blurb": "Diorasis Therapeutics Corporation received $758,533 in NIH funding (R44). Project start Sep 30.",
-      "source_url": "https://reporter.nih.gov/project-details/11409527",
       "source_type": "grant",
       "source_name": "NIH RePORTER",
       "published_at": "2026-09-30",
@@ -1115,6 +1104,19 @@
       "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
       "tier": 2,
       "scout_source": "health-canada-noc"
+    },
+    {
+      "id": "nih-reporter:11409527",
+      "headline": "Gene therapy to normalize intraocular pressure for the treatment of juvenile open angle glaucoma",
+      "blurb": "Diorasis Therapeutics Corporation received $758,533 in NIH funding (R44). Project start Sep 30.",
+      "source_url": "https://reporter.nih.gov/project-details/11409527",
+      "source_type": "grant",
+      "source_name": "NIH RePORTER",
+      "published_at": "2026-09-30",
+      "significance": 54,
+      "significance_rationale": "nih-grant 60; 50d old -6 = 54. NIH RePORTER project with a start date in the window.",
+      "tier": 2,
+      "scout_source": "nih-reporter"
     }
   ]
 }
