@@ -762,6 +762,13 @@ test("disabled x picks add nothing and a valid pick is capped", () => {
   assert.equal(kept[0].scout_source, "x");
   assert.equal(hostAllowed("https://ai.nejm.org/doi/full/10.1056/example"), true);
   assert.equal(hostAllowed("https://www.thelancet.com/journals/lancet/article/PIIS0140"), true);
+  for (const host of ["endpoints.news", "endpts.com", "biospace.com", "statnews.com", "fiercebiotech.com", "biopharmadive.com", "spectrum.ieee.org", "alzforum.org", "brightfocus.org", "firstwordhealthtech.com"]) {
+    assert.equal(hostAllowed(`https://${host}/story`), true, host);
+    assert.equal(hostAllowed(`https://www.${host}/story`), true, `www.${host}`);
+    assert.equal(hostAllowed(`https://news.${host}/story`), true, `news.${host}`);
+  }
+  assert.equal(hostAllowed("https://fwhealthtech.com/story"), false);
+  assert.equal(hostAllowed("https://www.fwhealthtech.com/story"), false);
   const journal = xPickItems({
     enabled: true,
     picks: [{

@@ -165,8 +165,10 @@ test("Gavin's allowlist encodes arXiv, labs, Hugging Face, and the verified X ha
   const picks = JSON.parse(readFileSync(new URL("scripts/headlines/x-allowlist.json", root), "utf8"));
   assert.deepEqual([...picks.handles].sort(), configRows.map((row) => row.handle).sort());
   assert.ok(configRows.some((row) => row.handle === "endpts" && /3460109487/.test(row.notes)));
-  assert.equal(picks.linkedHosts.includes("endpoints.news"), false);
-  assert.equal(picks.linkedHosts.includes("statnews.com"), false);
+  for (const host of ["endpoints.news", "endpts.com", "biospace.com", "statnews.com", "fiercebiotech.com", "biopharmadive.com", "spectrum.ieee.org", "alzforum.org", "brightfocus.org", "firstwordhealthtech.com"]) {
+    assert.equal(picks.linkedHosts.includes(host), true, host);
+  }
+  assert.equal(picks.linkedHosts.includes("fwhealthtech.com"), false);
   assert.match(allowlist.x._comment, /does not auto-publish/);
   assert.ok(allowlist.hard_nos.some((rule) => /beats/i.test(rule)));
 });
