@@ -4,6 +4,24 @@
 // AI discovery reads the curated seed at /data/ai-discovery.json (same origin).
 // When API_BASE is set, a search also calls the worker's allowlisted /ai-discovery route.
 import { esc, filterItems, renderItem } from "./data/ai-discovery-score.js";
+import { formatLocalDay, formatUpdatedTime } from "./headlines/render.js";
+
+async function paintHomeDateline() {
+  const day = document.querySelector("#home-dateline");
+  const updated = document.querySelector("#home-updated");
+  if (!day && !updated) return;
+  try {
+    const response = await fetch("/data/headlines.json", { headers: { Accept: "application/json" } });
+    if (!response.ok) return;
+    const data = await response.json();
+    if (!data.generated_at) return;
+    if (day) day.textContent = formatLocalDay(data.generated_at);
+    if (updated) updated.textContent = `Updated ${formatUpdatedTime(data.generated_at)}`;
+  } catch {
+    // The static date in the HTML stays visible when the file cannot be read.
+  }
+}
+paintHomeDateline();
 
 (() => {
   const API_BASE = "https://biocatalystfeed-api.biocatalystfeed.workers.dev";

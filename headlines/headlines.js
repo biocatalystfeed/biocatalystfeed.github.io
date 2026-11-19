@@ -1,4 +1,4 @@
-import { el, figureFor, formatDay, formatStamp, itemLink, keepLastToken, loadHeadlines, sourceLine, tweetEmbed, watchTweetSlots } from "./render.js";
+import { el, figureFor, formatLocalDay, formatStamp, formatUpdatedTime, itemLink, keepLastToken, loadHeadlines, sourceLine, tweetEmbed, watchTweetSlots } from "./render.js";
 import { mountSearch } from "./search.js";
 import { loadTrackedAccounts, renderTrackedAccounts } from "./tracked-accounts.js";
 
@@ -34,7 +34,9 @@ accountsReady.then((accounts) => renderTrackedAccounts(document.querySelector("#
 
 try {
   const data = await loadHeadlines();
-  dateline.textContent = data.generated_at ? formatDay(data.generated_at) : "";
+  if (dateline && data.generated_at) dateline.textContent = formatLocalDay(data.generated_at);
+  const updatedLocal = document.querySelector("#updated-local");
+  if (updatedLocal && data.generated_at) updatedLocal.textContent = `Updated ${formatUpdatedTime(data.generated_at)}`;
   const updated = document.querySelector("#updated");
   if (updated && data.generated_at) {
     updated.replaceChildren(el("time", { datetime: data.generated_at, text: `Updated ${formatStamp(data.generated_at)}` }));

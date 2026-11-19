@@ -5,6 +5,8 @@ on:
     # Four times a day, off the hour. 13:20 UTC is 22:20 JST (10:20 PM).
     # The populator waits out source crawl-delays itself.
     - cron: "20 1,7,13,19 * * *"
+    # Backup about 40 minutes later. It exits when generated_at is under 3 hours old.
+    - cron: "0 2,8,14,20 * * *"
   workflow_dispatch:
   # A change to the picks file refreshes headlines without waiting for cron.
   # The job commits only data/headlines.json, which is outside this path
@@ -28,20 +30,44 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+      - name: Skip when headlines were generated less than 3 hours ago
+        id: fresh
+        run: |
+          fresh=$(python3 - << 'PY'
+          import json, sys
+          from datetime import datetime, timezone
+          from pathlib import Path
+          fresh = False
+          try:
+              generated = json.loads(Path("data/headlines.json").read_text()).get("generated_at") or ""
+              stamp = datetime.fromisoformat(generated.replace("Z", "+00:00"))
+              age = (datetime.now(timezone.utc) - stamp).total_seconds() / 3600
+              fresh = age < 3
+              print(f"generated_at {generated} age_hours {age:.2f}", file=sys.stderr)
+          except Exception as error:
+              print(f"could not read generated_at: {error}", file=sys.stderr)
+          print("true" if fresh else "false")
+          PY
+          )
+          echo "fresh=$fresh" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v4
+        if: steps.fresh.outputs.fresh != 'true'
         with:
           node-version: "22"
       - uses: actions/cache@v4
+        if: steps.fresh.outputs.fresh != 'true'
         with:
           path: .cache/headlines
           key: headlines-http-v1
       - name: Populate headlines
+        if: steps.fresh.outputs.fresh != 'true'
         # Reads data/x_picks.json from this checkout. The scheduled run is main,
         # so a later data-only commit on main is applied on the next run.
         env:
           HEADLINES_CACHE_DIR: ${{ github.workspace }}/.cache/headlines
         run: node scripts/headlines/populate.mjs
       - name: Commit data/headlines.json
+        if: steps.fresh.outputs.fresh != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
