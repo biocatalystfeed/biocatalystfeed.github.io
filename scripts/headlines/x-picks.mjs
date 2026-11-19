@@ -11,13 +11,33 @@ const DOI = /^10\.\d{4,9}\/\S+$/;
 export function canonUrl(value) {
   try {
     const url = new URL(String(value || ""));
-    url.hash = "";
-    const host = url.hostname.replace(/^www\./, "").toLowerCase();
-    const path = url.pathname.replace(/\/$/, "");
-    return `${url.protocol}//${host}${path}${url.search}`;
+    let host = url.hostname.replace(/^www\./i, "").toLowerCase();
+    if (host === "dx.doi.org") host = "doi.org";
+    let path = url.pathname.replace(/\/+$/, "");
+    if (host === "doi.org") path = path.toLowerCase();
+    const params = [];
+    for (const [key, param] of url.searchParams) {
+      if (/^utm_/i.test(key)) continue;
+      params.push(`${encodeURIComponent(key)}=${encodeURIComponent(param)}`);
+    }
+    const search = params.length ? `?${params.join("&")}` : "";
+    return `${url.protocol.toLowerCase()}//${host}${path}${search}`;
   } catch {
     return "";
   }
+}
+
+export function dedupeByCanonUrl(items) {
+  const ranked = [...(items || [])].sort((a, b) => (b.significance || 0) - (a.significance || 0) || String(a.id).localeCompare(String(b.id)));
+  const seen = new Set();
+  const kept = [];
+  for (const item of ranked) {
+    const keys = [canonUrl(item.source_url), canonUrl(item.linked_url)].filter(Boolean);
+    if (keys.some((key) => seen.has(key))) continue;
+    kept.push(item);
+    for (const key of keys) seen.add(key);
+  }
+  return kept;
 }
 
 export function hostAllowed(value) {
