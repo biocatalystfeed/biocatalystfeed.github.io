@@ -9,9 +9,10 @@ on:
     - cron: "0 2,8,14,20 * * *"
   workflow_dispatch:
   # A change to the picks file refreshes headlines without waiting for cron.
-  # The job commits only data/headlines.json, which is outside this path
-  # filter. A push made with GITHUB_TOKEN does not start workflows either,
-  # so the populate commit cannot run this job again.
+  # The job commits data/headlines.json and the two dateline fallback HTML
+  # files. None of those paths are in the filter below. A push made with
+  # GITHUB_TOKEN does not start workflows either, so this commit cannot
+  # run the job again.
   push:
     branches: [main]
     paths:
@@ -71,7 +72,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/headlines.json
+          git add data/headlines.json index.html headlines/index.html
           if git diff --cached --quiet; then
             echo "No headline changes."
             exit 0

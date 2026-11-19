@@ -6,9 +6,36 @@ import { Polite, USER_AGENT } from "./http.mjs";
 import { attachImages } from "./images.mjs";
 import { scoreItem, selectHeadlines } from "./ranking.mjs";
 import { SOURCES } from "./sources.mjs";
+import { formatLocalDay, formatUpdatedTime } from "../../headlines/render.js";
 import { dedupeByCanonUrl, readXPicks, xPickItems } from "./x-picks.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+
+export function rewriteDatelineFallbacks(html, generatedAt, ids) {
+  const date = formatLocalDay(generatedAt, "UTC");
+  const updated = `Updated ${formatUpdatedTime(generatedAt, "UTC")} UTC`;
+  const textFor = {
+    dateline: date,
+    "home-dateline": date,
+    "updated-local": updated,
+    "home-updated": updated,
+  };
+  let next = String(html || "");
+  for (const id of ids) {
+    const text = textFor[id];
+    if (!text) continue;
+    const pattern = new RegExp(`(<([a-zA-Z][\\w:-]*)\\b[^>]*\\bid="${id}"[^>]*>)[\\s\\S]*?(</\\2>)`);
+    next = next.replace(pattern, (_match, open, _tag, close) => `${open}${text}${close}`);
+  }
+  return next;
+}
+
+export function writeDatelineFallbacks(file, generatedAt, ids) {
+  const before = fs.readFileSync(file, "utf8");
+  const after = rewriteDatelineFallbacks(before, generatedAt, ids);
+  if (after !== before) fs.writeFileSync(file, after);
+  return after !== before;
+}
 
 export function buildHeadlines({ candidates, today, feedback, sources }) {
   const deduped = new Map();
@@ -90,6 +117,8 @@ async function main() {
   const out = path.join(root, "data", "headlines.json");
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, `${JSON.stringify(payload, null, 2)}\n`);
+  writeDatelineFallbacks(path.join(root, "index.html"), payload.generated_at, ["home-dateline", "home-updated"]);
+  writeDatelineFallbacks(path.join(root, "headlines", "index.html"), payload.generated_at, ["dateline", "updated-local"]);
   console.log(`wrote ${payload.items.length} items to ${path.relative(root, out)}`);
   if (!payload.items.length) process.exitCode = 1;
 }

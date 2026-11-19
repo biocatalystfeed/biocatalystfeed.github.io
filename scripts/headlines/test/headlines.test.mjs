@@ -5,7 +5,7 @@ import path from "node:path";
 import test from "node:test";
 import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
-import { buildHeadlines } from "../populate.mjs";
+import { buildHeadlines, rewriteDatelineFallbacks } from "../populate.mjs";
 import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
 import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, indicationPhrase, metaDescription, natureNewsTrial, OUTCOME_CLAIM, paperCopy, paperRecords, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { commonsImage, imageResponseOk, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
@@ -574,6 +574,32 @@ test("the public headlines page drops test wording and shows a dated source line
   assert.equal(formatUpdatedTime("2026-11-18T21:31:00Z", "Asia/Tokyo"), "6:31 AM");
   assert.equal(formatLocalDay("2026-11-18T21:31:00Z", "America/New_York"), "Wed, Nov 18, 2026");
   assert.equal(formatUpdatedTime("2026-11-18T21:31:00Z", "America/New_York"), "4:31 PM");
+  const stamped = "2026-11-18T21:31:34.662Z";
+  const page = [
+    "<p class=\"home-dateline\" id=\"home-dateline\">OLD DATE</p>",
+    "<p id=\"keep-me\">Do not touch</p>",
+    "<h1 id=\"home-dateline-title\">Title</h1>",
+    "<p class=\"dek\" id=\"updated-local\">OLD TIME</p>",
+    "<p class=\"dek\" id=\"home-updated\">OLD TIME</p>",
+    "<p class=\"dateline\" id=\"dateline\">OLD DATE</p>",
+  ].join("");
+  const home = rewriteDatelineFallbacks(page, stamped, ["home-dateline", "home-updated"]);
+  const homeAgain = rewriteDatelineFallbacks(home, stamped, ["home-dateline", "home-updated"]);
+  assert.equal(homeAgain, home);
+  assert.match(home, /id="home-dateline">Wed, Nov 18, 2026</);
+  assert.match(home, /id="home-updated">Updated 9:31 PM UTC</);
+  assert.match(home, /id="dateline">OLD DATE</);
+  assert.match(home, /id="updated-local">OLD TIME</);
+  assert.match(home, /id="keep-me">Do not touch</);
+  assert.match(home, /id="home-dateline-title">Title</);
+  const headlines = rewriteDatelineFallbacks(page, stamped, ["dateline", "updated-local"]);
+  assert.equal(rewriteDatelineFallbacks(headlines, stamped, ["dateline", "updated-local"]), headlines);
+  assert.match(headlines, /id="dateline">Wed, Nov 18, 2026</);
+  assert.match(headlines, /id="updated-local">Updated 9:31 PM UTC</);
+  assert.match(headlines, /id="home-dateline">OLD DATE</);
+  const blank = (html) => html.replace(/(id="(?:home-dateline|home-updated|dateline|updated-local)">)[\s\S]*?(<\/)/g, "$1$2");
+  assert.equal(blank(home), blank(page));
+  assert.equal(blank(headlines), blank(page));
   assert.equal(formatStamp("2026-11-18T08:40:00.000Z", "Asia/Tokyo"), "Wed, Nov 18, 2026, 5:40 PM GMT+9");
   assert.match(formatStamp("2026-11-18T08:40:00.000Z", "Not/AZone"), /8:40 AM UTC/);
   assert.match(pageJs, /datetime: data\.generated_at/);
