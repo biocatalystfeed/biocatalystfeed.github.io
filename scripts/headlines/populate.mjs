@@ -6,7 +6,7 @@ import { Polite, USER_AGENT } from "./http.mjs";
 import { attachImages } from "./images.mjs";
 import { scoreItem, selectHeadlines } from "./ranking.mjs";
 import { SOURCES } from "./sources.mjs";
-import { readXPicks, xPickItems } from "./x-picks.mjs";
+import { dedupeByCanonUrl, readXPicks, xPickItems } from "./x-picks.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -35,7 +35,7 @@ export function buildHeadlines({ candidates, today, feedback, sources }) {
     const prev = deduped.get(key);
     if (!prev || item.significance > prev.significance) deduped.set(key, item);
   }
-  const selected = selectHeadlines([...deduped.values()]);
+  const selected = selectHeadlines(dedupeByCanonUrl([...deduped.values()]));
   return {
     schema: "biocat-headlines/1",
     generated_at: new Date().toISOString(),

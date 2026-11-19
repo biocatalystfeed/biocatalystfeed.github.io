@@ -13,7 +13,7 @@ import { explainMatch, imageEntities, imageType, relevanceScore } from "../image
 import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
-import { hostAllowed, xPickItems } from "../x-picks.mjs";
+import { canonUrl, dedupeByCanonUrl, hostAllowed, xPickItems } from "../x-picks.mjs";
 import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatStamp, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchStatusNote, searchUrls } from "../../../headlines/search.js";
 import { accountsFromAllowlist, matchTrackedAccounts, trackedSearchRows } from "../../../headlines/tracked-accounts.js";
@@ -727,6 +727,20 @@ test("image placement rejects a weak or non-allowlisted match and varies the typ
   assert.equal(IMAGE_SOURCES.openverse.allowed, false);
   assert.match(IMAGE_SOURCES.openverse.robots, /Disallow: \/v1\/images\//);
   assert.equal(IMAGE_SOURCES.nasa.allowed, true);
+});
+
+test("canonical URL dedupe keeps the higher-scoring copy", () => {
+  assert.equal(canonUrl("HTTPS://WWW.Doi.ORG/10.1038/ABC/?utm_source=x&utm_medium=social#frag"), "https://doi.org/10.1038/abc");
+  assert.equal(canonUrl("https://dx.doi.org/10.1038/ABC/"), "https://doi.org/10.1038/abc");
+  assert.equal(canonUrl("https://Example.com/Story/?id=1&utm_campaign=a"), "https://example.com/Story?id=1");
+  const items = [
+    { id: "paper", significance: 80, source_url: "https://doi.org/10.1038/ABC", scout_source: "europepmc" },
+    { id: "x-lower", significance: 64, source_url: "https://x.com/EricTopol/status/1", linked_url: "https://www.doi.org/10.1038/abc?utm_source=x#a", scout_source: "x" },
+    { id: "x-higher", significance: 90, source_url: "https://x.com/NIH/status/2", linked_url: "https://www.nih.gov/news/keep?utm_medium=social", scout_source: "x" },
+    { id: "nih", significance: 60, source_url: "https://nih.gov/news/keep/", scout_source: "nih-news" },
+    { id: "unique", significance: 50, source_url: "https://example.com/only", scout_source: "news" },
+  ];
+  assert.deepEqual(dedupeByCanonUrl(items).map((item) => item.id).sort(), ["paper", "unique", "x-higher"]);
 });
 
 test("disabled x picks add nothing and a valid pick is capped", () => {
