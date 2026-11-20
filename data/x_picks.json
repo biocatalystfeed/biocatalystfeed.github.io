@@ -2,25 +2,178 @@
   "schema": "biocat-x-picks/1",
   "enabled": true,
   "picks": [
-    {"handle":"statnews","postUrl":"https://x.com/statnews/status/2123571154967314853","linkedUrl":"https://www.statnews.com/pharmalot/2026/11/19/china-pharma-biotech-clinical-trials-security-risk-patents-drug-development/","postedAt":"2026-11-20","headline":"Big drugmakers tell House committee they will halt clinical trials at some hospitals in China","blurb":"Five large pharmaceutical companies told Congress they do not plan to open new clinical trial sites in China's Xinjiang region.","kind":"other","blurbSource":"page-description"},
-    {"handle":"IsomorphicLabs","postUrl":"https://x.com/IsomorphicLabs/status/2123382767434297656","linkedUrl":"https://www.isomorphiclabs.com/articles/isomorphic-labs-enters-into-a-research-collaboration-with-msd","postedAt":"2026-11-19","headline":"Isomorphic Labs enters into a strategic research collaboration with MSD","blurb":"The company pairs its AI drug-design engine with the pharmaceutical group's proprietary data and discovery experience to advance therapeutic candidates.","kind":"other","blurbSource":"page-description"},
-    {"handle":"EricTopol","postUrl":"https://x.com/EricTopol/status/2123456602816889003","linkedUrl":"https://www.cell.com/cell/fulltext/S0092-8674(26)01337-1","postedAt":"2026-11-19","headline":"CD19 CAR T cell therapy alters disease-associated immune signatures in multiple sclerosis","blurb":"A preliminary series of five patients found expanded CAR T cells and sustained drops in disease biomarkers in cerebrospinal fluid.","kind":"paper","blurbSource":"page-description","doi":"10.1016/j.cell.2026.10.044"},
-    {"handle":"statnews","postUrl":"https://x.com/statnews/status/2123544192748052916","linkedUrl":"https://www.statnews.com/2026/11/19/malaria-monoclonal-antibody-l9ls-vaccine-r21-infant-study-mali/","postedAt":"2026-11-19","headline":"Study raises doubts about combining vaccine, monoclonal antibody to protect against malaria","blurb":"Researchers found the antibody interfered with a new malaria vaccine when both were given to infants, and plan to prioritize other groups in future studies.","kind":"other","blurbSource":"page-description"},
-    {"handle":"embl","postUrl":"https://x.com/embl/status/2123401849503985836","linkedUrl":"https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/","postedAt":"2026-11-19","headline":"How a tiny chemical mark is placed to double gene activity","blurb":"Detailed images of the protein spools that package DNA show how one enzyme adds a precise chemical modification that regulates gene activity.","kind":"other","blurbSource":"page-description"},
-    {"handle":"biospace","postUrl":"https://x.com/biospace/status/2123476417140650384","linkedUrl":"https://www.biospace.com/drug-development/actinogens-sole-drug-fails-pivotal-alzheimers-study-sinking-stock-80","postedAt":"2026-11-19","headline":"Actinogen's sole drug fails pivotal Alzheimer's study, sinking stock 80%","blurb":"The Australian biotech's lead candidate missed in a late-stage trial, though the company still intends to take the data to the FDA to discuss next steps.","kind":"other","blurbSource":"page-description"},
-    {"handle":"statnews","postUrl":"https://x.com/statnews/status/2123479565934731610","linkedUrl":"https://www.statnews.com/2026/11/19/deprescribing-statins-study-stream-trial-aha-questions/","postedAt":"2026-11-19","headline":"A cardiologist is puzzled by the blockbuster new study on deprescribing statins","blurb":"A cardiologist's opinion piece finds a large trial on stopping statins confusing and raises questions about how to read its results.","kind":"other","blurbSource":"page-description"},
-    {"handle":"statnews","postUrl":"https://x.com/statnews/status/2123462617360470506","linkedUrl":"https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/","postedAt":"2026-11-19","headline":"Peptide market poised to explode with new Hims and Noom launches","blurb":"Two consumer health companies are widening access to peptides, a market opening up in a regulatory gray area despite thin scientific evidence.","kind":"other","blurbSource":"page-description"},
-    {"handle":"IEEESpectrum","postUrl":"https://x.com/IEEESpectrum/status/2123431276321382589","linkedUrl":"https://spectrum.ieee.org/ai-agent-manager","postedAt":"2026-11-19","headline":"Meet Shepherd, the meta-agent keeping rogue AI in check","blurb":"The tool applies version control and sandboxing so that AI agents can recover from mistakes while a supervising agent manages them.","kind":"other","blurbSource":"page-description"},
-    {"handle":"EricTopol","postUrl":"https://x.com/EricTopol/status/2123422121145835854","linkedUrl":"https://www.nature.com/articles/s41587-026-03362-3","postedAt":"2026-11-19","headline":"Programmable functional RNA design with a virtual scientist","blurb":"RhoAgent is an agentic system that proposes RNA designs and refines them with experimental feedback, using a diffusion-based model to target three-dimensional structure.","kind":"paper","blurbSource":"abstract","doi":"10.1038/s41587-026-03362-3"},
-    {"handle":"broadinstitute","postUrl":"https://x.com/broadinstitute/status/2123452023349637589","linkedUrl":"https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice","postedAt":"2026-11-19","headline":"Targeting a cellular \"traffic jam\" treats multiple diseases in mice","blurb":"Researchers describe a strategy that clears cells of the misfolded proteins behind a group of inherited genetic diseases.","kind":"other","blurbSource":"page-description"},
-    {"handle":"biospace","postUrl":"https://x.com/biospace/status/2123483946377764953","linkedUrl":"https://www.biospace.com/business/novartis-projects-slowed-growth-pins-hopes-on-billions-in-pipeline-potential","postedAt":"2026-11-19","headline":"Novartis projects slowed growth, pins hopes on billions in pipeline potential","blurb":"With Kisqali losing patent protection and prices falling, the company narrowed its sales guidance to about 5% growth, while management says it has a plan to recover.","kind":"other","blurbSource":"page-description"},
-    {"handle":"EricTopol","postUrl":"https://x.com/EricTopol/status/2123093437994123356","linkedUrl":"https://www.nature.com/articles/s41586-026-11270-4","postedAt":"2026-11-18","headline":"Conservation of the tumour microenvironment across organs and species","blurb":"Screening thousands of public single-cell datasets, researchers found shared host-cell programs across 42 cancer types and released an interactive atlas and software package.","kind":"paper","blurbSource":"abstract","doi":"10.1038/s41586-026-11270-4"},
-    {"handle":"EricTopol","postUrl":"https://x.com/EricTopol/status/2123061598462075034","linkedUrl":"https://www.nature.com/articles/d41586-026-03710-y","postedAt":"2026-11-18","headline":"Microbiome home tests are taking off. Can they be trusted?","blurb":"A Nature reporter mailed in a stool sample to two companies and compares what each told her about her gut microbiome.","kind":"other","blurbSource":"page-description","doi":"10.1038/d41586-026-03710-y"},
-    {"handle":"statnews","postUrl":"https://x.com/statnews/status/2123137551640756469","linkedUrl":"https://www.statnews.com/2026/11/18/ai-scribe-market-emerging-winners-losers-ai-prognosis/","postedAt":"2026-11-18","headline":"The emerging winners and losers in the AI scribe market","blurb":"STAT's AI Prognosis newsletter examines how the AI scribe market is settling, along with news from the HLTH conference.","kind":"other","blurbSource":"page-description"},
-    {"handle":"EricTopol","postUrl":"https://x.com/EricTopol/status/2123094879157006708","linkedUrl":"https://www.nature.com/articles/s41586-026-11305-w","postedAt":"2026-11-18","headline":"Hypothalamic volume and cell-type changes in ageing and Alzheimer's disease","blurb":"HypoAD pairs MRI from 458 people with single-nucleus RNA sequencing of 614,403 nuclei, reporting that metabolism- and circadian-regulating hypothalamic subregions are particularly vulnerable in ageing and Alzheimer's.","kind":"paper","blurbSource":"abstract","doi":"10.1038/s41586-026-11305-w"},
-    {"handle":"statnews","postUrl":"https://x.com/statnews/status/2123129204543807659","linkedUrl":"https://www.statnews.com/2026/11/17/new-startup-developing-novel-sickle-cell-anemia-infusion-no-gene-therapy/","postedAt":"2026-11-18","headline":"With $173 million, new startup takes aim at sickle cell","blurb":"Marrow Therapeutics' founder is pursuing a sickle cell therapy meant to rival gene therapy's effectiveness while avoiding its drawbacks, backed by fresh venture funding.","kind":"other","blurbSource":"page-description"},
-    {"handle":"biospace","postUrl":"https://x.com/biospace/status/2123136656614002830","linkedUrl":"https://www.biospace.com/drug-development/ctad-2026-biogen-aribio-lead-the-way-in-slowing-cognitive-decline-in-alzheimers","postedAt":"2026-11-18","headline":"CTAD 2026: Biogen and AriBio report Alzheimer's therapy wins","blurb":"Conference reports describe positive results for two companies' programs while two others fell short; one of those plans an FDA filing based on a subgroup signal.","kind":"other","blurbSource":"page-description"},
-    {"handle":"biospace","postUrl":"https://x.com/biospace/status/2123129151305523432","linkedUrl":"https://www.biospace.com/drug-development/merck-scraps-centerpiece-of-2-7b-arqule-buy-after-late-stage-safety-concerns","postedAt":"2026-11-18","headline":"Merck scraps centerpiece of $2.7B ArQule buy after late-stage safety concerns","blurb":"Merck is ending several Phase 3 trials of nemtabrutinib after a benefit-risk review, removing it from the race among non-covalent BTK inhibitors.","kind":"other","blurbSource":"page-description"},
-    {"handle":"biospace","postUrl":"https://x.com/biospace/status/2123114007976358379","linkedUrl":"https://www.biospace.com/business/pfizer-launches-into-autoimmune-car-t-with-chinas-starna-in-up-to-2-6b-deal","postedAt":"2026-11-18","headline":"Pfizer launches into autoimmune CAR T with China's Starna in up to $2.6B deal","blurb":"Under the agreement, Starna will work with Pfizer on three in vivo CAR T candidates aimed at autoimmune indications.","kind":"other","blurbSource":"page-description"}
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2123823682665537574",
+      "linkedUrl": "https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay",
+      "postedAt": "2026-11-20",
+      "headline": "FDA will miss rare decision deadline for Savara candidate after three-month delay",
+      "blurb": "Savara's stock fell 18% on the delay, while analysts still expect approval and point to possible capacity strain at the agency.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "IEEESpectrum",
+      "postUrl": "https://x.com/IEEESpectrum/status/2123816677917724837",
+      "linkedUrl": "https://spectrum.ieee.org/type-2-diabetes-electroceutical-implant",
+      "postedAt": "2026-11-20",
+      "headline": "Implant zaps excess sugar directly from blood",
+      "blurb": "An early trial of a wirelessly powered implant suggests a possible new approach to managing type 2 diabetes.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2123808582768455774",
+      "linkedUrl": "https://www.biospace.com/drug-development/revmed-pads-rasonques-first-line-survival-advantage-in-pancreatic-cancer-with-early-data",
+      "postedAt": "2026-11-20",
+      "headline": "RevMed pads Rasonque's first-line survival advantage in pancreatic cancer with early data",
+      "blurb": "Truist Securities says the new figures could lift Revolution Medicines above its current $14.5 billion peak-sales estimate for the newly approved RAS(ON) inhibitor.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2123793230114205920",
+      "linkedUrl": "https://www.biospace.com/drug-development/merck-kelun-adc-scores-survival-win-in-phase-3-stomach-cancer-trial",
+      "postedAt": "2026-11-20",
+      "headline": "Merck-Kelun ADC scores survival win in Phase 3 gastroesophageal cancer trial",
+      "blurb": "The TROP2-targeting conjugate licensed from Kelun-Biotech extended overall survival in advanced disease but missed two secondary endpoints.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123747711400698331",
+      "linkedUrl": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/",
+      "postedAt": "2026-11-20",
+      "headline": "Patients have little say in brain implant trials; Ian Burkhart wants to change that",
+      "blurb": "The founder of a coalition of brain-implant trial participants argues developers should give volunteers more agency in how studies are designed and run.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123544192748052916",
+      "linkedUrl": "https://www.statnews.com/2026/11/19/malaria-monoclonal-antibody-l9ls-vaccine-r21-infant-study-mali/",
+      "postedAt": "2026-11-19",
+      "headline": "Study raises doubts about combining vaccine, monoclonal antibody to protect against malaria",
+      "blurb": "Researchers found the antibody interfered with a new malaria vaccine when both were given to infants, and plan to prioritize other groups in future studies.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "embl",
+      "postUrl": "https://x.com/embl/status/2123401849503985836",
+      "linkedUrl": "https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/",
+      "postedAt": "2026-11-19",
+      "headline": "How a tiny chemical mark is placed to double gene activity",
+      "blurb": "Detailed images of the protein spools that package DNA show how one enzyme adds a precise chemical modification that regulates gene activity.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123479565934731610",
+      "linkedUrl": "https://www.statnews.com/2026/11/19/deprescribing-statins-study-stream-trial-aha-questions/",
+      "postedAt": "2026-11-19",
+      "headline": "A cardiologist is puzzled by the blockbuster new study on deprescribing statins",
+      "blurb": "A cardiologist's opinion piece finds a large trial on stopping statins confusing and raises questions about how to read its results.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123462617360470506",
+      "linkedUrl": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
+      "postedAt": "2026-11-19",
+      "headline": "Peptide market poised to explode with new Hims and Noom launches",
+      "blurb": "Two consumer health companies are widening access to peptides, a market opening up in a regulatory gray area despite thin scientific evidence.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2123093437994123356",
+      "linkedUrl": "https://www.nature.com/articles/s41586-026-11270-4",
+      "postedAt": "2026-11-18",
+      "headline": "Conservation of the tumour microenvironment across organs and species",
+      "blurb": "Screening thousands of public single-cell datasets, researchers found shared host-cell programs across 42 cancer types and released an interactive atlas and software package.",
+      "kind": "paper",
+      "blurbSource": "abstract",
+      "doi": "10.1038/s41586-026-11270-4"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2123061598462075034",
+      "linkedUrl": "https://www.nature.com/articles/d41586-026-03710-y",
+      "postedAt": "2026-11-18",
+      "headline": "Microbiome home tests are taking off. Can they be trusted?",
+      "blurb": "A Nature reporter mailed in a stool sample to two companies and compares what each told her about her gut microbiome.",
+      "kind": "other",
+      "blurbSource": "page-description",
+      "doi": "10.1038/d41586-026-03710-y"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123137551640756469",
+      "linkedUrl": "https://www.statnews.com/2026/11/18/ai-scribe-market-emerging-winners-losers-ai-prognosis/",
+      "postedAt": "2026-11-18",
+      "headline": "The emerging winners and losers in the AI scribe market",
+      "blurb": "STAT's AI Prognosis newsletter examines how the AI scribe market is settling, along with news from the HLTH conference.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2123094879157006708",
+      "linkedUrl": "https://www.nature.com/articles/s41586-026-11305-w",
+      "postedAt": "2026-11-18",
+      "headline": "Hypothalamic volume and cell-type changes in ageing and Alzheimer's disease",
+      "blurb": "HypoAD pairs MRI from 458 people with single-nucleus RNA sequencing of 614,403 nuclei, reporting that metabolism- and circadian-regulating hypothalamic subregions are particularly vulnerable in ageing and Alzheimer's.",
+      "kind": "paper",
+      "blurbSource": "abstract",
+      "doi": "10.1038/s41586-026-11305-w"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123129204543807659",
+      "linkedUrl": "https://www.statnews.com/2026/11/17/new-startup-developing-novel-sickle-cell-anemia-infusion-no-gene-therapy/",
+      "postedAt": "2026-11-18",
+      "headline": "With $173 million, new startup takes aim at sickle cell",
+      "blurb": "Marrow Therapeutics' founder is pursuing a sickle cell therapy meant to rival gene therapy's effectiveness while avoiding its drawbacks, backed by fresh venture funding.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2123136656614002830",
+      "linkedUrl": "https://www.biospace.com/drug-development/ctad-2026-biogen-aribio-lead-the-way-in-slowing-cognitive-decline-in-alzheimers",
+      "postedAt": "2026-11-18",
+      "headline": "CTAD 2026: Biogen and AriBio report Alzheimer's therapy wins",
+      "blurb": "Conference reports describe positive results for two companies' programs while two others fell short; one of those plans an FDA filing based on a subgroup signal.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2123129151305523432",
+      "linkedUrl": "https://www.biospace.com/drug-development/merck-scraps-centerpiece-of-2-7b-arqule-buy-after-late-stage-safety-concerns",
+      "postedAt": "2026-11-18",
+      "headline": "Merck scraps centerpiece of $2.7B ArQule buy after late-stage safety concerns",
+      "blurb": "Merck is ending several Phase 3 trials of nemtabrutinib after a benefit-risk review, removing it from the race among non-covalent BTK inhibitors.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2123114007976358379",
+      "linkedUrl": "https://www.biospace.com/business/pfizer-launches-into-autoimmune-car-t-with-chinas-starna-in-up-to-2-6b-deal",
+      "postedAt": "2026-11-18",
+      "headline": "Pfizer launches into autoimmune CAR T with China's Starna in up to $2.6B deal",
+      "blurb": "Under the agreement, Starna will work with Pfizer on three in vivo CAR T candidates aimed at autoimmune indications.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    }
   ]
 }
