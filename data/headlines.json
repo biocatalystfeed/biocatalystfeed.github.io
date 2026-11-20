@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-20T07:25:55.993Z",
+  "generated_at": "2026-11-20T13:14:16.263Z",
   "event_date": "2026-11-20",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -9,15 +9,15 @@
     {
       "id": "openfda-drugsfda",
       "enabled": true,
-      "status": "error",
-      "fetched": 0,
-      "note": "500 from https://api.fda.gov/drug/drugsfda.json?search=submissions.submission_status_date:[20260812+TO+20261120]+AND+submissions.submission_status:AP&limit=100&skip=0"
+      "status": "ok",
+      "fetched": 252,
+      "note": "openFDA drugsfda applications with an approval dated 20260812 to 20261120, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (28 labels matched)."
     },
     {
       "id": "openfda-crl",
       "enabled": true,
       "status": "ok",
-      "fetched": 12,
+      "fetched": 19,
       "note": "Personal fields in the openFDA letter (representative, signatory, address) are not copied."
     },
     {
@@ -338,6 +338,34 @@
   ],
   "items": [
     {
+      "id": "openfda-drugsfda:NDA220936:2026-11-17:ORIG:1",
+      "headline": "Nuvalent's gets FDA approval for Nelkarmi, a new molecular entity",
+      "blurb": "Nuvalent received approval of a new molecular entity on Nov 17. Application NDA 220936.",
+      "source_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220936",
+      "source_type": "regulator",
+      "source_name": "FDA Drugs@FDA (openFDA)",
+      "published_at": "2026-11-17",
+      "significance": 100,
+      "significance_rationale": "fda-nme 90; priority-review +8; 3d old +6 = 100. Original FDA approval classed Type 1 (new molecular entity).",
+      "tier": 5,
+      "scout_source": "openfda-drugsfda",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Neladalkib.svg/500px-Neladalkib.svg.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Neladalkib.svg",
+        "credit": "Vaccinationist",
+        "licence": "Public domain",
+        "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "alt": "Chemical structure of Neladalkib",
+        "width": 500,
+        "height": 440,
+        "hosting": "hotlink",
+        "type": "diagram",
+        "relevance": 3,
+        "reason": "drug \"Neladalkib\"",
+        "provider": "commons"
+      }
+    },
+    {
       "id": "openfda-crl:CRL_BLA761524_20261113.pdf",
       "headline": "FDA sends Summit Therapeutics Inc. a complete response letter",
       "blurb": "A complete response letter means the application was not approved as submitted, and the headings name clinical and safety. Application BLA 761524, letter date Nov 13.",
@@ -641,15 +669,15 @@
       "scout_source": "nvidia-blog"
     },
     {
-      "id": "europepmc:MED:43052541",
-      "headline": "The right to do wrong",
-      "blurb": "Published 2026-11-18 in Nature (MED 43052541).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03517-x",
+      "id": "europepmc:MED:43058249",
+      "headline": "Programmable functional RNA design with a virtual scientist",
+      "blurb": "Programmable functional RNA design is central to synthetic biology and therapeutics, yet both human expertise and existing computational methods struggle to directly program the three-dimensional. Published in Nature biotechnology.",
+      "source_url": "https://doi.org/10.1038/s41587-026-03362-3",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-19",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -667,15 +695,15 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "europepmc:MED:43052542",
-      "headline": "Tropical land-use intensification reshapes biodiversity in expected and unexpected ways",
-      "blurb": "Published 2026-11-18 in Nature (MED 43052542).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03602-1",
+      "id": "europepmc:MED:43058272",
+      "headline": "Sore throat? The brain has surprising control over how ill you feel",
+      "blurb": "Published 2026-11-19 in Nature (MED 43058272).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03774-w",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-19",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -693,15 +721,15 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43052543",
-      "headline": "A new view of Amazonian leaf seasonality",
-      "blurb": "Published 2026-11-18 in Nature (MED 43052543).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03490-5",
+      "id": "europepmc:MED:43058273",
+      "headline": "AI is ditching hallucinated references - and other bad habits",
+      "blurb": "Published 2026-11-19 in Nature (MED 43058273).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03753-1",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-19",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -719,15 +747,15 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "europepmc:MED:43052544",
-      "headline": "Injured locusts heal or are cannibalized depending on levels of a bacterial odour molecule",
-      "blurb": "Published 2026-11-18 in Nature (MED 43052544).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03599-7",
+      "id": "europepmc:MED:43058274",
+      "headline": "Bacteria and viruses team up to hasten the demise of algal blooms",
+      "blurb": "Published 2026-11-19 in Nature (MED 43058274).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03606-x",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-19",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -812,15 +840,15 @@
       "linked_url": "https://www.nature.com/articles/s41587-026-03362-3"
     },
     {
-      "id": "bcf-papers:MED:43046633",
-      "headline": "Association of questionnaire-defined probable obstructive sleep apnea with advanced cardiovascular-kidney-metabolic syndrome in US adults",
-      "blurb": "Published 2026-11-17 in Ren Fail (MED 43046633).",
-      "source_url": "https://doi.org/10.1080/0886022x.2026.2757912",
+      "id": "bcf-papers:MED:43054644",
+      "headline": "Marker-based CRISPR screens identify POU2F1 as a regulator of DLL3 and neuroendocrine identity",
+      "blurb": "Published 2026-11-18 in NAR Cancer (MED 43054644).",
+      "source_url": "https://doi.org/10.1093/narcan/zcag032",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-17",
+      "published_at": "2026-11-18",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },
@@ -933,10 +961,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/broadinstitute/status/2123452023349637589",
-      "headline": "Targeting a cellular \"traffic jam\" treats multiple diseases in mice",
-      "blurb": "Researchers describe a strategy that clears cells of the misfolded proteins behind a group of inherited genetic diseases. https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice",
-      "source_url": "https://x.com/broadinstitute/status/2123452023349637589",
+      "id": "x:https://x.com/biospace/status/2123483946377764953",
+      "headline": "Novartis projects slowed growth, pins hopes on billions in pipeline potential",
+      "blurb": "With Kisqali losing patent protection and prices falling, the company narrowed its sales guidance to about 5% growth, while management says it has a plan to recover. https://www.biospace.com/business/novartis-projects-slowed-growth-pins-hopes-on-billions-in-pipeline-potential",
+      "source_url": "https://x.com/biospace/status/2123483946377764953",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-19",
@@ -944,7 +972,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice"
+      "linked_url": "https://www.biospace.com/business/novartis-projects-slowed-growth-pins-hopes-on-billions-in-pipeline-potential"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.25396v1",
@@ -960,10 +988,10 @@
       "scout_source": "bcf-ai-discovery"
     },
     {
-      "id": "x:https://x.com/embl/status/2123401849503985836",
-      "headline": "How a tiny chemical mark is placed to double gene activity",
-      "blurb": "Detailed images of the protein spools that package DNA show how one enzyme adds a precise chemical modification that regulates gene activity. https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/",
-      "source_url": "https://x.com/embl/status/2123401849503985836",
+      "id": "x:https://x.com/broadinstitute/status/2123452023349637589",
+      "headline": "Targeting a cellular \"traffic jam\" treats multiple diseases in mice",
+      "blurb": "Researchers describe a strategy that clears cells of the misfolded proteins behind a group of inherited genetic diseases. https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice",
+      "source_url": "https://x.com/broadinstitute/status/2123452023349637589",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-19",
@@ -971,7 +999,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/"
+      "linked_url": "https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.25584v1",
@@ -1076,19 +1104,6 @@
       "significance_rationale": "nih-grant 60; 51d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
-    },
-    {
-      "id": "sec-edgar:0001390478-26-000021",
-      "headline": "SELLAS Life Sciences Group, Inc. discloses results of operations in an 8-K",
-      "blurb": "SELLAS Life Sciences Group, Inc. disclosed results of operations and financial statements and exhibits. Accession 0001390478-26-000021.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1390478/000139047826000021/0001390478-26-000021-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-12",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 8d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
     },
     {
       "id": "health-canada:38704",
