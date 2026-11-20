@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-20T13:14:16.263Z",
+  "generated_at": "2026-11-20T19:13:42.194Z",
   "event_date": "2026-11-20",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -799,10 +799,10 @@
       "scout_source": "orange-book"
     },
     {
-      "id": "x:https://x.com/statnews/status/2123571154967314853",
-      "headline": "Big drugmakers tell House committee they will halt clinical trials at some hospitals in China",
-      "blurb": "Five large pharmaceutical companies told Congress they do not plan to open new clinical trial sites in China's Xinjiang region. https://www.statnews.com/pharmalot/2026/11/19/china-pharma-biotech-clinical-trials-security-risk-patents-drug-development/",
-      "source_url": "https://x.com/statnews/status/2123571154967314853",
+      "id": "x:https://x.com/IEEESpectrum/status/2123816677917724837",
+      "headline": "Implant zaps excess sugar directly from blood",
+      "blurb": "An early trial of a wirelessly powered implant suggests a possible new approach to managing type 2 diabetes. https://spectrum.ieee.org/type-2-diabetes-electroceutical-implant",
+      "source_url": "https://x.com/IEEESpectrum/status/2123816677917724837",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-20",
@@ -810,7 +810,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/pharmalot/2026/11/19/china-pharma-biotech-clinical-trials-security-risk-patents-drug-development/"
+      "linked_url": "https://spectrum.ieee.org/type-2-diabetes-electroceutical-implant"
     },
     {
       "id": "sec-edgar:0001493152-26-053017",
@@ -826,18 +826,18 @@
       "scout_source": "sec-edgar-8k"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2123422121145835854",
-      "headline": "Programmable functional RNA design with a virtual scientist",
-      "blurb": "RhoAgent is an agentic system that proposes RNA designs and refines them with experimental feedback, using a diffusion-based model to target three-dimensional structure. https://www.nature.com/articles/s41587-026-03362-3",
-      "source_url": "https://x.com/EricTopol/status/2123422121145835854",
+      "id": "x:https://x.com/biospace/status/2123793230114205920",
+      "headline": "Merck-Kelun ADC scores survival win in Phase 3 gastroesophageal cancer trial",
+      "blurb": "The TROP2-targeting conjugate licensed from Kelun-Biotech extended overall survival in advanced disease but missed two secondary endpoints. https://www.biospace.com/drug-development/merck-kelun-adc-scores-survival-win-in-phase-3-stomach-cancer-trial",
+      "source_url": "https://x.com/biospace/status/2123793230114205920",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-19",
+      "published_at": "2026-11-20",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.nature.com/articles/s41587-026-03362-3"
+      "linked_url": "https://www.biospace.com/drug-development/merck-kelun-adc-scores-survival-win-in-phase-3-stomach-cancer-trial"
     },
     {
       "id": "bcf-papers:MED:43054644",
@@ -853,18 +853,18 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2123456602816889003",
-      "headline": "CD19 CAR T cell therapy alters disease-associated immune signatures in multiple sclerosis",
-      "blurb": "A preliminary series of five patients found expanded CAR T cells and sustained drops in disease biomarkers in cerebrospinal fluid. https://www.cell.com/cell/fulltext/S0092-8674(26)01337-1",
-      "source_url": "https://x.com/EricTopol/status/2123456602816889003",
+      "id": "x:https://x.com/biospace/status/2123808582768455774",
+      "headline": "RevMed pads Rasonque's first-line survival advantage in pancreatic cancer with early data",
+      "blurb": "Truist Securities says the new figures could lift Revolution Medicines above its current $14.5 billion peak-sales estimate for the newly approved RAS(ON) inhibitor. https://www.biospace.com/drug-development/revmed-pads-rasonques-first-line-survival-advantage-in-pancreatic-cancer-with-early-data",
+      "source_url": "https://x.com/biospace/status/2123808582768455774",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-19",
+      "published_at": "2026-11-20",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01337-1"
+      "linked_url": "https://www.biospace.com/drug-development/revmed-pads-rasonques-first-line-survival-advantage-in-pancreatic-cancer-with-early-data"
     },
     {
       "id": "bcf-papers:MED:43039660",
@@ -880,18 +880,18 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/IEEESpectrum/status/2123431276321382589",
-      "headline": "Meet Shepherd, the meta-agent keeping rogue AI in check",
-      "blurb": "The tool applies version control and sandboxing so that AI agents can recover from mistakes while a supervising agent manages them. https://spectrum.ieee.org/ai-agent-manager",
-      "source_url": "https://x.com/IEEESpectrum/status/2123431276321382589",
+      "id": "x:https://x.com/biospace/status/2123823682665537574",
+      "headline": "FDA will miss rare decision deadline for Savara candidate after three-month delay",
+      "blurb": "Savara's stock fell 18% on the delay, while analysts still expect approval and point to possible capacity strain at the agency. https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay",
+      "source_url": "https://x.com/biospace/status/2123823682665537574",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-19",
+      "published_at": "2026-11-20",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://spectrum.ieee.org/ai-agent-manager"
+      "linked_url": "https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay"
     },
     {
       "id": "medrxiv:10.64898/2026.11.12.26366211",
@@ -907,18 +907,18 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/IsomorphicLabs/status/2123382767434297656",
-      "headline": "Isomorphic Labs enters into a strategic research collaboration with MSD",
-      "blurb": "The company pairs its AI drug-design engine with the pharmaceutical group's proprietary data and discovery experience to advance therapeutic candidates. https://www.isomorphiclabs.com/articles/isomorphic-labs-enters-into-a-research-collaboration-with-msd",
-      "source_url": "https://x.com/IsomorphicLabs/status/2123382767434297656",
+      "id": "x:https://x.com/statnews/status/2123747711400698331",
+      "headline": "Patients have little say in brain implant trials; Ian Burkhart wants to change that",
+      "blurb": "The founder of a coalition of brain-implant trial participants argues developers should give volunteers more agency in how studies are designed and run. https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/",
+      "source_url": "https://x.com/statnews/status/2123747711400698331",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-19",
+      "published_at": "2026-11-20",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-enters-into-a-research-collaboration-with-msd"
+      "linked_url": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.14.26368103",
@@ -934,10 +934,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/biospace/status/2123476417140650384",
-      "headline": "Actinogen's sole drug fails pivotal Alzheimer's study, sinking stock 80%",
-      "blurb": "The Australian biotech's lead candidate missed in a late-stage trial, though the company still intends to take the data to the FDA to discuss next steps. https://www.biospace.com/drug-development/actinogens-sole-drug-fails-pivotal-alzheimers-study-sinking-stock-80",
-      "source_url": "https://x.com/biospace/status/2123476417140650384",
+      "id": "x:https://x.com/embl/status/2123401849503985836",
+      "headline": "How a tiny chemical mark is placed to double gene activity",
+      "blurb": "Detailed images of the protein spools that package DNA show how one enzyme adds a precise chemical modification that regulates gene activity. https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/",
+      "source_url": "https://x.com/embl/status/2123401849503985836",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-19",
@@ -945,7 +945,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/drug-development/actinogens-sole-drug-fails-pivotal-alzheimers-study-sinking-stock-80"
+      "linked_url": "https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/"
     },
     {
       "id": "medrxiv:10.64898/2026.08.04.26359728",
@@ -961,10 +961,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/biospace/status/2123483946377764953",
-      "headline": "Novartis projects slowed growth, pins hopes on billions in pipeline potential",
-      "blurb": "With Kisqali losing patent protection and prices falling, the company narrowed its sales guidance to about 5% growth, while management says it has a plan to recover. https://www.biospace.com/business/novartis-projects-slowed-growth-pins-hopes-on-billions-in-pipeline-potential",
-      "source_url": "https://x.com/biospace/status/2123483946377764953",
+      "id": "x:https://x.com/statnews/status/2123462617360470506",
+      "headline": "Peptide market poised to explode with new Hims and Noom launches",
+      "blurb": "Two consumer health companies are widening access to peptides, a market opening up in a regulatory gray area despite thin scientific evidence. https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
+      "source_url": "https://x.com/statnews/status/2123462617360470506",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-19",
@@ -972,7 +972,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/business/novartis-projects-slowed-growth-pins-hopes-on-billions-in-pipeline-potential"
+      "linked_url": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.25396v1",
@@ -988,10 +988,10 @@
       "scout_source": "bcf-ai-discovery"
     },
     {
-      "id": "x:https://x.com/broadinstitute/status/2123452023349637589",
-      "headline": "Targeting a cellular \"traffic jam\" treats multiple diseases in mice",
-      "blurb": "Researchers describe a strategy that clears cells of the misfolded proteins behind a group of inherited genetic diseases. https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice",
-      "source_url": "https://x.com/broadinstitute/status/2123452023349637589",
+      "id": "x:https://x.com/statnews/status/2123479565934731610",
+      "headline": "A cardiologist is puzzled by the blockbuster new study on deprescribing statins",
+      "blurb": "A cardiologist's opinion piece finds a large trial on stopping statins confusing and raises questions about how to read its results. https://www.statnews.com/2026/11/19/deprescribing-statins-study-stream-trial-aha-questions/",
+      "source_url": "https://x.com/statnews/status/2123479565934731610",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-19",
@@ -999,7 +999,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice"
+      "linked_url": "https://www.statnews.com/2026/11/19/deprescribing-statins-study-stream-trial-aha-questions/"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.25584v1",
