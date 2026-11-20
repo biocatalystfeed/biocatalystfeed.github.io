@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-20T01:15:48.257Z",
+  "generated_at": "2026-11-20T07:25:55.993Z",
   "event_date": "2026-11-20",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -9,15 +9,15 @@
     {
       "id": "openfda-drugsfda",
       "enabled": true,
-      "status": "ok",
-      "fetched": 246,
-      "note": "openFDA drugsfda applications with an approval dated 20260812 to 20261120, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (28 labels matched)."
+      "status": "error",
+      "fetched": 0,
+      "note": "500 from https://api.fda.gov/drug/drugsfda.json?search=submissions.submission_status_date:[20260812+TO+20261120]+AND+submissions.submission_status:AP&limit=100&skip=0"
     },
     {
       "id": "openfda-crl",
       "enabled": true,
       "status": "ok",
-      "fetched": 19,
+      "fetched": 12,
       "note": "Personal fields in the openFDA letter (representative, signatory, address) are not copied."
     },
     {
@@ -52,7 +52,7 @@
       "id": "health-canada-noc",
       "enabled": true,
       "status": "ok",
-      "fetched": 159,
+      "fetched": 167,
       "note": "Health Canada Notice of Compliance Database. Contains information licensed under the Open Government Licence – Canada. Administrative and veterinary notices are dropped."
     },
     {
@@ -94,7 +94,7 @@
       "id": "bcf-ai-discovery",
       "enabled": true,
       "status": "ok",
-      "fetched": 5,
+      "fetched": 6,
       "note": "BioCatalystFeed Worker /ai-discovery. Curated model cards are included only when verified_as_of or published falls in the last 45 days. arXiv rows come from the worker's allowlisted category query and are labeled as preprints. Summaries are not copied. No X client is called."
     },
     {
@@ -108,8 +108,8 @@
       "id": "sec-edgar-8k",
       "enabled": true,
       "status": "ok",
-      "fetched": 72,
-      "note": "SEC EDGAR daily index Form 8-K rows for 125 tickers already listed in calendar/calendar.json. 7 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
+      "fetched": 73,
+      "note": "SEC EDGAR daily index Form 8-K rows for 125 tickers already listed in calendar/calendar.json. 6 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
     },
     {
       "id": "fda-press",
@@ -338,34 +338,6 @@
   ],
   "items": [
     {
-      "id": "openfda-drugsfda:NDA221291:2026-11-09:ORIG:1",
-      "headline": "FDA approves Bayer's Sunharbo (asundexian), a new molecular entity",
-      "blurb": "Bayer Healthcare received approval of a new molecular entity on Nov 9. Application NDA 221291.",
-      "source_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221291",
-      "source_type": "regulator",
-      "source_name": "FDA Drugs@FDA (openFDA)",
-      "published_at": "2026-11-09",
-      "significance": 100,
-      "significance_rationale": "fda-nme 90; priority-review +8; 11d old +3 = 100. Original FDA approval classed Type 1 (new molecular entity).",
-      "tier": 5,
-      "scout_source": "openfda-drugsfda",
-      "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Pano-bayer-leverkusen.jpg/960px-Pano-bayer-leverkusen.jpg",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Pano-bayer-leverkusen.jpg",
-        "credit": "A.Savin",
-        "licence": "CC BY-SA 3.0",
-        "basisUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "alt": "A pano of the Bayer main factories in Leverkusen, Germany.",
-        "width": 960,
-        "height": 173,
-        "hosting": "hotlink",
-        "type": "photo",
-        "relevance": 3,
-        "reason": "org \"Bayer\"",
-        "provider": "commons"
-      }
-    },
-    {
       "id": "openfda-crl:CRL_BLA761524_20261113.pdf",
       "headline": "FDA sends Summit Therapeutics Inc. a complete response letter",
       "blurb": "A complete response letter means the application was not approved as submitted, and the headings name clinical and safety. Application BLA 761524, letter date Nov 13.",
@@ -391,19 +363,19 @@
       "tier": 4,
       "scout_source": "ema",
       "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Baxdrostat.svg/500px-Baxdrostat.svg.png",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Baxdrostat.svg",
-        "credit": "Vaccinationist",
-        "licence": "CC BY-SA 4.0",
-        "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "alt": "Chemical structure of baxdrostat",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AstraZeneca_Site%2C_Loughborough_-_geograph.org.uk_-_6419.jpg/500px-AstraZeneca_Site%2C_Loughborough_-_geograph.org.uk_-_6419.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AstraZeneca_Site%2C_Loughborough_-_geograph.org.uk_-_6419.jpg",
+        "credit": "Chris J Dixon",
+        "licence": "CC BY-SA 2.0",
+        "basisUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "alt": "AstraZeneca Site, Loughborough. Looking East, canal bridge just visible on the left.",
         "width": 500,
-        "height": 219,
+        "height": 341,
         "hosting": "hotlink",
-        "type": "diagram",
-        "provider": "commons",
+        "type": "photo",
         "relevance": 3,
-        "reason": "drug \"baxdrostat\""
+        "reason": "org \"AstraZeneca\"",
+        "provider": "commons"
       }
     },
     {
@@ -975,15 +947,15 @@
       "linked_url": "https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice"
     },
     {
-      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.24150v1",
-      "headline": "Micrograph B-factor estimation via Wilson statistics",
-      "blurb": "The single-particle cryo-electron microscopy imaging process is known to cause exponential decay in the amplitude and power spectra of proteins. Posted on arXiv. Preprint, not peer-reviewed.",
-      "source_url": "https://arxiv.org/abs/2611.24150v1",
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.25396v1",
+      "headline": "Protein Functional Semantic Alignment via Representation Rectification",
+      "blurb": "Protein language models (PLMs) are commonly pretrained with likelihood-based objectives such as masked language modeling or denoising. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.25396v1",
       "source_type": "paper",
       "source_name": "BioCatalystFeed AI discovery",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-19",
       "significance": 60,
-      "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
     },
@@ -1002,15 +974,15 @@
       "linked_url": "https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/"
     },
     {
-      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.24546v1",
-      "headline": "Biases and Limits of AlphaFold Predictions for Non-Globular Proteins",
-      "blurb": "AlphaFold has transformed protein structure prediction, making structural models accessible across the life sciences. Posted on arXiv. Preprint, not peer-reviewed.",
-      "source_url": "https://arxiv.org/abs/2611.24546v1",
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.25584v1",
+      "headline": "An Explainable and Scalable Hierarchical Tensor Framework for Integrating Multi-Omics and Digital Pathomics",
+      "blurb": "Background: Precision oncology requires integration of heterogeneous molecular and pathology data, yet many fusion models offer limited biologically grounded interpretability and struggle with missing modalities. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.25584v1",
       "source_type": "paper",
       "source_name": "BioCatalystFeed AI discovery",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-19",
       "significance": 60,
-      "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
       "tier": 3,
       "scout_source": "bcf-ai-discovery"
     },
@@ -1106,15 +1078,28 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "health-canada:38696",
-      "headline": "Spc-Fenofibrate S (Fenofibrate): Health Canada abbreviated submission",
-      "blurb": "Notice 38696, date 2026-11-17. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
-      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38696",
+      "id": "sec-edgar:0001390478-26-000021",
+      "headline": "SELLAS Life Sciences Group, Inc. discloses results of operations in an 8-K",
+      "blurb": "SELLAS Life Sciences Group, Inc. disclosed results of operations and financial statements and exhibits. Accession 0001390478-26-000021.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1390478/000139047826000021/0001390478-26-000021-index.html",
+      "source_type": "filing",
+      "source_name": "SEC EDGAR",
+      "published_at": "2026-11-12",
+      "significance": 43,
+      "significance_rationale": "sec-8k 58; routine-filing -18; 8d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "tier": 2,
+      "scout_source": "sec-edgar-8k"
+    },
+    {
+      "id": "health-canada:38704",
+      "headline": "Jamp Sertraline (Sertraline Hydrochloride) receives a Health Canada notice of compliance",
+      "blurb": "Abbreviated submission, notice 38704. Manufacturer listed as Jamp Pharma Corporation.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38704",
       "source_type": "regulator",
       "source_name": "Health Canada Notice of Compliance Database",
-      "published_at": "2026-11-17",
+      "published_at": "2026-11-18",
       "significance": 40,
-      "significance_rationale": "hc-ands 34; 3d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
+      "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
       "tier": 2,
       "scout_source": "health-canada-noc"
     }
