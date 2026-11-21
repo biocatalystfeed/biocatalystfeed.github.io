@@ -23,16 +23,6 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "embl",
-      "postUrl": "https://x.com/embl/status/2123335163342193077",
-      "linkedUrl": "https://www.embl.org/news/people-perspectives/a-new-chapter-for-genecore/",
-      "postedAt": "2026-11-19",
-      "headline": "A new chapter for GeneCore",
-      "blurb": "Arnaud Krebs, who now leads EMBL's Genomics Core Facility, talks about genomics in biological discovery and where the service goes next.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
       "handle": "EricTopol",
       "postUrl": "https://x.com/EricTopol/status/2123422121145835854",
       "linkedUrl": "https://www.nature.com/articles/s41587-026-03362-3",
@@ -104,16 +94,6 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "embl",
-      "postUrl": "https://x.com/embl/status/2123401849503985836",
-      "linkedUrl": "https://www.embl.org/news/science-technology/how-a-tiny-chemical-mark-is-placed-to-double-gene-activity/",
-      "postedAt": "2026-11-19",
-      "headline": "How a tiny chemical mark is placed to double gene activity",
-      "blurb": "Detailed images of the protein spools that package DNA show how one enzyme adds a precise chemical modification that regulates gene activity.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
       "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2123479565934731610",
       "linkedUrl": "https://www.statnews.com/2026/11/19/deprescribing-statins-study-stream-trial-aha-questions/",
@@ -121,6 +101,16 @@
       "headline": "A cardiologist is puzzled by the blockbuster new study on deprescribing statins",
       "blurb": "A cardiologist's opinion piece finds a large trial on stopping statins confusing and raises questions about how to read its results.",
       "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2123823682665537574",
+      "linkedUrl": "https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay",
+      "postedAt": "2026-11-20",
+      "headline": "FDA will miss rare decision deadline for Savara candidate after three-month delay",
+      "blurb": "Savara's stock fell 18% after the announcement, while analysts still expect approval and point to possible capacity constraints at the agency.",
+      "kind": "approval",
       "blurbSource": "page-description"
     }
   ]
