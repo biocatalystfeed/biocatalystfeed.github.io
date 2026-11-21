@@ -3,6 +3,67 @@
   "enabled": true,
   "picks": [
     {
+      "handle": "OpenAI",
+      "postUrl": "https://x.com/OpenAI/status/2123856316187975756",
+      "linkedUrl": "https://openai.com/index/introducing-medchembench/",
+      "postedAt": "2026-11-20",
+      "headline": "Can AI help scientists identify promising drug candidates?",
+      "blurb": "A new benchmark tests how well AI models read molecular structures, weigh experimental evidence and choose compounds in early drug discovery.",
+      "kind": "model",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "broadinstitute",
+      "postUrl": "https://x.com/broadinstitute/status/2123452023349637589",
+      "linkedUrl": "https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice",
+      "postedAt": "2026-11-19",
+      "headline": "Targeting a cellular traffic jam treats multiple diseases in mice",
+      "blurb": "Researchers describe a strategy that clears cells of the misfolded proteins behind a group of genetic diseases.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "embl",
+      "postUrl": "https://x.com/embl/status/2123335163342193077",
+      "linkedUrl": "https://www.embl.org/news/people-perspectives/a-new-chapter-for-genecore/",
+      "postedAt": "2026-11-19",
+      "headline": "A new chapter for GeneCore",
+      "blurb": "Arnaud Krebs, who now leads EMBL's Genomics Core Facility, talks about genomics in biological discovery and where the service goes next.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2123422121145835854",
+      "linkedUrl": "https://www.nature.com/articles/s41587-026-03362-3",
+      "postedAt": "2026-11-19",
+      "headline": "Programmable functional RNA design with a virtual scientist",
+      "blurb": "The paper introduces RhoAgent, an agentic system that designs RNA candidates and refines them using experimental feedback.",
+      "kind": "paper",
+      "blurbSource": "abstract",
+      "doi": "10.1038/s41587-026-03362-3"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123877382368952728",
+      "linkedUrl": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
+      "postedAt": "2026-11-20",
+      "headline": "Peptides go mainstream as Hims and Noom enter the market",
+      "blurb": "Two telehealth companies launched peptide programs this week after HHS eased compounding pharmacy access to drugs such as BPC-157.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123858687030710653",
+      "linkedUrl": "https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/",
+      "postedAt": "2026-11-20",
+      "headline": "Kennedy funds $47 million in 'Food is Medicine' pilot projects",
+      "blurb": "An HHS pilot gives 15 U.S. groups a chance to show that nutrition coaching and lifestyle programs merit Medicare coverage.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
       "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2123927874419769795",
       "linkedUrl": "https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/",
@@ -19,86 +80,6 @@
       "postedAt": "2026-11-20",
       "headline": "Celldex culls eczema study after Phase 2 failure",
       "blurb": "The company is dropping its monoclonal antibody barzolvolimab as an eczema therapy after the drug failed a mid-stage trial.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "endpts",
-      "postUrl": "https://x.com/endpts/status/2123850572755304658",
-      "linkedUrl": "https://endpoints.news/kras-at-triple-meeting-erasca-wants-to-one-up-revmed-while-alterome-tries-a-different-approach/",
-      "postedAt": "2026-11-20",
-      "headline": "Erasca wants to one-up RevMed on KRAS as Alterome tries a different approach",
-      "blurb": "Revolution Medicines posted strong pancreatic cancer data Thursday evening, but rival developers are building competition at every turn.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "endpts",
-      "postUrl": "https://x.com/endpts/status/2123836812045242422",
-      "linkedUrl": "https://endpoints.news/merck-gets-another-phase-3-win-for-sac-tmt-this-time-in-gastric-cancer/",
-      "postedAt": "2026-11-20",
-      "headline": "Merck gets another Phase 3 win for sac-TMT in gastric cancer",
-      "blurb": "The experimental antibody-drug conjugate succeeded in a second late-stage cancer study, potentially helping offset Keytruda's looming patent cliff.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "BioPharmaDive",
-      "postUrl": "https://x.com/BioPharmaDive/status/2123833551389118627",
-      "linkedUrl": "https://www.biopharmadive.com/news/erasca-kras-pancreatic-cancer-drug-results-revolution-rasonque/875314/",
-      "postedAt": "2026-11-20",
-      "headline": "Erasca data add to pressure facing Revolution's breakthrough cancer drug",
-      "blurb": "Erasca reported a 44% response rate for ERAS-0015 in a small Phase 1 pancreatic cancer trial and plans to advance it quickly into Phase 3.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "BioPharmaDive",
-      "postUrl": "https://x.com/BioPharmaDive/status/2123814266352636125",
-      "linkedUrl": "https://www.biopharmadive.com/news/biotech-china-deals-venture-returns-summit-stock/874912/",
-      "postedAt": "2026-11-20",
-      "headline": "Biotech investors' China bets are already paying off",
-      "blurb": "Startups built around medicines from China have moved quickly toward acquisitions or IPOs, while Summit Therapeutics' stock has lost its earlier Wall Street shine.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2123823682665537574",
-      "linkedUrl": "https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay",
-      "postedAt": "2026-11-20",
-      "headline": "FDA will miss rare decision deadline for Savara candidate after three-month delay",
-      "blurb": "Savara's stock fell 18% on the delay, while analysts still expect approval and point to possible capacity strain at the agency.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "IEEESpectrum",
-      "postUrl": "https://x.com/IEEESpectrum/status/2123816677917724837",
-      "linkedUrl": "https://spectrum.ieee.org/type-2-diabetes-electroceutical-implant",
-      "postedAt": "2026-11-20",
-      "headline": "Implant zaps excess sugar directly from blood",
-      "blurb": "An early trial of a wirelessly powered implant suggests a possible new approach to managing type 2 diabetes.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2123808582768455774",
-      "linkedUrl": "https://www.biospace.com/drug-development/revmed-pads-rasonques-first-line-survival-advantage-in-pancreatic-cancer-with-early-data",
-      "postedAt": "2026-11-20",
-      "headline": "RevMed pads Rasonque's first-line survival advantage in pancreatic cancer with early data",
-      "blurb": "Truist Securities says the new figures could lift Revolution Medicines above its current $14.5 billion peak-sales estimate for the newly approved RAS(ON) inhibitor.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2123793230114205920",
-      "linkedUrl": "https://www.biospace.com/drug-development/merck-kelun-adc-scores-survival-win-in-phase-3-stomach-cancer-trial",
-      "postedAt": "2026-11-20",
-      "headline": "Merck-Kelun ADC scores survival win in Phase 3 gastroesophageal cancer trial",
-      "blurb": "The TROP2-targeting conjugate licensed from Kelun-Biotech extended overall survival in advanced disease but missed two secondary endpoints.",
       "kind": "other",
       "blurbSource": "page-description"
     },
@@ -139,16 +120,6 @@
       "postedAt": "2026-11-19",
       "headline": "A cardiologist is puzzled by the blockbuster new study on deprescribing statins",
       "blurb": "A cardiologist's opinion piece finds a large trial on stopping statins confusing and raises questions about how to read its results.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2123462617360470506",
-      "linkedUrl": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
-      "postedAt": "2026-11-19",
-      "headline": "Peptide market poised to explode with new Hims and Noom launches",
-      "blurb": "Two consumer health companies are widening access to peptides, a market opening up in a regulatory gray area despite thin scientific evidence.",
       "kind": "other",
       "blurbSource": "page-description"
     }
