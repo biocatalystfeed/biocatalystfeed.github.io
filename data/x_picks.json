@@ -3,6 +3,66 @@
   "enabled": true,
   "picks": [
     {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2123927874419769795",
+      "linkedUrl": "https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/",
+      "postedAt": "2026-11-20",
+      "headline": "FDA rejects Capricor's Duchenne therapy, a decision long in coming",
+      "blurb": "The agency declined to approve the cell therapy deramiocel for Duchenne muscular dystrophy; STAT's columnist argues the data never supported it despite a public pressure campaign.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "endpts",
+      "postUrl": "https://x.com/endpts/status/2123876049674961023",
+      "linkedUrl": "https://endpoints.news/celldex-culls-eczema-drug-after-phase-2-failure/",
+      "postedAt": "2026-11-20",
+      "headline": "Celldex culls eczema study after Phase 2 failure",
+      "blurb": "The company is dropping its monoclonal antibody barzolvolimab as an eczema therapy after the drug failed a mid-stage trial.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "endpts",
+      "postUrl": "https://x.com/endpts/status/2123850572755304658",
+      "linkedUrl": "https://endpoints.news/kras-at-triple-meeting-erasca-wants-to-one-up-revmed-while-alterome-tries-a-different-approach/",
+      "postedAt": "2026-11-20",
+      "headline": "Erasca wants to one-up RevMed on KRAS as Alterome tries a different approach",
+      "blurb": "Revolution Medicines posted strong pancreatic cancer data Thursday evening, but rival developers are building competition at every turn.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "endpts",
+      "postUrl": "https://x.com/endpts/status/2123836812045242422",
+      "linkedUrl": "https://endpoints.news/merck-gets-another-phase-3-win-for-sac-tmt-this-time-in-gastric-cancer/",
+      "postedAt": "2026-11-20",
+      "headline": "Merck gets another Phase 3 win for sac-TMT in gastric cancer",
+      "blurb": "The experimental antibody-drug conjugate succeeded in a second late-stage cancer study, potentially helping offset Keytruda's looming patent cliff.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "BioPharmaDive",
+      "postUrl": "https://x.com/BioPharmaDive/status/2123833551389118627",
+      "linkedUrl": "https://www.biopharmadive.com/news/erasca-kras-pancreatic-cancer-drug-results-revolution-rasonque/875314/",
+      "postedAt": "2026-11-20",
+      "headline": "Erasca data add to pressure facing Revolution's breakthrough cancer drug",
+      "blurb": "Erasca reported a 44% response rate for ERAS-0015 in a small Phase 1 pancreatic cancer trial and plans to advance it quickly into Phase 3.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "BioPharmaDive",
+      "postUrl": "https://x.com/BioPharmaDive/status/2123814266352636125",
+      "linkedUrl": "https://www.biopharmadive.com/news/biotech-china-deals-venture-returns-summit-stock/874912/",
+      "postedAt": "2026-11-20",
+      "headline": "Biotech investors' China bets are already paying off",
+      "blurb": "Startups built around medicines from China have moved quickly toward acquisitions or IPOs, while Summit Therapeutics' stock has lost its earlier Wall Street shine.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
       "handle": "biospace",
       "postUrl": "https://x.com/biospace/status/2123823682665537574",
       "linkedUrl": "https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay",
@@ -89,89 +149,6 @@
       "postedAt": "2026-11-19",
       "headline": "Peptide market poised to explode with new Hims and Noom launches",
       "blurb": "Two consumer health companies are widening access to peptides, a market opening up in a regulatory gray area despite thin scientific evidence.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2123093437994123356",
-      "linkedUrl": "https://www.nature.com/articles/s41586-026-11270-4",
-      "postedAt": "2026-11-18",
-      "headline": "Conservation of the tumour microenvironment across organs and species",
-      "blurb": "Screening thousands of public single-cell datasets, researchers found shared host-cell programs across 42 cancer types and released an interactive atlas and software package.",
-      "kind": "paper",
-      "blurbSource": "abstract",
-      "doi": "10.1038/s41586-026-11270-4"
-    },
-    {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2123061598462075034",
-      "linkedUrl": "https://www.nature.com/articles/d41586-026-03710-y",
-      "postedAt": "2026-11-18",
-      "headline": "Microbiome home tests are taking off. Can they be trusted?",
-      "blurb": "A Nature reporter mailed in a stool sample to two companies and compares what each told her about her gut microbiome.",
-      "kind": "other",
-      "blurbSource": "page-description",
-      "doi": "10.1038/d41586-026-03710-y"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2123137551640756469",
-      "linkedUrl": "https://www.statnews.com/2026/11/18/ai-scribe-market-emerging-winners-losers-ai-prognosis/",
-      "postedAt": "2026-11-18",
-      "headline": "The emerging winners and losers in the AI scribe market",
-      "blurb": "STAT's AI Prognosis newsletter examines how the AI scribe market is settling, along with news from the HLTH conference.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2123094879157006708",
-      "linkedUrl": "https://www.nature.com/articles/s41586-026-11305-w",
-      "postedAt": "2026-11-18",
-      "headline": "Hypothalamic volume and cell-type changes in ageing and Alzheimer's disease",
-      "blurb": "HypoAD pairs MRI from 458 people with single-nucleus RNA sequencing of 614,403 nuclei, reporting that metabolism- and circadian-regulating hypothalamic subregions are particularly vulnerable in ageing and Alzheimer's.",
-      "kind": "paper",
-      "blurbSource": "abstract",
-      "doi": "10.1038/s41586-026-11305-w"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2123129204543807659",
-      "linkedUrl": "https://www.statnews.com/2026/11/17/new-startup-developing-novel-sickle-cell-anemia-infusion-no-gene-therapy/",
-      "postedAt": "2026-11-18",
-      "headline": "With $173 million, new startup takes aim at sickle cell",
-      "blurb": "Marrow Therapeutics' founder is pursuing a sickle cell therapy meant to rival gene therapy's effectiveness while avoiding its drawbacks, backed by fresh venture funding.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2123136656614002830",
-      "linkedUrl": "https://www.biospace.com/drug-development/ctad-2026-biogen-aribio-lead-the-way-in-slowing-cognitive-decline-in-alzheimers",
-      "postedAt": "2026-11-18",
-      "headline": "CTAD 2026: Biogen and AriBio report Alzheimer's therapy wins",
-      "blurb": "Conference reports describe positive results for two companies' programs while two others fell short; one of those plans an FDA filing based on a subgroup signal.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2123129151305523432",
-      "linkedUrl": "https://www.biospace.com/drug-development/merck-scraps-centerpiece-of-2-7b-arqule-buy-after-late-stage-safety-concerns",
-      "postedAt": "2026-11-18",
-      "headline": "Merck scraps centerpiece of $2.7B ArQule buy after late-stage safety concerns",
-      "blurb": "Merck is ending several Phase 3 trials of nemtabrutinib after a benefit-risk review, removing it from the race among non-covalent BTK inhibitors.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2123114007976358379",
-      "linkedUrl": "https://www.biospace.com/business/pfizer-launches-into-autoimmune-car-t-with-chinas-starna-in-up-to-2-6b-deal",
-      "postedAt": "2026-11-18",
-      "headline": "Pfizer launches into autoimmune CAR T with China's Starna in up to $2.6B deal",
-      "blurb": "Under the agreement, Starna will work with Pfizer on three in vivo CAR T candidates aimed at autoimmune indications.",
       "kind": "other",
       "blurbSource": "page-description"
     }
