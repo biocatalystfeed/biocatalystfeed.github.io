@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-21T13:13:21.225Z",
+  "generated_at": "2026-11-21T19:18:26.623Z",
   "event_date": "2026-11-21",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -784,6 +784,20 @@
       "scout_source": "orange-book"
     },
     {
+      "id": "x:https://x.com/EricTopol/status/2124167395279593567",
+      "headline": "Aging drives distinct chromatin signatures of CD8 T cell dysfunction",
+      "blurb": "Mapping chromatin accessibility in young and aged mice, the study links older T cells' decline to lost gene regulation and a distinct regulatory subset. https://www.science.org/doi/10.1126/sciimmunol.aej5412",
+      "source_url": "https://x.com/EricTopol/status/2124167395279593567",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-21",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.science.org/doi/10.1126/sciimmunol.aej5412"
+    },
+    {
       "id": "sec-edgar:0001104659-26-130331",
       "headline": "SELLAS Life Sciences Group, Inc. discloses a material definitive agreement in an 8-K",
       "blurb": "SELLAS Life Sciences Group, Inc. disclosed a material definitive agreement and other events and financial statements and exhibits. Accession 0001104659-26-130331.",
@@ -795,6 +809,60 @@
       "significance_rationale": "sec-8k 58; 1d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 3,
       "scout_source": "sec-edgar-8k"
+    },
+    {
+      "id": "x:https://x.com/statnews/status/2124073421021614509",
+      "headline": "RFK Jr. and MAHA must promote the MMR vaccine",
+      "blurb": "A podcast co-host's opinion column argues that Kennedy is positioned to reach vaccine-hesitant parents during the ongoing measles outbreak. https://www.statnews.com/2026/11/21/rfk-jr-maha-measles-outbreak-elimination-status-promote-mmr-vaccine/",
+      "source_url": "https://x.com/statnews/status/2124073421021614509",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-21",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.statnews.com/2026/11/21/rfk-jr-maha-measles-outbreak-elimination-status-promote-mmr-vaccine/"
+    },
+    {
+      "id": "bcf-papers:MED:43062005",
+      "headline": "One-carbon metabolism-derived prognostic signature orchestrates reactive oxygen species redox homeostasis",
+      "blurb": "Published 2026-11-20 in Med Gas Res (MED 43062005).",
+      "source_url": "https://doi.org/10.4103/mgr.medgasres-d-26-00136",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-20",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 1d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
+    },
+    {
+      "id": "x:https://x.com/NIH/status/2123767010651689377",
+      "headline": "Large NIH-supported study identifies key underlying pathways in endometriosis",
+      "blurb": "Researchers report genetic associations and mechanisms that help explain how this complex disorder develops. https://www.nih.gov/news-events/news-releases/large-nih-supported-study-identifies-key-underlying-pathways-endometriosis",
+      "source_url": "https://x.com/NIH/status/2123767010651689377",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-20",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.nih.gov/news-events/news-releases/large-nih-supported-study-identifies-key-underlying-pathways-endometriosis"
+    },
+    {
+      "id": "bcf-papers:MED:43054644",
+      "headline": "Marker-based CRISPR screens identify POU2F1 as a regulator of DLL3 and neuroendocrine identity",
+      "blurb": "Published 2026-11-18 in NAR Cancer (MED 43054644).",
+      "source_url": "https://doi.org/10.1093/narcan/zcag032",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-18",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/OpenAI/status/2123856316187975756",
@@ -811,15 +879,15 @@
       "linked_url": "https://openai.com/index/introducing-medchembench/"
     },
     {
-      "id": "bcf-papers:MED:43062005",
-      "headline": "One-carbon metabolism-derived prognostic signature orchestrates reactive oxygen species redox homeostasis",
-      "blurb": "Published 2026-11-20 in Med Gas Res (MED 43062005).",
-      "source_url": "https://doi.org/10.4103/mgr.medgasres-d-26-00136",
+      "id": "bcf-papers:MED:43060749",
+      "headline": "Interpretable Machine Learning for Predicting Risk Factors for Chronic Postsurgical Pain After Cesarean Delivery",
+      "blurb": "Published 2026-11-18 in MedComm (2020) (MED 43060749).",
+      "source_url": "https://doi.org/10.1002/mco2.71131",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-20",
+      "published_at": "2026-11-18",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 1d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },
@@ -838,17 +906,17 @@
       "linked_url": "https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay"
     },
     {
-      "id": "bcf-papers:MED:43054644",
-      "headline": "Marker-based CRISPR screens identify POU2F1 as a regulator of DLL3 and neuroendocrine identity",
-      "blurb": "Published 2026-11-18 in NAR Cancer (MED 43054644).",
-      "source_url": "https://doi.org/10.1093/narcan/zcag032",
+      "id": "medrxiv:10.64898/2026.11.12.26366211",
+      "headline": "Attitudes and Perceptions of Generative Artificial Intelligence Chatbots in the Peer Review of Traditional",
+      "blurb": "Suggest both perceived utility and apprehension about potential risks. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.12.26366211",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-18",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-16",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "medrxiv"
     },
     {
       "id": "x:https://x.com/endpts/status/2123876049674961023",
@@ -865,17 +933,17 @@
       "linked_url": "https://endpoints.news/celldex-culls-eczema-drug-after-phase-2-failure/"
     },
     {
-      "id": "bcf-papers:MED:43060749",
-      "headline": "Interpretable Machine Learning for Predicting Risk Factors for Chronic Postsurgical Pain After Cesarean Delivery",
-      "blurb": "Published 2026-11-18 in MedComm (2020) (MED 43060749).",
-      "source_url": "https://doi.org/10.1002/mco2.71131",
+      "id": "medrxiv:10.64898/2026.11.14.26368103",
+      "headline": "Prompt Injection Can Alter Large Language Model Scores and Feedback on Medical Student Essays",
+      "blurb": "Six \"score-targeting attacks\" sought the maximum score of 6. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.14.26368103",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-18",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-16",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "medrxiv"
     },
     {
       "id": "x:https://x.com/statnews/status/2123747711400698331",
@@ -892,17 +960,17 @@
       "linked_url": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.12.26366211",
-      "headline": "Attitudes and Perceptions of Generative Artificial Intelligence Chatbots in the Peer Review of Traditional",
-      "blurb": "Suggest both perceived utility and apprehension about potential risks. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.12.26366211",
+      "id": "biorxiv:10.1101/2024.11.23.624986",
+      "headline": "Harnessing Contextual Embeddings: A Deep Learning Framework for Predicting PCR Amplification Using BERT Tokenization",
+      "blurb": "This study aims to reduce the time and cost of the experiment by predicting PCR outcomes based on these factors. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.1101/2024.11.23.624986",
       "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-16",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-15",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "medrxiv"
+      "scout_source": "biorxiv"
     },
     {
       "id": "x:https://x.com/statnews/status/2123858687030710653",
@@ -919,60 +987,6 @@
       "linked_url": "https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.14.26368103",
-      "headline": "Prompt Injection Can Alter Large Language Model Scores and Feedback on Medical Student Essays",
-      "blurb": "Six \"score-targeting attacks\" sought the maximum score of 6. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.14.26368103",
-      "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-16",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "medrxiv"
-    },
-    {
-      "id": "x:https://x.com/statnews/status/2123877382368952728",
-      "headline": "Peptides go mainstream as Hims and Noom enter the market",
-      "blurb": "Two telehealth companies launched peptide programs this week after HHS eased compounding pharmacy access to drugs such as BPC-157. https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
-      "source_url": "https://x.com/statnews/status/2123877382368952728",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-20",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/"
-    },
-    {
-      "id": "biorxiv:10.1101/2024.11.23.624986",
-      "headline": "Harnessing Contextual Embeddings: A Deep Learning Framework for Predicting PCR Amplification Using BERT Tokenization",
-      "blurb": "This study aims to reduce the time and cost of the experiment by predicting PCR outcomes based on these factors. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.1101/2024.11.23.624986",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-15",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/statnews/status/2123927874419769795",
-      "headline": "FDA rejects Capricor's Duchenne therapy, a decision long in coming",
-      "blurb": "The agency declined to approve the cell therapy deramiocel for Duchenne muscular dystrophy; STAT's columnist argues the data never supported it despite a public pressure campaign. https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/",
-      "source_url": "https://x.com/statnews/status/2123927874419769795",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-20",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/"
-    },
-    {
       "id": "biorxiv:10.64898/2026.11.03.764067",
       "headline": "Is the Bitter Lesson coming to genomic prediction? An untuned tabular foundation model matches",
       "blurb": "Against the published means, TabPFN-3.5 ranked first on 11 of 18 traits and had the best median rank. Posted on bioRxiv. Preprint, not peer-reviewed.",
@@ -984,20 +998,6 @@
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/EricTopol/status/2123422121145835854",
-      "headline": "Programmable functional RNA design with a virtual scientist",
-      "blurb": "The paper introduces RhoAgent, an agentic system that designs RNA candidates and refines them using experimental feedback. https://www.nature.com/articles/s41587-026-03362-3",
-      "source_url": "https://x.com/EricTopol/status/2123422121145835854",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-19",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.nature.com/articles/s41587-026-03362-3"
     },
     {
       "id": "medrxiv:10.64898/2026.08.04.26359728",
