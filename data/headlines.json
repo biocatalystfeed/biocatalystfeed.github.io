@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-21T07:12:40.461Z",
+  "generated_at": "2026-11-21T13:13:21.225Z",
   "event_date": "2026-11-21",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -58,9 +58,9 @@
     {
       "id": "europepmc",
       "enabled": true,
-      "status": "error",
-      "fetched": 0,
-      "note": "The operation was aborted due to timeout"
+      "status": "ok",
+      "fetched": 38,
+      "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped, except Nature news DOIs (10.1038/d41586-) whose titles name a trial, phase, FDA action, pivotal study, readout, or approval. Those items get the pivotal-readout adjustment, and their blurb is the page meta description when nature.com/robots.txt allows the article. A blurb otherwise uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
       "id": "clinicaltrials-calendar",
@@ -641,6 +641,19 @@
       "scout_source": "openai-news"
     },
     {
+      "id": "europepmc:MED:43064745",
+      "headline": "How to turn impostor syndrome into a superpower",
+      "blurb": "Published 2026-11-20 in Nature (MED 43064745).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03465-6",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-20",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
       "id": "nvidia-blog:https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
       "headline": "AI Is Helping Care Teams Get Patients the Right Care, Sooner",
       "blurb": "From pediatric research to smart hospitals, AI is helping care teams spend less time on routine tasks and more time with patients.",
@@ -652,6 +665,19 @@
       "significance_rationale": "ai-news 68; 8d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "nvidia-blog"
+    },
+    {
+      "id": "europepmc:MED:43064746",
+      "headline": "'I had felt overconfident': senior scientists reveal mistakes that aided discovery",
+      "blurb": "Published 2026-11-20 in Nature (MED 43064746).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03590-2",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-20",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
@@ -667,6 +693,19 @@
       "scout_source": "deepmind"
     },
     {
+      "id": "europepmc:MED:43064747",
+      "headline": "Claude, find me a planet: amateur astronomers are using AI with mixed results",
+      "blurb": "Published 2026-11-20 in Nature (MED 43064747).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03790-w",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-20",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
       "id": "openai-news:https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
       "headline": "Measuring how AI agents handle everyday wet-lab science",
       "blurb": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
@@ -678,6 +717,19 @@
       "significance_rationale": "ai-news 68; 15d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "openai-news"
+    },
+    {
+      "id": "europepmc:MED:43064748",
+      "headline": "How AI is affecting science careers",
+      "blurb": "Published 2026-11-20 in Nature (MED 43064748).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03680-1",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-20",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
@@ -772,6 +824,33 @@
       "scout_source": "bcf-papers"
     },
     {
+      "id": "x:https://x.com/biospace/status/2123823682665537574",
+      "headline": "FDA will miss rare decision deadline for Savara candidate after three-month delay",
+      "blurb": "Savara's stock fell 18% after the announcement, while analysts still expect approval and point to possible capacity constraints at the agency. https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay",
+      "source_url": "https://x.com/biospace/status/2123823682665537574",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-20",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay"
+    },
+    {
+      "id": "bcf-papers:MED:43054644",
+      "headline": "Marker-based CRISPR screens identify POU2F1 as a regulator of DLL3 and neuroendocrine identity",
+      "blurb": "Published 2026-11-18 in NAR Cancer (MED 43054644).",
+      "source_url": "https://doi.org/10.1093/narcan/zcag032",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-18",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
+    },
+    {
       "id": "x:https://x.com/endpts/status/2123876049674961023",
       "headline": "Celldex culls eczema study after Phase 2 failure",
       "blurb": "The company is dropping its monoclonal antibody barzolvolimab as an eczema therapy after the drug failed a mid-stage trial. https://endpoints.news/celldex-culls-eczema-drug-after-phase-2-failure/",
@@ -786,10 +865,10 @@
       "linked_url": "https://endpoints.news/celldex-culls-eczema-drug-after-phase-2-failure/"
     },
     {
-      "id": "bcf-papers:MED:43054644",
-      "headline": "Marker-based CRISPR screens identify POU2F1 as a regulator of DLL3 and neuroendocrine identity",
-      "blurb": "Published 2026-11-18 in NAR Cancer (MED 43054644).",
-      "source_url": "https://doi.org/10.1093/narcan/zcag032",
+      "id": "bcf-papers:MED:43060749",
+      "headline": "Interpretable Machine Learning for Predicting Risk Factors for Chronic Postsurgical Pain After Cesarean Delivery",
+      "blurb": "Published 2026-11-18 in MedComm (2020) (MED 43060749).",
+      "source_url": "https://doi.org/10.1002/mco2.71131",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
       "published_at": "2026-11-18",
@@ -813,17 +892,17 @@
       "linked_url": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/"
     },
     {
-      "id": "bcf-papers:MED:43060749",
-      "headline": "Interpretable Machine Learning for Predicting Risk Factors for Chronic Postsurgical Pain After Cesarean Delivery",
-      "blurb": "Published 2026-11-18 in MedComm (2020) (MED 43060749).",
-      "source_url": "https://doi.org/10.1002/mco2.71131",
+      "id": "medrxiv:10.64898/2026.11.12.26366211",
+      "headline": "Attitudes and Perceptions of Generative Artificial Intelligence Chatbots in the Peer Review of Traditional",
+      "blurb": "Suggest both perceived utility and apprehension about potential risks. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.12.26366211",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-18",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-16",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "medrxiv"
     },
     {
       "id": "x:https://x.com/statnews/status/2123858687030710653",
@@ -840,10 +919,10 @@
       "linked_url": "https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.12.26366211",
-      "headline": "Attitudes and Perceptions of Generative Artificial Intelligence Chatbots in the Peer Review of Traditional",
-      "blurb": "Suggest both perceived utility and apprehension about potential risks. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.12.26366211",
+      "id": "medrxiv:10.64898/2026.11.14.26368103",
+      "headline": "Prompt Injection Can Alter Large Language Model Scores and Feedback on Medical Student Essays",
+      "blurb": "Six \"score-targeting attacks\" sought the maximum score of 6. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.14.26368103",
       "source_type": "paper",
       "source_name": "medRxiv",
       "published_at": "2026-11-16",
@@ -867,17 +946,17 @@
       "linked_url": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.14.26368103",
-      "headline": "Prompt Injection Can Alter Large Language Model Scores and Feedback on Medical Student Essays",
-      "blurb": "Six \"score-targeting attacks\" sought the maximum score of 6. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.14.26368103",
+      "id": "biorxiv:10.1101/2024.11.23.624986",
+      "headline": "Harnessing Contextual Embeddings: A Deep Learning Framework for Predicting PCR Amplification Using BERT Tokenization",
+      "blurb": "This study aims to reduce the time and cost of the experiment by predicting PCR outcomes based on these factors. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.1101/2024.11.23.624986",
       "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-16",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-15",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "medrxiv"
+      "scout_source": "biorxiv"
     },
     {
       "id": "x:https://x.com/statnews/status/2123927874419769795",
@@ -894,10 +973,10 @@
       "linked_url": "https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/"
     },
     {
-      "id": "biorxiv:10.1101/2024.11.23.624986",
-      "headline": "Harnessing Contextual Embeddings: A Deep Learning Framework for Predicting PCR Amplification Using BERT Tokenization",
-      "blurb": "This study aims to reduce the time and cost of the experiment by predicting PCR outcomes based on these factors. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.1101/2024.11.23.624986",
+      "id": "biorxiv:10.64898/2026.11.03.764067",
+      "headline": "Is the Bitter Lesson coming to genomic prediction? An untuned tabular foundation model matches",
+      "blurb": "Against the published means, TabPFN-3.5 ranked first on 11 of 18 traits and had the best median rank. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.03.764067",
       "source_type": "paper",
       "source_name": "bioRxiv",
       "published_at": "2026-11-15",
@@ -919,33 +998,6 @@
       "tier": 3,
       "scout_source": "x",
       "linked_url": "https://www.nature.com/articles/s41587-026-03362-3"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.03.764067",
-      "headline": "Is the Bitter Lesson coming to genomic prediction? An untuned tabular foundation model matches",
-      "blurb": "Against the published means, TabPFN-3.5 ranked first on 11 of 18 traits and had the best median rank. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.03.764067",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-15",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/broadinstitute/status/2123452023349637589",
-      "headline": "Targeting a cellular traffic jam treats multiple diseases in mice",
-      "blurb": "Researchers describe a strategy that clears cells of the misfolded proteins behind a group of genetic diseases. https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice",
-      "source_url": "https://x.com/broadinstitute/status/2123452023349637589",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-19",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.broadinstitute.org/news/targeting-cellular-traffic-jam-treats-multiple-diseases-mice"
     },
     {
       "id": "medrxiv:10.64898/2026.08.04.26359728",
@@ -1013,17 +1065,17 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "sec-edgar:0001390478-26-000021",
-      "headline": "SELLAS Life Sciences Group, Inc. discloses results of operations in an 8-K",
-      "blurb": "SELLAS Life Sciences Group, Inc. disclosed results of operations and financial statements and exhibits. Accession 0001390478-26-000021.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1390478/000139047826000021/0001390478-26-000021-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-12",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 9d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "id": "health-canada:38716",
+      "headline": "Ibuprofen Liquid Gel Extra Strength (Ibuprofen): Health Canada abbreviated submission",
+      "blurb": "Notice 38716, date 2026-11-20. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38716",
+      "source_type": "regulator",
+      "source_name": "Health Canada Notice of Compliance Database",
+      "published_at": "2026-11-20",
+      "significance": 40,
+      "significance_rationale": "hc-ands 34; 1d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
       "tier": 2,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "health-canada-noc"
     },
     {
       "id": "nih-reporter:11405186",
@@ -1037,19 +1089,6 @@
       "significance_rationale": "nih-grant 60; 52d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
-    },
-    {
-      "id": "sec-edgar:0001437749-26-036574",
-      "headline": "BioCardia, Inc. discloses results of operations in an 8-K",
-      "blurb": "BioCardia, Inc. disclosed results of operations and financial statements and exhibits. Accession 0001437749-26-036574.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/925741/000143774926036574/0001437749-26-036574-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-12",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 9d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
     },
     {
       "id": "nih-reporter:11409527",
