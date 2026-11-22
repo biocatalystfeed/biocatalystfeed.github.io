@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-22T07:14:54.171Z",
+  "generated_at": "2026-11-22T13:05:42.392Z",
   "event_date": "2026-11-22",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -799,10 +799,10 @@
       "scout_source": "orange-book"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2124167395279593567",
-      "headline": "Aging drives distinct chromatin signatures of CD8 T cell dysfunction",
-      "blurb": "Mapping chromatin accessibility in young and aged mice, the study links older T cells' decline to lost gene regulation and a distinct regulatory subset. https://www.science.org/doi/10.1126/sciimmunol.aej5412",
-      "source_url": "https://x.com/EricTopol/status/2124167395279593567",
+      "id": "x:https://x.com/statnews/status/2124111808436785279",
+      "headline": "When should medical school start?",
+      "blurb": "A medical student responds to a proposal for redesigning medical education, arguing a key lesson should not wait until after Step 1. https://www.statnews.com/2026/11/21/stat-letters-to-editor-medical-school-pediatric-emergency-care/",
+      "source_url": "https://x.com/statnews/status/2124111808436785279",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-21",
@@ -810,7 +810,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.science.org/doi/10.1126/sciimmunol.aej5412"
+      "linked_url": "https://www.statnews.com/2026/11/21/stat-letters-to-editor-medical-school-pediatric-emergency-care/"
     },
     {
       "id": "sec-edgar:0001104659-26-130331",
@@ -826,18 +826,18 @@
       "scout_source": "sec-edgar-8k"
     },
     {
-      "id": "x:https://x.com/statnews/status/2124073421021614509",
-      "headline": "RFK Jr. and MAHA must promote the MMR vaccine",
-      "blurb": "A podcast co-host's opinion column argues that Kennedy is positioned to reach vaccine-hesitant parents during the ongoing measles outbreak. https://www.statnews.com/2026/11/21/rfk-jr-maha-measles-outbreak-elimination-status-promote-mmr-vaccine/",
-      "source_url": "https://x.com/statnews/status/2124073421021614509",
+      "id": "x:https://x.com/EricTopol/status/2123831711540891922",
+      "headline": "Spontaneous coronary artery dissection: implications for women's health, clinical care, and future research",
+      "blurb": "A Lancet review surveys what this heart condition means for women's health, patient care and where further research is needed. https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01485-6/fulltext",
+      "source_url": "https://x.com/EricTopol/status/2123831711540891922",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-21",
+      "published_at": "2026-11-20",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/21/rfk-jr-maha-measles-outbreak-elimination-status-promote-mmr-vaccine/"
+      "linked_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01485-6/fulltext"
     },
     {
       "id": "bcf-papers:MED:43062005",
@@ -853,10 +853,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/NIH/status/2123767010651689377",
-      "headline": "Large NIH-supported study identifies key underlying pathways in endometriosis",
-      "blurb": "Researchers report genetic associations and mechanisms that help explain how this complex disorder develops. https://www.nih.gov/news-events/news-releases/large-nih-supported-study-identifies-key-underlying-pathways-endometriosis",
-      "source_url": "https://x.com/NIH/status/2123767010651689377",
+      "id": "x:https://x.com/statnews/status/2123858687030710653",
+      "headline": "Kennedy funds $47 million in 'Food is Medicine' pilot projects",
+      "blurb": "An HHS pilot gives 15 U.S. groups a chance to show that nutrition coaching and lifestyle programs merit Medicare coverage. https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/",
+      "source_url": "https://x.com/statnews/status/2123858687030710653",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-20",
@@ -864,7 +864,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.nih.gov/news-events/news-releases/large-nih-supported-study-identifies-key-underlying-pathways-endometriosis"
+      "linked_url": "https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/"
     },
     {
       "id": "bcf-papers:MED:43054644",
@@ -880,10 +880,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/OpenAI/status/2123856316187975756",
-      "headline": "Can AI help scientists identify promising drug candidates?",
-      "blurb": "A new benchmark tests how well AI models read molecular structures, weigh experimental evidence and choose compounds in early drug discovery. https://openai.com/index/introducing-medchembench/",
-      "source_url": "https://x.com/OpenAI/status/2123856316187975756",
+      "id": "x:https://x.com/statnews/status/2123860721481941061",
+      "headline": "Why Africa needs more women surgeons",
+      "blurb": "Only about 10% of the continent's surgeons are women, even as the overall number of surgeons there has risen. https://www.statnews.com/2026/11/20/women-surgeon-shortage-global-cosecsa-lancet-commission-mukagaju-africa-making-of-a-surgeon/",
+      "source_url": "https://x.com/statnews/status/2123860721481941061",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-20",
@@ -891,7 +891,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://openai.com/index/introducing-medchembench/"
+      "linked_url": "https://www.statnews.com/2026/11/20/women-surgeon-shortage-global-cosecsa-lancet-commission-mukagaju-africa-making-of-a-surgeon/"
     },
     {
       "id": "bcf-papers:MED:43060749",
@@ -907,10 +907,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/biospace/status/2123823682665537574",
-      "headline": "FDA will miss rare decision deadline for Savara candidate after three-month delay",
-      "blurb": "Savara's stock fell 18% after the announcement, while analysts still expect approval and point to possible capacity constraints at the agency. https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay",
-      "source_url": "https://x.com/biospace/status/2123823682665537574",
+      "id": "x:https://x.com/statnews/status/2123877382368952728",
+      "headline": "Peptides go mainstream as Hims and Noom enter the market",
+      "blurb": "Two telehealth companies launched peptide programs this week after HHS eased compounding pharmacy access to drugs such as BPC-157. https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
+      "source_url": "https://x.com/statnews/status/2123877382368952728",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-20",
@@ -918,7 +918,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/fda/fda-will-miss-rare-decision-deadline-for-savara-candidate-after-three-month-delay"
+      "linked_url": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.14.26368125",
@@ -934,10 +934,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/endpts/status/2123876049674961023",
-      "headline": "Celldex culls eczema study after Phase 2 failure",
-      "blurb": "The company is dropping its monoclonal antibody barzolvolimab as an eczema therapy after the drug failed a mid-stage trial. https://endpoints.news/celldex-culls-eczema-drug-after-phase-2-failure/",
-      "source_url": "https://x.com/endpts/status/2123876049674961023",
+      "id": "x:https://x.com/statnews/status/2123877854874095667",
+      "headline": "MAHA Institute spent over $1 million in its first year",
+      "blurb": "Filings show events and overhead drained the group's cash, leaving about $171,000 in reserves at the end of 2025. https://www.statnews.com/2026/11/20/maha-institute-tax-filings-rfk-jr-health-agenda-spending/",
+      "source_url": "https://x.com/statnews/status/2123877854874095667",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-20",
@@ -945,7 +945,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://endpoints.news/celldex-culls-eczema-drug-after-phase-2-failure/"
+      "linked_url": "https://www.statnews.com/2026/11/20/maha-institute-tax-filings-rfk-jr-health-agenda-spending/"
     },
     {
       "id": "biorxiv:10.64898/2026.11.12.766050",
@@ -961,10 +961,10 @@
       "scout_source": "biorxiv"
     },
     {
-      "id": "x:https://x.com/statnews/status/2123747711400698331",
-      "headline": "Patients have little say in brain implant trials; Ian Burkhart wants to change that",
-      "blurb": "The founder of a coalition of brain-implant trial participants argues developers should give volunteers more agency in how studies are designed and run. https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/",
-      "source_url": "https://x.com/statnews/status/2123747711400698331",
+      "id": "x:https://x.com/statnews/status/2123927874419769795",
+      "headline": "FDA rejects Capricor's Duchenne therapy, a decision long in coming",
+      "blurb": "The agency declined to approve the cell therapy deramiocel for Duchenne muscular dystrophy; STAT's columnist argues the data never supported it despite a public pressure campaign. https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/",
+      "source_url": "https://x.com/statnews/status/2123927874419769795",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-20",
@@ -972,7 +972,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/"
+      "linked_url": "https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/"
     },
     {
       "id": "biorxiv:10.64898/2026.11.12.766182",
@@ -986,20 +986,6 @@
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/statnews/status/2123834662128665069",
-      "headline": "Study raises doubts about combining vaccine, monoclonal antibody to protect against malaria",
-      "blurb": "Researchers found that a malaria-preventing monoclonal antibody interfered with a new vaccine's response when both were given to infants. https://www.statnews.com/2026/11/19/malaria-monoclonal-antibody-l9ls-vaccine-r21-infant-study-mali/",
-      "source_url": "https://x.com/statnews/status/2123834662128665069",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-20",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/19/malaria-monoclonal-antibody-l9ls-vaccine-r21-infant-study-mali/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.12.26366211",
@@ -1080,17 +1066,17 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "health-canada:38716",
-      "headline": "Ibuprofen Liquid Gel Extra Strength (Ibuprofen): Health Canada abbreviated submission",
-      "blurb": "Notice 38716, date 2026-11-20. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
-      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38716",
-      "source_type": "regulator",
-      "source_name": "Health Canada Notice of Compliance Database",
-      "published_at": "2026-11-20",
-      "significance": 40,
-      "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
+      "id": "sec-edgar:0001390478-26-000021",
+      "headline": "SELLAS Life Sciences Group, Inc. discloses results of operations in an 8-K",
+      "blurb": "SELLAS Life Sciences Group, Inc. disclosed results of operations and financial statements and exhibits. Accession 0001390478-26-000021.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1390478/000139047826000021/0001390478-26-000021-index.html",
+      "source_type": "filing",
+      "source_name": "SEC EDGAR",
+      "published_at": "2026-11-12",
+      "significance": 43,
+      "significance_rationale": "sec-8k 58; routine-filing -18; 10d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 2,
-      "scout_source": "health-canada-noc"
+      "scout_source": "sec-edgar-8k"
     },
     {
       "id": "nih-reporter:11405186",
@@ -1104,6 +1090,19 @@
       "significance_rationale": "nih-grant 60; 53d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
+    },
+    {
+      "id": "health-canada:38716",
+      "headline": "Ibuprofen Liquid Gel Extra Strength (Ibuprofen): Health Canada abbreviated submission",
+      "blurb": "Notice 38716, date 2026-11-20. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38716",
+      "source_type": "regulator",
+      "source_name": "Health Canada Notice of Compliance Database",
+      "published_at": "2026-11-20",
+      "significance": 40,
+      "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
+      "tier": 2,
+      "scout_source": "health-canada-noc"
     },
     {
       "id": "nih-reporter:11409527",
