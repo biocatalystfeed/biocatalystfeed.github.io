@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-22T01:15:53.973Z",
+  "generated_at": "2026-11-22T07:14:54.171Z",
   "event_date": "2026-11-22",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -988,10 +988,10 @@
       "scout_source": "biorxiv"
     },
     {
-      "id": "x:https://x.com/statnews/status/2123858687030710653",
-      "headline": "Kennedy funds $47 million in 'Food is Medicine' pilot projects",
-      "blurb": "An HHS pilot gives 15 U.S. groups a chance to show that nutrition coaching and lifestyle programs merit Medicare coverage. https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/",
-      "source_url": "https://x.com/statnews/status/2123858687030710653",
+      "id": "x:https://x.com/statnews/status/2123834662128665069",
+      "headline": "Study raises doubts about combining vaccine, monoclonal antibody to protect against malaria",
+      "blurb": "Researchers found that a malaria-preventing monoclonal antibody interfered with a new vaccine's response when both were given to infants. https://www.statnews.com/2026/11/19/malaria-monoclonal-antibody-l9ls-vaccine-r21-infant-study-mali/",
+      "source_url": "https://x.com/statnews/status/2123834662128665069",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-20",
@@ -999,7 +999,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/"
+      "linked_url": "https://www.statnews.com/2026/11/19/malaria-monoclonal-antibody-l9ls-vaccine-r21-infant-study-mali/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.12.26366211",
