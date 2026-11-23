@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-23T13:10:31.537Z",
+  "generated_at": "2026-11-23T19:15:55.752Z",
   "event_date": "2026-11-23",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -87,15 +87,15 @@
       "id": "bcf-papers",
       "enabled": true,
       "status": "ok",
-      "fetched": 9,
+      "fetched": 8,
       "note": "BioCatalystFeed Worker /papers, which proxies the Europe PMC search API. Same metadata terms as a direct Europe PMC call. Titles that assert efficacy are skipped. Duplicate DOIs collapse with the direct Europe PMC source."
     },
     {
       "id": "bcf-ai-discovery",
       "enabled": true,
-      "status": "error",
-      "fetched": 0,
-      "note": "The operation was aborted due to timeout"
+      "status": "ok",
+      "fetched": 6,
+      "note": "BioCatalystFeed Worker /ai-discovery. Curated model cards are included only when verified_as_of or published falls in the last 45 days. arXiv rows come from the worker's allowlisted category query and are labeled as preprints. Summaries are not copied. No X client is called."
     },
     {
       "id": "nih-reporter",
@@ -526,6 +526,19 @@
       "scout_source": "clinicaltrials-calendar"
     },
     {
+      "id": "mhra:https://www.gov.uk/government/news/ai-in-mental-health-airlock-to-support-safe-innovation",
+      "headline": "AI in Mental Health Airlock to support safe innovation",
+      "blurb": "A new regulatory sandbox will explore how safety approaches in innovative digital mental health technologies can be effectively evaluated and regulated.",
+      "source_url": "https://www.gov.uk/government/news/ai-in-mental-health-airlock-to-support-safe-innovation",
+      "source_type": "regulator",
+      "source_name": "UK MHRA",
+      "published_at": "2026-11-23",
+      "significance": 80,
+      "significance_rationale": "mhra-news 74; in 0d +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "tier": 4,
+      "scout_source": "mhra"
+    },
+    {
       "id": "adcom:2026-18920:meeting",
       "headline": "FDA advisory meeting Nov 19: Microbiology Devices Panel",
       "blurb": "Microbiology Devices Panel of the Medical Devices Advisory Committee. Federal Register publication date 2026-09-16.",
@@ -591,32 +604,6 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/new-mhra-service-to-support-medicines-innovation-and-strengthen-uk-manufacturing",
-      "headline": "New MHRA service to support medicines innovation and strengthen UK manufacturing",
-      "blurb": "AdvanceGxP will give developers earlier practical support for advanced manufacturing technologies, accelerating patient access to innovative medicines while strengthening UK manufacturing.",
-      "source_url": "https://www.gov.uk/government/news/new-mhra-service-to-support-medicines-innovation-and-strengthen-uk-manufacturing",
-      "source_type": "regulator",
-      "source_name": "UK MHRA",
-      "published_at": "2026-11-18",
-      "significance": 80,
-      "significance_rationale": "mhra-news 74; 5d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
-      "tier": 4,
-      "scout_source": "mhra"
-    },
-    {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
-      "headline": "FDA Approves First Drug Shown to Help Patients with Infantile-Onset Niemann-Pick Disease Type C",
-      "blurb": "FDA approved Lembaz (adrabetadex) injection, the first treatment shown to help people with a severe form of Niemann-Pick disease type C (NPC) live longer.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
-      "source_type": "news",
-      "source_name": "FDA press releases",
-      "published_at": "2026-11-17",
-      "significance": 76,
-      "significance_rationale": "fda-press 70; 6d old +6 = 76. FDA press release.",
-      "tier": 4,
-      "scout_source": "fda-press"
-    },
-    {
       "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
       "headline": "Advancing computer-use agents for healthcare teams",
       "blurb": "Details are in the linked post.",
@@ -630,10 +617,10 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
-      "headline": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
-      "blurb": "FDA today announced the Global Reliance Disclosure Program (GRDP), a landmark initiative that will fundamentally transform how the FDA's regulatory drug and biologic approval decisions.",
-      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
+      "headline": "FDA Approves First Drug Shown to Help Patients with Infantile-Onset Niemann-Pick Disease Type C",
+      "blurb": "FDA approved Lembaz (adrabetadex) injection, the first treatment shown to help people with a severe form of Niemann-Pick disease type C (NPC) live longer.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-shown-help-patients-infantile-onset-niemann-pick-disease-type-c-live-longer",
       "source_type": "news",
       "source_name": "FDA press releases",
       "published_at": "2026-11-17",
@@ -656,10 +643,23 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43064744",
-      "headline": "Lifting weights reduces muscle loss from obesity drugs",
-      "blurb": "Published 2026-11-20 in Nature (MED 43064744).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03751-3",
+      "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "headline": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+      "blurb": "FDA today announced the Global Reliance Disclosure Program (GRDP), a landmark initiative that will fundamentally transform how the FDA's regulatory drug and biologic approval decisions.",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "source_type": "news",
+      "source_name": "FDA press releases",
+      "published_at": "2026-11-17",
+      "significance": 76,
+      "significance_rationale": "fda-press 70; 6d old +6 = 76. FDA press release.",
+      "tier": 4,
+      "scout_source": "fda-press"
+    },
+    {
+      "id": "europepmc:MED:43064745",
+      "headline": "How to turn impostor syndrome into a superpower",
+      "blurb": "Published 2026-11-20 in Nature (MED 43064745).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03465-6",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-20",
@@ -682,10 +682,10 @@
       "scout_source": "nvidia-blog"
     },
     {
-      "id": "europepmc:MED:43064745",
-      "headline": "How to turn impostor syndrome into a superpower",
-      "blurb": "Published 2026-11-20 in Nature (MED 43064745).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03465-6",
+      "id": "europepmc:MED:43064746",
+      "headline": "'I had felt overconfident': senior scientists reveal mistakes that aided discovery",
+      "blurb": "Published 2026-11-20 in Nature (MED 43064746).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03590-2",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-20",
@@ -708,10 +708,10 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "europepmc:MED:43064746",
-      "headline": "'I had felt overconfident': senior scientists reveal mistakes that aided discovery",
-      "blurb": "Published 2026-11-20 in Nature (MED 43064746).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03590-2",
+      "id": "europepmc:MED:43064747",
+      "headline": "Claude, find me a planet: amateur astronomers are using AI with mixed results",
+      "blurb": "Published 2026-11-20 in Nature (MED 43064747).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03790-w",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-20",
@@ -734,10 +734,10 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43064747",
-      "headline": "Claude, find me a planet: amateur astronomers are using AI with mixed results",
-      "blurb": "Published 2026-11-20 in Nature (MED 43064747).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03790-w",
+      "id": "europepmc:MED:43064748",
+      "headline": "How AI is affecting science careers",
+      "blurb": "Published 2026-11-20 in Nature (MED 43064748).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03680-1",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-20",
@@ -760,17 +760,17 @@
       "scout_source": "deepmind"
     },
     {
-      "id": "orange-book:022304:2027-01-03",
-      "headline": "Orange Book last listed protection for Nucynta is Jan 3",
-      "blurb": "Last unexpired listing is exclusivity PED. Exclusivity date is the Orange Book listing.",
-      "source_url": "https://www.accessdata.fda.gov/scripts/cder/ob/results_product.cfm?Appl_Type=N&Appl_No=022304",
-      "source_type": "regulator",
-      "source_name": "FDA Orange Book",
-      "published_at": "2027-01-03",
-      "significance": 64,
-      "significance_rationale": "orange-loe-exclusivity 64; in 41d 0 = 64. Soonest Orange Book loss of exclusivity is an exclusivity code.",
+      "id": "bcf-ai:hydrogen-1.0",
+      "headline": "Hydrogen-1.0 model release from Deep Principle",
+      "blurb": "This card points at the MIT-licensed BF16 weights; quantized variants are published separately. AI model release. Not a peer-reviewed experimental finding.",
+      "source_url": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/",
+      "source_type": "model",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-06",
+      "significance": 65,
+      "significance_rationale": "ai-model 62; 17d old +3 = 65. Curated AI model-release card from the BioCatalystFeed AI discovery endpoint.",
       "tier": 3,
-      "scout_source": "orange-book"
+      "scout_source": "bcf-ai-discovery"
     },
     {
       "id": "deepmind:https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
@@ -784,6 +784,19 @@
       "significance_rationale": "ai-news 68; 39d old 0 = 68. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "deepmind"
+    },
+    {
+      "id": "orange-book:022304:2027-01-03",
+      "headline": "Orange Book last listed protection for Nucynta is Jan 3",
+      "blurb": "Last unexpired listing is exclusivity PED. Exclusivity date is the Orange Book listing.",
+      "source_url": "https://www.accessdata.fda.gov/scripts/cder/ob/results_product.cfm?Appl_Type=N&Appl_No=022304",
+      "source_type": "regulator",
+      "source_name": "FDA Orange Book",
+      "published_at": "2027-01-03",
+      "significance": 64,
+      "significance_rationale": "orange-loe-exclusivity 64; in 41d 0 = 64. Soonest Orange Book loss of exclusivity is an exclusivity code.",
+      "tier": 3,
+      "scout_source": "orange-book"
     },
     {
       "id": "x:https://x.com/biospace/status/2124848396045303871",
@@ -813,10 +826,10 @@
       "scout_source": "sec-edgar-8k"
     },
     {
-      "id": "x:https://x.com/statnews/status/2124661811571986771",
-      "headline": "How brain implant trial participants want researchers to do better",
-      "blurb": "A coalition founder who took part in brain-implant research says device developers should give participants more say in how studies are run. https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/",
-      "source_url": "https://x.com/statnews/status/2124661811571986771",
+      "id": "x:https://x.com/biospace/status/2124865590808526849",
+      "headline": "At Jefferies 2026, investors put CGT manufacturing under the microscope",
+      "blurb": "Funders are weighing scalability, production cost and manufacturing setbacks much earlier in cell and gene therapy development. https://www.biospace.com/drug-development/at-jefferies-2026-investors-put-cgt-manufacturing-under-the-microscope",
+      "source_url": "https://x.com/biospace/status/2124865590808526849",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -824,7 +837,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/"
+      "linked_url": "https://www.biospace.com/drug-development/at-jefferies-2026-investors-put-cgt-manufacturing-under-the-microscope"
     },
     {
       "id": "nih-reporter:11388995",
@@ -840,10 +853,10 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "x:https://x.com/statnews/status/2124801883407557084",
-      "headline": "New biotech aims to develop next generation CAR-T for multiple myeloma",
-      "blurb": "Caronilex is developing a CAR-T cell that hits a second target, aiming to prevent the relapses common in myeloma. https://www.statnews.com/2026/11/23/caronilex-dual-targeting-car-t-overcomes-myeloma-resistance/",
-      "source_url": "https://x.com/statnews/status/2124801883407557084",
+      "id": "x:https://x.com/biospace/status/2124873098897793051",
+      "headline": "With two upcoming FDA decisions, 'oddball' Praxis is on the cusp of commercialization",
+      "blurb": "Praxis Precision Medicines expects its first approval decision for a rare seizure condition, followed by a second for a more common neurological indication. https://www.biospace.com/drug-development/with-two-upcoming-fda-decisions-oddball-praxis-is-on-the-cusp-of-commercialization",
+      "source_url": "https://x.com/biospace/status/2124873098897793051",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -851,7 +864,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/23/caronilex-dual-targeting-car-t-overcomes-myeloma-resistance/"
+      "linked_url": "https://www.biospace.com/drug-development/with-two-upcoming-fda-decisions-oddball-praxis-is-on-the-cusp-of-commercialization"
     },
     {
       "id": "bcf-papers:MED:43062005",
@@ -867,10 +880,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/statnews/status/2124808449284317264",
-      "headline": "A string of wins with cancer drugs sets Genmab up for its next chapter",
-      "blurb": "After three late-stage trial successes in about a month, the Danish biotech is turning toward approval filings and self-commercializing two drugs. https://www.statnews.com/2026/11/23/genmab-cancer-drugs-oncology-clinical-trials/",
-      "source_url": "https://x.com/statnews/status/2124808449284317264",
+      "id": "x:https://x.com/biospace/status/2124880777670180995",
+      "headline": "Capricor CEO says FDA never gave DMD cell therapy a 'fair shake'",
+      "blurb": "After a second rejection citing data integrity issues, the company's chief executive told BioSpace she was shocked and questions the agency's reasoning. https://www.biospace.com/fda/capricor-ceo-says-fda-never-gave-dmd-cell-therapy-a-fair-shake",
+      "source_url": "https://x.com/biospace/status/2124880777670180995",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -878,34 +891,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/23/genmab-cancer-drugs-oncology-clinical-trials/"
-    },
-    {
-      "id": "bcf-papers:MED:43054644",
-      "headline": "Marker-based CRISPR screens identify POU2F1 as a regulator of DLL3 and neuroendocrine identity",
-      "blurb": "Published 2026-11-18 in NAR Cancer (MED 43054644).",
-      "source_url": "https://doi.org/10.1093/narcan/zcag032",
-      "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-18",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "bcf-papers"
-    },
-    {
-      "id": "x:https://x.com/statnews/status/2124828183740506606",
-      "headline": "If the AI bubble bursts, it could create a serious problem for health care",
-      "blurb": "An opinion piece argues that a health AI company's stock value and the medical worth of its technology are separate questions. https://www.statnews.com/2026/11/23/ai-bubble-medical-artificial-intelligence-health/",
-      "source_url": "https://x.com/statnews/status/2124828183740506606",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-23",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/23/ai-bubble-medical-artificial-intelligence-health/"
+      "linked_url": "https://www.biospace.com/fda/capricor-ceo-says-fda-never-gave-dmd-cell-therapy-a-fair-shake"
     },
     {
       "id": "bcf-papers:MED:43060749",
@@ -921,10 +907,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/statnews/status/2124836273625895320",
-      "headline": "Kymera reports mid-stage eczema trial success for would-be Dupixent rival",
-      "blurb": "Results for the oral drug KT-621 in eczema were viewed as among the year's most closely watched immunology readouts. https://www.statnews.com/2026/11/23/kymera-therapeutics-eczema-trial-success-potential-dupixent-rival/",
-      "source_url": "https://x.com/statnews/status/2124836273625895320",
+      "id": "x:https://x.com/biospace/status/2124888198660718697",
+      "headline": "Lilly's 15th M&A deal of 2026 brings LoQus23's Huntington's work in house for $725M",
+      "blurb": "The acquisition suits Lilly's stated aim of backing small, early, risky biotech bets in neurodegeneration. https://www.biospace.com/business/lillys-15th-m-a-deal-of-2026-brings-loqus23s-huntingtons-work-in-house-for-725m",
+      "source_url": "https://x.com/biospace/status/2124888198660718697",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -932,7 +918,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/23/kymera-therapeutics-eczema-trial-success-potential-dupixent-rival/"
+      "linked_url": "https://www.biospace.com/business/lillys-15th-m-a-deal-of-2026-brings-loqus23s-huntingtons-work-in-house-for-725m"
     },
     {
       "id": "medrxiv:10.64898/2026.06.07.26354958",
@@ -948,10 +934,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/statnews/status/2124844924495355912",
-      "headline": "Invivyd reports positive results for Covid monoclonal antibody",
-      "blurb": "The company says its antibody protected people strongly against Covid, though questions remain about its regulatory path and whether a market exists. https://www.statnews.com/2026/11/23/invivyd-covid-monoclonal-antibody-declaration-trial-vyd2311/",
-      "source_url": "https://x.com/statnews/status/2124844924495355912",
+      "id": "x:https://x.com/biospace/status/2124903298327077323",
+      "headline": "Invivyd plans FDA run for COVID-19 preventative, teeing up 'new era for immunization'",
+      "blurb": "The company's prevention antibody is built on the same backbone as its emergency-authorized Pemgarda, and it intends to pursue FDA review. https://www.biospace.com/drug-development/invivyd-plans-fda-run-for-covid-19-preventative-teeing-up-new-era-for-immunization",
+      "source_url": "https://x.com/biospace/status/2124903298327077323",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -959,7 +945,7 @@
       "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/23/invivyd-covid-monoclonal-antibody-declaration-trial-vyd2311/"
+      "linked_url": "https://www.biospace.com/drug-development/invivyd-plans-fda-run-for-covid-19-preventative-teeing-up-new-era-for-immunization"
     },
     {
       "id": "medrxiv:10.64898/2026.10.27.26366616",
@@ -975,18 +961,18 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/statnews/status/2124644531102441560",
-      "headline": "Kennedy funds $47 million in 'Food is Medicine' pilot projects",
-      "blurb": "HHS's MAHA ELEVATE pilot lets 15 U.S. groups test whether lifestyle and nutrition-coaching programs merit Medicare coverage. https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/",
-      "source_url": "https://x.com/statnews/status/2124644531102441560",
+      "id": "x:https://x.com/biospace/status/2124910848099471837",
+      "headline": "Sharon Mates' next act: Ritzey banks $112M to target Down syndrome and diabetes",
+      "blurb": "Following J&J's $14.6 billion purchase of Intra-Cellular Therapies, its former CEO is back with a new company pursuing intracellular signaling for metabolic and neurologic diseases. https://www.biospace.com/drug-development/sharon-mates-next-act-ritzey-banks-112m-to-target-down-syndrome-and-diabetes",
+      "source_url": "https://x.com/biospace/status/2124910848099471837",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-22",
+      "published_at": "2026-11-23",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/"
+      "linked_url": "https://www.biospace.com/drug-development/sharon-mates-next-act-ritzey-banks-112m-to-target-down-syndrome-and-diabetes"
     },
     {
       "id": "medrxiv:10.64898/2026.11.02.26364999",
@@ -1002,6 +988,20 @@
       "scout_source": "medrxiv"
     },
     {
+      "id": "x:https://x.com/biospace/status/2124918398698086855",
+      "headline": "Erasca's early data show profile that could challenge RevMed in pancreatic cancer",
+      "blurb": "Updated Phase 1 results for the investigational molecular glue ERAS-0015 showed strong response rates in subgroups where an approved competitor was weaker, according to Jefferies analysts. https://www.biospace.com/drug-development/erascas-early-data-show-profile-that-could-challenge-revmed-in-pancreatic-cancer-analysts",
+      "source_url": "https://x.com/biospace/status/2124918398698086855",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-23",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.biospace.com/drug-development/erascas-early-data-show-profile-that-could-challenge-revmed-in-pancreatic-cancer-analysts"
+    },
+    {
       "id": "biorxiv:10.64898/2026.11.13.766537",
       "headline": "SMSTPred: Protein Language Model Embeddings Predict SAM-Methyltransferase Substrate Specificity and Reveal Metabolite Methyltransferasome Enrichment",
       "blurb": "Most SAM-MTases share a Class I Rossmann-like SAM-binding core, with substrate specificity determined by variable inserts and accessory domains rather than the conserved fold. Posted on bioRxiv. Preprint, not peer-reviewed.",
@@ -1012,6 +1012,71 @@
       "significance": 62,
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
+      "scout_source": "biorxiv"
+    },
+    {
+      "id": "bcf-papers:MED:43039660",
+      "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
+      "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
+      "source_url": "https://doi.org/10.26508/lsa.202603861",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-16",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 7d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "bcf-papers"
+    },
+    {
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.27058v1",
+      "headline": "Structural Agreement Indicates Prediction Accuracy For Protein-Ligand Co-Folding",
+      "blurb": "Co-folding models predict the structures of proteins and their bound ligands, but their accuracy varies across targets. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.27058v1",
+      "source_type": "paper",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-20",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 3d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
+    },
+    {
+      "id": "biorxiv:10.1101/2025.09.07.674644",
+      "headline": "Osmotic niche changes as multifaceted trigger of cellular regenerative processes in organ injury",
+      "blurb": "Identify osmotic niche disruption as a fast-acting physical signal that coordinates ECM mechanics and nuclear organization to initiate regenerative programs after injury. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.1101/2025.09.07.674644",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-17",
+      "significance": 56,
+      "significance_rationale": "paper-preprint 50; 6d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
+      "tier": 2,
+      "scout_source": "biorxiv"
+    },
+    {
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.27111v1",
+      "headline": "E2Former-V3: Atom-Role-Aware Equivariant Interatomic Potentials",
+      "blurb": "Machine-learned interatomic potentials approach density-functional accuracy, but explicit-solvent atom counts are dominated by hydrogens and water. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.27111v1",
+      "source_type": "paper",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-20",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 3d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
+    },
+    {
+      "id": "biorxiv:10.64898/2025.12.19.695383",
+      "headline": "ModkitOpt: Accurate RNA modification site calling from nanopore sequencing",
+      "blurb": "ModkitOpt is a pipeline for the systematic optimisation of modkit filtering thresholds and stoichiometry cutoffs using orthogonally validated modification sites. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2025.12.19.695383",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-17",
+      "significance": 56,
+      "significance_rationale": "paper-preprint 50; 6d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
+      "tier": 2,
       "scout_source": "biorxiv"
     },
     {
@@ -1028,17 +1093,17 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "biorxiv:10.1101/2025.09.07.674644",
-      "headline": "Osmotic niche changes as multifaceted trigger of cellular regenerative processes in organ injury",
-      "blurb": "Identify osmotic niche disruption as a fast-acting physical signal that coordinates ECM mechanics and nuclear organization to initiate regenerative programs after injury. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.1101/2025.09.07.674644",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-17",
-      "significance": 56,
-      "significance_rationale": "paper-preprint 50; 6d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
+      "id": "health-canada:38716",
+      "headline": "Ibuprofen Liquid Gel Extra Strength (Ibuprofen): Health Canada abbreviated submission",
+      "blurb": "Notice 38716, date 2026-11-20. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38716",
+      "source_type": "regulator",
+      "source_name": "Health Canada Notice of Compliance Database",
+      "published_at": "2026-11-20",
+      "significance": 40,
+      "significance_rationale": "hc-ands 34; 3d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
       "tier": 2,
-      "scout_source": "biorxiv"
+      "scout_source": "health-canada-noc"
     },
     {
       "id": "nih-reporter:11405186",
@@ -1052,45 +1117,6 @@
       "significance_rationale": "nih-grant 60; 54d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
-    },
-    {
-      "id": "biorxiv:10.64898/2025.12.19.695383",
-      "headline": "ModkitOpt: Accurate RNA modification site calling from nanopore sequencing",
-      "blurb": "ModkitOpt is a pipeline for the systematic optimisation of modkit filtering thresholds and stoichiometry cutoffs using orthogonally validated modification sites. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2025.12.19.695383",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-17",
-      "significance": 56,
-      "significance_rationale": "paper-preprint 50; 6d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
-      "tier": 2,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "sec-edgar:0001390478-26-000021",
-      "headline": "SELLAS Life Sciences Group, Inc. discloses results of operations in an 8-K",
-      "blurb": "SELLAS Life Sciences Group, Inc. disclosed results of operations and financial statements and exhibits. Accession 0001390478-26-000021.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1390478/000139047826000021/0001390478-26-000021-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-12",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 11d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
-    },
-    {
-      "id": "sec-edgar:0001437749-26-036574",
-      "headline": "BioCardia, Inc. discloses results of operations in an 8-K",
-      "blurb": "BioCardia, Inc. disclosed results of operations and financial statements and exhibits. Accession 0001437749-26-036574.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/925741/000143774926036574/0001437749-26-036574-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-12",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 11d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
     }
   ]
 }
