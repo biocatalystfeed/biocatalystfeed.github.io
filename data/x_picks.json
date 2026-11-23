@@ -3,6 +3,66 @@
   "enabled": true,
   "picks": [
     {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2124848396045303871",
+      "linkedUrl": "https://www.biospace.com/fda/capricors-regulatory-odyssey-for-dmd-cell-therapy-hits-second-fda-rejection",
+      "postedAt": "2026-11-23",
+      "headline": "Capricor's regulatory odyssey for DMD cell therapy hits second FDA rejection",
+      "blurb": "The FDA has turned down Capricor's Duchenne muscular dystrophy cell therapy deramiocel again, this time despite a newly proposed indication.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124844924495355912",
+      "linkedUrl": "https://www.statnews.com/2026/11/23/invivyd-covid-monoclonal-antibody-declaration-trial-vyd2311/",
+      "postedAt": "2026-11-23",
+      "headline": "Invivyd reports positive results for Covid monoclonal antibody",
+      "blurb": "The company says its antibody protected people strongly against Covid, though questions remain about its regulatory path and whether a market exists.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124836273625895320",
+      "linkedUrl": "https://www.statnews.com/2026/11/23/kymera-therapeutics-eczema-trial-success-potential-dupixent-rival/",
+      "postedAt": "2026-11-23",
+      "headline": "Kymera reports mid-stage eczema trial success for would-be Dupixent rival",
+      "blurb": "Results for the oral drug KT-621 in eczema were viewed as among the year's most closely watched immunology readouts.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124828183740506606",
+      "linkedUrl": "https://www.statnews.com/2026/11/23/ai-bubble-medical-artificial-intelligence-health/",
+      "postedAt": "2026-11-23",
+      "headline": "If the AI bubble bursts, it could create a serious problem for health care",
+      "blurb": "An opinion piece argues that a health AI company's stock value and the medical worth of its technology are separate questions.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124808449284317264",
+      "linkedUrl": "https://www.statnews.com/2026/11/23/genmab-cancer-drugs-oncology-clinical-trials/",
+      "postedAt": "2026-11-23",
+      "headline": "A string of wins with cancer drugs sets Genmab up for its next chapter",
+      "blurb": "After three late-stage trial successes in about a month, the Danish biotech is turning toward approval filings and self-commercializing two drugs.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124801883407557084",
+      "linkedUrl": "https://www.statnews.com/2026/11/23/caronilex-dual-targeting-car-t-overcomes-myeloma-resistance/",
+      "postedAt": "2026-11-23",
+      "headline": "New biotech aims to develop next generation CAR-T for multiple myeloma",
+      "blurb": "Caronilex is developing a CAR-T cell that hits a second target, aiming to prevent the relapses common in myeloma.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
       "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2124661811571986771",
       "linkedUrl": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/",
@@ -40,36 +100,6 @@
       "postedAt": "2026-11-21",
       "headline": "C-BRAIN presents OpenScientist, an agentic AI to lend you a hand",
       "blurb": "An open agentic AI platform aims to help Alzheimer's researchers turn large datasets into discoveries, with traceable reasoning and code, as described in Nature Medicine.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "alzforum",
-      "postUrl": "https://x.com/alzforum/status/2124125776953987264",
-      "linkedUrl": "https://www.alzforum.org/news/research-news/paper-alert-amyloid-aggravated-astrocytes-sic-microglia-synapses",
-      "postedAt": "2026-11-21",
-      "headline": "Amyloid-aggravated astrocytes sic microglia on synapses",
-      "blurb": "A Neuron study in mice finds that astrocytes overexpressing MFG-E8 push microglia to engulf synapses, with β3 integrin implicated as a microglial receptor subunit.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2124073421021614509",
-      "linkedUrl": "https://www.statnews.com/2026/11/21/rfk-jr-maha-measles-outbreak-elimination-status-promote-mmr-vaccine/",
-      "postedAt": "2026-11-21",
-      "headline": "How Kennedy and MAHA could help stop measles",
-      "blurb": "An opinion piece argues the health secretary could reach vaccine-hesitant people during the measles outbreak by promoting the MMR vaccine.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2124111808436785279",
-      "linkedUrl": "https://www.statnews.com/2026/11/21/stat-letters-to-editor-medical-school-pediatric-emergency-care/",
-      "postedAt": "2026-11-21",
-      "headline": "When should medical school start?",
-      "blurb": "A medical student responds to a proposal for redesigning medical education, arguing a key lesson should not wait until after Step 1.",
       "kind": "other",
       "blurbSource": "page-description"
     }
