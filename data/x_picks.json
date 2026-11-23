@@ -3,6 +3,26 @@
   "enabled": true,
   "picks": [
     {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124661811571986771",
+      "linkedUrl": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/",
+      "postedAt": "2026-11-23",
+      "headline": "How brain implant trial participants want researchers to do better",
+      "blurb": "A coalition founder who took part in brain-implant research says device developers should give participants more say in how studies are run.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124644531102441560",
+      "linkedUrl": "https://www.statnews.com/2026/11/20/kennedy-food-is-medicine-maha-elevate-pilot/",
+      "postedAt": "2026-11-22",
+      "headline": "Kennedy funds $47 million in 'Food is Medicine' pilot projects",
+      "blurb": "HHS's MAHA ELEVATE pilot lets 15 U.S. groups test whether lifestyle and nutrition-coaching programs merit Medicare coverage.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
       "handle": "EricTopol",
       "postUrl": "https://x.com/EricTopol/status/2124167395279593567",
       "linkedUrl": "https://www.science.org/doi/10.1126/sciimmunol.aej5412",
