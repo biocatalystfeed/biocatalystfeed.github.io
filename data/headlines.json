@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-24T07:10:27.674Z",
+  "generated_at": "2026-11-24T11:09:45.227Z",
   "event_date": "2026-11-24",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -867,7 +867,7 @@
     {
       "id": "medrxiv:10.64898/2026.11.16.26368224",
       "headline": "ADSMoE: A mixture-of-experts-based transformer autoencoder for discovering multimodal Alzheimer's disease subtypes",
-      "blurb": "Alzheimer's disease (AD) exhibits substantial biological and clinical heterogeneity, posing critical challenges for advancing precision medicine. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "blurb": "Alzheimers disease (AD) exhibits substantial biological and clinical heterogeneity, posing critical challenges for advancing precision medicine. Posted on medRxiv. Preprint, not peer-reviewed.",
       "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.16.26368224",
       "source_type": "paper",
       "source_name": "medRxiv",
