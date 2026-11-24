@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-24T01:05:37.920Z",
+  "generated_at": "2026-11-24T07:10:27.674Z",
   "event_date": "2026-11-24",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -52,7 +52,7 @@
       "id": "health-canada-noc",
       "enabled": true,
       "status": "ok",
-      "fetched": 139,
+      "fetched": 145,
       "note": "Health Canada Notice of Compliance Database. Contains information licensed under the Open Government Licence – Canada. Administrative and veterinary notices are dropped."
     },
     {
@@ -94,7 +94,7 @@
       "id": "bcf-ai-discovery",
       "enabled": true,
       "status": "ok",
-      "fetched": 1,
+      "fetched": 5,
       "note": "BioCatalystFeed Worker /ai-discovery. Curated model cards are included only when verified_as_of or published falls in the last 45 days. arXiv rows come from the worker's allowlisted category query and are labeled as preprints. Summaries are not copied. No X client is called."
     },
     {
@@ -108,8 +108,8 @@
       "id": "sec-edgar-8k",
       "enabled": true,
       "status": "ok",
-      "fetched": 50,
-      "note": "SEC EDGAR daily index Form 8-K rows for 125 tickers already listed in calendar/calendar.json. 7 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
+      "fetched": 54,
+      "note": "SEC EDGAR daily index Form 8-K rows for 125 tickers already listed in calendar/calendar.json. 6 index days were not posted (403 or 404), which is how SEC answers for a weekend, a holiday, or a file that is not up yet. Requests use BioCatalystFeed contact@biocat.ai, per the SEC fair-access User-Agent rule, and stay on /files and /Archives (not /cgi-bin, which robots.txt disallows). Item codes come from the data.sec.gov submissions index for the companies that already matched. Routine items such as earnings, officer changes, and exhibits-only filings are ranked lower. The filing text itself is not copied."
     },
     {
       "id": "fda-press",
@@ -784,37 +784,23 @@
       "scout_source": "orange-book"
     },
     {
-      "id": "x:https://x.com/biospace/status/2124848396045303871",
-      "headline": "Capricor's regulatory odyssey for DMD cell therapy hits second FDA rejection",
-      "blurb": "The FDA has turned down Capricor's Duchenne muscular dystrophy cell therapy deramiocel again, this time despite a newly proposed indication. https://www.biospace.com/fda/capricors-regulatory-odyssey-for-dmd-cell-therapy-hits-second-fda-rejection",
-      "source_url": "https://x.com/biospace/status/2124848396045303871",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-23",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.biospace.com/fda/capricors-regulatory-odyssey-for-dmd-cell-therapy-hits-second-fda-rejection"
-    },
-    {
-      "id": "sec-edgar:0001104659-26-130331",
-      "headline": "SELLAS Life Sciences Group, Inc. discloses a material definitive agreement in an 8-K",
-      "blurb": "SELLAS Life Sciences Group, Inc. disclosed a material definitive agreement and other events and financial statements and exhibits. Accession 0001104659-26-130331.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1390478/000110465926130331/0001104659-26-130331-index.html",
+      "id": "sec-edgar:0001104659-26-130838",
+      "headline": "Dogwood Therapeutics, Inc. discloses a Regulation FD disclosure in an 8-K",
+      "blurb": "Dogwood Therapeutics, Inc. disclosed a Regulation FD disclosure and other events and financial statements and exhibits. Accession 0001104659-26-130838.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1818844/000110465926130838/0001104659-26-130838-index.html",
       "source_type": "filing",
       "source_name": "SEC EDGAR",
-      "published_at": "2026-11-20",
+      "published_at": "2026-11-23",
       "significance": 64,
-      "significance_rationale": "sec-8k 58; 4d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "significance_rationale": "sec-8k 58; 1d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 3,
       "scout_source": "sec-edgar-8k"
     },
     {
-      "id": "x:https://x.com/biospace/status/2124865590808526849",
-      "headline": "At Jefferies 2026, investors put CGT manufacturing under the microscope",
-      "blurb": "Funders are weighing scalability, production cost and manufacturing setbacks much earlier in cell and gene therapy development. https://www.biospace.com/drug-development/at-jefferies-2026-investors-put-cgt-manufacturing-under-the-microscope",
-      "source_url": "https://x.com/biospace/status/2124865590808526849",
+      "id": "x:https://x.com/BioPharmaDive/status/2124902843035553929",
+      "headline": "Lilly buys Huntington's drug developer LoQus23 in potentially $725M deal",
+      "blurb": "The purchase gives Lilly an investigational treatment aimed at the MSH3 protein, which can worsen the genetic changes behind Huntington's disease. https://www.biopharmadive.com/news/lilly-loqus-huntingtons-drug-acquisition-deal/875448/",
+      "source_url": "https://x.com/BioPharmaDive/status/2124902843035553929",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -822,7 +808,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/drug-development/at-jefferies-2026-investors-put-cgt-manufacturing-under-the-microscope"
+      "linked_url": "https://www.biopharmadive.com/news/lilly-loqus-huntingtons-drug-acquisition-deal/875448/"
     },
     {
       "id": "nih-reporter:11388995",
@@ -838,10 +824,10 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "x:https://x.com/biospace/status/2124873098897793051",
-      "headline": "With two upcoming FDA decisions, 'oddball' Praxis is on the cusp of commercialization",
-      "blurb": "Praxis Precision Medicines expects its first approval decision for a rare seizure condition, followed by a second for a more common neurological indication. https://www.biospace.com/drug-development/with-two-upcoming-fda-decisions-oddball-praxis-is-on-the-cusp-of-commercialization",
-      "source_url": "https://x.com/biospace/status/2124873098897793051",
+      "id": "x:https://x.com/BioPharmaDive/status/2124918450006991148",
+      "headline": "Kymera eczema pill meets goals in mid-stage trial",
+      "blurb": "Analysts say the oral protein degrader showed biologic-like efficacy in Phase 2 and could compete with the leading injectable for eczema. https://www.biopharmadive.com/news/kymera-eczema-pill-phase2-data-protein-degrader-dupixent-ebglyss/875462/",
+      "source_url": "https://x.com/BioPharmaDive/status/2124918450006991148",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -849,7 +835,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/drug-development/with-two-upcoming-fda-decisions-oddball-praxis-is-on-the-cusp-of-commercialization"
+      "linked_url": "https://www.biopharmadive.com/news/kymera-eczema-pill-phase2-data-protein-degrader-dupixent-ebglyss/875462/"
     },
     {
       "id": "bcf-papers:MED:43062005",
@@ -865,10 +851,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/biospace/status/2124880777670180995",
-      "headline": "Capricor CEO says FDA never gave DMD cell therapy a 'fair shake'",
-      "blurb": "After a second rejection citing data integrity issues, the company's chief executive told BioSpace she was shocked and questions the agency's reasoning. https://www.biospace.com/fda/capricor-ceo-says-fda-never-gave-dmd-cell-therapy-a-fair-shake",
-      "source_url": "https://x.com/biospace/status/2124880777670180995",
+      "id": "x:https://x.com/FDA/status/2124887860457197725",
+      "headline": "FDA to include Accelerated Approval Program information in labeling",
+      "blurb": "Patient labeling for drugs and biologics cleared through that pathway will now say so directly, to help patients understand their medicines. https://www.fda.gov/drugs/drug-alerts-and-statements/fda-start-including-accelerated-approval-program-information-patient-labeling",
+      "source_url": "https://x.com/FDA/status/2124887860457197725",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -876,7 +862,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/fda/capricor-ceo-says-fda-never-gave-dmd-cell-therapy-a-fair-shake"
+      "linked_url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-start-including-accelerated-approval-program-information-patient-labeling"
     },
     {
       "id": "medrxiv:10.64898/2026.11.16.26368224",
@@ -892,10 +878,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/biospace/status/2124888198660718697",
-      "headline": "Lilly's 15th M&A deal of 2026 brings LoQus23's Huntington's work in house for $725M",
-      "blurb": "The acquisition suits Lilly's stated aim of backing small, early, risky biotech bets in neurodegeneration. https://www.biospace.com/business/lillys-15th-m-a-deal-of-2026-brings-loqus23s-huntingtons-work-in-house-for-725m",
-      "source_url": "https://x.com/biospace/status/2124888198660718697",
+      "id": "x:https://x.com/endpts/status/2124896440430313540",
+      "headline": "Capricor's Duchenne therapy rejected again as FDA cites trial issues",
+      "blurb": "The agency declined deramiocel a second time, pointing to unblinding and protocol violations in the HOPE-3 study despite a narrower proposed indication. https://endpoints.news/capricors-duchenne-therapy-is-rejected-again-as-fda-cites-significant-issues-with-trial/",
+      "source_url": "https://x.com/endpts/status/2124896440430313540",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -903,7 +889,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/business/lillys-15th-m-a-deal-of-2026-brings-loqus23s-huntingtons-work-in-house-for-725m"
+      "linked_url": "https://endpoints.news/capricors-duchenne-therapy-is-rejected-again-as-fda-cites-significant-issues-with-trial/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.17.26368289",
@@ -919,10 +905,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/biospace/status/2124903298327077323",
-      "headline": "Invivyd plans FDA run for COVID-19 preventative, teeing up 'new era for immunization'",
-      "blurb": "The company's prevention antibody is built on the same backbone as its emergency-authorized Pemgarda, and it intends to pursue FDA review. https://www.biospace.com/drug-development/invivyd-plans-fda-run-for-covid-19-preventative-teeing-up-new-era-for-immunization",
-      "source_url": "https://x.com/biospace/status/2124903298327077323",
+      "id": "x:https://x.com/endpts/status/2124958562656870637",
+      "headline": "House panel depicts stark contrast between US and China biotech",
+      "blurb": "A congressional committee's final report warns drug development is shifting overseas and recommends a dozen policies, from legislation to clinical trial reforms. https://endpoints.news/house-committee-issues-final-report-on-us-china-biotech-race/",
+      "source_url": "https://x.com/endpts/status/2124958562656870637",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -930,7 +916,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/drug-development/invivyd-plans-fda-run-for-covid-19-preventative-teeing-up-new-era-for-immunization"
+      "linked_url": "https://endpoints.news/house-committee-issues-final-report-on-us-china-biotech-race/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.17.26368325",
@@ -946,10 +932,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/biospace/status/2124910848099471837",
-      "headline": "Sharon Mates' next act: Ritzey banks $112M to target Down syndrome and diabetes",
-      "blurb": "Following J&J's $14.6 billion purchase of Intra-Cellular Therapies, its former CEO is back with a new company pursuing intracellular signaling for metabolic and neurologic diseases. https://www.biospace.com/drug-development/sharon-mates-next-act-ritzey-banks-112m-to-target-down-syndrome-and-diabetes",
-      "source_url": "https://x.com/biospace/status/2124910848099471837",
+      "id": "x:https://x.com/endpts/status/2124963553379811508",
+      "headline": "Avenzo begins public life as its China-originated pipeline seeks to rival Bristol Myers",
+      "blurb": "The biotech started Nasdaq trading after a reverse merger with Rallybio, with a CEO aiming at the EGFRxHER3 antibody-drug conjugate market. https://endpoints.news/avenzo-begins-public-life-seeks-to-rival-bristol-myers-egfrxher3-bispecific/",
+      "source_url": "https://x.com/endpts/status/2124963553379811508",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -957,7 +943,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/drug-development/sharon-mates-next-act-ritzey-banks-112m-to-target-down-syndrome-and-diabetes"
+      "linked_url": "https://endpoints.news/avenzo-begins-public-life-seeks-to-rival-bristol-myers-egfrxher3-bispecific/"
     },
     {
       "id": "bcf-papers:MED:43060749",
@@ -973,10 +959,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/biospace/status/2124918398698086855",
-      "headline": "Erasca's early data show profile that could challenge RevMed in pancreatic cancer",
-      "blurb": "Updated Phase 1 results for the investigational molecular glue ERAS-0015 showed strong response rates in subgroups where an approved competitor was weaker, according to Jefferies analysts. https://www.biospace.com/drug-development/erascas-early-data-show-profile-that-could-challenge-revmed-in-pancreatic-cancer-analysts",
-      "source_url": "https://x.com/biospace/status/2124918398698086855",
+      "id": "x:https://x.com/statnews/status/2124808449284317264",
+      "headline": "A string of wins with cancer drugs sets Genmab up for its next chapter",
+      "blurb": "After three late-stage trial successes in about a month, the Danish biotech is turning toward approval filings and self-commercializing two drugs. https://www.statnews.com/2026/11/23/genmab-cancer-drugs-oncology-clinical-trials/",
+      "source_url": "https://x.com/statnews/status/2124808449284317264",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-23",
@@ -984,7 +970,7 @@
       "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biospace.com/drug-development/erascas-early-data-show-profile-that-could-challenge-revmed-in-pancreatic-cancer-analysts"
+      "linked_url": "https://www.statnews.com/2026/11/23/genmab-cancer-drugs-oncology-clinical-trials/"
     },
     {
       "id": "biorxiv:10.64898/2026.11.15.766718",
@@ -1000,6 +986,46 @@
       "scout_source": "biorxiv"
     },
     {
+      "id": "x:https://x.com/statnews/status/2124978139033985378",
+      "headline": "Limb-girdle muscular dystrophy gets its first FDA-approved drug, from BridgeBio",
+      "blurb": "Welgemda is cleared for the LGMD 2i/R9 subtype, a form of muscular dystrophy that had gone without an approved therapy. https://www.statnews.com/2026/11/23/fda-approves-bridgebio-lgmd-drug-welgemda/",
+      "source_url": "https://x.com/statnews/status/2124978139033985378",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-23",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.statnews.com/2026/11/23/fda-approves-bridgebio-lgmd-drug-welgemda/"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.16.767180",
+      "headline": "Flux Transformer learns intracellular metabolic fluxes from isotope labeling and measured reaction rates",
+      "blurb": "For this reason, MFA has remained inaccessible to non-experts. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767180",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-18",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "biorxiv"
+    },
+    {
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.29935v1",
+      "headline": "GABIF: An Adaptive Guided Graph Denoising Framework for Antibody Conditional Inverse Folding",
+      "blurb": "Antibodies play a central role in the human immune system, and their design is critical for vaccine development, therapeutic intervention, and improving human longevity. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.29935v1",
+      "source_type": "paper",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-23",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
+    },
+    {
       "id": "bcf-papers:MED:43039660",
       "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
       "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
@@ -1013,16 +1039,29 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.16.767180",
-      "headline": "Flux Transformer learns intracellular metabolic fluxes from isotope labeling and measured reaction rates",
-      "blurb": "For this reason, MFA has remained inaccessible to non-experts. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.16.767180",
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.29978v1",
+      "headline": "Separating Genetic and Protein Evidence in Open Targets: An Auditable Re-ranking Study",
+      "blurb": "Biomedical target-ranking platforms combine genetics, literature, experimental evidence, tractability, and clinical precedent because each is useful for target discovery. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.29978v1",
+      "source_type": "paper",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-23",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 1d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.20.760537",
+      "headline": "Averaging in gene perturbation benchmarks hides perturbation-strength variation: Consequences for model evaluation",
+      "blurb": "Perturbation-response benchmarks usually represent each genetic intervention by averaging all cells assigned that perturbation label. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.10.20.760537",
       "source_type": "paper",
       "source_name": "bioRxiv",
       "published_at": "2026-11-18",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
+      "significance": 56,
+      "significance_rationale": "paper-preprint 50; 6d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
+      "tier": 2,
       "scout_source": "biorxiv"
     },
     {
@@ -1039,45 +1078,6 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "biorxiv:10.64898/2026.10.20.760537",
-      "headline": "Averaging in gene perturbation benchmarks hides perturbation-strength variation: Consequences for model evaluation",
-      "blurb": "Perturbation-response benchmarks usually represent each genetic intervention by averaging all cells assigned that perturbation label. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.10.20.760537",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-18",
-      "significance": 56,
-      "significance_rationale": "paper-preprint 50; 6d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
-      "tier": 2,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "nih-reporter:11405186",
-      "headline": "Development of OPGx-RDH12 as a gene therapy for RDH12 deficiency",
-      "blurb": "Opus Genetics Inc. received $1,004,925 in NIH funding (R44). Project start Sep 30.",
-      "source_url": "https://reporter.nih.gov/project-details/11405186",
-      "source_type": "grant",
-      "source_name": "NIH RePORTER",
-      "published_at": "2026-09-30",
-      "significance": 54,
-      "significance_rationale": "nih-grant 60; 55d old -6 = 54. NIH RePORTER project with a start date in the window.",
-      "tier": 2,
-      "scout_source": "nih-reporter"
-    },
-    {
-      "id": "sec-edgar:0001104659-26-128450",
-      "headline": "Traws Pharma, Inc. discloses results of operations in an 8-K",
-      "blurb": "Traws Pharma, Inc. disclosed results of operations and a Regulation FD disclosure and financial statements and exhibits. Accession 0001104659-26-128450.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1130598/000110465926128450/0001104659-26-128450-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-16",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 8d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
-    },
-    {
       "id": "health-canada:38716",
       "headline": "Ibuprofen Liquid Gel Extra Strength (Ibuprofen): Health Canada abbreviated submission",
       "blurb": "Notice 38716, date 2026-11-20. Source: Health Canada Notice of Compliance Database, Open Government Licence – Canada.",
@@ -1091,17 +1091,17 @@
       "scout_source": "health-canada-noc"
     },
     {
-      "id": "sec-edgar:0001193125-26-462054",
-      "headline": "Larimar Therapeutics, Inc. discloses results of operations in an 8-K",
-      "blurb": "Larimar Therapeutics, Inc. disclosed results of operations and financial statements and exhibits. Accession 0001193125-26-462054.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1374690/000119312526462054/0001193125-26-462054-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-16",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 8d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "id": "nih-reporter:11405186",
+      "headline": "Development of OPGx-RDH12 as a gene therapy for RDH12 deficiency",
+      "blurb": "Opus Genetics Inc. received $1,004,925 in NIH funding (R44). Project start Sep 30.",
+      "source_url": "https://reporter.nih.gov/project-details/11405186",
+      "source_type": "grant",
+      "source_name": "NIH RePORTER",
+      "published_at": "2026-09-30",
+      "significance": 54,
+      "significance_rationale": "nih-grant 60; 55d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "nih-reporter"
     }
   ]
 }
