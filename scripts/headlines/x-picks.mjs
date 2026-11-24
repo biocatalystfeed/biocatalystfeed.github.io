@@ -30,12 +30,26 @@ export function canonUrl(value) {
 export function dedupeByCanonUrl(items) {
   const ranked = [...(items || [])].sort((a, b) => (b.significance || 0) - (a.significance || 0) || String(a.id).localeCompare(String(b.id)));
   const seen = new Set();
+  const claimedByNonX = new Set();
   const kept = [];
   for (const item of ranked) {
-    const keys = [canonUrl(item.source_url), canonUrl(item.linked_url)].filter(Boolean);
+    const post = canonUrl(item.source_url);
+    const linked = canonUrl(item.linked_url);
+    const handle = xAccountHandle(item);
+    if (handle) {
+      if ((post && seen.has(post)) || (linked && claimedByNonX.has(linked))) continue;
+      kept.push(item);
+      if (post) seen.add(post);
+      if (linked) seen.add(linked);
+      continue;
+    }
+    const keys = [post, linked].filter(Boolean);
     if (keys.some((key) => seen.has(key))) continue;
     kept.push(item);
-    for (const key of keys) seen.add(key);
+    for (const key of keys) {
+      seen.add(key);
+      claimedByNonX.add(key);
+    }
   }
   return kept;
 }
@@ -50,12 +64,22 @@ export function hostAllowed(value) {
   return HOSTS.some((allowed) => host === allowed || host.endsWith(`.${allowed}`));
 }
 
+export function xAccountHandle(item) {
+  if (item?.scout_source !== "x" && !item?.x_handle) return "";
+  const explicit = String(item?.x_handle || "").replace(/^@/, "").trim();
+  if (explicit) return explicit.toLowerCase();
+  const match = /^https?:\/\/(?:www\.)?(?:x|twitter)\.com\/([^/?#]+)\/status\/\d+/i.exec(String(item?.source_url || ""));
+  return match ? match[1].toLowerCase() : "";
+}
+
 export function xPickItems(file, existingUrls = []) {
   if (!file?.enabled) return [];
-  const seen = new Set(existingUrls.map(canonUrl).filter(Boolean));
+  const blocked = new Set(existingUrls.map(canonUrl).filter(Boolean));
+  const seenPair = new Set();
   const out = [];
   for (const pick of file.picks || []) {
     const handle = String(pick.handle || "").replace(/^@/, "");
+    const handleKey = handle.toLowerCase();
     const postUrl = String(pick.postUrl || "");
     const linkedUrl = String(pick.linkedUrl || "");
     const postedAt = String(pick.postedAt || "");
@@ -63,7 +87,7 @@ export function xPickItems(file, existingUrls = []) {
     let blurb = String(pick.blurb || "").replace(/\s+/g, " ").trim();
     const kind = String(pick.kind || "");
     if ("postText" in pick || "text" in pick) continue;
-    if (!HANDLES.has(handle.toLowerCase())) continue;
+    if (!HANDLES.has(handleKey)) continue;
     if (!/^https:\/\/(?:x|twitter)\.com\/[^/]+\/status\/\d+/.test(postUrl)) continue;
     if (!hostAllowed(linkedUrl) || !KINDS.has(kind)) continue;
     if (!/^\d{4}-\d{2}-\d{2}$/.test(postedAt) || !headline || !blurb) continue;
@@ -72,8 +96,9 @@ export function xPickItems(file, existingUrls = []) {
     if (pick.blurbSource != null && !BLURB_SOURCES.has(pick.blurbSource)) continue;
     if (pick.doi != null && !DOI.test(String(pick.doi))) continue;
     const key = canonUrl(linkedUrl);
-    if (!key || seen.has(key)) continue;
-    seen.add(key);
+    const pair = `${handleKey}|${key}`;
+    if (!key || blocked.has(key) || seenPair.has(pair)) continue;
+    seenPair.add(pair);
     if (!blurb.includes(linkedUrl)) blurb = `${blurb} ${linkedUrl}`;
     out.push({
       id: `x:${postUrl}`,
@@ -86,7 +111,8 @@ export function xPickItems(file, existingUrls = []) {
       scout_source: "x",
       rule: "x-pick",
       adjustments: [],
-      dedupe_key: `linked:${key}`,
+      x_handle: handleKey,
+      dedupe_key: `linked:${key}:${handleKey}`,
       linked_url: linkedUrl,
       ...(pick.doi ? { doi: String(pick.doi) } : {}),
       ...(pick.blurbSource ? { blurb_source: pick.blurbSource } : {}),

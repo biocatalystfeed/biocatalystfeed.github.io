@@ -1,3 +1,5 @@
+import { canonUrl, xAccountHandle } from "./x-picks.mjs";
+
 /**
  * Significance ranking for the headlines test page.
  *
@@ -387,4 +389,88 @@ export function selectHeadlines(items) {
     }
   }
   return diversify(capSourceShare(balanceRegulators(picked.sort(cmp))));
+}
+
+export const X_ACCOUNT_CAP = 3;
+
+function storyUrl(item) {
+  if (item?.scout_source === "x") return canonUrl(item.linked_url || "");
+  return canonUrl(item?.linked_url || item?.source_url || "");
+}
+
+function eventIds(item) {
+  const blob = [item?.doi, item?.linked_url, item?.source_url, item?.headline, item?.id].filter(Boolean).join(" ");
+  const ids = new Set();
+  const doi = /\b(10\.\d{4,9}\/\S+?)(?=[)\].,;]|$)/i.exec(blob);
+  if (doi) ids.add(`doi:${doi[1].toLowerCase()}`);
+  for (const match of blob.matchAll(/\bNCT\d{8}\b/gi)) ids.add(`nct:${match[0].toUpperCase()}`);
+  for (const match of blob.matchAll(/\b(?:NDA|BLA|ANDA)\s*-?\s*\d{5,6}\b/gi)) ids.add(`reg:${match[0].replace(/[\s-]+/g, "").toUpperCase()}`);
+  for (const match of blob.matchAll(/\bEMEA\/H\/[A-Z]\/\d+\b/gi)) ids.add(`reg:${match[0].toUpperCase()}`);
+  return ids;
+}
+
+function headlineTokens(value) {
+  return new Set(String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").split(/\s+/).filter((token) => token.length >= 2));
+}
+
+export function headlineJaccard(left, right) {
+  const a = headlineTokens(left);
+  const b = headlineTokens(right);
+  if (!a.size || !b.size) return 0;
+  let shared = 0;
+  for (const token of a) if (b.has(token)) shared += 1;
+  return shared / (a.size + b.size - shared);
+}
+
+export function sameXEvent(left, right) {
+  if (!left || !right) return false;
+  const leftIds = eventIds(left);
+  for (const id of eventIds(right)) if (leftIds.has(id)) return true;
+  const leftUrl = storyUrl(left);
+  const rightUrl = storyUrl(right);
+  if (leftUrl && rightUrl && leftUrl === rightUrl) return true;
+  return headlineJaccard(left.headline, right.headline) >= 0.6;
+}
+
+function xEligible(item) {
+  return item && !item.drop && item.significance >= RULES.minScore && xAccountHandle(item);
+}
+
+export function capXAccounts(page, pool = page, cap = X_ACCOUNT_CAP) {
+  const ranked = [...(page || [])].sort(cmp);
+  const counts = {};
+  const kept = [];
+  const keptIds = new Set();
+  const overflow = [];
+  for (const item of ranked) {
+    const handle = xAccountHandle(item);
+    if (!handle) {
+      kept.push(item);
+      keptIds.add(item.id);
+      continue;
+    }
+    if ((counts[handle] || 0) < cap) {
+      counts[handle] = (counts[handle] || 0) + 1;
+      kept.push(item);
+      keptIds.add(item.id);
+    } else {
+      overflow.push(item);
+    }
+  }
+  const alternates = [...(pool || [])].filter(xEligible).sort(cmp);
+  for (const item of overflow) {
+    const covered = kept.some((chosen) => chosen.id !== item.id && xAccountHandle(chosen) !== xAccountHandle(item) && sameXEvent(item, chosen));
+    if (covered) continue;
+    const alternate = alternates.find((other) => {
+      if (other.id === item.id || keptIds.has(other.id)) return false;
+      const handle = xAccountHandle(other);
+      if (!handle || handle === xAccountHandle(item) || (counts[handle] || 0) >= cap) return false;
+      return sameXEvent(item, other);
+    });
+    if (!alternate) continue;
+    counts[xAccountHandle(alternate)] = (counts[xAccountHandle(alternate)] || 0) + 1;
+    keptIds.add(alternate.id);
+    kept.push(alternate);
+  }
+  return diversify(kept.sort(cmp));
 }
