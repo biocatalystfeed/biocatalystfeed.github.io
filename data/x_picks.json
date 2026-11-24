@@ -4,6 +4,46 @@
   "picks": [
     {
       "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2125139014835450213",
+      "linkedUrl": "https://www.statnews.com/2026/11/24/sanofi-insmed-acquisition-dupixent-rare-disease-inflammation/",
+      "postedAt": "2026-11-24",
+      "headline": "Sanofi to buy Insmed for $41B, picking up two respiratory drugs",
+      "blurb": "The French drugmaker, under pressure to find its next blockbusters, gets two approved medicines through the megadeal for the U.S. biotech.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2125212857893638236",
+      "linkedUrl": "https://www.biospace.com/fda/fda-approves-bridgebios-welgemda-as-1st-targeted-therapy-for-rare-muscle-disease",
+      "postedAt": "2026-11-24",
+      "headline": "FDA approves BridgeBio's Welgemda as first targeted therapy for rare muscle disease",
+      "blurb": "Acting FDA Commissioner Kyle Diamantas called the clearance of the limb-girdle muscular dystrophy treatment a historic milestone for patients and families.",
+      "kind": "approval",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2124918398698086855",
+      "linkedUrl": "https://www.biospace.com/drug-development/erascas-early-data-show-profile-that-could-challenge-revmed-in-pancreatic-cancer-analysts",
+      "postedAt": "2026-11-23",
+      "headline": "Erasca's early data show profile that could challenge RevMed in pancreatic cancer",
+      "blurb": "Updated Phase 1 results for ERAS-0015 showed strong response rates in subgroups where Revolution Medicines' approved drug was weaker, according to a Jefferies note.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2124903298327077323",
+      "linkedUrl": "https://www.biospace.com/drug-development/invivyd-plans-fda-run-for-covid-19-preventative-teeing-up-new-era-for-immunization",
+      "postedAt": "2026-11-23",
+      "headline": "Invivyd plans FDA run for COVID-19 preventative, teeing up new era for immunization",
+      "blurb": "The company's COVID-19 prevention antibody is built on the same backbone as its emergency-authorized Pemgarda, and an FDA filing is planned.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2124978139033985378",
       "linkedUrl": "https://www.statnews.com/2026/11/23/fda-approves-bridgebio-lgmd-drug-welgemda/",
       "postedAt": "2026-11-23",
@@ -19,16 +59,6 @@
       "postedAt": "2026-11-23",
       "headline": "A string of wins with cancer drugs sets Genmab up for its next chapter",
       "blurb": "After three late-stage trial successes in about a month, the Danish biotech is turning toward approval filings and self-commercializing two drugs.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2124986442162057222",
-      "linkedUrl": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
-      "postedAt": "2026-11-23",
-      "headline": "Peptide market poised to explode with new Hims and Noom launches",
-      "blurb": "Two telehealth companies started peptide programs after HHS eased compounding pharmacy access to drugs such as BPC-157, in a regulatory gray area with limited scientific evidence.",
       "kind": "other",
       "blurbSource": "page-description"
     },
