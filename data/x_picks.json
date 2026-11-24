@@ -3,6 +3,38 @@
   "enabled": true,
   "picks": [
     {
+      "handle": "BioPharmaDive",
+      "postUrl": "https://x.com/BioPharmaDive/status/2125298426397261935",
+      "linkedUrl": "https://www.biopharmadive.com/news/fda-roche-wilserdly-breast-cancer-approval-early-stage/875563/",
+      "postedAt": "2026-11-24",
+      "headline": "FDA clears Roche's oral SERD for early-stage breast cancer",
+      "blurb": "Wilserdly gains a second approval, this time in the earlier treatment setting for ER-positive, HER2-negative disease, which analysts see as the larger market opportunity.",
+      "kind": "approval",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2125254452684955714",
+      "linkedUrl": "https://www.cell.com/cell-host-microbe/abstract/S1931-3128(26)00448-8",
+      "postedAt": "2026-11-24",
+      "headline": "Vagus nerve stimulation ameliorates epilepsy via a gut microbiota-butyrate-vagal axis",
+      "blurb": "In patients and mice, the therapy shifted gut bacteria and butyrate levels, and transplanting that microbiota into mice lowered seizure severity.",
+      "kind": "paper",
+      "blurbSource": "abstract",
+      "doi": "10.1016/j.chom.2026.11.003"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2125252850037268657",
+      "linkedUrl": "https://www.cell.com/immunity/fulltext/S1074-7613(26)00444-9",
+      "postedAt": "2026-11-24",
+      "headline": "Systemic inflammation reprograms dendritic cells at a decision point for CD8+ T cell exhaustion",
+      "blurb": "Mouse infection studies identify a refractory dendritic cell state that forms around day 5 and shapes whether killer T cells become exhausted.",
+      "kind": "paper",
+      "blurbSource": "abstract",
+      "doi": "10.1016/j.immuni.2026.10.018"
+    },
+    {
       "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2125139014835450213",
       "linkedUrl": "https://www.statnews.com/2026/11/24/sanofi-insmed-acquisition-dupixent-rare-disease-inflammation/",
