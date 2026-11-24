@@ -3,6 +3,36 @@
   "enabled": true,
   "picks": [
     {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124978139033985378",
+      "linkedUrl": "https://www.statnews.com/2026/11/23/fda-approves-bridgebio-lgmd-drug-welgemda/",
+      "postedAt": "2026-11-23",
+      "headline": "Limb-girdle muscular dystrophy gets its first FDA-approved drug, from BridgeBio",
+      "blurb": "Welgemda is cleared for the LGMD 2i/R9 subtype, a form of muscular dystrophy that had gone without an approved therapy.",
+      "kind": "approval",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2124986442162057222",
+      "linkedUrl": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/",
+      "postedAt": "2026-11-23",
+      "headline": "Peptide market poised to explode with new Hims and Noom launches",
+      "blurb": "Two telehealth companies started peptide programs after HHS eased compounding pharmacy access to drugs such as BPC-157, in a regulatory gray area with limited scientific evidence.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "FDA",
+      "postUrl": "https://x.com/FDA/status/2124887860457197725",
+      "linkedUrl": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-start-including-accelerated-approval-program-information-patient-labeling",
+      "postedAt": "2026-11-23",
+      "headline": "FDA to include Accelerated Approval Program information in labeling",
+      "blurb": "Patient labeling for drugs and biologics cleared through that pathway will now say so directly, to help patients understand their medicines.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
       "handle": "biospace",
       "postUrl": "https://x.com/biospace/status/2124918398698086855",
       "linkedUrl": "https://www.biospace.com/drug-development/erascas-early-data-show-profile-that-could-challenge-revmed-in-pancreatic-cancer-analysts",
@@ -169,27 +199,6 @@
       "postedAt": "2026-11-22",
       "headline": "Kennedy funds $47 million in 'Food is Medicine' pilot projects",
       "blurb": "HHS's MAHA ELEVATE pilot lets 15 U.S. groups test whether lifestyle and nutrition-coaching programs merit Medicare coverage.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2124167395279593567",
-      "linkedUrl": "https://www.science.org/doi/10.1126/sciimmunol.aej5412",
-      "postedAt": "2026-11-21",
-      "headline": "Aging drives distinct chromatin signatures of CD8 T cell dysfunction and the emergence of a unique CD8 Treg cell population",
-      "blurb": "Mapping chromatin in young and aged mice, researchers link T cell dysfunction to lost gene regulation and identify a regulatory CD8 population that appears with aging.",
-      "kind": "paper",
-      "blurbSource": "crossref",
-      "doi": "10.1126/sciimmunol.aej5412"
-    },
-    {
-      "handle": "alzforum",
-      "postUrl": "https://x.com/alzforum/status/2124127561949053434",
-      "linkedUrl": "https://www.alzforum.org/news/research-news/paper-alert-c-brain-presents-openscientist-agentic-ai-lend-you-hand",
-      "postedAt": "2026-11-21",
-      "headline": "C-BRAIN presents OpenScientist, an agentic AI to lend you a hand",
-      "blurb": "An open agentic AI platform aims to help Alzheimer's researchers turn large datasets into discoveries, with traceable reasoning and code, as described in Nature Medicine.",
       "kind": "other",
       "blurbSource": "page-description"
     }
