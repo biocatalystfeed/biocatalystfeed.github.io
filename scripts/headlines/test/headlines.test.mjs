@@ -5,8 +5,8 @@ import path from "node:path";
 import test from "node:test";
 import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
-import { buildHeadlines, rewriteDatelineFallbacks } from "../populate.mjs";
-import { RULES, capXAccounts, sameXEvent, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
+import { buildHeadlines, readLeadState, rewriteDatelineFallbacks } from "../populate.mjs";
+import { BREAKING_FULL_HOURS, BREAKING_MAX_BOOST, BREAKING_ZERO_HOURS, LEAD_EVENT_WINDOW_HOURS, LEAD_MAX_ITEM_HOURS, LEAD_WORTHY_FLOOR, RULES, assignLead, breakingBoost, capXAccounts, leadScore, sameXEvent, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
 import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, humanDate, indicationPhrase, metaDescription, natureNewsTrial, OUTCOME_CLAIM, paperCopy, paperRecords, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { commonsImage, imageResponseOk, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
 import { explainMatch, imageEntities, imageType, relevanceScore } from "../image-score.mjs";
@@ -1271,6 +1271,189 @@ test("tracked accounts collapse until a jump, hash, or matching search opens the
   assert.equal(markTrackedOpen(section), true);
   assert.equal(details.open, true);
   assert.equal(details.dataset.userOpen, "true");
+});
+
+const LEAD_NOW = new Date("2026-11-24T12:00:00.000Z");
+
+function leadHoursAgo(hours, now = LEAD_NOW) {
+  return new Date(now.getTime() - hours * 36e5).toISOString();
+}
+
+function leadFixture(over = {}) {
+  return {
+    id: "lead-item",
+    headline: "Regulator approves a distinct example medicine",
+    blurb: "One sentence.",
+    source_url: "https://example.com/lead-item",
+    source_type: "regulator",
+    source_name: "FDA",
+    published_at: leadHoursAgo(1),
+    significance: 99,
+    tier: 5,
+    scout_source: "openfda-drugsfda",
+    doi: "10.1000/lead-item",
+    ...over,
+  };
+}
+
+test("lead constants match the tier-5 floor and the workflow commits lead state", () => {
+  assert.equal(LEAD_WORTHY_FLOOR, RULES.tiers[0].min);
+  assert.equal(LEAD_MAX_ITEM_HOURS, 12);
+  assert.equal(LEAD_EVENT_WINDOW_HOURS, 24);
+  assert.equal(BREAKING_MAX_BOOST, 0.35);
+  assert.equal(BREAKING_FULL_HOURS, 2);
+  assert.equal(BREAKING_ZERO_HOURS, 12);
+  const workflow = fs.readFileSync(path.join(root, ".github", "workflows", "headlines.yml"), "utf8");
+  assert.match(workflow, /git add data\/headlines\.json data\/lead_state\.json index\.html headlines\/index\.html/);
+  assert.deepEqual(readLeadState(path.join(os.tmpdir(), "missing-lead-state.json")), { schema: "biocat-lead-state/1", leads: [] });
+});
+
+test("a lead expires after 12 hours and the next item takes the slot", () => {
+  const incumbent = leadFixture();
+  const next = leadFixture({
+    id: "next-item",
+    headline: "Separate company starts a different late study",
+    source_url: "https://example.com/next-item",
+    doi: "10.1000/next-item",
+    published_at: leadHoursAgo(8),
+    significance: 92,
+  });
+  const first = assignLead([incumbent, next], {}, LEAD_NOW);
+  assert.equal(first.items[0].id, "lead-item");
+  assert.equal(first.state.leads[0].canonicalUrl, "https://example.com/lead-item");
+  const still = assignLead(first.items, first.state, new Date(LEAD_NOW.getTime() + 11 * 36e5));
+  assert.equal(still.items[0].id, "lead-item");
+  assert.equal(still.state.leads.find((row) => row.itemId === "lead-item").firstLeadAt, first.state.leads[0].firstLeadAt);
+  const expired = assignLead(first.items, first.state, new Date(LEAD_NOW.getTime() + 12 * 36e5));
+  assert.equal(expired.items[0].id, "next-item");
+  assert.equal(expired.items[1].id, "lead-item");
+  assert.equal(expired.items[1].significance, 99);
+  assert.equal(expired.items[1].tier, 5);
+  assert.equal(expired.state.leads.some((row) => row.itemId === "lead-item" && row.firstLeadAt === first.state.leads[0].firstLeadAt), true);
+});
+
+test("a newer lead-worthy item replaces the same event inside 24 hours", () => {
+  const incumbent = leadFixture({ published_at: leadHoursAgo(6) });
+  const other = leadFixture({
+    id: "other-event",
+    headline: "Unrelated advisory meeting is scheduled",
+    source_url: "https://example.com/other-event",
+    doi: "10.1000/other-event",
+    published_at: leadHoursAgo(7),
+    significance: 90,
+  });
+  const first = assignLead([incumbent, other], {}, LEAD_NOW);
+  assert.equal(first.items[0].id, "lead-item");
+  const update = leadFixture({
+    id: "update-item",
+    headline: "Follow-up story on the same approval",
+    source_url: "https://example.com/update-item",
+    doi: "10.1000/lead-item",
+    published_at: leadHoursAgo(1),
+    significance: 90,
+  });
+  const replaced = assignLead([update, ...first.items], first.state, new Date(LEAD_NOW.getTime() + 36e5));
+  assert.equal(replaced.items[0].id, "update-item");
+  assert.equal(replaced.state.leads.find((row) => row.itemId === "update-item").eventKey, first.state.leads[0].eventKey);
+  const record = replaced.state.leads.find((row) => row.itemId === "update-item");
+  assert.equal(record.eventFirstLeadAt, first.state.leads[0].eventFirstLeadAt);
+  assert.notEqual(record.firstLeadAt, first.state.leads[0].firstLeadAt);
+  assert.ok(replaced.items.some((item) => item.id === "lead-item"));
+});
+
+test("a low-significance update does not replace the lead", () => {
+  const incumbent = leadFixture();
+  const first = assignLead([incumbent], {}, LEAD_NOW);
+  const weak = leadFixture({
+    id: "weak-update",
+    headline: "Brief mention of the same approval",
+    source_url: "https://example.com/weak-update",
+    doi: "10.1000/lead-item",
+    published_at: leadHoursAgo(0.2),
+    significance: 70,
+    tier: 3,
+  });
+  const kept = assignLead([weak, ...first.items], first.state, new Date(LEAD_NOW.getTime() + 36e5));
+  assert.equal(kept.items[0].id, "lead-item");
+  assert.equal(kept.items[0].significance, 99);
+  assert.equal(kept.items[0].tier, 5);
+  assert.equal(kept.state.leads.find((row) => row.itemId === "lead-item").firstLeadAt, first.state.leads[0].firstLeadAt);
+  assert.equal(kept.state.leads.some((row) => row.itemId === "weak-update"), false);
+});
+
+test("an event cannot lead again after 24 hours", () => {
+  const incumbent = leadFixture();
+  const first = assignLead([incumbent], {}, LEAD_NOW);
+  const lockedNow = new Date(LEAD_NOW.getTime() + 24 * 36e5);
+  const late = leadFixture({
+    id: "late-update",
+    headline: "Overnight story on the same approval",
+    source_url: "https://example.com/late-update",
+    doi: "10.1000/lead-item",
+    published_at: leadHoursAgo(1, lockedNow),
+    significance: 100,
+  });
+  const outsider = leadFixture({
+    id: "outside-event",
+    headline: "Different agency clears a separate product",
+    source_url: "https://example.com/outside-event",
+    doi: "10.1000/outside-event",
+    published_at: leadHoursAgo(4, lockedNow),
+    significance: 89,
+  });
+  const locked = assignLead([late, outsider, incumbent], first.state, lockedNow);
+  assert.equal(locked.items[0].id, "outside-event");
+  assert.ok(locked.items.some((item) => item.id === "late-update"));
+  assert.ok(locked.items.some((item) => item.id === "lead-item"));
+  assert.equal(locked.state.leads.some((row) => row.itemId === "late-update" || (row.itemId === "lead-item" && row.firstLeadAt !== first.state.leads[0].firstLeadAt)), false);
+});
+
+test("breaking boost decays from 2 hours to 12 and skips unknown times", () => {
+  assert.equal(breakingBoost(leadHoursAgo(0), LEAD_NOW), 0.35);
+  assert.equal(breakingBoost(leadHoursAgo(2), LEAD_NOW), 0.35);
+  assert.equal(breakingBoost(leadHoursAgo(7), LEAD_NOW), 0.175);
+  assert.equal(breakingBoost(leadHoursAgo(12), LEAD_NOW), 0);
+  assert.equal(breakingBoost(leadHoursAgo(20), LEAD_NOW), 0);
+  assert.equal(breakingBoost("2026-11-24", LEAD_NOW), 0);
+  assert.equal(breakingBoost("", LEAD_NOW), 0);
+  const freshWorthy = leadFixture({ id: "fresh-worthy", published_at: leadHoursAgo(1), significance: 90, source_url: "https://example.com/fresh-worthy", doi: "10.1000/fresh-worthy", headline: "Fresh top-tier approval" });
+  const older = leadFixture({ id: "older-strong", published_at: leadHoursAgo(20), significance: 96, source_url: "https://example.com/older-strong", doi: "10.1000/older-strong", headline: "Older strong approval" });
+  assert.equal(leadScore(freshWorthy, LEAD_NOW), 90 * 1.35);
+  assert.equal(leadScore(older, LEAD_NOW), 96);
+  const ranked = assignLead([older, freshWorthy], {}, LEAD_NOW);
+  assert.equal(ranked.items[0].id, "fresh-worthy");
+  assert.equal(ranked.items[0].tier, 5);
+  assert.equal(ranked.items[1].significance, 96);
+});
+
+test("a fresh low-significance item cannot outrank a much stronger older item", () => {
+  const fresh = leadFixture({
+    id: "fresh-low",
+    headline: "Small conference aside",
+    source_url: "https://example.com/fresh-low",
+    doi: "10.1000/fresh-low",
+    published_at: leadHoursAgo(0.5),
+    significance: 70,
+    tier: 3,
+  });
+  const strong = leadFixture({
+    id: "strong-old",
+    headline: "Major approval of a different medicine",
+    source_url: "https://example.com/strong-old",
+    doi: "10.1000/strong-old",
+    published_at: leadHoursAgo(20),
+    significance: 96,
+    tier: 5,
+  });
+  assert.equal(leadScore(fresh, LEAD_NOW), 70);
+  assert.ok(leadScore(strong, LEAD_NOW) > leadScore(fresh, LEAD_NOW));
+  const placed = assignLead([fresh, strong], {}, LEAD_NOW);
+  assert.equal(placed.items[0].id, "strong-old");
+  assert.equal(placed.items[0].significance, 96);
+  assert.equal(placed.items[0].tier, 5);
+  assert.equal(placed.items[1].id, "fresh-low");
+  assert.equal(placed.items[1].significance, 70);
+  assert.equal(placed.items[1].tier, 3);
 });
 
 test("Searching stays hidden once a search result is shown", () => {

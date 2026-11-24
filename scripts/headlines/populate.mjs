@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { loadFeedback } from "./feedback.mjs";
 import { Polite, USER_AGENT } from "./http.mjs";
 import { attachImages } from "./images.mjs";
-import { scoreItem, selectHeadlines } from "./ranking.mjs";
+import { assignLead, scoreItem, selectHeadlines } from "./ranking.mjs";
 import { SOURCES } from "./sources.mjs";
 import { formatLocalDay, formatUpdatedTime } from "../../headlines/render.js";
 import { dedupeByCanonUrl, readXPicks, xPickItems } from "./x-picks.mjs";
@@ -37,7 +37,16 @@ export function writeDatelineFallbacks(file, generatedAt, ids) {
   return after !== before;
 }
 
-export function buildHeadlines({ candidates, today, feedback, sources }) {
+export function readLeadState(file) {
+  try {
+    const data = JSON.parse(fs.readFileSync(file, "utf8"));
+    return data && Array.isArray(data.leads) ? data : { schema: "biocat-lead-state/1", leads: [] };
+  } catch {
+    return { schema: "biocat-lead-state/1", leads: [] };
+  }
+}
+
+export function buildHeadlines({ candidates, today, feedback, sources, now, leadState } = {}) {
   const deduped = new Map();
   for (const candidate of candidates) {
     const scored = scoreItem(candidate, today, feedback);
@@ -65,6 +74,7 @@ export function buildHeadlines({ candidates, today, feedback, sources }) {
     if (!prev || item.significance > prev.significance) deduped.set(key, item);
   }
   const selected = selectHeadlines(dedupeByCanonUrl([...deduped.values()]));
+  const placed = assignLead(selected, leadState, now || new Date());
   return {
     schema: "biocat-headlines/1",
     generated_at: new Date().toISOString(),
@@ -73,7 +83,8 @@ export function buildHeadlines({ candidates, today, feedback, sources }) {
     user_agent: USER_AGENT,
     ranking: "scripts/headlines/ranking.mjs",
     sources,
-    items: selected.map(({ drop, dedupe_key, x_handle, doi, ...item }) => item),
+    items: placed.items.map(({ drop, dedupe_key, x_handle, doi, ...item }) => item),
+    leadState: placed.state,
   };
 }
 
@@ -109,7 +120,9 @@ async function main() {
   }
   const picks = readXPicks(path.join(root, "data", "x_picks.json"));
   candidates.push(...xPickItems(picks, candidates.map((item) => item.source_url)));
-  const payload = buildHeadlines({ candidates, today, feedback, sources });
+  const statePath = path.join(root, "data", "lead_state.json");
+  const built = buildHeadlines({ candidates, today, feedback, sources, now: new Date(), leadState: readLeadState(statePath) });
+  const { leadState, ...payload } = built;
   try {
     const images = await attachImages(polite, payload.items, { cacheFile: path.join(root, "data", "image-cache.json") });
     console.log(`images: ${images.placed} commons-calls: ${images.calls} openverse-calls: ${images.openverseCalls} nasa-calls: ${images.nasaCalls}`);
@@ -119,6 +132,7 @@ async function main() {
   const out = path.join(root, "data", "headlines.json");
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, `${JSON.stringify(payload, null, 2)}\n`);
+  fs.writeFileSync(statePath, `${JSON.stringify(leadState, null, 2)}\n`);
   writeDatelineFallbacks(path.join(root, "index.html"), payload.generated_at, ["home-dateline", "home-updated"]);
   writeDatelineFallbacks(path.join(root, "headlines", "index.html"), payload.generated_at, ["dateline", "updated-local"]);
   console.log(`wrote ${payload.items.length} items to ${path.relative(root, out)}`);
