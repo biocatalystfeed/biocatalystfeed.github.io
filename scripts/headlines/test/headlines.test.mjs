@@ -6,14 +6,14 @@ import test from "node:test";
 import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines, rewriteDatelineFallbacks } from "../populate.mjs";
-import { RULES, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
+import { RULES, capXAccounts, sameXEvent, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
 import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, humanDate, indicationPhrase, metaDescription, natureNewsTrial, OUTCOME_CLAIM, paperCopy, paperRecords, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { commonsImage, imageResponseOk, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
 import { explainMatch, imageEntities, imageType, relevanceScore } from "../image-score.mjs";
 import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
-import { canonUrl, dedupeByCanonUrl, hostAllowed, xPickItems } from "../x-picks.mjs";
+import { canonUrl, dedupeByCanonUrl, hostAllowed, xAccountHandle, xPickItems } from "../x-picks.mjs";
 import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatLocalDay, formatStamp, formatUpdatedTime, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchStatusNote, searchUrls } from "../../../headlines/search.js";
 import { accountsFromAllowlist, applyTrackedAccountFilter, bindTrackedDisclosure, markTrackedOpen, matchTrackedAccounts, rememberTrackedToggle, setTrackedSummary, trackedSearchRows, trackedSummaryText } from "../../../headlines/tracked-accounts.js";
@@ -761,6 +761,181 @@ test("image placement rejects a weak or non-allowlisted match and varies the typ
   assert.match(IMAGE_SOURCES.openverse.robots, /Disallow: \/v1\/images\//);
   assert.equal(IMAGE_SOURCES.nasa.allowed, true);
 });
+
+test("an X account keeps three headlines and yields a duplicate event to another account", () => {
+  const stat = (n, score, extra = {}) => ({
+    id: `stat-${n}`,
+    headline: extra.headline || `Distinct statnews headline number ${n} today`,
+    blurb: "A separate note.",
+    source_url: `https://x.com/StatNews/status/${n}`,
+    source_type: "news",
+    source_name: "X",
+    published_at: "2026-11-20",
+    significance: score,
+    tier: 3,
+    scout_source: "x",
+    x_handle: n % 2 ? "StatNews" : "statnews",
+    linked_url: extra.linked_url || `https://www.statnews.com/story-${n}`,
+    drop: false,
+    ...extra,
+  });
+  const shared = "https://www.statnews.com/shared-story/?utm_source=x";
+  const overflow = stat(4, 60, { linked_url: shared, headline: "Shared pancreatic cancer readout looks strong" });
+  const dropped = stat(5, 50, { headline: "Only statnews covered this other readout" });
+  const doiOverflow = stat(6, 40, { headline: "Unrelated wording about a methods paper", doi: "10.1126/sciimmunol.aej5412", linked_url: "https://www.statnews.com/doi-story" });
+  const page = [stat(1, 90), stat(2, 80), stat(3, 70), overflow, dropped, doiOverflow];
+  const byUrl = {
+    id: "bio-url",
+    headline: "A different desk headline",
+    blurb: "Another note.",
+    source_url: "https://x.com/biospace/status/90",
+    source_type: "news",
+    source_name: "X",
+    published_at: "2026-11-20",
+    significance: 58,
+    tier: 2,
+    scout_source: "x",
+    x_handle: "BioSpace",
+    linked_url: "https://statnews.com/shared-story",
+    drop: false,
+  };
+  const byText = {
+    id: "endpts-text",
+    headline: "Shared pancreatic cancer readout looks strong today",
+    blurb: "A third desk.",
+    source_url: "https://x.com/endpts/status/91",
+    source_type: "news",
+    source_name: "X",
+    published_at: "2026-11-19",
+    significance: 20,
+    tier: 1,
+    scout_source: "x",
+    x_handle: "endpts",
+    linked_url: "https://endpoints.news/other-story",
+    drop: false,
+  };
+  const byDoi = {
+    id: "topol-doi",
+    headline: "Chromatin maps in older mice",
+    blurb: "A paper note.",
+    source_url: "https://x.com/EricTopol/status/92",
+    source_type: "news",
+    source_name: "X",
+    published_at: "2026-11-21",
+    significance: 57,
+    tier: 2,
+    scout_source: "x",
+    x_handle: "erictopol",
+    linked_url: "https://www.science.org/doi/10.1126/sciimmunol.aej5412",
+    doi: "10.1126/sciimmunol.aej5412",
+    drop: false,
+  };
+  const full = {
+    id: "biospace-full",
+    headline: "Biospace already has three of its own",
+    blurb: "Filled.",
+    source_url: "https://x.com/biospace/status/70",
+    significance: 95,
+    scout_source: "x",
+    x_handle: "biospace",
+    linked_url: "https://www.biospace.com/one",
+    drop: false,
+  };
+  const selected = capXAccounts(page, [...page, byUrl, byText, byDoi, full, { ...full, id: "biospace-2", source_url: "https://x.com/biospace/status/71", linked_url: "https://www.biospace.com/two" }, { ...full, id: "biospace-3", source_url: "https://x.com/biospace/status/72", linked_url: "https://www.biospace.com/three" }]);
+  const counts = {};
+  for (const item of selected) {
+    const handle = xAccountHandle(item);
+    counts[handle] = (counts[handle] || 0) + 1;
+    assert.ok(counts[handle] <= 3, handle);
+  }
+  assert.equal(counts.statnews, 3);
+  assert.ok(selected.some((item) => item.id === "bio-url"));
+  assert.ok(selected.some((item) => item.id === "topol-doi"));
+  assert.equal(selected.some((item) => item.id === "stat-4" || item.id === "stat-5" || item.id === "stat-6"), false);
+  assert.equal(sameXEvent(overflow, byUrl), true);
+  assert.ok(headlineJaccardSafe(overflow.headline, byText.headline) >= 0.6);
+  const picks = xPickItems({
+    enabled: true,
+    picks: [1, 2, 3, 4].map((n) => ({
+      handle: "statnews",
+      postUrl: `https://x.com/statnews/status/${n}`,
+      linkedUrl: n === 4 ? "https://www.statnews.com/shared/?utm_source=x" : `https://www.statnews.com/s/${n}`,
+      postedAt: "2026-11-20",
+      headline: n === 4 ? "Shared pancreatic cancer readout looks strong" : `Distinct statnews headline number ${n} today`,
+      blurb: "A separate note about the study.",
+      kind: "other",
+      blurbSource: "page-description",
+    })).concat({
+      handle: "biospace",
+      postUrl: "https://x.com/biospace/status/9",
+      linkedUrl: "https://statnews.com/shared",
+      postedAt: "2026-11-20",
+      headline: "Shared pancreatic cancer readout looks strong",
+      blurb: "Another desk notes the same study.",
+      kind: "other",
+      blurbSource: "page-description",
+    }),
+  });
+  assert.equal(picks.length, 5);
+  const built = buildHeadlines({ candidates: picks, today: "2026-11-22", feedback: new Map(), sources: [] });
+  const builtCounts = {};
+  for (const item of built.items) {
+    const handle = xAccountHandle({ ...item, scout_source: "x" });
+    builtCounts[handle] = (builtCounts[handle] || 0) + 1;
+  }
+  assert.deepEqual(builtCounts, { statnews: 3, biospace: 1 });
+  assert.equal(built.items.some((item) => item.x_handle || item.doi), false);
+
+  const bio = (n, score) => ({
+    id: `bio-${n}`,
+    headline: `Biospace exclusive story ${n}`,
+    blurb: "A note.",
+    source_url: `https://x.com/biospace/status/${n}`,
+    linked_url: `https://www.biospace.com/story-${n}`,
+    published_at: "2026-11-23",
+    significance: score,
+    scout_source: "x",
+    rule: "x-pick",
+    x_handle: "biospace",
+    drop: false,
+  });
+  const refill = (n, score) => ({
+    id: `refill-stat-${n}`,
+    headline: `Statnews exclusive story ${n}`,
+    blurb: "A note.",
+    source_url: `https://x.com/statnews/status/10${n}`,
+    linked_url: `https://www.statnews.com/exclusive-${n}`,
+    published_at: "2026-11-22",
+    significance: score,
+    scout_source: "x",
+    rule: "x-pick",
+    x_handle: "statnews",
+    drop: false,
+  });
+  const refilled = selectHeadlines([
+    bio(1, 100), bio(2, 99), bio(3, 98), bio(4, 97), bio(5, 96), bio(6, 95), bio(7, 94),
+    refill(1, 80), refill(2, 79), refill(3, 78), refill(4, 77),
+  ]);
+  const refillCounts = {};
+  for (const item of refilled) {
+    const handle = xAccountHandle(item);
+    if (!handle) continue;
+    refillCounts[handle] = (refillCounts[handle] || 0) + 1;
+    assert.ok(refillCounts[handle] <= 3, handle);
+  }
+  assert.equal(refillCounts.biospace, 3);
+  assert.equal(refillCounts.statnews, 3);
+  assert.equal(refilled.filter((item) => item.scout_source === "x").length, 6);
+});
+
+function headlineJaccardSafe(left, right) {
+  const tokens = (value) => new Set(String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").split(/\s+/).filter((token) => token.length >= 2));
+  const a = tokens(left);
+  const b = tokens(right);
+  let shared = 0;
+  for (const token of a) if (b.has(token)) shared += 1;
+  return shared / (a.size + b.size - shared);
+}
 
 test("canonical URL dedupe keeps the higher-scoring copy", () => {
   assert.equal(canonUrl("HTTPS://WWW.Doi.ORG/10.1038/ABC/?utm_source=x&utm_medium=social#frag"), "https://doi.org/10.1038/abc");

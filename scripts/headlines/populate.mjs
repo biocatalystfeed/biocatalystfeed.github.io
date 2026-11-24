@@ -57,6 +57,8 @@ export function buildHeadlines({ candidates, today, feedback, sources }) {
       dedupe_key: candidate.dedupe_key,
       ...(candidate.image_entity ? { image_entity: candidate.image_entity } : {}),
       ...(candidate.linked_url ? { linked_url: candidate.linked_url } : {}),
+      ...(candidate.x_handle ? { x_handle: candidate.x_handle } : {}),
+      ...(candidate.doi ? { doi: candidate.doi } : {}),
     };
     const key = item.dedupe_key || item.id;
     const prev = deduped.get(key);
@@ -71,7 +73,7 @@ export function buildHeadlines({ candidates, today, feedback, sources }) {
     user_agent: USER_AGENT,
     ranking: "scripts/headlines/ranking.mjs",
     sources,
-    items: selected.map(({ drop, dedupe_key, ...item }) => item),
+    items: selected.map(({ drop, dedupe_key, x_handle, doi, ...item }) => item),
   };
 }
 
