@@ -353,6 +353,8 @@ export function selectHeadlines(items) {
   const capped = [];
   for (const [source, list] of groups) {
     list.sort(cmp);
+    if (source === "x") list.splice(0, list.length, ...limitXHandles(list));
+    list.sort(cmp);
     const cap = RULES.caps[source] ?? RULES.defaultCap;
     const ruleCount = {};
     const high = [];
@@ -434,6 +436,41 @@ export function sameXEvent(left, right) {
 
 function xEligible(item) {
   return item && !item.drop && item.significance >= RULES.minScore && xAccountHandle(item);
+}
+
+function limitXHandles(list, cap = X_ACCOUNT_CAP) {
+  const ranked = [...list].sort(cmp);
+  const counts = {};
+  const kept = [];
+  const keptIds = new Set();
+  for (const item of ranked) {
+    if (keptIds.has(item.id)) continue;
+    const handle = xAccountHandle(item);
+    if (!handle) {
+      kept.push(item);
+      keptIds.add(item.id);
+      continue;
+    }
+    if ((counts[handle] || 0) < cap) {
+      counts[handle] = (counts[handle] || 0) + 1;
+      kept.push(item);
+      keptIds.add(item.id);
+      continue;
+    }
+    const covered = kept.some((chosen) => xAccountHandle(chosen) !== handle && sameXEvent(item, chosen));
+    if (covered) continue;
+    const alternate = ranked.find((other) => {
+      if (other.id === item.id || keptIds.has(other.id)) return false;
+      const otherHandle = xAccountHandle(other);
+      if (!otherHandle || otherHandle === handle || (counts[otherHandle] || 0) >= cap) return false;
+      return sameXEvent(item, other);
+    });
+    if (!alternate) continue;
+    counts[xAccountHandle(alternate)] = (counts[xAccountHandle(alternate)] || 0) + 1;
+    keptIds.add(alternate.id);
+    kept.push(alternate);
+  }
+  return kept;
 }
 
 export function capXAccounts(page, pool = page, cap = X_ACCOUNT_CAP) {

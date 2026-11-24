@@ -885,6 +885,47 @@ test("an X account keeps three headlines and yields a duplicate event to another
   }
   assert.deepEqual(builtCounts, { statnews: 3, biospace: 1 });
   assert.equal(built.items.some((item) => item.x_handle || item.doi), false);
+
+  const bio = (n, score) => ({
+    id: `bio-${n}`,
+    headline: `Biospace exclusive story ${n}`,
+    blurb: "A note.",
+    source_url: `https://x.com/biospace/status/${n}`,
+    linked_url: `https://www.biospace.com/story-${n}`,
+    published_at: "2026-11-23",
+    significance: score,
+    scout_source: "x",
+    rule: "x-pick",
+    x_handle: "biospace",
+    drop: false,
+  });
+  const refill = (n, score) => ({
+    id: `refill-stat-${n}`,
+    headline: `Statnews exclusive story ${n}`,
+    blurb: "A note.",
+    source_url: `https://x.com/statnews/status/10${n}`,
+    linked_url: `https://www.statnews.com/exclusive-${n}`,
+    published_at: "2026-11-22",
+    significance: score,
+    scout_source: "x",
+    rule: "x-pick",
+    x_handle: "statnews",
+    drop: false,
+  });
+  const refilled = selectHeadlines([
+    bio(1, 100), bio(2, 99), bio(3, 98), bio(4, 97), bio(5, 96), bio(6, 95), bio(7, 94),
+    refill(1, 80), refill(2, 79), refill(3, 78), refill(4, 77),
+  ]);
+  const refillCounts = {};
+  for (const item of refilled) {
+    const handle = xAccountHandle(item);
+    if (!handle) continue;
+    refillCounts[handle] = (refillCounts[handle] || 0) + 1;
+    assert.ok(refillCounts[handle] <= 3, handle);
+  }
+  assert.equal(refillCounts.biospace, 3);
+  assert.equal(refillCounts.statnews, 3);
+  assert.equal(refilled.filter((item) => item.scout_source === "x").length, 6);
 });
 
 function headlineJaccardSafe(left, right) {

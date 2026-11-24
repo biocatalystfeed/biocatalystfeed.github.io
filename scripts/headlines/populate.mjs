@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { loadFeedback } from "./feedback.mjs";
 import { Polite, USER_AGENT } from "./http.mjs";
 import { attachImages } from "./images.mjs";
-import { capXAccounts, scoreItem, selectHeadlines } from "./ranking.mjs";
+import { scoreItem, selectHeadlines } from "./ranking.mjs";
 import { SOURCES } from "./sources.mjs";
 import { formatLocalDay, formatUpdatedTime } from "../../headlines/render.js";
 import { dedupeByCanonUrl, readXPicks, xPickItems } from "./x-picks.mjs";
@@ -64,8 +64,7 @@ export function buildHeadlines({ candidates, today, feedback, sources }) {
     const prev = deduped.get(key);
     if (!prev || item.significance > prev.significance) deduped.set(key, item);
   }
-  const pool = dedupeByCanonUrl([...deduped.values()]);
-  const selected = capXAccounts(selectHeadlines(pool), pool);
+  const selected = selectHeadlines(dedupeByCanonUrl([...deduped.values()]));
   return {
     schema: "biocat-headlines/1",
     generated_at: new Date().toISOString(),
