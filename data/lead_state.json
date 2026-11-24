@@ -1,0 +1,16 @@
+{
+  "schema": "biocat-lead-state/1",
+  "leads": [
+    {
+      "itemId": "openfda-drugsfda:NDA221144:2026-11-18:ORIG:1",
+      "canonicalUrl": "https://accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221144",
+      "eventKey": "reg:NDA221144",
+      "firstLeadAt": "2026-11-24T19:08:59.839Z",
+      "eventFirstLeadAt": "2026-11-24T19:08:59.839Z",
+      "publishedAt": "2026-11-18",
+      "headline": "FDA approves Genzyme A's Infilbray (venglustat), a new molecular entity",
+      "doi": "",
+      "sourceUrl": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221144"
+    }
+  ]
+}
