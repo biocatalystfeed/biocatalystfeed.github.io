@@ -72,7 +72,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/headlines.json index.html headlines/index.html
+          git add data/headlines.json data/lead_state.json index.html headlines/index.html
           if git diff --cached --quiet; then
             echo "No headline changes."
             exit 0

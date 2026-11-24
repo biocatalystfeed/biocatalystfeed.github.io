@@ -210,6 +210,18 @@ export const RULES = {
   ],
 };
 
+// A lead item keeps the slot for 12 hours. The event can be updated for 24 hours
+// after it first became the lead, and then no item of that event can lead again.
+export const LEAD_MAX_ITEM_HOURS = 12;
+export const LEAD_EVENT_WINDOW_HOURS = 24;
+// Breaking boost on the lead-ranking score. Headline tiers stay on base significance.
+export const BREAKING_MAX_BOOST = 0.35;
+export const BREAKING_FULL_HOURS = 2;
+export const BREAKING_ZERO_HOURS = 12;
+// Tier 5 in RULES.tiers starts at 88. Only that top band is lead-worthy and
+// receives the breaking boost, so a fresh low score cannot outrank a strong one.
+export const LEAD_WORTHY_FLOOR = 88;
+
 export function tierFor(score) {
   const n = Number(score);
   for (const row of RULES.tiers) if (n >= row.min) return row.tier;
@@ -510,4 +522,172 @@ export function capXAccounts(page, pool = page, cap = X_ACCOUNT_CAP) {
     kept.push(alternate);
   }
   return diversify(kept.sort(cmp));
+}
+
+function parsePublished(value) {
+  const text = String(value || "").trim();
+  if (!/T\d{2}:\d{2}/.test(text)) return null;
+  const ms = Date.parse(text);
+  return Number.isFinite(ms) ? ms : null;
+}
+
+function asDate(now) {
+  const date = now instanceof Date ? now : new Date(now || Date.now());
+  return Number.isFinite(date.getTime()) ? date : new Date();
+}
+
+function hoursSince(stamp, now) {
+  const ms = Date.parse(String(stamp || ""));
+  if (!Number.isFinite(ms)) return Number.POSITIVE_INFINITY;
+  return (now.getTime() - ms) / 36e5;
+}
+
+export function breakingBoost(publishedAt, now = new Date()) {
+  const published = parsePublished(publishedAt);
+  if (published == null) return 0;
+  const ageHours = (asDate(now).getTime() - published) / 36e5;
+  if (!Number.isFinite(ageHours) || ageHours >= BREAKING_ZERO_HOURS) return 0;
+  if (ageHours <= BREAKING_FULL_HOURS) return BREAKING_MAX_BOOST;
+  const span = BREAKING_ZERO_HOURS - BREAKING_FULL_HOURS;
+  return BREAKING_MAX_BOOST * (1 - (ageHours - BREAKING_FULL_HOURS) / span);
+}
+
+export function leadScore(item, now = new Date()) {
+  const base = Number(item?.significance) || 0;
+  if (base < LEAD_WORTHY_FLOOR) return base;
+  return base * (1 + breakingBoost(item?.published_at, now));
+}
+
+// sameXEvent reads a DOI only when punctuation or the end of the string follows
+// it. A stored DOI usually has a space after it, so mark it for that matcher
+// without changing the matcher the X-account cap uses.
+function withEventMarks(item) {
+  const doi = String(item?.doi || "").trim().replace(/[.,;]+$/, "");
+  if (!/^10\.\d{4,9}\/\S+$/i.test(doi)) return item;
+  return { ...item, doi: `${doi}.` };
+}
+
+function sameLeadEvent(left, right) {
+  return sameXEvent(withEventMarks(left), withEventMarks(right));
+}
+
+function eventKey(item) {
+  const marked = withEventMarks(item);
+  const ids = [...eventIds(marked)];
+  if (ids.length) return ids[0];
+  const url = storyUrl(marked);
+  if (url) return `url:${url}`;
+  return `text:${[...headlineTokens(marked?.headline)].sort().join(" ")}`;
+}
+
+function recordAsItem(record) {
+  return {
+    id: record?.itemId,
+    headline: record?.headline || "",
+    doi: record?.doi || "",
+    linked_url: record?.canonicalUrl || "",
+    source_url: record?.sourceUrl || record?.canonicalUrl || "",
+  };
+}
+
+function leadRecords(state) {
+  return Array.isArray(state?.leads) ? state.leads : [];
+}
+
+function sameEventRecord(item, record) {
+  return sameLeadEvent(item, recordAsItem(record));
+}
+
+function earliestEventRecord(item, records) {
+  return records
+    .filter((record) => sameEventRecord(item, record))
+    .sort((a, b) => String(a.eventFirstLeadAt).localeCompare(String(b.eventFirstLeadAt)))[0] || null;
+}
+
+function eventLocked(item, records, now) {
+  return records.some((record) => sameEventRecord(item, record) && hoursSince(record.eventFirstLeadAt, now) >= LEAD_EVENT_WINDOW_HOURS);
+}
+
+function itemClockOpen(item, records, now) {
+  const prior = records.find((record) => record.itemId === item.id);
+  if (!prior) return true;
+  return hoursSince(prior.firstLeadAt, now) < LEAD_MAX_ITEM_HOURS;
+}
+
+function leadWorthy(item) {
+  return Boolean(item) && !item.drop && Number(item.significance) >= LEAD_WORTHY_FLOOR;
+}
+
+function byLeadScore(now) {
+  return (a, b) => leadScore(b, now) - leadScore(a, now) || cmp(a, b);
+}
+
+function blankState(records = []) {
+  return { schema: "biocat-lead-state/1", leads: records };
+}
+
+function rememberLead(item, records, now, eventFirstLeadAt) {
+  const nowIso = now.toISOString();
+  const priorItem = records.find((record) => record.itemId === item.id);
+  const priorEvent = earliestEventRecord(item, records);
+  const next = {
+    itemId: item.id,
+    canonicalUrl: storyUrl(item) || canonUrl(item.source_url || ""),
+    eventKey: priorEvent?.eventKey || eventKey(item),
+    firstLeadAt: priorItem?.firstLeadAt || nowIso,
+    eventFirstLeadAt: eventFirstLeadAt || priorEvent?.eventFirstLeadAt || nowIso,
+    publishedAt: item.published_at || "",
+    headline: item.headline || "",
+    doi: item.doi || "",
+    sourceUrl: item.source_url || "",
+  };
+  const leads = records.filter((record) => record.itemId !== item.id);
+  leads.push(next);
+  return blankState(leads);
+}
+
+export function assignLead(items, state = {}, now = new Date()) {
+  const clock = asDate(now);
+  const records = leadRecords(state);
+  const list = [...(items || [])];
+  const current = [...records].sort((a, b) => String(b.firstLeadAt).localeCompare(String(a.firstLeadAt)))[0] || null;
+  const eligible = list.filter((item) => leadWorthy(item) && !eventLocked(item, records, clock) && itemClockOpen(item, records, clock));
+  let chosen = null;
+  let eventFirstLeadAt = null;
+
+  if (current) {
+    const incumbent = list.find((item) => item.id === current.itemId) || null;
+    const eventOpen = hoursSince(current.eventFirstLeadAt, clock) < LEAD_EVENT_WINDOW_HOURS;
+    const incumbentOk = Boolean(incumbent) && eventOpen && leadWorthy(incumbent) && itemClockOpen(incumbent, records, clock)
+      && hoursSince(current.firstLeadAt, clock) < LEAD_MAX_ITEM_HOURS;
+    const priorPublished = parsePublished(current.publishedAt);
+    const newer = eventOpen ? list.filter((item) => {
+      if (!leadWorthy(item) || item.id === current.itemId || !itemClockOpen(item, records, clock)) return false;
+      if (!sameEventRecord(item, current)) return false;
+      const published = parsePublished(item.published_at);
+      return published != null && priorPublished != null && published > priorPublished;
+    }).sort(byLeadScore(clock)) : [];
+    if (newer[0]) {
+      chosen = newer[0];
+      eventFirstLeadAt = current.eventFirstLeadAt;
+    } else if (incumbentOk) {
+      chosen = incumbent;
+      eventFirstLeadAt = current.eventFirstLeadAt;
+    } else {
+      const expiredEvent = eventOpen ? recordAsItem(current) : null;
+      chosen = eligible
+        .filter((item) => {
+          if (incumbent && item.id === incumbent.id) return false;
+          if (expiredEvent && sameLeadEvent(item, expiredEvent)) return false;
+          return true;
+        })
+        .sort(byLeadScore(clock))[0] || null;
+    }
+  } else {
+    chosen = eligible.slice().sort(byLeadScore(clock))[0] || null;
+  }
+
+  if (!chosen) return { items: list, state: blankState(records) };
+  const rest = list.filter((item) => item.id !== chosen.id);
+  return { items: [chosen, ...rest], state: rememberLead(chosen, records, clock, eventFirstLeadAt) };
 }
