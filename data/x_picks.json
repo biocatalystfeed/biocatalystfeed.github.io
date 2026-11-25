@@ -3,14 +3,26 @@
   "enabled": true,
   "picks": [
     {
-      "handle": "BioPharmaDive",
-      "postUrl": "https://x.com/BioPharmaDive/status/2125298426397261935",
-      "linkedUrl": "https://www.biopharmadive.com/news/fda-roche-wilserdly-breast-cancer-approval-early-stage/875563/",
-      "postedAt": "2026-11-24",
-      "headline": "FDA clears Roche's oral SERD for early-stage breast cancer",
-      "blurb": "Wilserdly gains a second approval, this time in the earlier treatment setting for ER-positive, HER2-negative disease, which analysts see as the larger market opportunity.",
-      "kind": "approval",
-      "blurbSource": "page-description"
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2125624512557576585",
+      "linkedUrl": "https://www.nature.com/articles/s41586-026-11345-2",
+      "postedAt": "2026-11-25",
+      "headline": "Rare-variant genetic architecture of height in over 1.4 million individuals",
+      "blurb": "Exome data from over 1.4 million people implicate 207 genes in height, including rare loss-of-function variants with effects far larger than typical common variants.",
+      "kind": "paper",
+      "blurbSource": "abstract",
+      "doi": "10.1038/s41586-026-11345-2"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2125622705806590343",
+      "linkedUrl": "https://www.nature.com/articles/s41586-026-11275-z",
+      "postedAt": "2026-11-25",
+      "headline": "Single-cell variant-to-enhancer-to-gene map for coronary artery disease",
+      "blurb": "Profiling gene activity and chromatin in coronary arteries from 44 people links non-coding disease variants to specific cell types and gene programmes, including smooth muscle cells.",
+      "kind": "paper",
+      "blurbSource": "abstract",
+      "doi": "10.1038/s41586-026-11275-z"
     },
     {
       "handle": "EricTopol",
@@ -24,23 +36,22 @@
       "doi": "10.1016/j.chom.2026.11.003"
     },
     {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2125252850037268657",
-      "linkedUrl": "https://www.cell.com/immunity/fulltext/S1074-7613(26)00444-9",
-      "postedAt": "2026-11-24",
-      "headline": "Systemic inflammation reprograms dendritic cells at a decision point for CD8+ T cell exhaustion",
-      "blurb": "Mouse infection studies identify a refractory dendritic cell state that forms around day 5 and shapes whether killer T cells become exhausted.",
-      "kind": "paper",
-      "blurbSource": "abstract",
-      "doi": "10.1016/j.immuni.2026.10.018"
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2125650828010680557",
+      "linkedUrl": "https://www.biospace.com/drug-delivery/pharming-pauses-ruconest-production-over-fill-finish-issue-threatening-us-supply",
+      "postedAt": "2026-11-25",
+      "headline": "Pharming pauses Ruconest production over fill-finish issue, threatening US supply",
+      "blurb": "A third-party manufacturer's problem led the drugmaker to halt output of its core product and caution that shortages are likely.",
+      "kind": "other",
+      "blurbSource": "page-description"
     },
     {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2125139014835450213",
-      "linkedUrl": "https://www.statnews.com/2026/11/24/sanofi-insmed-acquisition-dupixent-rare-disease-inflammation/",
-      "postedAt": "2026-11-24",
-      "headline": "Sanofi to buy Insmed for $41B, picking up two respiratory drugs",
-      "blurb": "The French drugmaker, under pressure to find its next blockbusters, gets two approved medicines through the megadeal for the U.S. biotech.",
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2125635749236105655",
+      "linkedUrl": "https://www.biospace.com/business/buckle-up-opdivo-biosimilar-settlement-sets-bms-up-for-make-or-break-moment",
+      "postedAt": "2026-11-25",
+      "headline": "Buckle up: Opdivo biosimilar settlement sets BMS up for make-or-break moment",
+      "blurb": "Under the Amgen and Bristol Myers Squibb settlement, a biosimilar version of the PD-1 drug Opdivo can reach the market in 2028.",
       "kind": "other",
       "blurbSource": "page-description"
     },
@@ -55,22 +66,22 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2124918398698086855",
-      "linkedUrl": "https://www.biospace.com/drug-development/erascas-early-data-show-profile-that-could-challenge-revmed-in-pancreatic-cancer-analysts",
-      "postedAt": "2026-11-23",
-      "headline": "Erasca's early data show profile that could challenge RevMed in pancreatic cancer",
-      "blurb": "Updated Phase 1 results for ERAS-0015 showed strong response rates in subgroups where Revolution Medicines' approved drug was weaker, according to a Jefferies note.",
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2125526304640434402",
+      "linkedUrl": "https://www.statnews.com/2026/11/25/us-china-biotech-race-policy-data/",
+      "postedAt": "2026-11-25",
+      "headline": "Washington and Beijing are building walls around biotechnology. That's the wrong approach",
+      "blurb": "An opinion piece argues that restricting investment won't help the U.S. in contests it's already losing, and that eroding the research base is the bigger risk.",
       "kind": "other",
       "blurbSource": "page-description"
     },
     {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2124903298327077323",
-      "linkedUrl": "https://www.biospace.com/drug-development/invivyd-plans-fda-run-for-covid-19-preventative-teeing-up-new-era-for-immunization",
-      "postedAt": "2026-11-23",
-      "headline": "Invivyd plans FDA run for COVID-19 preventative, teeing up new era for immunization",
-      "blurb": "The company's COVID-19 prevention antibody is built on the same backbone as its emergency-authorized Pemgarda, and an FDA filing is planned.",
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2125139014835450213",
+      "linkedUrl": "https://www.statnews.com/2026/11/24/sanofi-insmed-acquisition-dupixent-rare-disease-inflammation/",
+      "postedAt": "2026-11-24",
+      "headline": "Sanofi to buy Insmed for $41B, picking up two respiratory drugs",
+      "blurb": "The French drugmaker, under pressure to find its next blockbusters, gets two approved medicines through the megadeal for the U.S. biotech.",
       "kind": "other",
       "blurbSource": "page-description"
     },
@@ -85,33 +96,13 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2124808449284317264",
-      "linkedUrl": "https://www.statnews.com/2026/11/23/genmab-cancer-drugs-oncology-clinical-trials/",
-      "postedAt": "2026-11-23",
-      "headline": "A string of wins with cancer drugs sets Genmab up for its next chapter",
-      "blurb": "After three late-stage trial successes in about a month, the Danish biotech is turning toward approval filings and self-commercializing two drugs.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "FDA",
-      "postUrl": "https://x.com/FDA/status/2124887860457197725",
-      "linkedUrl": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-start-including-accelerated-approval-program-information-patient-labeling",
-      "postedAt": "2026-11-23",
-      "headline": "FDA to include Accelerated Approval Program information in labeling",
-      "blurb": "Patient labeling for drugs and biologics cleared through that pathway will now say so directly, to help patients understand their medicines.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "endpts",
-      "postUrl": "https://x.com/endpts/status/2124896440430313540",
-      "linkedUrl": "https://endpoints.news/capricors-duchenne-therapy-is-rejected-again-as-fda-cites-significant-issues-with-trial/",
-      "postedAt": "2026-11-23",
-      "headline": "Capricor's Duchenne therapy rejected again as FDA cites trial issues",
-      "blurb": "The agency declined deramiocel a second time, pointing to unblinding and protocol violations in the HOPE-3 study despite a narrower proposed indication.",
-      "kind": "other",
+      "handle": "BioPharmaDive",
+      "postUrl": "https://x.com/BioPharmaDive/status/2125298426397261935",
+      "linkedUrl": "https://www.biopharmadive.com/news/fda-roche-wilserdly-breast-cancer-approval-early-stage/875563/",
+      "postedAt": "2026-11-24",
+      "headline": "FDA clears Roche's oral SERD for early-stage breast cancer",
+      "blurb": "Wilserdly gains a second approval, this time in the earlier treatment setting for ER-positive, HER2-negative disease, which analysts see as the larger market opportunity.",
+      "kind": "approval",
       "blurbSource": "page-description"
     },
     {
@@ -131,26 +122,6 @@
       "postedAt": "2026-11-23",
       "headline": "House panel depicts stark contrast between US and China biotech",
       "blurb": "A congressional committee's final report warns drug development is shifting overseas and recommends a dozen policies, from legislation to clinical trial reforms.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "BioPharmaDive",
-      "postUrl": "https://x.com/BioPharmaDive/status/2124918450006991148",
-      "linkedUrl": "https://www.biopharmadive.com/news/kymera-eczema-pill-phase2-data-protein-degrader-dupixent-ebglyss/875462/",
-      "postedAt": "2026-11-23",
-      "headline": "Kymera eczema pill meets goals in mid-stage trial",
-      "blurb": "Analysts say the oral protein degrader showed biologic-like efficacy in Phase 2 and could compete with the leading injectable for eczema.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "BioPharmaDive",
-      "postUrl": "https://x.com/BioPharmaDive/status/2124902843035553929",
-      "linkedUrl": "https://www.biopharmadive.com/news/lilly-loqus-huntingtons-drug-acquisition-deal/875448/",
-      "postedAt": "2026-11-23",
-      "headline": "Lilly buys Huntington's drug developer LoQus23 in potentially $725M deal",
-      "blurb": "The purchase gives Lilly an investigational treatment aimed at the MSH3 protein, which can worsen the genetic changes behind Huntington's disease.",
       "kind": "other",
       "blurbSource": "page-description"
     },
