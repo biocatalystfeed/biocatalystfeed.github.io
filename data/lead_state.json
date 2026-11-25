@@ -11,6 +11,17 @@
       "headline": "FDA approves Genzyme A's Infilbray (venglustat), a new molecular entity",
       "doi": "",
       "sourceUrl": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221144"
+    },
+    {
+      "itemId": "openfda-crl:CRL_BLA125842_20261120.pdf",
+      "canonicalUrl": "https://download.open.fda.gov/crl/CRL_BLA125842_20261120.pdf",
+      "eventKey": "url:https://download.open.fda.gov/crl/CRL_BLA125842_20261120.pdf",
+      "firstLeadAt": "2026-11-25T19:12:01.958Z",
+      "eventFirstLeadAt": "2026-11-25T19:12:01.958Z",
+      "publishedAt": "2026-11-20",
+      "headline": "FDA sends Capricor, Inc. a complete response letter",
+      "doi": "",
+      "sourceUrl": "https://download.open.fda.gov/crl/CRL_BLA125842_20261120.pdf"
     }
   ]
 }
