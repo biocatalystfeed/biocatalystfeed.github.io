@@ -9,26 +9,8 @@ X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:dea92532b0a8560075ad@biocat.ai
-DTSTAMP:20261118T181353Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:KPTIQ P2 readout (est.): Selinexor (KPT-330) in Patients With Relap
- sed/Refractory Diffuse Large B-Cell Lymphoma (DLBCL)
-DESCRIPTION:Selinexor (KPT-330) in Patients With Relapsed/Refractory Diffus
- e Large B-Cell Lymphoma (DLBCL)\nNCT02227251 | PHASE2 | ACTIVE_NOT_RECRUIT
- ING | sponsor: Karyopharm Therapeutics Inc\nPrimary completion date (ESTIM
- ATED)\; top-line results usually follow later.\nDate precision: month (sho
- wn on the first day)\nTicker KPTIQ (confidence 0.9)\nSource: https://clini
- caltrials.gov/study/NCT02227251\nScheduling/reference data from public rec
- ords\; dates can move. Not investment\, legal or medical advice.
-TRANSP:TRANSPARENT
-URL:https://clinicaltrials.gov/study/NCT02227251
-CATEGORIES:readout,ESTIMATED
-END:VEVENT
-BEGIN:VEVENT
 UID:18a7b528d038f3bff003@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:KPTIQ P2/P3 readout (est.): A Study of Rituximab-Gemcitabine-Dexame
@@ -48,7 +30,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:d81a19c02672ac630166@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20260423
 DTEND;VALUE=DATE:20260424
 SUMMARY:KPTIQ APPROVAL: XPOVIO

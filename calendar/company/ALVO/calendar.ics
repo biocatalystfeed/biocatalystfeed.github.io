@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:e9c1ea3a7eaa2629ec77@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180232Z
 DTSTART;VALUE=DATE:20251126
 DTEND;VALUE=DATE:20251127
 SUMMARY:ALVO CRL: AVTO5
@@ -20,20 +20,6 @@ DESCRIPTION:CRL 2025-11-26: Alvotech USA Inc. BLA 761461 (AVTO5)\nConfidenc
  lic records\; dates can move. Not investment\, legal or medical advice.
 TRANSP:TRANSPARENT
 URL:https://download.open.fda.gov/crl/CRL_BLA761461_20251126.pdf
-CATEGORIES:crl,confirmed
-END:VEVENT
-BEGIN:VEVENT
-UID:59fcb0e1fbf384510ab1@biocat.ai
-DTSTAMP:20261118T181353Z
-DTSTART;VALUE=DATE:20251124
-DTEND;VALUE=DATE:20251125
-SUMMARY:ALVO CRL: AVT06
-DESCRIPTION:CRL 2025-11-24: Alvotech USA Inc. BLA 761435 (AVT06)\nConfidenc
- e: confirmed\nTicker ALVO (confidence 0.6)\nSource: https://download.open.
- fda.gov/crl/CRL_BLA761435_20251124.pdf\nScheduling/reference data from pub
- lic records\; dates can move. Not investment\, legal or medical advice.
-TRANSP:TRANSPARENT
-URL:https://download.open.fda.gov/crl/CRL_BLA761435_20251124.pdf
 CATEGORIES:crl,confirmed
 END:VEVENT
 END:VCALENDAR

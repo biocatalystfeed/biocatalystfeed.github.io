@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BioCatalystFeed//bcf//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BioCatalystFeed IPTNF catalysts
+X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
+ . Not investment\, legal or medical advice.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:166a783561b6ef6d35b3@biocat.ai
+DTSTAMP:20261125T180232Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:IPTNF P1/P2 readout (est.): Study to Evaluate IMP9064 as a Monother
+ apy or in Combination in Patients With Advanced Solid Tumors
+DESCRIPTION:Study to Evaluate IMP9064 as a Monotherapy or in Combination in
+  Patients With Advanced Solid Tumors\nNCT05269316 | PHASE1/PHASE2 | RECRUI
+ TING | sponsor: Impact Therapeutics\, Inc.\nPrimary completion date (ESTIM
+ ATED)\; top-line results usually follow later.\nTicker IPTNF (confidence 0
+ .6)\nSource: https://clinicaltrials.gov/study/NCT05269316\nScheduling/refe
+ rence data from public records\; dates can move. Not investment\, legal or
+  medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT05269316
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+END:VCALENDAR

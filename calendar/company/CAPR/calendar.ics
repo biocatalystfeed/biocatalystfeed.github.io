@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:e55165b575de859a6c6c@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180232Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
 SUMMARY:CAPR PDUFA (company-disclosed): PDUFA November 22\, 2026 - CAPRICOR
@@ -26,8 +26,24 @@ URL:https://www.sec.gov/Archives/edgar/data/1133869/000110465926125150/capr
 CATEGORIES:pdufa,company-disclosed
 END:VEVENT
 BEGIN:VEVENT
+UID:67808ec7d379b600695d@biocat.ai
+DTSTAMP:20261125T180232Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:CAPR CRL: deramiocel\, submitted under section 351(a) of the Public
+  Health Service Act
+DESCRIPTION:CRL 2026-11-20: Capricor\, Inc. BL 125842 (deramiocel\, submitt
+ ed under section 351(a) of the Public Health Service Act)\nConfidence: con
+ firmed\nTicker CAPR (confidence 0.9)\nSource: https://download.open.fda.go
+ v/crl/CRL_BLA125842_20261120.pdf\nScheduling/reference data from public re
+ cords\; dates can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://download.open.fda.gov/crl/CRL_BLA125842_20261120.pdf
+CATEGORIES:crl,confirmed
+END:VEVENT
+BEGIN:VEVENT
 UID:337da3311e1e9801e8a7@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180232Z
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
 SUMMARY:CAPR ADCOM (scheduled): AdCom 2026-07-29: Cellular\, Tissue\, and G
@@ -46,7 +62,7 @@ CATEGORIES:adcom,scheduled
 END:VEVENT
 BEGIN:VEVENT
 UID:2f95b7969fbdb250cc66@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180232Z
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
 SUMMARY:CAPR ADCOM (scheduled): AdCom 2026-07-29: Cellular\, Tissue\, and G
