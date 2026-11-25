@@ -9,25 +9,8 @@ X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:d0b37b51623bd83c5df6@biocat.ai
-DTSTAMP:20261118T181353Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:BIIB P3 readout (est.): TRANSCEND
-DESCRIPTION:A Study to Learn More About the Effects and Safety of Felzartam
- ab Infusions in Adults With Kidney Transplants Who Have Antibody-Mediated 
- Rejection (AMR)\nNCT06685757 | PHASE3 | ACTIVE_NOT_RECRUITING | sponsor: B
- iogen\nPrimary completion date (ESTIMATED)\; top-line results usually foll
- ow later.\nTicker BIIB (confidence 0.9)\nSource: https://clinicaltrials.go
- v/study/NCT06685757\nScheduling/reference data from public records\; dates
-  can move. Not investment\, legal or medical advice.
-TRANSP:TRANSPARENT
-URL:https://clinicaltrials.gov/study/NCT06685757
-CATEGORIES:readout,ESTIMATED
-END:VEVENT
-BEGIN:VEVENT
 UID:71adc9e259d6a31434e7@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180232Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:BIIB APPROVAL: ZURZUVAE
@@ -43,7 +26,7 @@ CATEGORIES:approval,confirmed
 END:VEVENT
 BEGIN:VEVENT
 UID:047e6350d305db6e4a78@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180232Z
 DTSTART;VALUE=DATE:20260327
 DTEND;VALUE=DATE:20260328
 SUMMARY:BIIB APPROVAL: SPINRAZA

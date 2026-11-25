@@ -9,8 +9,24 @@ X-WR-CALDESC:Scheduling/reference data from public records\; dates can move
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
+UID:fb8b81f6a4a034e11903@biocat.ai
+DTSTAMP:20261125T180231Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:CL P3 readout (est.): REMINSITU
+DESCRIPTION:Clinical Study to Evaluate Remineralization Using an in Situ Mo
+ del.\nNCT07625670 | PHASE3 | ENROLLING_BY_INVITATION | sponsor: Colgate Pa
+ lmolive\nPrimary completion date (ESTIMATED)\; top-line results usually fo
+ llow later.\nTicker CL (confidence 0.9)\nSource: https://clinicaltrials.go
+ v/study/NCT07625670\nScheduling/reference data from public records\; dates
+  can move. Not investment\, legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://clinicaltrials.gov/study/NCT07625670
+CATEGORIES:readout,ESTIMATED
+END:VEVENT
+BEGIN:VEVENT
 UID:e88a5521aa7014500b08@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:CL P3 readout (est.): Clinical Evaluation of a Toothpaste for Denta

@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:4a7da7d6e45e382d081a@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180232Z
 DTSTART;VALUE=DATE:20260709
 DTEND;VALUE=DATE:20260710
 SUMMARY:AMRX APPROVAL: SODIUM BICARBONATE
@@ -25,24 +25,8 @@ URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
 CATEGORIES:approval,confirmed
 END:VEVENT
 BEGIN:VEVENT
-UID:28f5f10f02279a84f15a@biocat.ai
-DTSTAMP:20261118T181353Z
-DTSTART;VALUE=DATE:20251219
-DTEND;VALUE=DATE:20251220
-SUMMARY:AMRX APPROVAL: BONCRESA
-DESCRIPTION:Approved 2025-12-19: BONCRESA (BLA761456 ORIG1)\nConfidence: co
- nfirmed\nTicker AMRX (confidence 0.6)\nSource: https://www.accessdata.fda.
- gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761456\nSched
- uling/reference data from public records\; dates can move. Not investment\
- , legal or medical advice.
-TRANSP:TRANSPARENT
-URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
- w.process&ApplNo=761456
-CATEGORIES:approval,confirmed
-END:VEVENT
-BEGIN:VEVENT
 UID:b3c59903f68e139bdcce@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180232Z
 DTSTART;VALUE=DATE:20251219
 DTEND;VALUE=DATE:20251220
 SUMMARY:AMRX APPROVAL: OZILTUS
@@ -54,6 +38,22 @@ DESCRIPTION:Approved 2025-12-19: OZILTUS (BLA761457 ORIG1)\nConfidence: con
 TRANSP:TRANSPARENT
 URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
  w.process&ApplNo=761457
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:28f5f10f02279a84f15a@biocat.ai
+DTSTAMP:20261125T180232Z
+DTSTART;VALUE=DATE:20251219
+DTEND;VALUE=DATE:20251220
+SUMMARY:AMRX APPROVAL: BONCRESA
+DESCRIPTION:Approved 2025-12-19: BONCRESA (BLA761456 ORIG1)\nConfidence: co
+ nfirmed\nTicker AMRX (confidence 0.6)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761456\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=761456
 CATEGORIES:approval,confirmed
 END:VEVENT
 END:VCALENDAR

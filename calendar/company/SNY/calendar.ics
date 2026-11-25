@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:604e4bf714d2a397e82b@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:SNY P3 readout (est.): Rilzabrutinib for the Adult Participants Wit
@@ -27,7 +27,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:d8be294892c00b45b0fb@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:SNY P3 readout (est.): A Phase III Control Study of the Safety and 
@@ -44,7 +44,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:cb1838763378c489d340@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:SNY P3 readout (est.): Study of the Safety and Immunogenicity of Ca
@@ -64,7 +64,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:2148e4c16fa472142ead@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:SNY P1/P2 readout (est.): Study to Evaluate the Safety and the Immu
@@ -84,24 +84,8 @@ URL:https://clinicaltrials.gov/study/NCT06907511
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
-UID:e92f658ad985b591ee00@biocat.ai
-DTSTAMP:20261118T181353Z
-DTSTART;VALUE=DATE:20261217
-DTEND;VALUE=DATE:20261218
-SUMMARY:SNY P2 readout (est.): CHROMA CD
-DESCRIPTION:A Study to Investigate Efficacy and Safety of Brivekimig in Par
- ticipants With Crohn's Disease\nNCT06958536 | PHASE2 | RECRUITING | sponso
- r: Sanofi\nPrimary completion date (ESTIMATED)\; top-line results usually 
- follow later.\nTicker SNY (confidence 0.9)\nSource: https://clinicaltrials
- .gov/study/NCT06958536\nScheduling/reference data from public records\; da
- tes can move. Not investment\, legal or medical advice.
-TRANSP:TRANSPARENT
-URL:https://clinicaltrials.gov/study/NCT06958536
-CATEGORIES:readout,ESTIMATED
-END:VEVENT
-BEGIN:VEVENT
 UID:c5d8b40d2db2836e7ab2@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:SNY P2 readout (est.): COLOR UC
@@ -118,7 +102,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:0837292088d2a5268f7a@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:SNY P2 readout (est.): RESULT
@@ -136,7 +120,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:6c28a105bc902b367217@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:SNY P3 readout (est.): Study of a Single Dose of a 21-valent Pneumo
@@ -155,7 +139,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:612a064f24bcf2e0bafa@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:SNY P1/P2 readout (est.): Study of a Human Metapneumovirus/Respirat
@@ -175,7 +159,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:031dd87b97a6dad3298a@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
 SUMMARY:SNY P1/P2 readout (est.): A First-in-human\, Dose Escalation and Do
@@ -194,7 +178,7 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:eee39d78132f5a0ff5a6@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20270209
 DTEND;VALUE=DATE:20270210
 SUMMARY:SNY P2 readout (est.): BRIGHTEN
@@ -210,24 +194,25 @@ CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:33e9b61fda0e4a12418d@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20270211
 DTEND;VALUE=DATE:20270212
 SUMMARY:SNY P2 readout (est.): A Study to Investigate the Efficacy and Safe
  ty of Rilzabrutinib in Adult Participants With Graves' Disease
 DESCRIPTION:A Study to Investigate the Efficacy and Safety of Rilzabrutinib
-  in Adult Participants With Graves' Disease\nNCT06984627 | PHASE2 | RECRUI
- TING | sponsor: Sanofi\nPrimary completion date (ESTIMATED)\; top-line res
- ults usually follow later.\nTicker SNY (confidence 0.9)\nSource: https://c
- linicaltrials.gov/study/NCT06984627\nScheduling/reference data from public
-  records\; dates can move. Not investment\, legal or medical advice.
+  in Adult Participants With Graves' Disease\nNCT06984627 | PHASE2 | ACTIVE
+ _NOT_RECRUITING | sponsor: Sanofi\nPrimary completion date (ESTIMATED)\; t
+ op-line results usually follow later.\nTicker SNY (confidence 0.9)\nSource
+ : https://clinicaltrials.gov/study/NCT06984627\nScheduling/reference data 
+ from public records\; dates can move. Not investment\, legal or medical ad
+ vice.
 TRANSP:TRANSPARENT
 URL:https://clinicaltrials.gov/study/NCT06984627
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
 UID:ece23fd306cbd2d851de@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
 SUMMARY:SNY P3 readout (est.): CEREN-3
@@ -244,8 +229,24 @@ URL:https://clinicaltrials.gov/study/NCT07424144
 CATEGORIES:readout,ESTIMATED
 END:VEVENT
 BEGIN:VEVENT
+UID:cb41063c032ae150571f@biocat.ai
+DTSTAMP:20261125T180231Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:SNY APPROVAL: AYVAKIT
+DESCRIPTION:Approved 2026-10-16: AYVAKIT (NDA212608 SUPPL21)\nConfidence: c
+ onfirmed\nTicker SNY (confidence 0.9)\nSource: https://www.accessdata.fda.
+ gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212608\nSched
+ uling/reference data from public records\; dates can move. Not investment\
+ , legal or medical advice.
+TRANSP:TRANSPARENT
+URL:https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overvie
+ w.process&ApplNo=212608
+CATEGORIES:approval,confirmed
+END:VEVENT
+BEGIN:VEVENT
 UID:abd8e578e95d7da066c2@biocat.ai
-DTSTAMP:20261118T181353Z
+DTSTAMP:20261125T180231Z
 DTSTART;VALUE=DATE:20260709
 DTEND;VALUE=DATE:20260710
 SUMMARY:SNY APPROVAL: SARCLISA ESCENA
