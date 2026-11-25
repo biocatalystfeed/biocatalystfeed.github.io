@@ -153,6 +153,16 @@
       "blurb": "The purchase gives Lilly an investigational treatment aimed at the MSH3 protein, which can worsen the genetic changes behind Huntington's disease.",
       "kind": "other",
       "blurbSource": "page-description"
+    },
+    {
+      "handle": "alzforum",
+      "postUrl": "https://x.com/alzforum/status/2125413898933109073",
+      "linkedUrl": "https://www.alzforum.org/news/conference-coverage/zirconium-bling-helps-trontinemab-shine-human-brain",
+      "postedAt": "2026-11-25",
+      "headline": "Zirconium bling helps trontinemab shine in human brain",
+      "blurb": "CTAD presentations used a radiolabeled version of Roche's brain-shuttle antibody to show its spread through the brain, alongside regional amyloid-PET differences in plaque clearance.",
+      "kind": "other",
+      "blurbSource": "page-description"
     }
   ]
 }
