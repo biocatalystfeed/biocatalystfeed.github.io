@@ -86,16 +86,6 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2124978139033985378",
-      "linkedUrl": "https://www.statnews.com/2026/11/23/fda-approves-bridgebio-lgmd-drug-welgemda/",
-      "postedAt": "2026-11-23",
-      "headline": "Limb-girdle muscular dystrophy gets its first FDA-approved drug, from BridgeBio",
-      "blurb": "Welgemda is cleared for the LGMD 2i/R9 subtype, a form of muscular dystrophy that had gone without an approved therapy.",
-      "kind": "approval",
-      "blurbSource": "page-description"
-    },
-    {
       "handle": "BioPharmaDive",
       "postUrl": "https://x.com/BioPharmaDive/status/2125298426397261935",
       "linkedUrl": "https://www.biopharmadive.com/news/fda-roche-wilserdly-breast-cancer-approval-early-stage/875563/",
@@ -106,32 +96,22 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "endpts",
-      "postUrl": "https://x.com/endpts/status/2124963553379811508",
-      "linkedUrl": "https://endpoints.news/avenzo-begins-public-life-seeks-to-rival-bristol-myers-egfrxher3-bispecific/",
-      "postedAt": "2026-11-23",
-      "headline": "Avenzo begins public life as its China-originated pipeline seeks to rival Bristol Myers",
-      "blurb": "The biotech started Nasdaq trading after a reverse merger with Rallybio, with a CEO aiming at the EGFRxHER3 antibody-drug conjugate market.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "endpts",
-      "postUrl": "https://x.com/endpts/status/2124958562656870637",
-      "linkedUrl": "https://endpoints.news/house-committee-issues-final-report-on-us-china-biotech-race/",
-      "postedAt": "2026-11-23",
-      "headline": "House panel depicts stark contrast between US and China biotech",
-      "blurb": "A congressional committee's final report warns drug development is shifting overseas and recommends a dozen policies, from legislation to clinical trial reforms.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
       "handle": "alzforum",
       "postUrl": "https://x.com/alzforum/status/2125413898933109073",
       "linkedUrl": "https://www.alzforum.org/news/conference-coverage/zirconium-bling-helps-trontinemab-shine-human-brain",
       "postedAt": "2026-11-25",
       "headline": "Zirconium bling helps trontinemab shine in human brain",
       "blurb": "CTAD presentations used a radiolabeled version of Roche's brain-shuttle antibody to show its spread through the brain, alongside regional amyloid-PET differences in plaque clearance.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "NIH",
+      "postUrl": "https://x.com/NIH/status/2125654260176093306",
+      "linkedUrl": "https://www.nih.gov/news-events/nih-research-matters/senescence-targeting-nanoparticles-may-enhance-immunotherapy",
+      "postedAt": "2026-11-25",
+      "headline": "Senescence-targeting nanoparticles may enhance immunotherapy",
+      "blurb": "In mice, a nanoparticle treatment cleared the aging-related cells that drive tissue scarring around tumors, an early step toward improving how cancer immunotherapy works.",
       "kind": "other",
       "blurbSource": "page-description"
     }
