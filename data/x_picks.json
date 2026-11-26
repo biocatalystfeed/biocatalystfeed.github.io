@@ -56,32 +56,12 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2125212857893638236",
-      "linkedUrl": "https://www.biospace.com/fda/fda-approves-bridgebios-welgemda-as-1st-targeted-therapy-for-rare-muscle-disease",
-      "postedAt": "2026-11-24",
-      "headline": "FDA approves BridgeBio's Welgemda as first targeted therapy for rare muscle disease",
-      "blurb": "Acting FDA Commissioner Kyle Diamantas called the clearance of the limb-girdle muscular dystrophy treatment a historic milestone for patients and families.",
-      "kind": "approval",
-      "blurbSource": "page-description"
-    },
-    {
       "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2125526304640434402",
       "linkedUrl": "https://www.statnews.com/2026/11/25/us-china-biotech-race-policy-data/",
       "postedAt": "2026-11-25",
       "headline": "Washington and Beijing are building walls around biotechnology. That's the wrong approach",
       "blurb": "An opinion piece argues that restricting investment won't help the U.S. in contests it's already losing, and that eroding the research base is the bigger risk.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2125139014835450213",
-      "linkedUrl": "https://www.statnews.com/2026/11/24/sanofi-insmed-acquisition-dupixent-rare-disease-inflammation/",
-      "postedAt": "2026-11-24",
-      "headline": "Sanofi to buy Insmed for $41B, picking up two respiratory drugs",
-      "blurb": "The French drugmaker, under pressure to find its next blockbusters, gets two approved medicines through the megadeal for the U.S. biotech.",
       "kind": "other",
       "blurbSource": "page-description"
     },
@@ -123,6 +103,36 @@
       "headline": "FDA approves Cogent's drug for rare stomach cancer",
       "blurb": "The agency cleared the Cogent therapy for use alongside Pfizer's much older medicine Sutent.",
       "kind": "approval",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "alzforum",
+      "postUrl": "https://x.com/alzforum/status/2125751904755941725",
+      "linkedUrl": "https://www.alzforum.org/news/conference-coverage/leqembi-slows-progression-alzheimers-patients-lewy-bodies",
+      "postedAt": "2026-11-26",
+      "headline": "Leqembi slows progression in Alzheimer's patients with Lewy bodies",
+      "blurb": "Analyses of the lecanemab Clarity trial and its five-year extension, presented at CTAD, suggest similar relative benefit with or without Lewy body pathology, though disease-modification claims remain debated.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "alzforum",
+      "postUrl": "https://x.com/alzforum/status/2125701364613345442",
+      "linkedUrl": "https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad",
+      "postedAt": "2026-11-25",
+      "headline": "Biomarker reckoning: Why did posdinemab take down p-tau, but not AD?",
+      "blurb": "Trial data shown at CTAD indicate the anti-tau antibody cut soluble p-tau217 in spinal fluid yet did not slow tangle spread or decline, prompting a closer look at biomarker meaning.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "BioPharmaDive",
+      "postUrl": "https://x.com/BioPharmaDive/status/2125632779824054529",
+      "linkedUrl": "https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/",
+      "postedAt": "2026-11-25",
+      "headline": "Medicare sets 2028 prices for 13 new drugs under Biden-era law",
+      "blurb": "CMS announced maximum prices for a third round of high-spend drugs, including Trulicity, Orencia and Cosentyx, widening Inflation Reduction Act cost controls to more older medicines.",
+      "kind": "other",
       "blurbSource": "page-description"
     }
   ]
