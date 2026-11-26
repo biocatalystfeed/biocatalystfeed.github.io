@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-26T13:24:50.253Z",
+  "generated_at": "2026-11-26T19:08:10.455Z",
   "event_date": "2026-11-26",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -45,7 +45,7 @@
       "id": "ema",
       "enabled": true,
       "status": "ok",
-      "fetched": 24,
+      "fetched": 26,
       "note": "EMA daily medicines JSON. Variation decisions are not used; European Commission decision dates on already-authorised medicines are ignored. Source: European Medicines Agency."
     },
     {
@@ -811,6 +811,33 @@
       "scout_source": "sec-edgar-8k"
     },
     {
+      "id": "x:https://x.com/statnews/status/2125925118211657788",
+      "headline": "The grueling struggle to find a primary care doctor in the 'medical capital' of America",
+      "blurb": "Despite Boston's reputation for medicine, many area residents lack a primary care clinician, limiting access to treatments, screenings and advice. https://www.statnews.com/2026/11/26/primary-care-appointment-times-doctor-shortage/",
+      "source_url": "https://x.com/statnews/status/2125925118211657788",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-26",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.statnews.com/2026/11/26/primary-care-appointment-times-doctor-shortage/"
+    },
+    {
+      "id": "nih-reporter:11388995",
+      "headline": "Graph-Driven Wastewater Genomics: ML Imputation, Exposure Networks, and CRISPR-Virus Dynamics",
+      "blurb": "Cornell University received $34,354 in NIH funding (F31). Project start Nov 15.",
+      "source_url": "https://reporter.nih.gov/project-details/11388995",
+      "source_type": "grant",
+      "source_name": "NIH RePORTER",
+      "published_at": "2026-11-15",
+      "significance": 63,
+      "significance_rationale": "nih-grant 60; 11d old +3 = 63. NIH RePORTER project with a start date in the window.",
+      "tier": 3,
+      "scout_source": "nih-reporter"
+    },
+    {
       "id": "x:https://x.com/BioPharmaDive/status/2125632779824054529",
       "headline": "Medicare sets 2028 prices for 13 new drugs under Biden-era law",
       "blurb": "CMS announced maximum prices for a third round of high-spend drugs, including Trulicity, Orencia and Cosentyx, widening Inflation Reduction Act cost controls to more older medicines. https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/",
@@ -825,17 +852,17 @@
       "linked_url": "https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/"
     },
     {
-      "id": "nih-reporter:11388995",
-      "headline": "Graph-Driven Wastewater Genomics: ML Imputation, Exposure Networks, and CRISPR-Virus Dynamics",
-      "blurb": "Cornell University received $34,354 in NIH funding (F31). Project start Nov 15.",
-      "source_url": "https://reporter.nih.gov/project-details/11388995",
-      "source_type": "grant",
-      "source_name": "NIH RePORTER",
-      "published_at": "2026-11-15",
-      "significance": 63,
-      "significance_rationale": "nih-grant 60; 11d old +3 = 63. NIH RePORTER project with a start date in the window.",
+      "id": "bcf-papers:MED:43083744",
+      "headline": "Developing and Externally Validating Machine Learning Models to Forecast Short-Term Risk of Ventilator-Associated Pneumonia",
+      "blurb": "Published 2026-11-24 in Crit Care Explor (MED 43083744).",
+      "source_url": "https://doi.org/10.1097/cce.0000000000001506",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-24",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "nih-reporter"
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2125622705806590343",
@@ -852,17 +879,17 @@
       "linked_url": "https://www.nature.com/articles/s41586-026-11275-z"
     },
     {
-      "id": "bcf-papers:MED:43083744",
-      "headline": "Developing and Externally Validating Machine Learning Models to Forecast Short-Term Risk of Ventilator-Associated Pneumonia",
-      "blurb": "Published 2026-11-24 in Crit Care Explor (MED 43083744).",
-      "source_url": "https://doi.org/10.1097/cce.0000000000001506",
+      "id": "medrxiv:10.64898/2026.11.19.26368462",
+      "headline": "Unified Machine Learning Model for Early Detection of Mild Cognitive Impairment, Frailty",
+      "blurb": "A unified model that predicts all 3 conditions from 1 sensor-based assessment could support earlier and more efficient screening, but such a model has rarely. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368462",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-24",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-23",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "medrxiv"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2125624512557576585",
@@ -879,17 +906,44 @@
       "linked_url": "https://www.nature.com/articles/s41586-026-11345-2"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.19.26368462",
-      "headline": "Unified Machine Learning Model for Early Detection of Mild Cognitive Impairment, Frailty",
-      "blurb": "A unified model that predicts all 3 conditions from 1 sensor-based assessment could support earlier and more efficient screening, but such a model has rarely. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368462",
+      "id": "bcf-papers:MED:43062005",
+      "headline": "One-carbon metabolism-derived prognostic signature orchestrates reactive oxygen species redox homeostasis",
+      "blurb": "Published 2026-11-20 in Med Gas Res (MED 43062005).",
+      "source_url": "https://doi.org/10.4103/mgr.medgasres-d-26-00136",
       "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-23",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-20",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "medrxiv"
+      "scout_source": "bcf-papers"
+    },
+    {
+      "id": "x:https://x.com/EricTopol/status/2125626588771533179",
+      "headline": "Clinical landscape of cardiometabolic heart failure with preserved ejection fraction",
+      "blurb": "A review frames this form of heart failure, increasingly tied to obesity and type 2 diabetes, as a mechanistic subtype involving endothelial dysfunction and metabolic inflexibility. https://www.nature.com/articles/s41586-026-11231-x",
+      "source_url": "https://x.com/EricTopol/status/2125626588771533179",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-25",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.nature.com/articles/s41586-026-11231-x"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.19.767848",
+      "headline": "Lightness illusions and saliency maps for reflectance estimation are similar across a wide range",
+      "blurb": "We compared networks where the initial, stimulus-encoding phase used pre-trained weights learned for other tasks, and networks where all weights were optimized for reflectance estimation. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767848",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-20",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "biorxiv"
     },
     {
       "id": "x:https://x.com/NIH/status/2125654260176093306",
@@ -906,17 +960,17 @@
       "linked_url": "https://www.nih.gov/news-events/nih-research-matters/senescence-targeting-nanoparticles-may-enhance-immunotherapy"
     },
     {
-      "id": "bcf-papers:MED:43062005",
-      "headline": "One-carbon metabolism-derived prognostic signature orchestrates reactive oxygen species redox homeostasis",
-      "blurb": "Published 2026-11-20 in Med Gas Res (MED 43062005).",
-      "source_url": "https://doi.org/10.4103/mgr.medgasres-d-26-00136",
+      "id": "biorxiv:10.64898/2026.11.19.767900",
+      "headline": "Biologically Guided Deep Learning for Personalized PSA Forecasting in Intermittent Prostate Cancer Therapy",
+      "blurb": "An evolutionary rationale for treatment interruptions is to preserve treatment-sensitive cells that may competitively suppress resistant populations. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767900",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "source_name": "bioRxiv",
       "published_at": "2026-11-20",
       "significance": 62,
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "biorxiv"
     },
     {
       "id": "x:https://x.com/alzforum/status/2125413898933109073",
@@ -931,60 +985,6 @@
       "tier": 3,
       "scout_source": "x",
       "linked_url": "https://www.alzforum.org/news/conference-coverage/zirconium-bling-helps-trontinemab-shine-human-brain"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.19.767848",
-      "headline": "Lightness illusions and saliency maps for reflectance estimation are similar across a wide range",
-      "blurb": "We compared networks where the initial, stimulus-encoding phase used pre-trained weights learned for other tasks, and networks where all weights were optimized for reflectance estimation. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767848",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-20",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/alzforum/status/2125701364613345442",
-      "headline": "Biomarker reckoning: Why did posdinemab take down p-tau, but not AD?",
-      "blurb": "Trial data shown at CTAD indicate the anti-tau antibody cut soluble p-tau217 in spinal fluid yet did not slow tangle spread or decline, prompting a closer look at biomarker meaning. https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad",
-      "source_url": "https://x.com/alzforum/status/2125701364613345442",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-25",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.19.767900",
-      "headline": "Biologically Guided Deep Learning for Personalized PSA Forecasting in Intermittent Prostate Cancer Therapy",
-      "blurb": "An evolutionary rationale for treatment interruptions is to preserve treatment-sensitive cells that may competitively suppress resistant populations. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767900",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-20",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/biospace/status/2125635749236105655",
-      "headline": "Buckle up: Opdivo biosimilar settlement sets BMS up for make-or-break moment",
-      "blurb": "Under the Amgen and Bristol Myers Squibb settlement, a biosimilar version of the PD-1 drug Opdivo can reach the market in 2028. https://www.biospace.com/business/buckle-up-opdivo-biosimilar-settlement-sets-bms-up-for-make-or-break-moment",
-      "source_url": "https://x.com/biospace/status/2125635749236105655",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-25",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.biospace.com/business/buckle-up-opdivo-biosimilar-settlement-sets-bms-up-for-make-or-break-moment"
     },
     {
       "id": "biorxiv:10.64898/2026.11.19.767946",
