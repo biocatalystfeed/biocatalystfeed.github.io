@@ -114,6 +114,16 @@
       "blurb": "In mice, a nanoparticle treatment cleared the aging-related cells that drive tissue scarring around tumors, an early step toward improving how cancer immunotherapy works.",
       "kind": "other",
       "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2125695137103663469",
+      "linkedUrl": "https://www.statnews.com/2026/11/25/biotech-news-fda-approves-cogents-drug-for-rare-stomach-cancer/",
+      "postedAt": "2026-11-25",
+      "headline": "FDA approves Cogent's drug for rare stomach cancer",
+      "blurb": "The agency cleared the Cogent therapy for use alongside Pfizer's much older medicine Sutent.",
+      "kind": "approval",
+      "blurbSource": "page-description"
     }
   ]
 }
