@@ -25,17 +25,6 @@
       "doi": "10.1038/s41586-026-11275-z"
     },
     {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2125254452684955714",
-      "linkedUrl": "https://www.cell.com/cell-host-microbe/abstract/S1931-3128(26)00448-8",
-      "postedAt": "2026-11-24",
-      "headline": "Vagus nerve stimulation ameliorates epilepsy via a gut microbiota-butyrate-vagal axis",
-      "blurb": "In patients and mice, the therapy shifted gut bacteria and butyrate levels, and transplanting that microbiota into mice lowered seizure severity.",
-      "kind": "paper",
-      "blurbSource": "abstract",
-      "doi": "10.1016/j.chom.2026.11.003"
-    },
-    {
       "handle": "biospace",
       "postUrl": "https://x.com/biospace/status/2125650828010680557",
       "linkedUrl": "https://www.biospace.com/drug-delivery/pharming-pauses-ruconest-production-over-fill-finish-issue-threatening-us-supply",
@@ -63,16 +52,6 @@
       "headline": "Washington and Beijing are building walls around biotechnology. That's the wrong approach",
       "blurb": "An opinion piece argues that restricting investment won't help the U.S. in contests it's already losing, and that eroding the research base is the bigger risk.",
       "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "BioPharmaDive",
-      "postUrl": "https://x.com/BioPharmaDive/status/2125298426397261935",
-      "linkedUrl": "https://www.biopharmadive.com/news/fda-roche-wilserdly-breast-cancer-approval-early-stage/875563/",
-      "postedAt": "2026-11-24",
-      "headline": "FDA clears Roche's oral SERD for early-stage breast cancer",
-      "blurb": "Wilserdly gains a second approval, this time in the earlier treatment setting for ER-positive, HER2-negative disease, which analysts see as the larger market opportunity.",
-      "kind": "approval",
       "blurbSource": "page-description"
     },
     {
@@ -132,6 +111,37 @@
       "postedAt": "2026-11-25",
       "headline": "Medicare sets 2028 prices for 13 new drugs under Biden-era law",
       "blurb": "CMS announced maximum prices for a third round of high-spend drugs, including Trulicity, Orencia and Cosentyx, widening Inflation Reduction Act cost controls to more older medicines.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2125626588771533179",
+      "linkedUrl": "https://www.nature.com/articles/s41586-026-11231-x",
+      "postedAt": "2026-11-25",
+      "headline": "Clinical landscape of cardiometabolic heart failure with preserved ejection fraction",
+      "blurb": "A review frames this form of heart failure, increasingly tied to obesity and type 2 diabetes, as a mechanistic subtype involving endothelial dysfunction and metabolic inflexibility.",
+      "kind": "paper",
+      "blurbSource": "page-description",
+      "doi": "10.1038/s41586-026-11231-x"
+    },
+    {
+      "handle": "biospace",
+      "postUrl": "https://x.com/biospace/status/2125597874352259464",
+      "linkedUrl": "https://www.biospace.com/business/sanofis-41b-insmed-buy-capricors-second-rejection-fdas-pre-holiday-rush",
+      "postedAt": "2026-11-25",
+      "headline": "Sanofi's $41B Insmed buy, Capricor's second rejection, FDA's pre-holiday rush",
+      "blurb": "Sanofi's deal is the largest biopharma buyout since Pfizer's 2023 Seagen purchase, while the FDA again declined Capricor's Duchenne cell therapy and cleared several other companies' products.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2125925118211657788",
+      "linkedUrl": "https://www.statnews.com/2026/11/26/primary-care-appointment-times-doctor-shortage/",
+      "postedAt": "2026-11-26",
+      "headline": "The grueling struggle to find a primary care doctor in the 'medical capital' of America",
+      "blurb": "Despite Boston's reputation for medicine, many area residents lack a primary care clinician, limiting access to treatments, screenings and advice.",
       "kind": "other",
       "blurbSource": "page-description"
     }
