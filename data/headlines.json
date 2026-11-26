@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-26T10:20:17.617Z",
+  "generated_at": "2026-11-26T13:24:50.253Z",
   "event_date": "2026-11-26",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -59,7 +59,7 @@
       "id": "europepmc",
       "enabled": true,
       "status": "ok",
-      "fetched": 38,
+      "fetched": 39,
       "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped, except Nature news DOIs (10.1038/d41586-) whose titles name a trial, phase, FDA action, pivotal study, readout, or approval. Those items get the pivotal-readout adjustment, and their blurb is the page meta description when nature.com/robots.txt allows the article. A blurb otherwise uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
@@ -524,15 +524,15 @@
       "scout_source": "clinicaltrials-calendar"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/mhra-sets-out-regulatory-approach-to-next-generation-innovation",
-      "headline": "MHRA sets out regulatory approach to next generation innovation",
-      "blurb": "A round-up of the agency's announcements during London Life Sciences Week 2026, including at the inaugural DIA-MHRA Global Summit.",
-      "source_url": "https://www.gov.uk/government/news/mhra-sets-out-regulatory-approach-to-next-generation-innovation",
+      "id": "mhra:https://www.gov.uk/government/news/mhra-authorises-obicetrapib-and-ezetimibe-for-adults-with-high-cholesterol-when-current-treatments-are-insufficient",
+      "headline": "MHRA authorises obicetrapib and ezetimibe for adults with high cholesterol when current treatments are",
+      "blurb": "As with any medicine, the MHRA will keep the safety and effectiveness of obicetrapib and ezetimibe under close review.",
+      "source_url": "https://www.gov.uk/government/news/mhra-authorises-obicetrapib-and-ezetimibe-for-adults-with-high-cholesterol-when-current-treatments-are-insufficient",
       "source_type": "regulator",
       "source_name": "UK MHRA",
-      "published_at": "2026-11-24",
+      "published_at": "2026-11-26",
       "significance": 80,
-      "significance_rationale": "mhra-news 74; 2d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; in 0d +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -550,15 +550,15 @@
       "scout_source": "federal-register-adcom"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/ai-in-mental-health-airlock-to-support-safe-innovation",
-      "headline": "AI in Mental Health Airlock to support safe innovation",
-      "blurb": "A new regulatory sandbox will explore how safety approaches in innovative digital mental health technologies can be effectively evaluated and regulated.",
-      "source_url": "https://www.gov.uk/government/news/ai-in-mental-health-airlock-to-support-safe-innovation",
+      "id": "mhra:https://www.gov.uk/government/news/obicetrapib-approved-to-lower-ldl-cholesterol-in-adults-with-primary-hypercholesterolaemia-andor-mixed-dyslipidaemia",
+      "headline": "Obicetrapib approved to lower LDL-cholesterol in adults with primary hypercholesterolaemia and/or mixed dyslipidaemia",
+      "blurb": "The Medicines and Healthcare products Regulatory Agency MHRA has approved obicetrapib brand name Ubeslo.",
+      "source_url": "https://www.gov.uk/government/news/obicetrapib-approved-to-lower-ldl-cholesterol-in-adults-with-primary-hypercholesterolaemia-andor-mixed-dyslipidaemia",
       "source_type": "regulator",
       "source_name": "UK MHRA",
-      "published_at": "2026-11-23",
+      "published_at": "2026-11-26",
       "significance": 80,
-      "significance_rationale": "mhra-news 74; 3d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; in 0d +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -576,15 +576,15 @@
       "scout_source": "purple-book"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/government-backs-modernisation-of-gene-therapy-definitions",
-      "headline": "Government backs modernisation of gene therapy definitions",
-      "blurb": "Proposed changes will provide clearer regulatory pathway for certain synthetic gene therapies, supporting life sciences innovation while maintaining safety.",
-      "source_url": "https://www.gov.uk/government/news/government-backs-modernisation-of-gene-therapy-definitions",
+      "id": "mhra:https://www.gov.uk/government/news/mhra-sets-out-regulatory-approach-to-next-generation-innovation",
+      "headline": "MHRA sets out regulatory approach to next generation innovation",
+      "blurb": "A round-up of the agency's announcements during London Life Sciences Week 2026, including at the inaugural DIA-MHRA Global Summit.",
+      "source_url": "https://www.gov.uk/government/news/mhra-sets-out-regulatory-approach-to-next-generation-innovation",
       "source_type": "regulator",
       "source_name": "UK MHRA",
-      "published_at": "2026-11-19",
+      "published_at": "2026-11-24",
       "significance": 80,
-      "significance_rationale": "mhra-news 74; 7d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; 2d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -628,10 +628,10 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43082004",
-      "headline": "Toward Zero Harm for Patients Receiving Mechanical Ventilation-What Is Expected vs What Is Optional",
-      "blurb": "Published 2026-11-25 in JAMA (MED 43082004).",
-      "source_url": "https://doi.org/10.1001/jama.2026.24548",
+      "id": "europepmc:MED:43086434",
+      "headline": "An enduring climatic burden from past peatland drainage",
+      "blurb": "From the dominant forcing of drainage-induced CO2 emissions (+83 (52-110) mW m-2) over that of avoided CH4 emissions (-9 (-15--2) mW m-2). Published in Nature.",
+      "source_url": "https://doi.org/10.1038/s41586-026-11339-0",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-25",
@@ -654,10 +654,10 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43082005",
-      "headline": "Telehealth to Support Coordinated Spontaneous Awakening and Breathing Trials in Invasive Ventilation: Research Summary",
-      "blurb": "Published 2026-11-25 in JAMA (MED 43082005).",
-      "source_url": "https://doi.org/10.1001/jama.2026.25318",
+      "id": "europepmc:MED:43086435",
+      "headline": "Coherent parity oscillations in coupled minimal Kitaev chains",
+      "blurb": "Establish coherent control of a qubit encoded in the fermion parity of Majorana zero modes, realized using minimal Kitaev chains. Published in Nature.",
+      "source_url": "https://doi.org/10.1038/s41586-026-11309-6",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-25",
@@ -680,10 +680,10 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43082011",
-      "headline": "Telehealth to Support Coordinated Spontaneous Awakening and Breathing Trials in Invasive Ventilation",
-      "blurb": "There were 4544 patients at telehealth hospitals, 6438 patients at control hospitals, and 1789 preimplementation common baseline patients. Published in JAMA.",
-      "source_url": "https://doi.org/10.1001/jama.2026.25197",
+      "id": "europepmc:MED:43086436",
+      "headline": "Licensing mechanisms during RNA-guided DNA integration by type I-F3 CAST",
+      "blurb": "Establish a general mechanistic framework for RNA-guided DNA integration and demonstrate that protein design is a powerful strategy for engineering highly active CAST systems. Published in Nature.",
+      "source_url": "https://doi.org/10.1038/s41586-026-11287-9",
       "source_type": "paper",
       "source_name": "Europe PMC",
       "published_at": "2026-11-25",
@@ -706,15 +706,15 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43078927",
-      "headline": "Modular mRNA-encoded helper proteins enhance DNA delivery",
-      "blurb": "DNA delivery is limited by inefficient nuclear translocation and restrictive intracellular environments. Published in Nature biotechnology.",
-      "source_url": "https://doi.org/10.1038/s41587-026-03351-6",
+      "id": "europepmc:MED:43086437",
+      "headline": "Middle-Late Pleistocene Denisovans and unresolved Homo in southern China",
+      "blurb": "Indicate that diverse hominin populations may have inhabited subtropical China during the Middle and Late Pleistocene, including a Denisovan-affinity population and another unresolved archaic Homo. Published in Nature.",
+      "source_url": "https://doi.org/10.1038/s41586-026-11341-6",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-24",
+      "published_at": "2026-11-25",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -784,6 +784,20 @@
       "scout_source": "orange-book"
     },
     {
+      "id": "x:https://x.com/alzforum/status/2125751904755941725",
+      "headline": "Leqembi slows progression in Alzheimer's patients with Lewy bodies",
+      "blurb": "Analyses of the lecanemab Clarity trial and its five-year extension, presented at CTAD, suggest similar relative benefit with or without Lewy body pathology, though disease-modification claims remain debated. https://www.alzforum.org/news/conference-coverage/leqembi-slows-progression-alzheimers-patients-lewy-bodies",
+      "source_url": "https://x.com/alzforum/status/2125751904755941725",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-26",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.alzforum.org/news/conference-coverage/leqembi-slows-progression-alzheimers-patients-lewy-bodies"
+    },
+    {
       "id": "sec-edgar:0001193125-26-478493",
       "headline": "Monte Rosa Therapeutics, Inc. discloses other events in an 8-K",
       "blurb": "Monte Rosa Therapeutics, Inc. disclosed other events and financial statements and exhibits. Accession 0001193125-26-478493.",
@@ -795,6 +809,33 @@
       "significance_rationale": "sec-8k 58; 1d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 3,
       "scout_source": "sec-edgar-8k"
+    },
+    {
+      "id": "x:https://x.com/BioPharmaDive/status/2125632779824054529",
+      "headline": "Medicare sets 2028 prices for 13 new drugs under Biden-era law",
+      "blurb": "CMS announced maximum prices for a third round of high-spend drugs, including Trulicity, Orencia and Cosentyx, widening Inflation Reduction Act cost controls to more older medicines. https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/",
+      "source_url": "https://x.com/BioPharmaDive/status/2125632779824054529",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-25",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/"
+    },
+    {
+      "id": "nih-reporter:11388995",
+      "headline": "Graph-Driven Wastewater Genomics: ML Imputation, Exposure Networks, and CRISPR-Virus Dynamics",
+      "blurb": "Cornell University received $34,354 in NIH funding (F31). Project start Nov 15.",
+      "source_url": "https://reporter.nih.gov/project-details/11388995",
+      "source_type": "grant",
+      "source_name": "NIH RePORTER",
+      "published_at": "2026-11-15",
+      "significance": 63,
+      "significance_rationale": "nih-grant 60; 11d old +3 = 63. NIH RePORTER project with a start date in the window.",
+      "tier": 3,
+      "scout_source": "nih-reporter"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2125622705806590343",
@@ -811,17 +852,17 @@
       "linked_url": "https://www.nature.com/articles/s41586-026-11275-z"
     },
     {
-      "id": "nih-reporter:11388995",
-      "headline": "Graph-Driven Wastewater Genomics: ML Imputation, Exposure Networks, and CRISPR-Virus Dynamics",
-      "blurb": "Cornell University received $34,354 in NIH funding (F31). Project start Nov 15.",
-      "source_url": "https://reporter.nih.gov/project-details/11388995",
-      "source_type": "grant",
-      "source_name": "NIH RePORTER",
-      "published_at": "2026-11-15",
-      "significance": 63,
-      "significance_rationale": "nih-grant 60; 11d old +3 = 63. NIH RePORTER project with a start date in the window.",
+      "id": "bcf-papers:MED:43083744",
+      "headline": "Developing and Externally Validating Machine Learning Models to Forecast Short-Term Risk of Ventilator-Associated Pneumonia",
+      "blurb": "Published 2026-11-24 in Crit Care Explor (MED 43083744).",
+      "source_url": "https://doi.org/10.1097/cce.0000000000001506",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-24",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "nih-reporter"
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2125624512557576585",
@@ -838,17 +879,17 @@
       "linked_url": "https://www.nature.com/articles/s41586-026-11345-2"
     },
     {
-      "id": "bcf-papers:MED:43083744",
-      "headline": "Developing and Externally Validating Machine Learning Models to Forecast Short-Term Risk of Ventilator-Associated Pneumonia",
-      "blurb": "Published 2026-11-24 in Crit Care Explor (MED 43083744).",
-      "source_url": "https://doi.org/10.1097/cce.0000000000001506",
+      "id": "medrxiv:10.64898/2026.11.19.26368462",
+      "headline": "Unified Machine Learning Model for Early Detection of Mild Cognitive Impairment, Frailty",
+      "blurb": "A unified model that predicts all 3 conditions from 1 sensor-based assessment could support earlier and more efficient screening, but such a model has rarely. Posted on medRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368462",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-24",
+      "source_name": "medRxiv",
+      "published_at": "2026-11-23",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 2d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "medrxiv"
     },
     {
       "id": "x:https://x.com/NIH/status/2125654260176093306",
@@ -865,17 +906,17 @@
       "linked_url": "https://www.nih.gov/news-events/nih-research-matters/senescence-targeting-nanoparticles-may-enhance-immunotherapy"
     },
     {
-      "id": "medrxiv:10.64898/2026.11.19.26368462",
-      "headline": "Unified Machine Learning Model for Early Detection of Mild Cognitive Impairment, Frailty",
-      "blurb": ": With class weighting, the unified model had a higher mean AUC than the single-label models in 17 of 20 configurations and was never significantly. Posted on medRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.medrxiv.org/content/10.64898/2026.11.19.26368462",
+      "id": "bcf-papers:MED:43062005",
+      "headline": "One-carbon metabolism-derived prognostic signature orchestrates reactive oxygen species redox homeostasis",
+      "blurb": "Published 2026-11-20 in Med Gas Res (MED 43062005).",
+      "source_url": "https://doi.org/10.4103/mgr.medgasres-d-26-00136",
       "source_type": "paper",
-      "source_name": "medRxiv",
-      "published_at": "2026-11-23",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-20",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "medrxiv"
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/alzforum/status/2125413898933109073",
@@ -892,17 +933,44 @@
       "linked_url": "https://www.alzforum.org/news/conference-coverage/zirconium-bling-helps-trontinemab-shine-human-brain"
     },
     {
-      "id": "bcf-papers:MED:43062005",
-      "headline": "One-carbon metabolism-derived prognostic signature orchestrates reactive oxygen species redox homeostasis",
-      "blurb": "Published 2026-11-20 in Med Gas Res (MED 43062005).",
-      "source_url": "https://doi.org/10.4103/mgr.medgasres-d-26-00136",
+      "id": "biorxiv:10.64898/2026.11.19.767848",
+      "headline": "Lightness illusions and saliency maps for reflectance estimation are similar across a wide range",
+      "blurb": "We compared networks where the initial, stimulus-encoding phase used pre-trained weights learned for other tasks, and networks where all weights were optimized for reflectance estimation. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767848",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "source_name": "bioRxiv",
       "published_at": "2026-11-20",
       "significance": 62,
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "biorxiv"
+    },
+    {
+      "id": "x:https://x.com/alzforum/status/2125701364613345442",
+      "headline": "Biomarker reckoning: Why did posdinemab take down p-tau, but not AD?",
+      "blurb": "Trial data shown at CTAD indicate the anti-tau antibody cut soluble p-tau217 in spinal fluid yet did not slow tangle spread or decline, prompting a closer look at biomarker meaning. https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad",
+      "source_url": "https://x.com/alzforum/status/2125701364613345442",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-25",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.19.767900",
+      "headline": "Biologically Guided Deep Learning for Personalized PSA Forecasting in Intermittent Prostate Cancer Therapy",
+      "blurb": "An evolutionary rationale for treatment interruptions is to preserve treatment-sensitive cells that may competitively suppress resistant populations. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767900",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-20",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "biorxiv"
     },
     {
       "id": "x:https://x.com/biospace/status/2125635749236105655",
@@ -919,60 +987,6 @@
       "linked_url": "https://www.biospace.com/business/buckle-up-opdivo-biosimilar-settlement-sets-bms-up-for-make-or-break-moment"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.19.767848",
-      "headline": "Lightness illusions and saliency maps for reflectance estimation are similar across a wide range",
-      "blurb": "We compared networks where the initial, stimulus-encoding phase used pre-trained weights learned for other tasks, and networks where all weights were optimized for reflectance estimation. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767848",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-20",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/biospace/status/2125650828010680557",
-      "headline": "Pharming pauses Ruconest production over fill-finish issue, threatening US supply",
-      "blurb": "A third-party manufacturer's problem led the drugmaker to halt output of its core product and caution that shortages are likely. https://www.biospace.com/drug-delivery/pharming-pauses-ruconest-production-over-fill-finish-issue-threatening-us-supply",
-      "source_url": "https://x.com/biospace/status/2125650828010680557",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-25",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.biospace.com/drug-delivery/pharming-pauses-ruconest-production-over-fill-finish-issue-threatening-us-supply"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.19.767900",
-      "headline": "Biologically Guided Deep Learning for Personalized PSA Forecasting in Intermittent Prostate Cancer Therapy",
-      "blurb": "An evolutionary rationale for treatment interruptions is to preserve treatment-sensitive cells that may competitively suppress resistant populations. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767900",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-20",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/statnews/status/2125526304640434402",
-      "headline": "Washington and Beijing are building walls around biotechnology. That's the wrong approach",
-      "blurb": "An opinion piece argues that restricting investment won't help the U.S. in contests it's already losing, and that eroding the research base is the bigger risk. https://www.statnews.com/2026/11/25/us-china-biotech-race-policy-data/",
-      "source_url": "https://x.com/statnews/status/2125526304640434402",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-25",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/25/us-china-biotech-race-policy-data/"
-    },
-    {
       "id": "biorxiv:10.64898/2026.11.19.767946",
       "headline": "PhageLysClass: Evidence-aware classification of phage lytic proteins using protein language models",
       "blurb": "We developed PhageLysClass, an evidence-aware framework for recognizing lytic proteins and distinguishing Endolysins, Depolymerases, and virion-associated lytic enzymes. Posted on bioRxiv. Preprint, not peer-reviewed.",
@@ -984,20 +998,6 @@
       "significance_rationale": "paper-ai 56; 6d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/statnews/status/2125695137103663469",
-      "headline": "FDA approves Cogent's drug for rare stomach cancer",
-      "blurb": "The agency cleared the Cogent therapy for use alongside Pfizer's much older medicine Sutent. https://www.statnews.com/2026/11/25/biotech-news-fda-approves-cogents-drug-for-rare-stomach-cancer/",
-      "source_url": "https://x.com/statnews/status/2125695137103663469",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-25",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/25/biotech-news-fda-approves-cogents-drug-for-rare-stomach-cancer/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.18.26367837",
