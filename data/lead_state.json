@@ -22,6 +22,17 @@
       "headline": "FDA sends Capricor, Inc. a complete response letter",
       "doi": "",
       "sourceUrl": "https://download.open.fda.gov/crl/CRL_BLA125842_20261120.pdf"
+    },
+    {
+      "itemId": "openfda-drugsfda:NDA221283:2026-11-24:ORIG:1",
+      "canonicalUrl": "https://accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221283",
+      "eventKey": "reg:NDA221283",
+      "firstLeadAt": "2026-11-27T22:28:48.952Z",
+      "eventFirstLeadAt": "2026-11-27T22:28:48.952Z",
+      "publishedAt": "2026-11-24",
+      "headline": "FDA approves Cogent Biosciences' Ekitna (bezuclastinib), a new molecular entity",
+      "doi": "",
+      "sourceUrl": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221283"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-27T19:11:24.688Z",
+  "generated_at": "2026-11-27T22:28:48.970Z",
   "event_date": "2026-11-27",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -10,8 +10,8 @@
       "id": "openfda-drugsfda",
       "enabled": true,
       "status": "ok",
-      "fetched": 257,
-      "note": "openFDA drugsfda applications with an approval dated 20260819 to 20261127, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (20 labels matched)."
+      "fetched": 270,
+      "note": "openFDA drugsfda applications with an approval dated 20260819 to 20261127, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (19 labels matched)."
     },
     {
       "id": "openfda-crl",
@@ -338,30 +338,30 @@
   ],
   "items": [
     {
-      "id": "openfda-drugsfda:NDA221144:2026-11-18:ORIG:1",
-      "headline": "FDA approves Genzyme A's Infilbray (venglustat), a new molecular entity",
-      "blurb": "Genzyme Corp A Sanofi Co received approval of a new molecular entity on Nov 18. Application NDA 221144.",
-      "source_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221144",
+      "id": "openfda-drugsfda:NDA221283:2026-11-24:ORIG:1",
+      "headline": "FDA approves Cogent Biosciences' Ekitna (bezuclastinib), a new molecular entity",
+      "blurb": "Cogent Biosciences Inc received approval of a new molecular entity on Nov 24. Application NDA 221283.",
+      "source_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221283",
       "source_type": "regulator",
       "source_name": "FDA Drugs@FDA (openFDA)",
-      "published_at": "2026-11-18",
+      "published_at": "2026-11-24",
       "significance": 100,
-      "significance_rationale": "fda-nme 90; priority-review +8; 9d old +3 = 100. Original FDA approval classed Type 1 (new molecular entity).",
+      "significance_rationale": "fda-nme 90; priority-review +8; 3d old +6 = 100. Original FDA approval classed Type 1 (new molecular entity).",
       "tier": 5,
       "scout_source": "openfda-drugsfda",
       "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Genzyme_building.jpg/960px-Genzyme_building.jpg",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Genzyme_building.jpg",
-        "credit": "Tim Pierce",
-        "licence": "Public domain",
-        "basisUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "alt": "The entrance to the Genzyme building at 500 Kendall Square in Cambridge, Massachusetts",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Biosciences_complex_-_University_of_Ottawa.jpg/960px-Biosciences_complex_-_University_of_Ottawa.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Biosciences_complex_-_University_of_Ottawa.jpg",
+        "credit": "Jeangagnon",
+        "licence": "CC BY-SA 4.0",
+        "basisUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "alt": "Biosciences complex, 20 & 30 Marie Curie, Ottawa Building codes: CRG, BSC, GNN https://www.uottawa.ca/maps/building/bioscience-test.html uottawa.ca",
         "width": 960,
-        "height": 1445,
+        "height": 720,
         "hosting": "hotlink",
         "type": "photo",
         "relevance": 3,
-        "reason": "drug \"Genzyme\"",
+        "reason": "drug \"Biosciences\"",
         "provider": "commons"
       }
     },
