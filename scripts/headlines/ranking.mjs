@@ -221,6 +221,16 @@ export const BREAKING_ZERO_HOURS = 12;
 // Tier 5 in RULES.tiers starts at 88. Only that top band is lead-worthy and
 // receives the breaking boost, so a fresh low score cannot outrank a strong one.
 export const LEAD_WORTHY_FLOOR = 88;
+// Ordering decay. Half the weight every 24 hours, and never below a quarter.
+// Date-only or missing publish times count as 24 hours old. The day-bucket
+// points inside scoreItem stay in significance for font tiers and this floor;
+// rankScore does not add them a second time.
+export const RECENCY_HALF_LIFE_HOURS = 24;
+export const RECENCY_FLOOR = 0.25;
+export const UNKNOWN_AGE_HOURS = 24;
+// The lead and the next three slots stay under two days old.
+export const TOP_SLOTS_MAX_AGE_HOURS = 48;
+export const TOP_SLOT_COUNT = 4;
 
 export function tierFor(score) {
   const n = Number(score);
@@ -306,6 +316,10 @@ function cmp(a, b) {
   return b.significance - a.significance || (a.published_at < b.published_at ? 1 : a.published_at > b.published_at ? -1 : 0) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }
 
+function rankCmp(a, b, now) {
+  return rankScore(b, now) - rankScore(a, now) || cmp(a, b);
+}
+
 export const REGULATOR_SOURCES = new Set([
   "openfda-drugsfda",
   "openfda-crl",
@@ -354,7 +368,8 @@ function capSourceShare(items) {
   return out;
 }
 
-export function selectHeadlines(items) {
+export function selectHeadlines(items, now = new Date()) {
+  const order = (a, b) => rankCmp(a, b, now);
   const groups = new Map();
   for (const item of items) {
     if (item.drop || item.significance < RULES.minScore) continue;
@@ -364,9 +379,9 @@ export function selectHeadlines(items) {
   }
   const capped = [];
   for (const [source, list] of groups) {
-    list.sort(cmp);
+    list.sort(order);
     if (source === "x") list.splice(0, list.length, ...limitXHandles(list));
-    list.sort(cmp);
+    list.sort(order);
     const cap = RULES.caps[source] ?? RULES.defaultCap;
     const ruleCount = {};
     const high = [];
@@ -384,7 +399,7 @@ export function selectHeadlines(items) {
     capped.push(...kept);
   }
   const byId = new Map();
-  const ranked = [...capped].sort(cmp);
+  const ranked = [...capped].sort(order);
   const picked = [];
   const seenSource = new Set();
   for (const item of ranked) {
@@ -402,7 +417,7 @@ export function selectHeadlines(items) {
       if (picked.length >= RULES.globalCap) break;
     }
   }
-  return diversify(capSourceShare(balanceRegulators(picked.sort(cmp))));
+  return enforceTopSlots(diversify(capSourceShare(balanceRegulators(picked.sort(order)))), now);
 }
 
 export const X_ACCOUNT_CAP = 3;
@@ -558,6 +573,43 @@ export function leadScore(item, now = new Date()) {
   return base * (1 + breakingBoost(item?.published_at, now));
 }
 
+export function ageHours(publishedAt, now = new Date()) {
+  const text = String(publishedAt || "").trim();
+  if (!/T\d{2}:\d{2}/.test(text)) return UNKNOWN_AGE_HOURS;
+  const ms = Date.parse(text);
+  if (!Number.isFinite(ms)) return UNKNOWN_AGE_HOURS;
+  const hours = (asDate(now).getTime() - ms) / 36e5;
+  if (!Number.isFinite(hours)) return UNKNOWN_AGE_HOURS;
+  return Math.max(0, hours);
+}
+
+export function recencyFactor(publishedAt, now = new Date()) {
+  const raw = 0.5 ** (ageHours(publishedAt, now) / RECENCY_HALF_LIFE_HOURS);
+  return Math.max(RECENCY_FLOOR, raw);
+}
+
+export function rankScore(item, now = new Date()) {
+  const base = Number(item?.significance) || 0;
+  const boost = base >= LEAD_WORTHY_FLOOR ? breakingBoost(item?.published_at, now) : 0;
+  return base * recencyFactor(item?.published_at, now) * (1 + boost);
+}
+
+function youngEnough(item, now) {
+  return ageHours(item?.published_at, now) < TOP_SLOTS_MAX_AGE_HOURS;
+}
+
+export function enforceTopSlots(items, now = new Date()) {
+  const top = [];
+  const deferred = [];
+  const rest = [];
+  for (const item of items || []) {
+    if (youngEnough(item, now) && top.length < TOP_SLOT_COUNT) top.push(item);
+    else if (top.length < TOP_SLOT_COUNT) deferred.push(item);
+    else rest.push(item);
+  }
+  return [...top, ...deferred, ...rest];
+}
+
 // sameXEvent reads a DOI only when punctuation or the end of the string follows
 // it. A stored DOI usually has a space after it, so mark it for that matcher
 // without changing the matcher the X-account cap uses.
@@ -651,18 +703,18 @@ export function assignLead(items, state = {}, now = new Date()) {
   const records = leadRecords(state);
   const list = [...(items || [])];
   const current = [...records].sort((a, b) => String(b.firstLeadAt).localeCompare(String(a.firstLeadAt)))[0] || null;
-  const eligible = list.filter((item) => leadWorthy(item) && !eventLocked(item, records, clock) && itemClockOpen(item, records, clock));
+  const eligible = list.filter((item) => leadWorthy(item) && youngEnough(item, clock) && !eventLocked(item, records, clock) && itemClockOpen(item, records, clock));
   let chosen = null;
   let eventFirstLeadAt = null;
 
   if (current) {
     const incumbent = list.find((item) => item.id === current.itemId) || null;
     const eventOpen = hoursSince(current.eventFirstLeadAt, clock) < LEAD_EVENT_WINDOW_HOURS;
-    const incumbentOk = Boolean(incumbent) && eventOpen && leadWorthy(incumbent) && itemClockOpen(incumbent, records, clock)
+    const incumbentOk = Boolean(incumbent) && eventOpen && leadWorthy(incumbent) && youngEnough(incumbent, clock) && itemClockOpen(incumbent, records, clock)
       && hoursSince(current.firstLeadAt, clock) < LEAD_MAX_ITEM_HOURS;
     const priorPublished = parsePublished(current.publishedAt);
     const newer = eventOpen ? list.filter((item) => {
-      if (!leadWorthy(item) || item.id === current.itemId || !itemClockOpen(item, records, clock)) return false;
+      if (!leadWorthy(item) || !youngEnough(item, clock) || item.id === current.itemId || !itemClockOpen(item, records, clock)) return false;
       if (!sameEventRecord(item, current)) return false;
       const published = parsePublished(item.published_at);
       return published != null && priorPublished != null && published > priorPublished;
@@ -687,7 +739,7 @@ export function assignLead(items, state = {}, now = new Date()) {
     chosen = eligible.slice().sort(byLeadScore(clock))[0] || null;
   }
 
-  if (!chosen) return { items: list, state: blankState(records) };
+  if (!chosen) return { items: enforceTopSlots(list, clock), state: blankState(records) };
   const rest = list.filter((item) => item.id !== chosen.id);
-  return { items: [chosen, ...rest], state: rememberLead(chosen, records, clock, eventFirstLeadAt) };
+  return { items: enforceTopSlots([chosen, ...rest], clock), state: rememberLead(chosen, records, clock, eventFirstLeadAt) };
 }
