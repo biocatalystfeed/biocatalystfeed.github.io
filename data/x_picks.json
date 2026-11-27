@@ -137,11 +137,11 @@
     },
     {
       "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2125925118211657788",
-      "linkedUrl": "https://www.statnews.com/2026/11/26/primary-care-appointment-times-doctor-shortage/",
+      "postUrl": "https://x.com/statnews/status/2126061138202824721",
+      "linkedUrl": "https://www.statnews.com/2026/11/26/fertility-advance-engineered-protein-stabilizes-chromosomes-in-aging-eggs/",
       "postedAt": "2026-11-26",
-      "headline": "The grueling struggle to find a primary care doctor in the 'medical capital' of America",
-      "blurb": "Despite Boston's reputation for medicine, many area residents lack a primary care clinician, limiting access to treatments, screenings and advice.",
+      "headline": "Fertility advance: Engineered protein stabilizes chromosomes in aging eggs",
+      "blurb": "Mouse experiments suggest a lab-made protein complex can hold sister chromatids together as eggs age, a preclinical lead that could inform future IVF research.",
       "kind": "other",
       "blurbSource": "page-description"
     }
