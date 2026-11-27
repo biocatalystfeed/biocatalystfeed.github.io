@@ -3,28 +3,6 @@
   "enabled": true,
   "picks": [
     {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2125624512557576585",
-      "linkedUrl": "https://www.nature.com/articles/s41586-026-11345-2",
-      "postedAt": "2026-11-25",
-      "headline": "Rare-variant genetic architecture of height in over 1.4 million individuals",
-      "blurb": "Exome data from over 1.4 million people implicate 207 genes in height, including rare loss-of-function variants with effects far larger than typical common variants.",
-      "kind": "paper",
-      "blurbSource": "abstract",
-      "doi": "10.1038/s41586-026-11345-2"
-    },
-    {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2125622705806590343",
-      "linkedUrl": "https://www.nature.com/articles/s41586-026-11275-z",
-      "postedAt": "2026-11-25",
-      "headline": "Single-cell variant-to-enhancer-to-gene map for coronary artery disease",
-      "blurb": "Profiling gene activity and chromatin in coronary arteries from 44 people links non-coding disease variants to specific cell types and gene programmes, including smooth muscle cells.",
-      "kind": "paper",
-      "blurbSource": "abstract",
-      "doi": "10.1038/s41586-026-11275-z"
-    },
-    {
       "handle": "biospace",
       "postUrl": "https://x.com/biospace/status/2125650828010680557",
       "linkedUrl": "https://www.biospace.com/drug-delivery/pharming-pauses-ruconest-production-over-fill-finish-issue-threatening-us-supply",
@@ -55,16 +33,6 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "NIH",
-      "postUrl": "https://x.com/NIH/status/2125654260176093306",
-      "linkedUrl": "https://www.nih.gov/news-events/nih-research-matters/senescence-targeting-nanoparticles-may-enhance-immunotherapy",
-      "postedAt": "2026-11-25",
-      "headline": "Senescence-targeting nanoparticles may enhance immunotherapy",
-      "blurb": "In mice, a nanoparticle treatment cleared the aging-related cells that drive tissue scarring around tumors, an early step toward improving how cancer immunotherapy works.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
       "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2125695137103663469",
       "linkedUrl": "https://www.statnews.com/2026/11/25/biotech-news-fda-approves-cogents-drug-for-rare-stomach-cancer/",
@@ -73,47 +41,6 @@
       "blurb": "The agency cleared the Cogent therapy for use alongside Pfizer's much older medicine Sutent.",
       "kind": "approval",
       "blurbSource": "page-description"
-    },
-    {
-      "handle": "alzforum",
-      "postUrl": "https://x.com/alzforum/status/2125751904755941725",
-      "linkedUrl": "https://www.alzforum.org/news/conference-coverage/leqembi-slows-progression-alzheimers-patients-lewy-bodies",
-      "postedAt": "2026-11-26",
-      "headline": "Leqembi slows progression in Alzheimer's patients with Lewy bodies",
-      "blurb": "Analyses of the lecanemab Clarity trial and its five-year extension, presented at CTAD, suggest similar relative benefit with or without Lewy body pathology, though disease-modification claims remain debated.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "alzforum",
-      "postUrl": "https://x.com/alzforum/status/2125701364613345442",
-      "linkedUrl": "https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad",
-      "postedAt": "2026-11-25",
-      "headline": "Biomarker reckoning: Why did posdinemab take down p-tau, but not AD?",
-      "blurb": "Trial data shown at CTAD indicate the anti-tau antibody cut soluble p-tau217 in spinal fluid yet did not slow tangle spread or decline, prompting a closer look at biomarker meaning.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "BioPharmaDive",
-      "postUrl": "https://x.com/BioPharmaDive/status/2125632779824054529",
-      "linkedUrl": "https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/",
-      "postedAt": "2026-11-25",
-      "headline": "Medicare sets 2028 prices for 13 new drugs under Biden-era law",
-      "blurb": "CMS announced maximum prices for a third round of high-spend drugs, including Trulicity, Orencia and Cosentyx, widening Inflation Reduction Act cost controls to more older medicines.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "EricTopol",
-      "postUrl": "https://x.com/EricTopol/status/2125626588771533179",
-      "linkedUrl": "https://www.nature.com/articles/s41586-026-11231-x",
-      "postedAt": "2026-11-25",
-      "headline": "Clinical landscape of cardiometabolic heart failure with preserved ejection fraction",
-      "blurb": "A review frames this form of heart failure, increasingly tied to obesity and type 2 diabetes, as a mechanistic subtype involving endothelial dysfunction and metabolic inflexibility.",
-      "kind": "paper",
-      "blurbSource": "page-description",
-      "doi": "10.1038/s41586-026-11231-x"
     },
     {
       "handle": "biospace",
@@ -126,12 +53,22 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2126061138202824721",
-      "linkedUrl": "https://www.statnews.com/2026/11/26/fertility-advance-engineered-protein-stabilizes-chromosomes-in-aging-eggs/",
-      "postedAt": "2026-11-26",
-      "headline": "Fertility advance: Engineered protein stabilizes chromosomes in aging eggs",
-      "blurb": "Mouse experiments suggest a lab-made protein complex can hold sister chromatids together as eggs age, a preclinical lead that could inform future IVF research.",
+      "handle": "IEEESpectrum",
+      "postUrl": "https://x.com/IEEESpectrum/status/2125590639190397319",
+      "linkedUrl": "https://spectrum.ieee.org/hair-dye-eeg-electroencephalography",
+      "postedAt": "2026-11-25",
+      "headline": "Dyed hair turns into gel-free EEG interface",
+      "blurb": "Semi-permanent conductive hair dyes work with standard EEG hardware, aiming to ease setup and make long-term brain monitoring more practical.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "IEEESpectrum",
+      "postUrl": "https://x.com/IEEESpectrum/status/2125605994419851678",
+      "linkedUrl": "https://spectrum.ieee.org/darpa-triage-challenge-final-robots",
+      "postedAt": "2026-11-25",
+      "headline": "DARPA's high-stakes triage challenge in Disaster City",
+      "blurb": "Teams fielded drones, legged robots and AI tools to help medics locate disaster victims faster and prioritise urgent cases.",
       "kind": "other",
       "blurbSource": "page-description"
     }
