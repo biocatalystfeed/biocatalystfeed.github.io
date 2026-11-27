@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-27T10:24:59.582Z",
+  "generated_at": "2026-11-27T19:11:24.688Z",
   "event_date": "2026-11-27",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -10,8 +10,8 @@
       "id": "openfda-drugsfda",
       "enabled": true,
       "status": "ok",
-      "fetched": 250,
-      "note": "openFDA drugsfda applications with an approval dated 20260819 to 20261127, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (19 labels matched)."
+      "fetched": 257,
+      "note": "openFDA drugsfda applications with an approval dated 20260819 to 20261127, filtered locally to the matching submission. Indication text is copied only when an openFDA label indications_and_usage field, or an EPC class, is present (20 labels matched)."
     },
     {
       "id": "openfda-crl",
@@ -59,7 +59,7 @@
       "id": "europepmc",
       "enabled": true,
       "status": "ok",
-      "fetched": 39,
+      "fetched": 32,
       "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped, except Nature news DOIs (10.1038/d41586-) whose titles name a trial, phase, FDA action, pivotal study, readout, or approval. Those items get the pivotal-readout adjustment, and their blurb is the page meta description when nature.com/robots.txt allows the article. A blurb otherwise uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
@@ -524,15 +524,15 @@
       "scout_source": "clinicaltrials-calendar"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/mhra-authorises-obicetrapib-and-ezetimibe-for-adults-with-high-cholesterol-when-current-treatments-are-insufficient",
-      "headline": "MHRA authorises obicetrapib and ezetimibe for adults with high cholesterol when current treatments are",
-      "blurb": "As with any medicine, the MHRA will keep the safety and effectiveness of obicetrapib and ezetimibe under close review.",
-      "source_url": "https://www.gov.uk/government/news/mhra-authorises-obicetrapib-and-ezetimibe-for-adults-with-high-cholesterol-when-current-treatments-are-insufficient",
+      "id": "mhra:https://www.gov.uk/government/news/mhra-approves-linvoseltamab-to-treat-adults-with-multiple-myeloma",
+      "headline": "MHRA approves linvoseltamab to treat adults with multiple myeloma",
+      "blurb": "The Medicines and Healthcare products Regulatory Agency MHRA has approved linvoseltamab Lynozyfic a cancer medicine used.",
+      "source_url": "https://www.gov.uk/government/news/mhra-approves-linvoseltamab-to-treat-adults-with-multiple-myeloma",
       "source_type": "regulator",
       "source_name": "UK MHRA",
-      "published_at": "2026-11-26",
+      "published_at": "2026-11-27",
       "significance": 80,
-      "significance_rationale": "mhra-news 74; 1d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; in 0d +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -550,15 +550,15 @@
       "scout_source": "purple-book"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/obicetrapib-approved-to-lower-ldl-cholesterol-in-adults-with-primary-hypercholesterolaemia-andor-mixed-dyslipidaemia",
-      "headline": "Obicetrapib approved to lower LDL-cholesterol in adults with primary hypercholesterolaemia and/or mixed dyslipidaemia",
-      "blurb": "The Medicines and Healthcare products Regulatory Agency MHRA has approved obicetrapib brand name Ubeslo.",
-      "source_url": "https://www.gov.uk/government/news/obicetrapib-approved-to-lower-ldl-cholesterol-in-adults-with-primary-hypercholesterolaemia-andor-mixed-dyslipidaemia",
+      "id": "mhra:https://www.gov.uk/government/news/mhra-approves-zanidatamab-ziihera-for-the-treatment-of-gastroesophageal-cancer",
+      "headline": "MHRA approves zanidatamab (Ziihera) for the treatment of gastroesophageal cancer",
+      "blurb": "The Medicines and Healthcare products Regulatory Agency MHRA has today 27 November 2026 approved a variation to the existing authorisation.",
+      "source_url": "https://www.gov.uk/government/news/mhra-approves-zanidatamab-ziihera-for-the-treatment-of-gastroesophageal-cancer",
       "source_type": "regulator",
       "source_name": "UK MHRA",
-      "published_at": "2026-11-26",
+      "published_at": "2026-11-27",
       "significance": 80,
-      "significance_rationale": "mhra-news 74; 1d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; in 0d +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -576,15 +576,15 @@
       "scout_source": "federal-register-adcom"
     },
     {
-      "id": "mhra:https://www.gov.uk/government/news/mhra-sets-out-regulatory-approach-to-next-generation-innovation",
-      "headline": "MHRA sets out regulatory approach to next generation innovation",
-      "blurb": "A round-up of the agency's announcements during London Life Sciences Week 2026, including at the inaugural DIA-MHRA Global Summit.",
-      "source_url": "https://www.gov.uk/government/news/mhra-sets-out-regulatory-approach-to-next-generation-innovation",
+      "id": "mhra:https://www.gov.uk/government/news/mhra-authorises-obicetrapib-and-ezetimibe-for-adults-with-high-cholesterol-when-current-treatments-are-insufficient",
+      "headline": "MHRA authorises obicetrapib and ezetimibe for adults with high cholesterol when current treatments are",
+      "blurb": "As with any medicine, the MHRA will keep the safety and effectiveness of obicetrapib and ezetimibe under close review.",
+      "source_url": "https://www.gov.uk/government/news/mhra-authorises-obicetrapib-and-ezetimibe-for-adults-with-high-cholesterol-when-current-treatments-are-insufficient",
       "source_type": "regulator",
       "source_name": "UK MHRA",
-      "published_at": "2026-11-24",
+      "published_at": "2026-11-26",
       "significance": 80,
-      "significance_rationale": "mhra-news 74; 3d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
+      "significance_rationale": "mhra-news 74; 1d old +6 = 80. UK MHRA news item from the GOV.UK atom feed.",
       "tier": 4,
       "scout_source": "mhra"
     },
@@ -628,15 +628,15 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43086434",
-      "headline": "An enduring climatic burden from past peatland drainage",
-      "blurb": "From the dominant forcing of drainage-induced CO 2 emissions (+83 (52-110) mW m -2 ) over that of avoided CH 4 emissions (-9 (-15--2) mW. Published in Nature.",
-      "source_url": "https://doi.org/10.1038/s41586-026-11339-0",
+      "id": "europepmc:MED:43099174",
+      "headline": "Navigating grief in academia: ways to find balance",
+      "blurb": "Published 2026-11-26 in Nature (MED 43099174).",
+      "source_url": "https://doi.org/10.1038/d41586-026-02752-6",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-25",
+      "published_at": "2026-11-26",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -654,15 +654,15 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43086435",
-      "headline": "Coherent parity oscillations in coupled minimal Kitaev chains",
-      "blurb": "Establish coherent control of a qubit encoded in the fermion parity of Majorana zero modes, realized using minimal Kitaev chains. Published in Nature.",
-      "source_url": "https://doi.org/10.1038/s41586-026-11309-6",
+      "id": "europepmc:MED:43099175",
+      "headline": "Orangutans face bleak future after Indonesia's devastating wildfires",
+      "blurb": "Published 2026-11-26 in Nature (MED 43099175).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03828-z",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-25",
+      "published_at": "2026-11-26",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -680,15 +680,15 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43086436",
-      "headline": "Licensing mechanisms during RNA-guided DNA integration by type I-F3 CAST",
-      "blurb": "Establish a general mechanistic framework for RNA-guided DNA integration and demonstrate that protein design is a powerful strategy for engineering highly active CAST systems. Published in Nature.",
-      "source_url": "https://doi.org/10.1038/s41586-026-11287-9",
+      "id": "europepmc:MED:43099178",
+      "headline": "Has AI just cracked Internet encryption? Rumoured 'bombshell' stuns scientists",
+      "blurb": "Published 2026-11-26 in Nature (MED 43099178).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03875-6",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-25",
+      "published_at": "2026-11-26",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -706,15 +706,15 @@
       "scout_source": "openai-news"
     },
     {
-      "id": "europepmc:MED:43086437",
-      "headline": "Middle-Late Pleistocene Denisovans and unresolved Homo in southern China",
-      "blurb": "Indicate that diverse hominin populations may have inhabited subtropical China during the Middle and Late Pleistocene, including a Denisovan-affinity population and another unresolved archaic Homo. Published in Nature.",
-      "source_url": "https://doi.org/10.1038/s41586-026-11341-6",
+      "id": "europepmc:MED:43099184",
+      "headline": "Integrated wastewater and clinical genomic surveillance for high-resolution tracking",
+      "blurb": "However, tracking measles virus (MeV; species Morbillivirus hominis) transmission and evolution remains difficult at scale, particularly in settings with limited access to care, diagnostic testing. Published in Nature medicine.",
+      "source_url": "https://doi.org/10.1038/s41591-026-04754-3",
       "source_type": "paper",
       "source_name": "Europe PMC",
-      "published_at": "2026-11-25",
+      "published_at": "2026-11-26",
       "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
       "scout_source": "europepmc"
     },
@@ -784,18 +784,18 @@
       "scout_source": "orange-book"
     },
     {
-      "id": "x:https://x.com/alzforum/status/2125751904755941725",
-      "headline": "Leqembi slows progression in Alzheimer's patients with Lewy bodies",
-      "blurb": "Analyses of the lecanemab Clarity trial and its five-year extension, presented at CTAD, suggest similar relative benefit with or without Lewy body pathology, though disease-modification claims remain debated. https://www.alzforum.org/news/conference-coverage/leqembi-slows-progression-alzheimers-patients-lewy-bodies",
-      "source_url": "https://x.com/alzforum/status/2125751904755941725",
+      "id": "x:https://x.com/EricTopol/status/2126340427045622001",
+      "headline": "Contractile function maintains cardiomyocyte differentiation and inhibits cell cycle activity",
+      "blurb": "In human cardiac organoids, briefly halting heart-cell contraction reactivated the cell cycle in a reversible way, the authors report. https://www.nature.com/articles/s44161-026-00901-8",
+      "source_url": "https://x.com/EricTopol/status/2126340427045622001",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-26",
+      "published_at": "2026-11-27",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.alzforum.org/news/conference-coverage/leqembi-slows-progression-alzheimers-patients-lewy-bodies"
+      "linked_url": "https://www.nature.com/articles/s44161-026-00901-8"
     },
     {
       "id": "sec-edgar:0001193125-26-478493",
@@ -811,18 +811,18 @@
       "scout_source": "sec-edgar-8k"
     },
     {
-      "id": "x:https://x.com/statnews/status/2126061138202824721",
-      "headline": "Fertility advance: Engineered protein stabilizes chromosomes in aging eggs",
-      "blurb": "Mouse experiments suggest a lab-made protein complex can hold sister chromatids together as eggs age, a preclinical lead that could inform future IVF research. https://www.statnews.com/2026/11/26/fertility-advance-engineered-protein-stabilizes-chromosomes-in-aging-eggs/",
-      "source_url": "https://x.com/statnews/status/2126061138202824721",
+      "id": "x:https://x.com/fwhealthtech/status/2126135231564628223",
+      "headline": "AI screens chest X-rays for lung cancers hiding in plain sight: study",
+      "blurb": "Across 41 hospitals in four central European countries, a chest X-ray flagging system helped find over 200 previously undiagnosed lung cancers. https://firstwordhealthtech.com/story/8495162",
+      "source_url": "https://x.com/fwhealthtech/status/2126135231564628223",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-26",
+      "published_at": "2026-11-27",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/26/fertility-advance-engineered-protein-stabilizes-chromosomes-in-aging-eggs/"
+      "linked_url": "https://firstwordhealthtech.com/story/8495162"
     },
     {
       "id": "nih-reporter:11388995",
@@ -838,18 +838,18 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "x:https://x.com/BioPharmaDive/status/2125632779824054529",
-      "headline": "Medicare sets 2028 prices for 13 new drugs under Biden-era law",
-      "blurb": "CMS announced maximum prices for a third round of high-spend drugs, including Trulicity, Orencia and Cosentyx, widening Inflation Reduction Act cost controls to more older medicines. https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/",
-      "source_url": "https://x.com/BioPharmaDive/status/2125632779824054529",
+      "id": "x:https://x.com/statnews/status/2126331397803532469",
+      "headline": "Here are some health AI conversation starters for the holidays",
+      "blurb": "A weekly newsletter edition picks out health-AI stories suited to family-gathering talk over the holiday stretch. https://www.statnews.com/2026/11/27/health-ai-conversation-starters-for-holidays-ai-prognosis/",
+      "source_url": "https://x.com/statnews/status/2126331397803532469",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-25",
+      "published_at": "2026-11-27",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/"
+      "linked_url": "https://www.statnews.com/2026/11/27/health-ai-conversation-starters-for-holidays-ai-prognosis/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.19.26368462",
@@ -865,18 +865,18 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2125622705806590343",
-      "headline": "Single-cell variant-to-enhancer-to-gene map for coronary artery disease",
-      "blurb": "Profiling gene activity and chromatin in coronary arteries from 44 people links non-coding disease variants to specific cell types and gene programmes, including smooth muscle cells. https://www.nature.com/articles/s41586-026-11275-z",
-      "source_url": "https://x.com/EricTopol/status/2125622705806590343",
+      "id": "x:https://x.com/statnews/status/2126346716509004115",
+      "headline": "FDA extends assessment of experimental Vertex kidney drug",
+      "blurb": "The agency is taking more time on the investigational medicine while the company answers questions about possible safety concerns. https://www.statnews.com/2026/11/27/fda-vertex-povetacicept-kidney-capricor-duchenne-readout-newsletter/",
+      "source_url": "https://x.com/statnews/status/2126346716509004115",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-25",
+      "published_at": "2026-11-27",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.nature.com/articles/s41586-026-11275-z"
+      "linked_url": "https://www.statnews.com/2026/11/27/fda-vertex-povetacicept-kidney-capricor-duchenne-readout-newsletter/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.19.26368519",
@@ -892,18 +892,18 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2125624512557576585",
-      "headline": "Rare-variant genetic architecture of height in over 1.4 million individuals",
-      "blurb": "Exome data from over 1.4 million people implicate 207 genes in height, including rare loss-of-function variants with effects far larger than typical common variants. https://www.nature.com/articles/s41586-026-11345-2",
-      "source_url": "https://x.com/EricTopol/status/2125624512557576585",
+      "id": "x:https://x.com/fwhealthtech/status/2126069731870535692",
+      "headline": "Neuralink gets FDA nod for pivotal ALS brain implant trial",
+      "blurb": "The company says the cleared LINK study is the first pivotal U.S. trial of an implantable brain-computer interface, and it will assess safety and effectiveness. https://firstwordhealthtech.com/story/8494782",
+      "source_url": "https://x.com/fwhealthtech/status/2126069731870535692",
       "source_type": "news",
       "source_name": "X",
-      "published_at": "2026-11-25",
+      "published_at": "2026-11-26",
       "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.nature.com/articles/s41586-026-11345-2"
+      "linked_url": "https://firstwordhealthtech.com/story/8494782"
     },
     {
       "id": "medrxiv:10.64898/2026.11.19.26368521",
@@ -919,10 +919,10 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "x:https://x.com/EricTopol/status/2125626588771533179",
-      "headline": "Clinical landscape of cardiometabolic heart failure with preserved ejection fraction",
-      "blurb": "A review frames this form of heart failure, increasingly tied to obesity and type 2 diabetes, as a mechanistic subtype involving endothelial dysfunction and metabolic inflexibility. https://www.nature.com/articles/s41586-026-11231-x",
-      "source_url": "https://x.com/EricTopol/status/2125626588771533179",
+      "id": "x:https://x.com/alzforum/status/2125701631803011087",
+      "headline": "Lifestyle revamp lifts cognitive test scores in Asia, too",
+      "blurb": "Early results from Singapore's SINGER study, shown at the CTAD meeting, tested whether lifestyle changes alone could improve memory and thinking scores in older adults at risk. https://www.alzforum.org/news/conference-coverage/lifestyle-revamp-lifts-cognitive-test-scores-asia-too",
+      "source_url": "https://x.com/alzforum/status/2125701631803011087",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-25",
@@ -930,7 +930,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.nature.com/articles/s41586-026-11231-x"
+      "linked_url": "https://www.alzforum.org/news/conference-coverage/lifestyle-revamp-lifts-cognitive-test-scores-asia-too"
     },
     {
       "id": "biorxiv:10.64898/2026.11.20.768117",
@@ -946,10 +946,10 @@
       "scout_source": "biorxiv"
     },
     {
-      "id": "x:https://x.com/NIH/status/2125654260176093306",
-      "headline": "Senescence-targeting nanoparticles may enhance immunotherapy",
-      "blurb": "In mice, a nanoparticle treatment cleared the aging-related cells that drive tissue scarring around tumors, an early step toward improving how cancer immunotherapy works. https://www.nih.gov/news-events/nih-research-matters/senescence-targeting-nanoparticles-may-enhance-immunotherapy",
-      "source_url": "https://x.com/NIH/status/2125654260176093306",
+      "id": "x:https://x.com/fwhealthtech/status/2125699566716748050",
+      "headline": "FDA clears DeepHealth AI for five-year breast cancer risk assessment",
+      "blurb": "The 510(k) clearance covers Mammo Risk, a tool that uses routine mammograms to estimate a woman's chance of developing breast cancer within five years. https://firstwordhealthtech.com/story/8492107",
+      "source_url": "https://x.com/fwhealthtech/status/2125699566716748050",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-25",
@@ -957,7 +957,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.nih.gov/news-events/nih-research-matters/senescence-targeting-nanoparticles-may-enhance-immunotherapy"
+      "linked_url": "https://firstwordhealthtech.com/story/8492107"
     },
     {
       "id": "bcf-papers:MED:43062005",
@@ -973,10 +973,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "x:https://x.com/alzforum/status/2125701364613345442",
-      "headline": "Biomarker reckoning: Why did posdinemab take down p-tau, but not AD?",
-      "blurb": "Trial data shown at CTAD indicate the anti-tau antibody cut soluble p-tau217 in spinal fluid yet did not slow tangle spread or decline, prompting a closer look at biomarker meaning. https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad",
-      "source_url": "https://x.com/alzforum/status/2125701364613345442",
+      "id": "x:https://x.com/neuralink/status/2125694580544680185",
+      "headline": "Telepathy for digital device control",
+      "blurb": "The company describes how trial participants use its implant to operate digital devices with their minds. https://neuralink.com/trials/device-control/",
+      "source_url": "https://x.com/neuralink/status/2125694580544680185",
       "source_type": "news",
       "source_name": "X",
       "published_at": "2026-11-25",
@@ -984,7 +984,7 @@
       "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
       "tier": 3,
       "scout_source": "x",
-      "linked_url": "https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad"
+      "linked_url": "https://neuralink.com/trials/device-control/"
     },
     {
       "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.33740v1",
