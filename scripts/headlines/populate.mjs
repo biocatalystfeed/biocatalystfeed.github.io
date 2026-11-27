@@ -73,8 +73,9 @@ export function buildHeadlines({ candidates, today, feedback, sources, now, lead
     const prev = deduped.get(key);
     if (!prev || item.significance > prev.significance) deduped.set(key, item);
   }
-  const selected = selectHeadlines(dedupeByCanonUrl([...deduped.values()]));
-  const placed = assignLead(selected, leadState, now || new Date());
+  const clock = now || new Date();
+  const selected = selectHeadlines(dedupeByCanonUrl([...deduped.values()]), clock);
+  const placed = assignLead(selected, leadState, clock);
   return {
     schema: "biocat-headlines/1",
     generated_at: new Date().toISOString(),

@@ -1,7 +1,7 @@
 import { rssEntries, isoFromRfc822, preferHttps, safeItems, offTopicText, condenseFact, sentenceCase, stripVenue } from "./copy.mjs";
 import { addDays } from "./text.mjs";
 
-const BIO = /genom|protein|\bdrug|\bdna\b|\brna\b|\bcells?\b|disease|molecul|chemist|cheminform|antibod|vaccin|therap|clinical|pharma|\bcancer\b|virus|peptide|\bfold|alzheimer|diabet|obes|hepatitis|wet-lab|\bhealth(?:care)?\b|medical|\bpatients?\b|\bmedicin/i;
+export const BIO_TOPIC = /genom|protein|\bdrug|\bdna\b|\brna\b|\bcells?\b|disease|molecul|chemist|cheminform|antibod|vaccin|therap|clinical|pharma|\bcancer\b|virus|peptide|\bfold|alzheimer|diabet|obes|hepatitis|wet-lab|\bhealth(?:care)?\b|medical|\bpatients?\b|\bmedicin|neuralink|brain-computer interface|\bBCI\b|telepathy|blindsight|neural implant/i;
 const ADMIN = /\b(outage|services during|office closure|vacancy|recruitment)\b/i;
 
 export const LAB_FEEDS = [
@@ -11,7 +11,7 @@ export const LAB_FEEDS = [
     url: "https://deepmind.google/blog/rss.xml",
     source_type: "news",
     rule: "ai-news",
-    keywords: BIO,
+    keywords: BIO_TOPIC,
     note: "Official DeepMind blog RSS. robots.txt allows /. We store the title, link, date, and a one-sentence blurb, not the post.",
   },
   {
@@ -20,7 +20,7 @@ export const LAB_FEEDS = [
     url: "https://openai.com/news/rss.xml",
     source_type: "news",
     rule: "ai-news",
-    keywords: BIO,
+    keywords: BIO_TOPIC,
     note: "Official OpenAI news RSS. robots.txt allows /. Filtered to biology, health, drug, genome, protein, or clinical posts. Title, link, date, and a short blurb only.",
   },
   {
@@ -29,7 +29,7 @@ export const LAB_FEEDS = [
     url: "https://blogs.nvidia.com/feed/",
     source_type: "news",
     rule: "ai-news",
-    keywords: BIO,
+    keywords: BIO_TOPIC,
     note: "Official NVIDIA blog RSS. The healthcare category feed returned 404, so this feed is filtered to bio and health posts. robots.txt allows /feed/.",
   },
   {

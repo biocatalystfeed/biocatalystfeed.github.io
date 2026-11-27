@@ -6,13 +6,14 @@ import test from "node:test";
 import { loadFeedback } from "../feedback.mjs";
 import { parseRobots, robotsDecision } from "../http.mjs";
 import { buildHeadlines, readLeadState, rewriteDatelineFallbacks } from "../populate.mjs";
-import { BREAKING_FULL_HOURS, BREAKING_MAX_BOOST, BREAKING_ZERO_HOURS, LEAD_EVENT_WINDOW_HOURS, LEAD_MAX_ITEM_HOURS, LEAD_WORTHY_FLOOR, RULES, assignLead, breakingBoost, capXAccounts, leadScore, sameXEvent, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
+import { BREAKING_FULL_HOURS, BREAKING_MAX_BOOST, BREAKING_ZERO_HOURS, LEAD_EVENT_WINDOW_HOURS, LEAD_MAX_ITEM_HOURS, LEAD_WORTHY_FLOOR, RECENCY_FLOOR, RECENCY_HALF_LIFE_HOURS, RULES, TOP_SLOT_COUNT, TOP_SLOTS_MAX_AGE_HOURS, UNKNOWN_AGE_HOURS, assignLead, breakingBoost, capXAccounts, leadScore, rankScore, recencyFactor, sameXEvent, scoreItem, selectHeadlines, tierFor } from "../ranking.mjs";
 import { echoesHeadline, fdaApprovalCopy, hashId, HEADLINE_WORD_MAX, humanDate, indicationPhrase, metaDescription, natureNewsTrial, OUTCOME_CLAIM, paperCopy, paperRecords, pressCopy, pressLead, pressProduct, shortenHeadline, shortenPaperHeadline, trialCopy, wordCount } from "../copy.mjs";
 import { commonsImage, imageResponseOk, licenceOk, pageImage, placeImages, uploadThumb } from "../images.mjs";
 import { explainMatch, imageEntities, imageType, relevanceScore } from "../image-score.mjs";
 import { nasaImage } from "../image-sources/nasa.mjs";
 import { openverseImage } from "../image-sources/openverse.mjs";
 import { IMAGE_SOURCES } from "../image-sources/terms.mjs";
+import { BIO_TOPIC } from "../lab-feeds.mjs";
 import { canonUrl, dedupeByCanonUrl, hostAllowed, xAccountHandle, xPickItems } from "../x-picks.mjs";
 import { xStatusUrl, tweetAuthor, tweetFallbackText, TWEET_RENDER_MS, formatDay, formatLocalDay, formatStamp, formatUpdatedTime, keepLastToken } from "../../../headlines/render.js";
 import { SEARCH_ROUTES, searchStatusNote, searchUrls } from "../../../headlines/search.js";
@@ -1454,6 +1455,82 @@ test("a fresh low-significance item cannot outrank a much stronger older item", 
   assert.equal(placed.items[1].id, "fresh-low");
   assert.equal(placed.items[1].significance, 70);
   assert.equal(placed.items[1].tier, 3);
+});
+
+test("recency halves every 24 hours and unknown times count as one day", () => {
+  const now = new Date("2026-11-27T12:00:00.000Z");
+  const at = (hours) => new Date(now.getTime() - hours * 36e5).toISOString();
+  assert.equal(RECENCY_HALF_LIFE_HOURS, 24);
+  assert.equal(RECENCY_FLOOR, 0.25);
+  assert.equal(UNKNOWN_AGE_HOURS, 24);
+  assert.equal(TOP_SLOTS_MAX_AGE_HOURS, 48);
+  assert.equal(TOP_SLOT_COUNT, 4);
+  assert.equal(recencyFactor(at(0), now), 1);
+  assert.equal(recencyFactor(at(24), now), 0.5);
+  assert.equal(recencyFactor(at(48), now), 0.25);
+  assert.equal(recencyFactor(at(96), now), 0.25);
+  assert.equal(recencyFactor("2026-11-27", now), 0.5);
+  assert.equal(recencyFactor("", now), 0.5);
+});
+
+test("a three-day-old headline cannot occupy the top four slots", () => {
+  const now = new Date("2026-11-27T12:00:00.000Z");
+  const at = (hours) => new Date(now.getTime() - hours * 36e5).toISOString();
+  const stale = { id: "stale", headline: "Old high score", significance: 100, tier: 5, published_at: at(72), scout_source: "fda-press", drop: false };
+  const fresh = [0, 1, 2, 3].map((index) => ({
+    id: `fresh-${index}`,
+    headline: `Fresh item ${index}`,
+    significance: 40,
+    tier: 2,
+    published_at: at(24),
+    scout_source: `nih-news-${index}`,
+    drop: false,
+  }));
+  const page = selectHeadlines([stale, ...fresh], now);
+  assert.equal(page.slice(0, 4).some((item) => item.id === "stale"), false);
+  assert.ok(page.some((item) => item.id === "stale"));
+  assert.equal(page.find((item) => item.id === "stale").significance, 100);
+  assert.equal(page.find((item) => item.id === "stale").tier, 5);
+  assert.ok(rankScore(stale, now) > rankScore(fresh[0], now));
+});
+
+test("a fresh mid-significance item outranks a three-day-old item of similar base", () => {
+  const now = new Date("2026-11-27T12:00:00.000Z");
+  const at = (hours) => new Date(now.getTime() - hours * 36e5).toISOString();
+  const fresh = { id: "fresh-mid", headline: "Fresh mid score", significance: 70, tier: 3, published_at: at(1), scout_source: "fda-press", drop: false };
+  const older = { id: "older-mid", headline: "Older mid score", significance: 72, tier: 3, published_at: at(72), scout_source: "nih-news", drop: false };
+  const page = selectHeadlines([older, fresh], now);
+  assert.equal(page[0].id, "fresh-mid");
+  assert.equal(page[1].id, "older-mid");
+  assert.ok(rankScore(fresh, now) > rankScore(older, now));
+  assert.equal(page[0].significance, 70);
+  assert.equal(page[0].tier, 3);
+  assert.equal(page[1].tier, 3);
+});
+
+test("a neuralink.com post from @neuralink passes the picks allowlist", () => {
+  const allow = JSON.parse(fs.readFileSync(path.join(root, "scripts/headlines/x-allowlist.json"), "utf8"));
+  for (const handle of ["neuralink", "ModdedQuad", "elonmusk"]) assert.ok(allow.handles.includes(handle), handle);
+  assert.ok(allow.linkedHosts.includes("neuralink.com"));
+  for (const term of ["neuralink", "brain-computer interface", "BCI", "telepathy", "blindsight", "neural implant"]) {
+    assert.equal(BIO_TOPIC.test(term), true, term);
+  }
+  const picked = xPickItems({
+    enabled: true,
+    picks: [{
+      handle: "neuralink",
+      postUrl: "https://x.com/neuralink/status/2120000000000000001",
+      linkedUrl: "https://neuralink.com/updates/trial",
+      postedAt: "2026-11-27",
+      headline: "Neuralink describes a brain implant study",
+      blurb: "The page covers an implant trial in people.",
+      kind: "other",
+      blurbSource: "page-description",
+    }],
+  });
+  assert.equal(picked.length, 1);
+  assert.equal(picked[0].x_handle, "neuralink");
+  assert.match(picked[0].linked_url, /^https:\/\/neuralink\.com\//);
 });
 
 test("Searching stays hidden once a search result is shown", () => {
