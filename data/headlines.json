@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-27T07:10:23.150Z",
+  "generated_at": "2026-11-27T10:24:59.582Z",
   "event_date": "2026-11-27",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -58,9 +58,9 @@
     {
       "id": "europepmc",
       "enabled": true,
-      "status": "error",
-      "fetched": 0,
-      "note": "The operation was aborted due to timeout"
+      "status": "ok",
+      "fetched": 39,
+      "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped, except Nature news DOIs (10.1038/d41586-) whose titles name a trial, phase, FDA action, pivotal study, readout, or approval. Those items get the pivotal-readout adjustment, and their blurb is the page meta description when nature.com/robots.txt allows the article. A blurb otherwise uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
       "id": "clinicaltrials-calendar",
@@ -94,7 +94,7 @@
       "id": "bcf-ai-discovery",
       "enabled": true,
       "status": "ok",
-      "fetched": 1,
+      "fetched": 6,
       "note": "BioCatalystFeed Worker /ai-discovery. Curated model cards are included only when verified_as_of or published falls in the last 45 days. arXiv rows come from the worker's allowlisted category query and are labeled as preprints. Summaries are not copied. No X client is called."
     },
     {
@@ -628,17 +628,17 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "headline": "Advancing computer-use agents for healthcare teams",
-      "blurb": "Details are in the linked post.",
-      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "source_type": "news",
-      "source_name": "OpenAI News",
-      "published_at": "2026-11-16",
-      "significance": 71,
-      "significance_rationale": "ai-news 68; 11d old +3 = 71. Official lab blog post on an AI or biology topic.",
+      "id": "europepmc:MED:43086434",
+      "headline": "An enduring climatic burden from past peatland drainage",
+      "blurb": "From the dominant forcing of drainage-induced CO 2 emissions (+83 (52-110) mW m -2 ) over that of avoided CH 4 emissions (-9 (-15--2) mW. Published in Nature.",
+      "source_url": "https://doi.org/10.1038/s41586-026-11339-0",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-25",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
-      "scout_source": "openai-news"
+      "scout_source": "europepmc"
     },
     {
       "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-treat-neurological-symptoms-type-3-gaucher-disease",
@@ -654,6 +654,45 @@
       "scout_source": "fda-press"
     },
     {
+      "id": "europepmc:MED:43086435",
+      "headline": "Coherent parity oscillations in coupled minimal Kitaev chains",
+      "blurb": "Establish coherent control of a qubit encoded in the fermion parity of Majorana zero modes, realized using minimal Kitaev chains. Published in Nature.",
+      "source_url": "https://doi.org/10.1038/s41586-026-11309-6",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-25",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
+      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "headline": "Advancing computer-use agents for healthcare teams",
+      "blurb": "Details are in the linked post.",
+      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "source_type": "news",
+      "source_name": "OpenAI News",
+      "published_at": "2026-11-16",
+      "significance": 71,
+      "significance_rationale": "ai-news 68; 11d old +3 = 71. Official lab blog post on an AI or biology topic.",
+      "tier": 3,
+      "scout_source": "openai-news"
+    },
+    {
+      "id": "europepmc:MED:43086436",
+      "headline": "Licensing mechanisms during RNA-guided DNA integration by type I-F3 CAST",
+      "blurb": "Establish a general mechanistic framework for RNA-guided DNA integration and demonstrate that protein design is a powerful strategy for engineering highly active CAST systems. Published in Nature.",
+      "source_url": "https://doi.org/10.1038/s41586-026-11287-9",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-25",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
       "id": "openai-news:https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
       "headline": "More ways to move care forward with ChatGPT for Healthcare",
       "blurb": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
@@ -665,6 +704,19 @@
       "significance_rationale": "ai-news 68; 11d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "openai-news"
+    },
+    {
+      "id": "europepmc:MED:43086437",
+      "headline": "Middle-Late Pleistocene Denisovans and unresolved Homo in southern China",
+      "blurb": "Indicate that diverse hominin populations may have inhabited subtropical China during the Middle and Late Pleistocene, including a Denisovan-affinity population and another unresolved archaic Homo. Published in Nature.",
+      "source_url": "https://doi.org/10.1038/s41586-026-11341-6",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-25",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
     },
     {
       "id": "nvidia-blog:https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
@@ -717,6 +769,19 @@
       "significance_rationale": "ai-news 68; 24d old 0 = 68. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "deepmind"
+    },
+    {
+      "id": "orange-book:022304:2027-01-03",
+      "headline": "Orange Book last listed protection for Nucynta is Jan 3",
+      "blurb": "Last unexpired listing is exclusivity PED. Exclusivity date is the Orange Book listing.",
+      "source_url": "https://www.accessdata.fda.gov/scripts/cder/ob/results_product.cfm?Appl_Type=N&Appl_No=022304",
+      "source_type": "regulator",
+      "source_name": "FDA Orange Book",
+      "published_at": "2027-01-03",
+      "significance": 64,
+      "significance_rationale": "orange-loe-exclusivity 64; in 37d 0 = 64. Soonest Orange Book loss of exclusivity is an exclusivity code.",
+      "tier": 3,
+      "scout_source": "orange-book"
     },
     {
       "id": "x:https://x.com/alzforum/status/2125751904755941725",
@@ -922,6 +987,19 @@
       "linked_url": "https://www.alzforum.org/news/conference-coverage/biomarker-reckoning-why-did-posdinemab-take-down-p-tau-not-ad"
     },
     {
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.33740v1",
+      "headline": "Exclusion and internal structure in the association/dissociation kinetics of DNA-binding proteins",
+      "blurb": "In many canonical biophysical and biochemical contexts, complex diffusing DNA-binding proteins undergoing nonspecific adsorption and desorption can exist in different conformational states. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.33740v1",
+      "source_type": "paper",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-25",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
+    },
+    {
       "id": "bcf-papers:MED:43039660",
       "headline": "Label-free multi-metric pipeline for reproducible clustering of single-cell RNA-seq cell types",
       "blurb": "Published 2026-11-16 in Life Sci Alliance (MED 43039660).",
@@ -935,17 +1013,17 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "biorxiv:10.1101/2025.10.07.680947",
-      "headline": "Spatial genomics of the cardiac sarcomere",
-      "blurb": "Reveal both recognized and novel regions of structural variant intolerance across the critical genes of the cardiac sarcomere including novel insights into protein function. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.1101/2025.10.07.680947",
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.33753v1",
+      "headline": "From the Deterministic Hook Effect to Stochastic Reliability in Ternary Complex Formation",
+      "blurb": "Ternary binding systems occur in signaling, scaffold-mediated assembly, and targeted protein degradation. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.33753v1",
       "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-22",
-      "significance": 56,
-      "significance_rationale": "paper-preprint 50; 5d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
-      "tier": 2,
-      "scout_source": "biorxiv"
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-25",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 2d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
     },
     {
       "id": "bcf-papers:MED:43025198",
@@ -961,10 +1039,10 @@
       "scout_source": "bcf-papers"
     },
     {
-      "id": "biorxiv:10.64898/2026.05.06.723091",
-      "headline": "A structural grammar of truncation across the human homodimer landscape",
-      "blurb": "Using the AlphaFold Protein Structure Database expansion to predicted human homodimers, we compared 5,168 canonical-versus-truncated pairs on four interface metrics distributed with that release. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.05.06.723091",
+      "id": "biorxiv:10.1101/2025.10.07.680947",
+      "headline": "Spatial genomics of the cardiac sarcomere",
+      "blurb": "Reveal both recognized and novel regions of structural variant intolerance across the critical genes of the cardiac sarcomere including novel insights into protein function. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.1101/2025.10.07.680947",
       "source_type": "paper",
       "source_name": "bioRxiv",
       "published_at": "2026-11-22",
@@ -987,17 +1065,17 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "sec-edgar:0001437749-26-037764",
-      "headline": "GeoVax Labs, Inc. reports a director or officer change",
-      "blurb": "GeoVax Labs, Inc. disclosed a director or officer change and financial statements and exhibits. Accession 0001437749-26-037764.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/832489/000143774926037764/0001437749-26-037764-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-19",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 8d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "id": "biorxiv:10.64898/2026.05.06.723091",
+      "headline": "A structural grammar of truncation across the human homodimer landscape",
+      "blurb": "Using the AlphaFold Protein Structure Database expansion to predicted human homodimers, we compared 5,168 canonical-versus-truncated pairs on four interface metrics distributed with that release. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.05.06.723091",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-22",
+      "significance": 56,
+      "significance_rationale": "paper-preprint 50; 5d old +6 = 56. bioRxiv preprint in a configured biology category. Not peer-reviewed.",
       "tier": 2,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "biorxiv"
     },
     {
       "id": "nih-reporter:11405186",
@@ -1013,17 +1091,17 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "sec-edgar:0001104659-26-129745",
-      "headline": "Liquidia Corp discloses a director or officer change in an 8-K",
-      "blurb": "Liquidia Corp disclosed a director or officer change and financial statements and exhibits. Accession 0001104659-26-129745.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1819576/000110465926129745/0001104659-26-129745-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-18",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 9d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "id": "health-canada:38744",
+      "headline": "Health Canada notice of compliance: Sandoz Vortioxetine (Vortioxetine Hydrobromide) (abbreviated submission)",
+      "blurb": "Manufacturer listed as Sandoz Canada Incorporated. Notice 38744, date 2026-11-25.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38744",
+      "source_type": "regulator",
+      "source_name": "Health Canada Notice of Compliance Database",
+      "published_at": "2026-11-25",
+      "significance": 40,
+      "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
       "tier": 2,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "health-canada-noc"
     }
   ]
 }
