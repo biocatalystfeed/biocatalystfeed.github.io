@@ -3,36 +3,6 @@
   "enabled": true,
   "picks": [
     {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2125650828010680557",
-      "linkedUrl": "https://www.biospace.com/drug-delivery/pharming-pauses-ruconest-production-over-fill-finish-issue-threatening-us-supply",
-      "postedAt": "2026-11-25",
-      "headline": "Pharming pauses Ruconest production over fill-finish issue, threatening US supply",
-      "blurb": "A third-party manufacturer's problem led the drugmaker to halt output of its core product and caution that shortages are likely.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2125635749236105655",
-      "linkedUrl": "https://www.biospace.com/business/buckle-up-opdivo-biosimilar-settlement-sets-bms-up-for-make-or-break-moment",
-      "postedAt": "2026-11-25",
-      "headline": "Buckle up: Opdivo biosimilar settlement sets BMS up for make-or-break moment",
-      "blurb": "Under the Amgen and Bristol Myers Squibb settlement, a biosimilar version of the PD-1 drug Opdivo can reach the market in 2028.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2125526304640434402",
-      "linkedUrl": "https://www.statnews.com/2026/11/25/us-china-biotech-race-policy-data/",
-      "postedAt": "2026-11-25",
-      "headline": "Washington and Beijing are building walls around biotechnology. That's the wrong approach",
-      "blurb": "An opinion piece argues that restricting investment won't help the U.S. in contests it's already losing, and that eroding the research base is the bigger risk.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
       "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2125695137103663469",
       "linkedUrl": "https://www.statnews.com/2026/11/25/biotech-news-fda-approves-cogents-drug-for-rare-stomach-cancer/",
@@ -43,32 +13,82 @@
       "blurbSource": "page-description"
     },
     {
-      "handle": "biospace",
-      "postUrl": "https://x.com/biospace/status/2125597874352259464",
-      "linkedUrl": "https://www.biospace.com/business/sanofis-41b-insmed-buy-capricors-second-rejection-fdas-pre-holiday-rush",
-      "postedAt": "2026-11-25",
-      "headline": "Sanofi's $41B Insmed buy, Capricor's second rejection, FDA's pre-holiday rush",
-      "blurb": "Sanofi's deal is the largest biopharma buyout since Pfizer's 2023 Seagen purchase, while the FDA again declined Capricor's Duchenne cell therapy and cleared several other companies' products.",
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2126346716509004115",
+      "linkedUrl": "https://www.statnews.com/2026/11/27/fda-vertex-povetacicept-kidney-capricor-duchenne-readout-newsletter/",
+      "postedAt": "2026-11-27",
+      "headline": "FDA extends assessment of experimental Vertex kidney drug",
+      "blurb": "The agency is taking more time on the investigational medicine while the company answers questions about possible safety concerns.",
       "kind": "other",
       "blurbSource": "page-description"
     },
     {
-      "handle": "IEEESpectrum",
-      "postUrl": "https://x.com/IEEESpectrum/status/2125590639190397319",
-      "linkedUrl": "https://spectrum.ieee.org/hair-dye-eeg-electroencephalography",
-      "postedAt": "2026-11-25",
-      "headline": "Dyed hair turns into gel-free EEG interface",
-      "blurb": "Semi-permanent conductive hair dyes work with standard EEG hardware, aiming to ease setup and make long-term brain monitoring more practical.",
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2126331397803532469",
+      "linkedUrl": "https://www.statnews.com/2026/11/27/health-ai-conversation-starters-for-holidays-ai-prognosis/",
+      "postedAt": "2026-11-27",
+      "headline": "Here are some health AI conversation starters for the holidays",
+      "blurb": "A weekly newsletter edition picks out health-AI stories suited to family-gathering talk over the holiday stretch.",
       "kind": "other",
       "blurbSource": "page-description"
     },
     {
-      "handle": "IEEESpectrum",
-      "postUrl": "https://x.com/IEEESpectrum/status/2125605994419851678",
-      "linkedUrl": "https://spectrum.ieee.org/darpa-triage-challenge-final-robots",
+      "handle": "alzforum",
+      "postUrl": "https://x.com/alzforum/status/2125701631803011087",
+      "linkedUrl": "https://www.alzforum.org/news/conference-coverage/lifestyle-revamp-lifts-cognitive-test-scores-asia-too",
       "postedAt": "2026-11-25",
-      "headline": "DARPA's high-stakes triage challenge in Disaster City",
-      "blurb": "Teams fielded drones, legged robots and AI tools to help medics locate disaster victims faster and prioritise urgent cases.",
+      "headline": "Lifestyle revamp lifts cognitive test scores in Asia, too",
+      "blurb": "Early results from Singapore's SINGER study, shown at the CTAD meeting, tested whether lifestyle changes alone could improve memory and thinking scores in older adults at risk.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "neuralink",
+      "postUrl": "https://x.com/neuralink/status/2125694580544680185",
+      "linkedUrl": "https://neuralink.com/trials/device-control/",
+      "postedAt": "2026-11-25",
+      "headline": "Telepathy for digital device control",
+      "blurb": "The company describes how trial participants use its implant to operate digital devices with their minds.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2126340427045622001",
+      "linkedUrl": "https://www.nature.com/articles/s44161-026-00901-8",
+      "postedAt": "2026-11-27",
+      "headline": "Contractile function maintains cardiomyocyte differentiation and inhibits cell cycle activity",
+      "blurb": "In human cardiac organoids, briefly halting heart-cell contraction reactivated the cell cycle in a reversible way, the authors report.",
+      "kind": "paper",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "fwhealthtech",
+      "postUrl": "https://x.com/fwhealthtech/status/2126069731870535692",
+      "linkedUrl": "https://firstwordhealthtech.com/story/8494782",
+      "postedAt": "2026-11-26",
+      "headline": "Neuralink gets FDA nod for pivotal ALS brain implant trial",
+      "blurb": "The company says the cleared LINK study is the first pivotal U.S. trial of an implantable brain-computer interface, and it will assess safety and effectiveness.",
+      "kind": "approval",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "fwhealthtech",
+      "postUrl": "https://x.com/fwhealthtech/status/2125699566716748050",
+      "linkedUrl": "https://firstwordhealthtech.com/story/8492107",
+      "postedAt": "2026-11-25",
+      "headline": "FDA clears DeepHealth AI for five-year breast cancer risk assessment",
+      "blurb": "The 510(k) clearance covers Mammo Risk, a tool that uses routine mammograms to estimate a woman's chance of developing breast cancer within five years.",
+      "kind": "approval",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "fwhealthtech",
+      "postUrl": "https://x.com/fwhealthtech/status/2126135231564628223",
+      "linkedUrl": "https://firstwordhealthtech.com/story/8495162",
+      "postedAt": "2026-11-27",
+      "headline": "AI screens chest X-rays for lung cancers hiding in plain sight: study",
+      "blurb": "Across 41 hospitals in four central European countries, a chest X-ray flagging system helped find over 200 previously undiagnosed lung cancers.",
       "kind": "other",
       "blurbSource": "page-description"
     }
