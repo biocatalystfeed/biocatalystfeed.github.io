@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-28T07:25:03.086Z",
+  "generated_at": "2026-11-28T13:15:12.095Z",
   "event_date": "2026-11-28",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -58,9 +58,9 @@
     {
       "id": "europepmc",
       "enabled": true,
-      "status": "ok",
-      "fetched": 32,
-      "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped, except Nature news DOIs (10.1038/d41586-) whose titles name a trial, phase, FDA action, pivotal study, readout, or approval. Those items get the pivotal-readout adjustment, and their blurb is the page meta description when nature.com/robots.txt allows the article. A blurb otherwise uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
+      "status": "error",
+      "fetched": 0,
+      "note": "The operation was aborted due to timeout"
     },
     {
       "id": "clinicaltrials-calendar",
@@ -94,7 +94,7 @@
       "id": "bcf-ai-discovery",
       "enabled": true,
       "status": "ok",
-      "fetched": 1,
+      "fetched": 6,
       "note": "BioCatalystFeed Worker /ai-discovery. Curated model cards are included only when verified_as_of or published falls in the last 45 days. arXiv rows come from the worker's allowlisted category query and are labeled as preprints. Summaries are not copied. No X client is called."
     },
     {
@@ -628,17 +628,17 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43099174",
-      "headline": "Navigating grief in academia: ways to find balance",
-      "blurb": "Published 2026-11-26 in Nature (MED 43099174).",
-      "source_url": "https://doi.org/10.1038/d41586-026-02752-6",
-      "source_type": "paper",
-      "source_name": "Europe PMC",
-      "published_at": "2026-11-26",
-      "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "headline": "Advancing computer-use agents for healthcare teams",
+      "blurb": "Details are in the linked post.",
+      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "source_type": "news",
+      "source_name": "OpenAI News",
+      "published_at": "2026-11-16",
+      "significance": 71,
+      "significance_rationale": "ai-news 68; 12d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
-      "scout_source": "europepmc"
+      "scout_source": "openai-news"
     },
     {
       "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-treat-neurological-symptoms-type-3-gaucher-disease",
@@ -654,45 +654,6 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "europepmc:MED:43099175",
-      "headline": "Orangutans face bleak future after Indonesia's devastating wildfires",
-      "blurb": "Published 2026-11-26 in Nature (MED 43099175).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03828-z",
-      "source_type": "paper",
-      "source_name": "Europe PMC",
-      "published_at": "2026-11-26",
-      "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
-      "tier": 3,
-      "scout_source": "europepmc"
-    },
-    {
-      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "headline": "Advancing computer-use agents for healthcare teams",
-      "blurb": "Details are in the linked post.",
-      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "source_type": "news",
-      "source_name": "OpenAI News",
-      "published_at": "2026-11-16",
-      "significance": 71,
-      "significance_rationale": "ai-news 68; 12d old +3 = 71. Official lab blog post on an AI or biology topic.",
-      "tier": 3,
-      "scout_source": "openai-news"
-    },
-    {
-      "id": "europepmc:MED:43099178",
-      "headline": "Has AI just cracked Internet encryption? Rumoured 'bombshell' stuns scientists",
-      "blurb": "Published 2026-11-26 in Nature (MED 43099178).",
-      "source_url": "https://doi.org/10.1038/d41586-026-03875-6",
-      "source_type": "paper",
-      "source_name": "Europe PMC",
-      "published_at": "2026-11-26",
-      "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
-      "tier": 3,
-      "scout_source": "europepmc"
-    },
-    {
       "id": "openai-news:https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
       "headline": "More ways to move care forward with ChatGPT for Healthcare",
       "blurb": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
@@ -704,19 +665,6 @@
       "significance_rationale": "ai-news 68; 12d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "openai-news"
-    },
-    {
-      "id": "europepmc:MED:43099184",
-      "headline": "Integrated wastewater and clinical genomic surveillance for high-resolution tracking",
-      "blurb": "However, tracking measles virus (MeV; species Morbillivirus hominis) transmission and evolution remains difficult at scale, particularly in settings with limited access to care, diagnostic testing. Published in Nature medicine.",
-      "source_url": "https://doi.org/10.1038/s41591-026-04754-3",
-      "source_type": "paper",
-      "source_name": "Europe PMC",
-      "published_at": "2026-11-26",
-      "significance": 72,
-      "significance_rationale": "paper-journal 66; 2d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
-      "tier": 3,
-      "scout_source": "europepmc"
     },
     {
       "id": "nvidia-blog:https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
@@ -892,6 +840,33 @@
       "scout_source": "bcf-papers"
     },
     {
+      "id": "x:https://x.com/fwhealthtech/status/2126392971348316421",
+      "headline": "FDA clears Mediwhale's eye scan tech to detect heart disease risk",
+      "blurb": "The 510(k) clearance adds a cardiovascular risk assessment, based on retinal images plus age and sex, to the company's existing diabetic eye screening software. https://firstwordhealthtech.com/story/8497626",
+      "source_url": "https://x.com/fwhealthtech/status/2126392971348316421",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-27",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://firstwordhealthtech.com/story/8497626"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.20.768015",
+      "headline": "Machine Learning-based Transcriptomic Data Analysis of Long COVID Patients: Generating Hypotheses for Molecular Signatures",
+      "blurb": "Furthermore, four HICs including CLCN3, KCNQ3, RYR1, and ZACN interacted with 30 approved drugs. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768015",
+      "source_type": "paper",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-23",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "tier": 3,
+      "scout_source": "biorxiv"
+    },
+    {
       "id": "x:https://x.com/statnews/status/2126250665823334622",
       "headline": "Montana's 'right to try' law makes patients responsible for bearing costs and risks",
       "blurb": "Montana's SB 535 is described as the first state law of its kind, and it leaves patients to cover the expenses and risks themselves. https://www.statnews.com/2026/11/27/montana-sb-535-right-to-try-questions-risks-costs-insurance/",
@@ -906,10 +881,10 @@
       "linked_url": "https://www.statnews.com/2026/11/27/montana-sb-535-right-to-try-questions-risks-costs-insurance/"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.20.768015",
-      "headline": "Machine Learning-based Transcriptomic Data Analysis of Long COVID Patients: Generating Hypotheses for Molecular Signatures",
-      "blurb": "Furthermore, four HICs including CLCN3, KCNQ3, RYR1, and ZACN interacted with 30 approved drugs. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768015",
+      "id": "biorxiv:10.64898/2026.11.20.768078",
+      "headline": "Predicted templates improve the prediction of antibody-antigen structures by AlphaFold 3 and Boltz-2",
+      "blurb": "Are still much poorer than for most other types of protein-protein interactions. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768078",
       "source_type": "paper",
       "source_name": "bioRxiv",
       "published_at": "2026-11-23",
@@ -933,10 +908,10 @@
       "linked_url": "https://www.statnews.com/2026/11/27/fda-vertex-povetacicept-kidney-capricor-duchenne-readout-newsletter/"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.20.768078",
-      "headline": "Predicted templates improve the prediction of antibody-antigen structures by AlphaFold 3 and Boltz-2",
-      "blurb": "Are still much poorer than for most other types of protein-protein interactions. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768078",
+      "id": "biorxiv:10.64898/2026.11.20.768127",
+      "headline": "Machine learning prediction of antimicrobial resistance in respiratory metagenomes",
+      "blurb": ": RF performance varied substantially across species, antibiotics, and sequencing platforms. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768127",
       "source_type": "paper",
       "source_name": "bioRxiv",
       "published_at": "2026-11-23",
@@ -958,33 +933,6 @@
       "tier": 3,
       "scout_source": "x",
       "linked_url": "https://firstwordhealthtech.com/story/8494782"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.20.768127",
-      "headline": "Machine learning prediction of antimicrobial resistance in respiratory metagenomes",
-      "blurb": ": RF performance varied substantially across species, antibiotics, and sequencing platforms. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768127",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-23",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/statnews/status/2126032326534496560",
-      "headline": "In a fertility advance, engineered molecular glue stabilizes chromosomes in aging eggs",
-      "blurb": "A mouse study tests a protein-based approach aimed at chromosome errors in older eggs, a leading cause of pregnancy loss, with possible relevance to IVF down the line. https://www.statnews.com/2026/11/26/fertility-advance-engineered-protein-stabilizes-chromosomes-in-aging-eggs/",
-      "source_url": "https://x.com/statnews/status/2126032326534496560",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-26",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/26/fertility-advance-engineered-protein-stabilizes-chromosomes-in-aging-eggs/"
     },
     {
       "id": "medrxiv:10.64898/2026.11.19.26368462",
@@ -1026,17 +974,17 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "nih-reporter:11296981",
-      "headline": "Gene therapy using Reelin fragments in mouse brain",
-      "blurb": "Henry Ford Health + Michigan State University Health Sciences received $654,111 in NIH funding (R01). Project start Sep 30.",
-      "source_url": "https://reporter.nih.gov/project-details/11296981",
-      "source_type": "grant",
-      "source_name": "NIH RePORTER",
-      "published_at": "2026-09-30",
-      "significance": 54,
-      "significance_rationale": "nih-grant 60; 59d old -6 = 54. NIH RePORTER project with a start date in the window.",
-      "tier": 2,
-      "scout_source": "nih-reporter"
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.33740v1",
+      "headline": "Exclusion and internal structure in the association/dissociation kinetics of DNA-binding proteins",
+      "blurb": "In many canonical biophysical and biochemical contexts, complex diffusing DNA-binding proteins undergoing nonspecific adsorption and desorption can exist in different conformational states. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.33740v1",
+      "source_type": "paper",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-25",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 3d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
     },
     {
       "id": "medrxiv:10.64898/2026.11.19.26368521",
@@ -1052,10 +1000,23 @@
       "scout_source": "medrxiv"
     },
     {
-      "id": "nih-reporter:11405186",
-      "headline": "Development of OPGx-RDH12 as a gene therapy for RDH12 deficiency",
-      "blurb": "Opus Genetics Inc. received $1,004,925 in NIH funding (R44). Project start Sep 30.",
-      "source_url": "https://reporter.nih.gov/project-details/11405186",
+      "id": "bcf-ai:arxiv:https://arxiv.org/abs/2611.33753v1",
+      "headline": "From the Deterministic Hook Effect to Stochastic Reliability in Ternary Complex Formation",
+      "blurb": "Ternary binding systems occur in signaling, scaffold-mediated assembly, and targeted protein degradation. Posted on arXiv. Preprint, not peer-reviewed.",
+      "source_url": "https://arxiv.org/abs/2611.33753v1",
+      "source_type": "paper",
+      "source_name": "BioCatalystFeed AI discovery",
+      "published_at": "2026-11-25",
+      "significance": 60,
+      "significance_rationale": "ai-preprint 54; 3d old +6 = 60. arXiv preprint returned by the BioCatalystFeed AI discovery endpoint. Not peer-reviewed.",
+      "tier": 3,
+      "scout_source": "bcf-ai-discovery"
+    },
+    {
+      "id": "nih-reporter:11296981",
+      "headline": "Gene therapy using Reelin fragments in mouse brain",
+      "blurb": "Henry Ford Health + Michigan State University Health Sciences received $654,111 in NIH funding (R01). Project start Sep 30.",
+      "source_url": "https://reporter.nih.gov/project-details/11296981",
       "source_type": "grant",
       "source_name": "NIH RePORTER",
       "published_at": "2026-09-30",
@@ -1078,17 +1039,17 @@
       "scout_source": "sec-edgar-8k"
     },
     {
-      "id": "health-canada:38751",
-      "headline": "Pms-Brivaracetam (Brivaracetam) receives a Health Canada notice of compliance",
-      "blurb": "Abbreviated submission, notice 38751. Manufacturer listed as Pharmascience Inc.",
-      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38751",
-      "source_type": "regulator",
-      "source_name": "Health Canada Notice of Compliance Database",
-      "published_at": "2026-11-26",
-      "significance": 40,
-      "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
+      "id": "nih-reporter:11405186",
+      "headline": "Development of OPGx-RDH12 as a gene therapy for RDH12 deficiency",
+      "blurb": "Opus Genetics Inc. received $1,004,925 in NIH funding (R44). Project start Sep 30.",
+      "source_url": "https://reporter.nih.gov/project-details/11405186",
+      "source_type": "grant",
+      "source_name": "NIH RePORTER",
+      "published_at": "2026-09-30",
+      "significance": 54,
+      "significance_rationale": "nih-grant 60; 59d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
-      "scout_source": "health-canada-noc"
+      "scout_source": "nih-reporter"
     },
     {
       "id": "sec-edgar:0001493152-26-052991",
