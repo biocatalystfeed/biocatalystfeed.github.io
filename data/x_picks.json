@@ -3,6 +3,27 @@
   "enabled": true,
   "picks": [
     {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2126716466242400764",
+      "linkedUrl": "https://doi.org/10.1126/science.aei6252",
+      "postedAt": "2026-11-28",
+      "headline": "AI-based digital pathology defines spatial border ecosystems in triple-negative breast cancer",
+      "blurb": "Using digital pathology and spatial multi-omics, the authors identify five tumor-border ecosystems, three tied to prognosis, and report that targeting one endothelial niche slowed tumor progression.",
+      "kind": "paper",
+      "blurbSource": "crossref",
+      "doi": "10.1126/science.aei6252"
+    },
+    {
+      "handle": "IEEESpectrum",
+      "postUrl": "https://x.com/IEEESpectrum/status/2126696467486130407",
+      "linkedUrl": "https://spectrum.ieee.org/telesurgery-stroke",
+      "postedAt": "2026-11-28",
+      "headline": "Can telesurgery revolutionize stroke treatment?",
+      "blurb": "Remedy Robotics is testing whether specialists could treat stroke patients remotely with robotic tools, though major hurdles remain, the article says.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
       "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2126346716509004115",
       "linkedUrl": "https://www.statnews.com/2026/11/27/fda-vertex-povetacicept-kidney-capricor-duchenne-readout-newsletter/",
