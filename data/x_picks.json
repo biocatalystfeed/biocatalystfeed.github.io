@@ -4,51 +4,11 @@
   "picks": [
     {
       "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2125695137103663469",
-      "linkedUrl": "https://www.statnews.com/2026/11/25/biotech-news-fda-approves-cogents-drug-for-rare-stomach-cancer/",
-      "postedAt": "2026-11-25",
-      "headline": "FDA approves Cogent's drug for rare stomach cancer",
-      "blurb": "The agency cleared the Cogent therapy for use alongside Pfizer's much older medicine Sutent.",
-      "kind": "approval",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "statnews",
       "postUrl": "https://x.com/statnews/status/2126346716509004115",
       "linkedUrl": "https://www.statnews.com/2026/11/27/fda-vertex-povetacicept-kidney-capricor-duchenne-readout-newsletter/",
       "postedAt": "2026-11-27",
       "headline": "FDA extends assessment of experimental Vertex kidney drug",
       "blurb": "The agency is taking more time on the investigational medicine while the company answers questions about possible safety concerns.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "statnews",
-      "postUrl": "https://x.com/statnews/status/2126331397803532469",
-      "linkedUrl": "https://www.statnews.com/2026/11/27/health-ai-conversation-starters-for-holidays-ai-prognosis/",
-      "postedAt": "2026-11-27",
-      "headline": "Here are some health AI conversation starters for the holidays",
-      "blurb": "A weekly newsletter edition picks out health-AI stories suited to family-gathering talk over the holiday stretch.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "alzforum",
-      "postUrl": "https://x.com/alzforum/status/2125701631803011087",
-      "linkedUrl": "https://www.alzforum.org/news/conference-coverage/lifestyle-revamp-lifts-cognitive-test-scores-asia-too",
-      "postedAt": "2026-11-25",
-      "headline": "Lifestyle revamp lifts cognitive test scores in Asia, too",
-      "blurb": "Early results from Singapore's SINGER study, shown at the CTAD meeting, tested whether lifestyle changes alone could improve memory and thinking scores in older adults at risk.",
-      "kind": "other",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "neuralink",
-      "postUrl": "https://x.com/neuralink/status/2125694580544680185",
-      "linkedUrl": "https://neuralink.com/trials/device-control/",
-      "postedAt": "2026-11-25",
-      "headline": "Telepathy for digital device control",
-      "blurb": "The company describes how trial participants use its implant to operate digital devices with their minds.",
       "kind": "other",
       "blurbSource": "page-description"
     },
@@ -74,21 +34,52 @@
     },
     {
       "handle": "fwhealthtech",
-      "postUrl": "https://x.com/fwhealthtech/status/2125699566716748050",
-      "linkedUrl": "https://firstwordhealthtech.com/story/8492107",
-      "postedAt": "2026-11-25",
-      "headline": "FDA clears DeepHealth AI for five-year breast cancer risk assessment",
-      "blurb": "The 510(k) clearance covers Mammo Risk, a tool that uses routine mammograms to estimate a woman's chance of developing breast cancer within five years.",
-      "kind": "approval",
-      "blurbSource": "page-description"
-    },
-    {
-      "handle": "fwhealthtech",
       "postUrl": "https://x.com/fwhealthtech/status/2126135231564628223",
       "linkedUrl": "https://firstwordhealthtech.com/story/8495162",
       "postedAt": "2026-11-27",
       "headline": "AI screens chest X-rays for lung cancers hiding in plain sight: study",
       "blurb": "Across 41 hospitals in four central European countries, a chest X-ray flagging system helped find over 200 previously undiagnosed lung cancers.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2126032326534496560",
+      "linkedUrl": "https://www.statnews.com/2026/11/26/fertility-advance-engineered-protein-stabilizes-chromosomes-in-aging-eggs/",
+      "postedAt": "2026-11-26",
+      "headline": "In a fertility advance, engineered molecular glue stabilizes chromosomes in aging eggs",
+      "blurb": "A mouse study tests a protein-based approach aimed at chromosome errors in older eggs, a leading cause of pregnancy loss, with possible relevance to IVF down the line.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "statnews",
+      "postUrl": "https://x.com/statnews/status/2126250665823334622",
+      "linkedUrl": "https://www.statnews.com/2026/11/27/montana-sb-535-right-to-try-questions-risks-costs-insurance/",
+      "postedAt": "2026-11-27",
+      "headline": "Montana's 'right to try' law makes patients responsible for bearing costs and risks",
+      "blurb": "Montana's SB 535 is described as the first state law of its kind, and it leaves patients to cover the expenses and risks themselves.",
+      "kind": "other",
+      "blurbSource": "page-description"
+    },
+    {
+      "handle": "EricTopol",
+      "postUrl": "https://x.com/EricTopol/status/2126341668425363670",
+      "linkedUrl": "https://doi.org/10.1126/scitranslmed.aei7692",
+      "postedAt": "2026-11-27",
+      "headline": "Elevated G-CSF concentrations promote neutrophilic and type 2 inflammation during asthma exacerbations",
+      "blurb": "Science Translational Medicine paper examining how virus-triggered asthma flare-ups drive lung pathology, and the role granulocyte colony-stimulating factor plays in boosting both inflammatory responses.",
+      "kind": "paper",
+      "blurbSource": "crossref",
+      "doi": "10.1126/scitranslmed.aei7692"
+    },
+    {
+      "handle": "IEEESpectrum",
+      "postUrl": "https://x.com/IEEESpectrum/status/2126315351071678777",
+      "linkedUrl": "https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai",
+      "postedAt": "2026-11-27",
+      "headline": "This ER doctor became a hospital's first clinical AI engineer",
+      "blurb": "Dinesh Rai's prompt-engineering job at Boston Children's grew well beyond its original scope, according to the profile of his role.",
       "kind": "other",
       "blurbSource": "page-description"
     }
