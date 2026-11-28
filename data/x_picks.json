@@ -82,6 +82,16 @@
       "blurb": "Dinesh Rai's prompt-engineering job at Boston Children's grew well beyond its original scope, according to the profile of his role.",
       "kind": "other",
       "blurbSource": "page-description"
+    },
+    {
+      "handle": "fwhealthtech",
+      "postUrl": "https://x.com/fwhealthtech/status/2126392971348316421",
+      "linkedUrl": "https://firstwordhealthtech.com/story/8497626",
+      "postedAt": "2026-11-27",
+      "headline": "FDA clears Mediwhale's eye scan tech to detect heart disease risk",
+      "blurb": "The 510(k) clearance adds a cardiovascular risk assessment, based on retinal images plus age and sex, to the company's existing diabetic eye screening software.",
+      "kind": "approval",
+      "blurbSource": "page-description"
     }
   ]
 }
