@@ -1,6 +1,6 @@
 {
   "schema": "biocat-headlines/1",
-  "generated_at": "2026-11-28T13:15:12.095Z",
+  "generated_at": "2026-11-28T19:07:57.463Z",
   "event_date": "2026-11-28",
   "generator": "scripts/headlines/populate.mjs",
   "user_agent": "BioCatalystFeed-Headlines/0.1 (+https://biocat.ai/headlines/; contact@biocat.ai)",
@@ -58,9 +58,9 @@
     {
       "id": "europepmc",
       "enabled": true,
-      "status": "error",
-      "fetched": 0,
-      "note": "The operation was aborted due to timeout"
+      "status": "ok",
+      "fetched": 35,
+      "note": "Europe PMC metadata, including MEDLINE records. PubMed E-utilities are not called: eutils.ncbi.nlm.nih.gov robots.txt is Disallow: /. Queries cover phase 3 titles, a fixed high-impact journal list, and AI-in-biology titles. Titles that assert efficacy or effectiveness are skipped, except Nature news DOIs (10.1038/d41586-) whose titles name a trial, phase, FDA action, pivotal study, readout, or approval. Those items get the pivotal-readout adjustment, and their blurb is the page meta description when nature.com/robots.txt allows the article. A blurb otherwise uses one results sentence of at most 25 words when abstractText is present, and the journal otherwise. The abstract is not copied. Crawl-delay on ebi.ac.uk is respected."
     },
     {
       "id": "clinicaltrials-calendar",
@@ -628,17 +628,17 @@
       "scout_source": "fda-press"
     },
     {
-      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "headline": "Advancing computer-use agents for healthcare teams",
-      "blurb": "Details are in the linked post.",
-      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "source_type": "news",
-      "source_name": "OpenAI News",
-      "published_at": "2026-11-16",
-      "significance": 71,
-      "significance_rationale": "ai-news 68; 12d old +3 = 71. Official lab blog post on an AI or biology topic.",
+      "id": "europepmc:MED:43104024",
+      "headline": "Author Correction: Artificial intelligence-enabled clinical phenotyping of human brown fat",
+      "blurb": "Published 2026-11-27 in Nature (MED 43104024).",
+      "source_url": "https://doi.org/10.1038/s41586-026-11411-9",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-27",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
       "tier": 3,
-      "scout_source": "openai-news"
+      "scout_source": "europepmc"
     },
     {
       "id": "fda-press:http://www.fda.gov/news-events/press-announcements/fda-approves-first-drug-treat-neurological-symptoms-type-3-gaucher-disease",
@@ -654,6 +654,45 @@
       "scout_source": "fda-press"
     },
     {
+      "id": "europepmc:MED:43104079",
+      "headline": "Wastewater sequencing enables scalable measles surveillance",
+      "blurb": "Published 2026-11-27 in Nature medicine (MED 43104079).",
+      "source_url": "https://doi.org/10.1038/s41591-026-04761-4",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-27",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
+      "id": "openai-news:https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "headline": "Advancing computer-use agents for healthcare teams",
+      "blurb": "Details are in the linked post.",
+      "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "source_type": "news",
+      "source_name": "OpenAI News",
+      "published_at": "2026-11-16",
+      "significance": 71,
+      "significance_rationale": "ai-news 68; 12d old +3 = 71. Official lab blog post on an AI or biology topic.",
+      "tier": 3,
+      "scout_source": "openai-news"
+    },
+    {
+      "id": "europepmc:MED:43104080",
+      "headline": "New drugs for tuberculosis are put to the test",
+      "blurb": "Published 2026-11-27 in Nature medicine (MED 43104080).",
+      "source_url": "https://doi.org/10.1038/d41591-026-00060-0",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-27",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
+    },
+    {
       "id": "openai-news:https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
       "headline": "More ways to move care forward with ChatGPT for Healthcare",
       "blurb": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
@@ -665,6 +704,19 @@
       "significance_rationale": "ai-news 68; 12d old +3 = 71. Official lab blog post on an AI or biology topic.",
       "tier": 3,
       "scout_source": "openai-news"
+    },
+    {
+      "id": "europepmc:MED:43104103",
+      "headline": "Brain area's mysterious role in speech decoded at last",
+      "blurb": "Published 2026-11-27 in Nature (MED 43104103).",
+      "source_url": "https://doi.org/10.1038/d41586-026-03800-x",
+      "source_type": "paper",
+      "source_name": "Europe PMC",
+      "published_at": "2026-11-27",
+      "significance": 72,
+      "significance_rationale": "paper-journal 66; 1d old +6 = 72. Europe PMC record from a journal on the high-impact list in the populator.",
+      "tier": 3,
+      "scout_source": "europepmc"
     },
     {
       "id": "nvidia-blog:https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
@@ -719,6 +771,20 @@
       "scout_source": "deepmind"
     },
     {
+      "id": "x:https://x.com/EricTopol/status/2126716466242400764",
+      "headline": "AI-based digital pathology defines spatial border ecosystems in triple-negative breast cancer",
+      "blurb": "Using digital pathology and spatial multi-omics, the authors identify five tumor-border ecosystems, three tied to prognosis, and report that targeting one endothelial niche slowed tumor progression. https://doi.org/10.1126/science.aei6252",
+      "source_url": "https://x.com/EricTopol/status/2126716466242400764",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-28",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://doi.org/10.1126/science.aei6252"
+    },
+    {
       "id": "sec-edgar:0001213900-26-124592",
       "headline": "60 Degrees Pharmaceuticals, Inc. discloses a Regulation FD disclosure in an 8-K",
       "blurb": "60 Degrees Pharmaceuticals, Inc. disclosed a Regulation FD disclosure. Accession 0001213900-26-124592.",
@@ -730,6 +796,33 @@
       "significance_rationale": "sec-8k 58; 1d old +6 = 64. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
       "tier": 3,
       "scout_source": "sec-edgar-8k"
+    },
+    {
+      "id": "x:https://x.com/IEEESpectrum/status/2126696467486130407",
+      "headline": "Can telesurgery revolutionize stroke treatment?",
+      "blurb": "Remedy Robotics is testing whether specialists could treat stroke patients remotely with robotic tools, though major hurdles remain, the article says. https://spectrum.ieee.org/telesurgery-stroke",
+      "source_url": "https://x.com/IEEESpectrum/status/2126696467486130407",
+      "source_type": "news",
+      "source_name": "X",
+      "published_at": "2026-11-28",
+      "significance": 64,
+      "significance_rationale": "x-pick 58; in 0d +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
+      "tier": 3,
+      "scout_source": "x",
+      "linked_url": "https://spectrum.ieee.org/telesurgery-stroke"
+    },
+    {
+      "id": "nih-reporter:11388995",
+      "headline": "Graph-Driven Wastewater Genomics: ML Imputation, Exposure Networks, and CRISPR-Virus Dynamics",
+      "blurb": "Cornell University received $34,354 in NIH funding (F31). Project start Nov 15.",
+      "source_url": "https://reporter.nih.gov/project-details/11388995",
+      "source_type": "grant",
+      "source_name": "NIH RePORTER",
+      "published_at": "2026-11-15",
+      "significance": 63,
+      "significance_rationale": "nih-grant 60; 13d old +3 = 63. NIH RePORTER project with a start date in the window.",
+      "tier": 3,
+      "scout_source": "nih-reporter"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2126340427045622001",
@@ -746,17 +839,17 @@
       "linked_url": "https://www.nature.com/articles/s44161-026-00901-8"
     },
     {
-      "id": "nih-reporter:11388995",
-      "headline": "Graph-Driven Wastewater Genomics: ML Imputation, Exposure Networks, and CRISPR-Virus Dynamics",
-      "blurb": "Cornell University received $34,354 in NIH funding (F31). Project start Nov 15.",
-      "source_url": "https://reporter.nih.gov/project-details/11388995",
-      "source_type": "grant",
-      "source_name": "NIH RePORTER",
-      "published_at": "2026-11-15",
-      "significance": 63,
-      "significance_rationale": "nih-grant 60; 13d old +3 = 63. NIH RePORTER project with a start date in the window.",
+      "id": "bcf-papers:MED:43102055",
+      "headline": "CRISPR-Cas in translational research: From molecular mechanisms to therapeutic applications in human disease (Review)",
+      "blurb": "Published 2026-11-27 in Int J Mol Med (MED 43102055).",
+      "source_url": "https://doi.org/10.3892/ijmm.2026.6061",
+      "source_type": "paper",
+      "source_name": "Europe PMC via BioCatalystFeed papers API",
+      "published_at": "2026-11-27",
+      "significance": 62,
+      "significance_rationale": "paper-ai 56; 1d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "nih-reporter"
+      "scout_source": "bcf-papers"
     },
     {
       "id": "x:https://x.com/EricTopol/status/2126341668425363670",
@@ -773,10 +866,10 @@
       "linked_url": "https://doi.org/10.1126/scitranslmed.aei7692"
     },
     {
-      "id": "bcf-papers:MED:43102055",
-      "headline": "CRISPR-Cas in translational research: From molecular mechanisms to therapeutic applications in human disease (Review)",
-      "blurb": "Published 2026-11-27 in Int J Mol Med (MED 43102055).",
-      "source_url": "https://doi.org/10.3892/ijmm.2026.6061",
+      "id": "bcf-papers:MED:43102068",
+      "headline": "Targeting bromodomain plant homeodomain finger transcription factor reverses melanoma immune evasion",
+      "blurb": "Published 2026-11-27 in Mol Med Rep (MED 43102068).",
+      "source_url": "https://doi.org/10.3892/mmr.2026.14087",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
       "published_at": "2026-11-27",
@@ -800,15 +893,15 @@
       "linked_url": "https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai"
     },
     {
-      "id": "bcf-papers:MED:43102068",
-      "headline": "Targeting bromodomain plant homeodomain finger transcription factor reverses melanoma immune evasion",
-      "blurb": "Published 2026-11-27 in Mol Med Rep (MED 43102068).",
-      "source_url": "https://doi.org/10.3892/mmr.2026.14087",
+      "id": "bcf-papers:MED:43102476",
+      "headline": "FIB-4 performance and spectrum bias in evaluating machine learning models",
+      "blurb": "Published 2026-11-25 in Eur J Gastroenterol Hepatol (MED 43102476).",
+      "source_url": "https://doi.org/10.1097/meg.0000000000003283",
       "source_type": "paper",
       "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-27",
+      "published_at": "2026-11-25",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 1d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "bcf-papers"
     },
@@ -827,17 +920,17 @@
       "linked_url": "https://firstwordhealthtech.com/story/8495162"
     },
     {
-      "id": "bcf-papers:MED:43102476",
-      "headline": "FIB-4 performance and spectrum bias in evaluating machine learning models",
-      "blurb": "Published 2026-11-25 in Eur J Gastroenterol Hepatol (MED 43102476).",
-      "source_url": "https://doi.org/10.1097/meg.0000000000003283",
+      "id": "biorxiv:10.64898/2026.11.20.768015",
+      "headline": "Machine Learning-based Transcriptomic Data Analysis of Long COVID Patients: Generating Hypotheses for Molecular Signatures",
+      "blurb": "Furthermore, four HICs including CLCN3, KCNQ3, RYR1, and ZACN interacted with 30 approved drugs. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768015",
       "source_type": "paper",
-      "source_name": "Europe PMC via BioCatalystFeed papers API",
-      "published_at": "2026-11-25",
+      "source_name": "bioRxiv",
+      "published_at": "2026-11-23",
       "significance": 62,
-      "significance_rationale": "paper-ai 56; 3d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
+      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
-      "scout_source": "bcf-papers"
+      "scout_source": "biorxiv"
     },
     {
       "id": "x:https://x.com/fwhealthtech/status/2126392971348316421",
@@ -854,10 +947,10 @@
       "linked_url": "https://firstwordhealthtech.com/story/8497626"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.20.768015",
-      "headline": "Machine Learning-based Transcriptomic Data Analysis of Long COVID Patients: Generating Hypotheses for Molecular Signatures",
-      "blurb": "Furthermore, four HICs including CLCN3, KCNQ3, RYR1, and ZACN interacted with 30 approved drugs. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768015",
+      "id": "biorxiv:10.64898/2026.11.20.768078",
+      "headline": "Predicted templates improve the prediction of antibody-antigen structures by AlphaFold 3 and Boltz-2",
+      "blurb": "Are still much poorer than for most other types of protein-protein interactions. Posted on bioRxiv. Preprint, not peer-reviewed.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768078",
       "source_type": "paper",
       "source_name": "bioRxiv",
       "published_at": "2026-11-23",
@@ -881,33 +974,6 @@
       "linked_url": "https://www.statnews.com/2026/11/27/montana-sb-535-right-to-try-questions-risks-costs-insurance/"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.20.768078",
-      "headline": "Predicted templates improve the prediction of antibody-antigen structures by AlphaFold 3 and Boltz-2",
-      "blurb": "Are still much poorer than for most other types of protein-protein interactions. Posted on bioRxiv. Preprint, not peer-reviewed.",
-      "source_url": "https://www.biorxiv.org/content/10.64898/2026.11.20.768078",
-      "source_type": "paper",
-      "source_name": "bioRxiv",
-      "published_at": "2026-11-23",
-      "significance": 62,
-      "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
-      "tier": 3,
-      "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/statnews/status/2126346716509004115",
-      "headline": "FDA extends assessment of experimental Vertex kidney drug",
-      "blurb": "The agency is taking more time on the investigational medicine while the company answers questions about possible safety concerns. https://www.statnews.com/2026/11/27/fda-vertex-povetacicept-kidney-capricor-duchenne-readout-newsletter/",
-      "source_url": "https://x.com/statnews/status/2126346716509004115",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-27",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 1d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://www.statnews.com/2026/11/27/fda-vertex-povetacicept-kidney-capricor-duchenne-readout-newsletter/"
-    },
-    {
       "id": "biorxiv:10.64898/2026.11.20.768127",
       "headline": "Machine learning prediction of antimicrobial resistance in respiratory metagenomes",
       "blurb": ": RF performance varied substantially across species, antibiotics, and sequencing platforms. Posted on bioRxiv. Preprint, not peer-reviewed.",
@@ -919,20 +985,6 @@
       "significance_rationale": "paper-ai 56; 5d old +6 = 62. Paper whose title names a machine-learning or AI method in biology.",
       "tier": 3,
       "scout_source": "biorxiv"
-    },
-    {
-      "id": "x:https://x.com/fwhealthtech/status/2126069731870535692",
-      "headline": "Neuralink gets FDA nod for pivotal ALS brain implant trial",
-      "blurb": "The company says the cleared LINK study is the first pivotal U.S. trial of an implantable brain-computer interface, and it will assess safety and effectiveness. https://firstwordhealthtech.com/story/8494782",
-      "source_url": "https://x.com/fwhealthtech/status/2126069731870535692",
-      "source_type": "news",
-      "source_name": "X",
-      "published_at": "2026-11-26",
-      "significance": 64,
-      "significance_rationale": "x-pick 58; 2d old +6 = 64. Curated X post. The post text is not copied. The item links to the post and to a primary source.",
-      "tier": 3,
-      "scout_source": "x",
-      "linked_url": "https://firstwordhealthtech.com/story/8494782"
     },
     {
       "id": "medrxiv:10.64898/2026.11.19.26368462",
@@ -1026,17 +1078,17 @@
       "scout_source": "nih-reporter"
     },
     {
-      "id": "sec-edgar:0001437749-26-037764",
-      "headline": "GeoVax Labs, Inc. reports a director or officer change",
-      "blurb": "GeoVax Labs, Inc. disclosed a director or officer change and financial statements and exhibits. Accession 0001437749-26-037764.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/832489/000143774926037764/0001437749-26-037764-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-19",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 9d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
+      "id": "health-canada:38751",
+      "headline": "Pms-Brivaracetam (Brivaracetam) receives a Health Canada notice of compliance",
+      "blurb": "Abbreviated submission, notice 38751. Manufacturer listed as Pharmascience Inc.",
+      "source_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=eng&no=38751",
+      "source_type": "regulator",
+      "source_name": "Health Canada Notice of Compliance Database",
+      "published_at": "2026-11-26",
+      "significance": 40,
+      "significance_rationale": "hc-ands 34; 2d old +6 = 40. Health Canada abbreviated (generic) notice of compliance.",
       "tier": 2,
-      "scout_source": "sec-edgar-8k"
+      "scout_source": "health-canada-noc"
     },
     {
       "id": "nih-reporter:11405186",
@@ -1050,19 +1102,6 @@
       "significance_rationale": "nih-grant 60; 59d old -6 = 54. NIH RePORTER project with a start date in the window.",
       "tier": 2,
       "scout_source": "nih-reporter"
-    },
-    {
-      "id": "sec-edgar:0001493152-26-052991",
-      "headline": "Lantern Pharma Inc. discloses results of operations in an 8-K",
-      "blurb": "Lantern Pharma Inc. disclosed results of operations and financial statements and exhibits. Accession 0001493152-26-052991.",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1763950/000149315226052991/0001493152-26-052991-index.html",
-      "source_type": "filing",
-      "source_name": "SEC EDGAR",
-      "published_at": "2026-11-18",
-      "significance": 43,
-      "significance_rationale": "sec-8k 58; routine-filing -18; 10d old +3 = 43. SEC Form 8-K for a company whose ticker is already in calendar/calendar.json.",
-      "tier": 2,
-      "scout_source": "sec-edgar-8k"
     }
   ]
 }
